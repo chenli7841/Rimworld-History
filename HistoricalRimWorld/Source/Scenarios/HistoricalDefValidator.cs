@@ -81,7 +81,6 @@ namespace HistoricalRimWorld.Scenarios
                     }
                 }
 
-                foreach (string error in ValidateOverlordCycles(scenario.states)) yield return error;
             }
 
             if (scenario.regions != null)
@@ -118,6 +117,14 @@ namespace HistoricalRimWorld.Scenarios
                 }
             }
 
+            if (scenario.cultures != null)
+            {
+                foreach (HistoricalCultureDef culture in scenario.cultures.Where(item => item != null))
+                {
+                    foreach (string error in ValidateCulture(culture)) yield return culture.defName + ": " + error;
+                }
+            }
+
             if (scenario.settlements != null)
             {
                 foreach (HistoricalSettlementDef settlement in scenario.settlements.Where(item => item != null))
@@ -151,6 +158,8 @@ namespace HistoricalRimWorld.Scenarios
             {
                 yield return "foundedAstronomicalYear cannot be later than dissolvedAstronomicalYear.";
             }
+
+            foreach (string error in ValidateOverlordCycleFrom(state)) yield return error;
         }
 
         public static IEnumerable<string> ValidateRegion(HistoricalRegionDef region)
@@ -259,26 +268,19 @@ namespace HistoricalRimWorld.Scenarios
             }
         }
 
-        private static IEnumerable<string> ValidateOverlordCycles(List<HistoricalStateDef> states)
+        private static IEnumerable<string> ValidateOverlordCycleFrom(HistoricalStateDef start)
         {
-            HashSet<string> reported = new HashSet<string>(StringComparer.Ordinal);
-            foreach (HistoricalStateDef start in states.Where(item => item != null))
+            HashSet<string> path = new HashSet<string>(StringComparer.Ordinal);
+            HistoricalStateDef current = start;
+            while (current != null)
             {
-                HashSet<string> path = new HashSet<string>(StringComparer.Ordinal);
-                HistoricalStateDef current = start;
-                while (current != null)
+                if (!path.Add(current.defName))
                 {
-                    if (!path.Add(current.defName))
-                    {
-                        if (reported.Add(current.defName))
-                        {
-                            yield return "nominalOverlord relationship contains a cycle involving " + current.defName + ".";
-                        }
-                        break;
-                    }
-
-                    current = current.nominalOverlord;
+                    yield return "nominalOverlord relationship contains a cycle involving " + current.defName + ".";
+                    yield break;
                 }
+
+                current = current.nominalOverlord;
             }
         }
 

@@ -40,6 +40,14 @@ namespace HistoricalRimWorld.Scenarios
                 return Fail(error);
             }
 
+            HistoricalScenarioDef registeredScenario;
+            if (!HistoricalScenarioRegistry.TryGetById(scenario.defName, out registeredScenario)
+                || !ReferenceEquals(registeredScenario, scenario))
+            {
+                error = "The selected scenario is not a loaded Def in the current database.";
+                return Fail(error);
+            }
+
             if (Current.Game == null)
             {
                 error = "A game must be loaded before a historical scenario can be initialized.";
