@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Scenarios.HistoricalScenarioDef>
+    <defName>HR_Scenario_EasternZhou_770BCE</defName>
+    <label>HR_Scenario_EasternZhou_770BCE_Label</label>
+    <description>HR_Scenario_EasternZhou_770BCE_Description</description>
+    <startAstronomicalYear>-769</startAstronomicalYear>
+    <startMonth>1</startMonth>
+    <startDay>1</startDay>
+    <historicalPeriod>HR_Period_EasternZhouEarly</historicalPeriod>
+    <states>
+      <li>HR_State_EasternZhou</li>
+      <li>HR_State_Zheng</li>
+      <li>HR_State_Jin</li>
+      <li>HR_State_Qin</li>
+    </states>
+    <regions>
+      <li>HR_Region_Luoyi</li>
+      <li>HR_Region_ZhengHeartland</li>
+      <li>HR_Region_Guanzhong</li>
+      <li>HR_Region_Hedong</li>
+    </regions>
+    <cultures>
+      <li>HR_Culture_ZhouCentralPlains</li>
+      <li>HR_Culture_QinRegional</li>
+    </cultures>
+    <settlements>
+      <li>HR_Settlement_Luoyi</li>
+      <li>HR_Settlement_Xinzheng</li>
+    </settlements>
+    <defaultStartingRegion>HR_Region_ZhengHeartland</defaultStartingRegion>
+    <defaultStartingState>HR_State_Zheng</defaultStartingState>
+    <sourceNotes>Minimal data example. Region membership is logical and does not define borders or RimWorld tiles.</sourceNotes>
+    <evidenceLevel>Probable</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalScenarioDef>
+</Defs>

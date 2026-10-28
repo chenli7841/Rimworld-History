@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Scenarios.HistoricalStateDef>
+    <defName>HR_State_EasternZhou</defName>
+    <label>HR_State_EasternZhou_Label</label>
+    <description>HR_State_EasternZhou_Description</description>
+    <historicalName>周</historicalName>
+    <stateCategory>RoyalCourt</stateCategory>
+    <primaryCulture>HR_Culture_ZhouCentralPlains</primaryCulture>
+    <historicalDescription>东周王室的静态历史身份定义，不代表运行时领土控制。</historicalDescription>
+    <sourceNotes>本条为基础示例；不定义疆域、人口或军事实力。</sourceNotes>
+    <evidenceLevel>Probable</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalStateDef>
+
+  <HistoricalRimWorld.Scenarios.HistoricalStateDef>
+    <defName>HR_State_Zheng</defName>
+    <label>HR_State_Zheng_Label</label>
+    <description>HR_State_Zheng_Description</description>
+    <historicalName>郑</historicalName>
+    <stateCategory>FeudalState</stateCategory>
+    <primaryCulture>HR_Culture_ZhouCentralPlains</primaryCulture>
+    <nominalOverlord>HR_State_EasternZhou</nominalOverlord>
+    <historicalDescription>郑国的静态历史身份定义。</historicalDescription>
+    <sourceNotes>名义宗主关系仅作基础定义；后续运行时政治关系可变化。</sourceNotes>
+    <evidenceLevel>Probable</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalStateDef>
+
+  <HistoricalRimWorld.Scenarios.HistoricalStateDef>
+    <defName>HR_State_Jin</defName>
+    <label>HR_State_Jin_Label</label>
+    <description>HR_State_Jin_Description</description>
+    <historicalName>晋</historicalName>
+    <stateCategory>FeudalState</stateCategory>
+    <primaryCulture>HR_Culture_ZhouCentralPlains</primaryCulture>
+    <historicalDescription>晋国的静态历史身份定义；后续政权更替不会删除此 Def。</historicalDescription>
+    <sourceNotes>本条不定义边界或运行时存续状态。</sourceNotes>
+    <evidenceLevel>Probable</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalStateDef>
+
+  <HistoricalRimWorld.Scenarios.HistoricalStateDef>
+    <defName>HR_State_Qin</defName>
+    <label>HR_State_Qin_Label</label>
+    <description>HR_State_Qin_Description</description>
+    <historicalName>秦</historicalName>
+    <stateCategory>FeudalState</stateCategory>
+    <primaryCulture>HR_Culture_QinRegional</primaryCulture>
+    <historicalDescription>秦国的静态历史身份定义。</historicalDescription>
+    <sourceNotes>本条不定义疆域或世界 Tile 映射。</sourceNotes>
+    <evidenceLevel>Probable</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalStateDef>
+</Defs>

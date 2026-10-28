@@ -50,12 +50,38 @@ namespace HistoricalRimWorld.Calendar
 
         public bool TryInitializeDefaultCalendar()
         {
-            if (initialized || Find.TickManager == null)
+            return TryInitializeCalendar(HistoricalCalendarDefaults.StartDate);
+        }
+
+        public bool CanInitializeCalendar(HistoricalDate startDate)
+        {
+            if (Current.Game == null || Find.TickManager == null)
             {
                 return false;
             }
 
-            HistoricalDate startDate = HistoricalCalendarDefaults.StartDate;
+            if (!initialized)
+            {
+                return true;
+            }
+
+            HistoricalDate existingStartDate;
+            return TryGetStartDate(out existingStartDate) && existingStartDate == startDate;
+        }
+
+        public bool TryInitializeCalendar(HistoricalDate startDate)
+        {
+            if (initialized)
+            {
+                HistoricalDate existingStartDate;
+                return TryGetStartDate(out existingStartDate) && existingStartDate == startDate;
+            }
+
+            if (Current.Game == null || Find.TickManager == null)
+            {
+                return false;
+            }
+
             startAstronomicalYear = startDate.AstronomicalYear;
             startMonth = startDate.Month;
             startDay = startDate.Day;

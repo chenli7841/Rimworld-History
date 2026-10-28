@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Scenarios.HistoricalRegionDef>
+    <defName>HR_Region_Luoyi</defName>
+    <label>HR_Region_Luoyi_Label</label>
+    <description>HR_Region_Luoyi_Description</description>
+    <historicalName>洛邑地区</historicalName>
+    <geographicDescription>以洛邑为名的逻辑历史区域，不映射到 RimWorld 世界 Tile。</geographicDescription>
+    <adjacentRegions>
+      <li>HR_Region_ZhengHeartland</li>
+    </adjacentRegions>
+    <associatedCultures>
+      <li>HR_Culture_ZhouCentralPlains</li>
+    </associatedCultures>
+    <sourceNotes>区域范围仅作数据示例，不是精确历史边界。</sourceNotes>
+    <evidenceLevel>Probable</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalRegionDef>
+
+  <HistoricalRimWorld.Scenarios.HistoricalRegionDef>
+    <defName>HR_Region_ZhengHeartland</defName>
+    <label>HR_Region_ZhengHeartland_Label</label>
+    <description>HR_Region_ZhengHeartland_Description</description>
+    <historicalName>郑国核心地区</historicalName>
+    <geographicDescription>郑国相关的逻辑历史区域，不定义永久政治所有权。</geographicDescription>
+    <adjacentRegions>
+      <li>HR_Region_Luoyi</li>
+    </adjacentRegions>
+    <associatedCultures>
+      <li>HR_Culture_ZhouCentralPlains</li>
+    </associatedCultures>
+    <sourceNotes>区域范围仅作数据示例，不是精确历史边界。</sourceNotes>
+    <evidenceLevel>Probable</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalRegionDef>
+
+  <HistoricalRimWorld.Scenarios.HistoricalRegionDef>
+    <defName>HR_Region_Guanzhong</defName>
+    <label>HR_Region_Guanzhong_Label</label>
+    <description>HR_Region_Guanzhong_Description</description>
+    <historicalName>关中</historicalName>
+    <geographicDescription>关中逻辑历史区域；地理区域与政权领土分开记录。</geographicDescription>
+    <adjacentRegions>
+      <li>HR_Region_Hedong</li>
+    </adjacentRegions>
+    <associatedCultures>
+      <li>HR_Culture_QinRegional</li>
+    </associatedCultures>
+    <sourceNotes>本 Def 不声明边界、控制权或世界 Tile 对应关系。</sourceNotes>
+    <evidenceLevel>Probable</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalRegionDef>
+
+  <HistoricalRimWorld.Scenarios.HistoricalRegionDef>
+    <defName>HR_Region_Hedong</defName>
+    <label>HR_Region_Hedong_Label</label>
+    <description>HR_Region_Hedong_Description</description>
+    <historicalName>河东</historicalName>
+    <geographicDescription>河东逻辑历史区域；地理区域与政权领土分开记录。</geographicDescription>
+    <adjacentRegions>
+      <li>HR_Region_Guanzhong</li>
+    </adjacentRegions>
+    <associatedCultures>
+      <li>HR_Culture_ZhouCentralPlains</li>
+    </associatedCultures>
+    <sourceNotes>本 Def 不声明边界、控制权或世界 Tile 对应关系。</sourceNotes>
+    <evidenceLevel>Probable</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalRegionDef>
+</Defs>

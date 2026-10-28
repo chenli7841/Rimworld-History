@@ -36,4 +36,42 @@
   <HR_Calendar_Day_3>Day 3</HR_Calendar_Day_3>
   <HR_Calendar_Day_4>Day 4</HR_Calendar_Day_4>
   <HR_Calendar_Day_5>Day 5</HR_Calendar_Day_5>
+  <HR_Scenario_NoActive>Historical scenario: not enabled</HR_Scenario_NoActive>
+  <HR_Scenario_SelectHeading>Developer mode: initialize a scenario for this save</HR_Scenario_SelectHeading>
+  <HR_Scenario_InitializationFailed>Scenario initialization failed. See the log for details.</HR_Scenario_InitializationFailed>
+  <HR_Scenario_StoredMissing>Saved scenario Def is unavailable: {0}. The saved identity and clock have been preserved.</HR_Scenario_StoredMissing>
+  <HR_Scenario_Current>Current historical scenario</HR_Scenario_Current>
+  <HR_Scenario_StartDate>Scenario start date</HR_Scenario_StartDate>
+  <HR_Scenario_Period>Historical period</HR_Scenario_Period>
+  <HR_Scenario_States>Historical polities</HR_Scenario_States>
+  <HR_Scenario_Regions>Defined historical regions</HR_Scenario_Regions>
+  <HR_Scenario_Settlements>Registered historical settlements</HR_Scenario_Settlements>
+  <HR_Scenario_ListSeparator>, </HR_Scenario_ListSeparator>
+  <HR_Period_EasternZhouEarly>Early Eastern Zhou</HR_Period_EasternZhouEarly>
+  <HR_Scenario_EasternZhou_770BCE_Label>Eastern Zhou Begins</HR_Scenario_EasternZhou_770BCE_Label>
+  <HR_Scenario_EasternZhou_770BCE_Description>The Zhou royal court moves east to Luoyi, marking the traditional beginning of the Eastern Zhou period.</HR_Scenario_EasternZhou_770BCE_Description>
+  <HR_State_EasternZhou_Label>Eastern Zhou Royal Court</HR_State_EasternZhou_Label>
+  <HR_State_EasternZhou_Description>Static historical identity for the Eastern Zhou royal court.</HR_State_EasternZhou_Description>
+  <HR_State_Zheng_Label>Zheng</HR_State_Zheng_Label>
+  <HR_State_Zheng_Description>Static historical identity for the state of Zheng.</HR_State_Zheng_Description>
+  <HR_State_Jin_Label>Jin</HR_State_Jin_Label>
+  <HR_State_Jin_Description>Static historical identity for the state of Jin.</HR_State_Jin_Description>
+  <HR_State_Qin_Label>Qin</HR_State_Qin_Label>
+  <HR_State_Qin_Description>Static historical identity for the state of Qin.</HR_State_Qin_Description>
+  <HR_Region_Luoyi_Label>Luoyi Region</HR_Region_Luoyi_Label>
+  <HR_Region_Luoyi_Description>A logical historical region associated with Luoyi.</HR_Region_Luoyi_Description>
+  <HR_Region_ZhengHeartland_Label>Zheng Heartland</HR_Region_ZhengHeartland_Label>
+  <HR_Region_ZhengHeartland_Description>A logical historical region associated with Zheng.</HR_Region_ZhengHeartland_Description>
+  <HR_Region_Guanzhong_Label>Guanzhong</HR_Region_Guanzhong_Label>
+  <HR_Region_Guanzhong_Description>A logical historical region; geography is kept separate from political territory.</HR_Region_Guanzhong_Description>
+  <HR_Region_Hedong_Label>Hedong</HR_Region_Hedong_Label>
+  <HR_Region_Hedong_Description>A logical historical region; geography is kept separate from political territory.</HR_Region_Hedong_Description>
+  <HR_Culture_ZhouCentralPlains_Label>Zhou Central Plains Culture</HR_Culture_ZhouCentralPlains_Label>
+  <HR_Culture_ZhouCentralPlains_Description>A broad historical and regional culture grouping, not a modern ethnic identity.</HR_Culture_ZhouCentralPlains_Description>
+  <HR_Culture_QinRegional_Label>Qin Regional Culture</HR_Culture_QinRegional_Label>
+  <HR_Culture_QinRegional_Description>A regional culture grouping for historical data.</HR_Culture_QinRegional_Description>
+  <HR_Settlement_Luoyi_Label>Luoyi</HR_Settlement_Luoyi_Label>
+  <HR_Settlement_Luoyi_Description>A historical settlement record. This Def does not spawn a settlement on the game map.</HR_Settlement_Luoyi_Description>
+  <HR_Settlement_Xinzheng_Label>Xinzheng</HR_Settlement_Xinzheng_Label>
+  <HR_Settlement_Xinzheng_Description>A historical settlement reference without an asserted founding date for this scenario.</HR_Settlement_Xinzheng_Description>
 </LanguageData>

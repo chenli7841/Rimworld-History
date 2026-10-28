@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Scenarios.HistoricalSettlementDef>
+    <defName>HR_Settlement_Luoyi</defName>
+    <label>HR_Settlement_Luoyi_Label</label>
+    <description>HR_Settlement_Luoyi_Description</description>
+    <historicalName>洛邑</historicalName>
+    <region>HR_Region_Luoyi</region>
+    <initialState>HR_State_EasternZhou</initialState>
+    <settlementCategory>RoyalCapital</settlementCategory>
+    <historicalDescription>洛邑的历史聚落记录；此 Def 不会在游戏地图上自动生成城邑。</historicalDescription>
+    <sourceNotes>未提供经纬度，避免在本阶段声明不必要的坐标精度。</sourceNotes>
+    <evidenceLevel>WellAttested</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalSettlementDef>
+
+  <HistoricalRimWorld.Scenarios.HistoricalSettlementDef>
+    <defName>HR_Settlement_Xinzheng</defName>
+    <label>HR_Settlement_Xinzheng_Label</label>
+    <description>HR_Settlement_Xinzheng_Description</description>
+    <historicalName>新郑</historicalName>
+    <region>HR_Region_ZhengHeartland</region>
+    <initialState>HR_State_Zheng</initialState>
+    <settlementCategory>StateCapital</settlementCategory>
+    <historicalDescription>新郑的历史聚落参考条目；本条没有声明其在剧本起始日已经建成。</historicalDescription>
+    <sourceNotes>年代未在本最小数据集中确定；此条目不代表公元前770年已建成或作为都邑。</sourceNotes>
+    <evidenceLevel>Disputed</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalSettlementDef>
+</Defs>

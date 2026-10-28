@@ -36,4 +36,42 @@
   <HR_Calendar_Day_3>三</HR_Calendar_Day_3>
   <HR_Calendar_Day_4>四</HR_Calendar_Day_4>
   <HR_Calendar_Day_5>五</HR_Calendar_Day_5>
+  <HR_Scenario_NoActive>尚未启用历史剧本</HR_Scenario_NoActive>
+  <HR_Scenario_SelectHeading>开发者模式：为当前存档初始化一个历史剧本</HR_Scenario_SelectHeading>
+  <HR_Scenario_InitializationFailed>剧本初始化失败，详情请查看日志。</HR_Scenario_InitializationFailed>
+  <HR_Scenario_StoredMissing>存档引用的剧本 Def 不可用：{0}。已保留存档中的身份和时钟。</HR_Scenario_StoredMissing>
+  <HR_Scenario_Current>当前历史剧本</HR_Scenario_Current>
+  <HR_Scenario_StartDate>剧本起始日期</HR_Scenario_StartDate>
+  <HR_Scenario_Period>历史时期</HR_Scenario_Period>
+  <HR_Scenario_States>主要历史政权</HR_Scenario_States>
+  <HR_Scenario_Regions>已定义历史地区</HR_Scenario_Regions>
+  <HR_Scenario_Settlements>已登记历史聚落</HR_Scenario_Settlements>
+  <HR_Scenario_ListSeparator>、</HR_Scenario_ListSeparator>
+  <HR_Period_EasternZhouEarly>东周初期</HR_Period_EasternZhouEarly>
+  <HR_Scenario_EasternZhou_770BCE_Label>周室东迁</HR_Scenario_EasternZhou_770BCE_Label>
+  <HR_Scenario_EasternZhou_770BCE_Description>公元前770年，周王室东迁洛邑，标志着传统分期中的东周开始。</HR_Scenario_EasternZhou_770BCE_Description>
+  <HR_State_EasternZhou_Label>东周王室</HR_State_EasternZhou_Label>
+  <HR_State_EasternZhou_Description>东周王室的静态历史身份定义。</HR_State_EasternZhou_Description>
+  <HR_State_Zheng_Label>郑国</HR_State_Zheng_Label>
+  <HR_State_Zheng_Description>郑国的静态历史身份定义。</HR_State_Zheng_Description>
+  <HR_State_Jin_Label>晋国</HR_State_Jin_Label>
+  <HR_State_Jin_Description>晋国的静态历史身份定义。</HR_State_Jin_Description>
+  <HR_State_Qin_Label>秦国</HR_State_Qin_Label>
+  <HR_State_Qin_Description>秦国的静态历史身份定义。</HR_State_Qin_Description>
+  <HR_Region_Luoyi_Label>洛邑地区</HR_Region_Luoyi_Label>
+  <HR_Region_Luoyi_Description>与洛邑相关的逻辑历史区域。</HR_Region_Luoyi_Description>
+  <HR_Region_ZhengHeartland_Label>郑国核心地区</HR_Region_ZhengHeartland_Label>
+  <HR_Region_ZhengHeartland_Description>与郑国相关的逻辑历史区域。</HR_Region_ZhengHeartland_Description>
+  <HR_Region_Guanzhong_Label>关中</HR_Region_Guanzhong_Label>
+  <HR_Region_Guanzhong_Description>逻辑历史区域；地理与政治领土分开记录。</HR_Region_Guanzhong_Description>
+  <HR_Region_Hedong_Label>河东</HR_Region_Hedong_Label>
+  <HR_Region_Hedong_Description>逻辑历史区域；地理与政治领土分开记录。</HR_Region_Hedong_Description>
+  <HR_Culture_ZhouCentralPlains_Label>周文化圈</HR_Culture_ZhouCentralPlains_Label>
+  <HR_Culture_ZhouCentralPlains_Description>宽泛的历史与地域文化分类，不代表现代民族身份。</HR_Culture_ZhouCentralPlains_Description>
+  <HR_Culture_QinRegional_Label>秦地文化分类</HR_Culture_QinRegional_Label>
+  <HR_Culture_QinRegional_Description>供历史数据关联使用的地域文化分类。</HR_Culture_QinRegional_Description>
+  <HR_Settlement_Luoyi_Label>洛邑</HR_Settlement_Luoyi_Label>
+  <HR_Settlement_Luoyi_Description>洛邑历史聚落记录，不会在游戏地图上生成聚落。</HR_Settlement_Luoyi_Description>
+  <HR_Settlement_Xinzheng_Label>新郑</HR_Settlement_Xinzheng_Label>
+  <HR_Settlement_Xinzheng_Description>新郑历史聚落参考条目，本剧本未声明其始建时间。</HR_Settlement_Xinzheng_Description>
 </LanguageData>
