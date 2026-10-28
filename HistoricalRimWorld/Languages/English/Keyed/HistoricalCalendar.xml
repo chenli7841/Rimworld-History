@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_SettingsCategory>Historical RimWorld</HR_SettingsCategory>
+  <HR_EnableDebugLogging>Enable debug logging</HR_EnableDebugLogging>
+  <HR_Calendar_MainTabLabel>Historical Calendar</HR_Calendar_MainTabLabel>
+  <HR_Calendar_MainTabDescription>View and enable the historical calendar for this save.</HR_Calendar_MainTabDescription>
+  <HR_Calendar_Title>Historical RimWorld</HR_Calendar_Title>
+  <HR_Calendar_Inactive>The historical calendar is not enabled for this save.</HR_Calendar_Inactive>
+  <HR_Calendar_InactiveHelp>Enable it only for a historical playthrough. This save will start at 770 BCE, Month 1, Day 1.</HR_Calendar_InactiveHelp>
+  <HR_Calendar_EnableButton>Enable historical calendar for this save</HR_Calendar_EnableButton>
+  <HR_Calendar_CurrentDate>Current historical date</HR_Calendar_CurrentDate>
+  <HR_Calendar_Rules>Historical calendar: 12 months per year, 5 days per month.</HR_Calendar_Rules>
+  <HR_Calendar_ElapsedDays>Elapsed historical days: {0}</HR_Calendar_ElapsedDays>
+  <HR_Calendar_DebugTitle>Calendar debug information</HR_Calendar_DebugTitle>
+  <HR_Calendar_DebugCurrentTick>Current game tick: {0}</HR_Calendar_DebugCurrentTick>
+  <HR_Calendar_DebugStartTick>Start game tick: {0}</HR_Calendar_DebugStartTick>
+  <HR_Calendar_DebugElapsedDays>Elapsed days: {0}</HR_Calendar_DebugElapsedDays>
+  <HR_Calendar_DebugAstronomicalYear>Astronomical year: {0}</HR_Calendar_DebugAstronomicalYear>
+  <HR_Calendar_DebugAbsoluteDay>Absolute day: {0}</HR_Calendar_DebugAbsoluteDay>
+  <HR_Calendar_Date_BCE>{0} BCE, {1}, {2}</HR_Calendar_Date_BCE>
+  <HR_Calendar_Date_CE>{0} CE, {1}, {2}</HR_Calendar_Date_CE>
+  <HR_Calendar_Month_1>Month 1</HR_Calendar_Month_1>
+  <HR_Calendar_Month_2>Month 2</HR_Calendar_Month_2>
+  <HR_Calendar_Month_3>Month 3</HR_Calendar_Month_3>
+  <HR_Calendar_Month_4>Month 4</HR_Calendar_Month_4>
+  <HR_Calendar_Month_5>Month 5</HR_Calendar_Month_5>
+  <HR_Calendar_Month_6>Month 6</HR_Calendar_Month_6>
+  <HR_Calendar_Month_7>Month 7</HR_Calendar_Month_7>
+  <HR_Calendar_Month_8>Month 8</HR_Calendar_Month_8>
+  <HR_Calendar_Month_9>Month 9</HR_Calendar_Month_9>
+  <HR_Calendar_Month_10>Month 10</HR_Calendar_Month_10>
+  <HR_Calendar_Month_11>Month 11</HR_Calendar_Month_11>
+  <HR_Calendar_Month_12>Month 12</HR_Calendar_Month_12>
+  <HR_Calendar_Day_1>Day 1</HR_Calendar_Day_1>
+  <HR_Calendar_Day_2>Day 2</HR_Calendar_Day_2>
+  <HR_Calendar_Day_3>Day 3</HR_Calendar_Day_3>
+  <HR_Calendar_Day_4>Day 4</HR_Calendar_Day_4>
+  <HR_Calendar_Day_5>Day 5</HR_Calendar_Day_5>
+</LanguageData>

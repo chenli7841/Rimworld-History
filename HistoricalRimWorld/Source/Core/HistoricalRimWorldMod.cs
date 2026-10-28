@@ -15,7 +15,7 @@ namespace HistoricalRimWorld
 
         public override string SettingsCategory()
         {
-            return "Historical RimWorld";
+            return Translator.Translate("HR_SettingsCategory");
         }
 
         public override void DoSettingsWindowContents(Rect inRect)

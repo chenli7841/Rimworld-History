@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_SettingsCategory>历史边缘世界</HR_SettingsCategory>
+  <HR_EnableDebugLogging>启用调试日志</HR_EnableDebugLogging>
+  <HR_Calendar_MainTabLabel>历史历法</HR_Calendar_MainTabLabel>
+  <HR_Calendar_MainTabDescription>查看并为当前存档启用历史历法。</HR_Calendar_MainTabDescription>
+  <HR_Calendar_Title>历史边缘世界</HR_Calendar_Title>
+  <HR_Calendar_Inactive>当前存档尚未启用历史历法。</HR_Calendar_Inactive>
+  <HR_Calendar_InactiveHelp>仅在历史剧本中启用。启用后，本存档将从公元前770年一月一日开始计时。</HR_Calendar_InactiveHelp>
+  <HR_Calendar_EnableButton>为当前存档启用历史历法</HR_Calendar_EnableButton>
+  <HR_Calendar_CurrentDate>当前历史日期</HR_Calendar_CurrentDate>
+  <HR_Calendar_Rules>历史历法：每年12个月，每月5天。</HR_Calendar_Rules>
+  <HR_Calendar_ElapsedDays>已经过历史天数：{0}</HR_Calendar_ElapsedDays>
+  <HR_Calendar_DebugTitle>历法调试信息</HR_Calendar_DebugTitle>
+  <HR_Calendar_DebugCurrentTick>当前游戏 Tick：{0}</HR_Calendar_DebugCurrentTick>
+  <HR_Calendar_DebugStartTick>起始游戏 Tick：{0}</HR_Calendar_DebugStartTick>
+  <HR_Calendar_DebugElapsedDays>已经过天数：{0}</HR_Calendar_DebugElapsedDays>
+  <HR_Calendar_DebugAstronomicalYear>天文纪年：{0}</HR_Calendar_DebugAstronomicalYear>
+  <HR_Calendar_DebugAbsoluteDay>绝对日序号：{0}</HR_Calendar_DebugAbsoluteDay>
+  <HR_Calendar_Date_BCE>公元前{0}年 {1}{2}日</HR_Calendar_Date_BCE>
+  <HR_Calendar_Date_CE>公元{0}年 {1}{2}日</HR_Calendar_Date_CE>
+  <HR_Calendar_Month_1>一月</HR_Calendar_Month_1>
+  <HR_Calendar_Month_2>二月</HR_Calendar_Month_2>
+  <HR_Calendar_Month_3>三月</HR_Calendar_Month_3>
+  <HR_Calendar_Month_4>四月</HR_Calendar_Month_4>
+  <HR_Calendar_Month_5>五月</HR_Calendar_Month_5>
+  <HR_Calendar_Month_6>六月</HR_Calendar_Month_6>
+  <HR_Calendar_Month_7>七月</HR_Calendar_Month_7>
+  <HR_Calendar_Month_8>八月</HR_Calendar_Month_8>
+  <HR_Calendar_Month_9>九月</HR_Calendar_Month_9>
+  <HR_Calendar_Month_10>十月</HR_Calendar_Month_10>
+  <HR_Calendar_Month_11>十一月</HR_Calendar_Month_11>
+  <HR_Calendar_Month_12>十二月</HR_Calendar_Month_12>
+  <HR_Calendar_Day_1>一</HR_Calendar_Day_1>
+  <HR_Calendar_Day_2>二</HR_Calendar_Day_2>
+  <HR_Calendar_Day_3>三</HR_Calendar_Day_3>
+  <HR_Calendar_Day_4>四</HR_Calendar_Day_4>
+  <HR_Calendar_Day_5>五</HR_Calendar_Day_5>
+</LanguageData>

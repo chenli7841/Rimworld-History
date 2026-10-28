@@ -17,7 +17,7 @@ namespace HistoricalRimWorld
         {
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(inRect);
-            listing.CheckboxLabeled("Enable debug logging", ref EnableDebugLogging);
+            listing.CheckboxLabeled(Translator.Translate("HR_EnableDebugLogging"), ref EnableDebugLogging);
             listing.End();
         }
     }

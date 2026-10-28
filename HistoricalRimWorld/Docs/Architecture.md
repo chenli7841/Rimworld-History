@@ -9,7 +9,7 @@ Historical RimWorld is an independent RimWorld 1.6 mod. Its bootstrap project de
 
 ## Runtime state and persistence
 
-- `GameComponent` and/or `WorldComponent` are planned for runtime state, selected according to whether a datum belongs to a save game or a world.
+- `HistoricalCalendarGameComponent` stores the opt-in calendar start date and starting game tick in the save. Future runtime state will use `GameComponent` and/or `WorldComponent` according to whether it belongs to a save game or a world.
 - Historical definitions and authored static content will use XML Defs.
 - State in a RimWorld save will use the game's Scribe persistence system.
 - Cross-scenario inheritance will use a separate, versioned archive format with explicit migration handling; it will not be conflated with the current save's Scribe state.
@@ -22,4 +22,4 @@ Historical RimWorld is an independent RimWorld 1.6 mod. Its bootstrap project de
 
 ## Bootstrap boundary
 
-The Mod entry point loads settings and writes one initialization log message. It does not create a world, pawns, or historical events. New systems should be added in focused modules as roadmap stages require them.
+The Mod entry point loads settings and writes one initialization log message. The historical calendar remains inactive in every save until the player explicitly enables it from its main tab. Enabling it anchors 770 BCE, Month 1, Day 1 to the current `TicksGame`; it does not create a world, pawns, or historical events. New systems should be added in focused modules as roadmap stages require them.
