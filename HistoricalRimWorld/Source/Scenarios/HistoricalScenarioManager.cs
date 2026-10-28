@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using HistoricalRimWorld.Calendar;
+using HistoricalRimWorld.Politics;
 using Verse;
 
 namespace HistoricalRimWorld.Scenarios
@@ -40,17 +41,17 @@ namespace HistoricalRimWorld.Scenarios
                 return Fail(error);
             }
 
+            if (Current.Game == null)
+            {
+                error = "A game must be loaded before a historical scenario can be initialized.";
+                return Fail(error);
+            }
+
             HistoricalScenarioDef registeredScenario;
             if (!HistoricalScenarioRegistry.TryGetById(scenario.defName, out registeredScenario)
                 || !ReferenceEquals(registeredScenario, scenario))
             {
                 error = "The selected scenario is not a loaded Def in the current database.";
-                return Fail(error);
-            }
-
-            if (Current.Game == null)
-            {
-                error = "A game must be loaded before a historical scenario can be initialized.";
                 return Fail(error);
             }
 
@@ -82,6 +83,10 @@ namespace HistoricalRimWorld.Scenarios
                         && calendarComponent.TryGetStartDate(out existingStartDate)
                         && existingStartDate == requestedStartDate)
                     {
+                        if (!HistoricalPoliticsManager.TryInitializeForScenario(scenario, out error))
+                        {
+                            return Fail(error);
+                        }
                         return true;
                     }
 
@@ -117,6 +122,12 @@ namespace HistoricalRimWorld.Scenarios
                 return Fail(error);
             }
 
+            HistoricalPoliticsInitializationPlan politicsPlan;
+            if (!HistoricalPoliticsManager.TryPrepareScenarioInitialization(scenario, out politicsPlan, out error))
+            {
+                return Fail(error);
+            }
+
             if (!calendarComponent.TryInitializeCalendar(startDate))
             {
                 error = "The historical clock could not be initialized.";
@@ -127,6 +138,11 @@ namespace HistoricalRimWorld.Scenarios
             {
                 error = "The save could not be bound to the selected scenario.";
                 return Fail(error);
+            }
+
+            if (!HistoricalPoliticsManager.TryCommitScenarioInitialization(politicsPlan, out error))
+            {
+                return Fail("Scenario and clock were initialized, but political setup could not be committed: " + error);
             }
 
             Log.Message("[Historical RimWorld] Initialized historical scenario " + scenario.defName + ".");

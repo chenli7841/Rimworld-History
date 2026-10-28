@@ -27,6 +27,8 @@ namespace HistoricalRimWorld.UI
             DrawCalendarSection(listing);
             listing.GapLine();
             DrawScenarioSection(listing);
+            listing.GapLine();
+            HistoricalPoliticsUI.Draw(listing);
             if (scenarioInitializationFailed && !HistoricalScenarioManager.IsScenarioActive)
             {
                 listing.Label(Translator.Translate("HR_Scenario_InitializationFailed"));
@@ -163,6 +165,7 @@ namespace HistoricalRimWorld.UI
                 lines += 3f + HistoricalScenarioRegistry.AllScenarios.Count();
             }
 
+            lines += HistoricalPoliticsUI.EstimatedLines;
             return Math.Max(inRect.height, lines * 28f);
         }
     }

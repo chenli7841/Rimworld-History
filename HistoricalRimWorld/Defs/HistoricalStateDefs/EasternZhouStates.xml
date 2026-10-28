@@ -32,6 +32,7 @@
     <historicalName>晋</historicalName>
     <stateCategory>FeudalState</stateCategory>
     <primaryCulture>HR_Culture_ZhouCentralPlains</primaryCulture>
+    <nominalOverlord>HR_State_EasternZhou</nominalOverlord>
     <historicalDescription>晋国的静态历史身份定义；后续政权更替不会删除此 Def。</historicalDescription>
     <sourceNotes>本条不定义边界或运行时存续状态。</sourceNotes>
     <evidenceLevel>Probable</evidenceLevel>
@@ -44,6 +45,7 @@
     <historicalName>秦</historicalName>
     <stateCategory>FeudalState</stateCategory>
     <primaryCulture>HR_Culture_QinRegional</primaryCulture>
+    <nominalOverlord>HR_State_EasternZhou</nominalOverlord>
     <historicalDescription>秦国的静态历史身份定义。</historicalDescription>
     <sourceNotes>本条不定义疆域或世界 Tile 映射。</sourceNotes>
     <evidenceLevel>Probable</evidenceLevel>

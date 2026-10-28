@@ -4,11 +4,13 @@ namespace HistoricalRimWorld.Scenarios
     {
         RoyalCourt,
         FeudalState,
+        AristocraticDomain,
         Principality,
         Kingdom,
         Empire,
         TribalPolity,
         CityState,
+        Confederation,
         Other
     }
 }

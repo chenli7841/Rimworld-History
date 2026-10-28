@@ -43,6 +43,7 @@
   <HR_Scenario_Current>当前历史剧本</HR_Scenario_Current>
   <HR_Scenario_StartDate>剧本起始日期</HR_Scenario_StartDate>
   <HR_Scenario_Period>历史时期</HR_Scenario_Period>
+  <HR_Scenario_UnknownPeriod>未注明</HR_Scenario_UnknownPeriod>
   <HR_Scenario_States>主要历史政权</HR_Scenario_States>
   <HR_Scenario_Regions>已定义历史地区</HR_Scenario_Regions>
   <HR_Scenario_Settlements>已登记历史聚落</HR_Scenario_Settlements>
@@ -74,4 +75,58 @@
   <HR_Settlement_Luoyi_Description>洛邑历史聚落记录，不会在游戏地图上生成聚落。</HR_Settlement_Luoyi_Description>
   <HR_Settlement_Xinzheng_Label>新郑</HR_Settlement_Xinzheng_Label>
   <HR_Settlement_Xinzheng_Description>新郑历史聚落参考条目，本剧本未声明其始建时间。</HR_Settlement_Xinzheng_Description>
+  <HR_Domain_Zheng_Example_0001_Label>郑地示例封邑模板</HR_Domain_Zheng_Example_0001_Label>
+  <HR_Domain_Zheng_Example_0001_Description>仅用于演示封邑数据结构的虚构模板。</HR_Domain_Zheng_Example_0001_Description>
+  <HR_Setup_EasternZhou_770BCE_Politics_Label>东周初期政治配置</HR_Setup_EasternZhou_770BCE_Politics_Label>
+  <HR_Setup_EasternZhou_770BCE_Politics_Description>东周剧本的初始政治运行数据。</HR_Setup_EasternZhou_770BCE_Politics_Description>
+  <HR_Politics_Title>历史政治</HR_Politics_Title>
+  <HR_Politics_Inactive>当前存档尚未初始化历史政治状态。</HR_Politics_Inactive>
+  <HR_Politics_Scenario>剧本：{0}</HR_Politics_Scenario>
+  <HR_Politics_Polities>政治实体</HR_Politics_Polities>
+  <HR_Politics_Regions>地区政治状态</HR_Politics_Regions>
+  <HR_Politics_Domains>封邑与地方层级</HR_Politics_Domains>
+  <HR_Politics_Communities>地方社区</HR_Politics_Communities>
+  <HR_Politics_PlayerCommunity>玩家社区</HR_Politics_PlayerCommunity>
+  <HR_Politics_Changes>政治变更记录</HR_Politics_Changes>
+  <HR_Politics_PolitySummary>{0}：{1}；名义宗主：{2}；实际上级：{3}</HR_Politics_PolitySummary>
+  <HR_Politics_RegionSummary>{0}：法理归属 {1}；实际控制 {2}；军事占领 {3}；争议状态：{4}</HR_Politics_RegionSummary>
+  <HR_Politics_DomainSummary>{0}：上级政权 {1}；名义所有者 {2}；实际控制 {3}；争议状态：{4}</HR_Politics_DomainSummary>
+  <HR_Politics_CommunitySummary>{0}：地区 {1}；名义归属 {2}；行政归属 {3}；实际控制 {4}；效忠对象 {5}；姿态 {6}</HR_Politics_CommunitySummary>
+  <HR_Politics_ChangeSummary>{0}：{2}发生{1}（{3}：{4} → {5}；来源：{6}）</HR_Politics_ChangeSummary>
+  <HR_Politics_None>无</HR_Politics_None>
+  <HR_Politics_Yes>是</HR_Politics_Yes>
+  <HR_Politics_No>否</HR_Politics_No>
+  <HR_Politics_Status_Active>存续</HR_Politics_Status_Active>
+  <HR_Politics_Status_Subordinate>臣属</HR_Politics_Status_Subordinate>
+  <HR_Politics_Status_Fragmented>分裂</HR_Politics_Status_Fragmented>
+  <HR_Politics_Status_Dissolved>灭亡</HR_Politics_Status_Dissolved>
+  <HR_Politics_Posture_Peaceful>和平</HR_Politics_Posture_Peaceful>
+  <HR_Politics_Posture_Submitting>已投降</HR_Politics_Posture_Submitting>
+  <HR_Politics_Posture_Occupied>被占领</HR_Politics_Posture_Occupied>
+  <HR_Politics_Posture_Resisting>抵抗</HR_Politics_Posture_Resisting>
+  <HR_Politics_Posture_Autonomous>自治</HR_Politics_Posture_Autonomous>
+  <HR_Politics_Posture_Fleeing>迁离</HR_Politics_Posture_Fleeing>
+  <HR_Politics_Source_ScenarioInitialization>剧本初始化</HR_Politics_Source_ScenarioInitialization>
+  <HR_Politics_Source_HistoricalEvent>历史事件</HR_Politics_Source_HistoricalEvent>
+  <HR_Politics_Source_PlayerDecision>玩家决策</HR_Politics_Source_PlayerDecision>
+  <HR_Politics_Source_LocalIncident>地方事件</HR_Politics_Source_LocalIncident>
+  <HR_Politics_Source_AdministrativeAction>行政操作</HR_Politics_Source_AdministrativeAction>
+  <HR_Politics_Source_Debug>开发者操作</HR_Politics_Source_Debug>
+  <HR_Politics_ChangeType_RegionControllerChanged>地区控制权变更</HR_Politics_ChangeType_RegionControllerChanged>
+  <HR_Politics_ChangeType_DomainControllerChanged>封邑控制权变更</HR_Politics_ChangeType_DomainControllerChanged>
+  <HR_Politics_ChangeType_CommunityAllegianceChanged>社区效忠变更</HR_Politics_ChangeType_CommunityAllegianceChanged>
+  <HR_Politics_ChangeType_CommunitySubmitted>社区投降</HR_Politics_ChangeType_CommunitySubmitted>
+  <HR_Politics_ChangeType_CommunityPostureChanged>社区姿态变更</HR_Politics_ChangeType_CommunityPostureChanged>
+  <HR_Politics_ChangeType_CommunityMoved>社区迁徙</HR_Politics_ChangeType_CommunityMoved>
+  <HR_Politics_ChangeType_PolityStatusChanged>政权状态变更</HR_Politics_ChangeType_PolityStatusChanged>
+  <HR_Politics_ChangeType_PolitySuccessorsChanged>政权继承关系变更</HR_Politics_ChangeType_PolitySuccessorsChanged>
+  <HR_Politics_ChangeType_PoliticalRelationChanged>政治关系变更</HR_Politics_ChangeType_PoliticalRelationChanged>
+  <HR_Politics_ChangeType_FactionMappingChanged>派系映射变更</HR_Politics_ChangeType_FactionMappingChanged>
+  <HR_Politics_ChangeType_PolityHierarchyChanged>政权层级变更</HR_Politics_ChangeType_PolityHierarchyChanged>
+  <HR_Politics_ChangeType_CommunityControllerChanged>社区控制者变更</HR_Politics_ChangeType_CommunityControllerChanged>
+  <HR_Politics_DebugTogglePolity>调试：切换 {0} 的状态</HR_Politics_DebugTogglePolity>
+  <HR_Politics_DebugCycleController>调试：轮换 {0} 的控制者</HR_Politics_DebugCycleController>
+  <HR_Politics_DebugSubmitCommunity>调试：使 {0} 向本地区控制者投降</HR_Politics_DebugSubmitCommunity>
+  <HR_Politics_DebugChangeAllegiance>调试：更改 {0} 的效忠对象</HR_Politics_DebugChangeAllegiance>
+  <HR_Politics_DebugToggleResistance>调试：切换 {0} 的抵抗状态</HR_Politics_DebugToggleResistance>
 </LanguageData>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Politics.HistoricalDomainDef>
+    <defName>HR_Domain_Zheng_Example_0001</defName>
+    <label>HR_Domain_Zheng_Example_0001_Label</label>
+    <description>HR_Domain_Zheng_Example_0001_Description</description>
+    <parentPolity>HR_State_Zheng</parentPolity>
+    <region>HR_Region_ZhengHeartland</region>
+    <historicalDescription>仅用于展示封邑 Def 与运行状态结构的虚构数据模板，不代表已确认的历史封邑。</historicalDescription>
+    <sourceNotes>此示例明确为虚构的结构测试条目；正式历史数据应由有来源的封邑资料替换。</sourceNotes>
+    <evidenceLevel>Speculative</evidenceLevel>
+  </HistoricalRimWorld.Politics.HistoricalDomainDef>
+</Defs>

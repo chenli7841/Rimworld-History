@@ -43,6 +43,7 @@
   <HR_Scenario_Current>Current historical scenario</HR_Scenario_Current>
   <HR_Scenario_StartDate>Scenario start date</HR_Scenario_StartDate>
   <HR_Scenario_Period>Historical period</HR_Scenario_Period>
+  <HR_Scenario_UnknownPeriod>Not specified</HR_Scenario_UnknownPeriod>
   <HR_Scenario_States>Historical polities</HR_Scenario_States>
   <HR_Scenario_Regions>Defined historical regions</HR_Scenario_Regions>
   <HR_Scenario_Settlements>Registered historical settlements</HR_Scenario_Settlements>
@@ -74,4 +75,58 @@
   <HR_Settlement_Luoyi_Description>A historical settlement record. This Def does not spawn a settlement on the game map.</HR_Settlement_Luoyi_Description>
   <HR_Settlement_Xinzheng_Label>Xinzheng</HR_Settlement_Xinzheng_Label>
   <HR_Settlement_Xinzheng_Description>A historical settlement reference without an asserted founding date for this scenario.</HR_Settlement_Xinzheng_Description>
+  <HR_Domain_Zheng_Example_0001_Label>Illustrative Zheng domain template</HR_Domain_Zheng_Example_0001_Label>
+  <HR_Domain_Zheng_Example_0001_Description>A fictional template used only to demonstrate domain data structure.</HR_Domain_Zheng_Example_0001_Description>
+  <HR_Setup_EasternZhou_770BCE_Politics_Label>Eastern Zhou political setup</HR_Setup_EasternZhou_770BCE_Politics_Label>
+  <HR_Setup_EasternZhou_770BCE_Politics_Description>Initial political runtime data for the Eastern Zhou scenario.</HR_Setup_EasternZhou_770BCE_Politics_Description>
+  <HR_Politics_Title>Historical politics</HR_Politics_Title>
+  <HR_Politics_Inactive>Historical politics are not initialized for this save.</HR_Politics_Inactive>
+  <HR_Politics_Scenario>Scenario: {0}</HR_Politics_Scenario>
+  <HR_Politics_Polities>Political entities</HR_Politics_Polities>
+  <HR_Politics_Regions>Region political status</HR_Politics_Regions>
+  <HR_Politics_Domains>Domains and fiefs</HR_Politics_Domains>
+  <HR_Politics_Communities>Local communities</HR_Politics_Communities>
+  <HR_Politics_PlayerCommunity>Player community</HR_Politics_PlayerCommunity>
+  <HR_Politics_Changes>Political change record</HR_Politics_Changes>
+  <HR_Politics_PolitySummary>{0} — {1}; nominal overlord: {2}; effective overlord: {3}</HR_Politics_PolitySummary>
+  <HR_Politics_RegionSummary>{0}: nominal owner {1}; controller {2}; military occupier {3}; contested: {4}</HR_Politics_RegionSummary>
+  <HR_Politics_DomainSummary>{0}: parent polity {1}; nominal owner {2}; controller {3}; disputed: {4}</HR_Politics_DomainSummary>
+  <HR_Politics_CommunitySummary>{0}: region {1}; nominal {2}; administrative {3}; controller {4}; allegiance {5}; posture {6}</HR_Politics_CommunitySummary>
+  <HR_Politics_ChangeSummary>{0}: {1} on {2} ({3}: {4} → {5}; source: {6})</HR_Politics_ChangeSummary>
+  <HR_Politics_None>None</HR_Politics_None>
+  <HR_Politics_Yes>Yes</HR_Politics_Yes>
+  <HR_Politics_No>No</HR_Politics_No>
+  <HR_Politics_Status_Active>Active</HR_Politics_Status_Active>
+  <HR_Politics_Status_Subordinate>Subordinate</HR_Politics_Status_Subordinate>
+  <HR_Politics_Status_Fragmented>Fragmented</HR_Politics_Status_Fragmented>
+  <HR_Politics_Status_Dissolved>Dissolved</HR_Politics_Status_Dissolved>
+  <HR_Politics_Posture_Peaceful>Peaceful</HR_Politics_Posture_Peaceful>
+  <HR_Politics_Posture_Submitting>Submitting</HR_Politics_Posture_Submitting>
+  <HR_Politics_Posture_Occupied>Occupied</HR_Politics_Posture_Occupied>
+  <HR_Politics_Posture_Resisting>Resisting</HR_Politics_Posture_Resisting>
+  <HR_Politics_Posture_Autonomous>Autonomous</HR_Politics_Posture_Autonomous>
+  <HR_Politics_Posture_Fleeing>Fleeing</HR_Politics_Posture_Fleeing>
+  <HR_Politics_Source_ScenarioInitialization>Scenario initialization</HR_Politics_Source_ScenarioInitialization>
+  <HR_Politics_Source_HistoricalEvent>Historical event</HR_Politics_Source_HistoricalEvent>
+  <HR_Politics_Source_PlayerDecision>Player decision</HR_Politics_Source_PlayerDecision>
+  <HR_Politics_Source_LocalIncident>Local incident</HR_Politics_Source_LocalIncident>
+  <HR_Politics_Source_AdministrativeAction>Administrative action</HR_Politics_Source_AdministrativeAction>
+  <HR_Politics_Source_Debug>Developer action</HR_Politics_Source_Debug>
+  <HR_Politics_ChangeType_RegionControllerChanged>Region controller changed</HR_Politics_ChangeType_RegionControllerChanged>
+  <HR_Politics_ChangeType_DomainControllerChanged>Domain controller changed</HR_Politics_ChangeType_DomainControllerChanged>
+  <HR_Politics_ChangeType_CommunityAllegianceChanged>Community allegiance changed</HR_Politics_ChangeType_CommunityAllegianceChanged>
+  <HR_Politics_ChangeType_CommunitySubmitted>Community submitted</HR_Politics_ChangeType_CommunitySubmitted>
+  <HR_Politics_ChangeType_CommunityPostureChanged>Community posture changed</HR_Politics_ChangeType_CommunityPostureChanged>
+  <HR_Politics_ChangeType_CommunityMoved>Community moved</HR_Politics_ChangeType_CommunityMoved>
+  <HR_Politics_ChangeType_PolityStatusChanged>Polity status changed</HR_Politics_ChangeType_PolityStatusChanged>
+  <HR_Politics_ChangeType_PolitySuccessorsChanged>Polity succession changed</HR_Politics_ChangeType_PolitySuccessorsChanged>
+  <HR_Politics_ChangeType_PoliticalRelationChanged>Political relation changed</HR_Politics_ChangeType_PoliticalRelationChanged>
+  <HR_Politics_ChangeType_FactionMappingChanged>Faction mapping changed</HR_Politics_ChangeType_FactionMappingChanged>
+  <HR_Politics_ChangeType_PolityHierarchyChanged>Polity hierarchy changed</HR_Politics_ChangeType_PolityHierarchyChanged>
+  <HR_Politics_ChangeType_CommunityControllerChanged>Community controller changed</HR_Politics_ChangeType_CommunityControllerChanged>
+  <HR_Politics_DebugTogglePolity>Debug: toggle status for {0}</HR_Politics_DebugTogglePolity>
+  <HR_Politics_DebugCycleController>Debug: cycle controller for {0}</HR_Politics_DebugCycleController>
+  <HR_Politics_DebugSubmitCommunity>Debug: submit {0} to its regional controller</HR_Politics_DebugSubmitCommunity>
+  <HR_Politics_DebugChangeAllegiance>Debug: change allegiance for {0}</HR_Politics_DebugChangeAllegiance>
+  <HR_Politics_DebugToggleResistance>Debug: toggle resistance for {0}</HR_Politics_DebugToggleResistance>
 </LanguageData>
