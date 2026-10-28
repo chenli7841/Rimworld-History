@@ -67,6 +67,8 @@
   <HR_Region_Guanzhong_Description>A logical historical region; geography is kept separate from political territory.</HR_Region_Guanzhong_Description>
   <HR_Region_Hedong_Label>Hedong</HR_Region_Hedong_Label>
   <HR_Region_Hedong_Description>A logical historical region; geography is kept separate from political territory.</HR_Region_Hedong_Description>
+  <HR_Region_Bashu_Label>Ba and Shu</HR_Region_Bashu_Label>
+  <HR_Region_Bashu_Description>A broad historical region reference; no verified boundary or world tile mapping is included.</HR_Region_Bashu_Description>
   <HR_Culture_ZhouCentralPlains_Label>Zhou Central Plains Culture</HR_Culture_ZhouCentralPlains_Label>
   <HR_Culture_ZhouCentralPlains_Description>A broad historical and regional culture grouping, not a modern ethnic identity.</HR_Culture_ZhouCentralPlains_Description>
   <HR_Culture_QinRegional_Label>Qin Regional Culture</HR_Culture_QinRegional_Label>
@@ -129,4 +131,25 @@
   <HR_Politics_DebugSubmitCommunity>Debug: submit {0} to its regional controller</HR_Politics_DebugSubmitCommunity>
   <HR_Politics_DebugChangeAllegiance>Debug: change allegiance for {0}</HR_Politics_DebugChangeAllegiance>
   <HR_Politics_DebugToggleResistance>Debug: toggle resistance for {0}</HR_Politics_DebugToggleResistance>
+  <HR_World_Title>Historical world</HR_World_Title>
+  <HR_World_PrototypeMode>Prototype Historical Map — not a real China map</HR_World_PrototypeMode>
+  <HR_World_EarthMode>Historical Earth mapping</HR_World_EarthMode>
+  <HR_World_Legend>Legend: black = locked; gray = unexplored; normal terrain = revealed</HR_World_Legend>
+  <HR_World_LockedAreaCount>{0} area(s) remain locked</HR_World_LockedAreaCount>
+  <HR_World_LockedRegion>Unopened region</HR_World_LockedRegion>
+  <HR_World_UnexploredRegion>Unknown area — accessible, details not yet known</HR_World_UnexploredRegion>
+  <HR_World_CurrentHistoricalDate>Historical date: {0}</HR_World_CurrentHistoricalDate>
+  <HR_World_RegionPolitics>Nominal owner: {0}; effective controller: {1}</HR_World_RegionPolitics>
+  <HR_World_DebugUnlock>Debug: unlock {0}</HR_World_DebugUnlock>
+  <HR_World_DebugReveal>Debug: reveal {0}</HR_World_DebugReveal>
+  <HR_World_DebugMapTile>Debug: map selected tile {0} to {1}</HR_World_DebugMapTile>
+  <HR_World_DebugUnmapTile>Debug: unmap tile {0} from {1}</HR_World_DebugUnmapTile>
+  <HR_World_LockedDestination>This tile is locked in the active historical scenario.</HR_World_LockedDestination>
+  <HR_World_LockedRouteStopped>A locked historical region blocked this caravan route.</HR_World_LockedRouteStopped>
+  <HR_World_RegionUnlocked>New historical region unlocked: {0}</HR_World_RegionUnlocked>
+  <HR_World_RegionRevealed>Historical region revealed: {0}</HR_World_RegionRevealed>
+  <HR_World_SelectedTile>Selected world tile</HR_World_SelectedTile>
+  <HR_World_LockedHover>This area is not open.</HR_World_LockedHover>
+  <HR_World_UnexploredHover>This area is accessible but its details are still unknown.</HR_World_UnexploredHover>
+  <HR_World_LockedSettlement>A locked historical region cannot receive a player settlement.</HR_World_LockedSettlement>
 </LanguageData>

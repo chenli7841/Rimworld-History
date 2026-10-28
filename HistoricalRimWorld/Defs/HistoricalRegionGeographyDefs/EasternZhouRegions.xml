@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Geography.HistoricalRegionGeographyDef>
+    <defName>HR_Geography_Luoyi</defName>
+    <label>HR_Geography_Luoyi_Label</label>
+    <region>HR_Region_Luoyi</region>
+    <confidence>Approximate</confidence>
+    <primaryRegionPriority>10</primaryRegionPriority>
+    <sourceNotes>No verified historical boundary or Earth-to-world tile mapping is shipped. Assign prototype tiles per test world in developer mode.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalRegionGeographyDef>
+  <HistoricalRimWorld.Geography.HistoricalRegionGeographyDef>
+    <defName>HR_Geography_ZhengHeartland</defName>
+    <label>HR_Geography_ZhengHeartland_Label</label>
+    <region>HR_Region_ZhengHeartland</region>
+    <confidence>Approximate</confidence>
+    <primaryRegionPriority>10</primaryRegionPriority>
+    <sourceNotes>No verified historical boundary or Earth-to-world tile mapping is shipped. Assign prototype tiles per test world in developer mode.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalRegionGeographyDef>
+  <HistoricalRimWorld.Geography.HistoricalRegionGeographyDef>
+    <defName>HR_Geography_Guanzhong</defName>
+    <label>HR_Geography_Guanzhong_Label</label>
+    <region>HR_Region_Guanzhong</region>
+    <confidence>Approximate</confidence>
+    <primaryRegionPriority>10</primaryRegionPriority>
+    <sourceNotes>No verified historical boundary or Earth-to-world tile mapping is shipped. Assign prototype tiles per test world in developer mode.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalRegionGeographyDef>
+  <HistoricalRimWorld.Geography.HistoricalRegionGeographyDef>
+    <defName>HR_Geography_Hedong</defName>
+    <label>HR_Geography_Hedong_Label</label>
+    <region>HR_Region_Hedong</region>
+    <confidence>Approximate</confidence>
+    <primaryRegionPriority>10</primaryRegionPriority>
+    <sourceNotes>No verified historical boundary or Earth-to-world tile mapping is shipped. Assign prototype tiles per test world in developer mode.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalRegionGeographyDef>
+  <HistoricalRimWorld.Geography.HistoricalRegionGeographyDef>
+    <defName>HR_Geography_Bashu</defName>
+    <label>HR_Geography_Bashu_Label</label>
+    <region>HR_Region_Bashu</region>
+    <confidence>Approximate</confidence>
+    <primaryRegionPriority>10</primaryRegionPriority>
+    <sourceNotes>No verified historical boundary or Earth-to-world tile mapping is shipped. Assign prototype tiles per test world in developer mode.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalRegionGeographyDef>
+</Defs>

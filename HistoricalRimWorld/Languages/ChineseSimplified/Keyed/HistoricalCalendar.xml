@@ -67,6 +67,8 @@
   <HR_Region_Guanzhong_Description>逻辑历史区域；地理与政治领土分开记录。</HR_Region_Guanzhong_Description>
   <HR_Region_Hedong_Label>河东</HR_Region_Hedong_Label>
   <HR_Region_Hedong_Description>逻辑历史区域；地理与政治领土分开记录。</HR_Region_Hedong_Description>
+  <HR_Region_Bashu_Label>巴蜀</HR_Region_Bashu_Label>
+  <HR_Region_Bashu_Description>宽泛的历史区域参考；当前没有已验证边界或世界 Tile 映射。</HR_Region_Bashu_Description>
   <HR_Culture_ZhouCentralPlains_Label>周文化圈</HR_Culture_ZhouCentralPlains_Label>
   <HR_Culture_ZhouCentralPlains_Description>宽泛的历史与地域文化分类，不代表现代民族身份。</HR_Culture_ZhouCentralPlains_Description>
   <HR_Culture_QinRegional_Label>秦地文化分类</HR_Culture_QinRegional_Label>
@@ -129,4 +131,25 @@
   <HR_Politics_DebugSubmitCommunity>调试：使 {0} 向本地区控制者投降</HR_Politics_DebugSubmitCommunity>
   <HR_Politics_DebugChangeAllegiance>调试：更改 {0} 的效忠对象</HR_Politics_DebugChangeAllegiance>
   <HR_Politics_DebugToggleResistance>调试：切换 {0} 的抵抗状态</HR_Politics_DebugToggleResistance>
+  <HR_World_Title>历史世界</HR_World_Title>
+  <HR_World_PrototypeMode>原型历史地图——并非真实中国地图</HR_World_PrototypeMode>
+  <HR_World_EarthMode>真实地球映射</HR_World_EarthMode>
+  <HR_World_Legend>图例：黑色＝未开放；灰色＝已开放但未知；正常地形＝已揭示</HR_World_Legend>
+  <HR_World_LockedAreaCount>仍有 {0} 个地区未开放</HR_World_LockedAreaCount>
+  <HR_World_LockedRegion>未开放地区</HR_World_LockedRegion>
+  <HR_World_UnexploredRegion>未知地区——可以进入，尚未获得详细信息</HR_World_UnexploredRegion>
+  <HR_World_CurrentHistoricalDate>历史日期：{0}</HR_World_CurrentHistoricalDate>
+  <HR_World_RegionPolitics>名义归属：{0}；实际控制：{1}</HR_World_RegionPolitics>
+  <HR_World_DebugUnlock>调试：开放 {0}</HR_World_DebugUnlock>
+  <HR_World_DebugReveal>调试：揭示 {0}</HR_World_DebugReveal>
+  <HR_World_DebugMapTile>调试：将选中 Tile {0} 映射到 {1}</HR_World_DebugMapTile>
+  <HR_World_DebugUnmapTile>调试：取消 Tile {0} 与 {1} 的映射</HR_World_DebugUnmapTile>
+  <HR_World_LockedDestination>该 Tile 在当前历史剧本中尚未开放。</HR_World_LockedDestination>
+  <HR_World_LockedRouteStopped>商队路线受到未开放历史地区阻挡。</HR_World_LockedRouteStopped>
+  <HR_World_RegionUnlocked>新的历史地区已开放：{0}</HR_World_RegionUnlocked>
+  <HR_World_RegionRevealed>已揭示历史地区：{0}</HR_World_RegionRevealed>
+  <HR_World_SelectedTile>选中的世界 Tile</HR_World_SelectedTile>
+  <HR_World_LockedHover>该地区尚未开放。</HR_World_LockedHover>
+  <HR_World_UnexploredHover>该地区可以进入，但详情仍然未知。</HR_World_UnexploredHover>
+  <HR_World_LockedSettlement>玩家不能在尚未开放的历史地区建立聚落。</HR_World_LockedSettlement>
 </LanguageData>

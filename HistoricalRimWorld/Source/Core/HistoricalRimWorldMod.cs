@@ -1,5 +1,6 @@
 using UnityEngine;
 using Verse;
+using HistoricalRimWorld.Patches.World;
 
 namespace HistoricalRimWorld
 {
@@ -10,6 +11,7 @@ namespace HistoricalRimWorld
         public HistoricalRimWorldMod(ModContentPack content) : base(content)
         {
             settings = GetSettings<HistoricalRimWorldSettings>();
+            HistoricalWorldPatchBootstrap.Apply();
             Log.Message("[Historical RimWorld] Mod initialized.");
         }
 

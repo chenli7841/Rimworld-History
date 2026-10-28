@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.World.HistoricalWorldRevealSetupDef>
+    <defName>HR_Setup_EasternZhou_770BCE_World</defName>
+    <label>HR_Setup_EasternZhou_770BCE_World_Label</label>
+    <description>HR_Setup_EasternZhou_770BCE_World_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <mapMode>PrototypeWorld</mapMode>
+    <mapVersion>1</mapVersion>
+    <regions>
+      <li>
+        <region>HR_Region_Luoyi</region>
+        <access>Revealed</access>
+      </li>
+      <li>
+        <region>HR_Region_ZhengHeartland</region>
+        <access>Revealed</access>
+      </li>
+      <li>
+        <region>HR_Region_Guanzhong</region>
+        <access>Locked</access>
+      </li>
+      <li>
+        <region>HR_Region_Hedong</region>
+        <access>Locked</access>
+      </li>
+      <li>
+        <region>HR_Region_Bashu</region>
+        <access>Locked</access>
+      </li>
+    </regions>
+    <sourceNotes>Prototype-only access state. The current RimWorld planet is not a real historical China map, and no tile mapping is asserted until test tiles are assigned in the saved world.</sourceNotes>
+  </HistoricalRimWorld.World.HistoricalWorldRevealSetupDef>
+</Defs>

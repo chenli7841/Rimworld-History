@@ -10,16 +10,18 @@ In Windows PowerShell, from this directory:
 
 ```powershell
 $env:RIMWORLD_DIR = 'C:\Path\To\RimWorld'
+$env:HARMONY_DIR = 'C:\Path\To\RimWorld\Mods\Harmony\Current\Assemblies'
 dotnet build .\Source\HistoricalRimWorld.csproj -c Release
 ```
 
 Alternatively, pass the MSBuild property directly:
 
 ```powershell
-dotnet build .\Source\HistoricalRimWorld.csproj -c Release -p:RimWorldDir='C:\Path\To\RimWorld'
+dotnet build .\Source\HistoricalRimWorld.csproj -c Release `
+  -p:RimWorldDir='C:\Path\To\RimWorld' -p:HarmonyDir='C:\Path\To\Harmony\Assemblies'
 ```
 
-The project reads `Assembly-CSharp.dll` and `UnityEngine.CoreModule.dll` from `RimWorldWin64_Data\Managed`. It writes `HistoricalRimWorld.dll` to `Assemblies`; game and Unity references are marked non-copy-local, so vanilla DLLs are not bundled in the mod.
+The project reads `Assembly-CSharp.dll` and `UnityEngine.CoreModule.dll` from `RimWorldWin64_Data\Managed`, plus `0Harmony.dll` from the Harmony 1.6 Assemblies directory. Harmony is required for the centralized world-map access and rendering patches. All game, Unity, and Harmony references are non-copy-local; the build writes `HistoricalRimWorld.dll` to `Assemblies` and does not bundle those dependency DLLs.
 
 ## In game
 
@@ -28,3 +30,7 @@ Enable the mod and open the **Historical Calendar** main tab. In developer mode,
 Historical politics initializes alongside an explicitly selected scenario and persists in the save. The calendar tab shows regions, polities, domains, communities, and political changes. Developer controls are available only in developer mode.
 
 To install manually, place the `HistoricalRimWorld` folder in RimWorld's `Mods` directory and enable it in the mod list. See [Architecture](Docs/Architecture.md) and [Roadmap](Docs/Roadmap.md).
+
+## Historical world prototype
+
+The current 770 BCE world reveal setup uses `PrototypeWorld`. RimWorld's generated tiles are not treated as real-world Chinese coordinates. No verified historical boundary or real Earth tile mapping is shipped. In developer mode, the Historical World panel can associate selected tiles with configured historical regions; those assignments are save-specific. Until a tile is mapped, it is outside this prototype region system and remains accessible. Locked mapped tiles are masked and blocked for player caravan travel and player settlement placement. This prototype does not provide automated historical map coverage or Earth geography.

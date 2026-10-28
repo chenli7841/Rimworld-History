@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Scenarios.HistoricalRegionDef>
+    <defName>HR_Region_Bashu</defName>
+    <label>HR_Region_Bashu_Label</label>
+    <description>HR_Region_Bashu_Description</description>
+    <historicalName>巴蜀</historicalName>
+    <geographicDescription>Global historical region entry reserved for future scenario geography; not assigned to the current scenario's political map.</geographicDescription>
+    <historicalDescription>此地区定义可供后续剧本引用；当前剧本不据此推断其政治归属。</historicalDescription>
+    <sourceNotes>Global geography directory entry; boundary and tile mapping require separately sourced data.</sourceNotes>
+    <evidenceLevel>Probable</evidenceLevel>
+  </HistoricalRimWorld.Scenarios.HistoricalRegionDef>
+</Defs>

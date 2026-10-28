@@ -13,6 +13,7 @@
     <OutputPath>$(MSBuildProjectDirectory)\..\Assemblies\</OutputPath>
     <RimWorldDir Condition="'$(RimWorldDir)' == '' and '$(RIMWORLD_DIR)' != ''">$(RIMWORLD_DIR)</RimWorldDir>
     <RimWorldManagedDir Condition="'$(RimWorldManagedDir)' == '' and '$(RimWorldDir)' != ''">$(RimWorldDir)\RimWorldWin64_Data\Managed</RimWorldManagedDir>
+    <HarmonyDir Condition="'$(HarmonyDir)' == '' and '$(HARMONY_DIR)' != ''">$(HARMONY_DIR)</HarmonyDir>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,11 +25,16 @@
       <HintPath>$(RimWorldManagedDir)\UnityEngine.CoreModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDir)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
 
   <Target Name="ValidateRimWorldReferences" BeforeTargets="ResolveReferences">
     <Error Condition="'$(RimWorldManagedDir)' == ''" Text="Set RimWorldDir (or the RIMWORLD_DIR environment variable) to the RimWorld installation directory." />
     <Error Condition="!Exists('$(RimWorldManagedDir)\Assembly-CSharp.dll')" Text="Assembly-CSharp.dll was not found under '$(RimWorldManagedDir)'. Set RimWorldDir to the RimWorld 1.6 installation directory." />
     <Error Condition="!Exists('$(RimWorldManagedDir)\UnityEngine.CoreModule.dll')" Text="UnityEngine.CoreModule.dll was not found under '$(RimWorldManagedDir)'. Set RimWorldDir to the RimWorld 1.6 installation directory." />
+    <Error Condition="'$(HarmonyDir)' == '' or !Exists('$(HarmonyDir)\0Harmony.dll')" Text="Harmony 2.x 0Harmony.dll was not found. Set HarmonyDir (or HARMONY_DIR) to the Harmony 1.6 Assemblies directory." />
   </Target>
 </Project>
