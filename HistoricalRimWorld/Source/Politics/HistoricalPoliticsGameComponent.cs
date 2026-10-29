@@ -8,6 +8,8 @@ namespace HistoricalRimWorld.Politics
 {
     public sealed class HistoricalPoliticsGameComponent : GameComponent
     {
+        public HistoricalPoliticsGameComponent(Game game) { }
+
         private string scenarioDefName;
         private string setupDefName;
         private List<HistoricalPolityState> polities = new List<HistoricalPolityState>();

@@ -8,6 +8,18 @@
   <HR_EZ_Background>公元前770年，周王室迁至洛邑。本篇章模拟郑国名义效忠下的地方村庄，不直接模拟王室。</HR_EZ_Background>
   <HR_EZ_Region>历史起始地区：{0}（原型地理；并非古代中国真实地图）</HR_EZ_Region>
   <HR_EZ_StartingRegion>郑地核心区</HR_EZ_StartingRegion>
+  <HR_State_Qi_Label>齐国</HR_State_Qi_Label>
+  <HR_State_Lu_Label>鲁国</HR_State_Lu_Label>
+  <HR_State_Song_Label>宋国</HR_State_Song_Label>
+  <HR_State_Wei_Label>卫国</HR_State_Wei_Label>
+  <HR_State_Chu_Label>楚国</HR_State_Chu_Label>
+  <HR_Region_QiHeartland_Label>齐地原型区域</HR_Region_QiHeartland_Label>
+  <HR_Region_LuHeartland_Label>鲁地原型区域</HR_Region_LuHeartland_Label>
+  <HR_Region_SongHeartland_Label>宋地原型区域</HR_Region_SongHeartland_Label>
+  <HR_Region_WeiHeartland_Label>卫地原型区域</HR_Region_WeiHeartland_Label>
+  <HR_Region_ChuHeartland_Label>楚地原型区域</HR_Region_ChuHeartland_Label>
+  <HR_012_SelectZhengStartingRegion>《周室东迁》剧本只能从郑地原型区域选择起始地点。</HR_012_SelectZhengStartingRegion>
+  <HR_012_WorldGenerationFailed>历史世界生成未完成：{0}。请返回世界设置并重新生成世界。</HR_012_WorldGenerationFailed>
   <HR_EZ_Allegiance>社区效忠：{0}</HR_EZ_Allegiance>
   <HR_EZ_Population>自由殖民者：{0}</HR_EZ_Population>
   <HR_EZ_Families>已记录家族：{0}</HR_EZ_Families>

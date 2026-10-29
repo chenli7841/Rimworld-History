@@ -15,6 +15,8 @@ namespace HistoricalRimWorld.Genealogy
 {
     public sealed class HistoricalGenealogyGameComponent : GameComponent
     {
+        public HistoricalGenealogyGameComponent(Game game) { }
+
         private const int CurrentDataVersion = 1;
         private string scenarioDefName;
         private int dataVersion;

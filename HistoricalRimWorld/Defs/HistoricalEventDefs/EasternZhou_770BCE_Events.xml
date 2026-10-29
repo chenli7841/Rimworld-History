@@ -6,8 +6,8 @@
     <description>HR_Event_WesternZhouCrisis_771BCE_Description</description>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
     <historicalDate>
-      <astronomicalYear>-770</astronomicalYear>
-      <precision>Year</precision>
+      <AstronomicalYear>-770</AstronomicalYear>
+      <Precision>Year</Precision>
     </historicalDate>
     <category>Political</category>
     <scope>World</scope>
@@ -27,8 +27,8 @@
     <description>HR_Event_ZhouEasternMigration_770BCE_Description</description>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
     <historicalDate>
-      <astronomicalYear>-769</astronomicalYear>
-      <precision>Year</precision>
+      <AstronomicalYear>-769</AstronomicalYear>
+      <Precision>Year</Precision>
     </historicalDate>
     <category>Political</category>
     <scope>World</scope>
@@ -49,7 +49,7 @@
     <label>HR_Event_QinXiangRecognition_770BCE_Label</label>
     <description>HR_Event_QinXiangRecognition_770BCE_Description</description>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
-    <historicalDate><astronomicalYear>-769</astronomicalYear><precision>Year</precision></historicalDate>
+    <historicalDate><AstronomicalYear>-769</AstronomicalYear><Precision>Year</Precision></historicalDate>
     <category>Political</category><scope>World</scope><regionId>HR_Region_Guanzhong</regionId><polityId>HR_State_Qin</polityId>
     <activationMode>InitialBackground</activationMode><visibility>Public</visibility><notificationPolicy>ChronicleOnly</notificationPolicy>
     <evidenceLevel>Probable</evidenceLevel><provenance>HistoricalReconstruction</provenance><chronologyTradition>TraditionalReceivedChronology</chronologyTradition>
@@ -61,7 +61,7 @@
     <label>HR_Event_XieKingDeath_750BCE_Label</label>
     <description>HR_Event_XieKingDeath_750BCE_Description</description>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
-    <historicalDate><astronomicalYear>-749</astronomicalYear><precision>Year</precision></historicalDate>
+    <historicalDate><AstronomicalYear>-749</AstronomicalYear><Precision>Year</Precision></historicalDate>
     <category>Political</category><scope>World</scope><regionId>HR_Region_Luoyi</regionId><polityId>HR_State_EasternZhou</polityId>
     <activationMode>Scheduled</activationMode><visibility>Hidden</visibility><notificationPolicy>ChronicleOnly</notificationPolicy>
     <evidenceLevel>Disputed</evidenceLevel><provenance>HistoricalReconstruction</provenance><chronologyTradition>TraditionalReceivedChronology</chronologyTradition>
@@ -73,7 +73,7 @@
     <label>HR_Event_JinQuwoEnfeoffment_745BCE_Label</label>
     <description>HR_Event_JinQuwoEnfeoffment_745BCE_Description</description>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
-    <historicalDate><astronomicalYear>-744</astronomicalYear><precision>Year</precision></historicalDate>
+    <historicalDate><AstronomicalYear>-744</AstronomicalYear><Precision>Year</Precision></historicalDate>
     <category>Political</category><scope>World</scope><regionId>HR_Region_Hedong</regionId><polityId>HR_State_Jin</polityId>
     <activationMode>Scheduled</activationMode><visibility>Public</visibility><notificationPolicy>ChronicleOnly</notificationPolicy>
     <evidenceLevel>Probable</evidenceLevel><provenance>AttestedHistoricalEvent</provenance><chronologyTradition>TraditionalReceivedChronology</chronologyTradition>
@@ -86,8 +86,8 @@
     <description>HR_Event_DebugUnlockHedong_Description</description>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
     <historicalDate>
-      <astronomicalYear>-768</astronomicalYear>
-      <precision>Year</precision>
+      <AstronomicalYear>-768</AstronomicalYear>
+      <Precision>Year</Precision>
     </historicalDate>
     <category>Other</category>
     <scope>Region</scope>

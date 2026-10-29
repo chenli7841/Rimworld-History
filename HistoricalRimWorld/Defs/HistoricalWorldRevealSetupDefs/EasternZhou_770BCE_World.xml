@@ -24,6 +24,11 @@
         <region>HR_Region_Hedong</region>
         <access>Locked</access>
       </li>
+      <li><region>HR_Region_QiHeartland</region><access>Locked</access></li>
+      <li><region>HR_Region_LuHeartland</region><access>Locked</access></li>
+      <li><region>HR_Region_SongHeartland</region><access>Locked</access></li>
+      <li><region>HR_Region_WeiHeartland</region><access>Locked</access></li>
+      <li><region>HR_Region_ChuHeartland</region><access>Locked</access></li>
       <li>
         <region>HR_Region_Bashu</region>
         <access>Locked</access>

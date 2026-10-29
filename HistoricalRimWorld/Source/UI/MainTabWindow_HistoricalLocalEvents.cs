@@ -2,6 +2,7 @@ using System.Linq;
 using HistoricalRimWorld.Calendar;
 using HistoricalRimWorld.Events;
 using HistoricalRimWorld.Scenarios;
+using HistoricalRimWorld.Technology;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -78,7 +79,9 @@ namespace HistoricalRimWorld.UI
                     break;
                 case HistoricalLocalEventOutcome.TradeResource:
                     key = "HR_LocalOutcome_Gain";
-                    value = choice.amount + " × " + choice.resource.LabelCap;
+                    value = choice.amount + " × " + choice.resource.LabelCap.ToString()
+                        + (choice.secondaryResource == null ? string.Empty
+                            : " + " + choice.secondaryAmount + " × " + choice.secondaryResource.LabelCap.ToString());
                     break;
                 case HistoricalLocalEventOutcome.AddColonist: key = "HR_LocalOutcome_Colonist"; break;
                 case HistoricalLocalEventOutcome.ChangeCommunityPosture:

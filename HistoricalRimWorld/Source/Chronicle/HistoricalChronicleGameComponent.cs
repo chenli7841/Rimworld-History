@@ -7,6 +7,8 @@ namespace HistoricalRimWorld.Chronicle
 {
     public sealed class HistoricalChronicleGameComponent : GameComponent
     {
+        public HistoricalChronicleGameComponent(Game game) { }
+
         private string scenarioDefName;
         private bool initialized;
         private List<HistoricalChronicleEntry> entries = new List<HistoricalChronicleEntry>();

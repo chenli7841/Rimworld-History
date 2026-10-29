@@ -13,6 +13,7 @@ using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.Scenarios.EasternZhou;
 using HistoricalRimWorld.World;
 using HistoricalRimWorld.Events.Actions;
+using HistoricalRimWorld.Events.Conditions;
 using HistoricalRimWorld.Politics;
 using RimWorld;
 using Verse;
@@ -160,6 +161,14 @@ namespace HistoricalRimWorld.Events
                 || choice.outcome == HistoricalLocalEventOutcome.IncreaseCommunityCulturePresence)
                 && string.IsNullOrWhiteSpace(HistoricalScenarioProgressManager.ActiveSetup?.startingCommunityName)) return false;
             HistoricalEventContext context = CreateLocalContext(item, currentDate, map);
+            if (!string.IsNullOrWhiteSpace(item.regionId)
+                && (!HistoricalPoliticsManager.TryGetCommunity(context.CommunityId, out HistoricalLocalCommunityState community)
+                    || community.RegionId != item.regionId)) return false;
+            if (!string.IsNullOrWhiteSpace(item.polityId)
+                && (!HistoricalPoliticsManager.TryGetCommunity(context.CommunityId, out HistoricalLocalCommunityState polityCommunity)
+                    || (polityCommunity.AllegiancePolityId != item.polityId
+                        && polityCommunity.AdministrativePolityId != item.polityId
+                        && polityCommunity.EffectiveControllerId != item.polityId))) return false;
             foreach (HistoricalEventCondition condition in item.conditions ?? Enumerable.Empty<HistoricalEventCondition>())
                 if (condition == null || !condition.Validate(context, out _) || !condition.Evaluate(context)) return false;
             return true;
@@ -410,7 +419,8 @@ namespace HistoricalRimWorld.Events
                 return HistoricalCultureManager.TryIncreaseCommunityPresence(communityId, choice.cultureId, choice.cultureAmount, out error);
             if (choice.outcome == HistoricalLocalEventOutcome.AdoptTechnology)
                 return HistoricalTechnologyManager.TryAdoptTechnology(communityId, choice.technologyId,
-                    HistoricalTechnologyAcquisitionSource.ArtisanMigration, out error);
+                    HistoricalTechnologyAcquisitionSource.ArtisanMigration, out error)
+                    && ConsumeResourceCosts(map, choice, out error);
             if (choice.outcome == HistoricalLocalEventOutcome.RevealHistoricalEvent)
                 return HistoricalChronicleManager.TryRevealEventToPlayer(choice.historicalEventId, out error);
             if (choice.outcome == HistoricalLocalEventOutcome.CreateRelic)

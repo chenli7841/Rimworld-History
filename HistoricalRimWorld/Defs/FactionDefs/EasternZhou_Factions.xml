@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef ParentName="TribeBase" Name="HR_EasternZhouFactionBase" Abstract="True">
+    <pawnSingular>retainer</pawnSingular>
+    <pawnsPlural>people</pawnsPlural>
+    <categoryTag>Tribal</categoryTag>
+    <listOrderPriority>15</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <displayInFactionSelection>true</displayInFactionSelection>
+    <canMakeRandomly>true</canMakeRandomly>
+    <techLevel>Neolithic</techLevel>
+    <naturalEnemy>false</naturalEnemy>
+    <permanentEnemy>false</permanentEnemy>
+    <canSiege>false</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <canRequestOrbitalTrader>false</canRequestOrbitalTrader>
+    <caravanTraderKinds Inherit="False"><li>HR_Caravan_EasternZhou_BulkGoods</li></caravanTraderKinds>
+    <visitorTraderKinds Inherit="False"><li>HR_Visitor_EasternZhou_BulkGoods</li></visitorTraderKinds>
+    <baseTraderKinds Inherit="False"><li>HR_Base_EasternZhou_BulkGoods</li></baseTraderKinds>
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <HR_PawnKind_Guard>4</HR_PawnKind_Guard>
+          <HR_PawnKind_Spearman>6</HR_PawnKind_Spearman>
+          <HR_PawnKind_Archer>4</HR_PawnKind_Archer>
+          <HR_PawnKind_NobleRetainer>1</HR_PawnKind_NobleRetainer>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <HR_PawnKind_Farmer>5</HR_PawnKind_Farmer>
+          <HR_PawnKind_Artisan>3</HR_PawnKind_Artisan>
+          <HR_PawnKind_Merchant>2</HR_PawnKind_Merchant>
+          <HR_PawnKind_Messenger>1</HR_PawnKind_Messenger>
+          <HR_PawnKind_NobleRetainer>1</HR_PawnKind_NobleRetainer>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders><HR_PawnKind_Merchant>1</HR_PawnKind_Merchant></traders>
+        <carriers><Muffalo>2</Muffalo><Alpaca>1</Alpaca></carriers>
+        <guards><HR_PawnKind_Guard>2</HR_PawnKind_Guard><HR_PawnKind_Spearman>2</HR_PawnKind_Spearman><HR_PawnKind_Archer>1</HR_PawnKind_Archer></guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <HR_PawnKind_Farmer>3</HR_PawnKind_Farmer>
+          <HR_PawnKind_Artisan>2</HR_PawnKind_Artisan>
+          <HR_PawnKind_Guard>3</HR_PawnKind_Guard>
+          <HR_PawnKind_Spearman>3</HR_PawnKind_Spearman>
+          <HR_PawnKind_Archer>2</HR_PawnKind_Archer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_EasternZhou</defName><label>周王室</label><fixedName>周王室</fixedName><description>东周初年的王室政权。</description><leaderTitle>周王</leaderTitle></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Zheng</defName><label>郑国</label><fixedName>郑国</fixedName><description>东周初年的郑国。</description><leaderTitle>郑伯</leaderTitle></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Jin</defName><label>晋国</label><fixedName>晋国</fixedName><description>东周初年的晋国，尚未分裂为韩、赵、魏。</description><leaderTitle>晋侯</leaderTitle></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Qin</defName><label>秦国</label><fixedName>秦国</fixedName><description>东周初年经营关中西部的秦国。</description><leaderTitle>秦侯</leaderTitle></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Qi</defName><label>齐国</label><fixedName>齐国</fixedName><description>东周初年的齐国。</description><leaderTitle>齐侯</leaderTitle></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Lu</defName><label>鲁国</label><fixedName>鲁国</fixedName><description>东周初年的鲁国。</description><leaderTitle>鲁侯</leaderTitle></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Song</defName><label>宋国</label><fixedName>宋国</fixedName><description>东周初年的宋国。</description><leaderTitle>宋公</leaderTitle></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Wei</defName><label>卫国</label><fixedName>卫国</fixedName><description>东周初年的卫国。</description><leaderTitle>卫侯</leaderTitle></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Chu</defName><label>楚国</label><fixedName>楚国</fixedName><description>东周初年的楚国；此配置不套用战国末期疆域。</description><leaderTitle>楚子</leaderTitle></FactionDef>
+
+  <!-- Hidden historical hostile source for generic tribal raids; never shown as a selectable state. -->
+  <FactionDef ParentName="HR_EasternZhouFactionBase">
+    <defName>HR_Faction_LocalBandits</defName>
+    <label>地方盗匪</label>
+    <fixedName>地方盗匪</fixedName>
+    <description>用于代表地方安全风险的游戏化敌对群体，不对应特定历史政权。</description>
+    <permanentEnemy>true</permanentEnemy>
+    <canMakeRandomly>false</canMakeRandomly>
+    <displayInFactionSelection>false</displayInFactionSelection>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <settlementGenerationWeight>0</settlementGenerationWeight>
+    <caravanTraderKinds Inherit="False" />
+    <visitorTraderKinds Inherit="False" />
+    <baseTraderKinds Inherit="False" />
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <HR_PawnKind_Guard>2</HR_PawnKind_Guard>
+          <HR_PawnKind_Spearman>5</HR_PawnKind_Spearman>
+          <HR_PawnKind_Archer>3</HR_PawnKind_Archer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+</Defs>

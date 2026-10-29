@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HistoricalRimWorld.Geography;
+using HistoricalRimWorld.Factions;
 using HistoricalRimWorld.Patches.World;
 using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.UI;
@@ -63,6 +64,7 @@ namespace HistoricalRimWorld.World
             initialized = true;
             HistoricalWorldPatchContext.ResetNotifications();
             LoadConfiguredPrototypeMappings();
+            LoadGeneratedPrototypeMappings();
             RebuildDerivedCaches();
             return true;
         }
@@ -260,6 +262,29 @@ namespace HistoricalRimWorld.World
                     }
                     mapping.AddRegion(geography.region.defName);
                 }
+            }
+        }
+
+        private void LoadGeneratedPrototypeMappings()
+        {
+            if (mapMode != HistoricalWorldMapMode.PrototypeWorld || world == null) return;
+            HistoricalFactionWorldComponent generated = world.GetComponent<HistoricalFactionWorldComponent>();
+            if (generated == null || generated.GenerationMode != HistoricalFactionGenerationMode.HistoricalScenario
+                || generated.ScenarioDefName != scenarioDefName) return;
+
+            HashSet<string> activeRegions = new HashSet<string>(Regions.Select(item => item.RegionId), StringComparer.Ordinal);
+            foreach (HistoricalPrototypeRegionTileBindingState settlement in generated.PrototypeRegionTiles.Where(item => item != null))
+            {
+                if (settlement.tileId < 0 || world.grid == null || settlement.tileId >= world.grid.TilesCount
+                    || !activeRegions.Contains(settlement.regionId)) continue;
+                HistoricalPrototypeTileMapping mapping = FindTileMapping(settlement.tileId);
+                if (mapping == null)
+                {
+                    mapping = new HistoricalPrototypeTileMapping();
+                    mapping.Initialize(settlement.tileId, null);
+                    prototypeMappings.Add(mapping);
+                }
+                mapping.AddRegion(settlement.regionId);
             }
         }
 

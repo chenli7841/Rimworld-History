@@ -81,6 +81,10 @@ namespace HistoricalRimWorld.Events
             if (weight < 1) yield return "weight must be positive.";
             if (minimumColonists < 0 || requiredResourceCount < 0) yield return "Trigger thresholds cannot be negative.";
             if (requiredResourceCount > 0 && requiredResource == null) yield return "requiredResourceCount requires requiredResource.";
+            if (!string.IsNullOrWhiteSpace(regionId) && DefDatabase<HistoricalRegionDef>.GetNamedSilentFail(regionId) == null)
+                yield return "regionId references a missing HistoricalRegionDef.";
+            if (!string.IsNullOrWhiteSpace(polityId) && DefDatabase<HistoricalStateDef>.GetNamedSilentFail(polityId) == null)
+                yield return "polityId references a missing HistoricalStateDef.";
             foreach (HistoricalEventCondition condition in conditions ?? new List<HistoricalEventCondition>())
             {
                 if (condition == null) { yield return "conditions contains a null item."; continue; }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <HistoricalTechnologySetupDef>
+  <HistoricalRimWorld.Technology.HistoricalTechnologySetupDef>
     <defName>HR_TechnologySetup_EasternZhou_770BCE</defName>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
     <communityId>HR_Community_Player_001</communityId>
@@ -28,5 +28,5 @@
       <li><technology>HR_Tech_WaterManagement</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_Commerce</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
     </technologies>
-  </HistoricalTechnologySetupDef>
+  </HistoricalRimWorld.Technology.HistoricalTechnologySetupDef>
 </Defs>

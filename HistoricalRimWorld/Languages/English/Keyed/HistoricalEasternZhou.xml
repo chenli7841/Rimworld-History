@@ -8,6 +8,18 @@
   <HR_EZ_Background>In 770 BCE, the Zhou court moved east to Luoyi. This chapter follows a local village under Zheng allegiance; it does not simulate the royal court directly.</HR_EZ_Background>
   <HR_EZ_Region>Historical starting region: {0} (prototype geography; not an ancient China map)</HR_EZ_Region>
   <HR_EZ_StartingRegion>Zheng heartland</HR_EZ_StartingRegion>
+  <HR_State_Qi_Label>State of Qi</HR_State_Qi_Label>
+  <HR_State_Lu_Label>State of Lu</HR_State_Lu_Label>
+  <HR_State_Song_Label>State of Song</HR_State_Song_Label>
+  <HR_State_Wei_Label>State of Wei</HR_State_Wei_Label>
+  <HR_State_Chu_Label>State of Chu</HR_State_Chu_Label>
+  <HR_Region_QiHeartland_Label>Qi prototype region</HR_Region_QiHeartland_Label>
+  <HR_Region_LuHeartland_Label>Lu prototype region</HR_Region_LuHeartland_Label>
+  <HR_Region_SongHeartland_Label>Song prototype region</HR_Region_SongHeartland_Label>
+  <HR_Region_WeiHeartland_Label>Wei prototype region</HR_Region_WeiHeartland_Label>
+  <HR_Region_ChuHeartland_Label>Chu prototype region</HR_Region_ChuHeartland_Label>
+  <HR_012_SelectZhengStartingRegion>The Eastern Zhou scenario can only start in the prototype Zheng region.</HR_012_SelectZhengStartingRegion>
+  <HR_012_WorldGenerationFailed>Historical world generation did not complete: {0}. Return to world settings and generate a new world.</HR_012_WorldGenerationFailed>
   <HR_EZ_Allegiance>Community allegiance: {0}</HR_EZ_Allegiance>
   <HR_EZ_Population>Free colonists: {0}</HR_EZ_Population>
   <HR_EZ_Families>Recorded families: {0}</HR_EZ_Families>

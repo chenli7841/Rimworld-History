@@ -13,12 +13,22 @@
       <li>HR_State_Zheng</li>
       <li>HR_State_Jin</li>
       <li>HR_State_Qin</li>
+      <li>HR_State_Qi</li>
+      <li>HR_State_Lu</li>
+      <li>HR_State_Song</li>
+      <li>HR_State_Wei</li>
+      <li>HR_State_Chu</li>
     </states>
     <regions>
       <li>HR_Region_Luoyi</li>
       <li>HR_Region_ZhengHeartland</li>
       <li>HR_Region_Guanzhong</li>
       <li>HR_Region_Hedong</li>
+      <li>HR_Region_QiHeartland</li>
+      <li>HR_Region_LuHeartland</li>
+      <li>HR_Region_SongHeartland</li>
+      <li>HR_Region_WeiHeartland</li>
+      <li>HR_Region_ChuHeartland</li>
     </regions>
     <cultures>
       <li>HR_Culture_ZhouCentralPlains</li>

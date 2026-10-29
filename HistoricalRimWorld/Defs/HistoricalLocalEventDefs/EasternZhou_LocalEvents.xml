@@ -328,10 +328,8 @@
       <li>
         <label>HR_HRE_010_C2_Label</label>
         <description>HR_HRE_010_C2_Description</description>
-        <outcome>SpendResource</outcome>
-        <resource>RawRice</resource>
-        <amount>5</amount>
-      <choiceId>HR_HRE_010_C2</choiceId></li>
+        <outcome>AdoptTechnology</outcome>
+      <choiceId>HR_HRE_010_C2</choiceId><technologyId>HR_Tech_BronzeCasting</technologyId><resourceCosts><li><resource>RawRice</resource><amount>5</amount></li></resourceCosts></li>
       <li>
         <label>HR_HRE_010_C3_Label</label>
         <description>HR_HRE_010_C3_Description</description>
@@ -389,20 +387,20 @@
       <li>
         <label>HR_HRE_012_C1_Label</label>
         <description>HR_HRE_012_C1_Description</description>
-        <outcome>NoMaterialChange</outcome>
-      <choiceId>HR_HRE_012_C1</choiceId></li>
+        <outcome>CreateRelic</outcome>
+      <choiceId>HR_HRE_012_C1</choiceId><relicDefName>HR_RelicDef_FamilyVessel</relicDefName></li>
       <li>
         <label>HR_HRE_012_C2_Label</label>
         <description>HR_HRE_012_C2_Description</description>
         <outcome>InheritRelic</outcome>
-      <choiceId>HR_HRE_012_C2</choiceId><relicDefName>HR_RelicDef_FamilyVessel</relicDefName></li>
+      <choiceId>HR_HRE_012_C2</choiceId><relicDefName>HR_RelicDef_FamilyVessel</relicDefName><conditions><li Class="HistoricalRimWorld.Events.Conditions.Condition_RelicOwned"><relicDefName>HR_RelicDef_FamilyVessel</relicDefName></li></conditions></li>
       <li>
         <label>HR_HRE_012_C3_Label</label>
         <description>HR_HRE_012_C3_Description</description>
         <outcome>NoMaterialChange</outcome>
       <choiceId>HR_HRE_012_C3</choiceId></li>
     </choices>
-  <conditions><li Class="HistoricalRimWorld.Events.Conditions.Condition_RelicOwned"><relicDefName>HR_RelicDef_FamilyVessel</relicDefName></li></conditions></HistoricalRimWorld.Events.HistoricalLocalEventDef>
+  </HistoricalRimWorld.Events.HistoricalLocalEventDef>
   <HistoricalRimWorld.Events.HistoricalLocalEventDef>
     <defName>HR_HRE_013</defName>
     <label>HR_HRE_013_Label</label>
@@ -419,19 +417,20 @@
       <li>
         <label>HR_HRE_013_C1_Label</label>
         <description>HR_HRE_013_C1_Description</description>
-        <outcome>NoMaterialChange</outcome>
-      <choiceId>HR_HRE_013_C1</choiceId></li>
+        <outcome>RevealRegion</outcome>
+      <choiceId>HR_HRE_013_C1</choiceId><regionId>HR_Region_Luoyi</regionId></li>
       <li>
         <label>HR_HRE_013_C2_Label</label>
         <description>HR_HRE_013_C2_Description</description>
-        <outcome>NoMaterialChange</outcome>
-      <choiceId>HR_HRE_013_C2</choiceId></li>
+        <outcome>IncreaseCommunityCulturePresence</outcome>
+      <choiceId>HR_HRE_013_C2</choiceId><cultureId>HR_Culture_ZhouCentralPlains</cultureId><cultureAmount>0.05</cultureAmount></li>
       <li>
         <label>HR_HRE_013_C3_Label</label>
         <description>HR_HRE_013_C3_Description</description>
         <outcome>NoMaterialChange</outcome>
       <choiceId>HR_HRE_013_C3</choiceId></li>
     </choices>
+    <conditions><li Class="HistoricalRimWorld.Events.Conditions.Condition_RelicOwned"><relicDefName>HR_RelicDef_FamilyVessel</relicDefName></li></conditions>
   </HistoricalRimWorld.Events.HistoricalLocalEventDef>
   <HistoricalRimWorld.Events.HistoricalLocalEventDef>
     <defName>HR_HRE_014</defName>

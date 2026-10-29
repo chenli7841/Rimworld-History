@@ -5,9 +5,12 @@
     <label>HR_Relic_BronzeVessel_Label</label>
     <description>HR_Relic_BronzeVessel_Description</description>
     <stackLimit>1</stackLimit>
+    <statBases>
+      <Mass>1.0</Mass>
+    </statBases>
     <graphicData>
       <texPath>Things/Item/Resource/Steel</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_StackCount</graphicClass>
       <color>(170,115,65)</color>
     </graphicData>
     <comps>

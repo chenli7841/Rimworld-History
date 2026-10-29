@@ -5,6 +5,8 @@ namespace HistoricalRimWorld.Calendar
 {
     public sealed class HistoricalCalendarGameComponent : GameComponent
     {
+        public HistoricalCalendarGameComponent(Game game) { }
+
         private int startAstronomicalYear;
         private int startMonth;
         private int startDay;

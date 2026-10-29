@@ -10,6 +10,8 @@ namespace HistoricalRimWorld.Events
 {
     public sealed class HistoricalEventGameComponent : GameComponent
     {
+        public HistoricalEventGameComponent(Game game) { }
+
         private const int CurrentDataVersion = 3;
         private string scenarioDefName;
         private int dataVersion;

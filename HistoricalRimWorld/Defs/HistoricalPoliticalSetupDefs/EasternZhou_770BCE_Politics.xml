@@ -29,6 +29,11 @@
         <nominalOverlordId>HR_State_EasternZhou</nominalOverlordId>
         <politicalRevision>0</politicalRevision>
       </li>
+      <li><polityId>HR_State_Qi</polityId><status>Active</status><nominalOverlordId>HR_State_EasternZhou</nominalOverlordId><politicalRevision>0</politicalRevision></li>
+      <li><polityId>HR_State_Lu</polityId><status>Active</status><nominalOverlordId>HR_State_EasternZhou</nominalOverlordId><politicalRevision>0</politicalRevision></li>
+      <li><polityId>HR_State_Song</polityId><status>Active</status><nominalOverlordId>HR_State_EasternZhou</nominalOverlordId><politicalRevision>0</politicalRevision></li>
+      <li><polityId>HR_State_Wei</polityId><status>Active</status><nominalOverlordId>HR_State_EasternZhou</nominalOverlordId><politicalRevision>0</politicalRevision></li>
+      <li><polityId>HR_State_Chu</polityId><status>Active</status><nominalOverlordId>HR_State_EasternZhou</nominalOverlordId><politicalRevision>0</politicalRevision></li>
     </polities>
     <regions>
       <li>
@@ -49,6 +54,11 @@
         <regionId>HR_Region_Hedong</regionId>
         <isContested>true</isContested>
       </li>
+      <li><regionId>HR_Region_QiHeartland</regionId><nominalOwnerId>HR_State_Qi</nominalOwnerId><effectiveControllerId>HR_State_Qi</effectiveControllerId></li>
+      <li><regionId>HR_Region_LuHeartland</regionId><nominalOwnerId>HR_State_Lu</nominalOwnerId><effectiveControllerId>HR_State_Lu</effectiveControllerId></li>
+      <li><regionId>HR_Region_SongHeartland</regionId><nominalOwnerId>HR_State_Song</nominalOwnerId><effectiveControllerId>HR_State_Song</effectiveControllerId></li>
+      <li><regionId>HR_Region_WeiHeartland</regionId><nominalOwnerId>HR_State_Wei</nominalOwnerId><effectiveControllerId>HR_State_Wei</effectiveControllerId></li>
+      <li><regionId>HR_Region_ChuHeartland</regionId><nominalOwnerId>HR_State_Chu</nominalOwnerId><effectiveControllerId>HR_State_Chu</effectiveControllerId></li>
     </regions>
     <domains>
       <li>
@@ -78,6 +88,11 @@
         <relationType>NominalSuzerainty</relationType>
         <isActive>true</isActive>
       </li>
+      <li><sourcePolityId>HR_State_Qi</sourcePolityId><targetPolityId>HR_State_EasternZhou</targetPolityId><relationType>NominalSuzerainty</relationType><isActive>true</isActive></li>
+      <li><sourcePolityId>HR_State_Lu</sourcePolityId><targetPolityId>HR_State_EasternZhou</targetPolityId><relationType>NominalSuzerainty</relationType><isActive>true</isActive></li>
+      <li><sourcePolityId>HR_State_Song</sourcePolityId><targetPolityId>HR_State_EasternZhou</targetPolityId><relationType>NominalSuzerainty</relationType><isActive>true</isActive></li>
+      <li><sourcePolityId>HR_State_Wei</sourcePolityId><targetPolityId>HR_State_EasternZhou</targetPolityId><relationType>NominalSuzerainty</relationType><isActive>true</isActive></li>
+      <li><sourcePolityId>HR_State_Chu</sourcePolityId><targetPolityId>HR_State_EasternZhou</targetPolityId><relationType>NominalSuzerainty</relationType><isActive>true</isActive></li>
     </relations>
     <communities>
       <li>

@@ -73,7 +73,7 @@
   <HR_HRE_008_C3_Label>Decline or leave</HR_HRE_008_C3_Label>
   <HR_HRE_008_C3_Description>See the consequence below.</HR_HRE_008_C3_Description>
   <HR_HRE_009_Label>Bronze smith offers services</HR_HRE_009_Label>
-  <HR_HRE_009_Description>Hiring adds an ordinary colonist; it does not unlock a recipe or technology.</HR_HRE_009_Description>
+  <HR_HRE_009_Description>With bronze casting adopted, commission a one-off bronze family vessel; this consumes 10 copper ore and 5 tin ore and records a unique relic.</HR_HRE_009_Description>
   <HR_HRE_009_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_009_Trigger>
   <HR_HRE_009_C1_Label>Accept or act</HR_HRE_009_C1_Label>
   <HR_HRE_009_C1_Description>See the consequence below.</HR_HRE_009_C1_Description>
@@ -82,11 +82,11 @@
   <HR_HRE_009_C3_Label>Decline or leave</HR_HRE_009_C3_Label>
   <HR_HRE_009_C3_Description>See the consequence below.</HR_HRE_009_C3_Description>
   <HR_HRE_010_Label>Tin trader passes through</HR_HRE_010_Label>
-  <HR_HRE_010_Description>The encounter is recorded without inventing a tin item or recipe.</HR_HRE_010_Description>
+  <HR_HRE_010_Description>Trade 20 rice for 10 copper ore and 5 tin ore, or spend 5 rice to adopt locally accessible bronze casting if its prerequisites are met.</HR_HRE_010_Description>
   <HR_HRE_010_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_010_Trigger>
   <HR_HRE_010_C1_Label>Accept or act</HR_HRE_010_C1_Label>
   <HR_HRE_010_C1_Description>See the consequence below.</HR_HRE_010_C1_Description>
-  <HR_HRE_010_C2_Label>Negotiate</HR_HRE_010_C2_Label>
+  <HR_HRE_010_C2_Label>Adopt bronze casting</HR_HRE_010_C2_Label>
   <HR_HRE_010_C2_Description>See the consequence below.</HR_HRE_010_C2_Description>
   <HR_HRE_010_C3_Label>Decline or leave</HR_HRE_010_C3_Label>
   <HR_HRE_010_C3_Description>See the consequence below.</HR_HRE_010_C3_Description>
@@ -100,21 +100,21 @@
   <HR_HRE_011_C3_Label>Decline or leave</HR_HRE_011_C3_Label>
   <HR_HRE_011_C3_Description>See the consequence below.</HR_HRE_011_C3_Description>
   <HR_HRE_012_Label>Dispute over an inherited vessel</HR_HRE_012_Label>
-  <HR_HRE_012_Description>The event records mediation without creating or transferring a unique relic.</HR_HRE_012_Description>
+  <HR_HRE_012_Description>Record a fictional family vessel as a unique map item, or transfer an existing registered vessel to a living descendant.</HR_HRE_012_Description>
   <HR_HRE_012_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_012_Trigger>
-  <HR_HRE_012_C1_Label>Accept or act</HR_HRE_012_C1_Label>
-  <HR_HRE_012_C1_Description>See the consequence below.</HR_HRE_012_C1_Description>
-  <HR_HRE_012_C2_Label>Negotiate</HR_HRE_012_C2_Label>
-  <HR_HRE_012_C2_Description>See the consequence below.</HR_HRE_012_C2_Description>
+  <HR_HRE_012_C1_Label>Record the family vessel</HR_HRE_012_C1_Label>
+  <HR_HRE_012_C1_Description>Create and register one fictional vessel on the map, linked to a living colonist where possible.</HR_HRE_012_C1_Description>
+  <HR_HRE_012_C2_Label>Pass it to a descendant</HR_HRE_012_C2_Label>
+  <HR_HRE_012_C2_Description>Transfers the registered vessel to the earliest-born living descendant of its recorded owner.</HR_HRE_012_C2_Description>
   <HR_HRE_012_C3_Label>Decline or leave</HR_HRE_012_C3_Label>
   <HR_HRE_012_C3_Description>See the consequence below.</HR_HRE_012_C3_Description>
   <HR_HRE_013_Label>Inscription interpretation</HR_HRE_013_Label>
-  <HR_HRE_013_Description>The choice is recorded as local experience, not as a new historical fact.</HR_HRE_013_Description>
+  <HR_HRE_013_Description>With a registered family vessel present, interpreting its fictional inscription can reveal Luoyi or deepen Zhou culture familiarity without creating a real historical claim.</HR_HRE_013_Description>
   <HR_HRE_013_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_013_Trigger>
-  <HR_HRE_013_C1_Label>Accept or act</HR_HRE_013_C1_Label>
-  <HR_HRE_013_C1_Description>See the consequence below.</HR_HRE_013_C1_Description>
-  <HR_HRE_013_C2_Label>Negotiate</HR_HRE_013_C2_Label>
-  <HR_HRE_013_C2_Description>See the consequence below.</HR_HRE_013_C2_Description>
+  <HR_HRE_013_C1_Label>Trace the inscription to Luoyi</HR_HRE_013_C1_Label>
+  <HR_HRE_013_C1_Description>Reveals Luoyi through the existing world revelation manager.</HR_HRE_013_C1_Description>
+  <HR_HRE_013_C2_Label>Share Zhou ritual knowledge</HR_HRE_013_C2_Label>
+  <HR_HRE_013_C2_Description>Increases recorded Zhou Central Plains cultural presence by 0.05.</HR_HRE_013_C2_Description>
   <HR_HRE_013_C3_Label>Decline or leave</HR_HRE_013_C3_Label>
   <HR_HRE_013_C3_Description>See the consequence below.</HR_HRE_013_C3_Description>
   <HR_HRE_014_Label>A foreign family requests a rite</HR_HRE_014_Label>
@@ -127,7 +127,7 @@
   <HR_HRE_014_C3_Label>Decline or leave</HR_HRE_014_C3_Label>
   <HR_HRE_014_C3_Description>See the consequence below.</HR_HRE_014_C3_Description>
   <HR_HRE_015_Label>Marriage proposal</HR_HRE_015_Label>
-  <HR_HRE_015_Description>Disabled until HR-007 relationship validation can persist a real marriage.</HR_HRE_015_Description>
+  <HR_HRE_015_Description>Available only when at least two unpartnered adult colonists are recorded and no close-relative relationship is detected; marriage is persisted through HR-007 and RimWorld relations.</HR_HRE_015_Description>
   <HR_HRE_015_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_015_Trigger>
   <HR_HRE_015_C1_Label>Accept or act</HR_HRE_015_C1_Label>
   <HR_HRE_015_C1_Description>See the consequence below.</HR_HRE_015_C1_Description>

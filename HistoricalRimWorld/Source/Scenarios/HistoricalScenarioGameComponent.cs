@@ -4,6 +4,8 @@ namespace HistoricalRimWorld.Scenarios
 {
     public sealed class HistoricalScenarioGameComponent : GameComponent
     {
+        public HistoricalScenarioGameComponent(Game game) { }
+
         private const int CurrentInitializationVersion = 1;
 
         private string activeScenarioDefName;

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraderKindDef>
+    <defName>HR_Caravan_EasternZhou_BulkGoods</defName>
+    <label>historical goods caravan</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>WoodLog</thingDef><countRange>80~220</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>Cloth</thingDef><countRange>30~120</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineHerbal</thingDef><countRange>0~8</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_CopperOre</thingDef><countRange>0~40</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_TinOre</thingDef><countRange>0~35</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Copper</thingDef><countRange>0~30</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Tin</thingDef><countRange>0~20</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Bronze</thingDef><countRange>0~30</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Clay</thingDef><countRange>0~50</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Pottery</thingDef><countRange>0~30</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_HempFiber</thingDef><countRange>0~40</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_HempCloth</thingDef><countRange>0~30</countRange></li>
+      <li Class="StockGenerator_Category"><categoryDef>FoodRaw</categoryDef><thingDefCountRange>2~4</thingDefCountRange><totalPriceRange>80~300</totalPriceRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate><excludedCategories><li>EggsFertilized</li></excludedCategories></li>
+      <li Class="StockGenerator_MarketValue"><tradeTag>BasicClothing</tradeTag><countRange>2~5</countRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate></li>
+      <li Class="StockGenerator_MarketValue"><tradeTag>Clothing</tradeTag><countRange>0~2</countRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>WoodLog</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>Cloth</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>MedicineHerbal</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_CopperOre</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_TinOre</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_Copper</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Tin</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_Bronze</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Clay</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_Pottery</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_HempFiber</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_HempCloth</thingDef></li>
+    </stockGenerators>
+  </TraderKindDef>
+  <TraderKindDef>
+    <defName>HR_Visitor_EasternZhou_BulkGoods</defName>
+    <label>historical visitor trader</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>Cloth</thingDef><countRange>10~40</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineHerbal</thingDef><countRange>0~3</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Bronze</thingDef><countRange>0~8</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Pottery</thingDef><countRange>0~10</countRange></li>
+      <li Class="StockGenerator_Category"><categoryDef>FoodRaw</categoryDef><thingDefCountRange>1~2</thingDefCountRange><totalPriceRange>20~100</totalPriceRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate><excludedCategories><li>EggsFertilized</li></excludedCategories></li>
+      <li Class="StockGenerator_MarketValue"><tradeTag>BasicClothing</tradeTag><countRange>0~2</countRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>Cloth</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>MedicineHerbal</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Bronze</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_Pottery</thingDef></li>
+    </stockGenerators>
+  </TraderKindDef>
+  <TraderKindDef>
+    <defName>HR_Base_EasternZhou_BulkGoods</defName>
+    <label>historical settlement stores</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>WoodLog</thingDef><countRange>100~250</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>Cloth</thingDef><countRange>50~150</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineHerbal</thingDef><countRange>4~12</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Copper</thingDef><countRange>10~45</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Tin</thingDef><countRange>5~25</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Bronze</thingDef><countRange>10~40</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Pottery</thingDef><countRange>10~40</countRange></li>
+      <li Class="StockGenerator_Category"><categoryDef>FoodRaw</categoryDef><thingDefCountRange>3~5</thingDefCountRange><totalPriceRange>200~500</totalPriceRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate><excludedCategories><li>EggsFertilized</li></excludedCategories></li>
+      <li Class="StockGenerator_MarketValue"><tradeTag>BasicClothing</tradeTag><countRange>3~8</countRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>WoodLog</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>Cloth</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>MedicineHerbal</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_Copper</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Tin</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_Bronze</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Pottery</thingDef></li>
+    </stockGenerators>
+  </TraderKindDef>
+</Defs>

@@ -160,9 +160,6 @@
   <HR_Event_ZhouEasternMigration_770BCE_Label>周室东迁</HR_Event_ZhouEasternMigration_770BCE_Label>
   <HR_Event_ZhouEasternMigration_770BCE_Description>周平王将王室迁至东部洛邑，传统上以此作为东周时期的开端。</HR_Event_ZhouEasternMigration_770BCE_Description>
   <HR_Event_ZhouEasternMigration_770BCE_SourceNotes>司马迁《史记》卷四《周本纪》，中国哲学书电子化计划平行文本节点 4658。公元前年份采用传统编年。</HR_Event_ZhouEasternMigration_770BCE_SourceNotes>
-  <HR_Event_ZhengDukeZhuangAccession_743BCE_Label>郑庄公即位编年</HR_Event_ZhengDukeZhuangAccession_743BCE_Label>
-  <HR_Event_ZhengDukeZhuangAccession_743BCE_Description>一项近期学术编年将郑庄公元年置于公元前743年。该编年存在争议；本条仅记录这个拟议年份，不触发游戏效果。</HR_Event_ZhengDukeZhuangAccession_743BCE_Description>
-  <HR_Event_ZhengDukeZhuangAccession_743BCE_SourceNotes>Pengcheng Zhang，《The Chronology of Western Zhou》，《Early China》46卷（2023），表14及“郑国编年”一节将郑庄公元年拟定为公元前743年。这是学术重构之一，并非没有争议的定论；仅记录年份，不臆造月日。https://www.cambridge.org/core/journals/early-china/article/chronology-of-western-zhou/0D661C3365537C0D15AD896F72F9DF70</HR_Event_ZhengDukeZhuangAccession_743BCE_SourceNotes>
   <HR_Event_DebugUnlockHedong_Label>开发示例：开放河东</HR_Event_DebugUnlockHedong_Label>
   <HR_Event_DebugUnlockHedong_Description>仅用于验证地区解锁接口的开发事件。</HR_Event_DebugUnlockHedong_Description>
   <HR_Chronicle_MainTabLabel>历史编年史</HR_Chronicle_MainTabLabel>
@@ -302,4 +299,11 @@
   <HR_Context_AgricultureAndStorage_Label>农业、聚落与储藏</HR_Context_AgricultureAndStorage_Label>
   <HR_Context_AgricultureAndStorage_Description>农耕、陶器、聚落生活和储藏属于反复出现的物质条件。游戏将其作为时代背景，不虚构某一年发生的技术发明。</HR_Context_AgricultureAndStorage_Description>
   <HR_Context_AgricultureAndStorage_Sources>任新宇《黄土城区域考古调查》（2008）关于陶器组合的讨论。考古证据作为社会背景，而不是某年的历史事件。</HR_Context_AgricultureAndStorage_Sources>
+  <HR_Context_CraftTransmission_Label>工艺与技术传播</HR_Context_CraftTransmission_Label>
+  <HR_Context_CraftTransmission_Description>青铜铸造、陶器、木工与纺织技术通过工匠、材料和地区交流传播。本背景不表示铁器已普及，也不为某项发明伪造具体年份。</HR_Context_CraftTransmission_Description>
+  <HR_Context_CraftTransmission_Sources>《史记·秦本纪》及周代工艺生产、交流的考古研究；仅作持续背景，不主张某年发生单次事件。</HR_Context_CraftTransmission_Sources>
+  <HR_RelicDef_BronzeVessel_Label>虚构的家族青铜礼器</HR_RelicDef_BronzeVessel_Label>
+  <HR_RelicDef_BronzeVessel_Description>游戏生成的家族传承物，不对应任何已知考古器物。</HR_RelicDef_BronzeVessel_Description>
+  <HR_Relic_BronzeVessel_Label>虚构的家族青铜礼器</HR_Relic_BronzeVessel_Label>
+  <HR_Relic_BronzeVessel_Description>本剧本中作为虚构家族传承物生成的青铜器。</HR_Relic_BronzeVessel_Description>
 </LanguageData>

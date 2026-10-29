@@ -73,7 +73,7 @@
   <HR_HRE_008_C3_Label>拒绝或结束</HR_HRE_008_C3_Label>
   <HR_HRE_008_C3_Description>具体后果见下方说明。</HR_HRE_008_C3_Description>
   <HR_HRE_009_Label>青铜工匠提供服务</HR_HRE_009_Label>
-  <HR_HRE_009_Description>雇用会加入普通殖民者；不会解锁配方或科技。</HR_HRE_009_Description>
+  <HR_HRE_009_Description>在社区已采用青铜铸造后，可委托制作一件虚构的家族青铜礼器；消耗10铜矿和5锡矿，并登记为独特遗物。</HR_HRE_009_Description>
   <HR_HRE_009_Trigger>满足相应地图、物资或系统条件时出现。</HR_HRE_009_Trigger>
   <HR_HRE_009_C1_Label>处理请求</HR_HRE_009_C1_Label>
   <HR_HRE_009_C1_Description>具体后果见下方说明。</HR_HRE_009_C1_Description>
@@ -82,11 +82,11 @@
   <HR_HRE_009_C3_Label>拒绝或结束</HR_HRE_009_C3_Label>
   <HR_HRE_009_C3_Description>具体后果见下方说明。</HR_HRE_009_C3_Description>
   <HR_HRE_010_Label>锡料商人过境</HR_HRE_010_Label>
-  <HR_HRE_010_Description>记录这次遭遇，不臆造锡料物品或配方。</HR_HRE_010_Description>
+  <HR_HRE_010_Description>可用20生米换取10铜矿和5锡矿，或在前置条件满足时消耗5生米采用本地可学的青铜铸造。</HR_HRE_010_Description>
   <HR_HRE_010_Trigger>满足相应地图、物资或系统条件时出现。</HR_HRE_010_Trigger>
   <HR_HRE_010_C1_Label>处理请求</HR_HRE_010_C1_Label>
   <HR_HRE_010_C1_Description>具体后果见下方说明。</HR_HRE_010_C1_Description>
-  <HR_HRE_010_C2_Label>协商安排</HR_HRE_010_C2_Label>
+  <HR_HRE_010_C2_Label>采用青铜铸造</HR_HRE_010_C2_Label>
   <HR_HRE_010_C2_Description>具体后果见下方说明。</HR_HRE_010_C2_Description>
   <HR_HRE_010_C3_Label>拒绝或结束</HR_HRE_010_C3_Label>
   <HR_HRE_010_C3_Description>具体后果见下方说明。</HR_HRE_010_C3_Description>
@@ -100,21 +100,21 @@
   <HR_HRE_011_C3_Label>拒绝或结束</HR_HRE_011_C3_Label>
   <HR_HRE_011_C3_Description>具体后果见下方说明。</HR_HRE_011_C3_Description>
   <HR_HRE_012_Label>祖传礼器归属争议</HR_HRE_012_Label>
-  <HR_HRE_012_Description>本事件记录调解，不会生成或转移独特遗物。</HR_HRE_012_Description>
+  <HR_HRE_012_Description>可将虚构家族礼器登记为地图上的独特物品，或将已有登记礼器传给在世后代。</HR_HRE_012_Description>
   <HR_HRE_012_Trigger>满足相应地图、物资或系统条件时出现。</HR_HRE_012_Trigger>
-  <HR_HRE_012_C1_Label>处理请求</HR_HRE_012_C1_Label>
-  <HR_HRE_012_C1_Description>具体后果见下方说明。</HR_HRE_012_C1_Description>
-  <HR_HRE_012_C2_Label>协商安排</HR_HRE_012_C2_Label>
-  <HR_HRE_012_C2_Description>具体后果见下方说明。</HR_HRE_012_C2_Description>
+  <HR_HRE_012_C1_Label>登记家族礼器</HR_HRE_012_C1_Label>
+  <HR_HRE_012_C1_Description>在地图上生成并登记一件虚构礼器；若可能，将其关联到一名在世殖民者。</HR_HRE_012_C1_Description>
+  <HR_HRE_012_C2_Label>传给后代</HR_HRE_012_C2_Label>
+  <HR_HRE_012_C2_Description>将登记礼器转交给其记录持有者最年长的在世后代。</HR_HRE_012_C2_Description>
   <HR_HRE_012_C3_Label>拒绝或结束</HR_HRE_012_C3_Label>
   <HR_HRE_012_C3_Description>具体后果见下方说明。</HR_HRE_012_C3_Description>
   <HR_HRE_013_Label>铭文释读</HR_HRE_013_Label>
-  <HR_HRE_013_Description>选择记为地方经历，不会宣称为新史实。</HR_HRE_013_Description>
+  <HR_HRE_013_Description>拥有登记家族礼器后，可释读虚构铭文以揭示洛邑或增进对周文化的熟悉度；不会据此编造真实史实。</HR_HRE_013_Description>
   <HR_HRE_013_Trigger>满足相应地图、物资或系统条件时出现。</HR_HRE_013_Trigger>
-  <HR_HRE_013_C1_Label>处理请求</HR_HRE_013_C1_Label>
-  <HR_HRE_013_C1_Description>具体后果见下方说明。</HR_HRE_013_C1_Description>
-  <HR_HRE_013_C2_Label>协商安排</HR_HRE_013_C2_Label>
-  <HR_HRE_013_C2_Description>具体后果见下方说明。</HR_HRE_013_C2_Description>
+  <HR_HRE_013_C1_Label>追溯铭文至洛邑</HR_HRE_013_C1_Label>
+  <HR_HRE_013_C1_Description>通过现有世界揭示管理器解锁洛邑地区。</HR_HRE_013_C1_Description>
+  <HR_HRE_013_C2_Label>分享周礼知识</HR_HRE_013_C2_Label>
+  <HR_HRE_013_C2_Description>社区登记的周中原文化熟悉度增加0.05。</HR_HRE_013_C2_Description>
   <HR_HRE_013_C3_Label>拒绝或结束</HR_HRE_013_C3_Label>
   <HR_HRE_013_C3_Description>具体后果见下方说明。</HR_HRE_013_C3_Description>
   <HR_HRE_014_Label>外来家户请求祭祖</HR_HRE_014_Label>
@@ -127,7 +127,7 @@
   <HR_HRE_014_C3_Label>拒绝或结束</HR_HRE_014_C3_Label>
   <HR_HRE_014_C3_Description>具体后果见下方说明。</HR_HRE_014_C3_Description>
   <HR_HRE_015_Label>婚姻提议</HR_HRE_015_Label>
-  <HR_HRE_015_Description>等待 HR-007 关系校验能够保存真实婚姻后开放。</HR_HRE_015_Description>
+  <HR_HRE_015_Description>仅当至少两名未婚成年殖民者已登记，且未检测到近亲关系时开放；婚姻将写入 HR-007 和 RimWorld 人物关系。</HR_HRE_015_Description>
   <HR_HRE_015_Trigger>满足相应地图、物资或系统条件时出现。</HR_HRE_015_Trigger>
   <HR_HRE_015_C1_Label>处理请求</HR_HRE_015_C1_Label>
   <HR_HRE_015_C1_Description>具体后果见下方说明。</HR_HRE_015_C1_Description>
