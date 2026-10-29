@@ -198,4 +198,58 @@
   <HR_Chronicle_Evidence_Speculative>Speculative</HR_Chronicle_Evidence_Speculative>
   <HR_Chronicle_BCE>BCE</HR_Chronicle_BCE>
   <HR_Chronicle_CE>CE</HR_Chronicle_CE>
+  <HR_Genealogy_MainTabLabel>Historical Genealogy</HR_Genealogy_MainTabLabel>
+  <HR_Genealogy_MainTabDescription>View historical persons, families, and natural lifespan records.</HR_Genealogy_MainTabDescription>
+  <HR_Genealogy_Title>Historical Genealogy</HR_Genealogy_Title>
+  <HR_Genealogy_Inactive>Genealogy is available in an initialized historical scenario.</HR_Genealogy_Inactive>
+  <HR_Genealogy_Families>Families</HR_Genealogy_Families>
+  <HR_Genealogy_Members>Family members</HR_Genealogy_Members>
+  <HR_Genealogy_FamilyCounts>{0} people · {1} living</HR_Genealogy_FamilyCounts>
+  <HR_Genealogy_SelectPerson>Select a person to view their history.</HR_Genealogy_SelectPerson>
+  <HR_Genealogy_PersonTitle>Person</HR_Genealogy_PersonTitle>
+  <HR_Genealogy_Name>Name: {0}</HR_Genealogy_Name>
+  <HR_Genealogy_PersonId>Person ID: {0}</HR_Genealogy_PersonId>
+  <HR_Genealogy_Family>Family: {0}</HR_Genealogy_Family>
+  <HR_Genealogy_Birth>Birth: {0} · {1}</HR_Genealogy_Birth>
+  <HR_Genealogy_HistoricalAge>Historical age: {0}</HR_Genealogy_HistoricalAge>
+  <HR_Genealogy_BiologicalAge>Biological age: {0}</HR_Genealogy_BiologicalAge>
+  <HR_Genealogy_Status>Status: {0}</HR_Genealogy_Status>
+  <HR_Genealogy_Alive>Alive</HR_Genealogy_Alive>
+  <HR_Genealogy_Dead>Deceased</HR_Genealogy_Dead>
+  <HR_Genealogy_DeathDate>Last death: {0} · {1}</HR_Genealogy_DeathDate>
+  <HR_Genealogy_Region>Current region: {0}</HR_Genealogy_Region>
+  <HR_Genealogy_Polity>Current allegiance: {0}</HR_Genealogy_Polity>
+  <HR_Genealogy_NaturalDeathDate>Natural lifespan deadline: {0}</HR_Genealogy_NaturalDeathDate>
+  <HR_Genealogy_Remaining>Remaining natural lifespan: {0}</HR_Genealogy_Remaining>
+  <HR_Genealogy_RemainingParts>{0} years, {1} months, {2} days</HR_Genealogy_RemainingParts>
+  <HR_Genealogy_WithinTwoYears>Natural lifespan endpoint is within two years.</HR_Genealogy_WithinTwoYears>
+  <HR_Genealogy_Parents>Parents: {0}</HR_Genealogy_Parents>
+  <HR_Genealogy_Children>Children: {0}</HR_Genealogy_Children>
+  <HR_Genealogy_Spouses>Spouses: {0}</HR_Genealogy_Spouses>
+  <HR_Genealogy_None>None recorded</HR_Genealogy_None>
+  <HR_Genealogy_Unknown>Unknown</HR_Genealogy_Unknown>
+  <HR_Genealogy_UnresolvedDef>Unknown historical entity ({0})</HR_Genealogy_UnresolvedDef>
+  <HR_Genealogy_FamilySuffix>family</HR_Genealogy_FamilySuffix>
+  <HR_Genealogy_FamilyFoundedTitle>Family founded</HR_Genealogy_FamilyFoundedTitle>
+  <HR_Genealogy_FamilyFoundedDescription>A new family record was established for a registered person.</HR_Genealogy_FamilyFoundedDescription>
+  <HR_Genealogy_PersonBornTitle>Person born</HR_Genealogy_PersonBornTitle>
+  <HR_Genealogy_PersonBornDescription>A newborn was registered in the historical genealogy.</HR_Genealogy_PersonBornDescription>
+  <HR_Genealogy_PersonDiedTitle>Person died</HR_Genealogy_PersonDiedTitle>
+  <HR_Genealogy_PersonDiedDescription>A registered person's death was recorded.</HR_Genealogy_PersonDiedDescription>
+  <HR_Genealogy_PersonMarriedTitle>Marriage recorded</HR_Genealogy_PersonMarriedTitle>
+  <HR_Genealogy_PersonMarriedDescription>A spouse relationship was recorded between two historical persons.</HR_Genealogy_PersonMarriedDescription>
+  <HR_Genealogy_PersonResurrectedTitle>Person resurrected</HR_Genealogy_PersonResurrectedTitle>
+  <HR_Genealogy_PersonResurrectedDescription>A registered historical person returned to life; their original identity and lifespan deadline remain.</HR_Genealogy_PersonResurrectedDescription>
+  <HR_Genealogy_BirthSource_ObservedInGame>Observed in game</HR_Genealogy_BirthSource_ObservedInGame>
+  <HR_Genealogy_BirthSource_EstimatedFromInitialAge>Estimated from initial age</HR_Genealogy_BirthSource_EstimatedFromInitialAge>
+  <HR_Genealogy_BirthSource_HistoricalRecord>Historical record</HR_Genealogy_BirthSource_HistoricalRecord>
+  <HR_Genealogy_BirthSource_LegacySimulation>Legacy simulation</HR_Genealogy_BirthSource_LegacySimulation>
+  <HR_Genealogy_DeathCause_NaturalLifespan>Natural lifespan</HR_Genealogy_DeathCause_NaturalLifespan>
+  <HR_Genealogy_DeathCause_Disease>Disease</HR_Genealogy_DeathCause_Disease>
+  <HR_Genealogy_DeathCause_Combat>Combat</HR_Genealogy_DeathCause_Combat>
+  <HR_Genealogy_DeathCause_Accident>Accident</HR_Genealogy_DeathCause_Accident>
+  <HR_Genealogy_DeathCause_Starvation>Starvation</HR_Genealogy_DeathCause_Starvation>
+  <HR_Genealogy_DeathCause_Other>Other</HR_Genealogy_DeathCause_Other>
+  <HR_Genealogy_DeathCause_Unknown>Unknown</HR_Genealogy_DeathCause_Unknown>
+  <HR_Genealogy_Source>Historical RimWorld genealogy simulation</HR_Genealogy_Source>
 </LanguageData>

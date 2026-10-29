@@ -198,4 +198,58 @@
   <HR_Chronicle_Evidence_Speculative>推测</HR_Chronicle_Evidence_Speculative>
   <HR_Chronicle_BCE>公元前</HR_Chronicle_BCE>
   <HR_Chronicle_CE>公元</HR_Chronicle_CE>
+  <HR_Genealogy_MainTabLabel>历史家谱</HR_Genealogy_MainTabLabel>
+  <HR_Genealogy_MainTabDescription>查看历史人物、家族与自然寿命记录。</HR_Genealogy_MainTabDescription>
+  <HR_Genealogy_Title>历史家谱</HR_Genealogy_Title>
+  <HR_Genealogy_Inactive>请先在已初始化的历史剧本中使用家谱。</HR_Genealogy_Inactive>
+  <HR_Genealogy_Families>家族</HR_Genealogy_Families>
+  <HR_Genealogy_Members>家族成员</HR_Genealogy_Members>
+  <HR_Genealogy_FamilyCounts>{0} 人 · 在世 {1} 人</HR_Genealogy_FamilyCounts>
+  <HR_Genealogy_SelectPerson>选择一位人物以查看其历史。</HR_Genealogy_SelectPerson>
+  <HR_Genealogy_PersonTitle>人物</HR_Genealogy_PersonTitle>
+  <HR_Genealogy_Name>姓名：{0}</HR_Genealogy_Name>
+  <HR_Genealogy_PersonId>人物 ID：{0}</HR_Genealogy_PersonId>
+  <HR_Genealogy_Family>家族：{0}</HR_Genealogy_Family>
+  <HR_Genealogy_Birth>出生：{0} · {1}</HR_Genealogy_Birth>
+  <HR_Genealogy_HistoricalAge>历史年龄：{0}</HR_Genealogy_HistoricalAge>
+  <HR_Genealogy_BiologicalAge>生物年龄：{0}</HR_Genealogy_BiologicalAge>
+  <HR_Genealogy_Status>状态：{0}</HR_Genealogy_Status>
+  <HR_Genealogy_Alive>在世</HR_Genealogy_Alive>
+  <HR_Genealogy_Dead>已故</HR_Genealogy_Dead>
+  <HR_Genealogy_DeathDate>最近死亡：{0} · {1}</HR_Genealogy_DeathDate>
+  <HR_Genealogy_Region>当前地区：{0}</HR_Genealogy_Region>
+  <HR_Genealogy_Polity>当前效忠：{0}</HR_Genealogy_Polity>
+  <HR_Genealogy_NaturalDeathDate>自然寿命期限：{0}</HR_Genealogy_NaturalDeathDate>
+  <HR_Genealogy_Remaining>剩余自然寿命：{0}</HR_Genealogy_Remaining>
+  <HR_Genealogy_RemainingParts>{0} 年 {1} 月 {2} 日</HR_Genealogy_RemainingParts>
+  <HR_Genealogy_WithinTwoYears>自然寿命终点将在两年内到来。</HR_Genealogy_WithinTwoYears>
+  <HR_Genealogy_Parents>父母：{0}</HR_Genealogy_Parents>
+  <HR_Genealogy_Children>子女：{0}</HR_Genealogy_Children>
+  <HR_Genealogy_Spouses>配偶：{0}</HR_Genealogy_Spouses>
+  <HR_Genealogy_None>暂无记录</HR_Genealogy_None>
+  <HR_Genealogy_Unknown>未知</HR_Genealogy_Unknown>
+  <HR_Genealogy_UnresolvedDef>未知历史实体（{0}）</HR_Genealogy_UnresolvedDef>
+  <HR_Genealogy_FamilySuffix>家族</HR_Genealogy_FamilySuffix>
+  <HR_Genealogy_FamilyFoundedTitle>家族建立</HR_Genealogy_FamilyFoundedTitle>
+  <HR_Genealogy_FamilyFoundedDescription>已为一名登记人物建立新的家族记录。</HR_Genealogy_FamilyFoundedDescription>
+  <HR_Genealogy_PersonBornTitle>人物出生</HR_Genealogy_PersonBornTitle>
+  <HR_Genealogy_PersonBornDescription>一名新生儿已登记到历史家谱。</HR_Genealogy_PersonBornDescription>
+  <HR_Genealogy_PersonDiedTitle>人物死亡</HR_Genealogy_PersonDiedTitle>
+  <HR_Genealogy_PersonDiedDescription>已记录一名历史人物的死亡。</HR_Genealogy_PersonDiedDescription>
+  <HR_Genealogy_PersonMarriedTitle>婚姻记录</HR_Genealogy_PersonMarriedTitle>
+  <HR_Genealogy_PersonMarriedDescription>已记录两名历史人物之间的配偶关系。</HR_Genealogy_PersonMarriedDescription>
+  <HR_Genealogy_PersonResurrectedTitle>人物复活</HR_Genealogy_PersonResurrectedTitle>
+  <HR_Genealogy_PersonResurrectedDescription>一名历史人物复活；原人物身份和自然寿命期限仍然保留。</HR_Genealogy_PersonResurrectedDescription>
+  <HR_Genealogy_BirthSource_ObservedInGame>游戏内观察到</HR_Genealogy_BirthSource_ObservedInGame>
+  <HR_Genealogy_BirthSource_EstimatedFromInitialAge>根据初始年龄估算</HR_Genealogy_BirthSource_EstimatedFromInitialAge>
+  <HR_Genealogy_BirthSource_HistoricalRecord>历史记录</HR_Genealogy_BirthSource_HistoricalRecord>
+  <HR_Genealogy_BirthSource_LegacySimulation>传承模拟</HR_Genealogy_BirthSource_LegacySimulation>
+  <HR_Genealogy_DeathCause_NaturalLifespan>自然寿命终点</HR_Genealogy_DeathCause_NaturalLifespan>
+  <HR_Genealogy_DeathCause_Disease>疾病</HR_Genealogy_DeathCause_Disease>
+  <HR_Genealogy_DeathCause_Combat>战斗</HR_Genealogy_DeathCause_Combat>
+  <HR_Genealogy_DeathCause_Accident>意外</HR_Genealogy_DeathCause_Accident>
+  <HR_Genealogy_DeathCause_Starvation>饥饿</HR_Genealogy_DeathCause_Starvation>
+  <HR_Genealogy_DeathCause_Other>其他</HR_Genealogy_DeathCause_Other>
+  <HR_Genealogy_DeathCause_Unknown>未知</HR_Genealogy_DeathCause_Unknown>
+  <HR_Genealogy_Source>Historical RimWorld 家谱模拟记录</HR_Genealogy_Source>
 </LanguageData>

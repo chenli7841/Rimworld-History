@@ -29,6 +29,10 @@
       <HintPath>$(RimWorldManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(RimWorldManagedDir)\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="0Harmony">
       <HintPath>$(HarmonyDir)\0Harmony.dll</HintPath>
       <Private>false</Private>
@@ -40,6 +44,7 @@
     <Error Condition="!Exists('$(RimWorldManagedDir)\Assembly-CSharp.dll')" Text="Assembly-CSharp.dll was not found under '$(RimWorldManagedDir)'. Set RimWorldDir to the RimWorld 1.6 installation directory." />
     <Error Condition="!Exists('$(RimWorldManagedDir)\UnityEngine.CoreModule.dll')" Text="UnityEngine.CoreModule.dll was not found under '$(RimWorldManagedDir)'. Set RimWorldDir to the RimWorld 1.6 installation directory." />
     <Error Condition="!Exists('$(RimWorldManagedDir)\UnityEngine.TextRenderingModule.dll')" Text="UnityEngine.TextRenderingModule.dll was not found under '$(RimWorldManagedDir)'. Set RimWorldDir to the RimWorld 1.6 installation directory." />
+    <Error Condition="!Exists('$(RimWorldManagedDir)\UnityEngine.IMGUIModule.dll')" Text="UnityEngine.IMGUIModule.dll was not found under '$(RimWorldManagedDir)'. Set RimWorldDir to the RimWorld 1.6 installation directory." />
     <Error Condition="'$(HarmonyDir)' == '' or !Exists('$(HarmonyDir)\0Harmony.dll')" Text="Harmony 2.x 0Harmony.dll was not found. Set HarmonyDir (or HARMONY_DIR) to the Harmony 1.6 Assemblies directory." />
   </Target>
 </Project>

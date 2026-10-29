@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Lifespan.HistoricalLifespanPolicyDef>
+    <defName>HR_LifespanPolicy_Default</defName>
+    <label>historical default lifespan policy</label>
+    <description>A configurable gameplay distribution. These values are not a claim about ancient demographic life expectancy.</description>
+    <minimumYears>50</minimumYears>
+    <maximumYears>95</maximumYears>
+    <meanYears>72</meanYears>
+    <standardDeviationYears>9</standardDeviationYears>
+  </HistoricalRimWorld.Lifespan.HistoricalLifespanPolicyDef>
+</Defs>

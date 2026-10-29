@@ -1,5 +1,9 @@
 # Architecture
 
+## Characters and genealogy (HR-007)
+
+`HistoricalPersonRecord` owns persistent historical identity while RimWorld `Pawn`/Biotech continue to own biological age, reproduction, health, and ordinary death. `HistoricalGenealogyGameComponent` stores people, families, kinship, lifespan records, and Scribe Pawn references for the active save. The component only registers humanlike player-faction Pawns when a Historical RimWorld scenario is active. Lifespan policies are XML Defs; assigned deadlines and genealogy are Scribe data. See [CharactersAndGenealogy.md](CharactersAndGenealogy.md) for API choices and limits.
+
 Historical RimWorld is an independent RimWorld 1.6 mod. Its foundation provides calendar time, data-driven scenarios, and a separate political-state model without changing vanilla time or Factions.
 
 ## Layers

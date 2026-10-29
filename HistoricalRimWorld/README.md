@@ -31,6 +31,8 @@ Historical politics initializes alongside an explicitly selected scenario and pe
 
 Scenario initialization also imports Eastern Zhou background events into the saved **Historical Chronicle** and starts the date-based event scheduler. Use the Historical Chronicle main tab to browse visible records, filter by record type/category/region/polity, and page through results. Scheduled events are ordered by date, then ascending priority (smaller first), then DefName. See [Events and Chronicle](Docs/EventsAndChronicle.md) for execution and failure behavior.
 
+The HR-007 foundation adds the **Historical Genealogy** main tab for saved person/family records, immediate relations, historical vs biological age, and lifespan deadlines. Pawn registration and lifecycle capture run only in an initialized historical scenario. See [Characters and Genealogy](Docs/CharactersAndGenealogy.md) for Scribe storage, public RimWorld 1.6 APIs, natural-death handling, and polling limitations.
+
 To install manually, place the `HistoricalRimWorld` folder in RimWorld's `Mods` directory and enable it in the mod list. See [Architecture](Docs/Architecture.md) and [Roadmap](Docs/Roadmap.md).
 
 ## Historical world prototype
