@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ScenarioDef Name="HR_EasternZhouPlayable" ParentName="ScenarioBase">
+    <defName>HR_PlayableScenario_EasternZhou770</defName>
+    <label>HR_EZ_ScenarioName</label>
+    <description>A small Zheng-region village begins in 770 BCE as the Zhou court moves east. Historical RimWorld chronology is a prototype, and the world map is not a reconstruction of ancient China.</description>
+    <scenario>
+      <name>HR_EasternZhouPlayable</name>
+      <summary>Five generated villagers begin a local community under Zheng allegiance in 770 BCE. Survive, build a family history, and continue beyond the chapter end if you wish.</summary>
+      <parts>
+        <li Class="RimWorld.ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>5</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+        <li Class="RimWorld.ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+          <visible>false</visible>
+        </li>
+        <li Class="HistoricalRimWorld.Scenarios.EasternZhou.ScenPart_HistoricalStartingSupplies">
+          <def>StartingThing_Defined</def>
+          <supplies>HR_StartingSupplies_EasternZhou770</supplies>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+</Defs>

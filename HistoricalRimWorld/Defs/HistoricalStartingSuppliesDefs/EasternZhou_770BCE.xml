@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Scenarios.EasternZhou.HistoricalStartingSuppliesDef>
+    <defName>HR_StartingSupplies_EasternZhou770</defName>
+    <label>Eastern Zhou village starting supplies</label>
+    <items>
+      <li><thingDef>RawRice</thingDef><count>200</count></li>
+      <li><thingDef>MealSimple</thingDef><count>50</count></li>
+      <li><thingDef>WoodLog</thingDef><count>300</count></li>
+      <li><thingDef>BlocksSandstone</thingDef><count>120</count></li>
+      <li><thingDef>Cloth</thingDef><count>50</count></li>
+      <li><thingDef>MedicineHerbal</thingDef><count>8</count></li>
+      <li><thingDef>Bow_Short</thingDef><count>2</count></li>
+      <li><thingDef>MeleeWeapon_Club</thingDef><count>3</count></li>
+      <li><thingDef>HR_Clay</thingDef><count>80</count></li>
+      <li><thingDef>HR_HempFiber</thingDef><count>60</count></li>
+      <li><thingDef>HR_CopperOre</thingDef><count>12</count></li>
+      <li><thingDef>HR_TinOre</thingDef><count>6</count></li>
+      <li><thingDef>HR_Relic_FamilyVessel</thingDef><count>1</count></li>
+    </items>
+  </HistoricalRimWorld.Scenarios.EasternZhou.HistoricalStartingSuppliesDef>
+</Defs>

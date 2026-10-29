@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_EZ_MainTabLabel>东周列国</HR_EZ_MainTabLabel>
+  <HR_EZ_MainTabDescription>查看本历史篇章并导出家族档案。</HR_EZ_MainTabDescription>
+  <HR_EZ_Title>东周列国：周室东迁</HR_EZ_Title>
+  <HR_EZ_NotActive>当前存档未启用此剧本篇章。</HR_EZ_NotActive>
+  <HR_EZ_CurrentDate>历史日期：{0}</HR_EZ_CurrentDate>
+  <HR_EZ_Background>公元前770年，周王室迁至洛邑。本篇章模拟郑国名义效忠下的地方村庄，不直接模拟王室。</HR_EZ_Background>
+  <HR_EZ_Region>历史起始地区：{0}（原型地理；并非古代中国真实地图）</HR_EZ_Region>
+  <HR_EZ_StartingRegion>郑地核心区</HR_EZ_StartingRegion>
+  <HR_EZ_Allegiance>社区效忠：{0}</HR_EZ_Allegiance>
+  <HR_EZ_Population>自由殖民者：{0}</HR_EZ_Population>
+  <HR_EZ_Families>已记录家族：{0}</HR_EZ_Families>
+  <HR_EZ_RevealedRegions>已揭示历史地区：{0}</HR_EZ_RevealedRegions>
+  <HR_EZ_Objectives>努力生存、发展地方生产并保存家族历史。这些是开放式目标。</HR_EZ_Objectives>
+  <HR_EZ_EndDateReached>已到达篇章终点（公元前740年）。准备好后可完成篇章。</HR_EZ_EndDateReached>
+  <HR_EZ_EndDateReady>现在可以完成本篇章。导出档案后仍可继续当前存档。</HR_EZ_EndDateReady>
+  <HR_EZ_Completed>本篇章已标记为完成，当前存档仍可继续游玩。</HR_EZ_Completed>
+  <HR_EZ_CompleteButton>完成篇章</HR_EZ_CompleteButton>
+  <HR_EZ_ExportButton>导出家族档案</HR_EZ_ExportButton>
+  <HR_EZ_ArchiveName>东周家族传承</HR_EZ_ArchiveName>
+  <HR_EZ_Exported>家族档案已导出：{0}</HR_EZ_Exported>
+  <HR_EZ_ChapterStartedTitle>村庄开始留下记录</HR_EZ_ChapterStartedTitle>
+  <HR_EZ_ChapterStartedDescription>本地生成的编年史条目标记了可玩篇章的开始。</HR_EZ_ChapterStartedDescription>
+  <HR_EZ_ChapterCompleted>《周室东迁》篇章已标记完成。你可以继续当前存档或导出家族档案。</HR_EZ_ChapterCompleted>
+  <HR_EZ_ScenarioName>东周列国：周室东迁</HR_EZ_ScenarioName>
+</LanguageData>

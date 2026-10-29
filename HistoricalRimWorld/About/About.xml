@@ -6,7 +6,7 @@
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <description>A foundation for historical scenarios in RimWorld 1.6.</description>
+  <description>An independent RimWorld 1.6 historical systems mod with an initial Eastern Zhou playable scenario.</description>
   <modDependencies>
     <li>
       <packageId>Ludeon.RimWorld.Biotech</packageId>

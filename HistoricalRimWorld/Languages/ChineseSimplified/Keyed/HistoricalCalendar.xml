@@ -160,6 +160,9 @@
   <HR_Event_ZhouEasternMigration_770BCE_Label>周室东迁</HR_Event_ZhouEasternMigration_770BCE_Label>
   <HR_Event_ZhouEasternMigration_770BCE_Description>周平王将王室迁至东部洛邑，传统上以此作为东周时期的开端。</HR_Event_ZhouEasternMigration_770BCE_Description>
   <HR_Event_ZhouEasternMigration_770BCE_SourceNotes>司马迁《史记》卷四《周本纪》，中国哲学书电子化计划平行文本节点 4658。公元前年份采用传统编年。</HR_Event_ZhouEasternMigration_770BCE_SourceNotes>
+  <HR_Event_ZhengDukeZhuangAccession_743BCE_Label>郑庄公即位编年</HR_Event_ZhengDukeZhuangAccession_743BCE_Label>
+  <HR_Event_ZhengDukeZhuangAccession_743BCE_Description>一项近期学术编年将郑庄公元年置于公元前743年。该编年存在争议；本条仅记录这个拟议年份，不触发游戏效果。</HR_Event_ZhengDukeZhuangAccession_743BCE_Description>
+  <HR_Event_ZhengDukeZhuangAccession_743BCE_SourceNotes>Pengcheng Zhang，《The Chronology of Western Zhou》，《Early China》46卷（2023），表14及“郑国编年”一节将郑庄公元年拟定为公元前743年。这是学术重构之一，并非没有争议的定论；仅记录年份，不臆造月日。https://www.cambridge.org/core/journals/early-china/article/chronology-of-western-zhou/0D661C3365537C0D15AD896F72F9DF70</HR_Event_ZhengDukeZhuangAccession_743BCE_SourceNotes>
   <HR_Event_DebugUnlockHedong_Label>开发示例：开放河东</HR_Event_DebugUnlockHedong_Label>
   <HR_Event_DebugUnlockHedong_Description>仅用于验证地区解锁接口的开发事件。</HR_Event_DebugUnlockHedong_Description>
   <HR_Chronicle_MainTabLabel>历史编年史</HR_Chronicle_MainTabLabel>

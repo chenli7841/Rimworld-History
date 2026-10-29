@@ -10,6 +10,4 @@
 8. **Historical Technology** — community technology state, vanilla research/production gates and an initial production slice (foundation implemented; content filtering is partial).
 9. **Culture and Relics** — culture state, customs, ritual records/UI, and relic archive/item links implemented as an initial slice; verify Def loading and ceremony/relic lifecycle in-game, then deepen automated transmission and object transfer tracking.
 10. **Scenario Legacy** — versioned external JSON archive, deterministic between-scenario family simulation, candidate preview, confirmed Pawn/relic import and Scribe idempotence markers implemented as an initial slice; run in-game save/reload and failure-path verification before broad release.
-11. **Eastern Zhou Playable Scenario** — integrate the systems into a complete playable scenario after the data and runtime validation gates above.
-
-Stage 11 remains out of scope for HR-010. No historical playable scenario integration is added in this stage.
+11. **Eastern Zhou Playable Scenario** — initial menu entry, data-driven Zheng village start, starting technology/items, startup integration, scenario overview/progress, optional chapter completion and HR-010 export hook implemented. Historical local society, age/skill-controlled founders, complete content filtering and in-game runtime verification remain open before calling the chapter complete.

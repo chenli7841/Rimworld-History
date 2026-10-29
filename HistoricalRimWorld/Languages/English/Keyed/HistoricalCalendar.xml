@@ -160,6 +160,9 @@
   <HR_Event_ZhouEasternMigration_770BCE_Label>Zhou court moves east</HR_Event_ZhouEasternMigration_770BCE_Label>
   <HR_Event_ZhouEasternMigration_770BCE_Description>King Ping moved the Zhou court east to Luoyi, the conventional beginning of the Eastern Zhou period.</HR_Event_ZhouEasternMigration_770BCE_Description>
   <HR_Event_ZhouEasternMigration_770BCE_SourceNotes>Sima Qian, Shiji, vol. 4, “Zhou Benji”; CText parallel passage node 4658. The BCE year follows conventional chronology.</HR_Event_ZhouEasternMigration_770BCE_SourceNotes>
+  <HR_Event_ZhengDukeZhuangAccession_743BCE_Label>Zheng succession of Lord Zhuang</HR_Event_ZhengDukeZhuangAccession_743BCE_Label>
+  <HR_Event_ZhengDukeZhuangAccession_743BCE_Description>A recent scholarly reconstruction places Lord Zhuang of Zheng's first regnal year in 743 BCE. The chronology is disputed; this entry records only the proposed year and does not trigger a gameplay change.</HR_Event_ZhengDukeZhuangAccession_743BCE_Description>
+  <HR_Event_ZhengDukeZhuangAccession_743BCE_SourceNotes>Pengcheng Zhang, “The Chronology of Western Zhou,” Early China 46 (2023), table 14 and section “The Chronology of Zheng,” proposes 743 BCE for Lord Zhuang's yuan. This is one scholarly reconstruction, not an uncontested date; year-only precision retained. https://www.cambridge.org/core/journals/early-china/article/chronology-of-western-zhou/0D661C3365537C0D15AD896F72F9DF70</HR_Event_ZhengDukeZhuangAccession_743BCE_SourceNotes>
   <HR_Event_DebugUnlockHedong_Label>Developer example: open Hedong</HR_Event_DebugUnlockHedong_Label>
   <HR_Event_DebugUnlockHedong_Description>A development-only event used to verify the regional unlock API.</HR_Event_DebugUnlockHedong_Description>
   <HR_Chronicle_MainTabLabel>Historical Chronicle</HR_Chronicle_MainTabLabel>

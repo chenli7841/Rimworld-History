@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Scenarios.EasternZhou.HistoricalPlayableScenarioSetupDef>
+    <defName>HR_PlayableSetup_EasternZhou770</defName>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <defaultStartingRegion>HR_Region_ZhengHeartland</defaultStartingRegion>
+    <defaultStartingPolity>HR_State_Zheng</defaultStartingPolity>
+    <startingPopulation>5</startingPopulation>
+    <startingTechnologyIds>
+      <li>HR_Tech_BasicFarming</li>
+      <li>HR_Tech_AnimalHusbandry</li>
+      <li>HR_Tech_SeedSelection</li>
+      <li>HR_Tech_Pottery</li>
+      <li>HR_Tech_KilnFiring</li>
+      <li>HR_Tech_PlantFibres</li>
+      <li>HR_Tech_Weaving</li>
+      <li>HR_Tech_TimberFraming</li>
+      <li>HR_Tech_BowMaking</li>
+    </startingTechnologyIds>
+    <startingSupplies>HR_StartingSupplies_EasternZhou770</startingSupplies>
+    <startingCommunityName>HR_Community_Player_001</startingCommunityName>
+    <playableEndAstronomicalYear>-739</playableEndAstronomicalYear>
+    <vanillaScenarioName>HR_EasternZhouPlayable</vanillaScenarioName>
+  </HistoricalRimWorld.Scenarios.EasternZhou.HistoricalPlayableScenarioSetupDef>
+</Defs>

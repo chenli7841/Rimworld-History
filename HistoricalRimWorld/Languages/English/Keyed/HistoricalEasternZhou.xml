@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_EZ_MainTabLabel>Eastern Zhou</HR_EZ_MainTabLabel>
+  <HR_EZ_MainTabDescription>Review this historical chapter and export its family archive.</HR_EZ_MainTabDescription>
+  <HR_EZ_Title>Eastern Zhou: The Royal Court Moves East</HR_EZ_Title>
+  <HR_EZ_NotActive>This scenario chapter is not active in this save.</HR_EZ_NotActive>
+  <HR_EZ_CurrentDate>Historical date: {0}</HR_EZ_CurrentDate>
+  <HR_EZ_Background>In 770 BCE, the Zhou court moved east to Luoyi. This chapter follows a local village under Zheng allegiance; it does not simulate the royal court directly.</HR_EZ_Background>
+  <HR_EZ_Region>Historical starting region: {0} (prototype geography; not an ancient China map)</HR_EZ_Region>
+  <HR_EZ_StartingRegion>Zheng heartland</HR_EZ_StartingRegion>
+  <HR_EZ_Allegiance>Community allegiance: {0}</HR_EZ_Allegiance>
+  <HR_EZ_Population>Free colonists: {0}</HR_EZ_Population>
+  <HR_EZ_Families>Recorded families: {0}</HR_EZ_Families>
+  <HR_EZ_RevealedRegions>Revealed historical regions: {0}</HR_EZ_RevealedRegions>
+  <HR_EZ_Objectives>Survive, develop local production, and preserve your family history. These are open-ended goals.</HR_EZ_Objectives>
+  <HR_EZ_EndDateReached>The chapter end date (740 BCE) has arrived. You may complete the chapter when ready.</HR_EZ_EndDateReached>
+  <HR_EZ_EndDateReady>The chapter may now be completed. You can continue the save after exporting an archive.</HR_EZ_EndDateReady>
+  <HR_EZ_Completed>This chapter has been marked complete. The current save remains playable.</HR_EZ_Completed>
+  <HR_EZ_CompleteButton>Complete chapter</HR_EZ_CompleteButton>
+  <HR_EZ_ExportButton>Export family archive</HR_EZ_ExportButton>
+  <HR_EZ_ArchiveName>Eastern Zhou family legacy</HR_EZ_ArchiveName>
+  <HR_EZ_Exported>Family archive exported: {0}</HR_EZ_Exported>
+  <HR_EZ_ChapterStartedTitle>The village begins its record</HR_EZ_ChapterStartedTitle>
+  <HR_EZ_ChapterStartedDescription>A locally generated chronicle entry marks the start of this playable chapter.</HR_EZ_ChapterStartedDescription>
+  <HR_EZ_ChapterCompleted>The Eastern Zhou chapter has been marked complete. You may continue this save or export its family archive.</HR_EZ_ChapterCompleted>
+  <HR_EZ_ScenarioName>Eastern Zhou: The Royal Court Moves East</HR_EZ_ScenarioName>
+</LanguageData>

@@ -109,6 +109,23 @@ namespace HistoricalRimWorld.World
             return changed;
         }
 
+        internal bool ReplacePrototypeTileRegion(int tileId, string regionId)
+        {
+            if (mapMode != HistoricalWorldMapMode.PrototypeWorld) return false;
+            HistoricalPrototypeTileMapping mapping = FindTileMapping(tileId);
+            if (mapping == null)
+            {
+                mapping = new HistoricalPrototypeTileMapping();
+                mapping.Initialize(tileId, null);
+                if (prototypeMappings == null) prototypeMappings = new List<HistoricalPrototypeTileMapping>();
+                prototypeMappings.Add(mapping);
+            }
+            foreach (string existingId in mapping.RegionIds.ToList()) mapping.RemoveRegion(existingId);
+            bool changed = mapping.AddRegion(regionId);
+            if (changed) RebuildDerivedCaches();
+            return changed;
+        }
+
         internal bool RemovePrototypeTileMapping(int tileId, string regionId)
         {
             HistoricalPrototypeTileMapping mapping = FindTileMapping(tileId);

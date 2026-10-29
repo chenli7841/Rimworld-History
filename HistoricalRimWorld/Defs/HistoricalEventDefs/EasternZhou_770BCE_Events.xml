@@ -41,6 +41,27 @@
   </HistoricalRimWorld.Events.HistoricalEventDef>
 
   <HistoricalRimWorld.Events.HistoricalEventDef>
+    <defName>HR_Event_ZhengDukeZhuangAccession_743BCE</defName>
+    <label>HR_Event_ZhengDukeZhuangAccession_743BCE_Label</label>
+    <description>HR_Event_ZhengDukeZhuangAccession_743BCE_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <historicalDate>
+      <astronomicalYear>-742</astronomicalYear>
+      <precision>Year</precision>
+    </historicalDate>
+    <category>Political</category>
+    <scope>World</scope>
+    <regionId>HR_Region_ZhengHeartland</regionId>
+    <polityId>HR_State_Zheng</polityId>
+    <priority>100</priority>
+    <activationMode>Scheduled</activationMode>
+    <visibility>Public</visibility>
+    <notificationPolicy>ChronicleOnly</notificationPolicy>
+    <evidenceLevel>Disputed</evidenceLevel>
+    <sourceNotes>HR_Event_ZhengDukeZhuangAccession_743BCE_SourceNotes</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalEventDef>
+
+  <HistoricalRimWorld.Events.HistoricalEventDef>
     <defName>HR_Event_DebugUnlockHedong</defName>
     <label>HR_Event_DebugUnlockHedong_Label</label>
     <description>HR_Event_DebugUnlockHedong_Description</description>

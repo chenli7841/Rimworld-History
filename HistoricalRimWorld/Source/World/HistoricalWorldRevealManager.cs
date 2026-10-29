@@ -116,6 +116,23 @@ namespace HistoricalRimWorld.World
             return true;
         }
 
+        /// <summary>Assigns the selected starting map tile to the configured starting region on prototype worlds only.</summary>
+        public static bool TryAssignStartingMapToRegion(Map map, string regionId, out string error)
+        {
+            error = null;
+            if (!IsActive || map == null) return Reject("An active historical scenario and starting map are required.", out error);
+            HistoricalWorldRevealWorldComponent component = GetInitializedComponent();
+            if (component == null || component.MapMode != HistoricalWorldMapMode.PrototypeWorld)
+                return Reject("Automatic starting-tile assignment is only supported by PrototypeWorld mapping.", out error);
+            if (map.Tile < 0) return Reject("The starting map does not have a valid world tile.", out error);
+            if (component.FindRegion(regionId) == null || DefDatabase<HistoricalRegionDef>.GetNamedSilentFail(regionId) == null)
+                return Reject("The configured starting region is not part of the active reveal setup: " + regionId + ".", out error);
+            string[] validationErrors = HistoricalWorldAccessValidator.ValidatePrototypeTileMapping(map.Tile, regionId).ToArray();
+            if (validationErrors.Length > 0) return Reject(string.Join(Environment.NewLine, validationErrors), out error);
+            component.ReplacePrototypeTileRegion(map.Tile, regionId);
+            return true;
+        }
+
         public static bool TryUnmapPrototypeTile(int tileId, string regionId, HistoricalRevealSource source, out string error)
         {
             error = null;
