@@ -69,14 +69,17 @@
   <HR_Region_Hedong_Description>A logical historical region; geography is kept separate from political territory.</HR_Region_Hedong_Description>
   <HR_Region_Bashu_Label>Ba and Shu</HR_Region_Bashu_Label>
   <HR_Region_Bashu_Description>A broad historical region reference; no verified boundary or world tile mapping is included.</HR_Region_Bashu_Description>
-  <HR_Culture_ZhouCentralPlains_Label>Zhou Central Plains Culture</HR_Culture_ZhouCentralPlains_Label>
-  <HR_Culture_ZhouCentralPlains_Description>A broad historical and regional culture grouping, not a modern ethnic identity.</HR_Culture_ZhouCentralPlains_Description>
-  <HR_Culture_QinRegional_Label>Qin Regional Culture</HR_Culture_QinRegional_Label>
-  <HR_Culture_QinRegional_Description>A regional culture grouping for historical data.</HR_Culture_QinRegional_Description>
   <HR_Settlement_Luoyi_Label>Luoyi</HR_Settlement_Luoyi_Label>
   <HR_Settlement_Luoyi_Description>A historical settlement record. This Def does not spawn a settlement on the game map.</HR_Settlement_Luoyi_Description>
-  <HR_Settlement_Xinzheng_Label>Xinzheng</HR_Settlement_Xinzheng_Label>
+  <HR_Settlement_Xinzheng_Label>Xinzheng-area prototype settlement</HR_Settlement_Xinzheng_Label>
   <HR_Settlement_Xinzheng_Description>A historical settlement reference without an asserted founding date for this scenario.</HR_Settlement_Xinzheng_Description>
+  <HR_Settlement_Jin_Core_Label>Jin heartland settlement (prototype)</HR_Settlement_Jin_Core_Label>
+  <HR_Settlement_Qin_Western_Label>Western Guanzhong settlement (prototype)</HR_Settlement_Qin_Western_Label>
+  <HR_Settlement_Qi_Core_Label>Qi heartland settlement (prototype)</HR_Settlement_Qi_Core_Label>
+  <HR_Settlement_Lu_Core_Label>Lu heartland settlement (prototype)</HR_Settlement_Lu_Core_Label>
+  <HR_Settlement_Song_Core_Label>Song heartland settlement (prototype)</HR_Settlement_Song_Core_Label>
+  <HR_Settlement_Wei_Core_Label>Wey heartland settlement (prototype)</HR_Settlement_Wei_Core_Label>
+  <HR_Settlement_Chu_Core_Label>Jianghan Chu settlement (prototype)</HR_Settlement_Chu_Core_Label>
   <HR_Domain_Zheng_Example_0001_Label>Illustrative Zheng domain template</HR_Domain_Zheng_Example_0001_Label>
   <HR_Domain_Zheng_Example_0001_Description>A fictional template used only to demonstrate domain data structure.</HR_Domain_Zheng_Example_0001_Description>
   <HR_Setup_EasternZhou_770BCE_Politics_Label>Eastern Zhou political setup</HR_Setup_EasternZhou_770BCE_Politics_Label>

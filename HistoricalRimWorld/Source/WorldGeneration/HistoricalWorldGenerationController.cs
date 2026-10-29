@@ -126,6 +126,7 @@ namespace HistoricalRimWorld.WorldGeneration
                 }
 
                 int placedCount = 0;
+                string historicalSettlementName = placement.settlement?.LabelCap.ToString();
                 foreach (Settlement settlement in factionSettlements)
                 {
                     Vector2 target = new Vector2(
@@ -142,6 +143,12 @@ namespace HistoricalRimWorld.WorldGeneration
                     PlanetTile destination = new PlanetTile(tileId);
                     world.worldObjects.Remove(settlement);
                     settlement.Tile = destination;
+                    if (!string.IsNullOrWhiteSpace(historicalSettlementName))
+                    {
+                        settlement.Name = placedCount == 0
+                            ? historicalSettlementName
+                            : historicalSettlementName + " (" + (placedCount + 1) + ")";
+                    }
                     world.worldObjects.Add(settlement);
                     reservedTiles.Add(tileId);
                     component.RecordSettlement(settlement, placement.polity.defName, placement.region.defName, tileId);

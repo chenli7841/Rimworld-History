@@ -69,14 +69,17 @@
   <HR_Region_Hedong_Description>逻辑历史区域；地理与政治领土分开记录。</HR_Region_Hedong_Description>
   <HR_Region_Bashu_Label>巴蜀</HR_Region_Bashu_Label>
   <HR_Region_Bashu_Description>宽泛的历史区域参考；当前没有已验证边界或世界 Tile 映射。</HR_Region_Bashu_Description>
-  <HR_Culture_ZhouCentralPlains_Label>周文化圈</HR_Culture_ZhouCentralPlains_Label>
-  <HR_Culture_ZhouCentralPlains_Description>宽泛的历史与地域文化分类，不代表现代民族身份。</HR_Culture_ZhouCentralPlains_Description>
-  <HR_Culture_QinRegional_Label>秦地文化分类</HR_Culture_QinRegional_Label>
-  <HR_Culture_QinRegional_Description>供历史数据关联使用的地域文化分类。</HR_Culture_QinRegional_Description>
   <HR_Settlement_Luoyi_Label>洛邑</HR_Settlement_Luoyi_Label>
   <HR_Settlement_Luoyi_Description>洛邑历史聚落记录，不会在游戏地图上生成聚落。</HR_Settlement_Luoyi_Description>
-  <HR_Settlement_Xinzheng_Label>新郑</HR_Settlement_Xinzheng_Label>
+  <HR_Settlement_Xinzheng_Label>新郑一带原型据点</HR_Settlement_Xinzheng_Label>
   <HR_Settlement_Xinzheng_Description>新郑历史聚落参考条目，本剧本未声明其始建时间。</HR_Settlement_Xinzheng_Description>
+  <HR_Settlement_Jin_Core_Label>河东晋地核心据点（原型）</HR_Settlement_Jin_Core_Label>
+  <HR_Settlement_Qin_Western_Label>关中西部秦地据点（原型）</HR_Settlement_Qin_Western_Label>
+  <HR_Settlement_Qi_Core_Label>齐地核心据点（原型）</HR_Settlement_Qi_Core_Label>
+  <HR_Settlement_Lu_Core_Label>鲁地核心据点（原型）</HR_Settlement_Lu_Core_Label>
+  <HR_Settlement_Song_Core_Label>宋地核心据点（原型）</HR_Settlement_Song_Core_Label>
+  <HR_Settlement_Wei_Core_Label>卫地核心据点（原型）</HR_Settlement_Wei_Core_Label>
+  <HR_Settlement_Chu_Core_Label>江汉楚地核心据点（原型）</HR_Settlement_Chu_Core_Label>
   <HR_Domain_Zheng_Example_0001_Label>郑地示例封邑模板</HR_Domain_Zheng_Example_0001_Label>
   <HR_Domain_Zheng_Example_0001_Description>仅用于演示封邑数据结构的虚构模板。</HR_Domain_Zheng_Example_0001_Description>
   <HR_Setup_EasternZhou_770BCE_Politics_Label>东周初期政治配置</HR_Setup_EasternZhou_770BCE_Politics_Label>

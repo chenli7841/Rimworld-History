@@ -2,8 +2,8 @@
 <Defs>
   <HistoricalRimWorld.Scenarios.HistoricalCultureDef>
     <defName>HR_Culture_ZhouCentralPlains</defName>
-    <label>HR_Culture_ZhouCentralPlains_Label</label>
-    <description>HR_Culture_ZhouCentralPlains_Description</description>
+    <label>Zhou Central Plains Culture</label>
+    <description>A broad historical and regional cultural grouping, not a modern ethnic identity.</description>
     <historicalName>周文化圈（简化分类）</historicalName>
     <culturalDescription>历史时期与地理区域相关的宽泛文化分类，不与现代民族身份等同。</culturalDescription>
     <relatedCultures><li>HR_Culture_QinRegional</li></relatedCultures>
@@ -15,8 +15,8 @@
 
   <HistoricalRimWorld.Scenarios.HistoricalCultureDef>
     <defName>HR_Culture_QinRegional</defName>
-    <label>HR_Culture_QinRegional_Label</label>
-    <description>HR_Culture_QinRegional_Description</description>
+    <label>Qin Regional Culture</label>
+    <description>A regional cultural grouping for historical data.</description>
     <historicalName>秦地文化分类</historicalName>
     <culturalDescription>供历史数据关联的地区性文化分类，不与现代民族身份等同。</culturalDescription>
     <relatedCultures><li>HR_Culture_ZhouCentralPlains</li></relatedCultures>

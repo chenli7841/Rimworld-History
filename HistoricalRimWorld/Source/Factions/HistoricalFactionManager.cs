@@ -43,7 +43,7 @@ namespace HistoricalRimWorld.Factions
         public static bool IsAllowedFaction(Faction faction, string scenarioId)
         {
             if (faction?.def == null) return false;
-            if (faction == Faction.OfPlayer) return true;
+            if (faction == Faction.OfPlayerSilentFail) return true;
             if (faction.def.defName == "HR_Faction_LocalBandits") return true;
             return GetBindings(scenarioId).Any(binding => binding.rimWorldFactionDef == faction.def);
         }

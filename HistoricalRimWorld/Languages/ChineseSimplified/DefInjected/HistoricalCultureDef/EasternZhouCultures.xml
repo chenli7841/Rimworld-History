@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Culture_ZhouCentralPlains.label>周文化圈</HR_Culture_ZhouCentralPlains.label>
+  <HR_Culture_ZhouCentralPlains.description>宽泛的历史与地域文化分类，不代表现代民族身份。</HR_Culture_ZhouCentralPlains.description>
+  <HR_Culture_QinRegional.label>秦地文化分类</HR_Culture_QinRegional.label>
+  <HR_Culture_QinRegional.description>供历史数据关联使用的地域文化分类。</HR_Culture_QinRegional.description>
+</LanguageData>
