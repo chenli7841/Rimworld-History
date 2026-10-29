@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HistoricalRimWorld.Calendar;
+using HistoricalRimWorld.Events;
 using HistoricalRimWorld.Scenarios;
 using RimWorld;
 using UnityEngine;
@@ -26,6 +27,8 @@ namespace HistoricalRimWorld.UI
 
             DrawCalendarSection(listing);
             listing.GapLine();
+            DrawHistoricalContextSection(listing);
+            listing.GapLine();
             DrawScenarioSection(listing);
             listing.GapLine();
             HistoricalPoliticsUI.Draw(listing);
@@ -36,6 +39,26 @@ namespace HistoricalRimWorld.UI
 
             listing.End();
             Widgets.EndScrollView();
+        }
+
+        private static void DrawHistoricalContextSection(Listing_Standard listing)
+        {
+            HistoricalScenarioDef scenario = HistoricalScenarioManager.CurrentScenario;
+            if (scenario == null || !HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate date)) return;
+            HistoricalYearConverter.FromAstronomicalYear(date.AstronomicalYear, out int year, out bool bce);
+            if (!bce) return;
+            var contexts = DefDatabase<HistoricalContextDef>.AllDefsListForReading
+                .Where(item => item.scenario?.defName == scenario.defName && year <= item.fromBceYear && year >= item.throughBceYear)
+                .OrderBy(item => item.defName, StringComparer.Ordinal).ToList();
+            if (contexts.Count == 0) return;
+            listing.Label(Translator.Translate("HR_Context_SectionTitle"));
+            foreach (HistoricalContextDef context in contexts)
+            {
+                listing.Label(context.LabelCap);
+                listing.Label(Translator.Translate(context.description));
+                listing.Label(string.Format(Translator.Translate("HR_Context_Period"), context.fromBceYear, context.throughBceYear,
+                    Translator.Translate(context.sourceNotes)));
+            }
         }
 
         private static void DrawCalendarSection(Listing_Standard listing)

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Events.HistoricalStorylineDef>
+    <defName>HR_Storyline_HRC001</defName>
+    <label>HR_Storyline_HR_Storyline_HRC001</label>
+    <description>HR_HRC001_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <startConditions>After the eastward-migration background, when a refugee household reaches the player settlement.</startConditions>
+    <longTermConsequences>Settlement can add a household member, record the family's vessel and increase Zhou cultural presence. The last choice can end the chain as integrated or departed.</longTermConsequences>
+    <sourceNotes>Local characters, vessels, and choices are fictional gameplay; broad displacement and court migration are historical context.</sourceNotes>
+    <stages>
+      <li><stageId>Arrival</stageId><eventDefName>HR_HRE_001</eventDefName><trigger>LocalEvent</trigger></li>
+      <li><stageId>SettlementRequest</stageId><eventDefName>HR_HRE_002</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>Arrival</li></prerequisiteStageIds></li>
+      <li><stageId>AncestralVessel</stageId><eventDefName>HR_HRE_012</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>SettlementRequest</li></prerequisiteStageIds></li>
+      <li><stageId>FamilyRite</stageId><eventDefName>HR_HRE_014</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>AncestralVessel</li></prerequisiteStageIds></li>
+      <li><stageId>IntegrateOrDepart</stageId><eventDefName>HR_HRE_014</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>FamilyRite</li></prerequisiteStageIds></li>
+    </stages>
+  </HistoricalRimWorld.Events.HistoricalStorylineDef>
+
+  <HistoricalRimWorld.Events.HistoricalStorylineDef>
+    <defName>HR_Storyline_HRC002</defName>
+    <label>HR_Storyline_HR_Storyline_HRC002</label>
+    <description>HR_HRC002_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <startConditions>A farming settlement has land, grain, and a political community.</startConditions>
+    <longTermConsequences>Food stock changes through choices; the community's political posture and relations with local authorities persist in HR-004.</longTermConsequences>
+    <sourceNotes>Fictional local disputes model long-term agrarian and political conditions; no local dispute is asserted as an attested event.</sourceNotes>
+    <stages>
+      <li><stageId>NewFields</stageId><eventDefName>HR_HRE_002</eventDefName><trigger>LocalEvent</trigger></li>
+      <li><stageId>BoundaryDispute</stageId><eventDefName>HR_HRE_005</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>NewFields</li></prerequisiteStageIds></li>
+      <li><stageId>GrainDemand</stageId><eventDefName>HR_HRE_004</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>BoundaryDispute</li></prerequisiteStageIds></li>
+      <li><stageId>WaterSharing</stageId><eventDefName>HR_HRE_006</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>GrainDemand</li></prerequisiteStageIds></li>
+      <li><stageId>CommunityStance</stageId><eventDefName>HR_HRE_017</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>WaterSharing</li></prerequisiteStageIds></li>
+    </stages>
+  </HistoricalRimWorld.Events.HistoricalStorylineDef>
+
+  <HistoricalRimWorld.Events.HistoricalStorylineDef>
+    <defName>HR_Storyline_HRC003</defName>
+    <label>HR_Storyline_HR_Storyline_HRC003</label>
+    <description>HR_HRC003_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <startConditions>A craftsperson arrives and the player has access to locally adopted bronze-casting technology.</startConditions>
+    <longTermConsequences>Trading grain for copper and tin, paying material costs, and crafting a one-off bronze vessel changes actual inventory and records a unique relic.</longTermConsequences>
+    <sourceNotes>The named craftsperson and vessel are fictional. Bronze production is period context and does not imply universal access.</sourceNotes>
+    <stages>
+      <li><stageId>ArtisanArrives</stageId><eventDefName>HR_HRE_008</eventDefName><trigger>LocalEvent</trigger></li>
+      <li><stageId>AcquireMetals</stageId><eventDefName>HR_HRE_010</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>ArtisanArrives</li></prerequisiteStageIds></li>
+      <li><stageId>CastVessel</stageId><eventDefName>HR_HRE_009</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>AcquireMetals</li></prerequisiteStageIds></li>
+      <li><stageId>WorkshopOrder</stageId><eventDefName>HR_HRE_011</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>CastVessel</li></prerequisiteStageIds></li>
+      <li><stageId>FamilyKeepsake</stageId><eventDefName>HR_HRE_012</eventDefName><trigger>LocalEvent</trigger><optional>true</optional><optionalAfterYears>5</optionalAfterYears><prerequisiteStageIds><li>WorkshopOrder</li></prerequisiteStageIds><conditions><li Class="HistoricalRimWorld.Events.Conditions.Condition_RelicOwned"><relicDefName>HR_RelicDef_BronzeVessel</relicDefName></li></conditions></li>
+    </stages>
+  </HistoricalRimWorld.Events.HistoricalStorylineDef>
+
+  <HistoricalRimWorld.Events.HistoricalStorylineDef>
+    <defName>HR_Storyline_HRC004</defName>
+    <label>HR_Storyline_HR_Storyline_HRC004</label>
+    <description>HR_HRC004_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <startConditions>A merchant reaches the settlement after the chronicle has executed the contested King Xie entry.</startConditions>
+    <longTermConsequences>Repeated accounts and a resource choice can alter local posture and reveal only already-occurred history. The chronicle keeps occurrence and learned dates separate.</longTermConsequences>
+    <sourceNotes>Local messengers are fictional. Their incompatible accounts do not decide the historical chronology.</sourceNotes>
+    <stages>
+      <li><stageId>FirstReport</stageId><eventDefName>HR_HRE_019</eventDefName><trigger>LocalEvent</trigger></li>
+      <li><stageId>ConflictingAccounts</stageId><eventDefName>HR_HRE_019</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>FirstReport</li></prerequisiteStageIds></li>
+      <li><stageId>LuoyiRetinue</stageId><eventDefName>HR_HRE_003</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>ConflictingAccounts</li></prerequisiteStageIds></li>
+      <li><stageId>MaterialRequest</stageId><eventDefName>HR_HRE_004</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>LuoyiRetinue</li></prerequisiteStageIds></li>
+      <li><stageId>RecordedViewpoints</stageId><eventDefName>HR_HRE_019</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>MaterialRequest</li></prerequisiteStageIds></li>
+    </stages>
+  </HistoricalRimWorld.Events.HistoricalStorylineDef>
+
+  <HistoricalRimWorld.Events.HistoricalStorylineDef>
+    <defName>HR_Storyline_HRC005</defName>
+    <label>HR_Storyline_HR_Storyline_HRC005</label>
+    <description>HR_HRC005_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <startConditions>A family enters through play in the Eastern Zhou scenario.</startConditions>
+    <longTermConsequences>Birth and death milestones are observed, never scripted. Optional milestones expire into a family-continuation route. At the chapter end HR-010 exports a versioned family archive.</longTermConsequences>
+    <sourceNotes>All recorded births, relationships, deaths, and relic ownership come from this save; the chain never forces reproduction or death.</sourceNotes>
+    <stages>
+      <li><stageId>FamilyFounded</stageId><eventDefName>HR_HRE_001</eventDefName><trigger>LocalEvent</trigger></li>
+      <li><stageId>ObservedChildbirth</stageId><trigger>ObservedBirth</trigger><optional>true</optional><optionalAfterYears>8</optionalAfterYears><prerequisiteStageIds><li>FamilyFounded</li></prerequisiteStageIds></li>
+      <li><stageId>MarriageOrBranch</stageId><eventDefName>HR_HRE_015</eventDefName><trigger>LocalEvent</trigger><optional>true</optional><optionalAfterYears>10</optionalAfterYears><prerequisiteStageIds><li>ObservedChildbirth</li></prerequisiteStageIds><conditions><li Class="HistoricalRimWorld.Events.Conditions.Condition_MarriageCandidate"><minimumAgeYears>18</minimumAgeYears></li></conditions></li>
+      <li><stageId>DeathAndRite</stageId><eventDefName>HR_HRE_014</eventDefName><trigger>LocalEvent</trigger><optional>true</optional><optionalAfterYears>15</optionalAfterYears><prerequisiteStageIds><li>MarriageOrBranch</li></prerequisiteStageIds><conditions><li Class="HistoricalRimWorld.Events.Conditions.Condition_FamilyDeath" /></conditions></li>
+      <li><stageId>RelicInheritance</stageId><eventDefName>HR_HRE_012</eventDefName><trigger>LocalEvent</trigger><prerequisiteStageIds><li>DeathAndRite</li></prerequisiteStageIds></li>
+      <li><stageId>ArchiveAtChapterEnd</stageId><trigger>ScenarioEnd</trigger><prerequisiteStageIds><li>RelicInheritance</li></prerequisiteStageIds></li>
+    </stages>
+  </HistoricalRimWorld.Events.HistoricalStorylineDef>
+</Defs>

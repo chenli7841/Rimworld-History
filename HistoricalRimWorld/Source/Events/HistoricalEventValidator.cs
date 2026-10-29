@@ -15,7 +15,10 @@ namespace HistoricalRimWorld.Events
         {
             if (item == null) yield break;
             if (item.scenario == null) yield return "scenario is required.";
-            if (item.historicalDate == null) yield return "historicalDate is required.";
+            if (item.historicalDate == null)
+            {
+                if (item.activationMode != HistoricalEventActivationMode.LocalTemplate) yield return "historicalDate is required.";
+            }
             else
             {
                 string dateError = null;
@@ -29,6 +32,8 @@ namespace HistoricalRimWorld.Events
             if (!Enum.IsDefined(typeof(HistoricalEventVisibility), item.visibility)) yield return "visibility is invalid.";
             if (!Enum.IsDefined(typeof(HistoricalEventNotificationPolicy), item.notificationPolicy)) yield return "notificationPolicy is invalid.";
             if (!Enum.IsDefined(typeof(HistoricalEvidenceLevel), item.evidenceLevel)) yield return "evidenceLevel is invalid.";
+            if (!Enum.IsDefined(typeof(HistoricalEventProvenance), item.provenance)) yield return "provenance is invalid.";
+            if (!Enum.IsDefined(typeof(HistoricalChronologyTradition), item.chronologyTradition)) yield return "chronologyTradition is invalid.";
             if (string.IsNullOrWhiteSpace(item.label)) yield return "a localized label key is required.";
             if (string.IsNullOrWhiteSpace(item.description)) yield return "a localized description key is required.";
             if (item.prerequisiteEventIds == null) yield return "prerequisiteEventIds cannot be null.";
@@ -65,6 +70,10 @@ namespace HistoricalRimWorld.Events
                 yield return "InitialBackground events must be recorded in the chronicle.";
             if (item.activationMode == HistoricalEventActivationMode.DevelopmentOnly && item.evidenceLevel != HistoricalEvidenceLevel.Speculative)
                 yield return "DevelopmentOnly events must be marked Speculative.";
+            if (item.activationMode == HistoricalEventActivationMode.LocalTemplate
+                && (item.scope != HistoricalEventScope.LocalCommunity || item.provenance != HistoricalEventProvenance.FictionalLocalEvent
+                    || item.actions == null || item.actions.Count != 0))
+                yield return "LocalTemplate events must be fictional local-community records without historical actions.";
             if (item.scope == HistoricalEventScope.Region && string.IsNullOrWhiteSpace(item.regionId)) yield return "Region scope requires regionId.";
             if (item.regionId != null && DefDatabase<HistoricalRegionDef>.GetNamedSilentFail(item.regionId) == null)
                 yield return "regionId references a missing historical region Def.";

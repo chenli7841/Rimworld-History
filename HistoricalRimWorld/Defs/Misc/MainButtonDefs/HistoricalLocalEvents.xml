@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MainButtonDef>
+    <defName>HR_MainButton_HistoricalLocalEvents</defName>
+    <label>HR_LocalEvents_MainTabLabel</label>
+    <description>HR_LocalEvents_MainTabDescription</description>
+    <tabWindowClass>HistoricalRimWorld.UI.MainTabWindow_HistoricalLocalEvents</tabWindowClass>
+    <order>97</order>
+    <iconPath>UI/Buttons/MainButtons/History</iconPath>
+    <validWithoutMap>true</validWithoutMap>
+  </MainButtonDef>
+</Defs>

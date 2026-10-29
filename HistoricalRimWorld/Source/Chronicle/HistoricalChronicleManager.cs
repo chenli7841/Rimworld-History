@@ -24,8 +24,26 @@ namespace HistoricalRimWorld.Chronicle
             HistoricalDateReference reference = new HistoricalDateReference(date.AstronomicalYear, date.Month, date.Day, HistoricalDatePrecision.Day);
             return component.AddEntry(CreateEntry(entryId, null, HistoricalChronicleEntryType.LocalExperience,
                 reference, titleKey, descriptionKey, regionId, polityId, evidence, sourceNotes,
-                HistoricalEventCategory.Other, HistoricalEventScope.LocalCommunity, true))
+                HistoricalEventCategory.Other, HistoricalEventScope.LocalCommunity, true,
+                HistoricalEventProvenance.HistoricalContextSimulation, knownDate: reference))
                 || Reject("Could not add local chronicle entry.", out error);
+        }
+
+        internal static bool TryAddInteractiveLocalEventEntry(HistoricalEventDef source, string entryId,
+            string titleKey, string descriptionKey, out string error)
+        {
+            error = null;
+            if (source == null || source.activationMode != HistoricalEventActivationMode.LocalTemplate)
+                return Reject("A LocalTemplate HistoricalEventDef is required.", out error);
+            if (!HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate date))
+                return Reject("The historical calendar is inactive.", out error);
+            if (!TryGetInitializedComponent(out HistoricalChronicleGameComponent component, out error)) return false;
+            HistoricalDateReference reference = new HistoricalDateReference(date.AstronomicalYear, date.Month, date.Day, HistoricalDatePrecision.Day);
+            HistoricalChronicleEntry entry = CreateEntry(entryId, source.defName, HistoricalChronicleEntryType.FictionalLocalEvent,
+                reference, titleKey, descriptionKey, source.regionId, source.polityId, HistoricalEvidenceLevel.Speculative,
+                source.sourceNotes, source.category, HistoricalEventScope.LocalCommunity, true,
+                HistoricalEventProvenance.FictionalLocalEvent, source.chronologyTradition, reference);
+            return component.AddEntry(entry) || Reject("Could not add local event choice to the chronicle.", out error);
         }
 
         public static bool TryAddInferredLegacy(string entryId, HistoricalDateReference date, string titleKey,
@@ -56,9 +74,17 @@ namespace HistoricalRimWorld.Chronicle
         {
             error = null;
             if (!TryGetInitializedComponent(out HistoricalChronicleGameComponent component, out error)) return false;
+            HistoricalChronicleEntryType type = item.provenance == HistoricalEventProvenance.HistoricalReconstruction
+                ? HistoricalChronicleEntryType.HistoricalReconstruction
+                : item.provenance == HistoricalEventProvenance.HistoricalContextSimulation
+                    ? HistoricalChronicleEntryType.HistoricalContext : HistoricalChronicleEntryType.AttestedHistory;
+            HistoricalDateReference knownDate = null;
+            if (visible && HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate learnedOn))
+                knownDate = new HistoricalDateReference(learnedOn.AstronomicalYear, learnedOn.Month, learnedOn.Day, HistoricalDatePrecision.Day);
             return component.AddEntry(CreateEntry("Event:" + item.defName, item.defName,
-                HistoricalChronicleEntryType.AttestedHistory, date, item.label, item.description,
-                item.regionId, item.polityId, item.evidenceLevel, item.sourceNotes, item.category, item.scope, visible))
+                type, date, item.label, item.description,
+                item.regionId, item.polityId, item.evidenceLevel, item.sourceNotes, item.category, item.scope, visible,
+                item.provenance, item.chronologyTradition, knownDate))
                 || Reject("Could not add historical event to the chronicle.", out error);
         }
 
@@ -71,8 +97,18 @@ namespace HistoricalRimWorld.Chronicle
             try { date.Validate(); }
             catch (Exception exception) { return Reject("Invalid date: " + exception.Message, out error); }
             if (!TryGetInitializedComponent(out HistoricalChronicleGameComponent component, out error)) return false;
-            return component.AddEntry(CreateEntry(entryId, sourceEventId, HistoricalChronicleEntryType.AttestedHistory,
-                date, titleKey, descriptionKey, regionId, polityId, evidence, sourceNotes, category, scope, visible))
+            HistoricalEventDef source = string.IsNullOrWhiteSpace(sourceEventId)
+                ? null : DefDatabase<HistoricalEventDef>.GetNamedSilentFail(sourceEventId);
+            HistoricalEventProvenance provenance = source?.provenance ?? HistoricalEventProvenance.AttestedHistoricalEvent;
+            HistoricalChronicleEntryType type = provenance == HistoricalEventProvenance.HistoricalReconstruction
+                ? HistoricalChronicleEntryType.HistoricalReconstruction
+                : provenance == HistoricalEventProvenance.HistoricalContextSimulation
+                    ? HistoricalChronicleEntryType.HistoricalContext : HistoricalChronicleEntryType.AttestedHistory;
+            return component.AddEntry(CreateEntry(entryId, sourceEventId, type,
+                date, titleKey, descriptionKey, regionId, polityId, evidence, sourceNotes, category, scope, visible,
+                provenance, source?.chronologyTradition ?? HistoricalChronologyTradition.TraditionalReceivedChronology,
+                visible && HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate learnedOn)
+                    ? new HistoricalDateReference(learnedOn.AstronomicalYear, learnedOn.Month, learnedOn.Day, HistoricalDatePrecision.Day) : null))
                 || Reject("Could not add historical chronicle entry.", out error);
         }
 
@@ -86,8 +122,24 @@ namespace HistoricalRimWorld.Chronicle
                     || string.IsNullOrWhiteSpace(entry.RegionId)) continue;
                 HistoricalRegionAccess access;
                 if (HistoricalWorldRevealManager.TryGetRegionAccess(entry.RegionId, out access)
-                    && access == HistoricalRegionAccess.Revealed) entry.SetVisible(true);
+                    && access == HistoricalRegionAccess.Revealed
+                    && HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate date))
+                    entry.SetVisible(true, new HistoricalDateReference(date.AstronomicalYear, date.Month, date.Day, HistoricalDatePrecision.Day));
             }
+        }
+
+        public static bool TryRevealEventToPlayer(string eventId, out string error)
+        {
+            error = null;
+            if (string.IsNullOrWhiteSpace(eventId) || !HistoricalEventManager.WasExecuted(eventId))
+                return Reject("Only a historical event that has already occurred can be revealed.", out error);
+            if (!HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate today))
+                return Reject("The historical calendar is inactive.", out error);
+            HistoricalChronicleEntry entry = Entries.FirstOrDefault(item => item != null && item.SourceEventId == eventId);
+            if (entry == null) return Reject("The historical event has no chronicle record.", out error);
+            if (entry.VisibleToPlayer) return true;
+            entry.SetVisible(true, new HistoricalDateReference(today.AstronomicalYear, today.Month, today.Day, HistoricalDatePrecision.Day));
+            return true;
         }
 
         public static bool IsKnownRegion(string regionId)
@@ -100,10 +152,13 @@ namespace HistoricalRimWorld.Chronicle
         private static HistoricalChronicleEntry CreateEntry(string id, string sourceEventId,
             HistoricalChronicleEntryType type, HistoricalDateReference date, string title, string description,
             string region, string polity, HistoricalEvidenceLevel evidence, string sources,
-            HistoricalEventCategory category, HistoricalEventScope scope, bool visible)
+            HistoricalEventCategory category, HistoricalEventScope scope, bool visible,
+            HistoricalEventProvenance provenance = HistoricalEventProvenance.AttestedHistoricalEvent,
+            HistoricalChronologyTradition tradition = HistoricalChronologyTradition.TraditionalReceivedChronology,
+            HistoricalDateReference knownDate = null)
         {
             HistoricalChronicleEntry entry = new HistoricalChronicleEntry();
-            entry.Initialize(id, sourceEventId, type, date, title, description, region, polity, evidence, sources, category, scope, visible);
+            entry.Initialize(id, sourceEventId, type, date, title, description, region, polity, evidence, sources, category, scope, visible, provenance, tradition, knownDate ?? (visible ? date : null));
             return entry;
         }
 

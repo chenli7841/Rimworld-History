@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_HRE_001_Label>Refugee family arrives</HR_HRE_001_Label>
+  <HR_HRE_001_Description>A displaced household asks for shelter. Accepting adds one generated colonist; no kinship is inferred.</HR_HRE_001_Description>
+  <HR_HRE_001_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_001_Trigger>
+  <HR_HRE_001_C1_Label>Accept or act</HR_HRE_001_C1_Label>
+  <HR_HRE_001_C1_Description>See the consequence below.</HR_HRE_001_C1_Description>
+  <HR_HRE_001_C2_Label>Negotiate</HR_HRE_001_C2_Label>
+  <HR_HRE_001_C2_Description>See the consequence below.</HR_HRE_001_C2_Description>
+  <HR_HRE_001_C3_Label>Decline or leave</HR_HRE_001_C3_Label>
+  <HR_HRE_001_C3_Description>See the consequence below.</HR_HRE_001_C3_Description>
+  <HR_HRE_002_Label>Displaced farmers seek work</HR_HRE_002_Label>
+  <HR_HRE_002_Description>Hiring adds one generated colonist; grain aid consumes real rice.</HR_HRE_002_Description>
+  <HR_HRE_002_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_002_Trigger>
+  <HR_HRE_002_C1_Label>Accept or act</HR_HRE_002_C1_Label>
+  <HR_HRE_002_C1_Description>See the consequence below.</HR_HRE_002_C1_Description>
+  <HR_HRE_002_C2_Label>Negotiate</HR_HRE_002_C2_Label>
+  <HR_HRE_002_C2_Description>See the consequence below.</HR_HRE_002_C2_Description>
+  <HR_HRE_002_C3_Label>Decline or leave</HR_HRE_002_C3_Label>
+  <HR_HRE_002_C3_Description>See the consequence below.</HR_HRE_002_C3_Description>
+  <HR_HRE_003_Label>Royal retinue passes nearby</HR_HRE_003_Label>
+  <HR_HRE_003_Description>A retinue claims to carry a court message. The visit is a fictional local incident.</HR_HRE_003_Description>
+  <HR_HRE_003_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_003_Trigger>
+  <HR_HRE_003_C1_Label>Accept or act</HR_HRE_003_C1_Label>
+  <HR_HRE_003_C1_Description>See the consequence below.</HR_HRE_003_C1_Description>
+  <HR_HRE_003_C2_Label>Negotiate</HR_HRE_003_C2_Label>
+  <HR_HRE_003_C2_Description>See the consequence below.</HR_HRE_003_C2_Description>
+  <HR_HRE_003_C3_Label>Decline or leave</HR_HRE_003_C3_Label>
+  <HR_HRE_003_C3_Description>See the consequence below.</HR_HRE_003_C3_Description>
+  <HR_HRE_004_Label>Demand for grain</HR_HRE_004_Label>
+  <HR_HRE_004_Description>A local official asks for grain. Payment consumes rice; refusal can change registered community posture.</HR_HRE_004_Description>
+  <HR_HRE_004_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_004_Trigger>
+  <HR_HRE_004_C1_Label>Accept or act</HR_HRE_004_C1_Label>
+  <HR_HRE_004_C1_Description>See the consequence below.</HR_HRE_004_C1_Description>
+  <HR_HRE_004_C2_Label>Negotiate</HR_HRE_004_C2_Label>
+  <HR_HRE_004_C2_Description>See the consequence below.</HR_HRE_004_C2_Description>
+  <HR_HRE_004_C3_Label>Decline or leave</HR_HRE_004_C3_Label>
+  <HR_HRE_004_C3_Description>See the consequence below.</HR_HRE_004_C3_Description>
+  <HR_HRE_005_Label>Field boundary dispute</HR_HRE_005_Label>
+  <HR_HRE_005_Description>Two households dispute a field boundary. Food compensation consumes stored rice.</HR_HRE_005_Description>
+  <HR_HRE_005_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_005_Trigger>
+  <HR_HRE_005_C1_Label>Accept or act</HR_HRE_005_C1_Label>
+  <HR_HRE_005_C1_Description>See the consequence below.</HR_HRE_005_C1_Description>
+  <HR_HRE_005_C2_Label>Negotiate</HR_HRE_005_C2_Label>
+  <HR_HRE_005_C2_Description>See the consequence below.</HR_HRE_005_C2_Description>
+  <HR_HRE_005_C3_Label>Decline or leave</HR_HRE_005_C3_Label>
+  <HR_HRE_005_C3_Description>See the consequence below.</HR_HRE_005_C3_Description>
+  <HR_HRE_006_Label>Dispute over water access</HR_HRE_006_Label>
+  <HR_HRE_006_Description>Households dispute access to water. Compensation consumes stored rice.</HR_HRE_006_Description>
+  <HR_HRE_006_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_006_Trigger>
+  <HR_HRE_006_C1_Label>Accept or act</HR_HRE_006_C1_Label>
+  <HR_HRE_006_C1_Description>See the consequence below.</HR_HRE_006_C1_Description>
+  <HR_HRE_006_C2_Label>Negotiate</HR_HRE_006_C2_Label>
+  <HR_HRE_006_C2_Description>See the consequence below.</HR_HRE_006_C2_Description>
+  <HR_HRE_006_C3_Label>Decline or leave</HR_HRE_006_C3_Label>
+  <HR_HRE_006_C3_Description>See the consequence below.</HR_HRE_006_C3_Description>
+  <HR_HRE_007_Label>Granary damage</HR_HRE_007_Label>
+  <HR_HRE_007_Description>Repair costs rice; salvaging adds rice to colony stock.</HR_HRE_007_Description>
+  <HR_HRE_007_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_007_Trigger>
+  <HR_HRE_007_C1_Label>Accept or act</HR_HRE_007_C1_Label>
+  <HR_HRE_007_C1_Description>See the consequence below.</HR_HRE_007_C1_Description>
+  <HR_HRE_007_C2_Label>Negotiate</HR_HRE_007_C2_Label>
+  <HR_HRE_007_C2_Description>See the consequence below.</HR_HRE_007_C2_Description>
+  <HR_HRE_007_C3_Label>Decline or leave</HR_HRE_007_C3_Label>
+  <HR_HRE_007_C3_Description>See the consequence below.</HR_HRE_007_C3_Description>
+  <HR_HRE_008_Label>Potter seeks a place to settle</HR_HRE_008_Label>
+  <HR_HRE_008_Description>Accepting adds an ordinary colonist, not a guaranteed skilled crafter.</HR_HRE_008_Description>
+  <HR_HRE_008_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_008_Trigger>
+  <HR_HRE_008_C1_Label>Accept or act</HR_HRE_008_C1_Label>
+  <HR_HRE_008_C1_Description>See the consequence below.</HR_HRE_008_C1_Description>
+  <HR_HRE_008_C2_Label>Negotiate</HR_HRE_008_C2_Label>
+  <HR_HRE_008_C2_Description>See the consequence below.</HR_HRE_008_C2_Description>
+  <HR_HRE_008_C3_Label>Decline or leave</HR_HRE_008_C3_Label>
+  <HR_HRE_008_C3_Description>See the consequence below.</HR_HRE_008_C3_Description>
+  <HR_HRE_009_Label>Bronze smith offers services</HR_HRE_009_Label>
+  <HR_HRE_009_Description>Hiring adds an ordinary colonist; it does not unlock a recipe or technology.</HR_HRE_009_Description>
+  <HR_HRE_009_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_009_Trigger>
+  <HR_HRE_009_C1_Label>Accept or act</HR_HRE_009_C1_Label>
+  <HR_HRE_009_C1_Description>See the consequence below.</HR_HRE_009_C1_Description>
+  <HR_HRE_009_C2_Label>Negotiate</HR_HRE_009_C2_Label>
+  <HR_HRE_009_C2_Description>See the consequence below.</HR_HRE_009_C2_Description>
+  <HR_HRE_009_C3_Label>Decline or leave</HR_HRE_009_C3_Label>
+  <HR_HRE_009_C3_Description>See the consequence below.</HR_HRE_009_C3_Description>
+  <HR_HRE_010_Label>Tin trader passes through</HR_HRE_010_Label>
+  <HR_HRE_010_Description>The encounter is recorded without inventing a tin item or recipe.</HR_HRE_010_Description>
+  <HR_HRE_010_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_010_Trigger>
+  <HR_HRE_010_C1_Label>Accept or act</HR_HRE_010_C1_Label>
+  <HR_HRE_010_C1_Description>See the consequence below.</HR_HRE_010_C1_Description>
+  <HR_HRE_010_C2_Label>Negotiate</HR_HRE_010_C2_Label>
+  <HR_HRE_010_C2_Description>See the consequence below.</HR_HRE_010_C2_Description>
+  <HR_HRE_010_C3_Label>Decline or leave</HR_HRE_010_C3_Label>
+  <HR_HRE_010_C3_Description>See the consequence below.</HR_HRE_010_C3_Description>
+  <HR_HRE_011_Label>Carpenter proposes cart work</HR_HRE_011_Label>
+  <HR_HRE_011_Description>Hiring adds an ordinary colonist; supplied timber is consumed.</HR_HRE_011_Description>
+  <HR_HRE_011_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_011_Trigger>
+  <HR_HRE_011_C1_Label>Accept or act</HR_HRE_011_C1_Label>
+  <HR_HRE_011_C1_Description>See the consequence below.</HR_HRE_011_C1_Description>
+  <HR_HRE_011_C2_Label>Negotiate</HR_HRE_011_C2_Label>
+  <HR_HRE_011_C2_Description>See the consequence below.</HR_HRE_011_C2_Description>
+  <HR_HRE_011_C3_Label>Decline or leave</HR_HRE_011_C3_Label>
+  <HR_HRE_011_C3_Description>See the consequence below.</HR_HRE_011_C3_Description>
+  <HR_HRE_012_Label>Dispute over an inherited vessel</HR_HRE_012_Label>
+  <HR_HRE_012_Description>The event records mediation without creating or transferring a unique relic.</HR_HRE_012_Description>
+  <HR_HRE_012_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_012_Trigger>
+  <HR_HRE_012_C1_Label>Accept or act</HR_HRE_012_C1_Label>
+  <HR_HRE_012_C1_Description>See the consequence below.</HR_HRE_012_C1_Description>
+  <HR_HRE_012_C2_Label>Negotiate</HR_HRE_012_C2_Label>
+  <HR_HRE_012_C2_Description>See the consequence below.</HR_HRE_012_C2_Description>
+  <HR_HRE_012_C3_Label>Decline or leave</HR_HRE_012_C3_Label>
+  <HR_HRE_012_C3_Description>See the consequence below.</HR_HRE_012_C3_Description>
+  <HR_HRE_013_Label>Inscription interpretation</HR_HRE_013_Label>
+  <HR_HRE_013_Description>The choice is recorded as local experience, not as a new historical fact.</HR_HRE_013_Description>
+  <HR_HRE_013_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_013_Trigger>
+  <HR_HRE_013_C1_Label>Accept or act</HR_HRE_013_C1_Label>
+  <HR_HRE_013_C1_Description>See the consequence below.</HR_HRE_013_C1_Description>
+  <HR_HRE_013_C2_Label>Negotiate</HR_HRE_013_C2_Label>
+  <HR_HRE_013_C2_Description>See the consequence below.</HR_HRE_013_C2_Description>
+  <HR_HRE_013_C3_Label>Decline or leave</HR_HRE_013_C3_Label>
+  <HR_HRE_013_C3_Description>See the consequence below.</HR_HRE_013_C3_Description>
+  <HR_HRE_014_Label>A foreign family requests a rite</HR_HRE_014_Label>
+  <HR_HRE_014_Description>Hospitality consumes rice; the permitted gathering increases local familiarity with Zhou ritual culture.</HR_HRE_014_Description>
+  <HR_HRE_014_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_014_Trigger>
+  <HR_HRE_014_C1_Label>Accept or act</HR_HRE_014_C1_Label>
+  <HR_HRE_014_C1_Description>See the consequence below.</HR_HRE_014_C1_Description>
+  <HR_HRE_014_C2_Label>Negotiate</HR_HRE_014_C2_Label>
+  <HR_HRE_014_C2_Description>See the consequence below.</HR_HRE_014_C2_Description>
+  <HR_HRE_014_C3_Label>Decline or leave</HR_HRE_014_C3_Label>
+  <HR_HRE_014_C3_Description>See the consequence below.</HR_HRE_014_C3_Description>
+  <HR_HRE_015_Label>Marriage proposal</HR_HRE_015_Label>
+  <HR_HRE_015_Description>Disabled until HR-007 relationship validation can persist a real marriage.</HR_HRE_015_Description>
+  <HR_HRE_015_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_015_Trigger>
+  <HR_HRE_015_C1_Label>Accept or act</HR_HRE_015_C1_Label>
+  <HR_HRE_015_C1_Description>See the consequence below.</HR_HRE_015_C1_Description>
+  <HR_HRE_015_C2_Label>Negotiate</HR_HRE_015_C2_Label>
+  <HR_HRE_015_C2_Description>See the consequence below.</HR_HRE_015_C2_Description>
+  <HR_HRE_015_C3_Label>Decline or leave</HR_HRE_015_C3_Label>
+  <HR_HRE_015_C3_Description>See the consequence below.</HR_HRE_015_C3_Description>
+  <HR_HRE_016_Label>A distant relative returns</HR_HRE_016_Label>
+  <HR_HRE_016_Description>Disabled until HR-007 can verify kinship; no false family link is created.</HR_HRE_016_Description>
+  <HR_HRE_016_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_016_Trigger>
+  <HR_HRE_016_C1_Label>Accept or act</HR_HRE_016_C1_Label>
+  <HR_HRE_016_C1_Description>See the consequence below.</HR_HRE_016_C1_Description>
+  <HR_HRE_016_C2_Label>Negotiate</HR_HRE_016_C2_Label>
+  <HR_HRE_016_C2_Description>See the consequence below.</HR_HRE_016_C2_Description>
+  <HR_HRE_016_C3_Label>Decline or leave</HR_HRE_016_C3_Label>
+  <HR_HRE_016_C3_Description>See the consequence below.</HR_HRE_016_C3_Description>
+  <HR_HRE_017_Label>Bandits demand grain</HR_HRE_017_Label>
+  <HR_HRE_017_Description>Paying consumes rice; refusal records an autonomous posture when politics is initialized.</HR_HRE_017_Description>
+  <HR_HRE_017_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_017_Trigger>
+  <HR_HRE_017_C1_Label>Accept or act</HR_HRE_017_C1_Label>
+  <HR_HRE_017_C1_Description>See the consequence below.</HR_HRE_017_C1_Description>
+  <HR_HRE_017_C2_Label>Negotiate</HR_HRE_017_C2_Label>
+  <HR_HRE_017_C2_Description>See the consequence below.</HR_HRE_017_C2_Description>
+  <HR_HRE_017_C3_Label>Decline or leave</HR_HRE_017_C3_Label>
+  <HR_HRE_017_C3_Description>See the consequence below.</HR_HRE_017_C3_Description>
+  <HR_HRE_018_Label>Wounded traveler</HR_HRE_018_Label>
+  <HR_HRE_018_Description>Medical aid consumes herbal medicine; food aid consumes rice.</HR_HRE_018_Description>
+  <HR_HRE_018_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_018_Trigger>
+  <HR_HRE_018_C1_Label>Accept or act</HR_HRE_018_C1_Label>
+  <HR_HRE_018_C1_Description>See the consequence below.</HR_HRE_018_C1_Description>
+  <HR_HRE_018_C2_Label>Negotiate</HR_HRE_018_C2_Label>
+  <HR_HRE_018_C2_Description>See the consequence below.</HR_HRE_018_C2_Description>
+  <HR_HRE_018_C3_Label>Decline or leave</HR_HRE_018_C3_Label>
+  <HR_HRE_018_C3_Description>See the consequence below.</HR_HRE_018_C3_Description>
+  <HR_HRE_019_Label>Merchant reports Zhou news</HR_HRE_019_Label>
+  <HR_HRE_019_Description>The report appears only after the related historical event; no future event is revealed.</HR_HRE_019_Description>
+  <HR_HRE_019_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_019_Trigger>
+  <HR_HRE_019_C1_Label>Accept or act</HR_HRE_019_C1_Label>
+  <HR_HRE_019_C1_Description>See the consequence below.</HR_HRE_019_C1_Description>
+  <HR_HRE_019_C2_Label>Negotiate</HR_HRE_019_C2_Label>
+  <HR_HRE_019_C2_Description>See the consequence below.</HR_HRE_019_C2_Description>
+  <HR_HRE_019_C3_Label>Decline or leave</HR_HRE_019_C3_Label>
+  <HR_HRE_019_C3_Description>See the consequence below.</HR_HRE_019_C3_Description>
+  <HR_HRE_020_Label>Family prepares to migrate</HR_HRE_020_Label>
+  <HR_HRE_020_Description>Disabled until a reliable cross-system migration operation exists.</HR_HRE_020_Description>
+  <HR_HRE_020_Trigger>Offered when the map and any listed resource or system requirements are met.</HR_HRE_020_Trigger>
+  <HR_HRE_020_C1_Label>Accept or act</HR_HRE_020_C1_Label>
+  <HR_HRE_020_C1_Description>See the consequence below.</HR_HRE_020_C1_Description>
+  <HR_HRE_020_C2_Label>Negotiate</HR_HRE_020_C2_Label>
+  <HR_HRE_020_C2_Description>See the consequence below.</HR_HRE_020_C2_Description>
+  <HR_HRE_020_C3_Label>Decline or leave</HR_HRE_020_C3_Label>
+  <HR_HRE_020_C3_Description>See the consequence below.</HR_HRE_020_C3_Description>
+  <HR_HRE_FictionSource>HR-011G fictional local scenario based on historical context; not an attested occurrence.</HR_HRE_FictionSource>
+  <HR_LocalEvent_Available>A local matter awaits a decision. Open the Local Events tab.</HR_LocalEvent_Available>
+  <HR_LocalEvents_Title>Local Events and Stories</HR_LocalEvents_Title>
+  <HR_LocalEvents_MainTabLabel>Local Events</HR_LocalEvents_MainTabLabel>
+  <HR_LocalEvents_MainTabDescription>Review and resolve local historical events.</HR_LocalEvents_MainTabDescription>
+  <HR_LocalEvents_Inactive>No active historical scenario.</HR_LocalEvents_Inactive>
+  <HR_LocalEvents_None>No local event is awaiting a decision.</HR_LocalEvents_None>
+  <HR_LocalEvents_Next>Current year: {0} BCE. Next local-event check in {1} historical days.</HR_LocalEvents_Next>
+  <HR_LocalEvents_Stories>Continuing storylines</HR_LocalEvents_Stories>
+  <HR_LocalEvents_StoryProgress>{0}: stage {1}</HR_LocalEvents_StoryProgress>
+  <HR_LocalEvents_StoryEnded>{0}: ended at stage {1} ({2})</HR_LocalEvents_StoryEnded>
+  <HR_LocalOutcome_Gain>Gain {0}</HR_LocalOutcome_Gain>
+  <HR_LocalOutcome_Spend>Spend {0}</HR_LocalOutcome_Spend>
+  <HR_LocalOutcome_Colonist>One generated colonist joins the colony.</HR_LocalOutcome_Colonist>
+  <HR_LocalOutcome_Posture>Community posture becomes {0}.</HR_LocalOutcome_Posture>
+  <HR_LocalOutcome_Reveal>Learn about a region.</HR_LocalOutcome_Reveal>
+  <HR_LocalOutcome_Chronicle>Record this as local experience.</HR_LocalOutcome_Chronicle>
+  <HR_Context_SectionTitle>Historical context active in this period</HR_Context_SectionTitle>
+  <HR_Context_Period>c. {0}–{1} BCE · {2}</HR_Context_Period>
+  <HR_LocalOutcome_Culture>Increase familiarity with {0} in the community.</HR_LocalOutcome_Culture>
+  <HR_LocalOutcome_CreateRelic>Craft and register a unique family relic.</HR_LocalOutcome_CreateRelic>
+  <HR_LocalOutcome_InheritRelic>Transfer the relic to a recorded living descendant.</HR_LocalOutcome_InheritRelic>
+  <HR_LocalOutcome_Technology>Adopt locally accessible technology: {0}.</HR_LocalOutcome_Technology>
+  <HR_LocalOutcome_RevealHistory>Record an already occurred event as learned today.</HR_LocalOutcome_RevealHistory>
+  <HR_LocalOutcome_Marriage>Form a spouse relationship between eligible adult colonists.</HR_LocalOutcome_Marriage>
+  <HR_LocalChoice_Unavailable>Unavailable:</HR_LocalChoice_Unavailable>
+  <HR_LocalEvents_StoryStage>Active story chain: {0}</HR_LocalEvents_StoryStage>
+  <HR_Story_Stage_Title>Story milestone recorded</HR_Story_Stage_Title>
+  <HR_Story_Stage_Description>A player-led family or community story advanced after an observed event or milestone.</HR_Story_Stage_Description>
+  <HR_Storyline_HR_Storyline_HRC001>Life after the eastward migration</HR_Storyline_HR_Storyline_HRC001>
+  <HR_Storyline_HR_Storyline_HRC002>Land and grain in Zheng</HR_Storyline_HR_Storyline_HRC002>
+  <HR_Storyline_HR_Storyline_HRC003>The bronze artisan's craft</HR_Storyline_HR_Storyline_HRC003>
+  <HR_Storyline_HR_Storyline_HRC004>News from Luoyi</HR_Storyline_HR_Storyline_HRC004>
+  <HR_Storyline_HR_Storyline_HRC005>Three decades of a family</HR_Storyline_HR_Storyline_HRC005>
+</LanguageData>

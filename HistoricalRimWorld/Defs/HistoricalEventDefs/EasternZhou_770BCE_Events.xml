@@ -16,6 +16,8 @@
     <visibility>Public</visibility>
     <notificationPolicy>ChronicleOnly</notificationPolicy>
     <evidenceLevel>Probable</evidenceLevel>
+    <provenance>AttestedHistoricalEvent</provenance>
+    <chronologyTradition>TraditionalReceivedChronology</chronologyTradition>
     <sourceNotes>HR_Event_WesternZhouCrisis_771BCE_SourceNotes</sourceNotes>
   </HistoricalRimWorld.Events.HistoricalEventDef>
 
@@ -37,28 +39,45 @@
     <visibility>Public</visibility>
     <notificationPolicy>ChronicleOnly</notificationPolicy>
     <evidenceLevel>Probable</evidenceLevel>
+    <provenance>HistoricalReconstruction</provenance>
+    <chronologyTradition>TraditionalReceivedChronology</chronologyTradition>
     <sourceNotes>HR_Event_ZhouEasternMigration_770BCE_SourceNotes</sourceNotes>
   </HistoricalRimWorld.Events.HistoricalEventDef>
 
   <HistoricalRimWorld.Events.HistoricalEventDef>
-    <defName>HR_Event_ZhengDukeZhuangAccession_743BCE</defName>
-    <label>HR_Event_ZhengDukeZhuangAccession_743BCE_Label</label>
-    <description>HR_Event_ZhengDukeZhuangAccession_743BCE_Description</description>
+    <defName>HR_Event_QinXiangRecognition_770BCE</defName>
+    <label>HR_Event_QinXiangRecognition_770BCE_Label</label>
+    <description>HR_Event_QinXiangRecognition_770BCE_Description</description>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
-    <historicalDate>
-      <astronomicalYear>-742</astronomicalYear>
-      <precision>Year</precision>
-    </historicalDate>
-    <category>Political</category>
-    <scope>World</scope>
-    <regionId>HR_Region_ZhengHeartland</regionId>
-    <polityId>HR_State_Zheng</polityId>
-    <priority>100</priority>
-    <activationMode>Scheduled</activationMode>
-    <visibility>Public</visibility>
-    <notificationPolicy>ChronicleOnly</notificationPolicy>
-    <evidenceLevel>Disputed</evidenceLevel>
-    <sourceNotes>HR_Event_ZhengDukeZhuangAccession_743BCE_SourceNotes</sourceNotes>
+    <historicalDate><astronomicalYear>-769</astronomicalYear><precision>Year</precision></historicalDate>
+    <category>Political</category><scope>World</scope><regionId>HR_Region_Guanzhong</regionId><polityId>HR_State_Qin</polityId>
+    <activationMode>InitialBackground</activationMode><visibility>Public</visibility><notificationPolicy>ChronicleOnly</notificationPolicy>
+    <evidenceLevel>Probable</evidenceLevel><provenance>HistoricalReconstruction</provenance><chronologyTradition>TraditionalReceivedChronology</chronologyTradition>
+    <sourceNotes>HR_Event_QinXiangRecognition_770BCE_SourceNotes</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalEventDef>
+
+  <HistoricalRimWorld.Events.HistoricalEventDef>
+    <defName>HR_Event_XieKingDeath_750BCE</defName>
+    <label>HR_Event_XieKingDeath_750BCE_Label</label>
+    <description>HR_Event_XieKingDeath_750BCE_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <historicalDate><astronomicalYear>-749</astronomicalYear><precision>Year</precision></historicalDate>
+    <category>Political</category><scope>World</scope><regionId>HR_Region_Luoyi</regionId><polityId>HR_State_EasternZhou</polityId>
+    <activationMode>Scheduled</activationMode><visibility>Hidden</visibility><notificationPolicy>ChronicleOnly</notificationPolicy>
+    <evidenceLevel>Disputed</evidenceLevel><provenance>HistoricalReconstruction</provenance><chronologyTradition>TraditionalReceivedChronology</chronologyTradition>
+    <sourceNotes>HR_Event_XieKingDeath_750BCE_SourceNotes</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalEventDef>
+
+  <HistoricalRimWorld.Events.HistoricalEventDef>
+    <defName>HR_Event_JinQuwoEnfeoffment_745BCE</defName>
+    <label>HR_Event_JinQuwoEnfeoffment_745BCE_Label</label>
+    <description>HR_Event_JinQuwoEnfeoffment_745BCE_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <historicalDate><astronomicalYear>-744</astronomicalYear><precision>Year</precision></historicalDate>
+    <category>Political</category><scope>World</scope><regionId>HR_Region_Hedong</regionId><polityId>HR_State_Jin</polityId>
+    <activationMode>Scheduled</activationMode><visibility>Public</visibility><notificationPolicy>ChronicleOnly</notificationPolicy>
+    <evidenceLevel>Probable</evidenceLevel><provenance>AttestedHistoricalEvent</provenance><chronologyTradition>TraditionalReceivedChronology</chronologyTradition>
+    <sourceNotes>HR_Event_JinQuwoEnfeoffment_745BCE_SourceNotes</sourceNotes>
   </HistoricalRimWorld.Events.HistoricalEventDef>
 
   <HistoricalRimWorld.Events.HistoricalEventDef>

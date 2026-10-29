@@ -182,10 +182,21 @@
   <HR_Chronicle_Untitled>Untitled chronicle entry</HR_Chronicle_Untitled>
   <HR_Chronicle_NoDescription>No description is available.</HR_Chronicle_NoDescription>
   <HR_Chronicle_NoSource>Source not specified</HR_Chronicle_NoSource>
-  <HR_Chronicle_Metadata>{0} · Evidence: {1} · Source: {2}</HR_Chronicle_Metadata>
+  <HR_Chronicle_Metadata>{0} · Evidence: {1} · Type: {2} · Chronology: {3} · Source: {4}</HR_Chronicle_Metadata>
+  <HR_Chronicle_OccurredAndLearned>Occurred: {0} · learned: {1}</HR_Chronicle_OccurredAndLearned>
+  <HR_Chronicle_UnknownLearnedDate>not yet known</HR_Chronicle_UnknownLearnedDate>
   <HR_Chronicle_Type_AttestedHistory>Attested history</HR_Chronicle_Type_AttestedHistory>
   <HR_Chronicle_Type_LocalExperience>Local experience</HR_Chronicle_Type_LocalExperience>
   <HR_Chronicle_Type_InferredLegacy>Inferred legacy</HR_Chronicle_Type_InferredLegacy>
+  <HR_Chronicle_Type_HistoricalReconstruction>Historical reconstruction</HR_Chronicle_Type_HistoricalReconstruction>
+  <HR_Chronicle_Type_HistoricalContext>Historical context</HR_Chronicle_Type_HistoricalContext>
+  <HR_Chronicle_Type_FictionalLocalEvent>Fictional local event</HR_Chronicle_Type_FictionalLocalEvent>
+  <HR_Chronicle_Provenance_AttestedHistoricalEvent>Attested event</HR_Chronicle_Provenance_AttestedHistoricalEvent>
+  <HR_Chronicle_Provenance_HistoricalReconstruction>Historical reconstruction</HR_Chronicle_Provenance_HistoricalReconstruction>
+  <HR_Chronicle_Provenance_HistoricalContextSimulation>Context simulation</HR_Chronicle_Provenance_HistoricalContextSimulation>
+  <HR_Chronicle_Provenance_FictionalLocalEvent>Fictional local</HR_Chronicle_Provenance_FictionalLocalEvent>
+  <HR_Chronicle_Chronology_TraditionalReceivedChronology>Received chronology</HR_Chronicle_Chronology_TraditionalReceivedChronology>
+  <HR_Chronicle_Chronology_XinianBasedReconstruction>Xinian-based reconstruction</HR_Chronicle_Chronology_XinianBasedReconstruction>
   <HR_Chronicle_Category_Political>Political</HR_Chronicle_Category_Political>
   <HR_Chronicle_Category_Military>Military</HR_Chronicle_Category_Military>
   <HR_Chronicle_Category_Diplomatic>Diplomatic</HR_Chronicle_Category_Diplomatic>
@@ -255,4 +266,40 @@
   <HR_Genealogy_DeathCause_Other>Other</HR_Genealogy_DeathCause_Other>
   <HR_Genealogy_DeathCause_Unknown>Unknown</HR_Genealogy_DeathCause_Unknown>
   <HR_Genealogy_Source>Historical RimWorld genealogy simulation</HR_Genealogy_Source>
+  <HR_Event_QinXiangRecognition_770BCE_Label>Qin Xiang receives Zhou recognition</HR_Event_QinXiangRecognition_770BCE_Label>
+  <HR_Event_QinXiangRecognition_770BCE_Description>Traditional accounts say Lord Xiang of Qin aided King Ping's eastward move and received recognition as a regional lord. This does not establish that Qin had conquered all western lands.</HR_Event_QinXiangRecognition_770BCE_Description>
+  <HR_Event_QinXiangRecognition_770BCE_SourceNotes>Shiji, Qin Benji; compare Pengcheng Zhang, “The Chronology of Western Zhou,” Early China 46 (2023), section “The Chronology of Qin”. The event is a chronicle entry only.</HR_Event_QinXiangRecognition_770BCE_SourceNotes>
+  <HR_Event_XieKingDeath_750BCE_Label>Death of King Hui of Xie (disputed date)</HR_Event_XieKingDeath_750BCE_Label>
+  <HR_Event_XieKingDeath_750BCE_Description>A traditional reconstruction places the rival Zhou ruler's death around 750 BCE. The chronology is contested; this chronicle-only entry does not resolve the succession dispute in the world state.</HR_Event_XieKingDeath_750BCE_Description>
+  <HR_Event_XieKingDeath_750BCE_SourceNotes>Chen Minzhen and Yuri Pines, “Where is King Ping? The History and Historiography of the Zhou Dynasty’s Eastward Relocation” (2018); Pengcheng Zhang, “The Chronology of Western Zhou,” Early China 46 (2023), pp. 589–614, proposes a different Xie chronology (779–759 BCE). The date is deliberately year-only and disputed. https://cris.huji.ac.il/en/publications/where-is-king-ping-the-history-and-historiography-of-the-zhou-dyn/ ; https://www.cambridge.org/core/journals/early-china/article/chronology-of-western-zhou/0D661C3365537C0D15AD896F72F9DF70</HR_Event_XieKingDeath_750BCE_SourceNotes>
+  <HR_Event_JinQuwoEnfeoffment_745BCE_Label>Jin grants Quwo to a collateral branch</HR_Event_JinQuwoEnfeoffment_745BCE_Label>
+  <HR_Event_JinQuwoEnfeoffment_745BCE_Description>Jin's Marquis Zhao establishes Chengshi at Quwo, beginning a long-running internal succession conflict. This entry records the chronicle event without simulating a conquest.</HR_Event_JinQuwoEnfeoffment_745BCE_Description>
+  <HR_Event_JinQuwoEnfeoffment_745BCE_SourceNotes>Zuo zhuan, Lord Hui 24 (traditional conversion 745 BCE); Edward L. Shaughnessy, A Brief History of Ancient China (2023), pp. 179–180. Year-only precision. https://api.pageplace.de/preview/DT0400.9780295806730_A30891990/preview-9780295806730_A30891990.pdf</HR_Event_JinQuwoEnfeoffment_745BCE_SourceNotes>
+  <HR_Context_ZhengEasternExpansion_Label>Zheng's eastern expansion</HR_Context_ZhengEasternExpansion_Label>
+  <HR_Context_ZhengEasternExpansion_Description>Long-term political growth toward the eastern plains. Generated local incidents are fictional and do not claim specific conquests.</HR_Context_ZhengEasternExpansion_Description>
+  <HR_Context_ZhengEasternExpansion_Sources>Shiji, Zheng Shijia; Pengcheng Zhang, “The Chronology of Western Zhou,” Early China 46 (2023), section “The Chronology of Zheng.” Background range only; no single event date is asserted.</HR_Context_ZhengEasternExpansion_Sources>
+  <HR_Context_ZhengAndKuai_Label>Zheng, Guo, and Kuai relations</HR_Context_ZhengAndKuai_Label>
+  <HR_Context_ZhengAndKuai_Description>Later accounts associate Zheng's growth with the Guo and Kuai polities, but accounts and chronologies conflict. This is a context for fictional local disputes, not a dated conquest.</HR_Context_ZhengAndKuai_Description>
+  <HR_Context_ZhengAndKuai_Sources>Shiji, Zheng Shijia; Zhang, “The Chronology of Western Zhou,” Early China 46 (2023), notes 135–136 and the Zheng chronology discussion. Competing accounts are retained.</HR_Context_ZhengAndKuai_Sources>
+  <HR_Context_RoyalCourtAtLuoyi_Label>The royal court at Luoyi</HR_Context_RoyalCourtAtLuoyi_Label>
+  <HR_Context_RoyalCourtAtLuoyi_Description>Luoyi is the Zhou court's eastern center in the received narrative. The court's presence may frame fictional messengers and demands; those incidents are not attested.</HR_Context_RoyalCourtAtLuoyi_Description>
+  <HR_Context_RoyalCourtAtLuoyi_Sources>Shiji, Zhou Benji; Zhang, “The Chronology of Western Zhou,” Early China 46 (2023), section “King Ping and King Hui of Xie.”</HR_Context_RoyalCourtAtLuoyi_Sources>
+  <HR_Context_CompetingZhouLegitimacy_Label>Competing Zhou legitimacy</HR_Context_CompetingZhouLegitimacy_Label>
+  <HR_Context_CompetingZhouLegitimacy_Description>Accounts of King Ping and King Hui of Xie describe a contested transition after King You's death. Local reports should remain uncertain and must not reveal future outcomes.</HR_Context_CompetingZhouLegitimacy_Description>
+  <HR_Context_CompetingZhouLegitimacy_Sources>Qinghua University, Xinian, chapter 2; Chen Minzhen and Yuri Pines, “Where is King Ping?” Asia Major 31 (2018); Zhang, “The Chronology of Western Zhou” (2023). Dates and sequence are contested.</HR_Context_CompetingZhouLegitimacy_Sources>
+  <HR_Context_JinSupportForPing_Label>Jin's support for King Ping</HR_Context_JinSupportForPing_Label>
+  <HR_Context_JinSupportForPing_Description>Jin's Marquis Wen appears as an important supporter of King Ping in the Xinian account. This context does not create an unrecorded battle or territorial transfer.</HR_Context_JinSupportForPing_Description>
+  <HR_Context_JinSupportForPing_Sources>Xinian, chapter 2; Zhang, “The Chronology of Western Zhou,” Early China 46 (2023), pp. 589–614.</HR_Context_JinSupportForPing_Sources>
+  <HR_Context_QinWesternDevelopment_Label>Qin's western development</HR_Context_QinWesternDevelopment_Label>
+  <HR_Context_QinWesternDevelopment_Description>Qin consolidates in the western region over time. The scenario does not treat the entire west as already conquered in 770 BCE.</HR_Context_QinWesternDevelopment_Description>
+  <HR_Context_QinWesternDevelopment_Sources>Shiji, Qin Benji; Zhang, “The Chronology of Western Zhou,” Early China 46 (2023), section “The Chronology of Qin.”</HR_Context_QinWesternDevelopment_Sources>
+  <HR_Context_BronzeRitualObjects_Label>Bronze vessels and inscriptions</HR_Context_BronzeRitualObjects_Label>
+  <HR_Context_BronzeRitualObjects_Description>Bronze vessels and their inscriptions provide material and documentary context for elite ritual, political grants, and lineage identity.</HR_Context_BronzeRitualObjects_Description>
+  <HR_Context_BronzeRitualObjects_Sources>Edward L. Shaughnessy, “Western Zhou Archaeology,” Cambridge History of Ancient China; “Sources of Western Zhou History: Inscribed Bronze Vessels,” Society for the Study of Early China. Continuing material context, not a dated occurrence.</HR_Context_BronzeRitualObjects_Sources>
+  <HR_Context_AncestralRituals_Label>Ancestral rites and funerals</HR_Context_AncestralRituals_Label>
+  <HR_Context_AncestralRituals_Description>Lineage rites and funerary practices are represented as social context; no particular village rite is asserted as historical fact.</HR_Context_AncestralRituals_Description>
+  <HR_Context_AncestralRituals_Sources>“Bronze Vessels: Style, Assemblages, and Innovations of the Western Zhou Period,” Oxford Handbook of Early China; Shaughnessy, “Western Zhou Archaeology,” Cambridge History of Ancient China.</HR_Context_AncestralRituals_Sources>
+  <HR_Context_AgricultureAndStorage_Label>Agriculture, settlements, and storage</HR_Context_AgricultureAndStorage_Label>
+  <HR_Context_AgricultureAndStorage_Description>Farming, pottery, settlement life, and storage are recurring material conditions. The game uses them as scenario context without inventing a single-year invention.</HR_Context_AgricultureAndStorage_Description>
+  <HR_Context_AgricultureAndStorage_Sources>Xinyu Ren, Huangtucheng Regional Archaeological Survey (2008), pottery assemblage discussion; archaeological evidence is used as context rather than a dated historical event.</HR_Context_AgricultureAndStorage_Sources>
 </LanguageData>

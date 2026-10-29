@@ -9,10 +9,10 @@ namespace HistoricalRimWorld.Patches.World
     [HarmonyPatch(typeof(RimWorldWorld), "Impassable", typeof(PlanetTile))]
     internal static class WorldImpassableAccessPatch
     {
-        private static bool Prefix(PlanetTile tile, ref bool __result)
+        private static bool Prefix(PlanetTile tileID, ref bool __result)
         {
             if (!HistoricalWorldPatchContext.IsPlayerCaravanPath || !HistoricalWorldRevealManager.IsActive) return true;
-            if (HistoricalWorldRevealManager.IsTileAccessible((int)tile)) return true;
+            if (HistoricalWorldRevealManager.IsTileAccessible((int)tileID)) return true;
             __result = true;
             return false;
         }

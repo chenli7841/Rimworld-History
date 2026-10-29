@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Events.HistoricalContextDef>
+    <defName>HR_Context_ZhengEasternExpansion</defName><label>HR_Context_ZhengEasternExpansion_Label</label><description>HR_Context_ZhengEasternExpansion_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario><fromBceYear>770</fromBceYear><throughBceYear>740</throughBceYear><regionId>HR_Region_ZhengHeartland</regionId><polityId>HR_State_Zheng</polityId><sourceNotes>HR_Context_ZhengEasternExpansion_Sources</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalContextDef>
+  <HistoricalRimWorld.Events.HistoricalContextDef>
+    <defName>HR_Context_ZhengAndKuai</defName><label>HR_Context_ZhengAndKuai_Label</label><description>HR_Context_ZhengAndKuai_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario><fromBceYear>770</fromBceYear><throughBceYear>740</throughBceYear><regionId>HR_Region_ZhengHeartland</regionId><polityId>HR_State_Zheng</polityId><sourceNotes>HR_Context_ZhengAndKuai_Sources</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalContextDef>
+  <HistoricalRimWorld.Events.HistoricalContextDef>
+    <defName>HR_Context_RoyalCourtAtLuoyi</defName><label>HR_Context_RoyalCourtAtLuoyi_Label</label><description>HR_Context_RoyalCourtAtLuoyi_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario><fromBceYear>770</fromBceYear><throughBceYear>740</throughBceYear><regionId>HR_Region_Luoyi</regionId><polityId>HR_State_EasternZhou</polityId><sourceNotes>HR_Context_RoyalCourtAtLuoyi_Sources</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalContextDef>
+  <HistoricalRimWorld.Events.HistoricalContextDef>
+    <defName>HR_Context_CompetingZhouLegitimacy</defName><label>HR_Context_CompetingZhouLegitimacy_Label</label><description>HR_Context_CompetingZhouLegitimacy_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario><fromBceYear>771</fromBceYear><throughBceYear>750</throughBceYear><regionId>HR_Region_Luoyi</regionId><polityId>HR_State_EasternZhou</polityId><sourceNotes>HR_Context_CompetingZhouLegitimacy_Sources</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalContextDef>
+  <HistoricalRimWorld.Events.HistoricalContextDef>
+    <defName>HR_Context_JinSupportForPing</defName><label>HR_Context_JinSupportForPing_Label</label><description>HR_Context_JinSupportForPing_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario><fromBceYear>771</fromBceYear><throughBceYear>740</throughBceYear><regionId>HR_Region_Hedong</regionId><polityId>HR_State_Jin</polityId><sourceNotes>HR_Context_JinSupportForPing_Sources</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalContextDef>
+  <HistoricalRimWorld.Events.HistoricalContextDef>
+    <defName>HR_Context_QinWesternDevelopment</defName><label>HR_Context_QinWesternDevelopment_Label</label><description>HR_Context_QinWesternDevelopment_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario><fromBceYear>770</fromBceYear><throughBceYear>740</throughBceYear><regionId>HR_Region_Guanzhong</regionId><polityId>HR_State_Qin</polityId><sourceNotes>HR_Context_QinWesternDevelopment_Sources</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalContextDef>
+  <HistoricalRimWorld.Events.HistoricalContextDef>
+    <defName>HR_Context_BronzeRitualObjects</defName><label>HR_Context_BronzeRitualObjects_Label</label><description>HR_Context_BronzeRitualObjects_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario><fromBceYear>770</fromBceYear><throughBceYear>740</throughBceYear><sourceNotes>HR_Context_BronzeRitualObjects_Sources</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalContextDef>
+  <HistoricalRimWorld.Events.HistoricalContextDef>
+    <defName>HR_Context_AncestralRituals</defName><label>HR_Context_AncestralRituals_Label</label><description>HR_Context_AncestralRituals_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario><fromBceYear>770</fromBceYear><throughBceYear>740</throughBceYear><sourceNotes>HR_Context_AncestralRituals_Sources</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalContextDef>
+  <HistoricalRimWorld.Events.HistoricalContextDef>
+    <defName>HR_Context_AgricultureAndStorage</defName><label>HR_Context_AgricultureAndStorage_Label</label><description>HR_Context_AgricultureAndStorage_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario><fromBceYear>770</fromBceYear><throughBceYear>740</throughBceYear><sourceNotes>HR_Context_AgricultureAndStorage_Sources</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalContextDef>
+  <HistoricalRimWorld.Events.HistoricalContextDef>
+    <defName>HR_Context_CraftTransmission</defName><label>HR_Context_CraftTransmission_Label</label><description>HR_Context_CraftTransmission_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario><fromBceYear>770</fromBceYear><throughBceYear>740</throughBceYear><sourceNotes>HR_Context_CraftTransmission_Sources</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalContextDef>
+</Defs>

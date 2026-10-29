@@ -13,6 +13,26 @@ namespace HistoricalRimWorld.Events
     {
         public static IEnumerable<HistoricalEventRuntimeState> States => GetComponent()?.EventStates ?? Enumerable.Empty<HistoricalEventRuntimeState>();
         public static IEnumerable<HistoricalEventStatusChange> StatusChanges => GetComponent()?.StatusChanges ?? Enumerable.Empty<HistoricalEventStatusChange>();
+        public static HistoricalLocalEventDef PendingLocalEvent =>
+            GetComponent()?.PendingLocalEventId == null ? null : DefDatabase<HistoricalLocalEventDef>.GetNamedSilentFail(GetComponent().PendingLocalEventId);
+        public static IEnumerable<HistoricalLocalEventRuntimeRecord> LocalEventRecords => GetComponent()?.LocalEventRecords ?? Enumerable.Empty<HistoricalLocalEventRuntimeRecord>();
+        public static IEnumerable<HistoricalStorylineRuntimeState> StorylineStates => GetComponent()?.StorylineStates ?? Enumerable.Empty<HistoricalStorylineRuntimeState>();
+        public static long NextLocalEventAbsoluteDay => GetComponent()?.NextLocalEventAbsoluteDay ?? 0L;
+        public static string PendingStorylineId => GetComponent()?.PendingStorylineId;
+
+        public static bool TryResolveLocalEventChoice(int choiceIndex, out string error)
+        {
+            HistoricalEventGameComponent component = GetComponent();
+            if (component == null) return Reject("HistoricalEventGameComponent is unavailable.", out error);
+            return component.TryResolveLocalEventChoice(component.PendingLocalEventId, choiceIndex, out error);
+        }
+
+        public static bool CanResolveLocalEventChoice(int choiceIndex, out string error)
+        {
+            HistoricalEventGameComponent component = GetComponent();
+            if (component == null) return Reject("HistoricalEventGameComponent is unavailable.", out error);
+            return component.CanResolveLocalEventChoice(component.PendingLocalEventId, choiceIndex, out error);
+        }
 
         public static bool WasExecuted(string eventId)
         {
@@ -58,9 +78,16 @@ namespace HistoricalRimWorld.Events
             List<HistoricalEventDef> background = new List<HistoricalEventDef>();
             foreach (HistoricalEventDef item in DefDatabase<HistoricalEventDef>.AllDefsListForReading
                 .Where(def => def.scenario != null && def.scenario.defName == scenario.defName)
-                .OrderBy(def => HistoricalEventDateResolver.ResolveScheduledDate(def.historicalDate))
+                .OrderBy(def => def.historicalDate == null ? currentDate : HistoricalEventDateResolver.ResolveScheduledDate(def.historicalDate))
                 .ThenBy(def => def.priority).ThenBy(def => def.defName, StringComparer.Ordinal))
             {
+                if (item.activationMode == HistoricalEventActivationMode.LocalTemplate)
+                {
+                    HistoricalEventRuntimeState templateState = new HistoricalEventRuntimeState();
+                    templateState.Initialize(item.defName, HistoricalEventExecutionStatus.Template, "Interactive template; availability is controlled by the existing HistoricalEventScheduler.");
+                    states.Add(templateState);
+                    continue;
+                }
                 HistoricalDate scheduled = HistoricalEventDateResolver.ResolveScheduledDate(item.historicalDate);
                 HistoricalEventRuntimeState state = new HistoricalEventRuntimeState();
                 if (item.activationMode == HistoricalEventActivationMode.InitialBackground)
@@ -105,6 +132,14 @@ namespace HistoricalRimWorld.Events
             foreach (HistoricalEventDef item in DefDatabase<HistoricalEventDef>.AllDefsListForReading
                 .Where(def => def.scenario != null && def.scenario.defName == scenario.defName))
                 errors.AddRange(HistoricalEventValidator.ValidateDef(item));
+            foreach (HistoricalLocalEventDef item in DefDatabase<HistoricalLocalEventDef>.AllDefsListForReading
+                .Where(def => def.scenario != null && def.scenario.defName == scenario.defName))
+                errors.AddRange(item.ConfigErrors().Select(error => item.defName + ": " + error));
+            errors.AddRange(HistoricalEasternZhouEventValidator.ValidateAll());
+            HistoricalEventDatabaseReport report = HistoricalEventDatabaseReport.Build(scenario);
+            Log.Message("[Historical RimWorld] " + report.Summary);
+            foreach (string warning in report.Warnings) Log.Warning("[Historical RimWorld] HR-011G: " + warning);
+            errors.AddRange(report.Warnings.Where(item => item.Contains("invalid") || item.Contains("Missing") || item.Contains("required")));
             if (errors.Count == 0) return true;
             return Reject(string.Join(Environment.NewLine, errors), out error);
         }

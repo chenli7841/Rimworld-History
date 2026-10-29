@@ -34,7 +34,8 @@ namespace HistoricalRimWorld.UI
             }
 
             List<HistoricalChronicleEntry> allEntries = HistoricalChronicleManager.Entries
-                .Where(item => item != null && item.VisibleToPlayer && item.AbsoluteDay <= currentDate.AbsoluteDay)
+                .Where(item => item != null && item.VisibleToPlayer && item.KnownAbsoluteDay.HasValue
+                    && item.KnownAbsoluteDay.Value <= currentDate.AbsoluteDay)
                 .OrderBy(item => item.AbsoluteDay).ThenBy(item => item.EntryId, StringComparer.Ordinal).ToList();
             List<HistoricalChronicleEntry> entries = ApplyFilters(allEntries);
 
@@ -73,12 +74,15 @@ namespace HistoricalRimWorld.UI
             rows.Begin(viewRect);
             foreach (HistoricalChronicleEntry entry in entries.Skip(page * EntriesPerPage).Take(EntriesPerPage))
             {
-                rows.Label(FormatDate(entry) + "  ·  " + Translator.Translate("HR_Chronicle_Type_" + entry.EntryType));
+                rows.Label(string.Format(Translator.Translate("HR_Chronicle_OccurredAndLearned"), FormatDate(entry), FormatKnownDate(entry))
+                    + "  ·  " + Translator.Translate("HR_Chronicle_Type_" + entry.EntryType));
                 rows.Label(Translator.Translate(entry.TitleKey ?? "HR_Chronicle_Untitled"));
                 rows.Label(Translator.Translate(entry.DescriptionKey ?? "HR_Chronicle_NoDescription"));
                 rows.Label(string.Format(Translator.Translate("HR_Chronicle_Metadata"),
                     Translator.Translate("HR_Chronicle_Category_" + entry.Category),
                     Translator.Translate("HR_Chronicle_Evidence_" + entry.EvidenceLevel),
+                    Translator.Translate("HR_Chronicle_Provenance_" + entry.Provenance),
+                    Translator.Translate("HR_Chronicle_Chronology_" + entry.ChronologyTradition),
                     string.IsNullOrEmpty(entry.SourceNotes) ? Translator.Translate("HR_Chronicle_NoSource") : Translator.Translate(entry.SourceNotes)));
                 rows.GapLine();
             }
@@ -129,6 +133,19 @@ namespace HistoricalRimWorld.UI
                 date += " " + Translator.Translate("HR_Calendar_Month_" + entry.Month.Value);
             if (entry.Precision == HistoricalDatePrecision.Day && entry.Day.HasValue)
                 date += " " + Translator.Translate("HR_Calendar_Day_" + entry.Day.Value);
+            return date;
+        }
+
+        private static string FormatKnownDate(HistoricalChronicleEntry entry)
+        {
+            if (!entry.KnownAstronomicalYear.HasValue) return Translator.Translate("HR_Chronicle_UnknownLearnedDate");
+            HistoricalYearConverter.FromAstronomicalYear(entry.KnownAstronomicalYear.Value, out int year, out bool bce);
+            string era = Translator.Translate(bce ? "HR_Chronicle_BCE" : "HR_Chronicle_CE");
+            string date = string.Format(Translator.Translate("HR_Chronicle_Year"), year, era);
+            if (entry.KnownPrecision >= HistoricalDatePrecision.Month && entry.KnownMonth.HasValue)
+                date += " " + Translator.Translate("HR_Calendar_Month_" + entry.KnownMonth.Value);
+            if (entry.KnownPrecision == HistoricalDatePrecision.Day && entry.KnownDay.HasValue)
+                date += " " + Translator.Translate("HR_Calendar_Day_" + entry.KnownDay.Value);
             return date;
         }
     }

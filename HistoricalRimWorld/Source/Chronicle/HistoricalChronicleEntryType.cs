@@ -4,6 +4,9 @@ namespace HistoricalRimWorld.Chronicle
     {
         AttestedHistory,
         LocalExperience,
-        InferredLegacy
+        InferredLegacy,
+        HistoricalReconstruction,
+        HistoricalContext,
+        FictionalLocalEvent
     }
 }

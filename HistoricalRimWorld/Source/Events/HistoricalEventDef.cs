@@ -17,6 +17,8 @@ namespace HistoricalRimWorld.Events
         public List<HistoricalEventCondition> conditions = new List<HistoricalEventCondition>();
         public List<HistoricalEventAction> actions = new List<HistoricalEventAction>();
         public HistoricalEvidenceLevel evidenceLevel = HistoricalEvidenceLevel.Probable;
+        public HistoricalEventProvenance provenance = HistoricalEventProvenance.AttestedHistoricalEvent;
+        public HistoricalChronologyTradition chronologyTradition = HistoricalChronologyTradition.TraditionalReceivedChronology;
         public HistoricalEventActivationMode activationMode = HistoricalEventActivationMode.Scheduled;
         public HistoricalEventVisibility visibility = HistoricalEventVisibility.Public;
         public HistoricalEventNotificationPolicy notificationPolicy = HistoricalEventNotificationPolicy.ChronicleOnly;

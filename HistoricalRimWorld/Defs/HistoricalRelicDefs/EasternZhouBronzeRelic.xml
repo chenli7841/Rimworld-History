@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Relics.HistoricalRelicDef>
+    <defName>HR_RelicDef_BronzeVessel</defName>
+    <label>HR_RelicDef_BronzeVessel_Label</label>
+    <category>Vessel</category>
+    <baseThingDef>HR_Relic_BronzeVessel</baseThingDef>
+    <associatedCultures>
+      <li>HR_Culture_ZhouCentralPlains</li>
+    </associatedCultures>
+    <evidenceLevel>Speculative</evidenceLevel>
+    <historicalDescription>HR_RelicDef_BronzeVessel_Description</historicalDescription>
+    <sourceNotes>Gameplay-generated fictional family object. This Def does not claim a specific archaeological object, inscription, or maker.</sourceNotes>
+  </HistoricalRimWorld.Relics.HistoricalRelicDef>
+</Defs>

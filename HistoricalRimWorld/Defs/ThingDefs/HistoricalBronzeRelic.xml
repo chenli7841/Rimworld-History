@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>HR_Relic_BronzeVessel</defName>
+    <label>HR_Relic_BronzeVessel_Label</label>
+    <description>HR_Relic_BronzeVessel_Description</description>
+    <stackLimit>1</stackLimit>
+    <graphicData>
+      <texPath>Things/Item/Resource/Steel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(170,115,65)</color>
+    </graphicData>
+    <comps>
+      <li Class="HistoricalRimWorld.Relics.CompProperties_HistoricalRelic" />
+    </comps>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension">
+        <requiredTechnology>HR_Tech_BronzeCasting</requiredTechnology>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

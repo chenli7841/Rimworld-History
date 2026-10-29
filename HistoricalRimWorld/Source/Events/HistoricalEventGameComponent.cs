@@ -10,7 +10,7 @@ namespace HistoricalRimWorld.Events
 {
     public sealed class HistoricalEventGameComponent : GameComponent
     {
-        private const int CurrentDataVersion = 1;
+        private const int CurrentDataVersion = 3;
         private string scenarioDefName;
         private int dataVersion;
         private bool initialized;
@@ -21,12 +21,22 @@ namespace HistoricalRimWorld.Events
         private HistoricalEventScheduler scheduler;
         private int lastCheckGameTick = -1;
         private string initializationAttemptedForScenario;
+        private string pendingLocalEventId;
+        private string pendingStorylineId;
+        private long nextLocalEventAbsoluteDay;
+        private List<HistoricalLocalEventRuntimeRecord> localEventRecords = new List<HistoricalLocalEventRuntimeRecord>();
+        private List<HistoricalStorylineRuntimeState> storylineStates = new List<HistoricalStorylineRuntimeState>();
 
         public bool Initialized => initialized;
         public string ScenarioDefName => scenarioDefName;
         public IEnumerable<HistoricalEventRuntimeState> EventStates => eventStates ?? Enumerable.Empty<HistoricalEventRuntimeState>();
         public IEnumerable<string> PendingEventIds => pendingEventIds ?? Enumerable.Empty<string>();
         public IEnumerable<HistoricalEventStatusChange> StatusChanges => statusChanges ?? Enumerable.Empty<HistoricalEventStatusChange>();
+        public string PendingLocalEventId => pendingLocalEventId;
+        public string PendingStorylineId => pendingStorylineId;
+        public long NextLocalEventAbsoluteDay => nextLocalEventAbsoluteDay;
+        public IEnumerable<HistoricalLocalEventRuntimeRecord> LocalEventRecords => localEventRecords ?? Enumerable.Empty<HistoricalLocalEventRuntimeRecord>();
+        public IEnumerable<HistoricalStorylineRuntimeState> StorylineStates => storylineStates ?? Enumerable.Empty<HistoricalStorylineRuntimeState>();
 
         public HistoricalEventRuntimeState FindState(string id) => eventStates?.FirstOrDefault(item => item != null && item.EventId == id);
 
@@ -42,6 +52,11 @@ namespace HistoricalRimWorld.Events
             pendingEventIds = plan.PendingIds;
             statusChanges = new List<HistoricalEventStatusChange>();
             lastProcessedAbsoluteDay = plan.StartDate.AbsoluteDay - 1;
+            nextLocalEventAbsoluteDay = plan.StartDate.AbsoluteDay + 60;
+            pendingLocalEventId = null;
+            pendingStorylineId = null;
+            localEventRecords = new List<HistoricalLocalEventRuntimeRecord>();
+            storylineStates = new List<HistoricalStorylineRuntimeState>();
             initialized = true;
 
             foreach (HistoricalEventDef item in plan.BackgroundEvents)
@@ -83,6 +98,43 @@ namespace HistoricalRimWorld.Events
 
         internal void MarkDayProcessed(long absoluteDay) => lastProcessedAbsoluteDay = absoluteDay;
 
+        internal void SetPendingLocalEvent(string id, string storylineId = null) { pendingLocalEventId = id; pendingStorylineId = storylineId; }
+        internal void SetNextLocalEventDay(long day) => nextLocalEventAbsoluteDay = day;
+        internal bool TryResolveLocalEventChoice(string id, int choiceIndex, out string error)
+        {
+            EnsureScheduler();
+            if (scheduler == null) { error = "The historical event scheduler is unavailable."; return false; }
+            return scheduler.TryResolveLocalEventChoice(id, choiceIndex, out error);
+        }
+        internal bool CanResolveLocalEventChoice(string id, int choiceIndex, out string error)
+        {
+            EnsureScheduler();
+            if (scheduler == null) { error = "The historical event scheduler is unavailable."; return false; }
+            return scheduler.CanResolveLocalEventChoice(id, choiceIndex, out error);
+        }
+        internal HistoricalLocalEventRuntimeRecord FindLocalRecord(string id) =>
+            localEventRecords?.FirstOrDefault(item => item != null && item.eventId == id);
+        internal HistoricalLocalEventRuntimeRecord GetOrCreateLocalRecord(string id)
+        {
+            if (localEventRecords == null) localEventRecords = new List<HistoricalLocalEventRuntimeRecord>();
+            HistoricalLocalEventRuntimeRecord record = FindLocalRecord(id);
+            if (record != null) return record;
+            record = new HistoricalLocalEventRuntimeRecord { eventId = id };
+            localEventRecords.Add(record);
+            return record;
+        }
+        internal HistoricalStorylineRuntimeState FindStoryline(string id) =>
+            storylineStates?.FirstOrDefault(item => item != null && item.storylineId == id);
+        internal HistoricalStorylineRuntimeState GetOrCreateStoryline(string id)
+        {
+            if (storylineStates == null) storylineStates = new List<HistoricalStorylineRuntimeState>();
+            HistoricalStorylineRuntimeState state = FindStoryline(id);
+            if (state != null) return state;
+            state = new HistoricalStorylineRuntimeState { storylineId = id };
+            storylineStates.Add(state);
+            return state;
+        }
+
         internal void RemovePendingId(string id) => pendingEventIds?.Remove(id);
 
         public override void GameComponentTick()
@@ -107,6 +159,7 @@ namespace HistoricalRimWorld.Events
             if (!HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate currentDate)) return;
             if (currentDate.AbsoluteDay > lastProcessedAbsoluteDay)
             {
+                if (nextLocalEventAbsoluteDay == 0L) nextLocalEventAbsoluteDay = currentDate.AbsoluteDay + 60;
                 EnsureScheduler();
                 scheduler?.ProcessDueEvents(currentDate);
                 lastProcessedAbsoluteDay = currentDate.AbsoluteDay;
@@ -124,11 +177,20 @@ namespace HistoricalRimWorld.Events
             Scribe_Collections.Look(ref pendingEventIds, "historicalPendingEventIds", LookMode.Value);
             Scribe_Collections.Look(ref statusChanges, "historicalEventStatusChanges", LookMode.Deep);
             Scribe_Values.Look(ref lastProcessedAbsoluteDay, "historicalEventLastProcessedAbsoluteDay", long.MinValue);
+            Scribe_Values.Look(ref pendingLocalEventId, "historicalPendingLocalEventId");
+            Scribe_Values.Look(ref pendingStorylineId, "historicalPendingStorylineId");
+            Scribe_Values.Look(ref nextLocalEventAbsoluteDay, "historicalNextLocalEventAbsoluteDay", 0L);
+            Scribe_Collections.Look(ref localEventRecords, "historicalLocalEventRecords", LookMode.Deep);
+            Scribe_Collections.Look(ref storylineStates, "historicalStorylineStates", LookMode.Deep);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 eventStates = eventStates ?? new List<HistoricalEventRuntimeState>();
                 pendingEventIds = pendingEventIds ?? new List<string>();
                 statusChanges = statusChanges ?? new List<HistoricalEventStatusChange>();
+                localEventRecords = localEventRecords ?? new List<HistoricalLocalEventRuntimeRecord>();
+                storylineStates = storylineStates ?? new List<HistoricalStorylineRuntimeState>();
+                foreach (HistoricalLocalEventRuntimeRecord record in localEventRecords.Where(item => item != null))
+                    record.triggerCount = Math.Max(record.triggerCount, record.appearances);
                 scheduler = null;
                 lastCheckGameTick = -1;
                 initializationAttemptedForScenario = null;

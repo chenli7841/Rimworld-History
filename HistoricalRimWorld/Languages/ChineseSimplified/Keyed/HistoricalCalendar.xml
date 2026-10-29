@@ -182,10 +182,21 @@
   <HR_Chronicle_Untitled>未命名的编年史记录</HR_Chronicle_Untitled>
   <HR_Chronicle_NoDescription>没有可用描述。</HR_Chronicle_NoDescription>
   <HR_Chronicle_NoSource>未注明来源</HR_Chronicle_NoSource>
-  <HR_Chronicle_Metadata>{0} · 可信度：{1} · 来源：{2}</HR_Chronicle_Metadata>
+  <HR_Chronicle_Metadata>{0} · 可信度：{1} · 类型：{2} · 编年：{3} · 来源：{4}</HR_Chronicle_Metadata>
+  <HR_Chronicle_OccurredAndLearned>发生：{0} · 获知：{1}</HR_Chronicle_OccurredAndLearned>
+  <HR_Chronicle_UnknownLearnedDate>尚未知晓</HR_Chronicle_UnknownLearnedDate>
   <HR_Chronicle_Type_AttestedHistory>有史料支持的历史</HR_Chronicle_Type_AttestedHistory>
   <HR_Chronicle_Type_LocalExperience>地方经历</HR_Chronicle_Type_LocalExperience>
   <HR_Chronicle_Type_InferredLegacy>推演的传承</HR_Chronicle_Type_InferredLegacy>
+  <HR_Chronicle_Type_HistoricalReconstruction>历史重构</HR_Chronicle_Type_HistoricalReconstruction>
+  <HR_Chronicle_Type_HistoricalContext>历史背景</HR_Chronicle_Type_HistoricalContext>
+  <HR_Chronicle_Type_FictionalLocalEvent>虚构地方事件</HR_Chronicle_Type_FictionalLocalEvent>
+  <HR_Chronicle_Provenance_AttestedHistoricalEvent>史料记载事件</HR_Chronicle_Provenance_AttestedHistoricalEvent>
+  <HR_Chronicle_Provenance_HistoricalReconstruction>历史重构</HR_Chronicle_Provenance_HistoricalReconstruction>
+  <HR_Chronicle_Provenance_HistoricalContextSimulation>背景模拟</HR_Chronicle_Provenance_HistoricalContextSimulation>
+  <HR_Chronicle_Provenance_FictionalLocalEvent>虚构地方剧情</HR_Chronicle_Provenance_FictionalLocalEvent>
+  <HR_Chronicle_Chronology_TraditionalReceivedChronology>传统编年</HR_Chronicle_Chronology_TraditionalReceivedChronology>
+  <HR_Chronicle_Chronology_XinianBasedReconstruction>《系年》重构编年</HR_Chronicle_Chronology_XinianBasedReconstruction>
   <HR_Chronicle_Category_Political>政治</HR_Chronicle_Category_Political>
   <HR_Chronicle_Category_Military>军事</HR_Chronicle_Category_Military>
   <HR_Chronicle_Category_Diplomatic>外交</HR_Chronicle_Category_Diplomatic>
@@ -255,4 +266,40 @@
   <HR_Genealogy_DeathCause_Other>其他</HR_Genealogy_DeathCause_Other>
   <HR_Genealogy_DeathCause_Unknown>未知</HR_Genealogy_DeathCause_Unknown>
   <HR_Genealogy_Source>Historical RimWorld 家谱模拟记录</HR_Genealogy_Source>
+  <HR_Event_QinXiangRecognition_770BCE_Label>秦襄公获得周王室认可</HR_Event_QinXiangRecognition_770BCE_Label>
+  <HR_Event_QinXiangRecognition_770BCE_Description>传统记载称秦襄公帮助周平王东迁，并因此受封为诸侯。本条不表示秦已征服全部西部地区。</HR_Event_QinXiangRecognition_770BCE_Description>
+  <HR_Event_QinXiangRecognition_770BCE_SourceNotes>《史记·秦本纪》；参见张朋诚《西周年代学》，《早期中国》46卷（2023）“秦国编年”一节。本条仅作编年记录。</HR_Event_QinXiangRecognition_770BCE_SourceNotes>
+  <HR_Event_XieKingDeath_750BCE_Label>携惠王之死（年代有争议）</HR_Event_XieKingDeath_750BCE_Label>
+  <HR_Event_XieKingDeath_750BCE_Description>一种传统重构将竞争的周王携惠王之死置于约公元前750年。该年代存在争议；本条只进入编年史，不替游戏世界裁定王位正统。</HR_Event_XieKingDeath_750BCE_Description>
+  <HR_Event_XieKingDeath_750BCE_SourceNotes>陈民镇、尤锐《周平王在哪里？周王朝东迁的历史与史学》（2018）；张朋诚《西周年代学》，《早期中国》46卷（2023），第589–614页，提出携王的不同编年（前779–759年）。因此仅记年份并标为有争议。https://cris.huji.ac.il/en/publications/where-is-king-ping-the-history-and-historiography-of-the-zhou-dyn/；https://www.cambridge.org/core/journals/early-china/article/chronology-of-western-zhou/0D661C3365537C0D15AD896F72F9DF70</HR_Event_XieKingDeath_750BCE_SourceNotes>
+  <HR_Event_JinQuwoEnfeoffment_745BCE_Label>晋国分封曲沃支系</HR_Event_JinQuwoEnfeoffment_745BCE_Label>
+  <HR_Event_JinQuwoEnfeoffment_745BCE_Description>晋昭侯封成师于曲沃，开启了持续多代的晋国内部继承冲突。本条只记录编年，不模拟征服结果。</HR_Event_JinQuwoEnfeoffment_745BCE_Description>
+  <HR_Event_JinQuwoEnfeoffment_745BCE_SourceNotes>《左传·惠公二十四年》（传统换算为公元前745年）；夏含夷《古代中国简史》（2023），第179–180页。只精确到年。https://api.pageplace.de/preview/DT0400.9780295806730_A30891990/preview-9780295806730_A30891990.pdf</HR_Event_JinQuwoEnfeoffment_745BCE_SourceNotes>
+  <HR_Context_ZhengEasternExpansion_Label>郑国向东发展</HR_Context_ZhengEasternExpansion_Label>
+  <HR_Context_ZhengEasternExpansion_Description>郑国向东部平原发展的长期政治背景。由此生成的地方遭遇属于虚构内容，不表示某次特定征服。</HR_Context_ZhengEasternExpansion_Description>
+  <HR_Context_ZhengEasternExpansion_Sources>《史记·郑世家》；张朋诚《西周年代学》，《早期中国》46卷（2023）“郑国编年”一节。这里只记录背景时期，不主张某次单年事件。</HR_Context_ZhengEasternExpansion_Sources>
+  <HR_Context_ZhengAndKuai_Label>郑、虢、郐诸国关系</HR_Context_ZhengAndKuai_Label>
+  <HR_Context_ZhengAndKuai_Description>后世记载将郑国发展与虢、郐诸国联系起来，但相关叙述和年代并不一致。这里仅作为虚构地方争端的背景，不记录某次征服。</HR_Context_ZhengAndKuai_Description>
+  <HR_Context_ZhengAndKuai_Sources>《史记·郑世家》；张朋诚《西周年代学》，《早期中国》46卷（2023）注135–136及郑国编年部分。保留不同记载之间的冲突。</HR_Context_ZhengAndKuai_Sources>
+  <HR_Context_RoyalCourtAtLuoyi_Label>洛邑的周王室</HR_Context_RoyalCourtAtLuoyi_Label>
+  <HR_Context_RoyalCourtAtLuoyi_Description>传统叙事中的周王室以洛邑为东方中心。宫廷使者与征粮等地方遭遇属于虚构游戏内容，并非已知史实。</HR_Context_RoyalCourtAtLuoyi_Description>
+  <HR_Context_RoyalCourtAtLuoyi_Sources>《史记·周本纪》；张朋诚《西周年代学》，《早期中国》46卷（2023）“周平王与携惠王”一节。</HR_Context_RoyalCourtAtLuoyi_Sources>
+  <HR_Context_CompetingZhouLegitimacy_Label>周王室正统竞争</HR_Context_CompetingZhouLegitimacy_Label>
+  <HR_Context_CompetingZhouLegitimacy_Description>关于周幽王死后周平王与携惠王的叙述呈现王位交替争议。地方传闻保持不确定，且不得泄露未来结果。</HR_Context_CompetingZhouLegitimacy_Description>
+  <HR_Context_CompetingZhouLegitimacy_Sources>清华简《系年》第二章；陈民镇、尤锐《周平王在哪里？》（2018）；张朋诚《西周年代学》（2023）。年代和事件顺序均存在争议。</HR_Context_CompetingZhouLegitimacy_Sources>
+  <HR_Context_JinSupportForPing_Label>晋国支持周平王</HR_Context_JinSupportForPing_Label>
+  <HR_Context_JinSupportForPing_Description>《系年》叙述中，晋文侯是周平王的重要支持者。该背景不会凭空生成未经记载的战争或领土变更。</HR_Context_JinSupportForPing_Description>
+  <HR_Context_JinSupportForPing_Sources>清华简《系年》第二章；张朋诚《西周年代学》，《早期中国》46卷（2023），第589–614页。</HR_Context_JinSupportForPing_Sources>
+  <HR_Context_QinWesternDevelopment_Label>秦国在西部的发展</HR_Context_QinWesternDevelopment_Label>
+  <HR_Context_QinWesternDevelopment_Description>秦国在西部地区逐步发展。本剧本不会假设秦国在前770年已经征服整个西部。</HR_Context_QinWesternDevelopment_Description>
+  <HR_Context_QinWesternDevelopment_Sources>《史记·秦本纪》；张朋诚《西周年代学》，《早期中国》46卷（2023）“秦国编年”一节。</HR_Context_QinWesternDevelopment_Sources>
+  <HR_Context_BronzeRitualObjects_Label>青铜礼器与铭文</HR_Context_BronzeRitualObjects_Label>
+  <HR_Context_BronzeRitualObjects_Description>青铜礼器及其铭文为贵族礼仪、政治册命和宗族身份提供物质与文献背景。</HR_Context_BronzeRitualObjects_Description>
+  <HR_Context_BronzeRitualObjects_Sources>夏含夷《剑桥古代中国史》“西周考古”；《西周史料：青铜器铭文》，早期中国研究学会。作为持续物质背景，而非单年事件。</HR_Context_BronzeRitualObjects_Sources>
+  <HR_Context_AncestralRituals_Label>祖先祭祀与丧葬礼仪</HR_Context_AncestralRituals_Label>
+  <HR_Context_AncestralRituals_Description>宗族祭祀和丧葬礼仪作为社会背景呈现；不将某个村落的具体祭仪宣称为史实。</HR_Context_AncestralRituals_Description>
+  <HR_Context_AncestralRituals_Sources>《牛津早期中国手册》“西周青铜礼器：风格、组合与创新”；夏含夷《剑桥古代中国史》“西周考古”。</HR_Context_AncestralRituals_Sources>
+  <HR_Context_AgricultureAndStorage_Label>农业、聚落与储藏</HR_Context_AgricultureAndStorage_Label>
+  <HR_Context_AgricultureAndStorage_Description>农耕、陶器、聚落生活和储藏属于反复出现的物质条件。游戏将其作为时代背景，不虚构某一年发生的技术发明。</HR_Context_AgricultureAndStorage_Description>
+  <HR_Context_AgricultureAndStorage_Sources>任新宇《黄土城区域考古调查》（2008）关于陶器组合的讨论。考古证据作为社会背景，而不是某年的历史事件。</HR_Context_AgricultureAndStorage_Sources>
 </LanguageData>
