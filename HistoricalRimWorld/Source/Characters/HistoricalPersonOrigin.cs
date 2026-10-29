@@ -4,6 +4,7 @@ namespace HistoricalRimWorld.Characters
     {
         Generated,
         HistoricalFigure,
-        LegacyImported
+        LegacyImported,
+        LegacySimulated
     }
 }

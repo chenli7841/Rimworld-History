@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Legacy_MainTabLabel>家族传承</HR_Legacy_MainTabLabel>
+  <HR_Legacy_MainTabDescription>导出、预览并导入带版本信息的历史家族档案。</HR_Legacy_MainTabDescription>
+  <HR_Legacy_Title>历史家族传承</HR_Legacy_Title>
+  <HR_Legacy_Inactive>请先初始化 Historical RimWorld 剧本，再使用家族传承档案。</HR_Legacy_Inactive>
+  <HR_Legacy_Archives>档案</HR_Legacy_Archives>
+  <HR_Legacy_Export>从当前存档导出</HR_Legacy_Export>
+  <HR_Legacy_ExportFamily>导出来源家族</HR_Legacy_ExportFamily>
+  <HR_Legacy_ExportSelectedFamily>导出所选家族及亲属</HR_Legacy_ExportSelectedFamily>
+  <HR_Legacy_ExportAll>导出所有家族</HR_Legacy_ExportAll>
+  <HR_Legacy_Families>档案中的家族</HR_Legacy_Families>
+  <HR_Legacy_FamilyMembers>所选家族及关联亲属</HR_Legacy_FamilyMembers>
+  <HR_Legacy_Relationships>已记录的亲属关系</HR_Legacy_Relationships>
+  <HR_Legacy_Relation_BiologicalParent>生物学父母</HR_Legacy_Relation_BiologicalParent>
+  <HR_Legacy_Relation_AdoptiveParent>养父母</HR_Legacy_Relation_AdoptiveParent>
+  <HR_Legacy_Relation_Spouse>配偶</HR_Legacy_Relation_Spouse>
+  <HR_Legacy_Alive>来源存档时存活</HR_Legacy_Alive>
+  <HR_Legacy_Deceased>已故</HR_Legacy_Deceased>
+  <HR_Legacy_SelectArchive>请选择 JSON 档案。</HR_Legacy_SelectArchive>
+  <HR_Legacy_SourceSummary>{0} — 架构 {1}；来源 {2}，结束于 {3}；{4} 个家族，{5} 位人物，{6} 件遗物，{7} 条迁徙</HR_Legacy_SourceSummary>
+  <HR_Legacy_GenealogySummary>所选支系：{0} 位人物，{1} 位已故祖先，{2} 条亲属关系</HR_Legacy_GenealogySummary>
+  <HR_Legacy_ChronicleSummary>编年史来源 — 史实：{0}；游戏记录：{1}；推演：{2}</HR_Legacy_ChronicleSummary>
+  <HR_Legacy_TargetDate>目标日期：{0}</HR_Legacy_TargetDate>
+  <HR_Legacy_Interval>历史间隔：{0} 天（{1:0.0} 个历史年）</HR_Legacy_Interval>
+  <HR_Legacy_TimeReversal>目标日期早于此档案，无法推演后代。</HR_Legacy_TimeReversal>
+  <HR_Legacy_Preview>运行确定性预览</HR_Legacy_Preview>
+  <HR_Legacy_PreviewRequired>模拟不会修改游戏。选择家族、后代与遗物，然后确认导入。</HR_Legacy_PreviewRequired>
+  <HR_Legacy_PreviewSummary>跨存档生成的人物：{0}；符合条件的后代：{1}；模拟编年条目：{2}；种子：{3}</HR_Legacy_PreviewSummary>
+  <HR_Legacy_Candidates>开局 Pawn 候选人</HR_Legacy_Candidates>
+  <HR_Legacy_Relics>带入新剧本的遗物</HR_Legacy_Relics>
+  <HR_Legacy_ConfirmImport>确认导入到当前剧本</HR_Legacy_ConfirmImport>
+  <HR_Legacy_ArchiveLoaded>已载入档案：</HR_Legacy_ArchiveLoaded>
+  <HR_Legacy_InvalidSeed>请输入有效的整数模拟种子。</HR_Legacy_InvalidSeed>
+  <HR_Legacy_PreviewReady>预览已完成，游戏状态尚未改变。</HR_Legacy_PreviewReady>
+  <HR_Legacy_ImportComplete>家族传承导入完成。</HR_Legacy_ImportComplete>
+  <HR_Legacy_Exported>档案已保存：</HR_Legacy_Exported>
+  <HR_Legacy_NoSourceFamily>当前没有可导出的来源家族。</HR_Legacy_NoSourceFamily>
+  <HR_LegacySim_Birth_Title>推演出生</HR_LegacySim_Birth_Title>
+  <HR_LegacySim_Birth_Description>跨剧本家族模拟期间有后代出生。</HR_LegacySim_Birth_Description>
+  <HR_LegacySim_Death_Title>推演死亡</HR_LegacySim_Death_Title>
+  <HR_LegacySim_Death_Description>跨剧本家族模拟期间有家族成员去世。</HR_LegacySim_Death_Description>
+  <HR_LegacySim_Marriage_Title>推演婚姻</HR_LegacySim_Marriage_Title>
+  <HR_LegacySim_Marriage_Description>跨剧本家族模拟期间缔结了一桩婚姻。</HR_LegacySim_Marriage_Description>
+  <HR_LegacySim_Migration_Title>推演迁徙</HR_LegacySim_Migration_Title>
+  <HR_LegacySim_Migration_Description>跨剧本家族模拟期间有家族迁徙。</HR_LegacySim_Migration_Description>
+</LanguageData>

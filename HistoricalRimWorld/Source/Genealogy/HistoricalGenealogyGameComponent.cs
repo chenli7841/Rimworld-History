@@ -6,6 +6,7 @@ using HistoricalRimWorld.Characters;
 using HistoricalRimWorld.Chronicle;
 using HistoricalRimWorld.Lifespan;
 using HistoricalRimWorld.Culture;
+using HistoricalRimWorld.Legacy;
 using HistoricalRimWorld.Scenarios;
 using RimWorld;
 using Verse;
@@ -148,6 +149,68 @@ namespace HistoricalRimWorld.Genealogy
             if (string.IsNullOrWhiteSpace(displayName)) { error = "A non-empty display name is required."; return false; }
             person.SetDisplayName(displayName.Trim());
             return true;
+        }
+
+        internal bool TryImportLegacyRecords(HistoricalLegacyArchive archive, IDictionary<string, Pawn> bindings, out string error)
+        {
+            error = null;
+            if (!initialized) { error = "Historical genealogy must be initialized first."; return false; }
+            if (archive == null) { error = "Legacy archive is empty."; return false; }
+            if (archive.Persons.Any(item => personsById.ContainsKey(item.PersonId)) || archive.Families.Any(item => familiesById.ContainsKey(item.FamilyId)))
+            { error = "One or more imported PersonId or FamilyId values already exist in this save."; return false; }
+
+            foreach (LegacyFamilyData data in archive.Families)
+            {
+                var family = new HistoricalFamilyRecord();
+                family.Initialize(data.FamilyId, data.FamilyName, data.FounderPersonId, data.OriginRegionId, data.OriginPolityId);
+                family.SetParentFamilyId(data.ParentFamilyId);
+                families.Add(family); familiesById[data.FamilyId] = family;
+            }
+            foreach (LegacyPersonData data in archive.Persons)
+            {
+                HistoricalDate birth = new HistoricalDate(data.BirthAstronomicalYear, data.BirthMonth, data.BirthDay);
+                var person = new HistoricalPersonRecord();
+                person.Initialize(data.PersonId, data.FamilyId, data.DisplayName, data.Origin, birth,
+                    data.Origin == HistoricalPersonOrigin.LegacySimulated
+                        ? HistoricalBirthDateSource.LegacySimulation : HistoricalBirthDateSource.HistoricalRecord,
+                    data.BirthRegionId, data.BirthAllegiancePolityId);
+                person.SetLegacyCurrentLocation(data.LastKnownRegionId, data.LastKnownAllegiancePolityId);
+                if (!data.IsAliveAtExport && data.DeathAstronomicalYear.HasValue)
+                    person.MarkDeath(new HistoricalDate(data.DeathAstronomicalYear.Value, data.DeathMonth.Value, data.DeathDay.Value), data.DeathCause);
+                persons.Add(person);
+                familiesById[data.FamilyId].AddMember(data.PersonId);
+                HistoricalDate naturalDeath = new HistoricalDate(data.NaturalDeathAstronomicalYear.Value, data.NaturalDeathMonth.Value, data.NaturalDeathDay.Value);
+                var lifespan = new HistoricalNaturalLifespanRecord(); lifespan.Initialize(data.PersonId, data.AssignedLifespanYears.Value, naturalDeath);
+                if (!data.IsAliveAtExport) lifespan.SetNaturalDeathProcessed(true);
+                lifespans.Add(lifespan);
+            }
+            foreach (LegacyKinshipData data in archive.Kinships)
+            {
+                var relation = new HistoricalKinshipRelation();
+                relation.Initialize(data.PersonIdA, data.PersonIdB, data.Type,
+                    new HistoricalDate(data.StartAstronomicalYear.Value, data.StartMonth.Value, data.StartDay.Value));
+                if (data.EndAstronomicalYear.HasValue) relation.Close(new HistoricalDate(data.EndAstronomicalYear.Value, data.EndMonth.Value, data.EndDay.Value));
+                relations.Add(relation);
+            }
+            foreach (var binding in bindings ?? new Dictionary<string, Pawn>())
+            {
+                if (!personsById.ContainsKey(binding.Key) || binding.Value == null) continue;
+                var identity = new HistoricalPawnIdentity(); identity.Initialize(binding.Key, binding.Value); pawnIdentities.Add(identity);
+            }
+            RebuildIndexes();
+            return true;
+        }
+
+        internal void RollbackLegacyRecords(IEnumerable<string> personIds, IEnumerable<string> familyIds)
+        {
+            var people = new HashSet<string>(personIds ?? Enumerable.Empty<string>(), StringComparer.Ordinal);
+            var familiesToRemove = new HashSet<string>(familyIds ?? Enumerable.Empty<string>(), StringComparer.Ordinal);
+            persons.RemoveAll(item => item != null && people.Contains(item.PersonId));
+            families.RemoveAll(item => item != null && familiesToRemove.Contains(item.FamilyId));
+            relations.RemoveAll(item => item != null && (people.Contains(item.PersonIdA) || people.Contains(item.PersonIdB)));
+            lifespans.RemoveAll(item => item != null && people.Contains(item.PersonId));
+            pawnIdentities.RemoveAll(item => item != null && people.Contains(item.PersonId));
+            RebuildIndexes();
         }
 
         public bool TryEndKinshipRelation(string personIdA, string personIdB, HistoricalKinshipType type,

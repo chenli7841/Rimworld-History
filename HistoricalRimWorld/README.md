@@ -54,3 +54,9 @@ To install manually, place the `HistoricalRimWorld` folder in RimWorld's `Mods` 
 ## Historical world prototype
 
 The current 770 BCE world reveal setup uses `PrototypeWorld`. RimWorld's generated tiles are not treated as real-world Chinese coordinates. No verified historical boundary or real Earth tile mapping is shipped. In developer mode, the Historical World panel can associate selected tiles with configured historical regions; those assignments are save-specific. Until a tile is mapped, it is outside this prototype region system and remains accessible. Locked mapped tiles are masked and blocked for player caravan travel and player settlement placement. This prototype does not provide automated historical map coverage or Earth geography.
+
+## Cross-scenario family legacy (HR-010)
+
+The **Family Legacy** tab exports all or a selected family and kin to a versioned JSON archive under the RimWorld Config directory. Archive files stay outside game saves, are validated and size-limited, and use temporary writes with a retained backup. Select an archive and family to run a deterministic preview for the active scenario date. The preview does not change the game. Choose eligible descendants (up to eight) and any available relics, then use **Confirm import** to generate fresh vanilla colonist Pawns and carry selected relics into the player home map. Import is marked per archive and target scenario to prevent duplicate imports. Rates in the default population policy are gameplay parameters, not historical measurements. In-game import, save/reload, and rollback behavior still need runtime validation.
+
+Archives are stored in `Config\HistoricalRimWorld\LegacyArchives` beneath the game's Config directory. Build outputs go to `Assemblies\HistoricalRimWorld.dll`; RimWorld, Unity and Harmony assemblies remain non-copy-local. Build from Windows PowerShell using the existing `RIMWORLD_DIR` and `HARMONY_DIR` example above.

@@ -33,6 +33,12 @@ namespace HistoricalRimWorld.Chronicle
             return true;
         }
 
+        public void RollbackLegacyEntries(IEnumerable<string> entryIds)
+        {
+            var ids = new HashSet<string>(entryIds ?? Enumerable.Empty<string>(), StringComparer.Ordinal);
+            entries.RemoveAll(item => item != null && ids.Contains(item.EntryId));
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();

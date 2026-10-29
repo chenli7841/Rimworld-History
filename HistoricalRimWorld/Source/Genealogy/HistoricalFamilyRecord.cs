@@ -10,6 +10,7 @@ namespace HistoricalRimWorld.Genealogy
         private string founderPersonId;
         private string originRegionId;
         private string originPolityId;
+        private string parentFamilyId;
         private List<string> memberPersonIds = new List<string>();
 
         public string FamilyId => familyId;
@@ -17,6 +18,7 @@ namespace HistoricalRimWorld.Genealogy
         public string FounderPersonId => founderPersonId;
         public string OriginRegionId => originRegionId;
         public string OriginPolityId => originPolityId;
+        public string ParentFamilyId => parentFamilyId;
         public IReadOnlyList<string> MemberPersonIds => memberPersonIds ?? (IReadOnlyList<string>)new List<string>();
 
         public void ExposeData()
@@ -26,6 +28,7 @@ namespace HistoricalRimWorld.Genealogy
             Scribe_Values.Look(ref founderPersonId, "founderPersonId");
             Scribe_Values.Look(ref originRegionId, "originRegionId");
             Scribe_Values.Look(ref originPolityId, "originPolityId");
+            Scribe_Values.Look(ref parentFamilyId, "parentFamilyId");
             Scribe_Collections.Look(ref memberPersonIds, "memberPersonIds", LookMode.Value);
             if (Scribe.mode == LoadSaveMode.PostLoadInit) memberPersonIds = memberPersonIds ?? new List<string>();
         }
@@ -44,6 +47,8 @@ namespace HistoricalRimWorld.Genealogy
         {
             if (!string.IsNullOrWhiteSpace(personId) && !memberPersonIds.Contains(personId)) memberPersonIds.Add(personId);
         }
+
+        internal void SetParentFamilyId(string value) => parentFamilyId = value;
 
         internal void RemoveMember(string personId) => memberPersonIds?.Remove(personId);
     }

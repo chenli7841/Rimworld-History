@@ -27,6 +27,13 @@ namespace HistoricalRimWorld.Culture
         public void Add(HistoricalPersonCultureState state) { if (state != null && FindPerson(state.PersonId) == null) (persons ??= new List<HistoricalPersonCultureState>()).Add(state); }
         public void Add(HistoricalFamilyCultureState state) { if (state != null && FindFamily(state.FamilyId) == null) (families ??= new List<HistoricalFamilyCultureState>()).Add(state); }
         public void Add(HistoricalCommunityCultureState state) { if (state != null && FindCommunity(state.CommunityId) == null) (communities ??= new List<HistoricalCommunityCultureState>()).Add(state); }
+        public void RollbackLegacyData(IEnumerable<string> personIds, IEnumerable<string> familyIds)
+        {
+            var people = new HashSet<string>(personIds ?? Enumerable.Empty<string>(), StringComparer.Ordinal);
+            var familiesToRemove = new HashSet<string>(familyIds ?? Enumerable.Empty<string>(), StringComparer.Ordinal);
+            persons.RemoveAll(item => item != null && people.Contains(item.PersonId));
+            families.RemoveAll(item => item != null && familiesToRemove.Contains(item.FamilyId));
+        }
 
         public bool Initialize(string scenarioId, HistoricalCultureSetupDef setup)
         {

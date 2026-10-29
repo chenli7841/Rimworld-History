@@ -20,6 +20,13 @@ namespace HistoricalRimWorld.Relics
         public bool Initialize(string id) { if (initialized) return string.Equals(scenarioDefName, id, StringComparison.Ordinal); scenarioDefName = id; initialized = !string.IsNullOrWhiteSpace(id); return initialized; }
         public void Add(HistoricalRelicRecord record) { if (record != null && Find(record.RelicId) == null) (relics ??= new List<HistoricalRelicRecord>()).Add(record); }
         public void Add(HistoricalRelicEventRecord record) { if (record != null) (events ??= new List<HistoricalRelicEventRecord>()).Add(record); }
+        public void RollbackLegacyData(IEnumerable<string> relicIds, IEnumerable<string> eventIds)
+        {
+            var relicSet = new HashSet<string>(relicIds ?? Enumerable.Empty<string>(), StringComparer.Ordinal);
+            var eventSet = new HashSet<string>(eventIds ?? Enumerable.Empty<string>(), StringComparer.Ordinal);
+            relics.RemoveAll(item => item != null && relicSet.Contains(item.RelicId));
+            events.RemoveAll(item => item != null && eventSet.Contains(item.EventId));
+        }
         public override void ExposeData()
         {
             base.ExposeData(); Scribe_Values.Look(ref scenarioDefName, "historicalRelicScenarioDefName");

@@ -89,6 +89,7 @@ namespace HistoricalRimWorld.Characters
         }
 
         internal void SetFamilyId(string value) => familyId = value;
+        internal void SetLegacyCurrentLocation(string regionId, string polityId) { currentRegionId = regionId; currentAllegiancePolityId = polityId; }
         internal void SetDisplayName(string value) => displayName = value;
         internal void MarkDeath(HistoricalDate date, HistoricalDeathCause cause)
         {

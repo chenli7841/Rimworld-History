@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Legacy.Simulation.LegacyPopulationPolicyDef>
+    <defName>HR_Legacy_DefaultPopulationPolicy</defName>
+    <annualBirthProbability>0.12</annualBirthProbability>
+    <annualAdultMortality>0.012</annualAdultMortality>
+    <annualChildMortality>0.035</annualChildMortality>
+    <annualMarriageProbability>0.12</annualMarriageProbability>
+    <annualMigrationProbability>0.006</annualMigrationProbability>
+    <minimumMarriageAge>18</minimumMarriageAge>
+    <maximumChildbearingAge>40</maximumChildbearingAge>
+    <maximumGeneratedPersons>500</maximumGeneratedPersons>
+    <maximumActiveDescendants>200</maximumActiveDescendants>
+    <maximumSimulationYears>1000</maximumSimulationYears>
+    <minimumNaturalLifespanYears>50</minimumNaturalLifespanYears>
+    <maximumNaturalLifespanYears>95</maximumNaturalLifespanYears>
+    <meanNaturalLifespanYears>72</meanNaturalLifespanYears>
+    <naturalLifespanStandardDeviation>9</naturalLifespanStandardDeviation>
+  </HistoricalRimWorld.Legacy.Simulation.LegacyPopulationPolicyDef>
+</Defs>

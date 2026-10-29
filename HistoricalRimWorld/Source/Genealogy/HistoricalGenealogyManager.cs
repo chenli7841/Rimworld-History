@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HistoricalRimWorld.Calendar;
 using HistoricalRimWorld.Characters;
+using HistoricalRimWorld.Legacy;
 using Verse;
 
 namespace HistoricalRimWorld.Genealogy
@@ -61,6 +62,13 @@ namespace HistoricalRimWorld.Genealogy
             HistoricalGenealogyGameComponent component = GetComponent();
             if (component == null) { error = "Historical genealogy is inactive."; return false; }
             return component.TrySetDisplayName(personId, displayName, out error);
+        }
+
+        internal static bool TryImportLegacyRecords(HistoricalLegacyArchive archive, IDictionary<string, Pawn> bindings, out string error)
+        {
+            HistoricalGenealogyGameComponent component = GetComponent();
+            if (component == null) { error = "Historical genealogy is inactive."; return false; }
+            return component.TryImportLegacyRecords(archive, bindings, out error);
         }
 
         private static HistoricalGenealogyGameComponent GetComponent() => Current.Game == null

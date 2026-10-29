@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Legacy_MainTabLabel>Family Legacy</HR_Legacy_MainTabLabel>
+  <HR_Legacy_MainTabDescription>Export, preview, and import versioned historical family archives.</HR_Legacy_MainTabDescription>
+  <HR_Legacy_Title>Historical Family Legacy</HR_Legacy_Title>
+  <HR_Legacy_Inactive>Initialize a Historical RimWorld scenario to use family legacy archives.</HR_Legacy_Inactive>
+  <HR_Legacy_Archives>Archives</HR_Legacy_Archives>
+  <HR_Legacy_Export>Export from this save</HR_Legacy_Export>
+  <HR_Legacy_ExportFamily>Source family</HR_Legacy_ExportFamily>
+  <HR_Legacy_ExportSelectedFamily>Export selected family and kin</HR_Legacy_ExportSelectedFamily>
+  <HR_Legacy_ExportAll>Export all families</HR_Legacy_ExportAll>
+  <HR_Legacy_Families>Archive families</HR_Legacy_Families>
+  <HR_Legacy_FamilyMembers>Selected family and linked kin</HR_Legacy_FamilyMembers>
+  <HR_Legacy_Relationships>Recorded relationships</HR_Legacy_Relationships>
+  <HR_Legacy_Relation_BiologicalParent>parent of</HR_Legacy_Relation_BiologicalParent>
+  <HR_Legacy_Relation_AdoptiveParent>adoptive parent of</HR_Legacy_Relation_AdoptiveParent>
+  <HR_Legacy_Relation_Spouse>spouse of</HR_Legacy_Relation_Spouse>
+  <HR_Legacy_Alive>alive at source</HR_Legacy_Alive>
+  <HR_Legacy_Deceased>deceased</HR_Legacy_Deceased>
+  <HR_Legacy_SelectArchive>Select a JSON archive.</HR_Legacy_SelectArchive>
+  <HR_Legacy_SourceSummary>{0} — schema {1}; source {2}, ended {3}; {4} families, {5} people, {6} relics, {7} migrations</HR_Legacy_SourceSummary>
+  <HR_Legacy_GenealogySummary>Selected line: {0} people, {1} deceased ancestors, {2} recorded relationships</HR_Legacy_GenealogySummary>
+  <HR_Legacy_ChronicleSummary>Chronicle sources — attested: {0}; recorded gameplay: {1}; simulated: {2}</HR_Legacy_ChronicleSummary>
+  <HR_Legacy_TargetDate>Target: {0}</HR_Legacy_TargetDate>
+  <HR_Legacy_Interval>Historical interval: {0} days ({1:0.0} historical years)</HR_Legacy_Interval>
+  <HR_Legacy_TimeReversal>Target date precedes this archive. Descendant simulation is unavailable.</HR_Legacy_TimeReversal>
+  <HR_Legacy_Preview>Run deterministic preview</HR_Legacy_Preview>
+  <HR_Legacy_PreviewRequired>Simulation does not change the game. Select a family, choose candidates and relics, then confirm import.</HR_Legacy_PreviewRequired>
+  <HR_Legacy_PreviewSummary>Generated between-save people: {0}; eligible descendants: {1}; simulated chronicle entries: {2}; seed: {3}</HR_Legacy_PreviewSummary>
+  <HR_Legacy_Candidates>Starting Pawn candidates</HR_Legacy_Candidates>
+  <HR_Legacy_Relics>Relics to carry into the new scenario</HR_Legacy_Relics>
+  <HR_Legacy_ConfirmImport>Confirm import into this scenario</HR_Legacy_ConfirmImport>
+  <HR_Legacy_ArchiveLoaded>Loaded archive:</HR_Legacy_ArchiveLoaded>
+  <HR_Legacy_InvalidSeed>Enter a valid integer simulation seed.</HR_Legacy_InvalidSeed>
+  <HR_Legacy_PreviewReady>Preview ready. No game state has changed.</HR_Legacy_PreviewReady>
+  <HR_Legacy_ImportComplete>Family legacy import completed.</HR_Legacy_ImportComplete>
+  <HR_Legacy_Exported>Archive saved:</HR_Legacy_Exported>
+  <HR_Legacy_NoSourceFamily>No source family is available.</HR_Legacy_NoSourceFamily>
+  <HR_LegacySim_Birth_Title>Simulated birth</HR_LegacySim_Birth_Title>
+  <HR_LegacySim_Birth_Description>A descendant was born during the inter-scenario family simulation.</HR_LegacySim_Birth_Description>
+  <HR_LegacySim_Death_Title>Simulated death</HR_LegacySim_Death_Title>
+  <HR_LegacySim_Death_Description>A family member died during the inter-scenario family simulation.</HR_LegacySim_Death_Description>
+  <HR_LegacySim_Marriage_Title>Simulated marriage</HR_LegacySim_Marriage_Title>
+  <HR_LegacySim_Marriage_Description>A marriage was formed during the inter-scenario family simulation.</HR_LegacySim_Marriage_Description>
+  <HR_LegacySim_Migration_Title>Simulated migration</HR_LegacySim_Migration_Title>
+  <HR_LegacySim_Migration_Description>A family moved during the inter-scenario family simulation.</HR_LegacySim_Migration_Description>
+</LanguageData>
