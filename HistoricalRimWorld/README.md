@@ -33,6 +33,20 @@ Scenario initialization also imports Eastern Zhou background events into the sav
 
 The HR-007 foundation adds the **Historical Genealogy** main tab for saved person/family records, immediate relations, historical vs biological age, and lifespan deadlines. Pawn registration and lifecycle capture run only in an initialized historical scenario. See [Characters and Genealogy](Docs/CharactersAndGenealogy.md) for Scribe storage, public RimWorld 1.6 APIs, natural-death handling, and polling limitations.
 
+HR-008 adds a community-scoped ancient technology tree, scenario starting state, research and diffusion APIs, an in-game technology tab, and an initial production slice for copper/bronze, pottery, and hemp cloth. Tech progress uses Scribe and the vanilla ResearchManager, worktables, skill gates, and Bills. Modern-content filtering is intentionally partial: it covers research, buildability, recipes/Bills, and the standard trader stock maker, but not every quest reward, raid, or world-generation route. See [Architecture](Docs/Architecture.md) for the API and limits.
+
+## Build
+
+Build from Windows PowerShell with .NET SDK installed. The project reads the RimWorld installation from `RimWorldDir` (or `RIMWORLD_DIR`) and Harmony from `HarmonyDir` (or `HARMONY_DIR`):
+
+```powershell
+$env:RIMWORLD_DIR = 'C:\Path\To\RimWorld'
+$env:HARMONY_DIR = 'C:\Path\To\Harmony\1.6\Assemblies'
+dotnet build .\Source\HistoricalRimWorld.csproj -c Release
+```
+
+The assembly is emitted to `Assemblies\HistoricalRimWorld.dll`; RimWorld and Unity reference DLLs are not copied.
+
 To install manually, place the `HistoricalRimWorld` folder in RimWorld's `Mods` directory and enable it in the mod list. See [Architecture](Docs/Architecture.md) and [Roadmap](Docs/Roadmap.md).
 
 ## Historical world prototype

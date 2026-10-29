@@ -25,8 +25,23 @@ Historical RimWorld is an independent RimWorld 1.6 mod. Its foundation provides 
 - Historical event outcomes and their status-change history use `HistoricalEventGameComponent`; visible and deferred chronicle entries use `HistoricalChronicleGameComponent`.
 - Historical definitions and authored static content use XML Defs, including scenario data, geography, political setup, and initial reveal setup.
 - State in a RimWorld save uses the game's Scribe persistence system.
+- Save-specific community technology, events, genealogy, and local scenario state belong in `GameComponent`; world-wide revelation or future world-owned technology state belongs in a `WorldComponent` where its lifecycle matches the data.
 - HR-003 static scenario, state, region, culture, and settlement definitions are separate Def types; save state stores only the active scenario DefName and initialization metadata.
 - Cross-scenario inheritance will use a separate, versioned archive format with explicit migration handling; it will not be conflated with the current save's Scribe state.
+
+## Historical technology (HR-008)
+
+- **Historical Core** owns reusable technology categories, prerequisite validation, availability/adoption state, policy checks, and acquisition APIs. Scenario XML Defs provide the starting technology state and history-specific evidence without embedding scenario facts in the service layer.
+- Static historical facts and technology trees use XML `HistoricalTechnologyDef`, `HistoricalTechnologySetupDef`, and ordinary RimWorld `ResearchProjectDef`/`RecipeDef`/`ThingDef` definitions. Saved community progress, access, acquisition source, and game tick use `HistoricalTechnologyGameComponent` with Scribe.
+- Technology availability (`NotYetHistoricallyAvailable`, `ExistsElsewhere`, `LocallyAccessible`) is separate from adoption (`Unknown`, `Known`, `UnderStudy`, `Adopted`). Research checks historical availability, community access, and adopted prerequisites; gaining knowledge does not adopt a technology.
+- Runtime ownership is keyed by Historical `CommunityId`, not `Faction.OfPlayer`. The first scenario setup seeds the player community once; re-entry to an already initialized save does not replace progress.
+- HR-006 events can use `Action_MakeTechnologyAccessible`, `Action_GrantTechnologyKnowledge`, and `Action_AdoptTechnology`. HR-007 can grant community knowledge via the same public manager API; per-character craft-specialty records are not implemented here.
+- Production reuses RimWorld worktables, Bills, skills, and recipe pipelines. The first data slice includes bronze stock and an adze, pottery, and hemp cloth. The input materials are abstract resources; this slice does not add geological deposits or a dedicated hemp crop.
+- Biotech remains the required DLC and continues to own pawn biology, reproduction, and child growth. The historical filter does not patch those systems.
+- Harmony patches are centralized through the existing mod bootstrap. Historical research projects, player buildability, recipe availability/Bill execution, and the vanilla trader-stock maker have verified gates. Every new Harmony patch must remain in the technology patch folder and document its target API.
+- The current policy deliberately does not modify or delete vanilla Defs. It does not yet cover all quest-reward implementations, raid pawn equipment generators, map scatter/world generation, or direct third-party code paths that bypass the patched UI, Bills, or trader-stock maker. Therefore it is a partial historical content filter, not complete removal of modern content.
+- Cross-scenario legacy is planned as a separate, explicitly versioned archive with migrations; current technology state is only part of the active save's Scribe state.
+- The initial chronology deliberately uses broad uncertainty bounds. The Chinese bronze horizon is informed by the Smithsonian National Museum of Asian Art's summary that the earliest Chinese bronze artifacts come from Erlitou and that the fabrication capability was in place by about 1700 BCE ([Bronze Age Casting](https://asia-archive.si.edu/learn/ancient-chinese-bronzes/bronze-age-casting/)). Early iron timing is region-dependent; see the archaeological survey [Invention of cast iron smelting in early China](https://www.sciencedirect.com/science/article/pii/S2667136021000017). These are broad data bounds, not claimed invention dates.
 
 ## DLC and integration boundaries
 

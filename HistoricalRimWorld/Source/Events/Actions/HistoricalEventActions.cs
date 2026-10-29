@@ -3,6 +3,7 @@ using HistoricalRimWorld.Chronicle;
 using HistoricalRimWorld.Events.Conditions;
 using HistoricalRimWorld.Politics;
 using HistoricalRimWorld.Scenarios;
+using HistoricalRimWorld.Technology;
 using HistoricalRimWorld.World;
 using Verse;
 
@@ -156,5 +157,50 @@ namespace HistoricalRimWorld.Events.Actions
                 context.Event.historicalDate, titleKey, descriptionKey, regionId, polityId,
                 context.Event.evidenceLevel, context.Event.sourceNotes, context.Event.category,
                 context.Event.scope, HistoricalEventManager.IsVisible(context.Event), out error);
+    }
+
+    public sealed class Action_MakeTechnologyAccessible : HistoricalEventAction
+    {
+        public string technologyId;
+        public override bool ValidateData(out string error) => ValidateTechnology(out error);
+        public override bool Validate(HistoricalEventContext context, out string error) => ValidateTechnology(out error);
+        public override bool Execute(HistoricalEventContext context, out string error) =>
+            HistoricalTechnologyManager.TryMakeTechnologyAccessible(HistoricalTechnologyManager.GetPlayerCommunityId(), technologyId,
+                HistoricalTechnologyAcquisitionSource.HistoricalEvent, out error);
+        private bool ValidateTechnology(out string error)
+        {
+            if (DefDatabase<HistoricalTechnologyDef>.GetNamedSilentFail(technologyId) == null) { error = "Missing HistoricalTechnologyDef " + technologyId + "."; return false; }
+            error = null; return true;
+        }
+    }
+
+    public sealed class Action_GrantTechnologyKnowledge : HistoricalEventAction
+    {
+        public string technologyId;
+        public override bool ValidateData(out string error) => ValidateTechnology(out error);
+        public override bool Validate(HistoricalEventContext context, out string error) => ValidateTechnology(out error);
+        public override bool Execute(HistoricalEventContext context, out string error) =>
+            HistoricalTechnologyManager.TryGrantTechnologyKnowledge(HistoricalTechnologyManager.GetPlayerCommunityId(), technologyId,
+                HistoricalTechnologyAcquisitionSource.HistoricalEvent, out error);
+        private bool ValidateTechnology(out string error)
+        {
+            if (DefDatabase<HistoricalTechnologyDef>.GetNamedSilentFail(technologyId) == null) { error = "Missing HistoricalTechnologyDef " + technologyId + "."; return false; }
+            error = null; return true;
+        }
+    }
+
+    public sealed class Action_AdoptTechnology : HistoricalEventAction
+    {
+        public string technologyId;
+        public override bool ValidateData(out string error) => ValidateTechnology(out error);
+        public override bool Validate(HistoricalEventContext context, out string error) => ValidateTechnology(out error);
+        public override bool Execute(HistoricalEventContext context, out string error) =>
+            HistoricalTechnologyManager.TryAdoptTechnology(HistoricalTechnologyManager.GetPlayerCommunityId(), technologyId,
+                HistoricalTechnologyAcquisitionSource.HistoricalEvent, out error);
+        private bool ValidateTechnology(out string error)
+        {
+            if (DefDatabase<HistoricalTechnologyDef>.GetNamedSilentFail(technologyId) == null) { error = "Missing HistoricalTechnologyDef " + technologyId + "."; return false; }
+            error = null; return true;
+        }
     }
 }

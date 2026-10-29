@@ -16,7 +16,7 @@ namespace HistoricalRimWorld.Patches.World
             {
                 new Harmony(HarmonyId).PatchAll(Assembly.GetExecutingAssembly());
                 applied = true;
-                Log.Message("[Historical RimWorld] World access and fog patches initialized.");
+                Log.Message("[Historical RimWorld] Centralized world and technology patches initialized.");
             }
             catch (System.Exception exception)
             {

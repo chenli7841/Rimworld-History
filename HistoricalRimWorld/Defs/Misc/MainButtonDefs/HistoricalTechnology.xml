@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MainButtonDef>
+    <defName>HR_MainButton_HistoricalTechnology</defName>
+    <label>HR_Tech_MainTabLabel</label>
+    <description>HR_Tech_MainTabDescription</description>
+    <tabWindowClass>HistoricalRimWorld.UI.MainTabWindow_HistoricalTechnology</tabWindowClass>
+    <order>97</order>
+    <iconPath>UI/Buttons/MainButtons/History</iconPath>
+    <validWithoutMap>true</validWithoutMap>
+  </MainButtonDef>
+</Defs>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Tech_Title>Historical technologies</HR_Tech_Title>
+  <HR_Tech_Inactive>Initialize a historical scenario to use this technology tree.</HR_Tech_Inactive>
+  <HR_Tech_Select>Select a technology to view its status and study options.</HR_Tech_Select>
+  <HR_Tech_Prerequisites>Prerequisites</HR_Tech_Prerequisites>
+  <HR_Tech_Progress>Research progress: {0} / {1}</HR_Tech_Progress>
+  <HR_Tech_BeginStudy>Begin study</HR_Tech_BeginStudy>
+  <HR_Tech_NoResearchProject>This technology is acquired through historical contact or events.</HR_Tech_NoResearchProject>
+  <HR_Tech_MainTabLabel>Technologies</HR_Tech_MainTabLabel>
+  <HR_Tech_MainTabDescription>View historical technology, access, and research.</HR_Tech_MainTabDescription>
+  <HR_Tech_Category_Agriculture>Agriculture</HR_Tech_Category_Agriculture>
+  <HR_Tech_Category_AnimalHusbandry>Animal husbandry</HR_Tech_Category_AnimalHusbandry>
+  <HR_Tech_Category_Metallurgy>Metallurgy</HR_Tech_Category_Metallurgy>
+  <HR_Tech_Category_Pottery>Pottery</HR_Tech_Category_Pottery>
+  <HR_Tech_Category_Woodworking>Woodworking</HR_Tech_Category_Woodworking>
+  <HR_Tech_Category_Textiles>Textiles</HR_Tech_Category_Textiles>
+  <HR_Tech_Category_Architecture>Architecture</HR_Tech_Category_Architecture>
+  <HR_Tech_Category_Military>Military</HR_Tech_Category_Military>
+  <HR_Tech_Category_Medicine>Medicine</HR_Tech_Category_Medicine>
+  <HR_Tech_Category_Writing>Writing</HR_Tech_Category_Writing>
+  <HR_Tech_Category_Transportation>Transportation</HR_Tech_Category_Transportation>
+  <HR_Tech_Category_WaterManagement>Water management</HR_Tech_Category_WaterManagement>
+  <HR_Tech_Category_Commerce>Commerce</HR_Tech_Category_Commerce>
+  <HR_Tech_Category_Other>Other</HR_Tech_Category_Other>
+  <HR_Tech_Availability_NotYetHistoricallyAvailable>Not yet historically available</HR_Tech_Availability_NotYetHistoricallyAvailable>
+  <HR_Tech_Availability_ExistsElsewhere>Exists elsewhere</HR_Tech_Availability_ExistsElsewhere>
+  <HR_Tech_Availability_LocallyAccessible>Locally accessible</HR_Tech_Availability_LocallyAccessible>
+  <HR_Tech_Adoption_Unknown>Unknown</HR_Tech_Adoption_Unknown>
+  <HR_Tech_Adoption_Known>Known</HR_Tech_Adoption_Known>
+  <HR_Tech_Adoption_UnderStudy>Under study</HR_Tech_Adoption_UnderStudy>
+  <HR_Tech_Adoption_Adopted>Adopted</HR_Tech_Adoption_Adopted>
+  <HR_Tech_Chronicle_Title>Technology adopted</HR_Tech_Chronicle_Title>
+  <HR_Tech_Chronicle_Description>A community adopted a historical technology.</HR_Tech_Chronicle_Description>
+</LanguageData>

@@ -5,6 +5,7 @@ using HistoricalRimWorld.Events;
 using HistoricalRimWorld.Genealogy;
 using HistoricalRimWorld.Politics;
 using HistoricalRimWorld.World;
+using HistoricalRimWorld.Technology;
 using Verse;
 
 namespace HistoricalRimWorld.Scenarios
@@ -96,6 +97,7 @@ namespace HistoricalRimWorld.Scenarios
                         }
                         if (!HistoricalEventManager.TryInitializeForScenario(scenario, out error)) return Fail(error);
                         if (!HistoricalGenealogyManager.TryInitializeForScenario(scenario.defName, out error)) return Fail(error);
+                        if (!HistoricalTechnologyManager.TryInitializeForScenario(scenario, out error)) return Fail(error);
                         return true;
                     }
 
@@ -174,6 +176,9 @@ namespace HistoricalRimWorld.Scenarios
 
             if (!HistoricalGenealogyManager.TryInitializeForScenario(scenario.defName, out error))
                 return Fail("Scenario, clock, politics, reveal, and events were initialized, but genealogy could not be initialized: " + error);
+
+            if (!HistoricalTechnologyManager.TryInitializeForScenario(scenario, out error))
+                return Fail("Scenario systems were initialized, but historical technology could not be initialized: " + error);
 
             Log.Message("[Historical RimWorld] Initialized historical scenario " + scenario.defName + ".");
             return true;

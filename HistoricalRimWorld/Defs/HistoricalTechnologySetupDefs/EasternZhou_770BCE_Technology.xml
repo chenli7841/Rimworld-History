@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalTechnologySetupDef>
+    <defName>HR_TechnologySetup_EasternZhou_770BCE</defName>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <communityId>HR_Community_Player_001</communityId>
+    <technologies>
+      <li><technology>HR_Tech_BasicFarming</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_AnimalHusbandry</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_SeedSelection</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_GrainStorage</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_Irrigation</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_CopperMining</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_CopperSmelting</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_BronzeAlloy</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_BronzeCasting</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_BronzeTools</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_EarlyIronworking</technology><availability>ExistsElsewhere</availability><adoption>Unknown</adoption></li>
+      <li><technology>HR_Tech_IronFarmTools</technology><availability>ExistsElsewhere</availability><adoption>Unknown</adoption></li>
+      <li><technology>HR_Tech_Pottery</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_KilnFiring</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_PlantFibres</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_Weaving</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_TimberFraming</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_RammedEarth</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_BowMaking</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_Writing</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_WaterManagement</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_Commerce</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+    </technologies>
+  </HistoricalTechnologySetupDef>
+</Defs>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Tech_Title>历史科技</HR_Tech_Title>
+  <HR_Tech_Inactive>请先初始化历史剧本以使用科技树。</HR_Tech_Inactive>
+  <HR_Tech_Select>选择一项技术查看状态和研究选项。</HR_Tech_Select>
+  <HR_Tech_Prerequisites>前置技术</HR_Tech_Prerequisites>
+  <HR_Tech_Progress>研究进度：{0} / {1}</HR_Tech_Progress>
+  <HR_Tech_BeginStudy>开始研究</HR_Tech_BeginStudy>
+  <HR_Tech_NoResearchProject>此技术通过历史接触或事件获得。</HR_Tech_NoResearchProject>
+  <HR_Tech_MainTabLabel>历史科技</HR_Tech_MainTabLabel>
+  <HR_Tech_MainTabDescription>查看历史技术、传播与研究。</HR_Tech_MainTabDescription>
+  <HR_Tech_Category_Agriculture>农业</HR_Tech_Category_Agriculture>
+  <HR_Tech_Category_AnimalHusbandry>畜牧</HR_Tech_Category_AnimalHusbandry>
+  <HR_Tech_Category_Metallurgy>冶金</HR_Tech_Category_Metallurgy>
+  <HR_Tech_Category_Pottery>陶器</HR_Tech_Category_Pottery>
+  <HR_Tech_Category_Woodworking>木工</HR_Tech_Category_Woodworking>
+  <HR_Tech_Category_Textiles>纺织</HR_Tech_Category_Textiles>
+  <HR_Tech_Category_Architecture>建筑</HR_Tech_Category_Architecture>
+  <HR_Tech_Category_Military>军事</HR_Tech_Category_Military>
+  <HR_Tech_Category_Medicine>医疗</HR_Tech_Category_Medicine>
+  <HR_Tech_Category_Writing>文字</HR_Tech_Category_Writing>
+  <HR_Tech_Category_Transportation>交通</HR_Tech_Category_Transportation>
+  <HR_Tech_Category_WaterManagement>水利</HR_Tech_Category_WaterManagement>
+  <HR_Tech_Category_Commerce>商业</HR_Tech_Category_Commerce>
+  <HR_Tech_Category_Other>其他</HR_Tech_Category_Other>
+  <HR_Tech_Availability_NotYetHistoricallyAvailable>尚未进入可出现的历史时期</HR_Tech_Availability_NotYetHistoricallyAvailable>
+  <HR_Tech_Availability_ExistsElsewhere>已在其他地区出现</HR_Tech_Availability_ExistsElsewhere>
+  <HR_Tech_Availability_LocallyAccessible>当地已有接触渠道</HR_Tech_Availability_LocallyAccessible>
+  <HR_Tech_Adoption_Unknown>未知</HR_Tech_Adoption_Unknown>
+  <HR_Tech_Adoption_Known>已知</HR_Tech_Adoption_Known>
+  <HR_Tech_Adoption_UnderStudy>研究中</HR_Tech_Adoption_UnderStudy>
+  <HR_Tech_Adoption_Adopted>已掌握</HR_Tech_Adoption_Adopted>
+  <HR_Tech_Chronicle_Title>掌握历史技术</HR_Tech_Chronicle_Title>
+  <HR_Tech_Chronicle_Description>一个社区掌握了一项历史技术。</HR_Tech_Chronicle_Description>
+</LanguageData>
