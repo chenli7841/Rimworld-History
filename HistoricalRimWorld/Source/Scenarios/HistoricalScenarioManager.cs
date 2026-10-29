@@ -6,6 +6,9 @@ using HistoricalRimWorld.Genealogy;
 using HistoricalRimWorld.Politics;
 using HistoricalRimWorld.World;
 using HistoricalRimWorld.Technology;
+using HistoricalRimWorld.Culture;
+using HistoricalRimWorld.Rituals;
+using HistoricalRimWorld.Relics;
 using Verse;
 
 namespace HistoricalRimWorld.Scenarios
@@ -98,6 +101,9 @@ namespace HistoricalRimWorld.Scenarios
                         if (!HistoricalEventManager.TryInitializeForScenario(scenario, out error)) return Fail(error);
                         if (!HistoricalGenealogyManager.TryInitializeForScenario(scenario.defName, out error)) return Fail(error);
                         if (!HistoricalTechnologyManager.TryInitializeForScenario(scenario, out error)) return Fail(error);
+                        if (!HistoricalCultureManager.TryInitializeForScenario(scenario, out error)) return Fail(error);
+                        if (!HistoricalRitualManager.TryInitializeForScenario(scenario, out error)) return Fail(error);
+                        if (!HistoricalRelicManager.TryInitializeForScenario(scenario, out error)) return Fail(error);
                         return true;
                     }
 
@@ -179,6 +185,10 @@ namespace HistoricalRimWorld.Scenarios
 
             if (!HistoricalTechnologyManager.TryInitializeForScenario(scenario, out error))
                 return Fail("Scenario systems were initialized, but historical technology could not be initialized: " + error);
+
+            if (!HistoricalCultureManager.TryInitializeForScenario(scenario, out error)
+                || !HistoricalRitualManager.TryInitializeForScenario(scenario, out error)
+                || !HistoricalRelicManager.TryInitializeForScenario(scenario, out error)) return Fail(error);
 
             Log.Message("[Historical RimWorld] Initialized historical scenario " + scenario.defName + ".");
             return true;

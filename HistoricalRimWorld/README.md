@@ -35,6 +35,8 @@ The HR-007 foundation adds the **Historical Genealogy** main tab for saved perso
 
 HR-008 adds a community-scoped ancient technology tree, scenario starting state, research and diffusion APIs, an in-game technology tab, and an initial production slice for copper/bronze, pottery, and hemp cloth. Tech progress uses Scribe and the vanilla ResearchManager, worktables, skill gates, and Bills. Modern-content filtering is intentionally partial: it covers research, buildability, recipes/Bills, and the standard trader stock maker, but not every quest reward, raid, or world-generation route. See [Architecture](Docs/Architecture.md) for the API and limits.
 
+HR-009 adds person, family, and community cultural state; culture/custom/ritual XML data; a culture tab; and planned, cancelable ancestor, funeral/memorial, and hospitality observances. Ritual completion rechecks the gathered Pawns, site, offering, visitor requirement where applicable, and duration. Observances are menu-driven and do not assign ceremony jobs or guarantee attendance. The relic archive stores permanent records/events separately from physical item links; designation, transfer, and loss can be recorded in its tab, while vanilla trade/caravan/theft ownership changes are not automatically intercepted. The first scenario data uses qualified, broad cultural categories rather than exclusive regional stereotypes. In-game Def loading and ceremony/relic lifecycle have not been verified by compilation alone. See [Architecture](Docs/Architecture.md) for persistence boundaries.
+
 ## Build
 
 Build from Windows PowerShell with .NET SDK installed. The project reads the RimWorld installation from `RimWorldDir` (or `RIMWORLD_DIR`) and Harmony from `HarmonyDir` (or `HARMONY_DIR`):

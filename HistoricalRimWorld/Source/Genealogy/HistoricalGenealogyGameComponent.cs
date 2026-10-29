@@ -5,6 +5,7 @@ using HistoricalRimWorld.Calendar;
 using HistoricalRimWorld.Characters;
 using HistoricalRimWorld.Chronicle;
 using HistoricalRimWorld.Lifespan;
+using HistoricalRimWorld.Culture;
 using HistoricalRimWorld.Scenarios;
 using RimWorld;
 using Verse;
@@ -107,6 +108,8 @@ namespace HistoricalRimWorld.Genealogy
             HistoricalPawnIdentity identity = new HistoricalPawnIdentity();
             identity.Initialize(personId, pawn);
             pawnIdentities.Add(identity);
+            HistoricalCultureManager.TryEnsurePerson(personId, out _);
+            if (!string.IsNullOrWhiteSpace(familyId)) HistoricalCultureManager.TryEnsureFamily(familyId, personId, out _);
 
             if (birthSource == HistoricalBirthDateSource.ObservedInGame)
                 LogChronicle("HR_PersonBorn_" + personId, "HR_Genealogy_PersonBornTitle",
@@ -129,8 +132,11 @@ namespace HistoricalRimWorld.Genealogy
             if (type == HistoricalKinshipType.BiologicalParent || type == HistoricalKinshipType.AdoptiveParent)
                 InheritFamily(personIdA, personIdB);
             if (type == HistoricalKinshipType.Spouse)
+            {
+                HistoricalCultureManager.ExchangeByMarriage(personIdA, personIdB);
                 LogChronicle("HR_PersonMarried_" + Guid.NewGuid().ToString("N"), "HR_Genealogy_PersonMarriedTitle",
                     "HR_Genealogy_PersonMarriedDescription", startDate);
+            }
             return true;
         }
 
@@ -352,6 +358,7 @@ namespace HistoricalRimWorld.Genealogy
             FindFamily(child.FamilyId)?.RemoveMember(childId);
             child.SetFamilyId(parent.FamilyId);
             FindFamily(parent.FamilyId)?.AddMember(childId);
+            HistoricalCultureManager.InheritFamilyCulture(parentId, childId);
         }
 
         private void LogChronicle(string entryId, string titleKey, string descriptionKey, HistoricalDate date)

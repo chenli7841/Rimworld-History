@@ -5,7 +5,7 @@
     <label>HR_Tech_MainTabLabel</label>
     <description>HR_Tech_MainTabDescription</description>
     <tabWindowClass>HistoricalRimWorld.UI.MainTabWindow_HistoricalTechnology</tabWindowClass>
-    <order>97</order>
+    <order>98</order>
     <iconPath>UI/Buttons/MainButtons/History</iconPath>
     <validWithoutMap>true</validWithoutMap>
   </MainButtonDef>

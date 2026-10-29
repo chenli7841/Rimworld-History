@@ -204,9 +204,8 @@ namespace HistoricalRimWorld.Scenarios
             if (culture == null) yield break;
             if (!HasHistoricalPrefix(culture.defName)) yield return "defName must use the HR_ prefix.";
 
-            if (culture.traditionIds == null) yield break;
             HashSet<string> seen = new HashSet<string>(StringComparer.Ordinal);
-            foreach (string traditionId in culture.traditionIds)
+            foreach (string traditionId in culture.traditionIds ?? new List<string>())
             {
                 if (string.IsNullOrWhiteSpace(traditionId))
                 {
@@ -216,6 +215,9 @@ namespace HistoricalRimWorld.Scenarios
 
                 if (!seen.Add(traditionId)) yield return "traditionIds contains duplicate " + traditionId + ".";
             }
+            foreach (string error in ValidateOptionalList(culture.relatedCultures, "relatedCultures")) yield return error;
+            foreach (string error in ValidateOptionalList(culture.customs, "customs")) yield return error;
+            foreach (string error in ValidateOptionalList(culture.rituals, "rituals")) yield return error;
         }
 
         public static IEnumerable<string> ValidateSettlement(HistoricalSettlementDef settlement)
@@ -264,6 +266,17 @@ namespace HistoricalRimWorld.Scenarios
                     continue;
                 }
 
+                if (!seen.Add(def.defName)) yield return fieldName + " contains duplicate " + def.defName + ".";
+            }
+        }
+
+        private static IEnumerable<string> ValidateOptionalList<TDef>(List<TDef> defs, string fieldName) where TDef : Def
+        {
+            if (defs == null) yield break;
+            HashSet<string> seen = new HashSet<string>(StringComparer.Ordinal);
+            foreach (TDef def in defs)
+            {
+                if (def == null) { yield return fieldName + " contains an empty Def reference."; continue; }
                 if (!seen.Add(def.defName)) yield return fieldName + " contains duplicate " + def.defName + ".";
             }
         }

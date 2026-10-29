@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs><HistoricalRimWorld.Culture.HistoricalCultureSetupDef>
+  <defName>HR_CultureSetup_EasternZhou_770BCE</defName><scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+  <communityId>HR_Community_Player_001</communityId><dominantCulture>HR_Culture_ZhouCentralPlains</dominantCulture>
+  <culturalPresence><li><culture>HR_Culture_ZhouCentralPlains</culture><familiarity>0.8</familiarity></li><li><culture>HR_Culture_QinRegional</culture><familiarity>0.15</familiarity></li></culturalPresence>
+  <activeCustomIds><li>HR_Custom_Hospitality</li><li>HR_Custom_AncestorCommemoration</li><li>HR_Custom_Funeral</li><li>HR_Custom_SeasonalAgriculture</li><li>HR_Custom_ElderEtiquette</li><li>HR_Custom_GiftExchange</li></activeCustomIds>
+</HistoricalRimWorld.Culture.HistoricalCultureSetupDef></Defs>

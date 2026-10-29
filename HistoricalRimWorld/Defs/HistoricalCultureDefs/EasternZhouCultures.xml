@@ -6,6 +6,9 @@
     <description>HR_Culture_ZhouCentralPlains_Description</description>
     <historicalName>周文化圈（简化分类）</historicalName>
     <culturalDescription>历史时期与地理区域相关的宽泛文化分类，不与现代民族身份等同。</culturalDescription>
+    <relatedCultures><li>HR_Culture_QinRegional</li></relatedCultures>
+    <customs><li>HR_Custom_Hospitality</li><li>HR_Custom_AncestorCommemoration</li><li>HR_Custom_Funeral</li><li>HR_Custom_SeasonalAgriculture</li><li>HR_Custom_ElderEtiquette</li><li>HR_Custom_GiftExchange</li></customs>
+    <rituals><li>HR_Ritual_Ancestor</li><li>HR_Ritual_Funeral</li><li>HR_Ritual_Hospitality</li></rituals>
     <sourceNotes>最小示例；不表示区域内部文化完全统一。</sourceNotes>
     <evidenceLevel>Probable</evidenceLevel>
   </HistoricalRimWorld.Scenarios.HistoricalCultureDef>
@@ -16,6 +19,9 @@
     <description>HR_Culture_QinRegional_Description</description>
     <historicalName>秦地文化分类</historicalName>
     <culturalDescription>供历史数据关联的地区性文化分类，不与现代民族身份等同。</culturalDescription>
+    <relatedCultures><li>HR_Culture_ZhouCentralPlains</li></relatedCultures>
+    <customs><li>HR_Custom_Hospitality</li><li>HR_Custom_AncestorCommemoration</li><li>HR_Custom_Funeral</li><li>HR_Custom_GiftExchange</li></customs>
+    <rituals><li>HR_Ritual_Hospitality</li></rituals>
     <sourceNotes>最小示例；不预设文化融合或习俗传承机制。</sourceNotes>
     <evidenceLevel>Probable</evidenceLevel>
   </HistoricalRimWorld.Scenarios.HistoricalCultureDef>

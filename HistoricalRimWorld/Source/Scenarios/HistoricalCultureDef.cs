@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using HistoricalRimWorld.Culture;
+using HistoricalRimWorld.Rituals;
 using Verse;
 
 namespace HistoricalRimWorld.Scenarios
@@ -8,6 +10,9 @@ namespace HistoricalRimWorld.Scenarios
         public string historicalName;
         public string culturalDescription;
         public List<string> traditionIds;
+        public List<HistoricalCultureDef> relatedCultures;
+        public List<HistoricalCustomDef> customs;
+        public List<HistoricalRitualDef> rituals;
         public string sourceNotes;
         public HistoricalEvidenceLevel evidenceLevel = HistoricalEvidenceLevel.Probable;
 
