@@ -152,4 +152,50 @@
   <HR_World_LockedHover>该地区尚未开放。</HR_World_LockedHover>
   <HR_World_UnexploredHover>该地区可以进入，但详情仍然未知。</HR_World_UnexploredHover>
   <HR_World_LockedSettlement>玩家不能在尚未开放的历史地区建立聚落。</HR_World_LockedSettlement>
+  <HR_Calendar_Year_BCE>公元前{0}年</HR_Calendar_Year_BCE>
+  <HR_Calendar_Year_CE>公元{0}年</HR_Calendar_Year_CE>
+  <HR_Event_WesternZhouCrisis_771BCE_Label>西周王室危机</HR_Event_WesternZhouCrisis_771BCE_Label>
+  <HR_Event_WesternZhouCrisis_771BCE_Description>周幽王死于西部王都动乱，西周统治由此告终。本条记录传统编年中的概况，不会在游戏中重演事件。</HR_Event_WesternZhouCrisis_771BCE_Description>
+  <HR_Event_WesternZhouCrisis_771BCE_SourceNotes>司马迁《史记》卷四《周本纪》，中国哲学书电子化计划文本节点 4615。公元前年份采用传统编年。</HR_Event_WesternZhouCrisis_771BCE_SourceNotes>
+  <HR_Event_ZhouEasternMigration_770BCE_Label>周室东迁</HR_Event_ZhouEasternMigration_770BCE_Label>
+  <HR_Event_ZhouEasternMigration_770BCE_Description>周平王将王室迁至东部洛邑，传统上以此作为东周时期的开端。</HR_Event_ZhouEasternMigration_770BCE_Description>
+  <HR_Event_ZhouEasternMigration_770BCE_SourceNotes>司马迁《史记》卷四《周本纪》，中国哲学书电子化计划平行文本节点 4658。公元前年份采用传统编年。</HR_Event_ZhouEasternMigration_770BCE_SourceNotes>
+  <HR_Event_DebugUnlockHedong_Label>开发示例：开放河东</HR_Event_DebugUnlockHedong_Label>
+  <HR_Event_DebugUnlockHedong_Description>仅用于验证地区解锁接口的开发事件。</HR_Event_DebugUnlockHedong_Description>
+  <HR_Chronicle_MainTabLabel>历史编年史</HR_Chronicle_MainTabLabel>
+  <HR_Chronicle_MainTabDescription>查看已知历史事件与地方经历。</HR_Chronicle_MainTabDescription>
+  <HR_Chronicle_Title>历史编年史</HR_Chronicle_Title>
+  <HR_Chronicle_Inactive>初始化历史剧本后即可查看编年史。</HR_Chronicle_Inactive>
+  <HR_Chronicle_All>全部</HR_Chronicle_All>
+  <HR_Chronicle_FilterType>类型：{0}</HR_Chronicle_FilterType>
+  <HR_Chronicle_FilterCategory>类别：{0}</HR_Chronicle_FilterCategory>
+  <HR_Chronicle_FilterRegion>地区：{0}</HR_Chronicle_FilterRegion>
+  <HR_Chronicle_FilterPolity>政权：{0}</HR_Chronicle_FilterPolity>
+  <HR_Chronicle_Page>第 {0}/{1} 页（{2} 条记录）</HR_Chronicle_Page>
+  <HR_Chronicle_EventStatus>待处理：{0}；已执行：{1}；已跳过：{2}；失败：{3}</HR_Chronicle_EventStatus>
+  <HR_Chronicle_EventFailure>事件 {0} 失败：{1}</HR_Chronicle_EventFailure>
+  <HR_Chronicle_Previous>上一页</HR_Chronicle_Previous>
+  <HR_Chronicle_Next>下一页</HR_Chronicle_Next>
+  <HR_Chronicle_Untitled>未命名的编年史记录</HR_Chronicle_Untitled>
+  <HR_Chronicle_NoDescription>没有可用描述。</HR_Chronicle_NoDescription>
+  <HR_Chronicle_NoSource>未注明来源</HR_Chronicle_NoSource>
+  <HR_Chronicle_Metadata>{0} · 可信度：{1} · 来源：{2}</HR_Chronicle_Metadata>
+  <HR_Chronicle_Type_AttestedHistory>有史料支持的历史</HR_Chronicle_Type_AttestedHistory>
+  <HR_Chronicle_Type_LocalExperience>地方经历</HR_Chronicle_Type_LocalExperience>
+  <HR_Chronicle_Type_InferredLegacy>推演的传承</HR_Chronicle_Type_InferredLegacy>
+  <HR_Chronicle_Category_Political>政治</HR_Chronicle_Category_Political>
+  <HR_Chronicle_Category_Military>军事</HR_Chronicle_Category_Military>
+  <HR_Chronicle_Category_Diplomatic>外交</HR_Chronicle_Category_Diplomatic>
+  <HR_Chronicle_Category_Cultural>文化</HR_Chronicle_Category_Cultural>
+  <HR_Chronicle_Category_Economic>经济</HR_Chronicle_Category_Economic>
+  <HR_Chronicle_Category_Migration>迁徙</HR_Chronicle_Category_Migration>
+  <HR_Chronicle_Category_Disaster>灾害</HR_Chronicle_Category_Disaster>
+  <HR_Chronicle_Category_Discovery>发现</HR_Chronicle_Category_Discovery>
+  <HR_Chronicle_Category_Other>其他</HR_Chronicle_Category_Other>
+  <HR_Chronicle_Evidence_WellAttested>史料确证</HR_Chronicle_Evidence_WellAttested>
+  <HR_Chronicle_Evidence_Probable>较可信</HR_Chronicle_Evidence_Probable>
+  <HR_Chronicle_Evidence_Disputed>存在争议</HR_Chronicle_Evidence_Disputed>
+  <HR_Chronicle_Evidence_Speculative>推测</HR_Chronicle_Evidence_Speculative>
+  <HR_Chronicle_BCE>公元前</HR_Chronicle_BCE>
+  <HR_Chronicle_CE>公元</HR_Chronicle_CE>
 </LanguageData>

@@ -9,6 +9,11 @@ namespace HistoricalRimWorld.Calendar
         public int? Day;
         public HistoricalDatePrecision Precision;
 
+        public HistoricalDateReference()
+        {
+            Precision = HistoricalDatePrecision.Year;
+        }
+
         public HistoricalDateReference(
             int astronomicalYear,
             int? month,

@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using HistoricalRimWorld.Calendar;
+using HistoricalRimWorld.Events;
 using HistoricalRimWorld.Politics;
 using HistoricalRimWorld.World;
 using Verse;
@@ -92,6 +93,7 @@ namespace HistoricalRimWorld.Scenarios
                         {
                             return Fail(error);
                         }
+                        if (!HistoricalEventManager.TryInitializeForScenario(scenario, out error)) return Fail(error);
                         return true;
                     }
 
@@ -139,6 +141,8 @@ namespace HistoricalRimWorld.Scenarios
                 return Fail(error);
             }
 
+            if (!HistoricalEventManager.ValidateScenarioDefinitions(scenario, out error)) return Fail(error);
+
             if (!calendarComponent.TryInitializeCalendar(startDate))
             {
                 error = "The historical clock could not be initialized.";
@@ -159,6 +163,11 @@ namespace HistoricalRimWorld.Scenarios
             if (!HistoricalWorldRevealManager.TryCommitScenarioInitialization(revealPlan, out error))
             {
                 return Fail("Scenario and clock were initialized, but world reveal setup could not be committed: " + error);
+            }
+
+            if (!HistoricalEventManager.TryInitializeForScenario(scenario, out error))
+            {
+                return Fail("Scenario, clock, politics, and reveal state were initialized, but the event engine could not be initialized: " + error);
             }
 
             Log.Message("[Historical RimWorld] Initialized historical scenario " + scenario.defName + ".");

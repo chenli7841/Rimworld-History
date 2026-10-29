@@ -40,5 +40,7 @@ namespace HistoricalRimWorld.Politics
             militaryOccupierId = occupierId;
             isContested = contested;
         }
+
+        internal void SetNominalOwner(string ownerId) => nominalOwnerId = ownerId;
     }
 }

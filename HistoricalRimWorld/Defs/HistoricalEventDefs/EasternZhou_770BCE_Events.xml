@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Events.HistoricalEventDef>
+    <defName>HR_Event_WesternZhouCrisis_771BCE</defName>
+    <label>HR_Event_WesternZhouCrisis_771BCE_Label</label>
+    <description>HR_Event_WesternZhouCrisis_771BCE_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <historicalDate>
+      <astronomicalYear>-770</astronomicalYear>
+      <precision>Year</precision>
+    </historicalDate>
+    <category>Political</category>
+    <scope>World</scope>
+    <priority>100</priority>
+    <activationMode>InitialBackground</activationMode>
+    <visibility>Public</visibility>
+    <notificationPolicy>ChronicleOnly</notificationPolicy>
+    <evidenceLevel>Probable</evidenceLevel>
+    <sourceNotes>HR_Event_WesternZhouCrisis_771BCE_SourceNotes</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalEventDef>
+
+  <HistoricalRimWorld.Events.HistoricalEventDef>
+    <defName>HR_Event_ZhouEasternMigration_770BCE</defName>
+    <label>HR_Event_ZhouEasternMigration_770BCE_Label</label>
+    <description>HR_Event_ZhouEasternMigration_770BCE_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <historicalDate>
+      <astronomicalYear>-769</astronomicalYear>
+      <precision>Year</precision>
+    </historicalDate>
+    <category>Political</category>
+    <scope>World</scope>
+    <regionId>HR_Region_Luoyi</regionId>
+    <polityId>HR_State_EasternZhou</polityId>
+    <priority>100</priority>
+    <activationMode>InitialBackground</activationMode>
+    <visibility>Public</visibility>
+    <notificationPolicy>ChronicleOnly</notificationPolicy>
+    <evidenceLevel>Probable</evidenceLevel>
+    <sourceNotes>HR_Event_ZhouEasternMigration_770BCE_SourceNotes</sourceNotes>
+  </HistoricalRimWorld.Events.HistoricalEventDef>
+
+  <HistoricalRimWorld.Events.HistoricalEventDef>
+    <defName>HR_Event_DebugUnlockHedong</defName>
+    <label>HR_Event_DebugUnlockHedong_Label</label>
+    <description>HR_Event_DebugUnlockHedong_Description</description>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <historicalDate>
+      <astronomicalYear>-768</astronomicalYear>
+      <precision>Year</precision>
+    </historicalDate>
+    <category>Other</category>
+    <scope>Region</scope>
+    <regionId>HR_Region_Hedong</regionId>
+    <priority>300</priority>
+    <activationMode>DevelopmentOnly</activationMode>
+    <visibility>Public</visibility>
+    <notificationPolicy>ChronicleOnly</notificationPolicy>
+    <evidenceLevel>Speculative</evidenceLevel>
+    <recordInChronicle>false</recordInChronicle>
+    <sourceNotes>仅供开发验证区域解锁接口，不代表史实。</sourceNotes>
+    <actions>
+      <li Class="HistoricalRimWorld.Events.Actions.Action_UnlockRegion">
+        <regionId>HR_Region_Hedong</regionId>
+      </li>
+    </actions>
+  </HistoricalRimWorld.Events.HistoricalEventDef>
+</Defs>

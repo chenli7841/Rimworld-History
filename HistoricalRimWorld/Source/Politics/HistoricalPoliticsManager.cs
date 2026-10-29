@@ -186,6 +186,28 @@ namespace HistoricalRimWorld.Politics
             return true;
         }
 
+        public static bool TryChangeRegionNominalOwner(
+            string regionId,
+            string newOwnerId,
+            HistoricalPoliticalChangeSource source,
+            out string error)
+        {
+            error = null;
+            if (!CanChangeWorldPolitics(source, out error)) return false;
+            HistoricalPoliticsGameComponent component = GetInitializedComponent();
+            HistoricalRegionPoliticalState region = component?.FindRegion(regionId);
+            if (region == null) return Reject("Unknown historical region " + regionId + ".", out error);
+            if (!IsUsablePolity(component, newOwnerId)) return Reject("Nominal owner must be an active historical polity or null.", out error);
+            if (region.NominalOwnerId == newOwnerId) return true;
+
+            HistoricalPoliticalChangeRecord change;
+            if (!TryCreateChange(component, regionId, "RegionNominalOwnerChanged",
+                "owner=" + Value(region.NominalOwnerId), "owner=" + Value(newOwnerId), source, out change, out error)) return false;
+            region.SetNominalOwner(newOwnerId);
+            component.AddChange(change);
+            return true;
+        }
+
         public static bool TryChangeDomainController(
             string domainId,
             string newControllerId,

@@ -55,6 +55,11 @@ namespace HistoricalRimWorld.World
 
         public static bool TryUnlockRegion(string regionId, HistoricalRevealSource source, out string error)
         {
+            return TryUnlockRegion(regionId, source, true, out error);
+        }
+
+        public static bool TryUnlockRegion(string regionId, HistoricalRevealSource source, bool notifyPlayer, out string error)
+        {
             error = null;
             if (!CanChangeAccess(source, true, out error)) return false;
             HistoricalWorldRevealWorldComponent component = GetInitializedComponent();
@@ -65,11 +70,16 @@ namespace HistoricalRimWorld.World
             if (state.Access != HistoricalRegionAccess.Locked) return true;
 
             if (!component.ChangeAccess(regionId, HistoricalRegionAccess.Unexplored, source, false, out error)) return false;
-            NotifyRegionUnlocked(regionId);
+            if (notifyPlayer) NotifyRegionUnlocked(regionId);
             return true;
         }
 
         public static bool TryRevealRegion(string regionId, HistoricalRevealSource source, out string error)
+        {
+            return TryRevealRegion(regionId, source, true, out error);
+        }
+
+        public static bool TryRevealRegion(string regionId, HistoricalRevealSource source, bool notifyPlayer, out string error)
         {
             error = null;
             if (!CanChangeAccess(source, false, out error)) return false;
@@ -84,7 +94,7 @@ namespace HistoricalRimWorld.World
             bool wasUnexplored = state.Access == HistoricalRegionAccess.Unexplored;
             if (!component.ChangeAccess(regionId, HistoricalRegionAccess.Revealed, source,
                 source == HistoricalRevealSource.Exploration, out error)) return false;
-            if (wasUnexplored) NotifyRegionRevealed(regionId);
+            if (wasUnexplored && notifyPlayer) NotifyRegionRevealed(regionId);
             return true;
         }
 
