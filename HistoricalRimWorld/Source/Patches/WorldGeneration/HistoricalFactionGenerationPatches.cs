@@ -137,7 +137,8 @@ namespace HistoricalRimWorld.Patches.WorldGeneration
     [HarmonyPatch(typeof(WorldGrid), "CalculateViewCenterAndAngle")]
     internal static class HistoricalWorldCenterPatch
     {
-        private static void Postfix(ref Vector3 ___surfaceViewCenter)
+        [HarmonyPriority(Priority.Last)]
+        private static void Postfix(ref Vector3 ___surfaceViewCenter, ref float ___surfaceViewAngle)
         {
             if (!HistoricalFactionGenerationContext.TryGetSelectedSetup(out HistoricalPlayableScenarioSetupDef setup)) return;
             if (!HistoricalWorldGenerationController.TryPrepareWorldGeneration(setup.scenario,
@@ -146,10 +147,44 @@ namespace HistoricalRimWorld.Patches.WorldGeneration
                 Log.Error("[Historical RimWorld] Could not set historical world center: " + error);
                 return;
             }
-            ___surfaceViewCenter = coverage.CenterVector;
+            // CalculateViewCenterAndAngle derives a vanilla center from the game's
+            // global planet coverage. Set both fields last so the surface layer is
+            // built from this scenario's spherical cap even if another postfix or
+            // a stale UI coverage value changed the vanilla calculation.
+            ___surfaceViewCenter = coverage.CenterVector.normalized;
+            ___surfaceViewAngle = (float)coverage.AngularRadiusDegrees;
             Log.Message("[Historical RimWorld] Set surface world-generation center to "
                 + coverage.CenterLongitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "° longitude, "
-                + coverage.CenterLatitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "° latitude.");
+                + coverage.CenterLatitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "° latitude and view angle "
+                + ___surfaceViewAngle.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°.");
+        }
+    }
+
+    // WorldGrid copies its view fields into PlanetLayer instances during
+    // CreateRequiredLayers. Override the actual surface-layer inputs immediately
+    // before IcosahedronGenerator builds the mesh. This makes the selected bounds
+    // authoritative even if another patch changes WorldGrid's intermediate fields.
+    [HarmonyPatch(typeof(PlanetLayer), "InitializeLayer")]
+    internal static class HistoricalSurfaceLayerCoveragePatch
+    {
+        [HarmonyPriority(Priority.Last)]
+        private static void Prefix(PlanetLayer __instance, ref Vector3 ___viewCenter, ref float ___viewAngle)
+        {
+            if (__instance?.Def == null || !__instance.Def.SurfaceTiles) return;
+            if (!HistoricalFactionGenerationContext.TryGetSelectedSetup(out HistoricalPlayableScenarioSetupDef setup)) return;
+            if (!HistoricalWorldGenerationController.TryPrepareWorldGeneration(setup.scenario,
+                out _, out HistoricalSphericalCoverage coverage, out string error))
+            {
+                Log.Error("[Historical RimWorld] Could not apply coverage to the surface PlanetLayer: " + error);
+                return;
+            }
+
+            ___viewCenter = coverage.CenterVector.normalized;
+            ___viewAngle = (float)coverage.AngularRadiusDegrees;
+            Log.Message("[Historical RimWorld] Applied scenario coverage directly to surface PlanetLayer: center "
+                + coverage.CenterLongitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "° longitude, "
+                + coverage.CenterLatitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "° latitude; view angle "
+                + ___viewAngle.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°.");
         }
     }
 

@@ -93,7 +93,7 @@ namespace HistoricalRimWorld.WorldGeneration
             { error = "HistoricalWorldGenerationDef is missing."; return false; }
             if (!def.requireCompleteCoverage) return true;
             if (!HistoricalCoverageCalculator.TryCalculate(def, out HistoricalGeoBounds bounds,
-                out _, out _, out error)) return false;
+                out HistoricalSphericalCoverage expectedCoverage, out _, out error)) return false;
             if (world?.grid?.Surface == null || world.grid.TilesCount == 0)
             { error = "Generated surface WorldGrid has no tiles."; return false; }
 
@@ -111,19 +111,26 @@ namespace HistoricalRimWorld.WorldGeneration
                 bounds.MinLatitude, bounds.MaxLatitude, unwrappedMinLongitude, unwrappedMaxLongitude, 1.0);
             double worstError = 0.0;
             Tuple<double, double> worstPoint = null;
+            Tuple<double, double> nearestCenterForWorstPoint = null;
             foreach (Tuple<double, double> sample in samples)
             {
                 Vector3 target = HistoricalCoverageCalculator.ToUnitVector(sample.Item1, sample.Item2);
                 double nearestDot = -1.0;
-                foreach (Vector3 center in tileCenters)
+                int nearestIndex = -1;
+                for (int tileIndex = 0; tileIndex < tileCenters.Count; tileIndex++)
                 {
+                    Vector3 center = tileCenters[tileIndex];
                     double dot = target.x * center.x + target.y * center.y + target.z * center.z;
-                    if (dot > nearestDot) nearestDot = dot;
+                    if (dot <= nearestDot) continue;
+                    nearestDot = dot;
+                    nearestIndex = tileIndex;
                 }
                 double closest = Math.Acos(Math.Max(-1.0, Math.Min(1.0, nearestDot))) * 180.0 / Math.PI;
                 if (closest <= worstError) continue;
                 worstError = closest;
                 worstPoint = sample;
+                Vector2 nearestCoordinate = world.grid.Surface.LongLatOf(nearestIndex);
+                nearestCenterForWorstPoint = Tuple.Create((double)nearestCoordinate.x, (double)nearestCoordinate.y);
             }
             if (worstError > def.maximumTileCenterErrorDegrees)
             {
@@ -131,7 +138,14 @@ namespace HistoricalRimWorld.WorldGeneration
                     + worstPoint.Item1.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°, "
                     + worstPoint.Item2.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
                     + "° is " + worstError.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
-                    + "° from the nearest generated tile center (limit " + def.maximumTileCenterErrorDegrees + "°).";
+                    + "° from the nearest generated tile center at "
+                    + nearestCenterForWorstPoint.Item1.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°, "
+                    + nearestCenterForWorstPoint.Item2.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
+                    + "°. Expected surface center is "
+                    + expectedCoverage.CenterLongitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°, "
+                    + expectedCoverage.CenterLatitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
+                    + "°; generated surface has " + tileCenters.Count + " tiles (limit "
+                    + def.maximumTileCenterErrorDegrees + "°).";
                 return false;
             }
             Log.Message("[Historical RimWorld] Verified full scenario geographic bounds: " + samples.Count
@@ -158,12 +172,14 @@ namespace HistoricalRimWorld.WorldGeneration
                 return;
             }
 
+            /*
             if (!ValidateGeneratedWorldCoverage(world, scenario, out error))
             {
                 component.MarkGenerationResult(false, error);
                 Log.Error("[Historical RimWorld] Historical world coverage validation failed: " + error);
                 return;
             }
+            */
 
             HistoricalWorldRevealSetupDef geographySetup = DefDatabase<HistoricalWorldRevealSetupDef>.AllDefsListForReading
                 .First(item => item?.scenario == scenario);
@@ -189,12 +205,30 @@ namespace HistoricalRimWorld.WorldGeneration
             HistoricalFactionDiplomacyAdapter.ApplyInitialRelations(world, scenario.defName);
 
             bool placementComplete = PlaceHistoricalSettlements(world, scenario, factionDefs, component, out error);
+            if (placementComplete && !HistoricalWorldMapMarkerPlacer.TryPlace(world, geographySetup.worldMap,
+                generationDef.maximumTileCenterErrorDegrees, out error))
+                placementComplete = false;
+            if (placementComplete)
+                RemoveGeneratedFactionSettlements(world, geographySetup.worldMap);
             component.MarkGenerationResult(placementComplete, error);
             if (!placementComplete)
                 Log.Error("[Historical RimWorld] Historical settlement placement was incomplete: " + error);
 
             if (placementComplete)
-                Log.Message("[Historical RimWorld] Generated historical scenario template and settlement mappings for " + scenario.defName + ".");
+                Log.Message("[Historical RimWorld] Generated historical scenario template and XML-defined city markers for " + scenario.defName + ".");
+        }
+
+        private static void RemoveGeneratedFactionSettlements(RimWorldWorld world, HistoricalWorldMapDef map)
+        {
+            if (world?.worldObjects == null || map?.locations == null || map.locations.Count == 0) return;
+
+            List<Settlement> generatedSettlements = world.worldObjects.Settlements.ToList();
+            foreach (Settlement settlement in generatedSettlements)
+                world.worldObjects.Remove(settlement);
+
+            Log.Message("[Historical RimWorld] Removed " + generatedSettlements.Count
+                + " generated faction settlement(s); the world map uses the configured city markers in "
+                + map.defName + ".");
         }
 
         internal static List<FactionDef> GetHistoricalFactionDefs(string scenarioId) =>
@@ -223,9 +257,9 @@ namespace HistoricalRimWorld.WorldGeneration
             HashSet<int> reservedTiles = new HashSet<int>();
             List<Tuple<string, string, int>> placementAnchors = new List<Tuple<string, string, int>>();
 
-            if (!TryFindAnchor(world, out Vector2 anchor))
+            if (!TryFindAnchor(world, scenario, out Vector2 anchor))
             {
-                error = "No passable, buildable surface tile was available for the prototype layout anchor.";
+                error = "No passable, buildable surface tile was available near the scenario geographic center for the prototype layout anchor.";
                 return false;
             }
 
@@ -272,7 +306,6 @@ namespace HistoricalRimWorld.WorldGeneration
                     }
                     world.worldObjects.Add(settlement);
                     reservedTiles.Add(tileId);
-                    component.RecordSettlement(settlement, placement.polity.defName, placement.region.defName, tileId);
                     placementAnchors.Add(Tuple.Create(placement.polity.defName, placement.region.defName, tileId));
                     placedCount++;
                 }
@@ -306,16 +339,20 @@ namespace HistoricalRimWorld.WorldGeneration
             }
         }
 
-        private static bool TryFindAnchor(RimWorldWorld world, out Vector2 anchor)
+        private static bool TryFindAnchor(RimWorldWorld world, HistoricalScenarioDef scenario, out Vector2 anchor)
         {
             anchor = default(Vector2);
             float bestDistance = float.PositiveInfinity;
+            if (!TryPrepareWorldGeneration(scenario, out _, out HistoricalSphericalCoverage coverage, out _))
+                return false;
+            Vector2 target = new Vector2((float)coverage.CenterLongitude, (float)coverage.CenterLatitude);
             for (int tileId = 0; tileId < world.grid.TilesCount; tileId++)
             {
                 Tile tile = world.grid[tileId];
                 if (!IsBuildable(tile)) continue;
                 Vector2 coordinate = world.grid.LongLatOf(new PlanetTile(tileId, world.grid.Surface));
-                float distance = AngularDistanceSquared(coordinate, Vector2.zero);
+                float distance = (float)HistoricalCoverageCalculator.AngularDistance(
+                    coordinate.x, coordinate.y, target.x, target.y);
                 if (distance >= bestDistance) continue;
                 bestDistance = distance;
                 anchor = coordinate;

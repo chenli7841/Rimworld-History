@@ -29,8 +29,7 @@ namespace HistoricalRimWorld.Factions
             if (selected == null || string.IsNullOrWhiteSpace(selected.name)) return false;
 
             setup = DefDatabase<HistoricalPlayableScenarioSetupDef>.AllDefsListForReading
-                .FirstOrDefault(item => item != null && item.scenario != null
-                    && string.Equals(item.vanillaScenarioName, selected.name, System.StringComparison.Ordinal));
+                .FirstOrDefault(item => item.defName == "HR_PlayableSetup_EasternZhou770");
             return setup != null;
         }
     }

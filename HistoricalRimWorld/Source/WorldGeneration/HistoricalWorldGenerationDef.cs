@@ -80,9 +80,9 @@ namespace HistoricalRimWorld.WorldGeneration
                 double lon = CenterLongitude * Math.PI / 180.0;
                 double cosLat = Math.Cos(lat);
                 return new UnityEngine.Vector3(
-                    (float)(-Math.Sin(lon) * cosLat),
+                    (float)(Math.Sin(lon) * cosLat),
                     (float)Math.Sin(lat),
-                    (float)(Math.Cos(lon) * cosLat));
+                    (float)(-Math.Cos(lon) * cosLat));
             }
         }
     }

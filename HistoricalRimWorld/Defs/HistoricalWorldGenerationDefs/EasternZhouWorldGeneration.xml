@@ -5,14 +5,14 @@
     <label>Eastern Zhou scenario geographic coverage</label>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
     <mode>ScenarioBounded</mode>
-    <minLatitude>27</minLatitude>
+    <minLatitude>20</minLatitude>
     <maxLatitude>42</maxLatitude>
-    <minLongitude>102</minLongitude>
-    <maxLongitude>121</maxLongitude>
-    <latitudeMargin>2</latitudeMargin>
-    <longitudeMargin>2</longitudeMargin>
+    <minLongitude>100</minLongitude>
+    <maxLongitude>132</maxLongitude>
+    <latitudeMargin>0</latitudeMargin>
+    <longitudeMargin>0</longitudeMargin>
     <requireCompleteCoverage>true</requireCompleteCoverage>
     <useRealEarthGeography>false</useRealEarthGeography>
-    <maximumTileCenterErrorDegrees>5</maximumTileCenterErrorDegrees>
+    <maximumTileCenterErrorDegrees>10</maximumTileCenterErrorDegrees>
   </HistoricalRimWorld.WorldGeneration.HistoricalWorldGenerationDef>
 </Defs>

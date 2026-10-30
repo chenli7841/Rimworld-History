@@ -59,15 +59,15 @@
     </pawnGroupMakers>
   </FactionDef>
 
-  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_EasternZhou</defName><label>周王室</label><fixedName>周王室</fixedName><description>东周初年的王室政权。</description><leaderTitle>周王</leaderTitle></FactionDef>
-  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Zheng</defName><label>郑国</label><fixedName>郑国</fixedName><description>东周初年的郑国。</description><leaderTitle>郑伯</leaderTitle></FactionDef>
-  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Jin</defName><label>晋国</label><fixedName>晋国</fixedName><description>东周初年的晋国，尚未分裂为韩、赵、魏。</description><leaderTitle>晋侯</leaderTitle></FactionDef>
-  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Qin</defName><label>秦国</label><fixedName>秦国</fixedName><description>东周初年经营关中西部的秦国。</description><leaderTitle>秦侯</leaderTitle></FactionDef>
-  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Qi</defName><label>齐国</label><fixedName>齐国</fixedName><description>东周初年的齐国。</description><leaderTitle>齐侯</leaderTitle></FactionDef>
-  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Lu</defName><label>鲁国</label><fixedName>鲁国</fixedName><description>东周初年的鲁国。</description><leaderTitle>鲁侯</leaderTitle></FactionDef>
-  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Song</defName><label>宋国</label><fixedName>宋国</fixedName><description>东周初年的宋国。</description><leaderTitle>宋公</leaderTitle></FactionDef>
-  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Wei</defName><label>卫国</label><fixedName>卫国</fixedName><description>东周初年的卫国。</description><leaderTitle>卫侯</leaderTitle></FactionDef>
-  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Chu</defName><label>楚国</label><fixedName>楚国</fixedName><description>东周初年的楚国；此配置不套用战国末期疆域。</description><leaderTitle>楚子</leaderTitle></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_EasternZhou</defName><label>周王室</label><fixedName>周王室</fixedName><description>东周初年的王室政权。</description><leaderTitle>周王</leaderTitle><colorSpectrum><li>(0.88, 0.63, 0.16)</li><li>(0.88, 0.63, 0.16)</li></colorSpectrum></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Zheng</defName><label>郑国</label><fixedName>郑国</fixedName><description>东周初年的郑国。</description><leaderTitle>郑伯</leaderTitle><colorSpectrum><li>(0.82, 0.20, 0.18)</li><li>(0.82, 0.20, 0.18)</li></colorSpectrum></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Jin</defName><label>晋国</label><fixedName>晋国</fixedName><description>东周初年的晋国，尚未分裂为韩、赵、魏。</description><leaderTitle>晋侯</leaderTitle><colorSpectrum><li>(0.20, 0.43, 0.86)</li><li>(0.20, 0.43, 0.86)</li></colorSpectrum></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Qin</defName><label>秦国</label><fixedName>秦国</fixedName><description>东周初年经营关中西部的秦国。</description><leaderTitle>秦侯</leaderTitle><colorSpectrum><li>(0.42, 0.62, 0.24)</li><li>(0.42, 0.62, 0.24)</li></colorSpectrum></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Qi</defName><label>齐国</label><fixedName>齐国</fixedName><description>东周初年的齐国。</description><leaderTitle>齐侯</leaderTitle><colorSpectrum><li>(0.92, 0.43, 0.14)</li><li>(0.92, 0.43, 0.14)</li></colorSpectrum></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Lu</defName><label>鲁国</label><fixedName>鲁国</fixedName><description>东周初年的鲁国。</description><leaderTitle>鲁侯</leaderTitle><colorSpectrum><li>(0.10, 0.67, 0.49)</li><li>(0.10, 0.67, 0.49)</li></colorSpectrum></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Song</defName><label>宋国</label><fixedName>宋国</fixedName><description>东周初年的宋国。</description><leaderTitle>宋公</leaderTitle><colorSpectrum><li>(0.12, 0.68, 0.85)</li><li>(0.12, 0.68, 0.85)</li></colorSpectrum></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Wei</defName><label>卫国</label><fixedName>卫国</fixedName><description>东周初年的卫国。</description><leaderTitle>卫侯</leaderTitle><colorSpectrum><li>(0.83, 0.31, 0.55)</li><li>(0.83, 0.31, 0.55)</li></colorSpectrum></FactionDef>
+  <FactionDef ParentName="HR_EasternZhouFactionBase"><defName>HR_Faction_Chu</defName><label>楚国</label><fixedName>楚国</fixedName><description>东周初年的楚国；此配置不套用战国末期疆域。</description><leaderTitle>楚子</leaderTitle><colorSpectrum><li>(0.56, 0.31, 0.80)</li><li>(0.56, 0.31, 0.80)</li></colorSpectrum></FactionDef>
 
   <!-- Hidden historical hostile source for generic tribal raids; never shown as a selectable state. -->
   <FactionDef ParentName="HR_EasternZhouFactionBase">

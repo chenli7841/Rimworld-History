@@ -88,7 +88,9 @@ namespace HistoricalRimWorld.WorldGeneration
             { error = "The scenario bounds do not have a stable spherical center."; return false; }
             x /= length; y /= length; z /= length;
             double centerLat = Math.Asin(Math.Max(-1.0, Math.Min(1.0, y))) * 180.0 / Math.PI;
-            double centerLon = NormalizeLongitude(Math.Atan2(-x, z) * 180.0 / Math.PI);
+            // RimWorld 1.6 PlanetLayer.LongLatOf derives longitude as
+            // Atan2(vector.x, -vector.z), so use the matching inverse here.
+            double centerLon = NormalizeLongitude(Math.Atan2(x, -z) * 180.0 / Math.PI);
             double radius = samples.Max(p => AngularDistance(centerLon, centerLat, p.Item1, p.Item2)) + TileSafetyMarginDegrees;
             if (radius > 180.0)
             { error = "Expanded scenario bounds cannot fit within a spherical cap."; return false; }
@@ -137,17 +139,17 @@ namespace HistoricalRimWorld.WorldGeneration
         {
             const double radians = Math.PI / 180.0;
             double lat = latitude * radians, lon = longitude * radians, cosLat = Math.Cos(lat);
-            return new UnityEngine.Vector3((float)(-Math.Sin(lon) * cosLat),
-                (float)Math.Sin(lat), (float)(Math.Cos(lon) * cosLat));
+            return new UnityEngine.Vector3((float)(Math.Sin(lon) * cosLat),
+                (float)Math.Sin(lat), (float)(-Math.Cos(lon) * cosLat));
         }
 
         private static void Vector(double longitude, double latitude, out double x, out double y, out double z)
         {
             const double radians = Math.PI / 180.0;
             double lat = latitude * radians, lon = longitude * radians, cosLat = Math.Cos(lat);
-            x = -Math.Sin(lon) * cosLat;
+            x = Math.Sin(lon) * cosLat;
             y = Math.Sin(lat);
-            z = Math.Cos(lon) * cosLat;
+            z = -Math.Cos(lon) * cosLat;
         }
 
         private static double NormalizeLongitude(double longitude)

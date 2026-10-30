@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorldObjectDef>
+    <defName>HR_MapMarker_Town</defName>
+    <label>历史乡镇示例</label>
+    <description>Historical map marker for a small town.</description>
+    <worldObjectClass>HistoricalRimWorld.World.HistoricalMapLocationWorldObject</worldObjectClass>
+    <texture>World/WorldObjects/Camp</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/Camp</expandingIconTexture>
+    <expandingIconPriority>80</expandingIconPriority>
+    <canHaveMap>false</canHaveMap>
+  </WorldObjectDef>
+
+  <WorldObjectDef>
+    <defName>HR_MapMarker_City</defName>
+    <label>历史大城市示例</label>
+    <description>Historical map marker for a major walled city.</description>
+    <worldObjectClass>HistoricalRimWorld.World.HistoricalMapLocationWorldObject</worldObjectClass>
+    <texture>World/WorldObjects/DefaultSettlement</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
+    <expandingIconPriority>80</expandingIconPriority>
+    <canHaveMap>false</canHaveMap>
+  </WorldObjectDef>
+</Defs>
