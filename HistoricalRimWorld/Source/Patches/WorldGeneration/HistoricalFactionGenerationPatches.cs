@@ -10,10 +10,20 @@ using HistoricalRimWorld.WorldGeneration;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
+using UnityEngine;
 using RimWorldWorld = RimWorld.Planet.World;
 
 namespace HistoricalRimWorld.Patches.WorldGeneration
 {
+    [HarmonyPatch(typeof(Page_SelectScenario), nameof(Page_SelectScenario.BeginScenarioConfiguration))]
+    internal static class HistoricalScenarioSelectionContextPatch
+    {
+        private static void Prefix(Scenario scen)
+        {
+            HistoricalFactionGenerationContext.CaptureSelectedScenario(scen);
+        }
+    }
+
     [HarmonyPatch]
     internal static class HistoricalFactionSelectionPatch
     {
@@ -36,12 +46,48 @@ namespace HistoricalRimWorld.Patches.WorldGeneration
         }
     }
 
+    [HarmonyPatch(typeof(Page_CreateWorldParams), nameof(Page_CreateWorldParams.DoWindowContents))]
+    internal static class HistoricalAutomaticCoverageUiPatch
+    {
+        private static void Prefix(ref float ___planetCoverage)
+        {
+            if (!HistoricalFactionGenerationContext.TryGetSelectedSetup(out HistoricalPlayableScenarioSetupDef setup)) return;
+            if (!HistoricalWorldGenerationController.TryPrepareWorldGeneration(setup.scenario,
+                out float requiredCoverage, out _, out string error))
+            {
+                Log.Error("[Historical RimWorld] Could not update the displayed historical coverage: " + error);
+                return;
+            }
+            ___planetCoverage = requiredCoverage;
+        }
+    }
+
     [HarmonyPatch(typeof(WorldGenerator), nameof(WorldGenerator.GenerateWorld))]
     internal static class HistoricalWorldGenerationPatch
     {
-        private static void Prefix(ref List<FactionDef> factions)
+        private static void Prefix(ref float planetCoverage, ref string seedString, ref List<FactionDef> factions)
         {
             if (!HistoricalFactionGenerationContext.TryGetSelectedSetup(out HistoricalPlayableScenarioSetupDef setup)) return;
+
+            if (HistoricalWorldGenerationController.TryPrepareWorldGeneration(setup.scenario,
+                out float requiredCoverage, out HistoricalSphericalCoverage coverage, out string coverageError))
+            {
+                Log.Message("[Historical RimWorld] Scenario-bounded world generation selected "
+                    + requiredCoverage.ToString("P0", System.Globalization.CultureInfo.InvariantCulture)
+                    + " planet coverage for center " + coverage.CenterLongitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
+                    + "°, " + coverage.CenterLatitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
+                    + "° and radius " + coverage.AngularRadiusDegrees.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°.");
+                planetCoverage = requiredCoverage;
+            }
+            else
+            {
+                Log.Error("[Historical RimWorld] Could not prepare scenario-bounded world generation: " + coverageError);
+            }
+
+            string requestedSeed = seedString;
+            seedString = setup.worldSeedOverride;
+            Log.Message("[Historical RimWorld] Eastern Zhou world seed fixed to '" + seedString
+                + "' (the seed entered on the world creation page '" + requestedSeed + "' is ignored for this scenario).");
 
             List<FactionDef> allowed = HistoricalWorldGenerationController.GetHistoricalFactionDefs(setup.scenario.defName);
             if (allowed.Count == 0)
@@ -74,7 +120,36 @@ namespace HistoricalRimWorld.Patches.WorldGeneration
         private static void Postfix(RimWorldWorld __result, List<FactionDef> factions)
         {
             if (!HistoricalFactionGenerationContext.TryGetSelectedSetup(out HistoricalPlayableScenarioSetupDef setup)) return;
-            HistoricalWorldGenerationController.InitializeGeneratedWorld(__result, setup.scenario, factions);
+
+            RimWorldWorld previousCreatingWorld = Current.CreatingWorld;
+            Current.CreatingWorld = __result;
+            try
+            {
+                HistoricalWorldGenerationController.InitializeGeneratedWorld(__result, setup.scenario, factions);
+            }
+            finally
+            {
+                Current.CreatingWorld = previousCreatingWorld;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(WorldGrid), "CalculateViewCenterAndAngle")]
+    internal static class HistoricalWorldCenterPatch
+    {
+        private static void Postfix(ref Vector3 ___surfaceViewCenter)
+        {
+            if (!HistoricalFactionGenerationContext.TryGetSelectedSetup(out HistoricalPlayableScenarioSetupDef setup)) return;
+            if (!HistoricalWorldGenerationController.TryPrepareWorldGeneration(setup.scenario,
+                out _, out HistoricalSphericalCoverage coverage, out string error))
+            {
+                Log.Error("[Historical RimWorld] Could not set historical world center: " + error);
+                return;
+            }
+            ___surfaceViewCenter = coverage.CenterVector;
+            Log.Message("[Historical RimWorld] Set surface world-generation center to "
+                + coverage.CenterLongitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "° longitude, "
+                + coverage.CenterLatitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "° latitude.");
         }
     }
 

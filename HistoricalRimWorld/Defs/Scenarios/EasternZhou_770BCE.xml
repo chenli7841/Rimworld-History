@@ -3,7 +3,7 @@
   <ScenarioDef Name="HR_EasternZhouPlayable" ParentName="ScenarioBase">
     <defName>HR_PlayableScenario_EasternZhou770</defName>
     <label>Eastern Zhou: The Royal Court Moves East</label>
-    <description>A small Zheng-region village begins in 770 BCE as the Zhou court moves east. Historical RimWorld chronology is a prototype, and the world map is not a reconstruction of ancient China.</description>
+    <description>A small Zheng-region village begins in 770 BCE as the Zhou court moves east. This scenario uses a fixed seed and a uniform flat-land template; its world map is not a reconstruction of ancient China.</description>
     <scenario>
       <name>Eastern Zhou: The Royal Court Moves East</name>
       <summary>Five generated villagers begin a local community under Zheng allegiance in 770 BCE. Survive, build a family history, and continue beyond the chapter end if you wish.</summary>

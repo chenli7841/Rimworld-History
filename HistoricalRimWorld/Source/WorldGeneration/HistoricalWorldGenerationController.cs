@@ -15,7 +15,7 @@ namespace HistoricalRimWorld.WorldGeneration
 {
     public static class HistoricalWorldGenerationController
     {
-        private const int CurrentMappingVersion = 1;
+        private const int CurrentMappingVersion = 2;
         private const int PrototypeRegionRadiusInTiles = 4;
         private const float MaximumPrototypePlacementErrorDegrees = 18f;
 
@@ -23,6 +23,35 @@ namespace HistoricalRimWorld.WorldGeneration
         {
             error = string.Join(Environment.NewLine, HistoricalFactionManager.ValidateBindings(scenario));
             if (!string.IsNullOrEmpty(error)) return false;
+
+            HistoricalWorldRevealSetupDef geographySetup = DefDatabase<HistoricalWorldRevealSetupDef>.AllDefsListForReading
+                .FirstOrDefault(item => item?.scenario == scenario);
+            if (geographySetup == null)
+            {
+                error = "No world geography setup exists for " + scenario.defName + ".";
+                return false;
+            }
+            if (!TryGetWorldGenerationDef(scenario, out HistoricalWorldGenerationDef generationDef))
+            {
+                error = "No HistoricalWorldGenerationDef exists for " + scenario.defName + ".";
+                return false;
+            }
+            if (!HistoricalWorldGenerationValidator.Validate(generationDef, out error)) return false;
+            if (geographySetup.useUniformPlainsTemplate && geographySetup.mapMode != HistoricalWorldMapMode.PrototypeWorld)
+            {
+                error = "The uniform terrain template requires PrototypeWorld coordinate mapping.";
+                return false;
+            }
+            if (!geographySetup.useUniformPlainsTemplate && geographySetup.mapMode != HistoricalWorldMapMode.HistoricalEarth)
+            {
+                error = "The real China geography dataset is not installed. The prototype world layout cannot be used for this historical scenario.";
+                return false;
+            }
+            if (!geographySetup.useUniformPlainsTemplate && !new HistoricalEarthGeoMapper().IsAvailable)
+            {
+                error = "The real China geography dataset is missing or unavailable. Install a validated HR-013 dataset before creating this historical world.";
+                return false;
+            }
 
             List<HistoricalSettlementPlacementDef> placements = GetPlacements(scenario.defName);
             foreach (HistoricalFactionBindingDef binding in HistoricalFactionManager.GetBindings(scenario.defName))
@@ -34,6 +63,79 @@ namespace HistoricalRimWorld.WorldGeneration
                 }
             }
             error = null;
+            return true;
+        }
+
+        public static bool TryGetWorldGenerationDef(HistoricalScenarioDef scenario, out HistoricalWorldGenerationDef def)
+        {
+            def = DefDatabase<HistoricalWorldGenerationDef>.AllDefsListForReading
+                .FirstOrDefault(item => item != null && item.scenario == scenario);
+            return def != null;
+        }
+
+        public static bool TryPrepareWorldGeneration(HistoricalScenarioDef scenario, out float planetCoverage,
+            out HistoricalSphericalCoverage coverage, out string error)
+        {
+            planetCoverage = 0f;
+            coverage = default(HistoricalSphericalCoverage);
+            if (!TryGetWorldGenerationDef(scenario, out HistoricalWorldGenerationDef def))
+            {
+                error = "No HistoricalWorldGenerationDef exists for " + scenario?.defName + ".";
+                return false;
+            }
+            return HistoricalCoverageCalculator.TryCalculate(def, out _, out coverage, out planetCoverage, out error);
+        }
+
+        private static bool ValidateGeneratedWorldCoverage(RimWorldWorld world, HistoricalScenarioDef scenario, out string error)
+        {
+            error = null;
+            if (!TryGetWorldGenerationDef(scenario, out HistoricalWorldGenerationDef def))
+            { error = "HistoricalWorldGenerationDef is missing."; return false; }
+            if (!def.requireCompleteCoverage) return true;
+            if (!HistoricalCoverageCalculator.TryCalculate(def, out HistoricalGeoBounds bounds,
+                out _, out _, out error)) return false;
+            if (world?.grid?.Surface == null || world.grid.TilesCount == 0)
+            { error = "Generated surface WorldGrid has no tiles."; return false; }
+
+            List<Vector3> tileCenters = new List<Vector3>(world.grid.TilesCount);
+            for (int tileId = 0; tileId < world.grid.TilesCount; tileId++)
+            {
+                Vector2 coordinate = world.grid.Surface.LongLatOf(tileId);
+                tileCenters.Add(HistoricalCoverageCalculator.ToUnitVector(coordinate.x, coordinate.y));
+            }
+
+            double unwrappedMinLongitude = def.minLongitude - def.longitudeMargin;
+            double unwrappedMaxLongitude = def.maxLongitude + def.longitudeMargin;
+            if (unwrappedMaxLongitude < unwrappedMinLongitude) unwrappedMaxLongitude += 360.0;
+            List<Tuple<double, double>> samples = HistoricalCoverageCalculator.SampleBounds(
+                bounds.MinLatitude, bounds.MaxLatitude, unwrappedMinLongitude, unwrappedMaxLongitude, 1.0);
+            double worstError = 0.0;
+            Tuple<double, double> worstPoint = null;
+            foreach (Tuple<double, double> sample in samples)
+            {
+                Vector3 target = HistoricalCoverageCalculator.ToUnitVector(sample.Item1, sample.Item2);
+                double nearestDot = -1.0;
+                foreach (Vector3 center in tileCenters)
+                {
+                    double dot = target.x * center.x + target.y * center.y + target.z * center.z;
+                    if (dot > nearestDot) nearestDot = dot;
+                }
+                double closest = Math.Acos(Math.Max(-1.0, Math.Min(1.0, nearestDot))) * 180.0 / Math.PI;
+                if (closest <= worstError) continue;
+                worstError = closest;
+                worstPoint = sample;
+            }
+            if (worstError > def.maximumTileCenterErrorDegrees)
+            {
+                error = "Generated WorldGrid does not adequately cover the scenario bounds. Worst sampled coordinate "
+                    + worstPoint.Item1.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°, "
+                    + worstPoint.Item2.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
+                    + "° is " + worstError.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
+                    + "° from the nearest generated tile center (limit " + def.maximumTileCenterErrorDegrees + "°).";
+                return false;
+            }
+            Log.Message("[Historical RimWorld] Verified full scenario geographic bounds: " + samples.Count
+                + " samples; worst tile-center offset " + worstError.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°.");
             return true;
         }
 
@@ -56,6 +158,25 @@ namespace HistoricalRimWorld.WorldGeneration
                 return;
             }
 
+            if (!ValidateGeneratedWorldCoverage(world, scenario, out error))
+            {
+                component.MarkGenerationResult(false, error);
+                Log.Error("[Historical RimWorld] Historical world coverage validation failed: " + error);
+                return;
+            }
+
+            HistoricalWorldRevealSetupDef geographySetup = DefDatabase<HistoricalWorldRevealSetupDef>.AllDefsListForReading
+                .First(item => item?.scenario == scenario);
+            TryGetWorldGenerationDef(scenario, out HistoricalWorldGenerationDef generationDef);
+            if (geographySetup.useUniformPlainsTemplate
+                && !HistoricalBlankWorldTemplate.TryApply(world, geographySetup.worldMap,
+                    generationDef.maximumTileCenterErrorDegrees, out error))
+            {
+                component.MarkGenerationResult(false, error);
+                Log.Error("[Historical RimWorld] Blank world template could not be applied: " + error);
+                return;
+            }
+
             List<Faction> factions = world.factionManager?.AllFactionsListForReading;
             if (factions == null)
             {
@@ -73,7 +194,7 @@ namespace HistoricalRimWorld.WorldGeneration
                 Log.Error("[Historical RimWorld] Historical settlement placement was incomplete: " + error);
 
             if (placementComplete)
-                Log.Message("[Historical RimWorld] Generated prototype historical factions and settlement mappings for " + scenario.defName + ".");
+                Log.Message("[Historical RimWorld] Generated historical scenario template and settlement mappings for " + scenario.defName + ".");
         }
 
         internal static List<FactionDef> GetHistoricalFactionDefs(string scenarioId) =>
@@ -140,7 +261,7 @@ namespace HistoricalRimWorld.WorldGeneration
                         continue;
                     }
 
-                    PlanetTile destination = new PlanetTile(tileId);
+                    PlanetTile destination = new PlanetTile(tileId, world.grid.Surface);
                     world.worldObjects.Remove(settlement);
                     settlement.Tile = destination;
                     if (!string.IsNullOrWhiteSpace(historicalSettlementName))
@@ -175,7 +296,8 @@ namespace HistoricalRimWorld.WorldGeneration
             {
                 Tuple<string, string, float> nearest = anchors
                     .Select(anchor => Tuple.Create(anchor.Item1, anchor.Item2,
-                        world.grid.ApproxDistanceInTiles(new PlanetTile(candidate), new PlanetTile(anchor.Item3))))
+                        world.grid.ApproxDistanceInTiles(new PlanetTile(candidate, world.grid.Surface),
+                            new PlanetTile(anchor.Item3, world.grid.Surface))))
                     .Where(item => item.Item3 <= PrototypeRegionRadiusInTiles)
                     .OrderBy(item => item.Item3)
                     .ThenBy(item => item.Item2, StringComparer.Ordinal)
@@ -192,7 +314,7 @@ namespace HistoricalRimWorld.WorldGeneration
             {
                 Tile tile = world.grid[tileId];
                 if (!IsBuildable(tile)) continue;
-                Vector2 coordinate = world.grid.LongLatOf(new PlanetTile(tileId));
+                Vector2 coordinate = world.grid.LongLatOf(new PlanetTile(tileId, world.grid.Surface));
                 float distance = AngularDistanceSquared(coordinate, Vector2.zero);
                 if (distance >= bestDistance) continue;
                 bestDistance = distance;
@@ -210,7 +332,7 @@ namespace HistoricalRimWorld.WorldGeneration
             {
                 Tile tile = world.grid[candidate];
                 if (!IsBuildable(tile) || reserved.Contains(candidate)) continue;
-                PlanetTile candidateTile = new PlanetTile(candidate);
+                PlanetTile candidateTile = new PlanetTile(candidate, world.grid.Surface);
                 if (world.worldObjects.AnyWorldObjectAt(candidateTile)
                     && !world.worldObjects.ObjectsAt(candidateTile).All(movable.Contains)) continue;
 
@@ -221,8 +343,9 @@ namespace HistoricalRimWorld.WorldGeneration
             foreach (Tuple<float, int> candidate in candidates.OrderBy(item => item.Item1).ThenBy(item => item.Item2))
             {
                 if (candidate.Item1 > MaximumPrototypePlacementErrorDegrees * MaximumPrototypePlacementErrorDegrees) break;
-                PlanetTile tile = new PlanetTile(candidate.Item2);
-                if (reserved.Any(other => world.grid.ApproxDistanceInTiles(tile, new PlanetTile(other)) < minimumDistance)) continue;
+                PlanetTile tile = new PlanetTile(candidate.Item2, world.grid.Surface);
+                if (reserved.Any(other => world.grid.ApproxDistanceInTiles(tile,
+                    new PlanetTile(other, world.grid.Surface)) < minimumDistance)) continue;
                 tileId = candidate.Item2;
                 return true;
             }

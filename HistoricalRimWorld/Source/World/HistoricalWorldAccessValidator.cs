@@ -17,6 +17,8 @@ namespace HistoricalRimWorld.World
             if (setup.scenario == null) yield return "scenario is required.";
             if (!Enum.IsDefined(typeof(HistoricalWorldMapMode), setup.mapMode)) yield return "mapMode is invalid.";
             if (setup.mapVersion < 1) yield return "mapVersion must be positive.";
+            if (setup.useUniformPlainsTemplate && setup.worldMap == null)
+                yield return "worldMap is required when useUniformPlainsTemplate is enabled.";
             if (setup.regions == null)
             {
                 yield return "regions list is required.";

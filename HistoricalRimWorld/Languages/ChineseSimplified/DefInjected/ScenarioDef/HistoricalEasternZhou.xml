@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <HR_PlayableScenario_EasternZhou770.label>东周列国：周室东迁</HR_PlayableScenario_EasternZhou770.label>
-  <HR_PlayableScenario_EasternZhou770.description>公元前770年，周王室东迁。五名村民在郑地建立地方社区。努力生存、延续家族并记录经历；本剧本可在篇章终点之后继续游玩。历史纪年与世界地图均为原型，不是古代中国的完整复原。</HR_PlayableScenario_EasternZhou770.description>
+  <HR_PlayableScenario_EasternZhou770.description>公元前770年，周王室东迁。五名村民在郑地建立地方社区。努力生存、延续家族并记录经历；本剧本可在篇章终点之后继续游玩。为保证世界生成一致，本剧本忽略世界创建页输入的种子，使用固定剧本种子。当前底图是全陆地、平坦的原版温带森林模板，不是古代中国的真实地形。</HR_PlayableScenario_EasternZhou770.description>
   <HR_PlayableScenario_EasternZhou770.scenario.name>东周列国：周室东迁</HR_PlayableScenario_EasternZhou770.scenario.name>
-  <HR_PlayableScenario_EasternZhou770.scenario.summary>公元前770年，郑地村庄在周室东迁后的时代开始发展。带领五名村民求生、经营家族并记录历史。历史纪年与地图仅为原型，并非古代中国的完整复原。</HR_PlayableScenario_EasternZhou770.scenario.summary>
-  <HR_PlayableScenario_EasternZhou770.scenario.description>公元前770年，周王室东迁。五名村民在郑地建立地方社区。努力生存、延续家族并记录经历；本剧本可在篇章终点之后继续游玩。历史纪年与世界地图均为原型，不是古代中国的完整复原。</HR_PlayableScenario_EasternZhou770.scenario.description>
+  <HR_PlayableScenario_EasternZhou770.scenario.summary>公元前770年，郑地村庄在周室东迁后的时代开始发展。带领五名村民求生、经营家族并记录历史。本剧本使用固定世界种子；地图是全陆地、平坦的温带森林模板，尚非古代中国真实地形。</HR_PlayableScenario_EasternZhou770.scenario.summary>
+  <HR_PlayableScenario_EasternZhou770.scenario.description>公元前770年，周王室东迁。五名村民在郑地建立地方社区。努力生存、延续家族并记录经历；本剧本可在篇章终点之后继续游玩。为保证世界生成一致，本剧本忽略世界创建页输入的种子，使用固定剧本种子。当前底图是全陆地、平坦的原版温带森林模板，不是古代中国的真实地形。</HR_PlayableScenario_EasternZhou770.scenario.description>
 </LanguageData>

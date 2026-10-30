@@ -6,7 +6,9 @@
     <description>HR_Setup_EasternZhou_770BCE_World_Description</description>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
     <mapMode>PrototypeWorld</mapMode>
-    <mapVersion>1</mapVersion>
+    <useUniformPlainsTemplate>true</useUniformPlainsTemplate>
+    <worldMap>HR_EZ_WorldMap_770BCE</worldMap>
+    <mapVersion>5</mapVersion>
     <regions>
       <li>
         <region>HR_Region_Luoyi</region>
@@ -34,6 +36,6 @@
         <access>Locked</access>
       </li>
     </regions>
-    <sourceNotes>Prototype-only access state. The current RimWorld planet is not a real historical China map, and no tile mapping is asserted until test tiles are assigned in the saved world.</sourceNotes>
+    <sourceNotes>Uses the scenario-bounded China-region world grid and an editable prototype terrain XML. Terrain is not reconstructed from real elevation, climate, or hydrography data. Historical faction placements remain prototype placements.</sourceNotes>
   </HistoricalRimWorld.World.HistoricalWorldRevealSetupDef>
 </Defs>

@@ -10,6 +10,8 @@ namespace HistoricalRimWorld.World
     {
         public HistoricalScenarioDef scenario;
         public HistoricalWorldMapMode mapMode = HistoricalWorldMapMode.PrototypeWorld;
+        public bool useUniformPlainsTemplate;
+        public HistoricalWorldMapDef worldMap;
         public int mapVersion = 1;
         public List<HistoricalInitialRevealRecord> regions;
         public List<HistoricalRegionUnlockRule> unlockRules = new List<HistoricalRegionUnlockRule>();

@@ -21,5 +21,6 @@
     <startingCommunityName>HR_Community_Player_001</startingCommunityName>
     <playableEndAstronomicalYear>-739</playableEndAstronomicalYear>
     <vanillaScenarioName>HR_EasternZhouPlayable</vanillaScenarioName>
+    <worldSeedOverride>HR_EasternZhou_770BCE_v1</worldSeedOverride>
   </HistoricalRimWorld.Scenarios.EasternZhou.HistoricalPlayableScenarioSetupDef>
 </Defs>

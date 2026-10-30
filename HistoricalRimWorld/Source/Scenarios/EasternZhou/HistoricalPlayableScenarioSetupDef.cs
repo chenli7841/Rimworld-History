@@ -15,6 +15,7 @@ namespace HistoricalRimWorld.Scenarios.EasternZhou
         public string startingCommunityName;
         public int? playableEndAstronomicalYear;
         public string vanillaScenarioName;
+        public string worldSeedOverride;
 
         public override IEnumerable<string> ConfigErrors()
         {
@@ -25,6 +26,7 @@ namespace HistoricalRimWorld.Scenarios.EasternZhou
             if (startingPopulation < 1) yield return "Starting population must be positive.";
             if (startingSupplies == null) yield return "Historical playable setup requires a supplies Def.";
             if (string.IsNullOrWhiteSpace(vanillaScenarioName)) yield return "A vanilla Scenario name is required to identify this playable scenario.";
+            if (string.IsNullOrWhiteSpace(worldSeedOverride)) yield return "A fixed world seed is required for this playable scenario.";
         }
     }
 }

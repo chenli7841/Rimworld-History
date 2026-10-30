@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Editable surface map for the Eastern Zhou prototype scenario.
+
+    Coordinates use longitude (-180..180) and latitude (-90..90) in degrees.
+    Each override is assigned to the nearest RimWorld WorldGrid tile center.
+    The game log reports the resolved tile ID and center. Unlisted tiles inherit
+    these defaults. These sample points are scattered across China and do not
+    constitute a geographically accurate map.
+
+    On RimWorld 1.6 surface tiles, elevation <= 0 is water-covered.
+    The entries below are scattered examples only; they are not a China map.
+  -->
+  <HistoricalRimWorld.World.HistoricalWorldMapDef>
+    <defName>HR_EZ_WorldMap_770BCE</defName>
+    <label>Eastern Zhou editable prototype map</label>
+    <defaultBiome>TemperateForest</defaultBiome>
+    <defaultElevation>0.1</defaultElevation>
+    <defaultHilliness>Flat</defaultHilliness>
+    <tileOverrides>
+      <!-- Northwest edge sample: forest hills -->
+      <li>
+        <longitude>101.0</longitude>
+        <latitude>41.0</latitude>
+        <biome>BorealForest</biome>
+        <elevation>0.22</elevation>
+        <hilliness>LargeHills</hilliness>
+      </li>
+      <!-- Southwest edge sample: mountains -->
+      <li>
+        <longitude>105.0</longitude>
+        <latitude>28.0</latitude>
+        <biome>TropicalRainforest</biome>
+        <elevation>0.3</elevation>
+        <hilliness>Mountainous</hilliness>
+      </li>
+      <!-- Northern sample: small hills -->
+      <li>
+        <longitude>109.0</longitude>
+        <latitude>41.0</latitude>
+        <biome>TemperateForest</biome>
+        <elevation>0.18</elevation>
+        <hilliness>SmallHills</hilliness>
+      </li>
+      <!-- Central sample: temperate hills -->
+      <li>
+        <longitude>113.0</longitude>
+        <latitude>34.0</latitude>
+        <biome>TemperateForest</biome>
+        <elevation>0.16</elevation>
+        <hilliness>SmallHills</hilliness>
+      </li>
+      <!-- Eastern sample: flat desert -->
+      <li>
+        <longitude>121.0</longitude>
+        <latitude>40.0</latitude>
+        <biome>Desert</biome>
+        <elevation>0.1</elevation>
+        <hilliness>Flat</hilliness>
+      </li>
+      <!-- South edge sample: water; elevation <= 0 -->
+      <li>
+        <longitude>121.0</longitude>
+        <latitude>27.0</latitude>
+        <biome>TemperateForest</biome>
+        <elevation>0</elevation>
+        <hilliness>Flat</hilliness>
+      </li>
+    </tileOverrides>
+  </HistoricalRimWorld.World.HistoricalWorldMapDef>
+</Defs>

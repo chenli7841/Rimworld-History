@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.WorldGeneration.HistoricalWorldGenerationDef>
+    <defName>HR_WorldGen_EasternZhou_770BCE</defName>
+    <label>Eastern Zhou scenario geographic coverage</label>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <mode>ScenarioBounded</mode>
+    <minLatitude>27</minLatitude>
+    <maxLatitude>42</maxLatitude>
+    <minLongitude>102</minLongitude>
+    <maxLongitude>121</maxLongitude>
+    <latitudeMargin>2</latitudeMargin>
+    <longitudeMargin>2</longitudeMargin>
+    <requireCompleteCoverage>true</requireCompleteCoverage>
+    <useRealEarthGeography>false</useRealEarthGeography>
+    <maximumTileCenterErrorDegrees>5</maximumTileCenterErrorDegrees>
+  </HistoricalRimWorld.WorldGeneration.HistoricalWorldGenerationDef>
+</Defs>
