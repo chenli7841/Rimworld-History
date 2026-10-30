@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using HistoricalRimWorld.Calendar;
+using HistoricalRimWorld.Factions;
+using HistoricalRimWorld.Geography.Scaling;
 using HistoricalRimWorld.Politics;
 using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.World;
@@ -26,6 +28,14 @@ namespace HistoricalRimWorld.UI
             listing.Label(Translator.Translate("HR_World_Title"));
             listing.Label(Translator.Translate(component.MapMode == HistoricalWorldMapMode.PrototypeWorld
                 ? "HR_World_PrototypeMode" : "HR_World_EarthMode"));
+            HistoricalMapScaleState mapScale = Find.World?.GetComponent<HistoricalFactionWorldComponent>()?.MapScaleState;
+            if (mapScale != null)
+            {
+                listing.Label("历史地图比例尺：" + mapScale.ScaleFactor.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "×");
+                listing.Label("投影中心：" + mapScale.CenterLatitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
+                    + "°N, " + mapScale.CenterLongitude.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°E");
+                listing.Label("投影版本：" + mapScale.ProjectionVersion + "；世界生成版本：" + mapScale.WorldGenerationVersion);
+            }
             listing.GapLine();
             listing.Label(Translator.Translate("HR_World_Legend"));
             DrawSelectedTileInformation(listing, component);

@@ -3,8 +3,9 @@
   <!--
     Editable surface map for the Eastern Zhou prototype scenario.
 
-    Coordinates use longitude (-180..180) and latitude (-90..90) in degrees.
-    Each override is assigned to the nearest RimWorld WorldGrid tile center.
+    Coordinates use historical longitude (-180..180) and latitude (-90..90) in degrees.
+    HR_MapScale_EasternZhou_770BCE transforms them to the game sphere before
+    assigning each override to the nearest RimWorld WorldGrid tile center.
     The game log reports the resolved tile ID and center. Unlisted tiles inherit
     these defaults. These sample points are scattered across China and do not
     constitute a geographically accurate map.

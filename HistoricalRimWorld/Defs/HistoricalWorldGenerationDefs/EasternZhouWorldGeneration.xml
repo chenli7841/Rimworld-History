@@ -4,6 +4,7 @@
     <defName>HR_WorldGen_EasternZhou_770BCE</defName>
     <label>Eastern Zhou scenario geographic coverage</label>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <mapScale>HR_MapScale_EasternZhou_770BCE</mapScale>
     <mode>ScenarioBounded</mode>
     <minLatitude>20</minLatitude>
     <maxLatitude>42</maxLatitude>

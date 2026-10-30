@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HistoricalRimWorld.Geography;
+using HistoricalRimWorld.Geography.Scaling;
+using Verse;
 
 namespace HistoricalRimWorld.WorldGeneration
 {
@@ -76,21 +79,29 @@ namespace HistoricalRimWorld.WorldGeneration
             double sampleMinLon = minLon;
             double sampleMaxLon = maxLon;
             if (sampleMaxLon < sampleMinLon) sampleMaxLon += 360.0;
-            List<Tuple<double, double>> samples = SampleBounds(minLat, maxLat, sampleMinLon, sampleMaxLon, 1.0);
-            double x = 0, y = 0, z = 0;
-            foreach (Tuple<double, double> point in samples)
+            List<Tuple<double, double>> historicalSamples = SampleBounds(minLat, maxLat, sampleMinLon, sampleMaxLon, 1.0);
+            HistoricalMapScaleTransformer transformer = new HistoricalMapScaleTransformer(def.mapScale);
+            List<Tuple<double, double>> samples = new List<Tuple<double, double>>(historicalSamples.Count);
+            try
             {
-                Vector(point.Item1, point.Item2, out double px, out double py, out double pz);
-                x += px; y += py; z += pz;
+                foreach (Tuple<double, double> sample in historicalSamples)
+                {
+                    HistoricalGameGeoCoordinate gameCoordinate = transformer.ToGameCoordinate(
+                        new HistoricalGeoCoordinate(sample.Item2, sample.Item1));
+                    samples.Add(Tuple.Create(gameCoordinate.Longitude, gameCoordinate.Latitude));
+                }
             }
-            double length = Math.Sqrt(x * x + y * y + z * z);
-            if (length < 1e-9)
-            { error = "The scenario bounds do not have a stable spherical center."; return false; }
-            x /= length; y /= length; z /= length;
-            double centerLat = Math.Asin(Math.Max(-1.0, Math.Min(1.0, y))) * 180.0 / Math.PI;
-            // RimWorld 1.6 PlanetLayer.LongLatOf derives longitude as
-            // Atan2(vector.x, -vector.z), so use the matching inverse here.
-            double centerLon = NormalizeLongitude(Math.Atan2(x, -z) * 180.0 / Math.PI);
+            catch (Exception exception)
+            {
+                error = "The scaled scenario bounds exceed the usable Azimuthal Equidistant projection area: " + exception.Message;
+                return false;
+            }
+            double centerLatitudeHistorical = (minLat + maxLat) / 2d;
+            double centerLongitudeHistorical = (sampleMinLon + sampleMaxLon) / 2d;
+            HistoricalGameGeoCoordinate gameCenter = transformer.ToGameCoordinate(
+                new HistoricalGeoCoordinate(centerLatitudeHistorical, NormalizeLongitude(centerLongitudeHistorical)));
+            double centerLat = gameCenter.Latitude;
+            double centerLon = gameCenter.Longitude;
             double radius = samples.Max(p => AngularDistance(centerLon, centerLat, p.Item1, p.Item2)) + TileSafetyMarginDegrees;
             if (radius > 180.0)
             { error = "Expanded scenario bounds cannot fit within a spherical cap."; return false; }
@@ -102,6 +113,15 @@ namespace HistoricalRimWorld.WorldGeneration
             planetCoverage = (float)(radius / 180.0);
             if (planetCoverage <= 0f || planetCoverage > 1f)
             { error = "Calculated planet coverage is outside the supported 0..1 range."; return false; }
+            if (def.mapScale.scaleFactor > 5d)
+                Log.Warning("[Historical RimWorld] Map scale " + def.mapScale.scaleFactor.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
+                    + "x exceeds the recommended 5x limit and may create a much larger WorldGrid.");
+            Log.Message("[Historical RimWorld] Historical bounds were projected at "
+                + def.mapScale.scaleFactor.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
+                + "x using " + def.mapScale.projectionType + "; game coverage center is "
+                + centerLon.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°, "
+                + centerLat.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°, radius "
+                + radius.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°.");
             error = null;
             return true;
         }
@@ -141,15 +161,6 @@ namespace HistoricalRimWorld.WorldGeneration
             double lat = latitude * radians, lon = longitude * radians, cosLat = Math.Cos(lat);
             return new UnityEngine.Vector3((float)(Math.Sin(lon) * cosLat),
                 (float)Math.Sin(lat), (float)(-Math.Cos(lon) * cosLat));
-        }
-
-        private static void Vector(double longitude, double latitude, out double x, out double y, out double z)
-        {
-            const double radians = Math.PI / 180.0;
-            double lat = latitude * radians, lon = longitude * radians, cosLat = Math.Cos(lat);
-            x = Math.Sin(lon) * cosLat;
-            y = Math.Sin(lat);
-            z = -Math.Cos(lon) * cosLat;
         }
 
         private static double NormalizeLongitude(double longitude)

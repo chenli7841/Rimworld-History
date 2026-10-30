@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HistoricalRimWorld.Scenarios;
+using HistoricalRimWorld.Geography.Scaling;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -19,6 +20,7 @@ namespace HistoricalRimWorld.Factions
         private List<HistoricalFactionBindingState> bindings = new List<HistoricalFactionBindingState>();
         private List<HistoricalSettlementBindingState> settlements = new List<HistoricalSettlementBindingState>();
         private List<HistoricalPrototypeRegionTileBindingState> prototypeRegionTiles = new List<HistoricalPrototypeRegionTileBindingState>();
+        private HistoricalMapScaleState mapScaleState;
 
         public string ScenarioDefName => scenarioDefName;
         public HistoricalFactionGenerationMode GenerationMode => generationMode;
@@ -28,6 +30,7 @@ namespace HistoricalRimWorld.Factions
         public IEnumerable<HistoricalFactionBindingState> Bindings => bindings ?? Enumerable.Empty<HistoricalFactionBindingState>();
         public IEnumerable<HistoricalSettlementBindingState> Settlements => settlements ?? Enumerable.Empty<HistoricalSettlementBindingState>();
         public IEnumerable<HistoricalPrototypeRegionTileBindingState> PrototypeRegionTiles => prototypeRegionTiles ?? Enumerable.Empty<HistoricalPrototypeRegionTileBindingState>();
+        public HistoricalMapScaleState MapScaleState => mapScaleState;
 
         public HistoricalFactionWorldComponent(RimWorldWorld world) : base(world) { }
 
@@ -57,6 +60,12 @@ namespace HistoricalRimWorld.Factions
         {
             generationComplete = complete;
             generationFailureReason = complete ? null : failureReason;
+        }
+
+        internal void RecordMapScale(HistoricalMapScaleDef definition, int worldGenerationVersion)
+        {
+            mapScaleState = new HistoricalMapScaleState();
+            mapScaleState.Initialize(definition, worldGenerationVersion);
         }
 
         internal void RecordSettlement(Settlement settlement, string stateId, string regionId, int tileId)
@@ -93,6 +102,7 @@ namespace HistoricalRimWorld.Factions
             Scribe_Collections.Look(ref bindings, "historicalFactionBindings", LookMode.Deep);
             Scribe_Collections.Look(ref settlements, "historicalFactionSettlements", LookMode.Deep);
             Scribe_Collections.Look(ref prototypeRegionTiles, "historicalPrototypeRegionTiles", LookMode.Deep);
+            Scribe_Deep.Look(ref mapScaleState, "historicalMapScaleState");
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {

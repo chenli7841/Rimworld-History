@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Verse;
+using HistoricalRimWorld.Geography.Scaling;
 
 namespace HistoricalRimWorld.WorldGeneration
 {
@@ -14,6 +15,7 @@ namespace HistoricalRimWorld.WorldGeneration
     public sealed class HistoricalWorldGenerationDef : Def
     {
         public HistoricalRimWorld.Scenarios.HistoricalScenarioDef scenario;
+        public HistoricalMapScaleDef mapScale;
         public HistoricalWorldGenerationMode mode = HistoricalWorldGenerationMode.ScenarioBounded;
         public float minLatitude;
         public float maxLatitude;
@@ -29,6 +31,9 @@ namespace HistoricalRimWorld.WorldGeneration
         {
             foreach (string error in base.ConfigErrors()) yield return error;
             if (scenario == null) yield return "scenario is required.";
+            if (mapScale == null) yield return "mapScale is required.";
+            else if (scenario != null && mapScale.scenario != scenario)
+                yield return "mapScale must belong to the same scenario.";
             if (!Enum.IsDefined(typeof(HistoricalWorldGenerationMode), mode)) yield return "mode is invalid.";
             if (minLatitude < -90f || minLatitude > 90f || maxLatitude < -90f || maxLatitude > 90f)
                 yield return "Latitude bounds must be within -90..90 degrees.";

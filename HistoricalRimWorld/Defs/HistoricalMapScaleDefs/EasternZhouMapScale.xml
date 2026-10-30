@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Geography.Scaling.HistoricalMapScaleDef>
+    <defName>HR_MapScale_EasternZhou_770BCE</defName>
+    <label>东周历史地图比例尺</label>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <scaleFactor>3.0</scaleFactor>
+    <centerLatitude>34.5</centerLatitude>
+    <centerLongitude>111.5</centerLongitude>
+    <projectionType>AzimuthalEquidistant</projectionType>
+    <preserveHistoricalCoordinates>true</preserveHistoricalCoordinates>
+    <scaleRegionBoundaries>true</scaleRegionBoundaries>
+    <scaleTravelDistance>true</scaleTravelDistance>
+    <travelSpeedMultiplier>1.0</travelSpeedMultiplier>
+  </HistoricalRimWorld.Geography.Scaling.HistoricalMapScaleDef>
+</Defs>

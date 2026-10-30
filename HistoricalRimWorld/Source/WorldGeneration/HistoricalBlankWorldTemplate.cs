@@ -1,6 +1,8 @@
 using RimWorld;
 using RimWorld.Planet;
 using HistoricalRimWorld.World;
+using HistoricalRimWorld.Geography;
+using HistoricalRimWorld.Geography.Scaling;
 using Verse;
 using System.Collections.Generic;
 using System;
@@ -16,7 +18,7 @@ namespace HistoricalRimWorld.WorldGeneration
     public static class HistoricalBlankWorldTemplate
     {
         public static bool TryApply(RimWorldWorld world, HistoricalWorldMapDef map,
-            float maximumCoordinateErrorDegrees, out string error)
+            HistoricalMapScaleDef scale, float maximumCoordinateErrorDegrees, out string error)
         {
             error = null;
             Log.Message("[Historical RimWorld] 正在创建指定的地图（读取独立 XML 地图数据）。");
@@ -29,6 +31,14 @@ namespace HistoricalRimWorld.WorldGeneration
             if (map == null)
             {
                 error = "The configured HistoricalWorldMapDef is missing.";
+                return false;
+            }
+
+            HistoricalMapScaleTransformer transformer;
+            try { transformer = new HistoricalMapScaleTransformer(scale); }
+            catch (Exception exception)
+            {
+                error = "The historical map scale could not be initialized: " + exception.Message;
                 return false;
             }
 
@@ -60,14 +70,25 @@ namespace HistoricalRimWorld.WorldGeneration
                         + " has no biome.";
                     return false;
                 }
-                int tileId = FindNearestTile(world, tileOverride.longitude, tileOverride.latitude);
+                string coordinate = FormatCoordinate(tileOverride.longitude, tileOverride.latitude);
+                HistoricalGameGeoCoordinate gameCoordinate;
+                try
+                {
+                    gameCoordinate = transformer.ToGameCoordinate(
+                        new HistoricalGeoCoordinate(tileOverride.latitude, tileOverride.longitude));
+                }
+                catch (Exception exception)
+                {
+                    error = "Map coordinate " + coordinate + " cannot be projected: " + exception.Message;
+                    return false;
+                }
+                int tileId = FindNearestTile(world, (float)gameCoordinate.Longitude, (float)gameCoordinate.Latitude);
                 if (tileId < 0)
                 {
                     error = "No WorldGrid tile could be resolved for coordinate "
                         + FormatCoordinate(tileOverride.longitude, tileOverride.latitude) + ".";
                     return false;
                 }
-                string coordinate = FormatCoordinate(tileOverride.longitude, tileOverride.latitude);
                 if (overrides.ContainsKey(tileId))
                 {
                     HistoricalWorldTileOverride previous = overrides[tileId];
@@ -77,18 +98,22 @@ namespace HistoricalRimWorld.WorldGeneration
                     return false;
                 }
                 Vector2 resolvedCenter = world.grid.Surface.LongLatOf(tileId);
-                double offset = HistoricalCoverageCalculator.AngularDistance(tileOverride.longitude,
-                    tileOverride.latitude, resolvedCenter.x, resolvedCenter.y);
+                double offset = HistoricalCoverageCalculator.AngularDistance(gameCoordinate.Longitude,
+                    gameCoordinate.Latitude, resolvedCenter.x, resolvedCenter.y);
                 if (offset > maximumCoordinateErrorDegrees)
                 {
-                    error = "Map coordinate " + coordinate + " resolves to WorldGrid tile " + tileId
+                    error = "Map coordinate " + coordinate + " projected to "
+                        + FormatCoordinate((float)gameCoordinate.Longitude, (float)gameCoordinate.Latitude)
+                        + " resolves to WorldGrid tile " + tileId
                         + " centered at " + FormatCoordinate(resolvedCenter.x, resolvedCenter.y)
                         + " (angular offset " + offset.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)
                         + "°), exceeding the configured maximum of " + maximumCoordinateErrorDegrees + "°.";
                     return false;
                 }
                 overrides.Add(tileId, tileOverride);
-                string resolutionMessage = "[Historical RimWorld] Map coordinate " + coordinate + " resolves to WorldGrid tile "
+                string resolutionMessage = "[Historical RimWorld] Map coordinate " + coordinate + " projected to "
+                    + FormatCoordinate((float)gameCoordinate.Longitude, (float)gameCoordinate.Latitude)
+                    + " resolves to WorldGrid tile "
                     + tileId + " (tile center " + FormatCoordinate(resolvedCenter.x, resolvedCenter.y) + ", angular offset "
                     + offset.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°).";
                 Log.Message(resolutionMessage);
@@ -136,7 +161,8 @@ namespace HistoricalRimWorld.WorldGeneration
             }
 
             world.pathGrid?.RecalculateAllLayersPathCosts();
-            Log.Message("[Historical RimWorld] Applied XML map " + map.defName + " to " + world.grid.TilesCount
+            Log.Message("[Historical RimWorld] Applied XML map " + map.defName + " at scale "
+                + transformer.ScaleFactor.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "x to " + world.grid.TilesCount
                 + " world tiles (" + overrides.Count + " coordinate-based tile overrides). Rivers, roads, and "
                 + removedLandmarks + " generated landmarks were removed.");
             return true;

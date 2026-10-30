@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HistoricalRimWorld.Factions;
 using HistoricalRimWorld.Geography;
+using HistoricalRimWorld.Geography.Scaling;
 using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.World;
 using RimWorld;
@@ -15,7 +16,7 @@ namespace HistoricalRimWorld.WorldGeneration
 {
     public static class HistoricalWorldGenerationController
     {
-        private const int CurrentMappingVersion = 2;
+        private const int CurrentMappingVersion = 3;
         private const int PrototypeRegionRadiusInTiles = 4;
         private const float MaximumPrototypePlacementErrorDegrees = 18f;
 
@@ -107,13 +108,17 @@ namespace HistoricalRimWorld.WorldGeneration
             double unwrappedMinLongitude = def.minLongitude - def.longitudeMargin;
             double unwrappedMaxLongitude = def.maxLongitude + def.longitudeMargin;
             if (unwrappedMaxLongitude < unwrappedMinLongitude) unwrappedMaxLongitude += 360.0;
-            List<Tuple<double, double>> samples = HistoricalCoverageCalculator.SampleBounds(
+            List<Tuple<double, double>> historicalSamples = HistoricalCoverageCalculator.SampleBounds(
                 bounds.MinLatitude, bounds.MaxLatitude, unwrappedMinLongitude, unwrappedMaxLongitude, 1.0);
+            HistoricalMapScaleTransformer transformer = new HistoricalMapScaleTransformer(def.mapScale);
             double worstError = 0.0;
             Tuple<double, double> worstPoint = null;
             Tuple<double, double> nearestCenterForWorstPoint = null;
-            foreach (Tuple<double, double> sample in samples)
+            foreach (Tuple<double, double> historicalSample in historicalSamples)
             {
+                HistoricalGameGeoCoordinate projectedSample = transformer.ToGameCoordinate(
+                    new HistoricalGeoCoordinate(historicalSample.Item2, historicalSample.Item1));
+                Tuple<double, double> sample = Tuple.Create(projectedSample.Longitude, projectedSample.Latitude);
                 Vector3 target = HistoricalCoverageCalculator.ToUnitVector(sample.Item1, sample.Item2);
                 double nearestDot = -1.0;
                 int nearestIndex = -1;
@@ -128,7 +133,7 @@ namespace HistoricalRimWorld.WorldGeneration
                 double closest = Math.Acos(Math.Max(-1.0, Math.Min(1.0, nearestDot))) * 180.0 / Math.PI;
                 if (closest <= worstError) continue;
                 worstError = closest;
-                worstPoint = sample;
+                worstPoint = historicalSample;
                 Vector2 nearestCoordinate = world.grid.Surface.LongLatOf(nearestIndex);
                 nearestCenterForWorstPoint = Tuple.Create((double)nearestCoordinate.x, (double)nearestCoordinate.y);
             }
@@ -148,7 +153,7 @@ namespace HistoricalRimWorld.WorldGeneration
                     + def.maximumTileCenterErrorDegrees + "°).";
                 return false;
             }
-            Log.Message("[Historical RimWorld] Verified full scenario geographic bounds: " + samples.Count
+            Log.Message("[Historical RimWorld] Verified full scenario geographic bounds: " + historicalSamples.Count
                 + " samples; worst tile-center offset " + worstError.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°.");
             return true;
         }
@@ -172,21 +177,20 @@ namespace HistoricalRimWorld.WorldGeneration
                 return;
             }
 
-            /*
             if (!ValidateGeneratedWorldCoverage(world, scenario, out error))
             {
                 component.MarkGenerationResult(false, error);
                 Log.Error("[Historical RimWorld] Historical world coverage validation failed: " + error);
                 return;
             }
-            */
 
             HistoricalWorldRevealSetupDef geographySetup = DefDatabase<HistoricalWorldRevealSetupDef>.AllDefsListForReading
                 .First(item => item?.scenario == scenario);
             TryGetWorldGenerationDef(scenario, out HistoricalWorldGenerationDef generationDef);
+            component.RecordMapScale(generationDef.mapScale, CurrentMappingVersion);
             if (geographySetup.useUniformPlainsTemplate
                 && !HistoricalBlankWorldTemplate.TryApply(world, geographySetup.worldMap,
-                    generationDef.maximumTileCenterErrorDegrees, out error))
+                    generationDef.mapScale, generationDef.maximumTileCenterErrorDegrees, out error))
             {
                 component.MarkGenerationResult(false, error);
                 Log.Error("[Historical RimWorld] Blank world template could not be applied: " + error);
@@ -205,11 +209,12 @@ namespace HistoricalRimWorld.WorldGeneration
             HistoricalFactionDiplomacyAdapter.ApplyInitialRelations(world, scenario.defName);
 
             bool placementComplete = PlaceHistoricalSettlements(world, scenario, factionDefs, component, out error);
-            if (placementComplete && !HistoricalWorldMapMarkerPlacer.TryPlace(world, geographySetup.worldMap,
-                generationDef.maximumTileCenterErrorDegrees, out error))
-                placementComplete = false;
             if (placementComplete)
                 RemoveGeneratedFactionSettlements(world, geographySetup.worldMap);
+            if (placementComplete && !HistoricalWorldMapMarkerPlacer.TryPlace(world, geographySetup.worldMap,
+                generationDef.mapScale,
+                generationDef.maximumTileCenterErrorDegrees, out error))
+                placementComplete = false;
             component.MarkGenerationResult(placementComplete, error);
             if (!placementComplete)
                 Log.Error("[Historical RimWorld] Historical settlement placement was incomplete: " + error);
@@ -343,9 +348,20 @@ namespace HistoricalRimWorld.WorldGeneration
         {
             anchor = default(Vector2);
             float bestDistance = float.PositiveInfinity;
-            if (!TryPrepareWorldGeneration(scenario, out _, out HistoricalSphericalCoverage coverage, out _))
+            if (!TryGetWorldGenerationDef(scenario, out HistoricalWorldGenerationDef generationDef))
                 return false;
-            Vector2 target = new Vector2((float)coverage.CenterLongitude, (float)coverage.CenterLatitude);
+            HistoricalGameGeoCoordinate gameCenter;
+            try
+            {
+                gameCenter = new HistoricalMapScaleTransformer(generationDef.mapScale).ToGameCoordinate(
+                    new HistoricalGeoCoordinate(generationDef.mapScale.centerLatitude,
+                        generationDef.mapScale.centerLongitude));
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            Vector2 target = new Vector2((float)gameCenter.Longitude, (float)gameCenter.Latitude);
             for (int tileId = 0; tileId < world.grid.TilesCount; tileId++)
             {
                 Tile tile = world.grid[tileId];
