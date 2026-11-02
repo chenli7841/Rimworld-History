@@ -55,6 +55,8 @@ namespace HistoricalRimWorld.WorldGeneration
             }
 
             Dictionary<int, HistoricalWorldTileOverride> overrides = new Dictionary<int, HistoricalWorldTileOverride>();
+            Dictionary<int, HistoricalMapTileDescription> descriptions = new Dictionary<int, HistoricalMapTileDescription>();
+            int skippedDuplicateOverrides = 0;
             foreach (HistoricalWorldTileOverride tileOverride in map.tileOverrides ?? new List<HistoricalWorldTileOverride>())
             {
                 if (tileOverride == null
@@ -92,10 +94,11 @@ namespace HistoricalRimWorld.WorldGeneration
                 if (overrides.ContainsKey(tileId))
                 {
                     HistoricalWorldTileOverride previous = overrides[tileId];
-                    error = "Map coordinates " + FormatCoordinate(previous.longitude, previous.latitude)
-                        + " and " + coordinate + " resolve to the same WorldGrid tile " + tileId
-                        + ". Each override needs a distinct tile center; move one coordinate or remove an override.";
-                    return false;
+                    skippedDuplicateOverrides++;
+                    Log.Warning("[Historical RimWorld] Ignored duplicate map coordinate " + coordinate
+                        + ": it resolves to WorldGrid tile " + tileId + ", already assigned by earlier coordinate "
+                        + FormatCoordinate(previous.longitude, previous.latitude) + ". The first XML entry is kept.");
+                    continue;
                 }
                 Vector2 resolvedCenter = world.grid.Surface.LongLatOf(tileId);
                 double offset = HistoricalCoverageCalculator.AngularDistance(gameCoordinate.Longitude,
@@ -111,6 +114,8 @@ namespace HistoricalRimWorld.WorldGeneration
                     return false;
                 }
                 overrides.Add(tileId, tileOverride);
+                if (!string.IsNullOrWhiteSpace(tileOverride.description))
+                    descriptions.Add(tileId, new HistoricalMapTileDescription(tileId, tileOverride.description.Trim()));
                 string resolutionMessage = "[Historical RimWorld] Map coordinate " + coordinate + " projected to "
                     + FormatCoordinate((float)gameCoordinate.Longitude, (float)gameCoordinate.Latitude)
                     + " resolves to WorldGrid tile "
@@ -118,6 +123,14 @@ namespace HistoricalRimWorld.WorldGeneration
                     + offset.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "°).";
                 Log.Message(resolutionMessage);
             }
+
+            HistoricalMapTileDescriptionWorldComponent descriptionComponent =
+                world.GetComponent<HistoricalMapTileDescriptionWorldComponent>();
+            if (descriptionComponent != null)
+                descriptionComponent.SetDescriptions(descriptions.Values);
+            else if (descriptions.Count > 0)
+                Log.Warning("[Historical RimWorld] Tile descriptions were parsed but could not be saved because "
+                    + "HistoricalMapTileDescriptionWorldComponent is unavailable.");
 
             // World generation has already placed vanilla landmarks on the generated
             // surface. Their terrain renderer expects nearby tiles with a different
@@ -154,8 +167,10 @@ namespace HistoricalRimWorld.WorldGeneration
                 tile.hilliness = hasOverride ? tileOverride.hilliness : map.defaultHilliness;
                 tile.mutatorsNullable = new List<TileMutatorDef>();
 
-                surfaceTile.Rivers?.Clear();
-                surfaceTile.Roads?.Clear();
+                // WorldInspectPane assumes Roads is either null or non-empty before calling MaxBy.
+                // Leaving a cleared-but-non-null list makes inspection of that tile throw.
+                surfaceTile.potentialRivers = null;
+                surfaceTile.potentialRoads = null;
                 surfaceTile.riverDist = 0;
 
             }
@@ -163,7 +178,8 @@ namespace HistoricalRimWorld.WorldGeneration
             world.pathGrid?.RecalculateAllLayersPathCosts();
             Log.Message("[Historical RimWorld] Applied XML map " + map.defName + " at scale "
                 + transformer.ScaleFactor.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) + "x to " + world.grid.TilesCount
-                + " world tiles (" + overrides.Count + " coordinate-based tile overrides). Rivers, roads, and "
+                + " world tiles (" + overrides.Count + " coordinate-based tile overrides; "
+                + skippedDuplicateOverrides + " duplicate coordinates ignored). Rivers, roads, and "
                 + removedLandmarks + " generated landmarks were removed.");
             return true;
         }

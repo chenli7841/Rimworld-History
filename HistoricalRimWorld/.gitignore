@@ -2,3 +2,5 @@
 **/obj/
 *.user
 *.suo
+Data/Terrain/*.hrdem
+**/.vs/

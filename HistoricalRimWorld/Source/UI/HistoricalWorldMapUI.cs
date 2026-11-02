@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HistoricalRimWorld.Calendar;
 using HistoricalRimWorld.Factions;
+using HistoricalRimWorld.Geography;
 using HistoricalRimWorld.Geography.Scaling;
 using HistoricalRimWorld.Politics;
 using HistoricalRimWorld.Scenarios;
@@ -38,6 +39,11 @@ namespace HistoricalRimWorld.UI
             }
             listing.GapLine();
             listing.Label(Translator.Translate("HR_World_Legend"));
+            if (HistoricalMapEditManager.CanEdit(Find.World, out _)
+                && listing.ButtonText("World Map Editor"))
+            {
+                Find.WindowStack.Add(new HistoricalWorldMapEditorWindow());
+            }
             DrawSelectedTileInformation(listing, component);
 
             int lockedCount = component.Regions.Count(item => item.Access == HistoricalRegionAccess.Locked);
@@ -100,7 +106,7 @@ namespace HistoricalRimWorld.UI
 
         private static float CalculateContentHeight(HistoricalWorldRevealWorldComponent component)
         {
-            float lines = 8f + component.Regions.Count() * (Prefs.DevMode ? 5f : 3f);
+            float lines = 9f + component.Regions.Count() * (Prefs.DevMode ? 5f : 3f);
             return Mathf.Max(560f, lines * 28f);
         }
 
@@ -123,12 +129,31 @@ namespace HistoricalRimWorld.UI
 
         private static void DrawSelectedTileInformation(Listing_Standard listing, HistoricalWorldRevealWorldComponent component)
         {
-            if (Find.WorldSelector == null || !Find.WorldSelector.SelectedTile.Valid) return;
-            int tileId = (int)Find.WorldSelector.SelectedTile;
+            if (!HistoricalMapEditManager.TryGetSelectedTileId(out int tileId)) return;
             IReadOnlyList<string> regionIds = HistoricalWorldRevealManager.GetRegionsForTile(tileId).ToList().AsReadOnly();
-            if (regionIds.Count == 0) return;
+            string tileDescription = Find.World?.GetComponent<HistoricalMapTileDescriptionWorldComponent>()
+                ?.GetDescription(tileId);
+            IReadOnlyList<HistoricalGeographicRegionData> geographicRegions =
+                HistoricalGeographicRegionManager.GetRegionsForTile(tileId);
+            if (regionIds.Count == 0 && string.IsNullOrWhiteSpace(tileDescription) && geographicRegions.Count == 0) return;
 
             listing.Gap();
+            if (!string.IsNullOrWhiteSpace(tileDescription))
+            {
+                listing.Label("地图格描述");
+                listing.Label(tileDescription);
+            }
+            if (geographicRegions.Count > 0)
+            {
+                listing.Label("地理区域");
+                foreach (HistoricalGeographicRegionData geographicRegion in geographicRegions)
+                {
+                    if (listing.ButtonText(HistoricalGeographicRegionManager.ResolveName(geographicRegion)))
+                        Find.WindowStack.Add(new HistoricalGeographicRegionDetailWindow(geographicRegion.defName));
+                }
+            }
+            if (regionIds.Count == 0) return;
+
             listing.Label(Translator.Translate("HR_World_SelectedTile"));
             if (!HistoricalWorldRevealManager.IsTileVisible(tileId))
             {

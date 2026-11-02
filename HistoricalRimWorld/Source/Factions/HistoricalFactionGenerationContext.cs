@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using RimWorld;
 using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.Scenarios.EasternZhou;
@@ -27,10 +27,16 @@ namespace HistoricalRimWorld.Factions
             setup = null;
             Scenario selected = hasScenarioSelection ? selectedScenario : Current.Game?.Scenario;
             if (selected == null || string.IsNullOrWhiteSpace(selected.name)) return false;
-
-            setup = DefDatabase<HistoricalPlayableScenarioSetupDef>.AllDefsListForReading
-                .FirstOrDefault(item => item.defName == "HR_PlayableSetup_EasternZhou770");
-            return setup != null;
+            Log.Message("[Historical RimWorld] TryGetSelectedSetup124: " + selected.name + ", " + selected.name.Contains("东周列国"));
+            if (selected.name.Contains("东周列国"))
+            {
+                setup = DefDatabase<HistoricalPlayableScenarioSetupDef>.AllDefsListForReading
+                    .FirstOrDefault(item => item != null
+                        && item.scenario != null
+                        && string.Equals(item.vanillaScenarioName, "HR_EasternZhouPlayable", System.StringComparison.Ordinal));
+                return setup != null;
+            }
+            return false;
         }
     }
 }

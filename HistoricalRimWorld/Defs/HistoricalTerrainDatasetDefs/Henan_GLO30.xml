@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Geography.Terrain.HistoricalTerrainDatasetDef>
+    <defName>HR_Terrain_Henan_GLO30</defName>
+    <label>Henan Copernicus DEM terrain cache</label>
+    <cachePath>Data/Terrain/Henan_GLO30.hrdem</cachePath>
+    <sourceName>Copernicus DEM GLO-30 Public</sourceName>
+    <sourceVersion>2021 public release; see generated sidecar metadata for actual source tiles</sourceVersion>
+    <licenseNotes>Install only source tiles obtained under the Copernicus DEM public licence; retain the generated attribution metadata.</licenseNotes>
+    <required>false</required>
+    <cacheVersion>1</cacheVersion>
+    <referenceYearBCE>770</referenceYearBCE>
+    <flatSlopeMaxDegrees>3</flatSlopeMaxDegrees>
+    <smallHillSlopeMaxDegrees>8</smallHillSlopeMaxDegrees>
+    <largeHillSlopeMaxDegrees>15</largeHillSlopeMaxDegrees>
+    <mountainReliefMinMeters>100</mountainReliefMinMeters>
+    <worldElevationBase>0.05</worldElevationBase>
+    <worldElevationRange>0.30</worldElevationRange>
+    <footprintSampleCount>25</footprintSampleCount>
+  </HistoricalRimWorld.Geography.Terrain.HistoricalTerrainDatasetDef>
+</Defs>

@@ -197,6 +197,15 @@ namespace HistoricalRimWorld.WorldGeneration
                 return;
             }
 
+            HistoricalMapEditWorldComponent mapEditState = world.GetComponent<HistoricalMapEditWorldComponent>();
+            if (mapEditState != null)
+                mapEditState.Initialize(scenario.defName, generationDef.mapScale.defName);
+            if (!HistoricalMapEditFileStore.TryLoadAndApply(world, scenario.defName, generationDef.mapScale,
+                generationDef.maximumTileCenterErrorDegrees, out int loadedMapEdits, out error))
+                Log.Warning("[Historical RimWorld] Scenario map edit file was not applied: " + error);
+            else if (loadedMapEdits > 0)
+                Log.Message("[Historical RimWorld] Applied " + loadedMapEdits + " saved scenario terrain override(s).");
+
             List<Faction> factions = world.factionManager?.AllFactionsListForReading;
             if (factions == null)
             {

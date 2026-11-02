@@ -80,6 +80,7 @@ namespace HistoricalRimWorld.World
         public BiomeDef biome;
         public float elevation;
         public Hilliness hilliness = Hilliness.Flat;
+        public string description;
     }
 
     /// <summary>A named place shown on the world map at a geographic coordinate.</summary>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    These are coarse editorial footprints for map prototyping, not verified ancient boundaries.
+    Replace their vertices and source metadata with vetted HR-013 geography when available.
+  -->
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_Xiaoshan</defName><label>崤山</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>MountainRange</regionType><englishName>Xiaoshan Mountains</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>110.2</longitude><latitude>34.3</latitude></li><li><longitude>111.2</longitude><latitude>34.3</latitude></li><li><longitude>111.4</longitude><latitude>34.8</latitude></li><li><longitude>110.4</longitude><latitude>35.0</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>110.8</longitude><latitude>34.65</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>90</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Approximate display footprint for editor prototyping only; not source-derived. Replace geometry and cite a vetted geographic source.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_Songshan</defName><label>嵩山</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>MountainRange</regionType><englishName>Mount Song</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>112.65</longitude><latitude>34.25</latitude></li><li><longitude>113.15</longitude><latitude>34.22</latitude></li><li><longitude>113.28</longitude><latitude>34.58</latitude></li><li><longitude>112.72</longitude><latitude>34.63</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>112.96</longitude><latitude>34.44</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>100</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Approximate display footprint near Dengfeng for editor prototyping only; not a surveyed range boundary.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_Xiongershan</defName><label>熊耳山</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>MountainRange</regionType><englishName>Xionger Mountains</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>110.75</longitude><latitude>33.55</latitude></li><li><longitude>111.75</longitude><latitude>33.48</latitude></li><li><longitude>112.10</longitude><latitude>34.12</latitude></li><li><longitude>111.00</longitude><latitude>34.28</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>111.42</longitude><latitude>33.90</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>78</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Approximate display footprint for editor prototyping only; replace with vetted HR-013 geometry.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_Funiushan</defName><label>伏牛山</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>MountainRange</regionType><englishName>Funiu Mountains</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>110.85</longitude><latitude>32.75</latitude></li><li><longitude>112.30</longitude><latitude>32.45</latitude></li><li><longitude>113.05</longitude><latitude>33.25</latitude></li><li><longitude>111.75</longitude><latitude>33.95</latitude></li><li><longitude>110.85</longitude><latitude>33.55</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>111.90</longitude><latitude>33.15</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>82</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Approximate display footprint for editor prototyping only; not a source-derived mountain boundary.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_Taihangshan</defName><label>太行山</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>MountainRange</regionType><englishName>Taihang Mountains</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>112.25</longitude><latitude>35.0</latitude></li><li><longitude>113.05</longitude><latitude>34.9</latitude></li><li><longitude>114.35</longitude><latitude>37.2</latitude></li><li><longitude>113.35</longitude><latitude>37.6</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>113.32</longitude><latitude>36.1</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>100</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Very coarse label footprint for editor prototyping only; not a vetted range boundary.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_Tongbaishan</defName><label>桐柏山</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>MountainRange</regionType><englishName>Tongbai Mountains</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>112.20</longitude><latitude>31.65</latitude></li><li><longitude>113.65</longitude><latitude>31.65</latitude></li><li><longitude>114.25</longitude><latitude>32.35</latitude></li><li><longitude>112.45</longitude><latitude>32.65</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>113.15</longitude><latitude>32.05</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>72</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Approximate display footprint for editor prototyping only; replace with vetted HR-013 geometry.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_Dabieshan</defName><label>大别山</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>MountainRange</regionType><englishName>Dabie Mountains</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>114.2</longitude><latitude>30.5</latitude></li><li><longitude>115.8</longitude><latitude>30.5</latitude></li><li><longitude>116.4</longitude><latitude>31.8</latitude></li><li><longitude>114.3</longitude><latitude>32.1</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>115.25</longitude><latitude>31.35</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>70</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Approximate display footprint for editor prototyping only; not source-derived.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_Mangshan</defName><label>邙山</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>MountainRange</regionType><englishName>Mangshan Hills</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>112.25</longitude><latitude>34.70</latitude></li><li><longitude>112.80</longitude><latitude>34.70</latitude></li><li><longitude>112.90</longitude><latitude>34.98</latitude></li><li><longitude>112.30</longitude><latitude>35.02</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>112.55</longitude><latitude>34.87</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>75</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Approximate display footprint north of Luoyang for editor prototyping only.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_YellowRiver</defName><label>黄河</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>River</regionType><englishName>Yellow River</englishName><geometryType>LineString</geometryType>
+    <coordinates><li><longitude>110.1</longitude><latitude>34.8</latitude></li><li><longitude>111.1</longitude><latitude>34.85</latitude></li><li><longitude>112.1</longitude><latitude>34.9</latitude></li><li><longitude>113.1</longitude><latitude>35.0</latitude></li><li><longitude>114.6</longitude><latitude>35.25</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>112.2</longitude><latitude>34.9</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>100</labelPriority><minZoom>0</minZoom><maxZoom>0.9</maxZoom>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Coarse route samples for label prototyping only; not a surveyed river centerline.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_LuoRiver</defName><label>洛水</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>River</regionType><englishName>Luo River</englishName><historicalName>洛水</historicalName><geometryType>LineString</geometryType>
+    <coordinates><li><longitude>110.35</longitude><latitude>34.30</latitude></li><li><longitude>111.15</longitude><latitude>34.55</latitude></li><li><longitude>112.0</longitude><latitude>34.65</latitude></li><li><longitude>112.55</longitude><latitude>34.75</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>111.55</longitude><latitude>34.58</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>95</labelPriority><minZoom>0</minZoom><maxZoom>0.95</maxZoom>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Coarse route samples for label prototyping only; historic naming and centerline require source review.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_YiRiver</defName><label>伊水</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>River</regionType><englishName>Yi River</englishName><geometryType>LineString</geometryType>
+    <coordinates><li><longitude>112.38</longitude><latitude>33.45</latitude></li><li><longitude>112.50</longitude><latitude>33.90</latitude></li><li><longitude>112.48</longitude><latitude>34.35</latitude></li><li><longitude>112.55</longitude><latitude>34.72</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>112.50</longitude><latitude>34.14</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>72</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Coarse route samples for label prototyping only; not a surveyed river centerline.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_QinRiver</defName><label>沁水</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>River</regionType><englishName>Qin River</englishName><geometryType>LineString</geometryType>
+    <coordinates><li><longitude>112.35</longitude><latitude>36.1</latitude></li><li><longitude>112.55</longitude><latitude>35.7</latitude></li><li><longitude>112.8</longitude><latitude>35.3</latitude></li><li><longitude>113.2</longitude><latitude>35.05</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>112.65</longitude><latitude>35.55</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>70</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Coarse route samples for label prototyping only; not a surveyed river centerline.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_HuaiRiver</defName><label>淮水</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>River</regionType><englishName>Huai River</englishName><geometryType>LineString</geometryType>
+    <coordinates><li><longitude>111.4</longitude><latitude>32.35</latitude></li><li><longitude>112.7</longitude><latitude>32.45</latitude></li><li><longitude>114.2</longitude><latitude>32.8</latitude></li><li><longitude>115.8</longitude><latitude>33.35</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>113.9</longitude><latitude>32.73</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>90</labelPriority><minZoom>0</minZoom><maxZoom>0.88</maxZoom>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Coarse route samples for label prototyping only; not a surveyed river centerline.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_RuRiver</defName><label>汝水</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>River</regionType><englishName>Ru River</englishName><geometryType>LineString</geometryType>
+    <coordinates><li><longitude>112.0</longitude><latitude>33.15</latitude></li><li><longitude>112.8</longitude><latitude>33.35</latitude></li><li><longitude>113.7</longitude><latitude>33.55</latitude></li><li><longitude>114.7</longitude><latitude>33.85</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>113.35</longitude><latitude>33.45</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>65</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Coarse route samples for label prototyping only; not a surveyed river centerline.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_YingRiver</defName><label>颍水</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>River</regionType><englishName>Ying River</englishName><geometryType>LineString</geometryType>
+    <coordinates><li><longitude>112.0</longitude><latitude>34.05</latitude></li><li><longitude>112.8</longitude><latitude>33.8</latitude></li><li><longitude>113.7</longitude><latitude>33.55</latitude></li><li><longitude>114.4</longitude><latitude>33.15</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>113.2</longitude><latitude>33.68</latitude></labelPosition><autoLabelRotation>true</autoLabelRotation><labelPriority>68</labelPriority>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Coarse route samples for label prototyping only; not a surveyed river centerline.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_LuoyangBasin</defName><label>洛阳盆地</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>Basin</regionType><englishName>Luoyang Basin</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>111.7</longitude><latitude>34.35</latitude></li><li><longitude>112.7</longitude><latitude>34.35</latitude></li><li><longitude>113.0</longitude><latitude>34.85</latitude></li><li><longitude>112.2</longitude><latitude>35.0</latitude></li><li><longitude>111.75</longitude><latitude>34.72</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>112.35</longitude><latitude>34.62</latitude></labelPosition><labelPriority>90</labelPriority><minZoom>0</minZoom><maxZoom>0.78</maxZoom>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Approximate display footprint for editor prototyping only; not a surveyed basin boundary.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_NanyangBasin</defName><label>南阳盆地</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>Basin</regionType><englishName>Nanyang Basin</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>111.0</longitude><latitude>32.2</latitude></li><li><longitude>112.7</longitude><latitude>32.15</latitude></li><li><longitude>113.0</longitude><latitude>33.15</latitude></li><li><longitude>112.1</longitude><latitude>33.5</latitude></li><li><longitude>111.1</longitude><latitude>33.15</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>112.0</longitude><latitude>32.8</latitude></labelPosition><labelPriority>82</labelPriority><minZoom>0</minZoom><maxZoom>0.8</maxZoom>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Approximate display footprint for editor prototyping only; not a surveyed basin boundary.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_HuanghuaiPlain</defName><label>黄淮平原</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>Plain</regionType><englishName>Huang-Huai Plain</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>112.8</longitude><latitude>32.3</latitude></li><li><longitude>116.0</longitude><latitude>32.2</latitude></li><li><longitude>116.4</longitude><latitude>35.1</latitude></li><li><longitude>113.3</longitude><latitude>35.5</latitude></li><li><longitude>112.6</longitude><latitude>34.5</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>114.5</longitude><latitude>33.7</latitude></labelPosition><labelPriority>60</labelPriority><minZoom>0.2</minZoom><maxZoom>1</maxZoom>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Coarse display footprint for editor prototyping only; not a surveyed plain boundary.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+  <HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+    <defName>HR_CentralPlain</defName><label>中原平原</label><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <regionType>Plain</regionType><englishName>Central Plains</englishName><geometryType>Polygon</geometryType>
+    <coordinates><li><longitude>110.0</longitude><latitude>33.2</latitude></li><li><longitude>114.8</longitude><latitude>33.0</latitude></li><li><longitude>115.0</longitude><latitude>36.3</latitude></li><li><longitude>111.5</longitude><latitude>36.0</latitude></li><li><longitude>110.0</longitude><latitude>35.0</latitude></li></coordinates>
+    <hasLabelPosition>true</hasLabelPosition><labelPosition><longitude>113.0</longitude><latitude>34.1</latitude></labelPosition><labelPriority>55</labelPriority><minZoom>0.35</minZoom><maxZoom>1</maxZoom>
+    <confidence>Approximate</confidence><source>Editorial placeholder</source><sourceNotes>Broad illustrative display footprint for editor prototyping only; not a historical border or surveyed plain boundary.</sourceNotes>
+  </HistoricalRimWorld.Geography.HistoricalGeographicRegionDef>
+</Defs>

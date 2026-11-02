@@ -6,6 +6,8 @@ using HarmonyLib;
 using HistoricalRimWorld.Factions;
 using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.Scenarios.EasternZhou;
+using HistoricalRimWorld.UI;
+using HistoricalRimWorld.World;
 using HistoricalRimWorld.WorldGeneration;
 using RimWorld;
 using RimWorld.Planet;
@@ -15,6 +17,33 @@ using RimWorldWorld = RimWorld.Planet.World;
 
 namespace HistoricalRimWorld.Patches.WorldGeneration
 {
+    [HarmonyPatch(typeof(WorldInterface), nameof(WorldInterface.WorldInterfaceOnGUI))]
+    internal static class HistoricalStartingSiteWorldMapEditorButtonPatch
+    {
+        private static bool loggedButtonAvailability;
+
+        private static void Postfix()
+        {
+            HistoricalGeographicRegionLabelRenderer.Draw();
+            HistoricalFactionWorldComponent factionState = Find.World?.GetComponent<HistoricalFactionWorldComponent>();
+            bool historicalWorld = factionState?.GenerationMode == HistoricalFactionGenerationMode.HistoricalScenario
+                || HistoricalFactionGenerationContext.IsHistoricalWorldGenerationActive;
+            if (!historicalWorld) return;
+            if (!loggedButtonAvailability)
+            {
+                Log.Message("[Historical RimWorld] World Map Editor entry is active on the world interface. Dev mode: "
+                    + Prefs.DevMode + "; faction world state: "
+                    + (factionState?.GenerationMode.ToString() ?? "missing") + ".");
+                loggedButtonAvailability = true;
+            }
+
+            // WorldInterfaceOnGUI uses screen coordinates. Keep the entry below the vanilla tutorial control.
+            Rect buttonRect = new Rect(Verse.UI.screenWidth - 224f, 78f, 210f, 36f);
+            if (Widgets.ButtonText(buttonRect, "World Map Editor"))
+                Find.WindowStack.Add(new HistoricalWorldMapEditorWindow());
+        }
+    }
+
     [HarmonyPatch(typeof(Page_SelectScenario), nameof(Page_SelectScenario.BeginScenarioConfiguration))]
     internal static class HistoricalScenarioSelectionContextPatch
     {

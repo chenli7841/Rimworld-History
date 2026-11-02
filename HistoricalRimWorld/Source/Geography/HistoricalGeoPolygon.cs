@@ -1,12 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Verse;
 
 namespace HistoricalRimWorld.Geography
 {
-    public sealed class HistoricalGeoPolygon
+    public sealed class HistoricalGeoPolygon : IExposable
     {
         public List<HistoricalGeoVertex> vertices = new List<HistoricalGeoVertex>();
+
+        public void ExposeData()
+        {
+            Scribe_Collections.Look(ref vertices, "vertices", LookMode.Deep);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+                vertices = vertices ?? new List<HistoricalGeoVertex>();
+        }
 
         public IEnumerable<string> Validate()
         {

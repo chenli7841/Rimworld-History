@@ -4,7 +4,7 @@
     <defName>HR_MapScale_EasternZhou_770BCE</defName>
     <label>东周历史地图比例尺</label>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
-    <scaleFactor>3.0</scaleFactor>
+    <scaleFactor>4.0</scaleFactor>
     <centerLatitude>34.5</centerLatitude>
     <centerLongitude>111.5</centerLongitude>
     <projectionType>AzimuthalEquidistant</projectionType>

@@ -45,14 +45,99 @@
         <hilliness>SmallHills</hilliness>
       </li>
       <!-- Central sample: temperate hills -->
-      <li>
-        <longitude>113.0</longitude>
-        <latitude>34.0</latitude>
-        <biome>TemperateForest</biome>
-        <elevation>0.16</elevation>
-        <hilliness>SmallHills</hilliness>
-      </li>
-      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.437111</longitude><latitude>34.474611</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>
+      <li><longitude>112.437111</longitude><latitude>34.374611</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <!-- 嵩山 -->
+      <li><longitude>113.1</longitude><latitude>34.5</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>113.0</longitude><latitude>34.6</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>113.0</longitude><latitude>34.5</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>113.0</longitude><latitude>34.4</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.9</longitude><latitude>34.5</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.8</longitude><latitude>34.5</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.7</longitude><latitude>34.5</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.6</longitude><latitude>34.5</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      
+      <!--伏牛山（洛阳南部）-->
+      <li><longitude>112.3</longitude><latitude>34.0</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.3</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.3</longitude><latitude>33.8</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.3</longitude><latitude>33.7</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.3</longitude><latitude>33.6</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.2</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.2</longitude><latitude>33.8</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.2</longitude><latitude>33.7</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.2</longitude><latitude>33.6</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.1</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.1</longitude><latitude>33.8</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.1</longitude><latitude>33.7</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.1</longitude><latitude>33.6</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.0</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.0</longitude><latitude>33.8</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.0</longitude><latitude>33.7</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.0</longitude><latitude>33.6</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>111.9</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>111.9</longitude><latitude>33.8</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>111.9</longitude><latitude>33.7</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>111.9</longitude><latitude>33.6</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      
+      
+      <li><longitude>112.9</longitude><latitude>34.3</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.8</longitude><latitude>34.3</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.7</longitude><latitude>34.3</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.6</longitude><latitude>34.3</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.5</longitude><latitude>34.3</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.4</longitude><latitude>34.3</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.3</longitude><latitude>34.3</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.2</longitude><latitude>34.3</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.1</longitude><latitude>34.3</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.9</longitude><latitude>34.2</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.8</longitude><latitude>34.2</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.7</longitude><latitude>34.2</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.6</longitude><latitude>34.2</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.5</longitude><latitude>34.2</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.4</longitude><latitude>34.2</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.3</longitude><latitude>34.2</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.2</longitude><latitude>34.2</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.1</longitude><latitude>34.2</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.9</longitude><latitude>34.1</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.8</longitude><latitude>34.1</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.7</longitude><latitude>34.1</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.6</longitude><latitude>34.1</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.5</longitude><latitude>34.1</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.4</longitude><latitude>34.1</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.3</longitude><latitude>34.1</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.2</longitude><latitude>34.1</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.1</longitude><latitude>34.1</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.9</longitude><latitude>34.0</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.8</longitude><latitude>34.0</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.7</longitude><latitude>34.0</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.6</longitude><latitude>34.0</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.5</longitude><latitude>34.0</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.4</longitude><latitude>34.0</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.3</longitude><latitude>34.0</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.2</longitude><latitude>34.0</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.1</longitude><latitude>34.0</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.9</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.8</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.7</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.6</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.5</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.4</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.3</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.2</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.1</longitude><latitude>33.9</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.4</longitude><latitude>33.8</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.4</longitude><latitude>33.7</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>112.4</longitude><latitude>33.6</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>LargeHills</hilliness></li>      <!-- Eastern sample: flat desert -->
+
+      <li><longitude>113.1</longitude><latitude>34.6</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>Mountainous</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>113.1</longitude><latitude>34.5</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>Mountainous</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>113.0</longitude><latitude>34.45</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>Mountainous</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>113.2</longitude><latitude>34.45</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>Mountainous</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>113.1</longitude><latitude>34.4</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>Mountainous</hilliness></li>      <!-- Eastern sample: flat desert -->
+      <li><longitude>113.1</longitude><latitude>34.3</latitude><biome>TemperateForest</biome><elevation>0.16</elevation><hilliness>Mountainous</hilliness></li>      <!-- Eastern sample: flat desert -->
+
+
       <li>
         <longitude>121.0</longitude>
         <latitude>40.0</latitude>
@@ -79,17 +164,9 @@
         <locationId>ExampleTown</locationId>
         <label>示例乡镇</label>
         <description>乡镇标记格式示例；尚未指定历史派系。</description>
-        <longitude>104.5</longitude>
-        <latitude>29.5</latitude>
+        <longitude>110.5</longitude>
+        <latitude>37.5</latitude>
         <worldObjectDef>HR_MapMarker_Town</worldObjectDef>
-      </li>
-      <li>
-        <locationId>ExampleWalledCity</locationId>
-        <label>示例大城市</label>
-        <description>大城市标记格式示例；尚未指定历史派系。</description>
-        <longitude>119.5</longitude>
-        <latitude>40.5</latitude>
-        <worldObjectDef>HR_MapMarker_City</worldObjectDef>
       </li>
       <li>
         <locationId>luoyi</locationId>
