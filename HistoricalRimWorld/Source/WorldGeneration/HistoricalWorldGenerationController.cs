@@ -6,6 +6,7 @@ using HistoricalRimWorld.Geography;
 using HistoricalRimWorld.Geography.Scaling;
 using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.World;
+using HistoricalRimWorld.WorldFeatures;
 using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
@@ -205,6 +206,12 @@ namespace HistoricalRimWorld.WorldGeneration
                 Log.Warning("[Historical RimWorld] Scenario map edit file was not applied: " + error);
             else if (loadedMapEdits > 0)
                 Log.Message("[Historical RimWorld] Applied " + loadedMapEdits + " saved scenario terrain override(s).");
+
+            int renamedWorldFeatures = HistoricalWorldFeatureOverrideManager.ApplyScenarioOverrides(
+                world, scenario.defName, generationDef.mapScale);
+            if (renamedWorldFeatures > 0)
+                Log.Message("[HR-016] Applied " + renamedWorldFeatures
+                    + " native World Feature name override(s) for " + scenario.defName + ".");
 
             List<Faction> factions = world.factionManager?.AllFactionsListForReading;
             if (factions == null)

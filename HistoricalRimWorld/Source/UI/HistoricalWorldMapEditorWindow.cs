@@ -7,6 +7,7 @@ using HistoricalRimWorld.Geography;
 using HistoricalRimWorld.Geography.Scaling;
 using HistoricalRimWorld.Geography.Terrain;
 using HistoricalRimWorld.World;
+using HistoricalRimWorld.WorldFeatures;
 using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
@@ -28,19 +29,6 @@ namespace HistoricalRimWorld.UI
         private RiverDef selectedRiver;
         private string riverCoordinates = string.Empty;
         private string riverPreviewStatus;
-        private string geographicId = string.Empty;
-        private string geographicName = string.Empty;
-        private string geographicEnglishName = string.Empty;
-        private string geographicCoordinates = string.Empty;
-        private string geographicLabelPosition = string.Empty;
-        private string geographicDescription = string.Empty;
-        private string geographicSourceNotes = "Editor-authored approximate geometry; replace with source-verified coordinates.";
-        private string geographicStatus;
-        private HistoricalGeographicRegionType geographicType = HistoricalGeographicRegionType.GeographicRegion;
-        private HistoricalGeographicGeometryType geographicGeometry = HistoricalGeographicGeometryType.Polygon;
-        private float geographicRotation;
-        private bool geographicAutoRotation;
-        private string selectedGeographicId;
         private string status;
 
         public HistoricalWorldMapEditorWindow()
@@ -72,6 +60,7 @@ namespace HistoricalRimWorld.UI
                 factionState.ScenarioDefName, factionState.MapScaleState?.ScaleDefName);
             listing.Label("World Map Editor · " + factionState.ScenarioDefName);
             listing.Label("仅限开发模式。地图修改写入独立的剧本覆盖层，不改动原始 DEM 或 Mod XML。");
+            if (!string.IsNullOrWhiteSpace(status)) listing.Label("状态：" + status);
             listing.GapLine();
             DrawSelectedTile(listing);
             listing.GapLine();
@@ -87,9 +76,13 @@ namespace HistoricalRimWorld.UI
             listing.Label("覆盖格数按六角邻接距离计算：半径 0–4。选择地图上的 Tile，再执行一次画笔操作。");
             if (listing.ButtonText("Apply terrain to brush")) ApplyPaint();
             if (listing.ButtonText("Restore generated terrain in brush")) ApplyRestore();
+            if (listing.ButtonText("保存地形 / 河流 / Tile 描述修改到剧本 XML"))
+                SaveEdits(factionState.ScenarioDefName);
+            listing.Label("保存路径：Config\\HistoricalRimWorld\\MapEdits\\"
+                + factionState.ScenarioDefName + ".xml");
 
             DrawRiverEditor(listing);
-            DrawGeographicRegionEditor(listing, factionState.ScenarioDefName);
+            DrawNativeWorldFeatureEditor(listing, factionState);
 
             Rect historyRect = listing.GetRect(30f);
             if (Widgets.ButtonText(new Rect(historyRect.x, historyRect.y, historyRect.width * 0.48f, historyRect.height),
@@ -109,8 +102,6 @@ namespace HistoricalRimWorld.UI
                 status = "已重做：" + command.Label;
             }
 
-            if (listing.ButtonText("Save scenario map edits")) SaveEdits(factionState.ScenarioDefName);
-            if (!string.IsNullOrWhiteSpace(status)) listing.Label(status);
             listing.GapLine();
             listing.Label("当前版本支持：检查 Tile、地形画笔、历史河流、地理区域表单编辑、Undo/Redo 和覆盖层保存。");
             listing.Label("地理区域顶点通过经纬度文本修改；地图鼠标拖拽顶点/标签尚未开放。");
@@ -240,244 +231,140 @@ namespace HistoricalRimWorld.UI
             listing.Label("应用后河流会立即绘制到地图；路径、历史坐标与河流类型会随存档保存，并包含在剧本地图 XML 导出中。");
         }
 
-        private void DrawGeographicRegionEditor(Listing_Standard listing, string scenarioId)
-        {
-            HistoricalGeographicRegionWorldComponent component = Find.World
-                .GetComponent<HistoricalGeographicRegionWorldComponent>();
-            component?.InitializeForScenario(scenarioId);
-            listing.GapLine();
-            listing.Label("Geographic Regions");
-            listing.Label("地理几何使用历史经纬度，不依赖 Tile ID；同一 Tile 可以同时落在多个地理实体内。");
+        private int selectedNativeFeatureId = -1;
+        private string nativeFeatureNameBuffer = string.Empty;
 
-            List<HistoricalGeographicRegionData> regions = (component?.Regions
-                ?? Enumerable.Empty<HistoricalGeographicRegionData>()).Where(item => item != null)
-                .OrderBy(item => item.defName, StringComparer.Ordinal).ToList();
-            if (listing.ButtonText("选择地理实体：" + (selectedGeographicId ?? "(new)")))
+        private void DrawNativeWorldFeatureEditor(Listing_Standard listing, HistoricalFactionWorldComponent factionState)
+        {
+            listing.GapLine();
+            listing.Label("World Features Editor (原版地理特征)");
+            if (!HistoricalMapEditManager.TryGetSelectedTileId(out int tileId)
+                || !HistoricalWorldFeatureOverrideManager.TryGetFeatureForTile(Find.World, tileId, out WorldFeature feature))
             {
-                List<FloatMenuOption> options = regions.Select(item => new FloatMenuOption(
-                    item.defName + " · " + HistoricalGeographicRegionManager.ResolveName(item),
-                    () => LoadGeographicRegion(item))).ToList();
-                options.Insert(0, new FloatMenuOption("新建地理实体", ResetGeographicRegion));
-                Find.WindowStack.Add(new FloatMenu(options));
+                listing.Label("先选择一个带有原版地理特征的 Tile。山脉、湖泊、森林等按原版 Feature 类型筛选；河流不是 WorldFeature。");
+                return;
             }
 
-            listing.Label("DefName / ID");
-            geographicId = Widgets.TextField(listing.GetRect(28f), geographicId);
-            listing.Label("中文/默认名称");
-            geographicName = Widgets.TextField(listing.GetRect(28f), geographicName);
-            listing.Label("English name (optional)");
-            geographicEnglishName = Widgets.TextField(listing.GetRect(28f), geographicEnglishName);
-            if (listing.ButtonText("类型：" + geographicType + "（点击选择）"))
-                Find.WindowStack.Add(new FloatMenu(Enum.GetValues(typeof(HistoricalGeographicRegionType))
-                    .Cast<HistoricalGeographicRegionType>().Select(item => new FloatMenuOption(item.ToString(),
-                        () => geographicType = item)).ToList()));
-            if (listing.ButtonText("几何：" + geographicGeometry + "（点击选择）"))
-                Find.WindowStack.Add(new FloatMenu(Enum.GetValues(typeof(HistoricalGeographicGeometryType))
-                    .Cast<HistoricalGeographicGeometryType>().Select(item => new FloatMenuOption(item.ToString(),
-                        () => geographicGeometry = item)).ToList()));
-            listing.Label("顶点：每行一个 经度,纬度；LineString 至少2点，Polygon至少3点。编辑文本可移动/新增/删除任意顶点。");
-            Rect coordinatesRect = listing.GetRect(130f);
-            geographicCoordinates = Widgets.TextArea(coordinatesRect, geographicCoordinates);
-            Rect vertexButtons = listing.GetRect(28f);
-            if (Widgets.ButtonText(new Rect(vertexButtons.x, vertexButtons.y, vertexButtons.width * 0.48f, vertexButtons.height),
-                "追加所选 Tile 的历史坐标") && TryGetSelectedHistoricalCoordinate(out string coordinate))
-                geographicCoordinates = string.IsNullOrWhiteSpace(geographicCoordinates)
-                    ? coordinate : geographicCoordinates.TrimEnd() + "\n" + coordinate;
-            if (Widgets.ButtonText(new Rect(vertexButtons.x + vertexButtons.width * 0.52f, vertexButtons.y,
-                vertexButtons.width * 0.48f, vertexButtons.height), "移除末尾顶点"))
-                geographicCoordinates = RemoveLastCoordinateLine(geographicCoordinates);
+            HistoricalWorldFeatureOverrideWorldComponent component =
+                Find.World.GetComponent<HistoricalWorldFeatureOverrideWorldComponent>();
+            component?.Initialize(factionState.ScenarioDefName);
+            if (selectedNativeFeatureId != feature.uniqueID)
+            {
+                selectedNativeFeatureId = feature.uniqueID;
+                nativeFeatureNameBuffer = WorldFeatureAdapter.GetName(feature);
+            }
+            HistoricalMapScaleDef scale = factionState.MapScaleState == null ? null
+                : DefDatabase<HistoricalMapScaleDef>.GetNamedSilentFail(factionState.MapScaleState.ScaleDefName);
+            HistoricalMapScaleTransformer transformer = scale == null ? null : new HistoricalMapScaleTransformer(scale);
+            string representative = HistoricalWorldFeatureOverrideManager.TryGetHistoricalRepresentative(
+                feature, transformer, out HistoricalGeoCoordinate featureCoordinate)
+                ? featureCoordinate.Longitude.ToString("0.0000", Invariant) + ", "
+                    + featureCoordinate.Latitude.ToString("0.0000", Invariant)
+                : "unavailable";
+            listing.Label("原生名称：" + WorldFeatureAdapter.GetName(feature));
+            listing.Label("FeatureDef：" + WorldFeatureAdapter.GetFeatureType(feature)
+                + "  |  Unique ID（仅当前世界有效）：" + feature.uniqueID);
+            listing.Label("代表历史坐标：" + representative + "  |  覆盖 Tile："
+                + WorldFeatureAdapter.GetFeatureTiles(Find.World, feature).Count);
+            listing.Label("新名称");
+            nativeFeatureNameBuffer = Widgets.TextField(listing.GetRect(28f), nativeFeatureNameBuffer);
 
-            listing.Label("标签锚点 经度,纬度（留空则自动估算）");
-            geographicLabelPosition = Widgets.TextField(listing.GetRect(28f), geographicLabelPosition);
-            listing.Label("标签角度：" + geographicRotation.ToString("0.#", Invariant) + "°");
-            geographicRotation = Widgets.HorizontalSlider(listing.GetRect(22f), geographicRotation, -90f, 90f);
-            listing.CheckboxLabeled("沿河流/线几何自动调整标签方向", ref geographicAutoRotation);
-            listing.Label("历史描述");
-            geographicDescription = Widgets.TextArea(listing.GetRect(64f), geographicDescription);
-            listing.Label("来源与精度说明（必填；无可靠边界时标注 approximate）");
-            geographicSourceNotes = Widgets.TextArea(listing.GetRect(56f), geographicSourceNotes);
+            Rect featureButtons = listing.GetRect(30f);
+            if (Widgets.ButtonText(new Rect(featureButtons.x, featureButtons.y,
+                featureButtons.width * 0.48f, featureButtons.height), "重命名并加入撤销历史"))
+                RenameNativeFeature(feature, component, transformer, featureCoordinate);
+            if (Widgets.ButtonText(new Rect(featureButtons.x + featureButtons.width * 0.52f,
+                featureButtons.y, featureButtons.width * 0.48f, featureButtons.height), "恢复原始随机名称"))
+                RestoreNativeFeatureName(feature, component);
 
-            Rect actionRect = listing.GetRect(30f);
-            if (Widgets.ButtonText(new Rect(actionRect.x, actionRect.y, actionRect.width * 0.48f, actionRect.height),
-                selectedGeographicId == null ? "创建/保存地理实体" : "应用区域修改")) SaveGeographicRegion(component, scenarioId);
-            if (Widgets.ButtonText(new Rect(actionRect.x + actionRect.width * 0.52f, actionRect.y,
-                actionRect.width * 0.48f, actionRect.height), "删除地理实体") && selectedGeographicId != null)
-                DeleteGeographicRegion(component);
-
-            if (listing.ButtonText("保存地理区域覆盖层 XML"))
+            if (listing.ButtonText("保存手动 Feature 名称覆盖（用于新世界）"))
             {
                 string error = null;
-                if (component != null && component.TrySaveOverrides(out string path, out error))
-                    geographicStatus = "地理区域已保存：" + path;
-                else geographicStatus = error ?? "地理区域组件不可用。";
+                if (component != null && component.TrySaveManualOverrides(out string path, out error))
+                {
+                    featureStatus = "手动名称覆盖已保存：" + path;
+                    Log.Message("[HR-016] Saved manual World Feature names to " + path + ".");
+                }
+                else featureStatus = "保存失败：" + (error ?? "Feature 状态组件不可用。");
             }
-            if (!string.IsNullOrWhiteSpace(geographicStatus)) listing.Label(geographicStatus);
-            listing.Label("覆盖 Tile 数：" + (selectedGeographicId == null ? 0
-                : HistoricalGeographicRegionManager.GetTilesForRegion(selectedGeographicId).Count));
+            listing.Label("手动覆盖 XML：Config\\HistoricalRimWorld\\WorldFeatures\\"
+                + factionState.ScenarioDefName + ".xml");
+            listing.Label("当前游戏存档由 RimWorld 原生 WorldFeature.ExposeData 保存名称；此 XML 用于后续新世界重用手动命名。");
+            if (!string.IsNullOrWhiteSpace(featureStatus)) listing.Label(featureStatus);
         }
 
-        private void LoadGeographicRegion(HistoricalGeographicRegionData data)
-        {
-            if (data == null) return;
-            selectedGeographicId = data.defName;
-            geographicId = data.defName ?? string.Empty;
-            geographicName = data.scenarioNameOverride ?? data.historicalName ?? data.label ?? string.Empty;
-            geographicEnglishName = data.englishName ?? string.Empty;
-            geographicType = data.regionType;
-            geographicGeometry = data.geometryType;
-            geographicRotation = data.labelRotation;
-            geographicAutoRotation = data.autoLabelRotation;
-            geographicDescription = data.historicalDescription ?? string.Empty;
-            geographicSourceNotes = data.sourceNotes ?? string.Empty;
-            List<HistoricalGeoVertex> vertices = data.geometryType == HistoricalGeographicGeometryType.Point
-                || data.geometryType == HistoricalGeographicGeometryType.LineString
-                ? data.coordinates ?? new List<HistoricalGeoVertex>()
-                : (data.polygons?.FirstOrDefault()?.vertices ?? data.coordinates ?? new List<HistoricalGeoVertex>());
-            geographicCoordinates = string.Join("\n", vertices.Where(item => item != null)
-                .Select(item => item.longitude.ToString("0.#####", Invariant) + "," + item.latitude.ToString("0.#####", Invariant)));
-            geographicLabelPosition = data.hasLabelPosition && data.labelPosition != null
-                ? data.labelPosition.longitude.ToString("0.#####", Invariant) + ","
-                    + data.labelPosition.latitude.ToString("0.#####", Invariant) : string.Empty;
-            geographicStatus = "已载入 " + data.defName;
-        }
+        private string featureStatus;
 
-        private void ResetGeographicRegion()
+        private void RenameNativeFeature(WorldFeature feature,
+            HistoricalWorldFeatureOverrideWorldComponent component,
+            HistoricalMapScaleTransformer transformer, HistoricalGeoCoordinate coordinate)
         {
-            selectedGeographicId = null;
-            geographicId = geographicName = geographicEnglishName = geographicCoordinates = string.Empty;
-            geographicLabelPosition = geographicDescription = string.Empty;
-            geographicSourceNotes = "Editor-authored approximate geometry; replace with source-verified coordinates.";
-            geographicType = HistoricalGeographicRegionType.GeographicRegion;
-            geographicGeometry = HistoricalGeographicGeometryType.Polygon;
-            geographicRotation = 0f;
-            geographicAutoRotation = false;
-            geographicStatus = "新建地理实体";
-        }
-
-        private void SaveGeographicRegion(HistoricalGeographicRegionWorldComponent component, string scenarioId)
-        {
-            if (component == null) { geographicStatus = "地理区域存档组件不可用。"; return; }
-            if (string.IsNullOrWhiteSpace(geographicId) || string.IsNullOrWhiteSpace(geographicName))
-            { geographicStatus = "DefName 和中文/默认名称不能为空。"; return; }
-            if (!TryParseCoordinates(geographicCoordinates, out List<HistoricalGeoVertex> vertices, out string error))
-            { geographicStatus = error; return; }
-            if (!TryParseOptionalCoordinate(geographicLabelPosition, out HistoricalGeoVertex labelPosition, out error))
-            { geographicStatus = error; return; }
-
-            HistoricalGeographicRegionData before = component.GetRegion(geographicId)?.Clone();
-            HistoricalGeographicRegionData after = new HistoricalGeographicRegionData
+            if (feature == null || component == null || transformer == null)
+            { featureStatus = "无法修改：原版 Feature、场景状态或历史投影不可用。"; return; }
+            if (string.IsNullOrWhiteSpace(nativeFeatureNameBuffer))
+            { featureStatus = "请输入新名称。"; return; }
+            HistoricalWorldFeatureNameRecord before = component.GetRecord(feature.uniqueID)?.Clone();
+            string originalName = component.GetOriginalName(feature.uniqueID)
+                ?? before?.originalName ?? WorldFeatureAdapter.GetName(feature);
+            component.SetOriginalName(feature.uniqueID, originalName);
+            HistoricalWorldFeatureNameRecord after = new HistoricalWorldFeatureNameRecord
             {
-                defName = geographicId.Trim(), label = geographicName.Trim(), scenarioId = scenarioId,
-                regionType = geographicType, historicalName = geographicName.Trim(),
-                scenarioNameOverride = geographicName.Trim(), englishName = geographicEnglishName.Trim(),
-                geometryType = geographicGeometry, coordinates = vertices,
-                polygons = geographicGeometry == HistoricalGeographicGeometryType.Polygon
-                    || geographicGeometry == HistoricalGeographicGeometryType.MultiPolygon
-                    ? new List<HistoricalGeoPolygon> { new HistoricalGeoPolygon { vertices = vertices.Select(CloneGeoVertex).ToList() } }
-                    : new List<HistoricalGeoPolygon>(),
-                hasLabelPosition = labelPosition != null, labelPosition = labelPosition,
-                labelRotation = geographicRotation, autoLabelRotation = geographicAutoRotation,
-                minZoom = 0f, maxZoom = 1f, labelPriority = 50,
-                confidence = HistoricalBoundaryConfidence.Approximate,
-                source = "World Map Editor", sourceNotes = geographicSourceNotes,
-                historicalDescription = geographicDescription
+                featureUniqueId = feature.uniqueID,
+                featureType = WorldFeatureAdapter.GetFeatureType(feature),
+                historicalName = nativeFeatureNameBuffer.Trim(),
+                originalName = originalName,
+                targetLongitude = coordinate.Longitude,
+                targetLatitude = coordinate.Latitude,
+                searchRadiusKm = 100d
             };
-            string[] validation = after.Validate().ToArray();
-            if (validation.Length > 0) { geographicStatus = "校验失败：" + string.Join(" ", validation); return; }
-            IMapEditCommand command = new GeographicRegionEditCommand(component, before, after);
+            IMapEditCommand command = new NativeFeatureNameEditCommand(
+                Find.World, feature, component, WorldFeatureAdapter.GetName(feature), after.historicalName, before, after);
             command.Execute();
             undo.Push(command);
             redo.Clear();
-            selectedGeographicId = after.defName;
-            geographicStatus = "已应用修改。点击“保存地理区域覆盖层 XML”写入可编辑的独立 XML 文件。";
+            featureStatus = "已将原生 Feature 重命名为“" + after.historicalName + "”。覆盖 Tile 与地形未改变。";
         }
 
-        private void DeleteGeographicRegion(HistoricalGeographicRegionWorldComponent component)
+        private void RestoreNativeFeatureName(WorldFeature feature, HistoricalWorldFeatureOverrideWorldComponent component)
         {
-            HistoricalGeographicRegionData before = component?.GetRegion(selectedGeographicId)?.Clone();
-            if (before == null) { geographicStatus = "找不到要删除的地理实体。"; return; }
-            IMapEditCommand command = new GeographicRegionEditCommand(component, before, null);
+            if (feature == null || component == null) return;
+            HistoricalWorldFeatureNameRecord before = component.GetRecord(feature.uniqueID)?.Clone();
+            string originalName = component.GetOriginalName(feature.uniqueID) ?? before?.originalName;
+            if (string.IsNullOrWhiteSpace(originalName))
+            { featureStatus = "没有可恢复的原始名称记录。"; return; }
+            IMapEditCommand command = new NativeFeatureNameEditCommand(
+                Find.World, feature, component, WorldFeatureAdapter.GetName(feature), originalName, before, null);
             command.Execute();
             undo.Push(command);
             redo.Clear();
-            geographicStatus = "已删除；保存地理区域覆盖层 XML 后生效于下一次加载。";
-            selectedGeographicId = null;
+            featureStatus = "已恢复此世界生成时的原始名称。";
+            nativeFeatureNameBuffer = originalName;
         }
 
-        private bool TryGetSelectedHistoricalCoordinate(out string text)
+        private sealed class NativeFeatureNameEditCommand : IMapEditCommand
         {
-            text = null;
-            if (!HistoricalMapEditManager.TryGetSelectedTileId(out int tileId)
-                || tileId < 0 || tileId >= Find.World.grid.TilesCount) return false;
-            HistoricalFactionWorldComponent faction = Find.World.GetComponent<HistoricalFactionWorldComponent>();
-            HistoricalMapScaleDef scale = faction?.MapScaleState == null ? null
-                : DefDatabase<HistoricalMapScaleDef>.GetNamedSilentFail(faction.MapScaleState.ScaleDefName);
-            if (scale == null) return false;
-            Vector2 coordinate = Find.World.grid.Surface.LongLatOf(tileId);
-            HistoricalGeoCoordinate historical = new HistoricalMapScaleTransformer(scale)
-                .ToHistoricalCoordinate(new HistoricalGameGeoCoordinate(coordinate.y, coordinate.x));
-            text = historical.Longitude.ToString("0.#####", Invariant) + ","
-                + historical.Latitude.ToString("0.#####", Invariant);
-            return true;
-        }
-
-        private static bool TryParseCoordinates(string text, out List<HistoricalGeoVertex> result, out string error)
-        {
-            result = new List<HistoricalGeoVertex>();
-            error = null;
-            string[] lines = (text ?? string.Empty).Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-            for (int index = 0; index < lines.Length; index++)
+            private readonly RimWorld.Planet.World world;
+            private readonly WorldFeature feature;
+            private readonly HistoricalWorldFeatureOverrideWorldComponent component;
+            private readonly string beforeName, afterName;
+            private readonly HistoricalWorldFeatureNameRecord beforeRecord, afterRecord;
+            public string Label => "World Feature name: " + afterName;
+            public NativeFeatureNameEditCommand(RimWorld.Planet.World world, WorldFeature feature,
+                HistoricalWorldFeatureOverrideWorldComponent component, string beforeName, string afterName,
+                HistoricalWorldFeatureNameRecord beforeRecord, HistoricalWorldFeatureNameRecord afterRecord)
+            { this.world = world; this.feature = feature; this.component = component; this.beforeName = beforeName;
+              this.afterName = afterName; this.beforeRecord = beforeRecord?.Clone(); this.afterRecord = afterRecord?.Clone(); }
+            public void Execute() => Apply(afterName, afterRecord);
+            public void Undo() => Apply(beforeName, beforeRecord);
+            private void Apply(string name, HistoricalWorldFeatureNameRecord record)
             {
-                if (!TryParseOptionalCoordinate(lines[index], out HistoricalGeoVertex vertex, out error) || vertex == null)
-                { error = "第 " + (index + 1) + " 行坐标无效，请使用 经度,纬度。"; return false; }
-                result.Add(vertex);
-            }
-            return true;
-        }
-
-        private static bool TryParseOptionalCoordinate(string text, out HistoricalGeoVertex vertex, out string error)
-        {
-            vertex = null;
-            error = null;
-            if (string.IsNullOrWhiteSpace(text)) return true;
-            string[] parts = text.Split(',');
-            if (parts.Length != 2 || !double.TryParse(parts[0].Trim(), NumberStyles.Float, Invariant, out double longitude)
-                || !double.TryParse(parts[1].Trim(), NumberStyles.Float, Invariant, out double latitude))
-            { error = "坐标格式无效，请使用 经度,纬度。"; return false; }
-            vertex = new HistoricalGeoVertex { longitude = longitude, latitude = latitude };
-            return true;
-        }
-
-        private static string RemoveLastCoordinateLine(string value)
-        {
-            List<string> lines = (value ?? string.Empty).Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).ToList();
-            if (lines.Count > 0) lines.RemoveAt(lines.Count - 1);
-            return string.Join("\n", lines);
-        }
-
-        private static HistoricalGeoVertex CloneGeoVertex(HistoricalGeoVertex vertex) => new HistoricalGeoVertex
-        { longitude = vertex.longitude, latitude = vertex.latitude };
-
-        private sealed class GeographicRegionEditCommand : IMapEditCommand
-        {
-            private readonly HistoricalGeographicRegionWorldComponent component;
-            private readonly HistoricalGeographicRegionData before;
-            private readonly HistoricalGeographicRegionData after;
-            public string Label => (after ?? before)?.defName ?? "geographic region";
-            public GeographicRegionEditCommand(HistoricalGeographicRegionWorldComponent component,
-                HistoricalGeographicRegionData before, HistoricalGeographicRegionData after)
-            { this.component = component; this.before = before?.Clone(); this.after = after?.Clone(); }
-            public void Execute() => Apply(after);
-            public void Undo() => Apply(before);
-            private void Apply(HistoricalGeographicRegionData value)
-            {
-                string id = (value ?? before ?? after)?.defName;
-                if (string.IsNullOrWhiteSpace(id) || component == null) return;
-                if (value == null) component.RemoveRegion(id);
-                else component.SetRegion(value);
+                if (!WorldFeatureAdapter.TrySetName(feature, name)) return;
+                if (record == null) component.RemoveRecord(feature.uniqueID);
+                else component.SetRecord(record);
+                try { WorldFeatureAdapter.RefreshFeatureLabels(world); }
+                catch (Exception exception) { Log.Warning("[HR-016] Could not refresh native feature labels: " + exception.Message); }
             }
         }
-
         private void PreviewRiver()
         {
             if (!HistoricalRiverPathManager.TryBuildPlanFromText(riverCoordinates, selectedRiver,
@@ -544,9 +431,23 @@ namespace HistoricalRimWorld.UI
             HistoricalMapEditWorldComponent component = Find.World?.GetComponent<HistoricalMapEditWorldComponent>();
             HistoricalMapTileDescriptionWorldComponent descriptions =
                 Find.World?.GetComponent<HistoricalMapTileDescriptionWorldComponent>();
+            if (component == null)
+            { status = "保存失败：地图编辑存档组件不可用。"; Log.Error("[Historical RimWorld] Map edit save failed: component unavailable."); return; }
+            if (!string.Equals(component.ScenarioDefName, scenarioId, StringComparison.Ordinal))
+            { status = "保存失败：当前地图编辑数据与所选剧本不匹配。"; Log.Error("[Historical RimWorld] Map edit save failed: scenario mismatch."); return; }
             if (HistoricalMapEditFileStore.TrySave(component, descriptions, out string path, out string error))
-                status = "剧本覆盖层已保存：" + path;
-            else status = error;
+            {
+                status = "剧本地图修改已保存：" + path;
+                Log.Message("[Historical RimWorld] Saved scenario map edits to " + path + " ("
+                    + component.TerrainOverrides.Count() + " terrain overrides, "
+                    + component.RiverPaths.Count() + " river paths, "
+                    + (descriptions?.Descriptions.Count() ?? 0) + " tile descriptions).");
+            }
+            else
+            {
+                status = "保存失败：" + error;
+                Log.Error("[Historical RimWorld] " + status);
+            }
         }
     }
 }

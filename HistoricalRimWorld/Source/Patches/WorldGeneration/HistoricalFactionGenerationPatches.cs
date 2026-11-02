@@ -8,6 +8,7 @@ using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.Scenarios.EasternZhou;
 using HistoricalRimWorld.UI;
 using HistoricalRimWorld.World;
+using HistoricalRimWorld.WorldFeatures;
 using HistoricalRimWorld.WorldGeneration;
 using RimWorld;
 using RimWorld.Planet;
@@ -24,7 +25,7 @@ namespace HistoricalRimWorld.Patches.WorldGeneration
 
         private static void Postfix()
         {
-            HistoricalGeographicRegionLabelRenderer.Draw();
+            HistoricalWorldFeatureOverrideManager.RefreshPendingLabels(Find.World);
             HistoricalFactionWorldComponent factionState = Find.World?.GetComponent<HistoricalFactionWorldComponent>();
             bool historicalWorld = factionState?.GenerationMode == HistoricalFactionGenerationMode.HistoricalScenario
                 || HistoricalFactionGenerationContext.IsHistoricalWorldGenerationActive;

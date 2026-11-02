@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Approximate reference points for matching existing native MountainRange features. -->
+  <HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+    <defName>HR_Songshan</defName><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <historicalName>嵩山</historicalName><featureType>MountainRange</featureType>
+    <targetLongitude>113.0000</targetLongitude><targetLatitude>34.5200</targetLatitude>
+    <searchRadiusKm>100</searchRadiusKm><minimumOverlapRatio>0</minimumOverlapRatio><priority>100</priority>
+  </HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+  <HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+    <defName>HR_Xiaoshan</defName><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <historicalName>崤山</historicalName><featureType>MountainRange</featureType>
+    <targetLongitude>111.5000</targetLongitude><targetLatitude>34.7000</targetLatitude>
+    <searchRadiusKm>100</searchRadiusKm><minimumOverlapRatio>0</minimumOverlapRatio><priority>95</priority>
+  </HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+  <HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+    <defName>HR_Xiongershan</defName><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <historicalName>熊耳山</historicalName><featureType>MountainRange</featureType>
+    <targetLongitude>111.6000</targetLongitude><targetLatitude>34.3000</targetLatitude>
+    <searchRadiusKm>100</searchRadiusKm><minimumOverlapRatio>0</minimumOverlapRatio><priority>90</priority>
+  </HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+  <HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+    <defName>HR_Funiushan</defName><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <historicalName>伏牛山</historicalName><featureType>MountainRange</featureType>
+    <targetLongitude>112.0000</targetLongitude><targetLatitude>33.6000</targetLatitude>
+    <searchRadiusKm>120</searchRadiusKm><minimumOverlapRatio>0</minimumOverlapRatio><priority>85</priority>
+  </HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+  <HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+    <defName>HR_Taihangshan</defName><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <historicalName>太行山</historicalName><featureType>MountainRange</featureType>
+    <targetLongitude>113.5000</targetLongitude><targetLatitude>36.0000</targetLatitude>
+    <searchRadiusKm>150</searchRadiusKm><minimumOverlapRatio>0</minimumOverlapRatio><priority>95</priority>
+  </HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+  <HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+    <defName>HR_Mangshan</defName><scenarioId>HR_Scenario_EasternZhou_770BCE</scenarioId>
+    <historicalName>邙山</historicalName><featureType>MountainRange</featureType>
+    <targetLongitude>112.5500</targetLongitude><targetLatitude>34.7600</targetLatitude>
+    <searchRadiusKm>60</searchRadiusKm><minimumOverlapRatio>0</minimumOverlapRatio><priority>80</priority>
+  </HistoricalRimWorld.WorldFeatures.HistoricalWorldFeatureOverrideDef>
+</Defs>

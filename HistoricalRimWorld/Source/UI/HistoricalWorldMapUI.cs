@@ -133,24 +133,13 @@ namespace HistoricalRimWorld.UI
             IReadOnlyList<string> regionIds = HistoricalWorldRevealManager.GetRegionsForTile(tileId).ToList().AsReadOnly();
             string tileDescription = Find.World?.GetComponent<HistoricalMapTileDescriptionWorldComponent>()
                 ?.GetDescription(tileId);
-            IReadOnlyList<HistoricalGeographicRegionData> geographicRegions =
-                HistoricalGeographicRegionManager.GetRegionsForTile(tileId);
-            if (regionIds.Count == 0 && string.IsNullOrWhiteSpace(tileDescription) && geographicRegions.Count == 0) return;
+            if (regionIds.Count == 0 && string.IsNullOrWhiteSpace(tileDescription)) return;
 
             listing.Gap();
             if (!string.IsNullOrWhiteSpace(tileDescription))
             {
                 listing.Label("地图格描述");
                 listing.Label(tileDescription);
-            }
-            if (geographicRegions.Count > 0)
-            {
-                listing.Label("地理区域");
-                foreach (HistoricalGeographicRegionData geographicRegion in geographicRegions)
-                {
-                    if (listing.ButtonText(HistoricalGeographicRegionManager.ResolveName(geographicRegion)))
-                        Find.WindowStack.Add(new HistoricalGeographicRegionDetailWindow(geographicRegion.defName));
-                }
             }
             if (regionIds.Count == 0) return;
 

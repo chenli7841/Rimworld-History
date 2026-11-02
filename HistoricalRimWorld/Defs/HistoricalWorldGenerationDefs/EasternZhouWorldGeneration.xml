@@ -6,10 +6,10 @@
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
     <mapScale>HR_MapScale_EasternZhou_770BCE</mapScale>
     <mode>ScenarioBounded</mode>
-    <minLatitude>25</minLatitude>
+    <minLatitude>29</minLatitude>
     <maxLatitude>38</maxLatitude>
     <minLongitude>104</minLongitude>
-    <maxLongitude>128</maxLongitude>
+    <maxLongitude>127</maxLongitude>
     <latitudeMargin>0</latitudeMargin>
     <longitudeMargin>0</longitudeMargin>
     <requireCompleteCoverage>true</requireCompleteCoverage>

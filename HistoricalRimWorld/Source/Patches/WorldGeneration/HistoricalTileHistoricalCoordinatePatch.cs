@@ -1,12 +1,11 @@
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using HarmonyLib;
 using HistoricalRimWorld.Factions;
 using HistoricalRimWorld.Geography;
 using HistoricalRimWorld.Geography.Scaling;
 using HistoricalRimWorld.World;
+using HistoricalRimWorld.WorldFeatures;
 using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
@@ -43,10 +42,12 @@ namespace HistoricalRimWorld.Patches.WorldGeneration
                 __result = (__result ?? string.Empty) + "\n历史坐标（比例尺 " + scaleLabel + "×）："
                     + historical.Longitude.ToString("0.00000", CultureInfo.InvariantCulture) + "°E, "
                     + historical.Latitude.ToString("0.00000", CultureInfo.InvariantCulture) + "°N";
-                IReadOnlyList<HistoricalGeographicRegionData> features =
-                    HistoricalGeographicRegionManager.GetRegionsForTile(tileId);
-                if (features.Count > 0)
-                    __result += "\n地理区域：" + string.Join("、", features.Select(HistoricalGeographicRegionManager.ResolveName));
+                if (HistoricalWorldFeatureOverrideManager.TryGetFeatureForTile(Find.World, tileId, out RimWorld.Planet.WorldFeature feature))
+                {
+                    int coveredTiles = WorldFeatureAdapter.GetFeatureTiles(Find.World, feature).Count;
+                    __result += "\n原版地理特征：" + WorldFeatureAdapter.GetName(feature)
+                        + "（" + WorldFeatureAdapter.GetFeatureType(feature) + "；覆盖 " + coveredTiles + " 格）";
+                }
             }
             catch (Exception exception)
             {
