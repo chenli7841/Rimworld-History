@@ -20,6 +20,7 @@ namespace HistoricalRimWorld.World
         private string terrainDatasetDefName;
         private int terrainDatasetVersion;
         private List<HistoricalMapTerrainOverride> terrainOverrides = new List<HistoricalMapTerrainOverride>();
+        private List<HistoricalMapBiomeOverride> biomeOverrides = new List<HistoricalMapBiomeOverride>();
         private List<HistoricalMapRiverPath> riverPaths = new List<HistoricalMapRiverPath>();
 
         public string ScenarioDefName => scenarioDefName;
@@ -31,6 +32,8 @@ namespace HistoricalRimWorld.World
         public int TerrainDatasetVersion => terrainDatasetVersion;
         public IEnumerable<HistoricalMapTerrainOverride> TerrainOverrides =>
             terrainOverrides ?? Enumerable.Empty<HistoricalMapTerrainOverride>();
+        public IEnumerable<HistoricalMapBiomeOverride> BiomeOverrides =>
+            biomeOverrides ?? Enumerable.Empty<HistoricalMapBiomeOverride>();
         public IEnumerable<HistoricalMapRiverPath> RiverPaths => riverPaths ?? Enumerable.Empty<HistoricalMapRiverPath>();
 
         public HistoricalMapEditWorldComponent(RimWorldWorld world) : base(world) { }
@@ -54,6 +57,7 @@ namespace HistoricalRimWorld.World
             terrainDatasetDefName = terrain?.DatasetDefName;
             terrainDatasetVersion = terrain?.DatasetVersion ?? 0;
             terrainOverrides = terrainOverrides ?? new List<HistoricalMapTerrainOverride>();
+            biomeOverrides = biomeOverrides ?? new List<HistoricalMapBiomeOverride>();
         }
 
         internal void SetTerrain(int tileId, double longitude, double latitude, Hilliness baseValue, Hilliness value)
@@ -75,6 +79,28 @@ namespace HistoricalRimWorld.World
             {
                 state.SetValue(value);
             }
+        }
+
+        public HistoricalMapBiomeOverride GetBiomeOverride(int tileId) =>
+            biomeOverrides?.FirstOrDefault(item => item != null && item.TileId == tileId);
+
+        internal void SetBiome(int tileId, double longitude, double latitude,
+            string baseBiomeDefName, string biomeDefName)
+        {
+            if (biomeOverrides == null) biomeOverrides = new List<HistoricalMapBiomeOverride>();
+            HistoricalMapBiomeOverride state = GetBiomeOverride(tileId);
+            if (string.Equals(baseBiomeDefName, biomeDefName, System.StringComparison.Ordinal))
+            {
+                if (state != null) biomeOverrides.Remove(state);
+                return;
+            }
+            if (state == null)
+            {
+                state = new HistoricalMapBiomeOverride();
+                state.Initialize(tileId, longitude, latitude, baseBiomeDefName, biomeDefName);
+                biomeOverrides.Add(state);
+            }
+            else state.SetValue(biomeDefName);
         }
 
         internal void AddRiverPath(HistoricalMapRiverPath path)
@@ -101,15 +127,49 @@ namespace HistoricalRimWorld.World
             Scribe_Values.Look(ref terrainDatasetDefName, "historicalMapEditTerrainDatasetDefName");
             Scribe_Values.Look(ref terrainDatasetVersion, "historicalMapEditTerrainDatasetVersion", 0);
             Scribe_Collections.Look(ref terrainOverrides, "historicalMapTerrainOverrides", LookMode.Deep);
+            Scribe_Collections.Look(ref biomeOverrides, "historicalMapBiomeOverrides", LookMode.Deep);
             Scribe_Collections.Look(ref riverPaths, "historicalMapRiverPaths", LookMode.Deep);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 terrainOverrides = terrainOverrides ?? new List<HistoricalMapTerrainOverride>();
                 terrainOverrides.RemoveAll(item => item == null || item.TileId < 0);
+                biomeOverrides = biomeOverrides ?? new List<HistoricalMapBiomeOverride>();
+                biomeOverrides.RemoveAll(item => item == null || item.TileId < 0
+                    || string.IsNullOrWhiteSpace(item.BiomeDefName));
                 riverPaths = riverPaths ?? new List<HistoricalMapRiverPath>();
                 riverPaths.RemoveAll(item => item == null || string.IsNullOrWhiteSpace(item.Id)
                     || string.IsNullOrWhiteSpace(item.RiverDefName) || item.Points == null || item.Points.Count < 2);
             }
+        }
+    }
+
+    public sealed class HistoricalMapBiomeOverride : IExposable
+    {
+        public int TileId = -1;
+        public double HistoricalLongitude;
+        public double HistoricalLatitude;
+        public string BaseBiomeDefName;
+        public string BiomeDefName;
+
+        public void Initialize(int tileId, double longitude, double latitude,
+            string baseBiomeDefName, string biomeDefName)
+        {
+            TileId = tileId;
+            HistoricalLongitude = longitude;
+            HistoricalLatitude = latitude;
+            BaseBiomeDefName = baseBiomeDefName;
+            BiomeDefName = biomeDefName;
+        }
+
+        public void SetValue(string value) => BiomeDefName = value;
+
+        public void ExposeData()
+        {
+            Scribe_Values.Look(ref TileId, "tileId", -1);
+            Scribe_Values.Look(ref HistoricalLongitude, "historicalLongitude");
+            Scribe_Values.Look(ref HistoricalLatitude, "historicalLatitude");
+            Scribe_Values.Look(ref BaseBiomeDefName, "baseBiomeDefName");
+            Scribe_Values.Look(ref BiomeDefName, "biomeDefName");
         }
     }
 

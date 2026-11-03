@@ -142,6 +142,9 @@ namespace HistoricalRimWorld.Patches.WorldGeneration
                     existing++;
                 }
             }
+            foreach (FactionDef supplementalFaction in HistoricalFactionManager.GetSupplementalFactionDefs(setup.scenario.defName))
+                if (supplementalFaction != null && !selected.Contains(supplementalFaction))
+                    selected.Add(supplementalFaction);
             FactionDef localBandits = DefDatabase<FactionDef>.GetNamedSilentFail("HR_Faction_LocalBandits");
             if (localBandits != null && !selected.Contains(localBandits)) selected.Add(localBandits);
             factions = selected;

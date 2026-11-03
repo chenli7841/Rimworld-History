@@ -23,6 +23,7 @@ namespace HistoricalRimWorld.UI
         private readonly Stack<IMapEditCommand> redo = new Stack<IMapEditCommand>();
         private Vector2 scrollPosition;
         private Hilliness selectedTerrain = Hilliness.SmallHills;
+        private BiomeDef selectedBiome;
         private int brushRadius;
         private int descriptionEditTileId = -1;
         private string descriptionBuffer = string.Empty;
@@ -30,6 +31,10 @@ namespace HistoricalRimWorld.UI
         private string riverCoordinates = string.Empty;
         private string riverPreviewStatus;
         private string status;
+        private WorldObjectDef mapMarkerDef;
+        private string mapMarkerNameBuffer = string.Empty;
+        private string mapMarkerDescriptionBuffer = string.Empty;
+        private HistoricalMapLocationWorldObject observedMapMarker;
 
         public HistoricalWorldMapEditorWindow()
         {
@@ -51,7 +56,7 @@ namespace HistoricalRimWorld.UI
                 return;
             }
 
-            Rect viewRect = new Rect(0f, 0f, inRect.width - 18f, 1800f);
+            Rect viewRect = new Rect(0f, 0f, inRect.width - 18f, 2600f);
             Widgets.BeginScrollView(inRect, ref scrollPosition, viewRect);
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(viewRect);
@@ -64,25 +69,9 @@ namespace HistoricalRimWorld.UI
             listing.GapLine();
             DrawSelectedTile(listing);
             listing.GapLine();
-
-            listing.Label("Terrain brush");
-            if (listing.ButtonText("Terrain: " + selectedTerrain + "  (click to choose)")) OpenTerrainMenu();
-            Rect radiusRect = listing.GetRect(30f);
-            Widgets.Label(new Rect(radiusRect.x, radiusRect.y, 130f, radiusRect.height), "Hex radius: " + brushRadius);
-            if (Widgets.ButtonText(new Rect(radiusRect.x + 150f, radiusRect.y, 80f, radiusRect.height), "−")
-                && brushRadius > 0) brushRadius--;
-            if (Widgets.ButtonText(new Rect(radiusRect.x + 240f, radiusRect.y, 80f, radiusRect.height), "+")
-                && brushRadius < 4) brushRadius++;
-            listing.Label("覆盖格数按六角邻接距离计算：半径 0–4。选择地图上的 Tile，再执行一次画笔操作。");
-            if (listing.ButtonText("Apply terrain to brush")) ApplyPaint();
-            if (listing.ButtonText("Restore generated terrain in brush")) ApplyRestore();
-            if (listing.ButtonText("保存地形 / 河流 / Tile 描述修改到剧本 XML"))
-                SaveEdits(factionState.ScenarioDefName);
-            listing.Label("保存路径：Config\\HistoricalRimWorld\\MapEdits\\"
-                + factionState.ScenarioDefName + ".xml");
-
-            DrawRiverEditor(listing);
             DrawNativeWorldFeatureEditor(listing, factionState);
+            DrawRiverEditor(listing);
+            DrawHistoricalMapMarkerEditor(listing, factionState);
 
             Rect historyRect = listing.GetRect(30f);
             if (Widgets.ButtonText(new Rect(historyRect.x, historyRect.y, historyRect.width * 0.48f, historyRect.height),
@@ -103,7 +92,7 @@ namespace HistoricalRimWorld.UI
             }
 
             listing.GapLine();
-            listing.Label("当前版本支持：检查 Tile、地形画笔、历史河流、地理区域表单编辑、Undo/Redo 和覆盖层保存。");
+            listing.Label("当前版本支持：检查 Tile、地形与 Biome 画笔、历史河流、地理区域表单编辑、Undo/Redo 和覆盖层保存。");
             listing.Label("地理区域顶点通过经纬度文本修改；地图鼠标拖拽顶点/标签尚未开放。");
             listing.End();
             Widgets.EndScrollView();
@@ -160,8 +149,10 @@ namespace HistoricalRimWorld.UI
                     HistoricalGeoCoordinate historical = new HistoricalMapScaleTransformer(scaleDef)
                         .ToHistoricalCoordinate(new HistoricalGameGeoCoordinate(gameCoordinate.y, gameCoordinate.x));
                     listing.Label("Historical coordinates (longitude, latitude):");
-                    string historicalCoordinateText = historical.Longitude.ToString("0.00000", Invariant)
-                        + "," + historical.Latitude.ToString("0.00000", Invariant);
+                    string historicalCoordinateText = Math.Abs(historical.Longitude).ToString("0.00000", Invariant)
+                        + (historical.Longitude < 0d ? "W" : "E") + ", "
+                        + Math.Abs(historical.Latitude).ToString("0.00000", Invariant)
+                        + (historical.Latitude < 0d ? "S" : "N");
                     Rect coordinateRect = listing.GetRect(28f);
                     Rect coordinateFieldRect = new Rect(coordinateRect.x, coordinateRect.y,
                         coordinateRect.width - 92f, coordinateRect.height);
@@ -175,6 +166,26 @@ namespace HistoricalRimWorld.UI
                 }
                 catch (Exception exception) { listing.Label("Coordinate conversion error: " + exception.Message); }
             }
+
+            HistoricalFactionWorldComponent factionState = Find.World.GetComponent<HistoricalFactionWorldComponent>();
+            listing.GapLine();
+
+            listing.Label("Terrain brush");
+            if (listing.ButtonText("Terrain: " + selectedTerrain + "  (click to choose)")) OpenTerrainMenu();
+            Rect radiusRect = listing.GetRect(30f);
+            Widgets.Label(new Rect(radiusRect.x, radiusRect.y, 130f, radiusRect.height), "Hex radius: " + brushRadius);
+            if (Widgets.ButtonText(new Rect(radiusRect.x + 150f, radiusRect.y, 80f, radiusRect.height), "−")
+                && brushRadius > 0) brushRadius--;
+            if (Widgets.ButtonText(new Rect(radiusRect.x + 240f, radiusRect.y, 80f, radiusRect.height), "+")
+                && brushRadius < 4) brushRadius++;
+            listing.Label("覆盖格数按六角邻接距离计算：半径 0–4。选择地图上的 Tile，再执行一次画笔操作。");
+            if (listing.ButtonText("Apply terrain to brush")) ApplyPaint();
+            if (listing.ButtonText("Restore generated terrain in brush")) ApplyRestore();
+            DrawBiomeBrush(listing);
+            if (listing.ButtonText("保存地形 / Biome / 河流 / Tile 描述修改到剧本 XML"))
+                SaveEdits(factionState.ScenarioDefName);
+            listing.Label("保存路径：Config\\HistoricalRimWorld\\MapEdits\\"
+                + factionState.ScenarioDefName + ".xml");
 
             HistoricalMapTerrainOverride edit = Find.World.GetComponent<HistoricalMapEditWorldComponent>()?.GetTerrainOverride(tileId);
             HistoricalTerrainTileState imported = Find.World.GetComponent<HistoricalTerrainWorldComponent>()?.GetTile(tileId);
@@ -196,6 +207,27 @@ namespace HistoricalRimWorld.UI
             List<FloatMenuOption> options = Enum.GetValues(typeof(Hilliness)).Cast<Hilliness>()
                 .Select(value => new FloatMenuOption(value.ToString(), () => selectedTerrain = value)).ToList();
             Find.WindowStack.Add(new FloatMenu(options));
+        }
+
+        private void DrawBiomeBrush(Listing_Standard listing)
+        {
+            listing.GapLine();
+            listing.Label("Biome brush");
+            if (selectedBiome == null && HistoricalMapEditManager.TryGetSelectedTileId(out int selectedTileId)
+                && selectedTileId >= 0 && selectedTileId < Find.World.grid.Surface.TilesCount)
+                selectedBiome = Find.World.grid.Surface.Tiles[selectedTileId]?.PrimaryBiome;
+            if (listing.ButtonText("Biome: " + (selectedBiome?.LabelCap ?? "请选择") + "（点击选择）"))
+            {
+                List<FloatMenuOption> options = DefDatabase<BiomeDef>.AllDefsListForReading
+                    .Where(biome => biome != null)
+                    .OrderBy(biome => biome.LabelCap.ToString(), StringComparer.Ordinal)
+                    .Select(biome => new FloatMenuOption(biome.LabelCap + " [" + biome.defName + "]",
+                        () => selectedBiome = biome)).ToList();
+                Find.WindowStack.Add(new FloatMenu(options));
+            }
+            listing.Label("使用上方同一六角画笔半径（0–4）；应用后会立即刷新地图，并支持 Undo/Redo。");
+            if (listing.ButtonText("Apply biome to brush")) ApplyBiomePaint();
+            if (listing.ButtonText("Restore generated biome in brush")) ApplyBiomeRestore();
         }
 
         private void DrawRiverEditor(Listing_Standard listing)
@@ -232,50 +264,325 @@ namespace HistoricalRimWorld.UI
         }
 
         private int selectedNativeFeatureId = -1;
+        private int lastObservedSelectedTileId = -1;
         private string nativeFeatureNameBuffer = string.Empty;
+        private string newFeatureName = string.Empty;
+        private FeatureDef newFeatureDef;
+        private int featureSelectionRadius = 1;
+        private readonly List<int> stagedNewFeatureTiles = new List<int>();
+
+        private void DrawHistoricalMapMarkerEditor(Listing_Standard listing,
+            HistoricalFactionWorldComponent factionState)
+        {
+            listing.GapLine();
+            listing.Label("Historical map markers (WorldObject)");
+            HistoricalMapLocationWorldObject selectedMarker = Find.WorldSelector?.SingleSelectedObject
+                as HistoricalMapLocationWorldObject;
+            if (!ReferenceEquals(selectedMarker, observedMapMarker))
+            {
+                observedMapMarker = selectedMarker;
+                if (selectedMarker != null)
+                {
+                    mapMarkerNameBuffer = selectedMarker.HistoricalLabel ?? selectedMarker.Label;
+                    mapMarkerDescriptionBuffer = selectedMarker.HistoricalDescription ?? string.Empty;
+                }
+            }
+
+            bool hasTile = HistoricalMapEditManager.TryGetSelectedTileId(out int tileId)
+                && Find.World?.grid?.Surface != null
+                && tileId >= 0 && tileId < Find.World.grid.Surface.TilesCount
+                && Find.World.grid.Surface.Tiles[tileId] != null;
+            List<WorldObjectDef> markerDefs = DefDatabase<WorldObjectDef>.AllDefsListForReading
+                .Where(def => def != null && def.defName.StartsWith("HR_MapMarker_", StringComparison.Ordinal)
+                    && def.worldObjectClass == typeof(HistoricalMapLocationWorldObject))
+                .OrderBy(def => def.defName, StringComparer.Ordinal).ToList();
+
+            if (selectedMarker == null)
+            {
+                if (mapMarkerDef == null || !markerDefs.Contains(mapMarkerDef))
+                    mapMarkerDef = markerDefs.FirstOrDefault(def => def.defName == "HR_MapMarker_Town")
+                        ?? markerDefs.FirstOrDefault();
+                if (listing.ButtonText("WorldObjectDef：" + (mapMarkerDef?.LabelCap ?? "未选择") + "（点击选择）"))
+                {
+                    List<FloatMenuOption> options = markerDefs.Select(def => new FloatMenuOption(
+                        MarkerDefDisplayName(def) + "  [" + def.defName + "]", () => mapMarkerDef = def)).ToList();
+                    if (options.Count == 0) featureStatus = "没有找到 HR_MapMarker_* WorldObjectDef。";
+                    else Find.WindowStack.Add(new FloatMenu(options));
+                }
+                if (hasTile) listing.Label("创建位置：Tile " + tileId);
+                else listing.Label("请先在世界地图点击要放置标记的 Tile。");
+            }
+            else
+            {
+                listing.Label("当前选中标记：" + selectedMarker.Label + " ["
+                    + selectedMarker.def.defName + "]，Tile " + (int)selectedMarker.Tile);
+            }
+
+            listing.Label("名称");
+            mapMarkerNameBuffer = Widgets.TextField(listing.GetRect(28f), mapMarkerNameBuffer);
+            listing.Label("说明");
+            mapMarkerDescriptionBuffer = Widgets.TextArea(listing.GetRect(72f), mapMarkerDescriptionBuffer);
+
+            if (selectedMarker == null)
+            {
+                if (listing.ButtonText("在所选 Tile 创建地图标记"))
+                    CreateHistoricalMapMarker(factionState, tileId, hasTile, mapMarkerDef);
+                listing.Label("标记是中立 WorldObject：不生成阵营、殖民地、地图或地形变化；由 RimWorld 存档保存。");
+            }
+            else
+            {
+                Rect buttons = listing.GetRect(30f);
+                if (Widgets.ButtonText(new Rect(buttons.x, buttons.y, buttons.width * 0.58f, buttons.height),
+                    "应用名称 / 说明并加入撤销历史"))
+                    ApplyMapMarkerMetadata(selectedMarker);
+                if (Widgets.ButtonText(new Rect(buttons.x + buttons.width * 0.62f, buttons.y,
+                    buttons.width * 0.38f, buttons.height), "删除标记"))
+                    DeleteHistoricalMapMarker(selectedMarker);
+            }
+            if (!string.IsNullOrWhiteSpace(featureStatus)) listing.Label(featureStatus);
+        }
+
+        private static string MarkerDefDisplayName(WorldObjectDef def)
+        {
+            if (def == null) return "Unknown";
+            switch (def.defName)
+            {
+                case "HR_MapMarker_Town": return "Town / 城镇";
+                case "HR_MapMarker_City": return "City / 城市";
+                case "HR_MapMarker_MountainPeak": return "Mountain Peak / 山峰";
+                case "HR_MapMarker_MountainPass": return "Mountain Pass / 关隘";
+                default: return def.LabelCap;
+            }
+        }
+
+        private void CreateHistoricalMapMarker(HistoricalFactionWorldComponent factionState,
+            int tileId, bool hasTile, WorldObjectDef def)
+        {
+            if (!hasTile) { featureStatus = "创建失败：请先在世界地图选择有效 Tile。"; return; }
+            if (def == null || def.worldObjectClass != typeof(HistoricalMapLocationWorldObject))
+            { featureStatus = "创建失败：所选 Def 不是 HistoricalMapLocationWorldObject。"; return; }
+            if (string.IsNullOrWhiteSpace(mapMarkerNameBuffer))
+            { featureStatus = "创建失败：请输入标记名称。"; return; }
+            HistoricalMapScaleDef scale = factionState.MapScaleState == null ? null
+                : DefDatabase<HistoricalMapScaleDef>.GetNamedSilentFail(factionState.MapScaleState.ScaleDefName);
+            if (scale == null) { featureStatus = "创建失败：当前历史地图比例尺不可用。"; return; }
+
+            try
+            {
+                Vector2 gameCoordinate = Find.World.grid.Surface.LongLatOf(tileId);
+                HistoricalGeoCoordinate historical = new HistoricalMapScaleTransformer(scale)
+                    .ToHistoricalCoordinate(new HistoricalGameGeoCoordinate(gameCoordinate.y, gameCoordinate.x));
+                WorldObject raw = WorldObjectMaker.MakeWorldObject(def);
+                HistoricalMapLocationWorldObject marker = raw as HistoricalMapLocationWorldObject;
+                if (marker == null) { featureStatus = "创建失败：WorldObjectMaker 返回了不兼容的对象。"; return; }
+                marker.SetHistoricalLabel(mapMarkerNameBuffer.Trim());
+                marker.SetHistoricalDescription(mapMarkerDescriptionBuffer ?? string.Empty);
+                marker.SetHistoricalGeoCoordinates(historical.Latitude, historical.Longitude,
+                    gameCoordinate.y, gameCoordinate.x, scale.scaleFactor);
+                marker.Tile = new PlanetTile(tileId, Find.World.grid.Surface);
+
+                IMapEditCommand command = new HistoricalMapMarkerPresenceCommand(Find.World, marker, true);
+                command.Execute();
+                undo.Push(command);
+                redo.Clear();
+                featureStatus = MarkerDefDisplayName(def) + "标记“" + marker.Label + "”已创建于 Tile " + tileId + "。";
+                mapMarkerNameBuffer = string.Empty;
+                mapMarkerDescriptionBuffer = string.Empty;
+            }
+            catch (Exception exception) { featureStatus = "创建标记失败：" + exception.Message; }
+        }
+
+        private void ApplyMapMarkerMetadata(HistoricalMapLocationWorldObject marker)
+        {
+            if (marker == null || !Find.World.worldObjects.AllWorldObjects.Contains(marker))
+            { featureStatus = "编辑失败：标记不在当前世界中。"; return; }
+            if (string.IsNullOrWhiteSpace(mapMarkerNameBuffer))
+            { featureStatus = "编辑失败：标记名称不能为空。"; return; }
+            IMapEditCommand command = new HistoricalMapMarkerMetadataCommand(marker,
+                marker.HistoricalLabel ?? marker.Label, marker.HistoricalDescription ?? string.Empty,
+                mapMarkerNameBuffer.Trim(), mapMarkerDescriptionBuffer ?? string.Empty);
+            command.Execute();
+            undo.Push(command);
+            redo.Clear();
+            featureStatus = "地图标记名称与说明已更新。";
+        }
+
+        private void DeleteHistoricalMapMarker(HistoricalMapLocationWorldObject marker)
+        {
+            if (marker == null || !Find.World.worldObjects.AllWorldObjects.Contains(marker))
+            { featureStatus = "删除失败：标记不在当前世界中。"; return; }
+            Find.WorldSelector?.Deselect(marker);
+            IMapEditCommand command = new HistoricalMapMarkerPresenceCommand(Find.World, marker, false);
+            command.Execute();
+            undo.Push(command);
+            redo.Clear();
+            observedMapMarker = null;
+            featureStatus = "地图标记已删除；可通过 Undo 恢复。";
+        }
+
+        private sealed class HistoricalMapMarkerPresenceCommand : IMapEditCommand
+        {
+            private readonly RimWorld.Planet.World world;
+            private readonly HistoricalMapLocationWorldObject marker;
+            private readonly bool addOnExecute;
+            public string Label => (addOnExecute ? "Create map marker: " : "Delete map marker: ") + marker.Label;
+
+            public HistoricalMapMarkerPresenceCommand(RimWorld.Planet.World world,
+                HistoricalMapLocationWorldObject marker, bool addOnExecute)
+            { this.world = world; this.marker = marker; this.addOnExecute = addOnExecute; }
+
+            public void Execute() => SetPresent(addOnExecute);
+            public void Undo() => SetPresent(!addOnExecute);
+
+            private void SetPresent(bool present)
+            {
+                bool exists = world?.worldObjects?.AllWorldObjects?.Contains(marker) == true;
+                if (present && !exists) world.worldObjects.Add(marker);
+                else if (!present && exists) world.worldObjects.Remove(marker);
+            }
+        }
+
+        private sealed class HistoricalMapMarkerMetadataCommand : IMapEditCommand
+        {
+            private readonly HistoricalMapLocationWorldObject marker;
+            private readonly string beforeName, beforeDescription, afterName, afterDescription;
+            public string Label => "Edit map marker: " + afterName;
+
+            public HistoricalMapMarkerMetadataCommand(HistoricalMapLocationWorldObject marker,
+                string beforeName, string beforeDescription, string afterName, string afterDescription)
+            { this.marker = marker; this.beforeName = beforeName; this.beforeDescription = beforeDescription;
+              this.afterName = afterName; this.afterDescription = afterDescription; }
+
+            public void Execute() => Apply(afterName, afterDescription);
+            public void Undo() => Apply(beforeName, beforeDescription);
+
+            private void Apply(string name, string description)
+            {
+                marker.SetHistoricalLabel(name);
+                marker.SetHistoricalDescription(description);
+            }
+        }
 
         private void DrawNativeWorldFeatureEditor(Listing_Standard listing, HistoricalFactionWorldComponent factionState)
         {
             listing.GapLine();
             listing.Label("World Features Editor (原版地理特征)");
-            if (!HistoricalMapEditManager.TryGetSelectedTileId(out int tileId)
-                || !HistoricalWorldFeatureOverrideManager.TryGetFeatureForTile(Find.World, tileId, out WorldFeature feature))
+            listing.Label("将当前原版 Feature 名称、类型及成员 Tile 的历史坐标保存到本剧本 XML：");
+            if (listing.ButtonText("保存当前 Feature 与 Tile 组成到 XML")) SaveNativeFeatureLayout(factionState);
+            listing.Label("Config\\HistoricalRimWorld\\WorldFeatures\\Layouts\\"
+                + factionState.ScenarioDefName + ".xml");
+            bool hasTile = HistoricalMapEditManager.TryGetSelectedTileId(out int tileId)
+                && tileId >= 0 && tileId < Find.World.grid.Surface.TilesCount;
+            WorldFeature tileFeature = hasTile ? Find.World.grid.Surface.Tiles[tileId]?.feature : null;
+            List<WorldFeature> nativeFeatures = WorldFeatureAdapter.GetAllFeatures(Find.World)
+                .Where(item => ReferenceEquals(item.layer, Find.World.grid.Surface)).ToList();
+            if (hasTile && tileId != lastObservedSelectedTileId)
             {
-                listing.Label("先选择一个带有原版地理特征的 Tile。山脉、湖泊、森林等按原版 Feature 类型筛选；河流不是 WorldFeature。");
-                return;
+                lastObservedSelectedTileId = tileId;
+                if (tileFeature != null) selectedNativeFeatureId = tileFeature.uniqueID;
             }
+            if (!nativeFeatures.Any(item => item.uniqueID == selectedNativeFeatureId)) selectedNativeFeatureId = -1;
 
             HistoricalWorldFeatureOverrideWorldComponent component =
                 Find.World.GetComponent<HistoricalWorldFeatureOverrideWorldComponent>();
             component?.Initialize(factionState.ScenarioDefName);
-            if (selectedNativeFeatureId != feature.uniqueID)
-            {
-                selectedNativeFeatureId = feature.uniqueID;
-                nativeFeatureNameBuffer = WorldFeatureAdapter.GetName(feature);
-            }
-            HistoricalMapScaleDef scale = factionState.MapScaleState == null ? null
-                : DefDatabase<HistoricalMapScaleDef>.GetNamedSilentFail(factionState.MapScaleState.ScaleDefName);
-            HistoricalMapScaleTransformer transformer = scale == null ? null : new HistoricalMapScaleTransformer(scale);
-            string representative = HistoricalWorldFeatureOverrideManager.TryGetHistoricalRepresentative(
-                feature, transformer, out HistoricalGeoCoordinate featureCoordinate)
-                ? featureCoordinate.Longitude.ToString("0.0000", Invariant) + ", "
-                    + featureCoordinate.Latitude.ToString("0.0000", Invariant)
-                : "unavailable";
-            listing.Label("原生名称：" + WorldFeatureAdapter.GetName(feature));
-            listing.Label("FeatureDef：" + WorldFeatureAdapter.GetFeatureType(feature)
-                + "  |  Unique ID（仅当前世界有效）：" + feature.uniqueID);
-            listing.Label("代表历史坐标：" + representative + "  |  覆盖 Tile："
-                + WorldFeatureAdapter.GetFeatureTiles(Find.World, feature).Count);
-            listing.Label("新名称");
-            nativeFeatureNameBuffer = Widgets.TextField(listing.GetRect(28f), nativeFeatureNameBuffer);
+            if (newFeatureDef == null)
+                newFeatureDef = DefDatabase<FeatureDef>.GetNamedSilentFail("MountainRange")
+                    ?? DefDatabase<FeatureDef>.AllDefsListForReading.FirstOrDefault();
 
-            Rect featureButtons = listing.GetRect(30f);
-            if (Widgets.ButtonText(new Rect(featureButtons.x, featureButtons.y,
-                featureButtons.width * 0.48f, featureButtons.height), "重命名并加入撤销历史"))
-                RenameNativeFeature(feature, component, transformer, featureCoordinate);
-            if (Widgets.ButtonText(new Rect(featureButtons.x + featureButtons.width * 0.52f,
-                featureButtons.y, featureButtons.width * 0.48f, featureButtons.height), "恢复原始随机名称"))
-                RestoreNativeFeatureName(feature, component);
+            string selectedFeatureLabel = nativeFeatures.FirstOrDefault(item => item.uniqueID == selectedNativeFeatureId) is WorldFeature selectedFeature
+                ? selectedFeature.name + " [" + selectedFeature.def.defName + ", ID " + selectedFeature.uniqueID + "]"
+                : "(未选择)";
+            if (listing.ButtonText("当前编辑 Feature：" + selectedFeatureLabel))
+            {
+                List<FloatMenuOption> options = nativeFeatures.OrderBy(item => item.name, StringComparer.Ordinal)
+                    .Select(item => new FloatMenuOption(item.name + " [" + item.def.defName + ", ID " + item.uniqueID + "]",
+                        () => { selectedNativeFeatureId = item.uniqueID; nativeFeatureNameBuffer = item.name; })).ToList();
+                Find.WindowStack.Add(new FloatMenu(options));
+            }
+
+            if (hasTile)
+            {
+                listing.Label("当前 Tile " + tileId + " 的 Feature：" + (tileFeature?.name ?? "(无)"));
+                if (selectedNativeFeatureId >= 0 && listing.ButtonText("将所选 Tile 加入当前 Feature"))
+                    ApplyFeatureMembership(tileId, true);
+                if (selectedNativeFeatureId >= 0 && ReferenceEquals(tileFeature,
+                    nativeFeatures.FirstOrDefault(item => item.uniqueID == selectedNativeFeatureId))
+                    && listing.ButtonText("从当前 Feature 移除所选 Tile"))
+                    ApplyFeatureMembership(tileId, false);
+
+                Rect featureAreaRect = listing.GetRect(30f);
+                Widgets.Label(new Rect(featureAreaRect.x, featureAreaRect.y, 148f, featureAreaRect.height),
+                    "批量范围（六角半径）: " + featureSelectionRadius);
+                if (Widgets.ButtonText(new Rect(featureAreaRect.x + 162f, featureAreaRect.y, 42f, featureAreaRect.height), "−")
+                    && featureSelectionRadius > 0) featureSelectionRadius--;
+                if (Widgets.ButtonText(new Rect(featureAreaRect.x + 210f, featureAreaRect.y, 42f, featureAreaRect.height), "+")
+                    && featureSelectionRadius < 20) featureSelectionRadius++;
+                List<int> areaTiles = GetTilesWithinRadius(Find.World.grid, tileId, featureSelectionRadius);
+                listing.Label("以当前选中 Tile 为中心，范围内共 " + areaTiles.Count + " 格；会按球面六角邻接扩展。");
+                listing.Label("批量加入会将范围内已属于其他 Feature 的 Tile 转移到当前 Feature；可用 Undo 撤销整批操作。");
+                if (selectedNativeFeatureId >= 0 && listing.ButtonText("将范围内 " + areaTiles.Count + " 格批量加入当前 Feature"))
+                    ApplyFeatureMembershipBatch(areaTiles, true);
+                if (selectedNativeFeatureId >= 0 && areaTiles.Any(id =>
+                    ReferenceEquals(Find.World.grid.Surface.Tiles[id]?.feature,
+                        nativeFeatures.FirstOrDefault(item => item.uniqueID == selectedNativeFeatureId)))
+                    && listing.ButtonText("将范围内属于当前 Feature 的 Tile 批量移除"))
+                    ApplyFeatureMembershipBatch(areaTiles, false);
+                if (listing.ButtonText("将范围内 Tile 全部加入新 Feature 暂存列表"))
+                {
+                    foreach (int areaTile in areaTiles)
+                        if (!stagedNewFeatureTiles.Contains(areaTile)) stagedNewFeatureTiles.Add(areaTile);
+                    featureStatus = "已将范围内 " + areaTiles.Count + " 格加入新 Feature 暂存列表。";
+                }
+                if (stagedNewFeatureTiles.Contains(tileId))
+                {
+                    if (listing.ButtonText("从新 Feature 暂存列表移除 Tile " + tileId)) stagedNewFeatureTiles.Remove(tileId);
+                }
+                else if (hasTile && listing.ButtonText("将所选 Tile 加入新 Feature 暂存列表"))
+                    stagedNewFeatureTiles.Add(tileId);
+            }
+            else listing.Label("请在世界地图上选择 Tile；再把它加入现有 Feature 或新 Feature 的 Tile 列表。");
+
+            WorldFeature selected = nativeFeatures.FirstOrDefault(item => item.uniqueID == selectedNativeFeatureId);
+            if (selected != null)
+            {
+                HistoricalMapScaleDef scale = factionState.MapScaleState == null ? null
+                    : DefDatabase<HistoricalMapScaleDef>.GetNamedSilentFail(factionState.MapScaleState.ScaleDefName);
+                HistoricalMapScaleTransformer transformer = scale == null ? null : new HistoricalMapScaleTransformer(scale);
+                string representative = HistoricalWorldFeatureOverrideManager.TryGetHistoricalRepresentative(
+                    selected, transformer, out HistoricalGeoCoordinate featureCoordinate)
+                    ? featureCoordinate.Longitude.ToString("0.0000", Invariant) + ", "
+                        + featureCoordinate.Latitude.ToString("0.0000", Invariant)
+                    : "unavailable";
+                List<int> members = WorldFeatureAdapter.GetFeatureTiles(Find.World, selected).ToList();
+                listing.Label("FeatureDef：" + selected.def.defName + "  | 代表历史坐标：" + representative);
+                listing.Label("覆盖 Tile：" + members.Count + (members.Count == 0 ? string.Empty
+                    : "  |  IDs: " + string.Join(", ", members.Take(48)) + (members.Count > 48 ? " …" : string.Empty)));
+                listing.Label("名称");
+                nativeFeatureNameBuffer = Widgets.TextField(listing.GetRect(28f), nativeFeatureNameBuffer);
+                Rect featureButtons = listing.GetRect(30f);
+                if (Widgets.ButtonText(new Rect(featureButtons.x, featureButtons.y,
+                    featureButtons.width * 0.48f, featureButtons.height), "重命名并加入撤销历史"))
+                    RenameNativeFeature(selected, component, transformer, featureCoordinate);
+                if (Widgets.ButtonText(new Rect(featureButtons.x + featureButtons.width * 0.52f,
+                    featureButtons.y, featureButtons.width * 0.48f, featureButtons.height), "恢复原始名称"))
+                    RestoreNativeFeatureName(selected, component);
+            }
+
+            listing.GapLine();
+            listing.Label("创建新的原版 WorldFeature");
+            listing.Label("名称");
+            newFeatureName = Widgets.TextField(listing.GetRect(28f), newFeatureName);
+            if (listing.ButtonText("原生 Feature 类型：" + (newFeatureDef?.defName ?? "未选择") + "（点击更改）"))
+            {
+                List<FloatMenuOption> options = DefDatabase<FeatureDef>.AllDefsListForReading
+                    .OrderBy(item => item.defName, StringComparer.Ordinal)
+                    .Select(item => new FloatMenuOption(item.defName, () => newFeatureDef = item)).ToList();
+                Find.WindowStack.Add(new FloatMenu(options));
+            }
+            listing.Label("新 Feature 暂存 Tile 数：" + stagedNewFeatureTiles.Count
+                + (stagedNewFeatureTiles.Count == 0 ? string.Empty : " (" + string.Join(", ", stagedNewFeatureTiles.Take(48)) + ")"));
+            if (listing.ButtonText("创建原版 Feature 并接管暂存 Tile")) CreateNativeFeature();
 
             if (listing.ButtonText("保存手动 Feature 名称覆盖（用于新世界）"))
             {
@@ -290,7 +597,96 @@ namespace HistoricalRimWorld.UI
             listing.Label("手动覆盖 XML：Config\\HistoricalRimWorld\\WorldFeatures\\"
                 + factionState.ScenarioDefName + ".xml");
             listing.Label("当前游戏存档由 RimWorld 原生 WorldFeature.ExposeData 保存名称；此 XML 用于后续新世界重用手动命名。");
+            listing.Label("布局保存 Feature 名称、原版类型和成员 Tile 的历史坐标；重新生成该剧本世界时会映射回当前 WorldGrid。");
             if (!string.IsNullOrWhiteSpace(featureStatus)) listing.Label(featureStatus);
+        }
+
+        private void SaveNativeFeatureLayout(HistoricalFactionWorldComponent factionState)
+        {
+            HistoricalMapScaleDef layoutScale = factionState?.MapScaleState == null ? null
+                : DefDatabase<HistoricalMapScaleDef>.GetNamedSilentFail(factionState.MapScaleState.ScaleDefName);
+            if (HistoricalWorldFeatureLayoutFileStore.TrySave(Find.World, factionState?.ScenarioDefName,
+                layoutScale, out string layoutPath, out string layoutError))
+            {
+                featureStatus = "Feature 区域与成员 Tile 已保存：" + layoutPath;
+                Log.Message("[Historical RimWorld] Saved native World Feature layouts to " + layoutPath + ".");
+            }
+            else featureStatus = "Feature 区域保存失败：" + layoutError;
+        }
+
+        private void ApplyFeatureMembership(int tileId, bool add)
+        {
+            WorldFeature target = WorldFeatureAdapter.GetAllFeatures(Find.World)
+                .FirstOrDefault(item => item.uniqueID == selectedNativeFeatureId);
+            if (!HistoricalWorldFeatureEditorManager.TryCreateMembershipCommand(Find.World, target,
+                tileId, add, out IMapEditCommand command, out string error))
+            { featureStatus = error; return; }
+            command.Execute();
+            undo.Push(command);
+            redo.Clear();
+            if (!WorldFeatureAdapter.GetAllFeatures(Find.World).Any(item => item.uniqueID == selectedNativeFeatureId))
+            { selectedNativeFeatureId = -1; nativeFeatureNameBuffer = string.Empty; }
+            featureStatus = (add ? "已加入 Tile " : "已移除 Tile ") + tileId + "；修改已加入撤销历史。";
+        }
+
+        private void ApplyFeatureMembershipBatch(IEnumerable<int> tileIds, bool add)
+        {
+            WorldFeature target = WorldFeatureAdapter.GetAllFeatures(Find.World)
+                .FirstOrDefault(item => item.uniqueID == selectedNativeFeatureId);
+            if (!HistoricalWorldFeatureEditorManager.TryCreateMembershipBatchCommand(Find.World, target,
+                tileIds, add, out IMapEditCommand command, out int changedCount, out string error))
+            { featureStatus = error; return; }
+            command.Execute();
+            undo.Push(command);
+            redo.Clear();
+            if (!WorldFeatureAdapter.GetAllFeatures(Find.World).Any(item => item.uniqueID == selectedNativeFeatureId))
+            { selectedNativeFeatureId = -1; nativeFeatureNameBuffer = string.Empty; }
+            featureStatus = "已批量" + (add ? "加入" : "移除") + " " + changedCount
+                + " 格；操作已加入撤销历史。";
+        }
+
+        private static List<int> GetTilesWithinRadius(WorldGrid grid, int startTile, int radius)
+        {
+            HashSet<int> visited = new HashSet<int> { startTile };
+            Queue<Tuple<int, int>> frontier = new Queue<Tuple<int, int>>();
+            frontier.Enqueue(Tuple.Create(startTile, 0));
+            List<PlanetTile> neighbors = new List<PlanetTile>(8);
+            while (frontier.Count > 0)
+            {
+                Tuple<int, int> current = frontier.Dequeue();
+                if (current.Item2 >= radius) continue;
+                neighbors.Clear();
+                grid.GetTileNeighbors(new PlanetTile(current.Item1, grid.Surface), neighbors);
+                foreach (PlanetTile neighbor in neighbors)
+                {
+                    int id = (int)neighbor;
+                    if (!visited.Add(id)) continue;
+                    frontier.Enqueue(Tuple.Create(id, current.Item2 + 1));
+                }
+            }
+            return visited.OrderBy(id => id).ToList();
+        }
+
+        private void CreateNativeFeature()
+        {
+            if (!HistoricalWorldFeatureEditorManager.TryCreateFeatureCommand(Find.World, newFeatureName,
+                newFeatureDef, stagedNewFeatureTiles, out IMapEditCommand command, out string error))
+            { featureStatus = error; return; }
+            command.Execute();
+            undo.Push(command);
+            redo.Clear();
+            if (stagedNewFeatureTiles.Count > 0)
+            {
+                WorldFeature created = Find.World.grid.Surface.Tiles[stagedNewFeatureTiles[0]]?.feature;
+                if (created != null)
+                {
+                    selectedNativeFeatureId = created.uniqueID;
+                    nativeFeatureNameBuffer = created.name;
+                }
+            }
+            stagedNewFeatureTiles.Clear();
+            featureStatus = "已创建原版 WorldFeature；可继续添加/移除 Tile，最后保存 Feature layout XML。";
+            newFeatureName = string.Empty;
         }
 
         private string featureStatus;
@@ -426,6 +822,28 @@ namespace HistoricalRimWorld.UI
             status = "已恢复：" + command.Label;
         }
 
+        private void ApplyBiomePaint()
+        {
+            if (!HistoricalMapEditManager.TryCreateBiomePaint(selectedBiome, brushRadius,
+                out IMapEditCommand command, out string error))
+            { status = error; return; }
+            command.Execute();
+            undo.Push(command);
+            redo.Clear();
+            status = "已应用：" + command.Label;
+        }
+
+        private void ApplyBiomeRestore()
+        {
+            if (!HistoricalMapEditManager.TryCreateBiomeRestore(brushRadius,
+                out IMapEditCommand command, out string error))
+            { status = error; return; }
+            command.Execute();
+            undo.Push(command);
+            redo.Clear();
+            status = "已恢复：" + command.Label;
+        }
+
         private void SaveEdits(string scenarioId)
         {
             HistoricalMapEditWorldComponent component = Find.World?.GetComponent<HistoricalMapEditWorldComponent>();
@@ -440,6 +858,7 @@ namespace HistoricalRimWorld.UI
                 status = "剧本地图修改已保存：" + path;
                 Log.Message("[Historical RimWorld] Saved scenario map edits to " + path + " ("
                     + component.TerrainOverrides.Count() + " terrain overrides, "
+                + component.BiomeOverrides.Count() + " biome overrides, "
                     + component.RiverPaths.Count() + " river paths, "
                     + (descriptions?.Descriptions.Count() ?? 0) + " tile descriptions).");
             }

@@ -23,6 +23,11 @@ namespace HistoricalRimWorld.WorldFeatures
         {
             if (world?.features?.features == null || world.grid?.Surface == null || scale == null
                 || string.IsNullOrWhiteSpace(scenarioId)) return 0;
+            if (world.features.features.Count == 0)
+            {
+                Log.Message("[HR-016] No native World Features exist in this scenario world; historical feature-name matching was skipped.");
+                return 0;
+            }
             HistoricalMapScaleTransformer transformer;
             try { transformer = new HistoricalMapScaleTransformer(scale); }
             catch (Exception exception)
@@ -153,7 +158,6 @@ namespace HistoricalRimWorld.WorldFeatures
             if (renamed > 0)
             {
                 pendingLabelRefreshWorld = world;
-                if (ReferenceEquals(Find.World, world)) RefreshPendingLabels(world);
             }
             return renamed;
         }
@@ -194,6 +198,7 @@ namespace HistoricalRimWorld.WorldFeatures
 
         public static void RefreshPendingLabels(RimWorldWorld world)
         {
+            WorldFeatureAdapter.RefreshPendingLabels(world);
             if (world == null || !ReferenceEquals(world, pendingLabelRefreshWorld)) return;
             try
             {

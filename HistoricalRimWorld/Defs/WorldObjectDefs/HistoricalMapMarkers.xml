@@ -23,4 +23,28 @@
     <expandingIconPriority>80</expandingIconPriority>
     <canHaveMap>false</canHaveMap>
   </WorldObjectDef>
+
+  <WorldObjectDef>
+    <defName>HR_MapMarker_MountainPeak</defName>
+    <label>山峰</label>
+    <description>Named mountain peak or historically significant mountain landmark.</description>
+    <worldObjectClass>HistoricalRimWorld.World.HistoricalMapLocationWorldObject</worldObjectClass>
+    <texture>World/HR/MountainPeak</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/HR/MountainPeak</expandingIconTexture>
+    <expandingIconPriority>80</expandingIconPriority>
+    <canHaveMap>false</canHaveMap>
+  </WorldObjectDef>
+
+  <WorldObjectDef>
+    <defName>HR_MapMarker_MountainPass</defName>
+    <label>关隘</label>
+    <description>Named mountain pass or historically significant strategic passage.</description>
+    <worldObjectClass>HistoricalRimWorld.World.HistoricalMapLocationWorldObject</worldObjectClass>
+    <texture>World/HR/MountainPass</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/HR/MountainPass</expandingIconTexture>
+    <expandingIconPriority>80</expandingIconPriority>
+    <canHaveMap>false</canHaveMap>
+  </WorldObjectDef>
 </Defs>

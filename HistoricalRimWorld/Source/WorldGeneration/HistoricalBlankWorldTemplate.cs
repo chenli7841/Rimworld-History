@@ -3,6 +3,7 @@ using RimWorld.Planet;
 using HistoricalRimWorld.World;
 using HistoricalRimWorld.Geography;
 using HistoricalRimWorld.Geography.Scaling;
+using HistoricalRimWorld.WorldFeatures;
 using Verse;
 using System.Collections.Generic;
 using System;
@@ -148,6 +149,10 @@ namespace HistoricalRimWorld.WorldGeneration
                     removedLandmarks++;
                 }
             }
+
+            // This editable template starts as neutral land; keep no random vanilla
+            // mountain/biome/world-feature names or hidden tile-to-feature links.
+            WorldFeatureAdapter.ClearAllFeatures(world);
 
             for (int tileId = 0; tileId < world.grid.TilesCount; tileId++)
             {

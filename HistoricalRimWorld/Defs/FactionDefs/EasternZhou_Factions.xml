@@ -96,4 +96,25 @@
       </li>
     </pawnGroupMakers>
   </FactionDef>
+
+  <!-- Supplemental neutral faction for small, locally organized tribal communities. -->
+  <FactionDef ParentName="TribeBase">
+    <defName>HR_Faction_NeutralSmallTribes</defName>
+    <label>中立小部落</label>
+    <fixedName>中立小部落</fixedName>
+    <description>代表东周初年分散的中立地方小型部落，不对应单一的历史国家。</description>
+    <colorSpectrum>
+      <li>(0.66, 0.65, 0.38)</li>
+      <li>(0.66, 0.65, 0.38)</li>
+    </colorSpectrum>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <displayInFactionSelection>true</displayInFactionSelection>
+    <canMakeRandomly>false</canMakeRandomly>
+    <naturalEnemy>false</naturalEnemy>
+    <permanentEnemy>false</permanentEnemy>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+  </FactionDef>
 </Defs>

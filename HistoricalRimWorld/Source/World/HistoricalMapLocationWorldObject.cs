@@ -19,6 +19,8 @@ namespace HistoricalRimWorld.World
         private Color historicalFactionColor = Color.white;
         private bool hasHistoricalFactionColor;
 
+        public string HistoricalLabel => historicalLabel;
+        public string HistoricalDescription => historicalDescription;
         public override string Label => string.IsNullOrWhiteSpace(historicalLabel) ? base.Label : historicalLabel;
         public override string LabelShort => Label;
         public override bool HasName => !string.IsNullOrWhiteSpace(historicalLabel) || base.HasName;

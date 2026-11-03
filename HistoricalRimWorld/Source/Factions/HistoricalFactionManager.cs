@@ -45,7 +45,7 @@ namespace HistoricalRimWorld.Factions
             if (faction?.def == null) return false;
             if (faction == Faction.OfPlayerSilentFail) return true;
             if (faction.def.defName == "HR_Faction_LocalBandits") return true;
-            return GetBindings(scenarioId).Any(binding => binding.rimWorldFactionDef == faction.def);
+            return GetScenarioFactionDefs(scenarioId).Contains(faction.def);
         }
 
         internal static List<FactionBindingPair> GeneratedPairs(IEnumerable<Faction> factions, string scenarioId)
@@ -66,6 +66,22 @@ namespace HistoricalRimWorld.Factions
                     && item.scenario.defName == scenarioId && item.historicalState != null && item.rimWorldFactionDef != null)
                 .OrderBy(item => item.defName, StringComparer.Ordinal)
                 .ToList();
+
+        internal static List<FactionDef> GetScenarioFactionDefs(string scenarioId)
+        {
+            IEnumerable<FactionDef> boundFactions = GetBindings(scenarioId)
+                .Select(item => item.rimWorldFactionDef);
+            return boundFactions.Concat(GetSupplementalFactionDefs(scenarioId)).Where(item => item != null)
+                .Distinct().ToList();
+        }
+
+        internal static List<FactionDef> GetSupplementalFactionDefs(string scenarioId)
+        {
+            return scenarioId == "HR_Scenario_EasternZhou_770BCE"
+                ? new[] { DefDatabase<FactionDef>.GetNamedSilentFail("HR_Faction_NeutralSmallTribes") }
+                    .Where(item => item != null).ToList()
+                : new List<FactionDef>();
+        }
 
         public static IEnumerable<string> ValidateBindings(HistoricalScenarioDef scenario)
         {

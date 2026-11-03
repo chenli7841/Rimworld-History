@@ -28,12 +28,66 @@
     -->
     <locations>
       <li>
-        <locationId>ExampleTown</locationId>
-        <label>示例乡镇</label>
-        <description>乡镇标记格式示例；尚未指定历史派系。</description>
-        <longitude>110.5</longitude>
-        <latitude>37.5</latitude>
+        <locationId>haojing</locationId>
+        <label>镐京（西安）</label>
+        <description>所属派系：周王室（西周国都遗址）</description>
+        <longitude>108.7600</longitude>
+        <latitude>34.2200</latitude>
         <worldObjectDef>HR_MapMarker_Town</worldObjectDef>
+        <factionDef>HR_Faction_EasternZhou</factionDef>
+      </li>
+      <li>
+        <locationId>ankang</locationId>
+        <label>安康</label>
+        <description>秦国/楚国</description>
+        <longitude>109.040350</longitude>
+        <latitude>32.697272</latitude>
+        <worldObjectDef>HR_MapMarker_Town</worldObjectDef>
+        <factionDef>HR_Faction_Chu</factionDef>
+      </li>
+      <li>
+        <locationId>shiyan</locationId>
+        <label>庸（十堰）</label>
+        <description>秦国/楚国之间</description>
+        <longitude>110.78172</longitude>
+        <latitude>32.60641</latitude>
+        <worldObjectDef>HR_MapMarker_Town</worldObjectDef>
+        <factionDef>HR_Faction_NeutralSmallTribes</factionDef>
+      </li>
+      <li>
+        <locationId>nanyang</locationId>
+        <label>申（南阳）</label>
+        <description>楚国</description>
+        <longitude>112.49335</longitude>
+        <latitude>33.03363</latitude>
+        <worldObjectDef>HR_MapMarker_Town</worldObjectDef>
+        <factionDef>HR_Faction_NeutralSmallTribes</factionDef>
+      </li>
+      <li>
+        <locationId>shangluo</locationId>
+        <label>商洛</label>
+        <description>秦国/晋国之间</description>
+        <longitude>109.95393</longitude>
+        <latitude>33.85787</latitude>
+        <worldObjectDef>HR_MapMarker_Town</worldObjectDef>
+        <factionDef>HR_Faction_NeutralSmallTribes</factionDef>
+      </li>
+      <li>
+        <locationId>wudangshan</locationId>
+        <label>武当山</label>
+        <description>武当山主峰</description>
+        <longitude>111.04221</longitude>
+        <latitude>32.39757</latitude>
+        <worldObjectDef>HR_MapMarker_MountainPeak</worldObjectDef>
+      </li>
+      <li>
+        <locationId>xiangyang</locationId>
+        <label>邓（襄阳）</label>
+        <description>楚国</description>
+        <longitude>112.10466</longitude>
+        <latitude>32.04247</latitude>
+        <worldObjectDef>HR_MapMarker_Town</worldObjectDef>
+        <factionDef>HR_Faction_NeutralSmallTribes</factionDef>
       </li>
       <li>
         <locationId>luoyi</locationId>

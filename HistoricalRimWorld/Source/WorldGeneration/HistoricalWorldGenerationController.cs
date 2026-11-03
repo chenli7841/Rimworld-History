@@ -205,10 +205,21 @@ namespace HistoricalRimWorld.WorldGeneration
                 generationDef.maximumTileCenterErrorDegrees, out int loadedMapEdits, out error))
                 Log.Warning("[Historical RimWorld] Scenario map edit file was not applied: " + error);
             else if (loadedMapEdits > 0)
-                Log.Message("[Historical RimWorld] Applied " + loadedMapEdits + " saved scenario terrain override(s).");
+                Log.Message("[Historical RimWorld] Applied " + loadedMapEdits
+                    + " saved scenario terrain/biome override(s).");
 
-            int renamedWorldFeatures = HistoricalWorldFeatureOverrideManager.ApplyScenarioOverrides(
-                world, scenario.defName, generationDef.mapScale);
+            bool hasSavedFeatureLayout = false;
+            if (!HistoricalWorldFeatureLayoutFileStore.TryLoadAndApply(world, scenario.defName,
+                generationDef.mapScale, generationDef.maximumTileCenterErrorDegrees,
+                out hasSavedFeatureLayout, out int restoredFeatures, out error))
+                Log.Warning("[Historical RimWorld] Saved World Feature layouts were not applied: " + error);
+            else if (restoredFeatures > 0)
+                Log.Message("[Historical RimWorld] Applied " + restoredFeatures
+                    + " saved native World Feature layout(s).");
+
+            int renamedWorldFeatures = hasSavedFeatureLayout ? 0
+                : HistoricalWorldFeatureOverrideManager.ApplyScenarioOverrides(
+                    world, scenario.defName, generationDef.mapScale);
             if (renamedWorldFeatures > 0)
                 Log.Message("[HR-016] Applied " + renamedWorldFeatures
                     + " native World Feature name override(s) for " + scenario.defName + ".");
@@ -253,10 +264,7 @@ namespace HistoricalRimWorld.WorldGeneration
         }
 
         internal static List<FactionDef> GetHistoricalFactionDefs(string scenarioId) =>
-            HistoricalFactionManager.GetBindings(scenarioId)
-                .Select(item => item.rimWorldFactionDef)
-                .Distinct()
-                .ToList();
+            HistoricalFactionManager.GetScenarioFactionDefs(scenarioId);
 
         private static bool PlaceHistoricalSettlements(RimWorldWorld world, HistoricalScenarioDef scenario,
             IEnumerable<FactionDef> factionDefs, HistoricalFactionWorldComponent component, out string error)

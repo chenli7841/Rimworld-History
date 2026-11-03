@@ -111,6 +111,75 @@ namespace HistoricalRimWorld.World
             return true;
         }
 
+        public static bool TryCreateBiomePaint(BiomeDef biome, int radius,
+            out IMapEditCommand command, out string error)
+        {
+            command = null;
+            error = null;
+            if (biome == null || DefDatabase<BiomeDef>.GetNamedSilentFail(biome.defName) != biome)
+            { error = "Select a valid RimWorld biome first."; return false; }
+            if (!TryGetContext(out RimWorldWorld world, out HistoricalMapEditWorldComponent edits,
+                out HistoricalMapScaleTransformer transformer, out _, out error)) return false;
+            if (!TryGetSelectedTileId(out int selectedId))
+            { error = "Select a WorldGrid tile first."; return false; }
+            if (radius < 0 || radius > 4) { error = "Brush radius must be between 0 and 4."; return false; }
+
+            List<BiomeEditDelta> deltas = new List<BiomeEditDelta>();
+            foreach (int tileId in TilesWithinRadius(world.grid, selectedId, radius))
+            {
+                Tile tile = world.grid.Surface.Tiles[tileId];
+                BiomeDef previous = tile?.PrimaryBiome;
+                if (tile == null || previous == null || previous == biome) continue;
+                HistoricalMapBiomeOverride saved = edits.GetBiomeOverride(tileId);
+                string baseBiome = saved?.BaseBiomeDefName ?? previous.defName;
+                Vector2 coordinate = world.grid.Surface.LongLatOf(tileId);
+                HistoricalGeoCoordinate historical;
+                try
+                {
+                    historical = transformer.ToHistoricalCoordinate(
+                        new HistoricalGameGeoCoordinate(coordinate.y, coordinate.x));
+                }
+                catch (Exception exception)
+                { error = "Could not inverse-project tile " + tileId + ": " + exception.Message; return false; }
+                deltas.Add(new BiomeEditDelta(tileId, historical.Longitude, historical.Latitude,
+                    baseBiome, previous.defName, biome.defName));
+            }
+            if (deltas.Count == 0) { error = "The selected brush does not change any biomes."; return false; }
+            command = new BiomePaintCommand(world, edits, deltas,
+                "Set biome " + biome.defName + " on " + deltas.Count + " tile(s)");
+            return true;
+        }
+
+        public static bool TryCreateBiomeRestore(int radius,
+            out IMapEditCommand command, out string error)
+        {
+            command = null;
+            error = null;
+            if (!TryGetContext(out RimWorldWorld world, out HistoricalMapEditWorldComponent edits,
+                out _, out _, out error)) return false;
+            if (!TryGetSelectedTileId(out int selectedId))
+            { error = "Select a WorldGrid tile first."; return false; }
+            if (radius < 0 || radius > 4) { error = "Brush radius must be between 0 and 4."; return false; }
+
+            List<BiomeEditDelta> deltas = new List<BiomeEditDelta>();
+            foreach (int tileId in TilesWithinRadius(world.grid, selectedId, radius))
+            {
+                HistoricalMapBiomeOverride state = edits.GetBiomeOverride(tileId);
+                Tile tile = world.grid.Surface.Tiles[tileId];
+                BiomeDef current = tile?.PrimaryBiome;
+                BiomeDef original = string.IsNullOrWhiteSpace(state?.BaseBiomeDefName)
+                    ? null : DefDatabase<BiomeDef>.GetNamedSilentFail(state.BaseBiomeDefName);
+                if (state == null || current == null || original == null || current == original) continue;
+                deltas.Add(new BiomeEditDelta(tileId, state.HistoricalLongitude, state.HistoricalLatitude,
+                    original.defName, current.defName, original.defName));
+            }
+            if (deltas.Count == 0)
+            { error = "The selected brush contains no biome overrides that can be restored."; return false; }
+            command = new BiomePaintCommand(world, edits, deltas,
+                "Restore generated biome on " + deltas.Count + " tile(s)");
+            return true;
+        }
+
         private static bool TryGetContext(out RimWorldWorld world, out HistoricalMapEditWorldComponent edits,
             out HistoricalMapScaleTransformer transformer, out string scenarioId, out string error)
         {
@@ -174,6 +243,21 @@ namespace HistoricalRimWorld.World
             }
         }
 
+        private sealed class BiomeEditDelta
+        {
+            public readonly int TileId;
+            public readonly double Longitude;
+            public readonly double Latitude;
+            public readonly string BaseBiome;
+            public readonly string Before;
+            public readonly string After;
+
+            public BiomeEditDelta(int tileId, double longitude, double latitude,
+                string baseBiome, string before, string after)
+            { TileId = tileId; Longitude = longitude; Latitude = latitude;
+              BaseBiome = baseBiome; Before = before; After = after; }
+        }
+
         private sealed class TerrainPaintCommand : IMapEditCommand
         {
             private readonly RimWorldWorld world;
@@ -199,6 +283,43 @@ namespace HistoricalRimWorld.World
                 world.pathGrid?.RecalculateAllLayersPathCosts();
                 // Tile data is updated immediately, but the world-map mesh is cached. Mark
                 // renderer layers dirty so the edited area is redrawn on the next world UI frame.
+                world.renderer?.SetAllLayersDirty();
+            }
+        }
+
+        private sealed class BiomePaintCommand : IMapEditCommand
+        {
+            private readonly RimWorldWorld world;
+            private readonly HistoricalMapEditWorldComponent edits;
+            private readonly List<BiomeEditDelta> deltas;
+            public string Label { get; }
+
+            public BiomePaintCommand(RimWorldWorld world, HistoricalMapEditWorldComponent edits,
+                List<BiomeEditDelta> deltas, string label)
+            { this.world = world; this.edits = edits; this.deltas = deltas; Label = label; }
+
+            public void Execute() => Apply(true);
+            public void Undo() => Apply(false);
+
+            private void Apply(bool forward)
+            {
+                foreach (BiomeEditDelta delta in deltas)
+                {
+                    string value = forward ? delta.After : delta.Before;
+                    BiomeDef biome = DefDatabase<BiomeDef>.GetNamedSilentFail(value);
+                    if (biome == null)
+                    {
+                        Log.Warning("[Historical RimWorld] Could not apply biome " + value
+                            + " to tile " + delta.TileId + "; the Def is unavailable.");
+                        continue;
+                    }
+                    Tile tile = world.grid.Surface.Tiles[delta.TileId];
+                    if (tile == null) continue;
+                    tile.PrimaryBiome = biome;
+                    edits.SetBiome(delta.TileId, delta.Longitude, delta.Latitude,
+                        delta.BaseBiome, value);
+                }
+                world.pathGrid?.RecalculateAllLayersPathCosts();
                 world.renderer?.SetAllLayersDirty();
             }
         }

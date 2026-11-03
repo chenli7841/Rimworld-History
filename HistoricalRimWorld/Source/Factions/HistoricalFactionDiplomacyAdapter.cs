@@ -12,19 +12,19 @@ namespace HistoricalRimWorld.Factions
         public static void ApplyInitialRelations(RimWorldWorld world, string scenarioId)
         {
             if (world?.factionManager == null) return;
-            Faction[] historical = HistoricalFactionManager.GetBindings(scenarioId)
-                .Select(binding => world.factionManager.AllFactionsListForReading
-                    .FirstOrDefault(faction => faction != null && faction.def == binding.rimWorldFactionDef))
+            Faction[] scenarioFactions = HistoricalFactionManager.GetScenarioFactionDefs(scenarioId)
+                .Select(factionDef => world.factionManager.AllFactionsListForReading
+                    .FirstOrDefault(faction => faction != null && faction.def == factionDef))
                 .Where(faction => faction != null)
                 .Distinct()
                 .ToArray();
 
-            for (int first = 0; first < historical.Length; first++)
+            for (int first = 0; first < scenarioFactions.Length; first++)
             {
-                for (int second = first + 1; second < historical.Length; second++)
+                for (int second = first + 1; second < scenarioFactions.Length; second++)
                 {
-                    Faction faction = historical[first];
-                    Faction other = historical[second];
+                    Faction faction = scenarioFactions[first];
+                    Faction other = scenarioFactions[second];
                     if (faction.HasGoodwill && other.HasGoodwill)
                     {
                         int goodwillAdjustment = -faction.BaseGoodwillWith(other);
