@@ -4,6 +4,7 @@ using System.Linq;
 using RimWorld;
 using RimWorld.Planet;
 using HistoricalRimWorld.WorldGeneration;
+using HistoricalRimWorld.World;
 using UnityEngine;
 using Verse;
 using RimWorldWorld = RimWorld.Planet.World;
@@ -101,6 +102,7 @@ namespace HistoricalRimWorld.WorldFeatures
             raw[offset] = (byte)(value & 0xFF);
             raw[offset + 1] = (byte)(value >> 8);
             InvalidateTileCache();
+            HistoricalWorldTerrainColorManager.Invalidate(world);
             return true;
         }
 

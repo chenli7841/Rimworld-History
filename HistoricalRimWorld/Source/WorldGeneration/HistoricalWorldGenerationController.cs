@@ -206,7 +206,7 @@ namespace HistoricalRimWorld.WorldGeneration
                 Log.Warning("[Historical RimWorld] Scenario map edit file was not applied: " + error);
             else if (loadedMapEdits > 0)
                 Log.Message("[Historical RimWorld] Applied " + loadedMapEdits
-                    + " saved scenario terrain/biome override(s).");
+                    + " saved scenario terrain/biome/color override(s).");
 
             bool hasSavedFeatureLayout = false;
             if (!HistoricalWorldFeatureLayoutFileStore.TryLoadAndApply(world, scenario.defName,
@@ -235,7 +235,8 @@ namespace HistoricalRimWorld.WorldGeneration
 
             HistoricalFactionDiplomacyAdapter.ApplyInitialRelations(world, scenario.defName);
 
-            bool placementComplete = PlaceHistoricalSettlements(world, scenario, factionDefs, component, out error);
+            bool placementComplete = PlaceHistoricalSettlements(world, scenario, factionDefs, component,
+                geographySetup.worldMap, generationDef.mapScale, out error);
             if (placementComplete)
                 RemoveGeneratedFactionSettlements(world, geographySetup.worldMap);
             if (placementComplete && !HistoricalWorldMapMarkerPlacer.TryPlace(world, geographySetup.worldMap,
@@ -267,7 +268,8 @@ namespace HistoricalRimWorld.WorldGeneration
             HistoricalFactionManager.GetScenarioFactionDefs(scenarioId);
 
         private static bool PlaceHistoricalSettlements(RimWorldWorld world, HistoricalScenarioDef scenario,
-            IEnumerable<FactionDef> factionDefs, HistoricalFactionWorldComponent component, out string error)
+            IEnumerable<FactionDef> factionDefs, HistoricalFactionWorldComponent component,
+            HistoricalWorldMapDef worldMap, HistoricalMapScaleDef mapScale, out string error)
         {
             error = null;
             if (world.grid == null || world.worldObjects == null)
@@ -292,6 +294,15 @@ namespace HistoricalRimWorld.WorldGeneration
                 return false;
             }
 
+            HistoricalMapScaleTransformer mapTransformer;
+            try { mapTransformer = new HistoricalMapScaleTransformer(mapScale); }
+            catch (Exception exception)
+            {
+                error = "The historical map scale could not be initialized for faction settlements: "
+                    + exception.Message;
+                return false;
+            }
+
             List<string> failures = new List<string>();
             foreach (HistoricalSettlementPlacementDef placement in GetPlacements(scenario.defName))
             {
@@ -299,7 +310,8 @@ namespace HistoricalRimWorld.WorldGeneration
                 if (binding == null) continue;
                 Faction faction = world.factionManager.AllFactionsListForReading
                     .FirstOrDefault(item => item != null && item.def == binding.rimWorldFactionDef);
-                List<Settlement> factionSettlements = movable.Where(item => item.Faction == faction).ToList();
+                List<Settlement> factionSettlements = movable.Where(item => item.Faction == faction)
+                    .Take(binding.desiredSettlementCount).ToList();
                 if (factionSettlements.Count < binding.desiredSettlementCount)
                     failures.Add("Expected at least " + binding.desiredSettlementCount + " world settlement(s) for "
                         + placement.polity.defName + ", but found " + factionSettlements.Count + ".");
@@ -313,9 +325,31 @@ namespace HistoricalRimWorld.WorldGeneration
                 string historicalSettlementName = placement.settlement?.LabelCap.ToString();
                 foreach (Settlement settlement in factionSettlements)
                 {
-                    Vector2 target = new Vector2(
-                        NormalizeLongitude(anchor.x + placement.prototypeLongitudeOffset),
-                        Mathf.Clamp(anchor.y + placement.prototypeLatitudeOffset, -85f, 85f));
+                    HistoricalWorldMapLocation configuredLocation = worldMap?.locations?.FirstOrDefault(item =>
+                        placement.settlement != null && item != null && item.settlement == placement.settlement);
+                    Vector2 target;
+                    if (configuredLocation != null)
+                    {
+                        HistoricalGameGeoCoordinate projected;
+                        try
+                        {
+                            projected = mapTransformer.ToGameCoordinate(new HistoricalGeoCoordinate(
+                                configuredLocation.latitude, configuredLocation.longitude));
+                        }
+                        catch (Exception exception)
+                        {
+                            failures.Add("Could not project settlement location '" + configuredLocation.locationId
+                                + "': " + exception.Message);
+                            continue;
+                        }
+                        target = new Vector2((float)projected.Longitude, (float)projected.Latitude);
+                    }
+                    else
+                    {
+                        target = new Vector2(
+                            NormalizeLongitude(anchor.x + placement.prototypeLongitudeOffset),
+                            Mathf.Clamp(anchor.y + placement.prototypeLatitudeOffset, -85f, 85f));
+                    }
                     int tileId;
                     if (!TryFindPlacementTile(world, target, movableSet, reservedTiles,
                         placement.minimumDistanceFromOtherSettlements, out tileId))

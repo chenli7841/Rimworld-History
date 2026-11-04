@@ -8,6 +8,7 @@ using System.Xml.Serialization;
 using HistoricalRimWorld.Factions;
 using HistoricalRimWorld.Geography;
 using HistoricalRimWorld.Geography.Scaling;
+using HistoricalRimWorld.World;
 using HistoricalRimWorld.WorldGeneration;
 using RimWorld;
 using RimWorld.Planet;
@@ -20,7 +21,7 @@ namespace HistoricalRimWorld.WorldFeatures
     [XmlRoot("HistoricalWorldFeatureLayouts")]
     public sealed class HistoricalWorldFeatureLayoutFile
     {
-        [XmlAttribute("schemaVersion")] public int schemaVersion = 1;
+        [XmlAttribute("schemaVersion")] public int schemaVersion = 2;
         [XmlAttribute("scenarioId")] public string scenarioId;
         [XmlAttribute("scaleDefName")] public string scaleDefName;
         [XmlElement("Feature")] public List<HistoricalWorldFeatureLayoutRecord> features = new List<HistoricalWorldFeatureLayoutRecord>();
@@ -32,6 +33,8 @@ namespace HistoricalRimWorld.WorldFeatures
         [XmlAttribute("name")] public string name;
         [XmlAttribute("featureDefName")] public string featureDefName;
         [XmlAttribute("drawAngle")] public float drawAngle;
+        [XmlAttribute("terrainColor")] public string terrainColor;
+        [XmlAttribute("terrainColorPriority")] public int terrainColorPriority;
         [XmlElement("Tile")] public List<HistoricalWorldFeatureTileCoordinate> tiles = new List<HistoricalWorldFeatureTileCoordinate>();
     }
 
@@ -75,10 +78,13 @@ namespace HistoricalRimWorld.WorldFeatures
                 {
                     List<int> members = WorldFeatureAdapter.GetFeatureTiles(world, feature).ToList();
                     if (members.Count == 0) continue;
+                    HistoricalWorldFeatureColorOverride color = world.GetComponent<HistoricalWorldTerrainColorWorldComponent>()
+                        ?.GetFeatureOverride(feature.uniqueID);
                     HistoricalWorldFeatureLayoutRecord record = new HistoricalWorldFeatureLayoutRecord
                     {
                         id = "Feature_" + feature.uniqueID.ToString(Invariant), name = feature.name,
-                        featureDefName = feature.def?.defName, drawAngle = feature.drawAngle
+                        featureDefName = feature.def?.defName, drawAngle = feature.drawAngle,
+                        terrainColor = color?.ColorHex, terrainColorPriority = color?.Priority ?? 0
                     };
                     foreach (int tileId in members)
                     {
@@ -136,13 +142,15 @@ namespace HistoricalRimWorld.WorldFeatures
                 using (FileStream stream = File.OpenRead(path))
                 using (XmlReader reader = XmlReader.Create(stream, settings))
                     file = (HistoricalWorldFeatureLayoutFile)Serializer.Deserialize(reader);
-                if (file == null || file.schemaVersion != 1 || file.scenarioId != scenarioId)
+                if (file == null || file.schemaVersion < 1 || file.schemaVersion > 2
+                    || file.scenarioId != scenarioId)
                     throw new InvalidDataException("Feature layout schema or scenario ID does not match.");
                 if (file.features == null || file.features.Count > MaximumFeatures
                     || file.features.Sum(item => item?.tiles?.Count ?? 0) > MaximumTileReferences)
                     throw new InvalidDataException("Feature layout count exceeds the safety limit.");
 
                 fileFound = true;
+                int restoredColorOverrides = 0;
                 // A saved layout represents the complete feature layer for this scenario.
                 // Clear generated labels only after the file has passed structural validation.
                 WorldFeatureAdapter.ClearAllFeatures(world);
@@ -182,13 +190,35 @@ namespace HistoricalRimWorld.WorldFeatures
                     foreach (int tileId in members) WorldFeatureAdapter.TrySetTileFeature(world, tileId, feature);
                     WorldFeatureAdapter.RecalculateFeatureGeometry(world, feature);
                     feature.drawAngle = record.drawAngle;
+                    if (!string.IsNullOrWhiteSpace(record.terrainColor))
+                    {
+                        if (!HistoricalWorldTerrainColorManager.TryParseHex(record.terrainColor, out _, out string normalized))
+                            Log.Warning("[Historical RimWorld] Ignored invalid saved terrain color for feature layout " + record.id + ".");
+                        else
+                        {
+                            HistoricalWorldTerrainColorWorldComponent colors =
+                                world.GetComponent<HistoricalWorldTerrainColorWorldComponent>();
+                            if (colors != null)
+                            {
+                                Vector2 game = world.grid.Surface.LongLatOf(members[0]);
+                                HistoricalGeoCoordinate historical = transformer.ToHistoricalCoordinate(
+                                    new HistoricalGameGeoCoordinate(game.y, game.x));
+                                colors.SetFeatureOverride(feature.uniqueID, feature.def.defName, feature.name,
+                                    historical.Longitude, historical.Latitude,
+                                    normalized, record.terrainColorPriority);
+                                restoredColorOverrides++;
+                            }
+                        }
+                    }
                     createdCount++;
                 }
                 if (createdCount > 0)
                 {
                     WorldFeatureAdapter.ScheduleLabelRefresh(world);
+                    HistoricalWorldTerrainColorManager.Invalidate(world, true);
                     Log.Message("[Historical RimWorld] Restored " + createdCount
-                        + " native World Feature layout(s) from " + path + ".");
+                        + " native World Feature layout(s), including " + restoredColorOverrides
+                        + " terrain color override(s), from " + path + ".");
                 }
                 return true;
             }

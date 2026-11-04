@@ -26,7 +26,8 @@ namespace HistoricalRimWorld.World
             if (fogMesh == null || fogMesh.vertexCount == 0) return;
 
             Material material = WorldMaterials.VertexColor;
-            if (material != null) Graphics.DrawMesh(fogMesh, Matrix4x4.identity, material, 0);
+            if (material != null)
+                Graphics.DrawMesh(fogMesh, Matrix4x4.identity, material, WorldCameraManager.WorldLayer);
         }
 
         private static void RebuildMesh()

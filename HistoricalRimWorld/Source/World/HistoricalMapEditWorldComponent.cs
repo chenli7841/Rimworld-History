@@ -21,6 +21,7 @@ namespace HistoricalRimWorld.World
         private int terrainDatasetVersion;
         private List<HistoricalMapTerrainOverride> terrainOverrides = new List<HistoricalMapTerrainOverride>();
         private List<HistoricalMapBiomeOverride> biomeOverrides = new List<HistoricalMapBiomeOverride>();
+        private List<HistoricalMapTileColorOverride> tileColorOverrides = new List<HistoricalMapTileColorOverride>();
         private List<HistoricalMapRiverPath> riverPaths = new List<HistoricalMapRiverPath>();
 
         public string ScenarioDefName => scenarioDefName;
@@ -34,6 +35,8 @@ namespace HistoricalRimWorld.World
             terrainOverrides ?? Enumerable.Empty<HistoricalMapTerrainOverride>();
         public IEnumerable<HistoricalMapBiomeOverride> BiomeOverrides =>
             biomeOverrides ?? Enumerable.Empty<HistoricalMapBiomeOverride>();
+        public IEnumerable<HistoricalMapTileColorOverride> TileColorOverrides =>
+            tileColorOverrides ?? Enumerable.Empty<HistoricalMapTileColorOverride>();
         public IEnumerable<HistoricalMapRiverPath> RiverPaths => riverPaths ?? Enumerable.Empty<HistoricalMapRiverPath>();
 
         public HistoricalMapEditWorldComponent(RimWorldWorld world) : base(world) { }
@@ -58,6 +61,7 @@ namespace HistoricalRimWorld.World
             terrainDatasetVersion = terrain?.DatasetVersion ?? 0;
             terrainOverrides = terrainOverrides ?? new List<HistoricalMapTerrainOverride>();
             biomeOverrides = biomeOverrides ?? new List<HistoricalMapBiomeOverride>();
+            tileColorOverrides = tileColorOverrides ?? new List<HistoricalMapTileColorOverride>();
         }
 
         internal void SetTerrain(int tileId, double longitude, double latitude, Hilliness baseValue, Hilliness value)
@@ -103,6 +107,27 @@ namespace HistoricalRimWorld.World
             else state.SetValue(biomeDefName);
         }
 
+        public HistoricalMapTileColorOverride GetTileColorOverride(int tileId) =>
+            tileColorOverrides?.FirstOrDefault(item => item != null && item.TileId == tileId);
+
+        internal void SetTileColor(int tileId, double longitude, double latitude, string colorHex)
+        {
+            if (tileColorOverrides == null) tileColorOverrides = new List<HistoricalMapTileColorOverride>();
+            HistoricalMapTileColorOverride state = GetTileColorOverride(tileId);
+            if (string.IsNullOrWhiteSpace(colorHex))
+            {
+                if (state != null) tileColorOverrides.Remove(state);
+                return;
+            }
+            if (state == null)
+            {
+                state = new HistoricalMapTileColorOverride();
+                state.Initialize(tileId, longitude, latitude, colorHex);
+                tileColorOverrides.Add(state);
+            }
+            else state.ColorHex = colorHex;
+        }
+
         internal void AddRiverPath(HistoricalMapRiverPath path)
         {
             if (path == null || string.IsNullOrWhiteSpace(path.Id)) return;
@@ -128,6 +153,7 @@ namespace HistoricalRimWorld.World
             Scribe_Values.Look(ref terrainDatasetVersion, "historicalMapEditTerrainDatasetVersion", 0);
             Scribe_Collections.Look(ref terrainOverrides, "historicalMapTerrainOverrides", LookMode.Deep);
             Scribe_Collections.Look(ref biomeOverrides, "historicalMapBiomeOverrides", LookMode.Deep);
+            Scribe_Collections.Look(ref tileColorOverrides, "historicalMapTileColorOverrides", LookMode.Deep);
             Scribe_Collections.Look(ref riverPaths, "historicalMapRiverPaths", LookMode.Deep);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
@@ -136,10 +162,32 @@ namespace HistoricalRimWorld.World
                 biomeOverrides = biomeOverrides ?? new List<HistoricalMapBiomeOverride>();
                 biomeOverrides.RemoveAll(item => item == null || item.TileId < 0
                     || string.IsNullOrWhiteSpace(item.BiomeDefName));
+                tileColorOverrides = tileColorOverrides ?? new List<HistoricalMapTileColorOverride>();
+                tileColorOverrides.RemoveAll(item => item == null || item.TileId < 0
+                    || string.IsNullOrWhiteSpace(item.ColorHex));
                 riverPaths = riverPaths ?? new List<HistoricalMapRiverPath>();
                 riverPaths.RemoveAll(item => item == null || string.IsNullOrWhiteSpace(item.Id)
                     || string.IsNullOrWhiteSpace(item.RiverDefName) || item.Points == null || item.Points.Count < 2);
             }
+        }
+    }
+
+    public sealed class HistoricalMapTileColorOverride : IExposable
+    {
+        public int TileId = -1;
+        public double HistoricalLongitude;
+        public double HistoricalLatitude;
+        public string ColorHex;
+
+        public void Initialize(int tileId, double longitude, double latitude, string colorHex)
+        { TileId = tileId; HistoricalLongitude = longitude; HistoricalLatitude = latitude; ColorHex = colorHex; }
+
+        public void ExposeData()
+        {
+            Scribe_Values.Look(ref TileId, "tileId", -1);
+            Scribe_Values.Look(ref HistoricalLongitude, "historicalLongitude");
+            Scribe_Values.Look(ref HistoricalLatitude, "historicalLatitude");
+            Scribe_Values.Look(ref ColorHex, "colorHex");
         }
     }
 

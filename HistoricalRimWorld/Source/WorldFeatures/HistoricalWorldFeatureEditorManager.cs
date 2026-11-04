@@ -180,6 +180,7 @@ namespace HistoricalRimWorld.WorldFeatures
                 try { WorldFeatureAdapter.RefreshFeatureLabels(world); }
                 catch (Exception exception)
                 { Log.Warning("[Historical RimWorld] Could not refresh native feature labels after editor operation: " + exception.Message); }
+                HistoricalWorldTerrainColorManager.Invalidate(world, true);
             }
         }
 

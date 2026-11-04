@@ -8,5 +8,6 @@
     <order>95</order>
     <iconPath>UI/Buttons/MainButtons/History</iconPath>
     <validWithoutMap>true</validWithoutMap>
+    <buttonVisible>false</buttonVisible>
   </MainButtonDef>
 </Defs>

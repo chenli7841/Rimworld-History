@@ -27,6 +27,11 @@ namespace HistoricalRimWorld.Scenarios.EasternZhou
             if (!HistoricalWorldRevealManager.TryAssignStartingMapToRegion(Current.Game.CurrentMap,
                 setup.defaultStartingRegion.defName, out error)) return false;
 
+            int normalizedPawnCount = NormalizeStartingPawnAges(setup);
+            if (normalizedPawnCount > 0)
+                Log.Message("[Historical RimWorld] Randomized " + normalizedPawnCount + " Eastern Zhou starting colonist age(s) within "
+                    + setup.minimumStartingPawnAge + "–" + setup.maximumStartingPawnAge + " and synchronized biological/chronological ages.");
+
             string communityId = HistoricalTechnologyManager.GetPlayerCommunityId();
             foreach (string technologyId in setup.startingTechnologyIds ?? Enumerable.Empty<string>())
             {
@@ -67,6 +72,22 @@ namespace HistoricalRimWorld.Scenarios.EasternZhou
             return true;
         }
 
+        private static int NormalizeStartingPawnAges(HistoricalPlayableScenarioSetupDef setup)
+        {
+            int normalized = 0;
+            foreach (Pawn pawn in Current.Game.CurrentMap.mapPawns.FreeColonists.Where(item => item != null && item.RaceProps.Humanlike))
+            {
+                if (pawn.ageTracker == null || HistoricalGenealogyManager.TryGetPersonId(pawn, out _)) continue;
+
+                int ageYears = Rand.Range(setup.minimumStartingPawnAge, setup.maximumStartingPawnAge + 1);
+                long ageTicks = (long)ageYears * HistoricalCalendarConstants.TicksPerYear;
+                pawn.ageTracker.AgeBiologicalTicks = ageTicks;
+                pawn.ageTracker.AgeChronologicalTicks = ageTicks;
+                normalized++;
+            }
+            return normalized;
+        }
+
         private static bool Fail(string message, out string error)
         {
             error = message;
@@ -103,8 +124,7 @@ namespace HistoricalRimWorld.Scenarios.EasternZhou
         {
             Scenario selected = Current.Game?.Scenario;
             if (selected == null) return;
-            HistoricalPlayableScenarioSetupDef setup = DefDatabase<HistoricalPlayableScenarioSetupDef>.AllDefsListForReading
-                .FirstOrDefault(item => item.vanillaScenarioName == selected.name);
+            HistoricalPlayableScenarioSetupDef setup = HistoricalPlayableScenarioSetupDef.FindForVanillaScenario(selected);
             if (setup == null) return;
             if (HistoricalScenarioProgressManager.IsPlayableScenarioActive)
             {

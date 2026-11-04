@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using HistoricalRimWorld.Production;
+using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.Technology;
 using RimWorld;
 using Verse;
@@ -11,10 +12,62 @@ namespace HistoricalRimWorld.Patches.Technology
     [HarmonyPatch(typeof(MainTabWindow_Research), "get_VisibleResearchProjects")]
     internal static class HistoricalResearchTabPatch
     {
+        private static readonly HashSet<string> HiddenResearchRoots = new HashSet<string>
+        {
+            "Electricity",
+            "Machining"
+        };
+
         private static void Postfix(ref List<ResearchProjectDef> __result)
         {
-            if (__result != null && HistoricalTechnologyManager.IsActive)
+            if (__result == null) return;
+
+            if (HistoricalTechnologyManager.IsActive)
                 __result.RemoveAll(project => !HistoricalTechnologyManager.IsResearchAllowed(project));
+
+            // Keep the historical scenario's main research tab within the intended era.
+            // Descendants are discovered from the game's actual prerequisite graph, including
+            // hidden prerequisites, so DLC and modded projects are handled without hardcoding names.
+            if (HistoricalScenarioManager.IsScenarioActive)
+            {
+                HashSet<ResearchProjectDef> hidden = FindHiddenProjects();
+                __result.RemoveAll(hidden.Contains);
+            }
+        }
+
+        private static HashSet<ResearchProjectDef> FindHiddenProjects()
+        {
+            HashSet<ResearchProjectDef> hidden = new HashSet<ResearchProjectDef>();
+            List<ResearchProjectDef> allProjects = DefDatabase<ResearchProjectDef>.AllDefsListForReading;
+
+            foreach (ResearchProjectDef project in allProjects)
+            {
+                if (project != null && HiddenResearchRoots.Contains(project.defName))
+                    hidden.Add(project);
+            }
+
+            bool changed;
+            do
+            {
+                changed = false;
+                foreach (ResearchProjectDef project in allProjects)
+                {
+                    if (project == null || hidden.Contains(project)) continue;
+                    if (HasHiddenPrerequisite(project.prerequisites, hidden)
+                        || HasHiddenPrerequisite(project.hiddenPrerequisites, hidden))
+                    {
+                        hidden.Add(project);
+                        changed = true;
+                    }
+                }
+            } while (changed);
+
+            return hidden;
+        }
+
+        private static bool HasHiddenPrerequisite(List<ResearchProjectDef> prerequisites, HashSet<ResearchProjectDef> hidden)
+        {
+            return prerequisites != null && prerequisites.Any(hidden.Contains);
         }
     }
 

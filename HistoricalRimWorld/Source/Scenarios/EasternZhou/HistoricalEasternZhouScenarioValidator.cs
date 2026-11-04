@@ -22,7 +22,8 @@ namespace HistoricalRimWorld.Scenarios.EasternZhou
             if (string.IsNullOrWhiteSpace(setup.startingCommunityName))
                 return Fail("A starting community ID is required.", out error);
             Scenario selectedScenario = Current.Game?.Scenario;
-            if (selectedScenario == null || selectedScenario.name != setup.vanillaScenarioName)
+            ScenarioDef selectedScenarioDef = HistoricalPlayableScenarioSetupDef.ResolveVanillaScenarioDef(selectedScenario);
+            if (selectedScenarioDef == null || selectedScenarioDef.defName != setup.vanillaScenarioDefName)
                 return Fail("The active vanilla Scenario does not match this historical setup.", out error);
             ScenPart_ConfigPage_ConfigureStartingPawns[] pawnSetup = selectedScenario.AllParts
                 .OfType<ScenPart_ConfigPage_ConfigureStartingPawns>().ToArray();

@@ -11,6 +11,7 @@ namespace HistoricalRimWorld.Patches.World
         private static void Postfix()
         {
             HistoricalWorldFogRenderer.Draw();
+            HistoricalWorldTerrainColorRenderer.DrawAfterWorldLayers();
         }
     }
 }

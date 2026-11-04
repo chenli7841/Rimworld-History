@@ -3,9 +3,13 @@
   <HistoricalRimWorld.Scenarios.EasternZhou.HistoricalPlayableScenarioSetupDef>
     <defName>HR_PlayableSetup_EasternZhou770</defName>
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <startingNamePool>HR_ChineseNamePool_EasternZhou</startingNamePool>
+    <playerFactionDef>PlayerColony</playerFactionDef>
     <defaultStartingRegion>HR_Region_ZhengHeartland</defaultStartingRegion>
     <defaultStartingPolity>HR_State_Zheng</defaultStartingPolity>
     <startingPopulation>5</startingPopulation>
+    <minimumStartingPawnAge>18</minimumStartingPawnAge>
+    <maximumStartingPawnAge>35</maximumStartingPawnAge>
     <startingTechnologyIds>
       <li>HR_Tech_BasicFarming</li>
       <li>HR_Tech_AnimalHusbandry</li>
@@ -20,7 +24,7 @@
     <startingSupplies>HR_StartingSupplies_EasternZhou770</startingSupplies>
     <startingCommunityName>HR_Community_Player_001</startingCommunityName>
     <playableEndAstronomicalYear>-739</playableEndAstronomicalYear>
-    <vanillaScenarioName>HR_EasternZhouPlayable</vanillaScenarioName>
+    <vanillaScenarioDefName>HR_PlayableScenario_EasternZhou770</vanillaScenarioDefName>
     <worldSeedOverride>HR_EasternZhou_770BCE_v1</worldSeedOverride>
   </HistoricalRimWorld.Scenarios.EasternZhou.HistoricalPlayableScenarioSetupDef>
 </Defs>

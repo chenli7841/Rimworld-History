@@ -27,6 +27,11 @@ namespace HistoricalRimWorld.UI
         private int brushRadius;
         private int descriptionEditTileId = -1;
         private string descriptionBuffer = string.Empty;
+        private int colorEditTileId = -1;
+        private string tileColorBuffer = string.Empty;
+        private int featureColorEditId = -1;
+        private string featureColorBuffer = string.Empty;
+        private string featureColorPriorityBuffer = "0";
         private RiverDef selectedRiver;
         private string riverCoordinates = string.Empty;
         private string riverPreviewStatus;
@@ -98,6 +103,166 @@ namespace HistoricalRimWorld.UI
             Widgets.EndScrollView();
         }
 
+        private void DrawTileTerrainColorEditor(Listing_Standard listing, int tileId)
+        {
+            HistoricalMapEditWorldComponent edits = Find.World.GetComponent<HistoricalMapEditWorldComponent>();
+            if (colorEditTileId != tileId)
+            {
+                colorEditTileId = tileId;
+                tileColorBuffer = edits?.GetTileColorOverride(tileId)?.ColorHex ?? string.Empty;
+            }
+            listing.Gap();
+            listing.Label("Terrain Color · Tile Override: "
+                + (string.IsNullOrWhiteSpace(tileColorBuffer) ? "off" : "on"));
+            tileColorBuffer = Widgets.TextField(listing.GetRect(28f), tileColorBuffer);
+            DrawColorPreview(listing, tileColorBuffer);
+            Rect buttons = listing.GetRect(30f);
+            if (Widgets.ButtonText(new Rect(buttons.x, buttons.y, buttons.width * 0.55f, buttons.height), "应用 Tile 颜色"))
+                ApplyTileTerrainColor(tileId, tileColorBuffer);
+            if (Widgets.ButtonText(new Rect(buttons.x + buttons.width * 0.58f, buttons.y,
+                buttons.width * 0.42f, buttons.height), "清除 Tile 覆盖"))
+                ApplyTileTerrainColor(tileId, null);
+
+            if (HistoricalWorldTerrainColorManager.TryGetEffectiveColor(Find.World, tileId,
+                out _, out string source, out string hex))
+            {
+                listing.Label("Effective Color: " + hex + " (地表材质乘色)  |  Color Source: " + source);
+                if (source.StartsWith("World Feature", StringComparison.Ordinal))
+                    listing.Label("This tile's color is overridden by a World Feature.");
+            }
+            else listing.Label("Effective Color: Original Biome material ("
+                + GetOriginalBiomeMaterialColor(Find.World.grid.Surface.Tiles[tileId])
+                + ")  |  Color Source: Original Biome Color");
+            listing.Label("自定义 RGB 会与原版地表纹理相乘；未着色 Tile 保持原版材质。");
+            DrawColorPresets(listing, value => tileColorBuffer = value);
+        }
+
+        private void DrawFeatureTerrainColorEditor(Listing_Standard listing, WorldFeature feature,
+            HistoricalMapScaleTransformer transformer, HistoricalGeoCoordinate representative)
+        {
+            if (featureColorEditId != feature.uniqueID)
+            {
+                featureColorEditId = feature.uniqueID;
+                HistoricalWorldTerrainColorManager.TryGetFeatureRecord(Find.World, feature,
+                    out HistoricalWorldFeatureColorOverride record);
+                featureColorBuffer = record?.ColorHex ?? string.Empty;
+                featureColorPriorityBuffer = (record?.Priority ?? 0).ToString(Invariant);
+            }
+            listing.Gap();
+            listing.Label("Feature Terrain Color · " + feature.name + "  |  Override: "
+                + (string.IsNullOrWhiteSpace(featureColorBuffer) ? "off" : "on"));
+            featureColorBuffer = Widgets.TextField(listing.GetRect(28f), featureColorBuffer);
+            DrawColorPreview(listing, featureColorBuffer);
+            Rect priorityRect = listing.GetRect(28f);
+            Widgets.Label(new Rect(priorityRect.x, priorityRect.y, 150f, priorityRect.height), "Color Priority");
+            featureColorPriorityBuffer = Widgets.TextField(new Rect(priorityRect.x + 150f, priorityRect.y,
+                priorityRect.width - 150f, priorityRect.height), featureColorPriorityBuffer);
+            Rect buttons = listing.GetRect(30f);
+            if (Widgets.ButtonText(new Rect(buttons.x, buttons.y, buttons.width * 0.55f, buttons.height), "应用 Feature 颜色"))
+                ApplyFeatureTerrainColor(feature, transformer, featureColorBuffer, false);
+            if (Widgets.ButtonText(new Rect(buttons.x + buttons.width * 0.58f, buttons.y,
+                buttons.width * 0.42f, buttons.height), "清除 Feature 覆盖"))
+                ApplyFeatureTerrainColor(feature, transformer, null, true);
+            DrawColorPresets(listing, value => featureColorBuffer = value);
+        }
+
+        private static void DrawColorPreview(Listing_Standard listing, string value)
+        {
+            if (!HistoricalWorldTerrainColorManager.TryParseHex(value, out Color color, out string normalized))
+            { if (!string.IsNullOrWhiteSpace(value)) listing.Label("无效 RGB Hex 颜色。示例：#526B5B"); return; }
+            Rect preview = listing.GetRect(24f);
+            Widgets.Label(new Rect(preview.x, preview.y, 100f, preview.height), normalized);
+            Rect swatch = new Rect(preview.x + 106f, preview.y + 2f, 48f, preview.height - 4f);
+            Widgets.DrawBoxSolid(swatch, color);
+            Widgets.DrawBox(swatch);
+        }
+
+        private static string GetOriginalBiomeMaterialColor(Tile tile)
+        {
+            try
+            {
+                Material material = tile?.PrimaryBiome?.DrawMaterial;
+                return material == null ? "texture-defined" : "#" + ColorUtility.ToHtmlStringRGB(material.color);
+            }
+            catch { return "texture-defined"; }
+        }
+
+        private static void DrawColorPresets(Listing_Standard listing, Action<string> selected)
+        {
+            Rect row = listing.GetRect(28f);
+            string[] presets = { "#526B5B", "#71866A", "#60775B", "#A8B97B", "#B5B982", "#B6A075" };
+            float width = row.width / presets.Length;
+            for (int i = 0; i < presets.Length; i++)
+            {
+                Color color;
+                HistoricalWorldTerrainColorManager.TryParseHex(presets[i], out color, out _);
+                Rect swatch = new Rect(row.x + i * width + 2f, row.y + 2f, width - 4f, row.height - 4f);
+                Widgets.DrawBoxSolid(swatch, color);
+                Widgets.DrawBox(swatch);
+                if (Widgets.ButtonInvisible(swatch)) selected(presets[i]);
+            }
+        }
+
+        private void ApplyTileTerrainColor(int tileId, string requestedHex)
+        {
+            HistoricalMapEditWorldComponent edits = Find.World.GetComponent<HistoricalMapEditWorldComponent>();
+            string before = edits?.GetTileColorOverride(tileId)?.ColorHex;
+            if (!HistoricalWorldTerrainColorManager.TrySetTileColor(Find.World, tileId,
+                requestedHex, out string error))
+            { status = error; return; }
+            string after = edits?.GetTileColorOverride(tileId)?.ColorHex;
+            if (string.Equals(before, after, StringComparison.Ordinal)) return;
+            undo.Push(new DelegateMapEditCommand("Tile terrain color " + tileId,
+                () => HistoricalWorldTerrainColorManager.TrySetTileColor(Find.World, tileId, after, out _),
+                () => HistoricalWorldTerrainColorManager.TrySetTileColor(Find.World, tileId, before, out _)));
+            redo.Clear();
+            tileColorBuffer = after ?? string.Empty;
+            status = string.IsNullOrWhiteSpace(after) ? "已清除 Tile 颜色覆盖。" : "Tile 颜色已更新为 " + after + "。";
+        }
+
+        private void ApplyFeatureTerrainColor(WorldFeature feature,
+            HistoricalMapScaleTransformer transformer, string requestedHex, bool clear)
+        {
+            if (transformer == null) { status = "当前历史地图比例尺不可用。"; return; }
+            HistoricalWorldTerrainColorManager.TryGetFeatureRecord(Find.World, feature,
+                out HistoricalWorldFeatureColorOverride beforeRecord);
+            string beforeHex = beforeRecord?.ColorHex;
+            int beforePriority = beforeRecord?.Priority ?? 0;
+            int afterPriority = beforePriority;
+            if (!clear && (!int.TryParse(featureColorPriorityBuffer, NumberStyles.Integer, Invariant, out afterPriority)))
+            { status = "Color Priority 必须是整数。"; return; }
+            string value = clear ? null : requestedHex;
+            if (!HistoricalWorldTerrainColorManager.TrySetFeatureColor(Find.World, feature, value,
+                afterPriority, transformer, out string error))
+            { status = error; return; }
+            HistoricalWorldTerrainColorManager.TryGetFeatureRecord(Find.World, feature,
+                out HistoricalWorldFeatureColorOverride afterRecord);
+            string afterHex = afterRecord?.ColorHex;
+            if (string.Equals(beforeHex, afterHex, StringComparison.Ordinal)
+                && beforePriority == (afterRecord?.Priority ?? 0)) return;
+            undo.Push(new DelegateMapEditCommand("Feature terrain color " + feature.name,
+                () => HistoricalWorldTerrainColorManager.TrySetFeatureColor(Find.World, feature,
+                    afterHex, afterPriority, transformer, out _),
+                () => HistoricalWorldTerrainColorManager.TrySetFeatureColor(Find.World, feature,
+                    beforeHex, beforePriority, transformer, out _)));
+            redo.Clear();
+            featureColorBuffer = afterHex ?? string.Empty;
+            featureColorPriorityBuffer = (afterRecord?.Priority ?? 0).ToString(Invariant);
+            status = string.IsNullOrWhiteSpace(afterHex) ? "已清除 Feature 颜色覆盖。"
+                : "Feature 颜色已更新为 " + afterHex + "（priority " + afterPriority + "）。";
+        }
+
+        private sealed class DelegateMapEditCommand : IMapEditCommand
+        {
+            private readonly Action execute;
+            private readonly Action undoAction;
+            public string Label { get; }
+            public DelegateMapEditCommand(string label, Action execute, Action undoAction)
+            { Label = label; this.execute = execute; this.undoAction = undoAction; }
+            public void Execute() => execute();
+            public void Undo() => undoAction();
+        }
+
         private void DrawSelectedTile(Listing_Standard listing)
         {
             if (!HistoricalMapEditManager.TryGetSelectedTileId(out int tileId))
@@ -114,6 +279,7 @@ namespace HistoricalRimWorld.UI
                 + "°, " + gameCoordinate.y.ToString("0.000", Invariant) + "°");
             listing.Label("Terrain: " + tile.hilliness + "  |  Biome: " + (tile.PrimaryBiome?.LabelCap ?? "unknown"));
             listing.Label("Normalized RimWorld elevation: " + tile.elevation.ToString("0.000", Invariant));
+            DrawTileTerrainColorEditor(listing, tileId);
 
             HistoricalMapTileDescriptionWorldComponent descriptions =
                 Find.World.GetComponent<HistoricalMapTileDescriptionWorldComponent>();
@@ -468,7 +634,7 @@ namespace HistoricalRimWorld.UI
             listing.GapLine();
             listing.Label("World Features Editor (原版地理特征)");
             listing.Label("将当前原版 Feature 名称、类型及成员 Tile 的历史坐标保存到本剧本 XML：");
-            if (listing.ButtonText("保存当前 Feature 与 Tile 组成到 XML")) SaveNativeFeatureLayout(factionState);
+            if (listing.ButtonText("保存 Feature / Tile 组成及颜色到 XML")) SaveNativeFeatureLayout(factionState);
             listing.Label("Config\\HistoricalRimWorld\\WorldFeatures\\Layouts\\"
                 + factionState.ScenarioDefName + ".xml");
             bool hasTile = HistoricalMapEditManager.TryGetSelectedTileId(out int tileId)
@@ -558,6 +724,7 @@ namespace HistoricalRimWorld.UI
                 listing.Label("FeatureDef：" + selected.def.defName + "  | 代表历史坐标：" + representative);
                 listing.Label("覆盖 Tile：" + members.Count + (members.Count == 0 ? string.Empty
                     : "  |  IDs: " + string.Join(", ", members.Take(48)) + (members.Count > 48 ? " …" : string.Empty)));
+                DrawFeatureTerrainColorEditor(listing, selected, transformer, featureCoordinate);
                 listing.Label("名称");
                 nativeFeatureNameBuffer = Widgets.TextField(listing.GetRect(28f), nativeFeatureNameBuffer);
                 Rect featureButtons = listing.GetRect(30f);
@@ -597,7 +764,7 @@ namespace HistoricalRimWorld.UI
             listing.Label("手动覆盖 XML：Config\\HistoricalRimWorld\\WorldFeatures\\"
                 + factionState.ScenarioDefName + ".xml");
             listing.Label("当前游戏存档由 RimWorld 原生 WorldFeature.ExposeData 保存名称；此 XML 用于后续新世界重用手动命名。");
-            listing.Label("布局保存 Feature 名称、原版类型和成员 Tile 的历史坐标；重新生成该剧本世界时会映射回当前 WorldGrid。");
+            listing.Label("布局 XML 保存 Feature 名称、类型、成员 Tile 历史坐标及 Feature 颜色 / 优先级；重新生成时按布局记录恢复。");
             if (!string.IsNullOrWhiteSpace(featureStatus)) listing.Label(featureStatus);
         }
 
@@ -859,6 +1026,7 @@ namespace HistoricalRimWorld.UI
                 Log.Message("[Historical RimWorld] Saved scenario map edits to " + path + " ("
                     + component.TerrainOverrides.Count() + " terrain overrides, "
                 + component.BiomeOverrides.Count() + " biome overrides, "
+                    + component.TileColorOverrides.Count() + " tile color overrides, "
                     + component.RiverPaths.Count() + " river paths, "
                     + (descriptions?.Descriptions.Count() ?? 0) + " tile descriptions).");
             }

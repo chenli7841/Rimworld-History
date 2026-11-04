@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HistoricalRimWorld.Scenarios;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -66,8 +67,12 @@ namespace HistoricalRimWorld.World
                     yield return "Map location '" + location.locationId + "' longitude must be between -180 and 180 degrees.";
                 if (location.latitude < -90f || location.latitude > 90f)
                     yield return "Map location '" + location.locationId + "' latitude must be between -90 and 90 degrees.";
-                if (location.worldObjectDef == null)
-                    yield return "Map location '" + location.locationId + "' requires a worldObjectDef.";
+                if (location.worldObjectDef == null && location.settlement == null)
+                    yield return "Map location '" + location.locationId + "' requires a worldObjectDef or settlement Def.";
+                if (location.settlement != null && location.factionDef == null)
+                    yield return "Faction settlement location '" + location.locationId + "' requires a factionDef.";
+                if (location.settlement != null && location.settlement.initialState == null)
+                    yield return "Faction settlement location '" + location.locationId + "' references a settlement without an initialState.";
             }
         }
     }
@@ -93,5 +98,6 @@ namespace HistoricalRimWorld.World
         public float latitude;
         public WorldObjectDef worldObjectDef;
         public FactionDef factionDef;
+        public HistoricalSettlementDef settlement;
     }
 }

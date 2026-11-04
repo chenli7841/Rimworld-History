@@ -19,7 +19,7 @@ namespace HistoricalRimWorld.World
     /// <summary>Scenario-specific edit files, stored outside the mod and anchored by historical coordinates.</summary>
     public static class HistoricalMapEditFileStore
     {
-        private const int SchemaVersion = 4;
+        private const int SchemaVersion = 5;
         private const int MaximumEntries = 200000;
         private const int MaximumDescriptionLength = 8192;
         private const long MaximumFileBytes = 64L * 1024L * 1024L;
@@ -46,13 +46,16 @@ namespace HistoricalRimWorld.World
             List<HistoricalMapBiomeOverride> biomes = component.BiomeOverrides
                 .Where(item => item != null).OrderBy(item => item.HistoricalLatitude)
                 .ThenBy(item => item.HistoricalLongitude).ToList();
+            List<HistoricalMapTileColorOverride> tileColors = component.TileColorOverrides
+                .Where(item => item != null).OrderBy(item => item.HistoricalLatitude)
+                .ThenBy(item => item.HistoricalLongitude).ToList();
             List<HistoricalMapTileDescription> descriptions = (descriptionComponent?.Descriptions
                     ?? Enumerable.Empty<HistoricalMapTileDescription>())
                 .Where(item => item != null).OrderBy(item => item.TileId).ToList();
             List<HistoricalMapRiverPath> riverPaths = component.RiverPaths
                 .Where(item => item != null).ToList();
             int riverPointCount = riverPaths.Sum(item => item.Points?.Count ?? 0);
-            if (values.Count + biomes.Count + descriptions.Count + riverPaths.Count + riverPointCount > MaximumEntries)
+            if (values.Count + biomes.Count + tileColors.Count + descriptions.Count + riverPaths.Count + riverPointCount > MaximumEntries)
             { error = "Map edit file exceeds the entry limit."; return false; }
 
             RimWorldWorld world = Find.World;
@@ -104,6 +107,17 @@ namespace HistoricalRimWorld.World
                         writer.WriteAttributeString("latitude", item.HistoricalLatitude.ToString("R", Invariant));
                         writer.WriteAttributeString("baseBiomeAtExport", item.BaseBiomeDefName ?? string.Empty);
                         writer.WriteAttributeString("biome", item.BiomeDefName);
+                        writer.WriteEndElement();
+                    }
+                    foreach (HistoricalMapTileColorOverride item in tileColors)
+                    {
+                        if (!HistoricalWorldTerrainColorManager.TryParseHex(item.ColorHex, out _, out string normalized))
+                            throw new InvalidDataException("A tile color override contains an invalid RGB hex value.");
+                        writer.WriteStartElement("TileColorOverride");
+                        writer.WriteAttributeString("tileIdAtExport", item.TileId.ToString(Invariant));
+                        writer.WriteAttributeString("longitude", item.HistoricalLongitude.ToString("R", Invariant));
+                        writer.WriteAttributeString("latitude", item.HistoricalLatitude.ToString("R", Invariant));
+                        writer.WriteAttributeString("color", normalized);
                         writer.WriteEndElement();
                     }
                     foreach (HistoricalMapTileDescription item in descriptions)
@@ -199,15 +213,16 @@ namespace HistoricalRimWorld.World
                     throw new InvalidDataException("Map edit file belongs to a different scenario.");
                 XmlNodeList entries = root.SelectNodes("TerrainOverride");
                 XmlNodeList biomeEntries = root.SelectNodes("BiomeOverride");
+                XmlNodeList tileColorEntries = root.SelectNodes("TileColorOverride");
                 XmlNodeList descriptionEntries = root.SelectNodes("TileDescription");
                 XmlNodeList riverPathEntries = root.SelectNodes("RiverPath");
-                if (entries == null || biomeEntries == null || descriptionEntries == null || riverPathEntries == null
-                    || entries.Count + biomeEntries.Count + descriptionEntries.Count + riverPathEntries.Count > MaximumEntries)
+                if (entries == null || biomeEntries == null || tileColorEntries == null || descriptionEntries == null || riverPathEntries == null
+                    || entries.Count + biomeEntries.Count + tileColorEntries.Count + descriptionEntries.Count + riverPathEntries.Count > MaximumEntries)
                     throw new InvalidDataException("Map edit entry count is invalid.");
                 int totalRiverPoints = 0;
                 foreach (XmlNode riverPathNode in riverPathEntries)
                     totalRiverPoints += riverPathNode.SelectNodes("Point")?.Count ?? 0;
-                if (entries.Count + biomeEntries.Count + descriptionEntries.Count + riverPathEntries.Count + totalRiverPoints > MaximumEntries)
+                if (entries.Count + biomeEntries.Count + tileColorEntries.Count + descriptionEntries.Count + riverPathEntries.Count + totalRiverPoints > MaximumEntries)
                     throw new InvalidDataException("Map edit file exceeds the entry limit.");
 
                 if (int.TryParse(root.GetAttribute("gridTileCountAtExport"), NumberStyles.Integer, Invariant, out int oldTileCount)
@@ -339,6 +354,46 @@ namespace HistoricalRimWorld.World
                     component.SetBiome(tileId, longitude, latitude, baseBiome, biome.defName);
                     appliedCount++;
                 }
+                HashSet<int> colorOverrideTiles = new HashSet<int>();
+                foreach (XmlNode node in tileColorEntries)
+                {
+                    XmlElement entry = node as XmlElement;
+                    if (entry == null) continue;
+                    if (!double.TryParse(entry.GetAttribute("longitude"), NumberStyles.Float, Invariant, out double longitude)
+                        || !double.TryParse(entry.GetAttribute("latitude"), NumberStyles.Float, Invariant, out double latitude)
+                        || longitude < -180d || longitude > 180d || latitude < -90d || latitude > 90d)
+                    { Log.Warning("[Historical RimWorld] Ignored a tile color override with invalid geographic coordinates."); continue; }
+                    if (!HistoricalWorldTerrainColorManager.TryParseHex(entry.GetAttribute("color"), out _, out string normalized))
+                    { Log.Warning("[Historical RimWorld] Ignored a tile color override with invalid RGB hex color."); continue; }
+                    int tileId;
+                    double distance;
+                    try
+                    {
+                        HistoricalGameGeoCoordinate projected = transformer.ToGameCoordinate(
+                            new HistoricalGeoCoordinate(latitude, longitude));
+                        tileId = tileIndex.FindNearest(projected.Longitude, projected.Latitude, out distance);
+                    }
+                    catch (Exception exception)
+                    {
+                        Log.Warning("[Historical RimWorld] Ignored a tile color override that could not be projected: " + exception.Message);
+                        continue;
+                    }
+                    if (tileId < 0 || distance > maximumTileErrorDegrees)
+                    {
+                        Log.Warning("[Historical RimWorld] Preserved but did not apply a tile color override at "
+                            + FormatCoordinate(longitude, latitude) + "; nearest tile offset "
+                            + distance.ToString("0.##", Invariant) + "° exceeds the current map limit.");
+                        continue;
+                    }
+                    if (!colorOverrideTiles.Add(tileId))
+                    {
+                        Log.Warning("[Historical RimWorld] Ignored a duplicate tile color override at "
+                            + FormatCoordinate(longitude, latitude) + " for current tile " + tileId + ".");
+                        continue;
+                    }
+                    component.SetTileColor(tileId, longitude, latitude, normalized);
+                    appliedCount++;
+                }
                 HashSet<int> describedTiles = new HashSet<int>();
                 foreach (XmlNode node in descriptionEntries)
                 {
@@ -430,6 +485,7 @@ namespace HistoricalRimWorld.World
                     catch (Exception exception)
                     { Log.Warning("[Historical RimWorld] Could not apply saved river path " + id + ": " + exception.Message); }
                 }
+                HistoricalWorldTerrainColorManager.Invalidate(world, true);
                 world.pathGrid?.RecalculateAllLayersPathCosts();
                 return true;
             }

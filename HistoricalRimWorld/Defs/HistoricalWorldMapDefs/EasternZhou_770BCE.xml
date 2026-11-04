@@ -55,6 +55,15 @@
         <factionDef>HR_Faction_NeutralSmallTribes</factionDef>
       </li>
       <li>
+        <locationId>hanzhongeast</locationId>
+        <label>巴（汉中）</label>
+        <description>巴国</description>
+        <longitude>107.36708</longitude>
+        <latitude>33.15916</latitude>
+        <worldObjectDef>HR_MapMarker_Town</worldObjectDef>
+        <factionDef>HR_Faction_NeutralSmallTribes</factionDef>
+      </li>
+      <li>
         <locationId>nanyang</locationId>
         <label>申（南阳）</label>
         <description>楚国</description>
@@ -122,7 +131,7 @@
         <description>所属派系：郑国（国都）</description>
         <longitude>113.74</longitude>
         <latitude>34.4</latitude>
-        <worldObjectDef>HR_MapMarker_City</worldObjectDef>
+        <settlement>HR_Settlement_Xinzheng</settlement>
         <factionDef>HR_Faction_Zheng</factionDef>
       </li>
       <li>

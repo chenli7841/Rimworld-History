@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using HistoricalRimWorld.Factions;
+using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.World;
 using HistoricalRimWorld.Geography;
 using HistoricalRimWorld.Geography.Scaling;
@@ -36,11 +38,12 @@ namespace HistoricalRimWorld.WorldGeneration
             }
             List<Tuple<HistoricalWorldMapLocation, int>> placedLocations = new List<Tuple<HistoricalWorldMapLocation, int>>();
 
-            foreach (HistoricalWorldMapLocation location in map.locations)
+            foreach (HistoricalWorldMapLocation location in map.locations
+                .OrderByDescending(item => item?.settlement != null))
             {
-                if (location == null || location.worldObjectDef == null)
+                if (location == null || (location.worldObjectDef == null && location.settlement == null))
                 {
-                    error = "A map location is missing its data or WorldObjectDef.";
+                    error = "A map location is missing its data, WorldObjectDef, or settlement Def.";
                     return false;
                 }
 
@@ -86,22 +89,10 @@ namespace HistoricalRimWorld.WorldGeneration
                     return false;
                 }
 
-                WorldObject worldObject = WorldObjectMaker.MakeWorldObject(location.worldObjectDef);
-                HistoricalMapLocationWorldObject marker = worldObject as HistoricalMapLocationWorldObject;
-                if (marker == null)
-                {
-                    error = "WorldObjectDef '" + location.worldObjectDef.defName
-                        + "' must create a HistoricalMapLocationWorldObject.";
-                    return false;
-                }
-
-                marker.SetHistoricalLabel(location.label);
-                marker.SetHistoricalDescription(location.description);
-                marker.SetHistoricalGeoCoordinates(location.longitude, location.latitude,
-                    gameCoordinate.Longitude, gameCoordinate.Latitude, transformer.ScaleFactor);
+                Faction owner = null;
                 if (location.factionDef != null)
                 {
-                    Faction owner = world.factionManager?.AllFactionsListForReading
+                    owner = world.factionManager?.AllFactionsListForReading
                         .FirstOrDefault(item => item != null && item.def == location.factionDef);
                     if (owner == null)
                     {
@@ -109,17 +100,60 @@ namespace HistoricalRimWorld.WorldGeneration
                             + location.factionDef.defName + "', but that faction was not generated in this world.";
                         return false;
                     }
-                    marker.SetHistoricalFactionColor(owner.Color);
                 }
-                marker.Tile = new PlanetTile(bestTile, world.grid.Surface);
-                world.worldObjects.Add(marker);
+
+                WorldObject worldObject;
+                if (location.settlement != null)
+                {
+                    if (owner == null || location.settlement.initialState == null
+                        || location.settlement.initialState.defName == null)
+                    {
+                        error = "Faction settlement location '" + location.locationId
+                            + "' has no valid owning faction or historical state.";
+                        return false;
+                    }
+                    Settlement settlement = WorldObjectMaker.MakeWorldObject(WorldObjectDefOf.Settlement) as Settlement;
+                    if (settlement == null)
+                    {
+                        error = "Could not create a RimWorld Settlement for map location '"
+                            + location.locationId + "'.";
+                        return false;
+                    }
+                    settlement.SetFaction(owner);
+                    settlement.Name = location.label;
+                    settlement.Tile = new PlanetTile(bestTile, world.grid.Surface);
+                    world.worldObjects.Add(settlement);
+                    world.GetComponent<HistoricalFactionWorldComponent>()?.RecordSettlement(settlement,
+                        location.settlement.initialState.defName, location.settlement.region?.defName, bestTile);
+                    worldObject = settlement;
+                    Log.Message("[Historical RimWorld] Created faction settlement '" + location.label
+                        + "' for " + location.factionDef.defName + " at WorldGrid tile " + bestTile + ".");
+                }
+                else
+                {
+                    worldObject = WorldObjectMaker.MakeWorldObject(location.worldObjectDef);
+                    HistoricalMapLocationWorldObject marker = worldObject as HistoricalMapLocationWorldObject;
+                    if (marker == null)
+                    {
+                        error = "WorldObjectDef '" + location.worldObjectDef.defName
+                            + "' must create a HistoricalMapLocationWorldObject.";
+                        return false;
+                    }
+                    marker.SetHistoricalLabel(location.label);
+                    marker.SetHistoricalDescription(location.description);
+                    marker.SetHistoricalGeoCoordinates(location.longitude, location.latitude,
+                        gameCoordinate.Longitude, gameCoordinate.Latitude, transformer.ScaleFactor);
+                    if (owner != null) marker.SetHistoricalFactionColor(owner.Color);
+                    marker.Tile = new PlanetTile(bestTile, world.grid.Surface);
+                    world.worldObjects.Add(marker);
+                }
                 placedLocations.Add(Tuple.Create(location, bestTile));
                 Vector2 placedCenter = world.grid.Surface.LongLatOf(bestTile);
                 Log.Message("[Historical RimWorld] Added map location '" + location.locationId + "' ("
                     + location.label + ") at WorldGrid tile " + bestTile + " ("
                     + placedCenter.x.ToString("0.##", CultureInfo.InvariantCulture) + "°, "
                     + placedCenter.y.ToString("0.##", CultureInfo.InvariantCulture) + "°), icon Def "
-                    + location.worldObjectDef.defName
+                    + (location.settlement != null ? "RimWorld Settlement" : location.worldObjectDef.defName)
                     + (location.factionDef == null ? "." : ", faction " + location.factionDef.defName + "."));
             }
 
