@@ -7,10 +7,12 @@ namespace HistoricalRimWorld
     public sealed class HistoricalRimWorldMod : Mod
     {
         private readonly HistoricalRimWorldSettings settings;
+        public static HistoricalRimWorldSettings CurrentSettings { get; private set; }
 
         public HistoricalRimWorldMod(ModContentPack content) : base(content)
         {
             settings = GetSettings<HistoricalRimWorldSettings>();
+            CurrentSettings = settings;
             HistoricalWorldPatchBootstrap.Apply();
             Log.Message("[Historical RimWorld] Mod initialized.");
         }
@@ -23,6 +25,12 @@ namespace HistoricalRimWorld
         public override void DoSettingsWindowContents(Rect inRect)
         {
             settings.DoWindowContents(inRect);
+        }
+
+        public override void WriteSettings()
+        {
+            base.WriteSettings();
+            HistoricalLocalFogSettings.NotifyChanged();
         }
     }
 }

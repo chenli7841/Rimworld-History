@@ -2,6 +2,19 @@
 <LanguageData>
   <HR_SettingsCategory>历史边缘世界</HR_SettingsCategory>
   <HR_EnableDebugLogging>启用调试日志</HR_EnableDebugLogging>
+  <HR_Fog_SettingsHeader>小地图战争迷雾</HR_Fog_SettingsHeader>
+  <HR_Fog_Enable>启用局部战争迷雾</HR_Fog_Enable>
+  <HR_Fog_EnableDayNight>启用昼夜视野变化</HR_Fog_EnableDayNight>
+  <HR_Fog_DayRadius>白天视野半径（格）</HR_Fog_DayRadius>
+  <HR_Fog_NightRadius>夜间视野半径（格）</HR_Fog_NightRadius>
+  <HR_Fog_LOS>视野受地形遮挡</HR_Fog_LOS>
+  <HR_Fog_TamedAnimals>允许驯服动物提供视野</HR_Fog_TamedAnimals>
+  <HR_Fog_HideHostiles>隐藏未发现的敌对人物</HR_Fog_HideHostiles>
+  <HR_Fog_HideAnimals>隐藏未发现的野生动物</HR_Fog_HideAnimals>
+  <HR_Fog_UnexploredOpacity>未探索区域遮罩不透明度</HR_Fog_UnexploredOpacity>
+  <HR_Fog_ExploredOpacity>已探索区域遮罩不透明度</HR_Fog_ExploredOpacity>
+  <HR_Fog_LegacyMaps>旧存档地图按已探索处理</HR_Fog_LegacyMaps>
+  <HR_Fog_Debug>显示战争迷雾调试信息</HR_Fog_Debug>
   <HR_Calendar_MainTabLabel>历史历法</HR_Calendar_MainTabLabel>
   <HR_Calendar_MainTabDescription>查看并为当前存档启用历史历法。</HR_Calendar_MainTabDescription>
   <HR_Calendar_Title>历史边缘世界</HR_Calendar_Title>

@@ -2,6 +2,19 @@
 <LanguageData>
   <HR_SettingsCategory>Historical RimWorld</HR_SettingsCategory>
   <HR_EnableDebugLogging>Enable debug logging</HR_EnableDebugLogging>
+  <HR_Fog_SettingsHeader>Local map fog of war</HR_Fog_SettingsHeader>
+  <HR_Fog_Enable>Enable local fog of war</HR_Fog_Enable>
+  <HR_Fog_EnableDayNight>Enable day and night vision changes</HR_Fog_EnableDayNight>
+  <HR_Fog_DayRadius>Day vision radius (cells)</HR_Fog_DayRadius>
+  <HR_Fog_NightRadius>Night vision radius (cells)</HR_Fog_NightRadius>
+  <HR_Fog_LOS>Block vision by terrain</HR_Fog_LOS>
+  <HR_Fog_TamedAnimals>Allow tamed animals to provide vision</HR_Fog_TamedAnimals>
+  <HR_Fog_HideHostiles>Hide unseen hostile pawns</HR_Fog_HideHostiles>
+  <HR_Fog_HideAnimals>Hide unseen wild animals</HR_Fog_HideAnimals>
+  <HR_Fog_UnexploredOpacity>Unexplored mask opacity</HR_Fog_UnexploredOpacity>
+  <HR_Fog_ExploredOpacity>Explored mask opacity</HR_Fog_ExploredOpacity>
+  <HR_Fog_LegacyMaps>Treat legacy maps as fully explored</HR_Fog_LegacyMaps>
+  <HR_Fog_Debug>Show fog debug information</HR_Fog_Debug>
   <HR_Calendar_MainTabLabel>Historical Calendar</HR_Calendar_MainTabLabel>
   <HR_Calendar_MainTabDescription>View and enable the historical calendar for this save.</HR_Calendar_MainTabDescription>
   <HR_Calendar_Title>Historical RimWorld</HR_Calendar_Title>

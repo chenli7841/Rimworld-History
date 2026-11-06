@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Research_BasicFarming.description>发展基础作物栽培方法。历史年代：早期农业的考古证据覆盖约公元前8000年至前5000年的宽泛时期；这不是精确的发明年份。</HR_Research_BasicFarming.description>
+  <HR_Research_AnimalHusbandry.description>改进动物照料与繁育方法。历史年代：早期动物驯化证据大致跨越公元前9000年至前5000年，各地区年代不同。</HR_Research_AnimalHusbandry.description>
+  <HR_Research_SeedSelection.description>挑选并保存适用的种子。尚无可靠的单一年份；相关实践随农业逐渐发展，各地情况不同。</HR_Research_SeedSelection.description>
+  <HR_Research_GrainStorage.description>保护谷物，避免受潮和虫害。尚无可靠的单一年份；储粮实践随农业逐渐发展。</HR_Research_GrainStorage.description>
+  <HR_Research_Irrigation.description>规划简易渠道并控制水流。早期灌溉的可能年代约在公元前4000年前后；各地区证据不同，这不是精确的发明年份。</HR_Research_Irrigation.description>
+  <HR_Research_CopperMining.description>识别并开采含铜矿料。早期采铜的可能年代约在公元前5000年前后；证据和年代因地区而异。</HR_Research_CopperMining.description>
+  <HR_Research_CopperSmelting.description>利用加热从矿料中提取铜。此处不指定单一可靠年代；早期证据和年代因地区而异。</HR_Research_CopperSmelting.description>
+  <HR_Research_BronzeAlloy.description>发展可重复的铜合金配制方法。早期青铜冶金的考古年代大致在公元前2200年至前1700年之间，各地区年代不同。</HR_Research_BronzeAlloy.description>
+  <HR_Research_BronzeCasting.description>发展可控的模具铸造方法。早期青铜铸造的考古证据大致在公元前2000年至前1700年之间，各地区年代不同。</HR_Research_BronzeCasting.description>
+  <HR_Research_BronzeTools.description>制作实用的青铜工具。尚无可靠的单一年份；工具形制和普及时间因地区而异。</HR_Research_BronzeTools.description>
+  <HR_Research_EarlyIronworking.description>研究小规模块炼铁。各地区提出的早期年代范围约为公元前1200年至前500年，仍有争议；这不是精确的发明年份。</HR_Research_EarlyIronworking.description>
+  <HR_Research_Pottery.description>塑形并烧制陶器。陶器出现于非常宽泛的史前时期；部分地区的证据早于约公元前10000年，各地传统形成时间不同。</HR_Research_Pottery.description>
+  <HR_Research_Weaving.description>发展简易纺织方法。尚无可靠的单一年份；纺织品难以保存，考古证据有限，各地实践不同。</HR_Research_Weaving.description>
+  <HR_Research_IronFarmTools.description>将早期铁料用于农具。尚无可靠的单一年份；其普及取决于各地铁器生产和现存证据。</HR_Research_IronFarmTools.description>
+  <HR_Research_KilnFiring.description>改进封闭窑炉的烧制控制。尚无可靠的单一年份；窑炉形制和烧制技术在各地逐步发展。</HR_Research_KilnFiring.description>
+  <HR_Research_PlantFibres.description>准备适合制作绳索和布料的植物纤维。尚无可靠的单一年份；易腐材料难以留下完整的考古记录。</HR_Research_PlantFibres.description>
+  <HR_Research_TimberFraming.description>发展可靠的木构连接工艺。尚无可靠的单一年份；木建筑保存不易，各地营造传统不同。</HR_Research_TimberFraming.description>
+  <HR_Research_RammedEarth.description>发展夯土建筑方法。尚无可靠的单一年份；土筑技术历史悠久，并在各地分别发展。</HR_Research_RammedEarth.description>
+  <HR_Research_BowMaking.description>发展稳定的简易弓制作方法。尚无可靠的单一年份；有机材料保存不易，各地区早期年代仍有差异。</HR_Research_BowMaking.description>
+  <HR_Research_Writing.description>发展可长期保存的地方记录方式。尚无可靠的单一年份；文字系统在不同地区于不同时间独立出现。</HR_Research_Writing.description>
+  <HR_Research_WaterManagement.description>统筹渠道、水井与地方排水。尚无可靠的单一年份；水资源管理在许多地区逐步发展。</HR_Research_WaterManagement.description>
+  <HR_Research_Commerce.description>组织区域货物和工艺知识交流。尚无可靠的单一年份；交换网络逐渐扩展，各地情况不同。</HR_Research_Commerce.description>
+</LanguageData>

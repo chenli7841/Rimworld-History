@@ -22,8 +22,23 @@ namespace HistoricalRimWorld.Patches.Technology
         {
             if (__result == null) return;
 
+            // The vanilla list getter can omit projects that are not currently available.
+            // Historical projects must remain listed so their timeline and requirements are inspectable.
+            if (HistoricalScenarioManager.IsScenarioActive)
+            {
+                foreach (ResearchProjectDef project in HistoricalTechnologyManager.Technologies
+                    .Select(technology => technology.researchProject)
+                    .Where(project => project != null)
+                    .OrderBy(project => project.researchViewX)
+                    .ThenBy(project => project.researchViewY))
+                {
+                    if (!__result.Contains(project)) __result.Add(project);
+                }
+            }
+
             if (HistoricalTechnologyManager.IsActive)
-                __result.RemoveAll(project => !HistoricalTechnologyManager.IsResearchAllowed(project));
+                __result.RemoveAll(project => !HistoricalTechnologyManager.IsTechnologyProject(project)
+                    && !HistoricalTechnologyManager.IsResearchAllowed(project));
 
             // Keep the historical scenario's main research tab within the intended era.
             // Descendants are discovered from the game's actual prerequisite graph, including
@@ -31,7 +46,8 @@ namespace HistoricalRimWorld.Patches.Technology
             if (HistoricalScenarioManager.IsScenarioActive)
             {
                 HashSet<ResearchProjectDef> hidden = FindHiddenProjects();
-                __result.RemoveAll(hidden.Contains);
+                __result.RemoveAll(project => hidden.Contains(project)
+                    && !HistoricalTechnologyManager.IsTechnologyProject(project));
             }
         }
 

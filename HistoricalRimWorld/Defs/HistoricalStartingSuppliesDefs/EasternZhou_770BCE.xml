@@ -11,7 +11,7 @@
       <li><thingDef>Cloth</thingDef><count>50</count></li>
       <li><thingDef>MedicineHerbal</thingDef><count>8</count></li>
       <li><thingDef>Bow_Short</thingDef><count>2</count></li>
-      <li><thingDef>MeleeWeapon_Club</thingDef><count>3</count></li>
+      <li><thingDef>MeleeWeapon_Club</thingDef><stuffDef>WoodLog</stuffDef><count>3</count></li>
       <li><thingDef>HR_Clay</thingDef><count>80</count></li>
       <li><thingDef>HR_HempFiber</thingDef><count>60</count></li>
       <li><thingDef>HR_CopperOre</thingDef><count>12</count></li>
