@@ -207,6 +207,7 @@ namespace HistoricalRimWorld.WorldGeneration
             else if (loadedMapEdits > 0)
                 Log.Message("[Historical RimWorld] Applied " + loadedMapEdits
                     + " saved scenario terrain/biome/color override(s).");
+            HistoricalRiverRegistry.Rebuild(world);
 
             bool hasSavedFeatureLayout = false;
             if (!HistoricalWorldFeatureLayoutFileStore.TryLoadAndApply(world, scenario.defName,

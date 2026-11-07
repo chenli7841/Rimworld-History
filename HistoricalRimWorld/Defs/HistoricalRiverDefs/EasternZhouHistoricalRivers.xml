@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.World.HistoricalRiverDef>
+    <defName>HR_YellowRiver</defName>
+    <label>HR_River_Yellow_Label</label>
+    <description>HR_River_Yellow_Description</description>
+    <alternateNames><li>HR_River_Yellow_Alt_1</li><li>HR_River_Yellow_Alt_2</li></alternateNames>
+    <preferredLabelCount>3</preferredLabelCount><minLabelZoom>0.04</minLabelZoom><maxLabelZoom>0.85</maxLabelZoom><labelPriority>100</labelPriority>
+    <displayColor>(0.82,0.76,0.56,1)</displayColor>
+  </HistoricalRimWorld.World.HistoricalRiverDef>
+  <HistoricalRimWorld.World.HistoricalRiverDef>
+    <defName>HR_WeiRiver</defName><label>HR_River_Wei_Label</label><description>HR_River_Wei_Description</description>
+    <alternateNames><li>HR_River_Wei_Alt_1</li></alternateNames><preferredLabelCount>2</preferredLabelCount><minLabelZoom>0.1</minLabelZoom><maxLabelZoom>0.9</maxLabelZoom><labelPriority>90</labelPriority><displayColor>(0.68,0.81,0.94,1)</displayColor>
+  </HistoricalRimWorld.World.HistoricalRiverDef>
+  <HistoricalRimWorld.World.HistoricalRiverDef>
+    <defName>HR_LuoRiver</defName><label>HR_River_Luo_Label</label><description>HR_River_Luo_Description</description>
+    <alternateNames><li>HR_River_Luo_Alt_1</li></alternateNames><preferredLabelCount>2</preferredLabelCount><minLabelZoom>0.12</minLabelZoom><maxLabelZoom>0.95</maxLabelZoom><labelPriority>85</labelPriority><parentRiver>HR_YellowRiver</parentRiver><displayColor>(0.67,0.83,0.96,1)</displayColor>
+  </HistoricalRimWorld.World.HistoricalRiverDef>
+  <HistoricalRimWorld.World.HistoricalRiverDef>
+    <defName>HR_YiRiver</defName><label>HR_River_Yi_Label</label><description>HR_River_Yi_Description</description>
+    <alternateNames><li>HR_River_Yi_Alt_1</li></alternateNames><preferredLabelCount>1</preferredLabelCount><minLabelZoom>0.18</minLabelZoom><maxLabelZoom>1</maxLabelZoom><labelPriority>75</labelPriority><parentRiver>HR_LuoRiver</parentRiver><displayColor>(0.71,0.85,0.96,1)</displayColor>
+  </HistoricalRimWorld.World.HistoricalRiverDef>
+  <HistoricalRimWorld.World.HistoricalRiverDef>
+    <defName>HR_FenRiver</defName><label>HR_River_Fen_Label</label><description>HR_River_Fen_Description</description>
+    <alternateNames><li>HR_River_Fen_Alt_1</li></alternateNames><preferredLabelCount>1</preferredLabelCount><minLabelZoom>0.18</minLabelZoom><maxLabelZoom>0.95</maxLabelZoom><labelPriority>80</labelPriority><parentRiver>HR_YellowRiver</parentRiver><displayColor>(0.65,0.8,0.94,1)</displayColor>
+  </HistoricalRimWorld.World.HistoricalRiverDef>
+  <HistoricalRimWorld.World.HistoricalRiverDef>
+    <defName>HR_HuaiRiver</defName><label>HR_River_Huai_Label</label><description>HR_River_Huai_Description</description>
+    <alternateNames><li>HR_River_Huai_Alt_1</li></alternateNames><preferredLabelCount>2</preferredLabelCount><minLabelZoom>0.1</minLabelZoom><maxLabelZoom>0.92</maxLabelZoom><labelPriority>90</labelPriority><displayColor>(0.62,0.78,0.94,1)</displayColor>
+  </HistoricalRimWorld.World.HistoricalRiverDef>
+  <HistoricalRimWorld.World.HistoricalRiverDef>
+    <defName>HR_YingRiver</defName><label>HR_River_Ying_Label</label><description>HR_River_Ying_Description</description>
+    <alternateNames><li>HR_River_Ying_Alt_1</li></alternateNames><preferredLabelCount>1</preferredLabelCount><minLabelZoom>0.2</minLabelZoom><maxLabelZoom>1</maxLabelZoom><labelPriority>70</labelPriority><parentRiver>HR_HuaiRiver</parentRiver><displayColor>(0.69,0.84,0.96,1)</displayColor>
+  </HistoricalRimWorld.World.HistoricalRiverDef>
+  <HistoricalRimWorld.World.HistoricalRiverDef>
+    <defName>HR_HanRiver</defName><label>HR_River_Han_Label</label><description>HR_River_Han_Description</description>
+    <alternateNames><li>HR_River_Han_Alt_1</li></alternateNames><preferredLabelCount>2</preferredLabelCount><minLabelZoom>0.1</minLabelZoom><maxLabelZoom>0.92</maxLabelZoom><labelPriority>90</labelPriority><parentRiver>HR_YangtzeRiver</parentRiver><displayColor>(0.58,0.77,0.94,1)</displayColor>
+  </HistoricalRimWorld.World.HistoricalRiverDef>
+  <HistoricalRimWorld.World.HistoricalRiverDef>
+    <defName>HR_YangtzeRiver</defName><label>HR_River_Yangtze_Label</label><description>HR_River_Yangtze_Description</description>
+    <alternateNames><li>HR_River_Yangtze_Alt_1</li></alternateNames><preferredLabelCount>3</preferredLabelCount><minLabelZoom>0.04</minLabelZoom><maxLabelZoom>0.85</maxLabelZoom><labelPriority>100</labelPriority><displayColor>(0.56,0.75,0.93,1)</displayColor>
+  </HistoricalRimWorld.World.HistoricalRiverDef>
+</Defs>

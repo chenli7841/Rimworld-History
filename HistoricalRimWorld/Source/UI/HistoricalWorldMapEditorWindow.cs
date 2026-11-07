@@ -33,6 +33,7 @@ namespace HistoricalRimWorld.UI
         private string featureColorBuffer = string.Empty;
         private string featureColorPriorityBuffer = "0";
         private RiverDef selectedRiver;
+        private HistoricalRiverDef selectedHistoricalRiver;
         private string riverCoordinates = string.Empty;
         private string riverPreviewStatus;
         private string status;
@@ -409,6 +410,22 @@ namespace HistoricalRimWorld.UI
                 return;
             }
 
+            List<HistoricalRiverDef> historicalRivers = DefDatabase<HistoricalRiverDef>.AllDefsListForReading
+                .OrderBy(item => item.defName, StringComparer.Ordinal).ToList();
+            if (historicalRivers.Count > 0)
+            {
+                if (selectedHistoricalRiver == null || !historicalRivers.Contains(selectedHistoricalRiver))
+                    selectedHistoricalRiver = historicalRivers[0];
+                if (listing.ButtonText("历史河流身份：" + selectedHistoricalRiver.LabelCap + "（点击选择）"))
+                {
+                    List<FloatMenuOption> historicalOptions = historicalRivers
+                        .Select(item => new FloatMenuOption(item.LabelCap.ToString(), () =>
+                        { selectedHistoricalRiver = item; HistoricalRiverRegistry.Rebuild(Find.World); }))
+                        .ToList();
+                    Find.WindowStack.Add(new FloatMenu(historicalOptions));
+                }
+            }
+
             if (listing.ButtonText("河流类型：" + selectedRiver.LabelCap + "（点击选择）"))
             {
                 List<FloatMenuOption> options = DefDatabase<RiverDef>.AllDefsListForReading
@@ -426,7 +443,7 @@ namespace HistoricalRimWorld.UI
             if (Widgets.ButtonText(new Rect(riverButtons.x + riverButtons.width * 0.52f, riverButtons.y,
                 riverButtons.width * 0.48f, riverButtons.height), "应用河流")) ApplyRiver();
             if (!string.IsNullOrWhiteSpace(riverPreviewStatus)) listing.Label(riverPreviewStatus);
-            listing.Label("应用后河流会立即绘制到地图；路径、历史坐标与河流类型会随存档保存，并包含在剧本地图 XML 导出中。");
+            listing.Label("应用后河流会立即绘制到地图；路径、历史坐标、原版河流类型和历史河流身份会保存并导出。");
         }
 
         private int selectedNativeFeatureId = -1;
@@ -930,7 +947,7 @@ namespace HistoricalRimWorld.UI
         }
         private void PreviewRiver()
         {
-            if (!HistoricalRiverPathManager.TryBuildPlanFromText(riverCoordinates, selectedRiver,
+            if (!HistoricalRiverPathManager.TryBuildPlanFromText(riverCoordinates, selectedRiver, selectedHistoricalRiver,
                 out HistoricalRiverPathPlan plan, out string error))
             {
                 riverPreviewStatus = "预览失败：" + error;
@@ -944,7 +961,7 @@ namespace HistoricalRimWorld.UI
 
         private void ApplyRiver()
         {
-            if (!HistoricalRiverPathManager.TryBuildPlanFromText(riverCoordinates, selectedRiver,
+            if (!HistoricalRiverPathManager.TryBuildPlanFromText(riverCoordinates, selectedRiver, selectedHistoricalRiver,
                 out HistoricalRiverPathPlan plan, out string error))
             {
                 riverPreviewStatus = "应用失败：" + error;
@@ -959,6 +976,7 @@ namespace HistoricalRimWorld.UI
             try
             {
                 command.Execute();
+                HistoricalRiverRegistry.Rebuild(Find.World);
                 undo.Push(command);
                 redo.Clear();
                 riverPreviewStatus = "已应用：" + command.Label;

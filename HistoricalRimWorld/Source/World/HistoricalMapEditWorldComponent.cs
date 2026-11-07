@@ -225,12 +225,14 @@ namespace HistoricalRimWorld.World
     {
         public string Id;
         public string RiverDefName;
+        public string HistoricalRiverDefName;
         public List<HistoricalMapRiverPoint> Points = new List<HistoricalMapRiverPoint>();
 
         public void ExposeData()
         {
             Scribe_Values.Look(ref Id, "id");
             Scribe_Values.Look(ref RiverDefName, "riverDefName");
+            Scribe_Values.Look(ref HistoricalRiverDefName, "historicalRiverDefName");
             Scribe_Collections.Look(ref Points, "points", LookMode.Deep);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
                 Points = Points ?? new List<HistoricalMapRiverPoint>();

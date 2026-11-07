@@ -9,7 +9,7 @@
     <thingCategories><li>Manufactured</li></thingCategories>
     <graphicData>
       <texPath>Things/Item/Book/Schematic/Schematic</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass>
       <color>(202,174,119)</color>
     </graphicData>
     <statBases>

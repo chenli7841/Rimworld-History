@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_River_Yellow_Label>黄河</HR_River_Yellow_Label><HR_River_Yellow_Description>华北地区的重要河流水系。</HR_River_Yellow_Description><HR_River_Yellow_Alt_1>河</HR_River_Yellow_Alt_1><HR_River_Yellow_Alt_2>河水</HR_River_Yellow_Alt_2>
+  <HR_River_Wei_Label>渭河</HR_River_Wei_Label><HR_River_Wei_Description>关中地区的重要河流支系。</HR_River_Wei_Description><HR_River_Wei_Alt_1>渭水</HR_River_Wei_Alt_1>
+  <HR_River_Luo_Label>洛河</HR_River_Luo_Label><HR_River_Luo_Description>流经洛阳地区的河流。</HR_River_Luo_Description><HR_River_Luo_Alt_1>洛水</HR_River_Luo_Alt_1>
+  <HR_River_Yi_Label>伊河</HR_River_Yi_Label><HR_River_Yi_Description>洛阳地区的一条支流。</HR_River_Yi_Description><HR_River_Yi_Alt_1>伊水</HR_River_Yi_Alt_1>
+  <HR_River_Fen_Label>汾河</HR_River_Fen_Label><HR_River_Fen_Description>山西盆地的重要河流。</HR_River_Fen_Description><HR_River_Fen_Alt_1>汾水</HR_River_Fen_Alt_1>
+  <HR_River_Huai_Label>淮河</HR_River_Huai_Label><HR_River_Huai_Description>中国南北之间的重要河流水系。</HR_River_Huai_Description><HR_River_Huai_Alt_1>淮水</HR_River_Huai_Alt_1>
+  <HR_River_Ying_Label>颍河</HR_River_Ying_Label><HR_River_Ying_Description>淮河水系的一条支流。</HR_River_Ying_Description><HR_River_Ying_Alt_1>颍水</HR_River_Ying_Alt_1>
+  <HR_River_Han_Label>汉水</HR_River_Han_Label><HR_River_Han_Description>长江的重要支流。</HR_River_Han_Description><HR_River_Han_Alt_1>汉江</HR_River_Han_Alt_1>
+  <HR_River_Yangtze_Label>长江</HR_River_Yangtze_Label><HR_River_Yangtze_Description>中国南方的重要河流水系。</HR_River_Yangtze_Description><HR_River_Yangtze_Alt_1>江</HR_River_Yangtze_Alt_1>
+</LanguageData>

@@ -11,6 +11,7 @@
     <label>decode historical blueprints</label>
     <giverClass>HistoricalRimWorld.Technology.WorkGiver_DecodeHistoricalBlueprint</giverClass>
     <workType>Research</workType>
+    <verb>decode</verb>
     <priorityInType>15</priorityInType>
     <gerund>decoding historical blueprints</gerund>
   </WorkGiverDef>

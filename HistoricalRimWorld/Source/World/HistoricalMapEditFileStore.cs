@@ -146,6 +146,8 @@ namespace HistoricalRimWorld.World
                         writer.WriteStartElement("RiverPath");
                         writer.WriteAttributeString("id", riverPath.Id);
                         writer.WriteAttributeString("riverDefName", riverPath.RiverDefName);
+                        if (!string.IsNullOrWhiteSpace(riverPath.HistoricalRiverDefName))
+                            writer.WriteAttributeString("historicalRiverDefName", riverPath.HistoricalRiverDefName);
                         foreach (HistoricalMapRiverPoint point in riverPath.Points)
                         {
                             if (point == null || point.Longitude < -180d || point.Longitude > 180d
@@ -441,7 +443,10 @@ namespace HistoricalRimWorld.World
                     if (entry == null) continue;
                     string id = entry.GetAttribute("id");
                     string riverDefName = entry.GetAttribute("riverDefName");
+                    string historicalRiverDefName = entry.GetAttribute("historicalRiverDefName");
                     RiverDef river = DefDatabase<RiverDef>.GetNamedSilentFail(riverDefName);
+                    HistoricalRiverDef historicalRiver = string.IsNullOrWhiteSpace(historicalRiverDefName)
+                        ? null : DefDatabase<HistoricalRiverDef>.GetNamedSilentFail(historicalRiverDefName);
                     if (string.IsNullOrWhiteSpace(id) || river == null)
                     {
                         Log.Warning("[Historical RimWorld] Ignored a saved river path with an invalid ID or missing RiverDef "
@@ -465,8 +470,11 @@ namespace HistoricalRimWorld.World
                         Log.Warning("[Historical RimWorld] Ignored an invalid saved river path " + id + ".");
                         continue;
                     }
+                    if (!string.IsNullOrWhiteSpace(historicalRiverDefName) && historicalRiver == null)
+                        Log.Warning("[HR-017] Saved river path " + id + " refers to missing HistoricalRiverDef "
+                            + historicalRiverDefName + "; the vanilla river path will still be restored without a historical identity.");
                     if (!HistoricalRiverPathManager.TryBuildPlan(world, transformer, maximumTileErrorDegrees,
-                        river, points, out HistoricalRiverPathPlan plan, out string routeError))
+                        river, points, out HistoricalRiverPathPlan plan, out string routeError, historicalRiver))
                     {
                         Log.Warning("[Historical RimWorld] Skipped saved river path " + id + ": " + routeError);
                         continue;
@@ -478,6 +486,7 @@ namespace HistoricalRimWorld.World
                         {
                             Id = id,
                             RiverDefName = riverDefName,
+                            HistoricalRiverDefName = historicalRiver?.defName,
                             Points = points.Select(point => new HistoricalMapRiverPoint(
                                 point.Longitude, point.Latitude)).ToList()
                         });
@@ -485,6 +494,7 @@ namespace HistoricalRimWorld.World
                     catch (Exception exception)
                     { Log.Warning("[Historical RimWorld] Could not apply saved river path " + id + ": " + exception.Message); }
                 }
+                HistoricalRiverRegistry.Rebuild(world);
                 HistoricalWorldTerrainColorManager.Invalidate(world, true);
                 world.pathGrid?.RecalculateAllLayersPathCosts();
                 return true;

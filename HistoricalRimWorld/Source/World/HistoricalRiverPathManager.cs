@@ -18,14 +18,16 @@ namespace HistoricalRimWorld.World
     public sealed class HistoricalRiverPathPlan
     {
         public RiverDef River { get; }
+        public HistoricalRiverDef HistoricalRiver { get; }
         public IReadOnlyList<HistoricalGeoCoordinate> Waypoints { get; }
         public IReadOnlyList<int> TileIds { get; }
         public float MaximumSnapErrorDegrees { get; }
 
-        internal HistoricalRiverPathPlan(RiverDef river, List<HistoricalGeoCoordinate> waypoints,
+        internal HistoricalRiverPathPlan(RiverDef river, HistoricalRiverDef historicalRiver, List<HistoricalGeoCoordinate> waypoints,
             List<int> tileIds, float maximumSnapErrorDegrees)
         {
             River = river;
+            HistoricalRiver = historicalRiver;
             Waypoints = waypoints.AsReadOnly();
             TileIds = tileIds.AsReadOnly();
             MaximumSnapErrorDegrees = maximumSnapErrorDegrees;
@@ -38,7 +40,7 @@ namespace HistoricalRimWorld.World
         private static readonly CultureInfo Invariant = CultureInfo.InvariantCulture;
         private const int MaximumWaypoints = 512;
 
-        public static bool TryBuildPlanFromText(string text, RiverDef river,
+        public static bool TryBuildPlanFromText(string text, RiverDef river, HistoricalRiverDef historicalRiver,
             out HistoricalRiverPathPlan plan, out string error)
         {
             plan = null;
@@ -47,12 +49,12 @@ namespace HistoricalRimWorld.World
             if (!TryGetContext(out RimWorldWorld world, out HistoricalMapScaleTransformer transformer,
                 out float maximumSnapError, out error)) return false;
             if (!TryParseCoordinates(text, out List<HistoricalGeoCoordinate> coordinates, out error)) return false;
-            return TryBuildPlan(world, transformer, maximumSnapError, river, coordinates, out plan, out error);
+            return TryBuildPlan(world, transformer, maximumSnapError, river, coordinates, out plan, out error, historicalRiver);
         }
 
         internal static bool TryBuildPlan(RimWorldWorld world, HistoricalMapScaleTransformer transformer,
             float maximumSnapError, RiverDef river, IList<HistoricalGeoCoordinate> coordinates,
-            out HistoricalRiverPathPlan plan, out string error)
+            out HistoricalRiverPathPlan plan, out string error, HistoricalRiverDef historicalRiver = null)
         {
             plan = null;
             error = null;
@@ -123,7 +125,7 @@ namespace HistoricalRimWorld.World
                 }
             }
 
-            plan = new HistoricalRiverPathPlan(river, coordinates.ToList(), route, worstSnapError);
+            plan = new HistoricalRiverPathPlan(river, historicalRiver, coordinates.ToList(), route, worstSnapError);
             return true;
         }
 
@@ -141,6 +143,7 @@ namespace HistoricalRimWorld.World
             {
                 Id = Guid.NewGuid().ToString("N"),
                 RiverDefName = plan.River.defName,
+                HistoricalRiverDefName = plan.HistoricalRiver?.defName,
                 Points = plan.Waypoints.Select(point => new HistoricalMapRiverPoint(point.Longitude, point.Latitude)).ToList()
             };
             command = new RiverPathEditCommand(world, edits, plan, data);
@@ -275,6 +278,7 @@ namespace HistoricalRimWorld.World
                 {
                     HistoricalRiverPathManager.ApplyPlan(world, plan);
                     edits.AddRiverPath(data);
+                    HistoricalRiverRegistry.Rebuild(world);
                 }
                 catch
                 {
@@ -290,6 +294,7 @@ namespace HistoricalRimWorld.World
             {
                 RestoreBefore();
                 edits.RemoveRiverPath(data.Id);
+                HistoricalRiverRegistry.Rebuild(world);
                 world.pathGrid?.RecalculateAllLayersPathCosts();
                 world.renderer?.SetAllLayersDirty();
             }
