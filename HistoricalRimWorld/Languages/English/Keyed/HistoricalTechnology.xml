@@ -32,4 +32,38 @@
   <HR_Tech_Adoption_Adopted>Adopted</HR_Tech_Adoption_Adopted>
   <HR_Tech_Chronicle_Title>Technology adopted</HR_Tech_Chronicle_Title>
   <HR_Tech_Chronicle_Description>A community adopted a historical technology.</HR_Tech_Chronicle_Description>
+  <HR_HistoricalTechnologies.label>Historical technologies</HR_HistoricalTechnologies.label>
+  <HR_HistoricalTechnologies.generalTitle>Historical technology timeline</HR_HistoricalTechnologies.generalTitle>
+  <HR_HistoricalTechnologies.generalDescription>View technology horizons, prerequisites, and research status by historical period. Date ranges describe evidence or estimates, not exact invention dates.</HR_HistoricalTechnologies.generalDescription>
+  <HR_Timeline_ShowFuture>Preview technologies outside the current historical period</HR_Timeline_ShowFuture>
+  <HR_Timeline_ZoomSetting>Timeline zoom: {0}</HR_Timeline_ZoomSetting>
+  <HR_Timeline_Zoom>{0}x</HR_Timeline_Zoom>
+  <HR_Timeline_Category_All>All categories</HR_Timeline_Category_All>
+  <HR_Timeline_Category_Agriculture>Agriculture and animal husbandry</HR_Timeline_Category_Agriculture>
+  <HR_Timeline_Category_Metallurgy>Metallurgy and mining</HR_Timeline_Category_Metallurgy>
+  <HR_Timeline_Category_Military>Military and weapons</HR_Timeline_Category_Military>
+  <HR_Timeline_Category_Engineering>Construction and water management</HR_Timeline_Category_Engineering>
+  <HR_Timeline_Category_Crafts>Textiles and crafts</HR_Timeline_Category_Crafts>
+  <HR_Timeline_Category_Exchange>Transport and commerce</HR_Timeline_Category_Exchange>
+  <HR_Timeline_Category_Knowledge>Writing and knowledge</HR_Timeline_Category_Knowledge>
+  <HR_Timeline_Category_Medicine>Medicine</HR_Timeline_Category_Medicine>
+  <HR_Timeline_Category_Other>Relics and other</HR_Timeline_Category_Other>
+  <HR_Timeline_YearBCE>{0} BCE</HR_Timeline_YearBCE>
+  <HR_Timeline_YearCE>{0} CE</HR_Timeline_YearCE>
+  <HR_Timeline_DateRange>Evidence/estimate range: {0}–{1}</HR_Timeline_DateRange>
+  <HR_Timeline_DateFrom>Earliest evidence or plausible horizon: from about {0}</HR_Timeline_DateFrom>
+  <HR_Timeline_DateUndated>The historical date is not reliably established; shown in the undated lane.</HR_Timeline_DateUndated>
+  <HR_Timeline_Category>Category: {0}</HR_Timeline_Category>
+  <HR_Timeline_EvidenceLevel>Evidence level: {0}</HR_Timeline_EvidenceLevel>
+  <HR_Timeline_EvidenceNotes>Source notes: {0}</HR_Timeline_EvidenceNotes>
+  <HR_Timeline_Evidence_WellAttested>Well attested</HR_Timeline_Evidence_WellAttested>
+  <HR_Timeline_Evidence_Probable>Probable</HR_Timeline_Evidence_Probable>
+  <HR_Timeline_Evidence_Disputed>Disputed</HR_Timeline_Evidence_Disputed>
+  <HR_Timeline_Evidence_Speculative>Speculative</HR_Timeline_Evidence_Speculative>
+  <HR_Timeline_CurrentYear>Current: {0}</HR_Timeline_CurrentYear>
+  <HR_Timeline_UndatedLane>Undated</HR_Timeline_UndatedLane>
+  <HR_Timeline_Status_Completed>Status: completed</HR_Timeline_Status_Completed>
+  <HR_Timeline_Status_InProgress>Status: in progress</HR_Timeline_Status_InProgress>
+  <HR_Timeline_Status_KnownButUnavailable>Status: known or historically attested, but unavailable for study yet (local access or prerequisites may be missing)</HR_Timeline_Status_KnownButUnavailable>
+  <HR_Timeline_Status_ResearchAvailable>Status: available for research</HR_Timeline_Status_ResearchAvailable>
 </LanguageData>

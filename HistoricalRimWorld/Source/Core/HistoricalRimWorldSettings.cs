@@ -1,6 +1,7 @@
 using UnityEngine;
 using Verse;
 using HistoricalRimWorld.FogOfWar;
+using HistoricalRimWorld.Technology;
 
 namespace HistoricalRimWorld
 {
@@ -19,6 +20,8 @@ namespace HistoricalRimWorld
         public float ExploredFogOpacity = 0.65f;
         public bool LegacyMapsFullyExplored = true;
         public bool EnableFogDebugVisualization = false;
+        public bool ShowFutureHistoricalTechnologies = false;
+        public float HistoricalTimelineZoom = 1f;
 
         public override void ExposeData()
         {
@@ -35,6 +38,9 @@ namespace HistoricalRimWorld
             Scribe_Values.Look(ref ExploredFogOpacity, "ExploredFogOpacity", 0.65f);
             Scribe_Values.Look(ref LegacyMapsFullyExplored, "LegacyMapsFullyExplored", true);
             Scribe_Values.Look(ref EnableFogDebugVisualization, "EnableFogDebugVisualization", false);
+            Scribe_Values.Look(ref ShowFutureHistoricalTechnologies, "ShowFutureHistoricalTechnologies", false);
+            Scribe_Values.Look(ref HistoricalTimelineZoom, "HistoricalTimelineZoom", 1f);
+            HistoricalTimelineZoom = Mathf.Clamp(HistoricalTimelineZoom, 0.5f, 2f);
             base.ExposeData();
         }
 
@@ -61,6 +67,13 @@ namespace HistoricalRimWorld
             ExploredFogOpacity = listing.Slider(ExploredFogOpacity, 0f, 1f);
             listing.CheckboxLabeled(Translator.Translate("HR_Fog_LegacyMaps"), ref LegacyMapsFullyExplored);
             listing.CheckboxLabeled(Translator.Translate("HR_Fog_Debug"), ref EnableFogDebugVisualization);
+            listing.GapLine();
+            listing.CheckboxLabeled(Translator.Translate("HR_Timeline_ShowFuture"), ref ShowFutureHistoricalTechnologies);
+            listing.Label(string.Format(Translator.Translate("HR_Timeline_ZoomSetting"), HistoricalTimelineZoom.ToString("0.0")));
+            float previousTimelineZoom = HistoricalTimelineZoom;
+            HistoricalTimelineZoom = listing.Slider(HistoricalTimelineZoom, 0.5f, 2f);
+            if (!Mathf.Approximately(previousTimelineZoom, HistoricalTimelineZoom))
+                HistoricalTechnologyTimelineLayout.Invalidate();
             listing.End();
         }
     }

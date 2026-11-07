@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Technology.HistoricalTechnologyTimelineLayoutDef>
+    <defName>HR_TechnologyTimeline_EasternZhou</defName>
+    <label>Eastern Zhou historical technology timeline</label>
+    <undatedX>14.5</undatedX>
+    <categorySpacing>2.0</categorySpacing>
+    <laneSpacing>0.85</laneSpacing>
+    <minimumNodeGap>1.25</minimumNodeGap>
+    <segments>
+      <li><startAstronomicalYear>-9999</startAstronomicalYear><endAstronomicalYear>-2999</endAstronomicalYear><xStart>0</xStart><xEnd>2</xEnd></li>
+      <li><startAstronomicalYear>-2999</startAstronomicalYear><endAstronomicalYear>-999</endAstronomicalYear><xStart>2</xStart><xEnd>5</xEnd></li>
+      <li><startAstronomicalYear>-999</startAstronomicalYear><endAstronomicalYear>-220</endAstronomicalYear><xStart>5</xStart><xEnd>8</xEnd></li>
+      <li><startAstronomicalYear>-220</startAstronomicalYear><endAstronomicalYear>1000</endAstronomicalYear><xStart>8</xStart><xEnd>11</xEnd></li>
+      <li><startAstronomicalYear>1000</startAstronomicalYear><endAstronomicalYear>2100</endAstronomicalYear><xStart>11</xStart><xEnd>14</xEnd></li>
+    </segments>
+  </HistoricalRimWorld.Technology.HistoricalTechnologyTimelineLayoutDef>
+</Defs>

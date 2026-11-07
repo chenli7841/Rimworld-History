@@ -18,22 +18,14 @@ namespace HistoricalRimWorld.Patches.Technology
             "Machining"
         };
 
-        private static void Postfix(ref List<ResearchProjectDef> __result)
+        private static void Postfix(MainTabWindow_Research __instance, ref List<ResearchProjectDef> __result)
         {
             if (__result == null) return;
 
-            // The vanilla list getter can omit projects that are not currently available.
-            // Historical projects must remain listed so their timeline and requirements are inspectable.
-            if (HistoricalScenarioManager.IsScenarioActive)
+            if (HistoricalResearchTimelineUIState.IsHistoricalTab(__instance))
             {
-                foreach (ResearchProjectDef project in HistoricalTechnologyManager.Technologies
-                    .Select(technology => technology.researchProject)
-                    .Where(project => project != null)
-                    .OrderBy(project => project.researchViewX)
-                    .ThenBy(project => project.researchViewY))
-                {
-                    if (!__result.Contains(project)) __result.Add(project);
-                }
+                __result = HistoricalResearchTimelineUIState.VisibleProjects();
+                return;
             }
 
             if (HistoricalTechnologyManager.IsActive)

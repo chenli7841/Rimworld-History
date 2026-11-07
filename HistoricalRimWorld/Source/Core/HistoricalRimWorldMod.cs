@@ -1,6 +1,7 @@
 using UnityEngine;
 using Verse;
 using HistoricalRimWorld.Patches.World;
+using HistoricalRimWorld.Technology;
 
 namespace HistoricalRimWorld
 {
@@ -30,6 +31,7 @@ namespace HistoricalRimWorld
         public override void WriteSettings()
         {
             base.WriteSettings();
+            HistoricalTechnologyTimelineLayout.Invalidate();
             HistoricalLocalFogSettings.NotifyChanged();
         }
     }

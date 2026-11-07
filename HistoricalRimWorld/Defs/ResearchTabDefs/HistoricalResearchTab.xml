@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchTabDef>
+    <defName>HR_HistoricalTechnologies</defName>
+    <label>HR_HistoricalTechnologies</label>
+    <generalTitle>HR_HistoricalTechnologies.generalTitle</generalTitle>
+    <generalDescription>HR_HistoricalTechnologies.generalDescription</generalDescription>
+    <visibleByDefault>true</visibleByDefault>
+  </ResearchTabDef>
+</Defs>

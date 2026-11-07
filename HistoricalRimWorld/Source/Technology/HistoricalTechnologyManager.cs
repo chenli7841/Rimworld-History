@@ -41,7 +41,8 @@ namespace HistoricalRimWorld.Technology
             {
                 HistoricalTechnologyInitialState record = initialStates.FirstOrDefault(item => item?.technology?.defName == technology.defName);
                 if (record != null) continue;
-                HistoricalTechnologyAvailability availability = technology.earliestPossibleYear.HasValue && date.AstronomicalYear < technology.earliestPossibleYear.Value
+                HistoricalTechnologyAvailability availability = technology.earliestPossibleYear.HasValue
+                    && date.AstronomicalYear < HistoricalTechnologyTimelineLayout.ConvertHistoricalYearToAstronomical(technology.earliestPossibleYear.Value)
                     ? HistoricalTechnologyAvailability.NotYetHistoricallyAvailable
                     : technology.initialKnownRegions != null && technology.initialKnownRegions.Contains(scenario.defaultStartingRegion)
                         ? HistoricalTechnologyAvailability.LocallyAccessible
@@ -184,7 +185,7 @@ namespace HistoricalRimWorld.Technology
         {
             HistoricalDate date;
             return !def.earliestPossibleYear.HasValue || !HistoricalCalendarManager.TryGetCurrentDate(out date)
-                || date.AstronomicalYear >= def.earliestPossibleYear.Value;
+                || date.AstronomicalYear >= HistoricalTechnologyTimelineLayout.ConvertHistoricalYearToAstronomical(def.earliestPossibleYear.Value);
         }
 
         private static HistoricalTechnologyState GetOrCreateState(string communityId, HistoricalTechnologyDef def)

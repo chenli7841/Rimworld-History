@@ -32,4 +32,38 @@
   <HR_Tech_Adoption_Adopted>已掌握</HR_Tech_Adoption_Adopted>
   <HR_Tech_Chronicle_Title>掌握历史技术</HR_Tech_Chronicle_Title>
   <HR_Tech_Chronicle_Description>一个社区掌握了一项历史技术。</HR_Tech_Chronicle_Description>
+  <HR_HistoricalTechnologies.label>历史科技</HR_HistoricalTechnologies.label>
+  <HR_HistoricalTechnologies.generalTitle>历史科技时间轴</HR_HistoricalTechnologies.generalTitle>
+  <HR_HistoricalTechnologies.generalDescription>按历史年代查看技术出现范围、前置关系和当前研究状态。年代范围表示证据或估计，不等于精确发明日期。</HR_HistoricalTechnologies.generalDescription>
+  <HR_Timeline_ShowFuture>预览尚未进入历史时期的科技</HR_Timeline_ShowFuture>
+  <HR_Timeline_ZoomSetting>时间轴缩放：{0}</HR_Timeline_ZoomSetting>
+  <HR_Timeline_Zoom>{0}×</HR_Timeline_Zoom>
+  <HR_Timeline_Category_All>全部类别</HR_Timeline_Category_All>
+  <HR_Timeline_Category_Agriculture>农业与畜牧</HR_Timeline_Category_Agriculture>
+  <HR_Timeline_Category_Metallurgy>冶金与采矿</HR_Timeline_Category_Metallurgy>
+  <HR_Timeline_Category_Military>军事与兵器</HR_Timeline_Category_Military>
+  <HR_Timeline_Category_Engineering>建筑与水利</HR_Timeline_Category_Engineering>
+  <HR_Timeline_Category_Crafts>纺织与手工业</HR_Timeline_Category_Crafts>
+  <HR_Timeline_Category_Exchange>交通与商业</HR_Timeline_Category_Exchange>
+  <HR_Timeline_Category_Knowledge>文字与知识</HR_Timeline_Category_Knowledge>
+  <HR_Timeline_Category_Medicine>医学</HR_Timeline_Category_Medicine>
+  <HR_Timeline_Category_Other>礼器与其他</HR_Timeline_Category_Other>
+  <HR_Timeline_YearBCE>前{0}</HR_Timeline_YearBCE>
+  <HR_Timeline_YearCE>公元{0}</HR_Timeline_YearCE>
+  <HR_Timeline_DateRange>历史证据/估计范围：{0}—{1}年</HR_Timeline_DateRange>
+  <HR_Timeline_DateFrom>最早证据或可能年代：约{0}年起</HR_Timeline_DateFrom>
+  <HR_Timeline_DateUndated>历史年代尚未可靠标定；节点放在“年代未定”区域</HR_Timeline_DateUndated>
+  <HR_Timeline_Category>类别：{0}</HR_Timeline_Category>
+  <HR_Timeline_EvidenceLevel>证据等级：{0}</HR_Timeline_EvidenceLevel>
+  <HR_Timeline_EvidenceNotes>史料说明：{0}</HR_Timeline_EvidenceNotes>
+  <HR_Timeline_Evidence_WellAttested>证据较充分</HR_Timeline_Evidence_WellAttested>
+  <HR_Timeline_Evidence_Probable>较可能</HR_Timeline_Evidence_Probable>
+  <HR_Timeline_Evidence_Disputed>存在争议</HR_Timeline_Evidence_Disputed>
+  <HR_Timeline_Evidence_Speculative>推测性</HR_Timeline_Evidence_Speculative>
+  <HR_Timeline_CurrentYear>当前：{0}</HR_Timeline_CurrentYear>
+  <HR_Timeline_UndatedLane>年代未定</HR_Timeline_UndatedLane>
+  <HR_Timeline_Status_Completed>状态：已掌握</HR_Timeline_Status_Completed>
+  <HR_Timeline_Status_InProgress>状态：正在研究</HR_Timeline_Status_InProgress>
+  <HR_Timeline_Status_KnownButUnavailable>状态：已知或已有历史线索，但暂不可研究（可能缺少当地接触条件或前置技术）</HR_Timeline_Status_KnownButUnavailable>
+  <HR_Timeline_Status_ResearchAvailable>状态：可开始研究</HR_Timeline_Status_ResearchAvailable>
 </LanguageData>

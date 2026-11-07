@@ -9,6 +9,14 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>5.00</researchViewX>
     <researchViewY>0.05</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_BasicFarming</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_AnimalHusbandry</defName>
@@ -18,6 +26,14 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>5.00</researchViewX>
     <researchViewY>1.00</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_AnimalHusbandry</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_SeedSelection</defName>
@@ -27,6 +43,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
     <researchViewX>6.50</researchViewX>
     <researchViewY>0.05</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_SeedSelection</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_GrainStorage</defName>
@@ -36,6 +60,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
     <researchViewX>6.50</researchViewX>
     <researchViewY>0.50</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_GrainStorage</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Irrigation</defName>
@@ -45,6 +77,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
     <researchViewX>6.50</researchViewX>
     <researchViewY>0.95</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_Irrigation</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
     <ResearchProjectDef>
     <defName>HR_Research_WaterManagement</defName>
@@ -54,6 +94,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Irrigation</li></prerequisites>
     <researchViewX>8.00</researchViewX>
     <researchViewY>0.85</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_WaterManagement</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_TimberFraming</defName>
@@ -63,6 +111,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
     <researchViewX>6.50</researchViewX>
     <researchViewY>1.40</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_TimberFraming</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_RammedEarth</defName>
@@ -72,6 +128,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
     <researchViewX>6.50</researchViewX>
     <researchViewY>1.85</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_RammedEarth</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -82,6 +146,14 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>5.00</researchViewX>
     <researchViewY>2.30</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_CopperMining</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_CopperSmelting</defName>
@@ -91,6 +163,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_CopperMining</li></prerequisites>
     <researchViewX>6.50</researchViewX>
     <researchViewY>2.30</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_CopperSmelting</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_BronzeAlloy</defName>
@@ -100,6 +180,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_CopperSmelting</li></prerequisites>
     <researchViewX>8.00</researchViewX>
     <researchViewY>2.30</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_BronzeAlloy</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_EarlyIronworking</defName>
@@ -109,6 +197,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_CopperSmelting</li></prerequisites>
     <researchViewX>8.00</researchViewX>
     <researchViewY>2.80</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_EarlyIronworking</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_IronFarmTools</defName>
@@ -118,6 +214,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_EarlyIronworking</li></prerequisites>
     <researchViewX>9.50</researchViewX>
     <researchViewY>2.80</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_IronFarmTools</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -128,6 +232,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BronzeAlloy</li></prerequisites>
     <researchViewX>9.50</researchViewX>
     <researchViewY>2.30</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_BronzeCasting</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_BronzeTools</defName>
@@ -137,6 +249,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BronzeCasting</li></prerequisites>
     <researchViewX>15.00</researchViewX>
     <researchViewY>3.50</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_BronzeTools</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Pottery</defName>
@@ -146,6 +266,14 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>5.00</researchViewX>
     <researchViewY>2.80</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_Pottery</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_KilnFiring</defName>
@@ -155,6 +283,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Pottery</li></prerequisites>
     <researchViewX>6.50</researchViewX>
     <researchViewY>2.80</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_KilnFiring</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Writing</defName>
@@ -164,6 +300,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Pottery</li></prerequisites>
     <researchViewX>6.50</researchViewX>
     <researchViewY>3.25</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_Writing</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Commerce</defName>
@@ -173,6 +317,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Weaving</li><li>HR_Research_Pottery</li></prerequisites>
     <researchViewX>6.50</researchViewX>
     <researchViewY>3.70</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_Commerce</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -183,6 +335,14 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>5.00</researchViewX>
     <researchViewY>4.30</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_PlantFibres</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_BowMaking</defName>
@@ -192,6 +352,14 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>5.00</researchViewX>
     <researchViewY>5.00</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_BowMaking</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Weaving</defName>
@@ -201,5 +369,13 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_PlantFibres</li></prerequisites>
     <researchViewX>13.00</researchViewX>
     <researchViewY>5.10</researchViewY>
+  
+    <tab>HR_HistoricalTechnologies</tab>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_Weaving</technology>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
 </Defs>
