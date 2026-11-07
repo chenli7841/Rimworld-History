@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.World.HistoricalMountainPassDef>
+    <defName>HR_MountainPass_HanguCorridor</defName>
+    <label>HR_Pass_HanguCorridor_Label</label>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <latitude>34.6</latitude>
+    <longitude>110.9</longitude>
+    <relatedFortifiedPassDefName>HR_FortifiedPass_Hangu</relatedFortifiedPassDefName>
+    <historicalDescription>崤山与函谷一带的天然东西向通道；图标坐标仅作代表点。</historicalDescription>
+    <sourceNotes>通道名称与地理描述用于历史地理示意；该点不代表考古确认的具体古道或关址坐标。</sourceNotes>
+    <texturePath>World/HR/NaturalMountainPass</texturePath>
+    <labelPriority>80</labelPriority>
+    <minimumZoom>0</minimumZoom>
+    <maximumZoom>1</maximumZoom>
+    <showOnWorldMap>true</showOnWorldMap>
+  </HistoricalRimWorld.World.HistoricalMountainPassDef>
+
+  <HistoricalRimWorld.World.HistoricalMountainPassDef>
+    <defName>HR_MountainPass_WuguanRoute</defName>
+    <label>HR_Pass_WuguanRoute_Label</label>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <latitude>33.4</latitude>
+    <longitude>110.4</longitude>
+    <relatedFortifiedPassDefName>HR_FortifiedPass_Wuguan</relatedFortifiedPassDefName>
+    <historicalDescription>连接关中与南阳方向的山地通道；图标坐标仅作代表点。</historicalDescription>
+    <sourceNotes>通道坐标为区域示意，未据此断言东周早期存在同址设防关隘。</sourceNotes>
+    <texturePath>World/HR/NaturalMountainPass</texturePath>
+    <labelPriority>65</labelPriority>
+    <minimumZoom>0</minimumZoom>
+    <maximumZoom>0.6</maximumZoom>
+    <showOnWorldMap>true</showOnWorldMap>
+  </HistoricalRimWorld.World.HistoricalMountainPassDef>
+
+  <HistoricalRimWorld.World.HistoricalFortifiedPassDef>
+    <defName>HR_FortifiedPass_Hangu</defName>
+    <label>HR_Pass_HanguFortification_Label</label>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <latitude>34.6</latitude>
+    <longitude>110.9</longitude>
+    <relatedMountainPassDefName>HR_MountainPass_HanguCorridor</relatedMountainPassDefName>
+    <establishedAstronomicalYear>-360</establishedAstronomicalYear>
+    <texturePath>World/HR/MountainPass</texturePath>
+    <labelPriority>100</labelPriority>
+    <minimumZoom>0</minimumZoom>
+    <maximumZoom>1</maximumZoom>
+    <showOnWorldMap>true</showOnWorldMap>
+    <sourceNotes>Traditionally dated to 361 BCE (astronomical year -360); the mapped coordinate is approximate and should not be treated as a surveyed ancient gate site.</sourceNotes>
+  </HistoricalRimWorld.World.HistoricalFortifiedPassDef>
+
+  <HistoricalRimWorld.World.HistoricalFortifiedPassDef>
+    <defName>HR_FortifiedPass_Wuguan</defName>
+    <label>HR_Pass_WuguanFortification_Label</label>
+    <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
+    <latitude>33.4</latitude>
+    <longitude>110.4</longitude>
+    <relatedMountainPassDefName>HR_MountainPass_WuguanRoute</relatedMountainPassDefName>
+    <texturePath>World/HR/MountainPass</texturePath>
+    <labelPriority>90</labelPriority>
+    <minimumZoom>0</minimumZoom>
+    <maximumZoom>1</maximumZoom>
+    <showOnWorldMap>false</showOnWorldMap>
+    <sourceNotes>Fortification date and exact ancient location are not yet verified. Kept hidden until a sourced astronomical establishment year is added.</sourceNotes>
+  </HistoricalRimWorld.World.HistoricalFortifiedPassDef>
+</Defs>

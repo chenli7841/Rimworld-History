@@ -90,6 +90,38 @@
         <worldObjectDef>HR_MapMarker_MountainPeak</worldObjectDef>
       </li>
       <li>
+        <locationId>zhiguanxing</locationId>
+        <label>轵关陉</label>
+        <description>太行第一陉</description>
+        <longitude>111.62266</longitude>
+        <latitude>35.34261</latitude>
+        <worldObjectDef>HR_MapMarker_MountainPass</worldObjectDef>
+      </li>
+      <li>
+        <locationId>taihangxing</locationId>
+        <label>太行陉</label>
+        <description>太行第二陉</description>
+        <longitude>112.82797</longitude>
+        <latitude>35.29385</latitude>
+        <worldObjectDef>HR_MapMarker_MountainPass</worldObjectDef>
+      </li>
+      <li>
+        <locationId>baixing</locationId>
+        <label>白陉</label>
+        <description>太行第三陉</description>
+        <longitude>113.44629</longitude>
+        <latitude>35.60720</latitude>
+        <worldObjectDef>HR_MapMarker_MountainPass</worldObjectDef>
+      </li>
+      <li>
+        <locationId>fukouxing</locationId>
+        <label>滏口陉</label>
+        <description>太行第四陉</description>
+        <longitude>113.67405</longitude>
+        <latitude>36.60140</latitude>
+        <worldObjectDef>HR_MapMarker_MountainPass</worldObjectDef>
+      </li>
+      <li>
         <locationId>xiangyang</locationId>
         <label>邓（襄阳）</label>
         <description>楚国</description>

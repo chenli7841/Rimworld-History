@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Pass_HanguCorridor_Label>崤函通道</HR_Pass_HanguCorridor_Label>
+  <HR_Pass_WuguanRoute_Label>武关道山口</HR_Pass_WuguanRoute_Label>
+  <HR_Pass_HanguFortification_Label>函谷关</HR_Pass_HanguFortification_Label>
+  <HR_Pass_WuguanFortification_Label>武关</HR_Pass_WuguanFortification_Label>
+  <HR_Pass_NaturalType>天然山口</HR_Pass_NaturalType>
+  <HR_Pass_FortifiedType>人工关隘</HR_Pass_FortifiedType>
+  <HR_Pass_NaturalTooltip>{0} — {1} — 地理区域 / 通道：{2}</HR_Pass_NaturalTooltip>
+  <HR_Pass_FortifiedTooltip>{0} — {1} — 历史说明：{2}</HR_Pass_FortifiedTooltip>
+</LanguageData>

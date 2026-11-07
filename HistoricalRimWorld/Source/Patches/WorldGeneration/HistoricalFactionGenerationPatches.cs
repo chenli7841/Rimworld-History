@@ -26,6 +26,7 @@ namespace HistoricalRimWorld.Patches.WorldGeneration
         private static void Postfix()
         {
             HistoricalWorldFeatureOverrideManager.RefreshPendingLabels(Find.World);
+            HistoricalPassMapIconRenderer.Draw();
             HistoricalFactionWorldComponent factionState = Find.World?.GetComponent<HistoricalFactionWorldComponent>();
             bool historicalWorld = factionState?.GenerationMode == HistoricalFactionGenerationMode.HistoricalScenario
                 || HistoricalFactionGenerationContext.IsHistoricalWorldGenerationActive;

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Pass_HanguCorridor_Label>Hangu Corridor</HR_Pass_HanguCorridor_Label>
+  <HR_Pass_WuguanRoute_Label>Wuguan Route</HR_Pass_WuguanRoute_Label>
+  <HR_Pass_HanguFortification_Label>Hangu Pass Fortification</HR_Pass_HanguFortification_Label>
+  <HR_Pass_WuguanFortification_Label>Wuguan Fortification</HR_Pass_WuguanFortification_Label>
+  <HR_Pass_NaturalType>Natural mountain pass</HR_Pass_NaturalType>
+  <HR_Pass_FortifiedType>Fortified pass</HR_Pass_FortifiedType>
+  <HR_Pass_NaturalTooltip>{0} — {1} — Geographic area / route: {2}</HR_Pass_NaturalTooltip>
+  <HR_Pass_FortifiedTooltip>{0} — {1} — Historical note: {2}</HR_Pass_FortifiedTooltip>
+</LanguageData>
