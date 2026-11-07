@@ -203,6 +203,12 @@
       <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
         <IsHistoricalTechnology>true</IsHistoricalTechnology>
         <technology>HR_Tech_EarlyIronworking</technology>
+        <SpreadStartYear>-650</SpreadStartYear>
+        <SpreadEndYear>-450</SpreadEndYear>
+        <HistoricalDescription>Scenario simulation window only; the timing and regional history of early ironworking remain disputed.</HistoricalDescription>
+        <HistoricalEvidenceLevel>Disputed</HistoricalEvidenceLevel>
+        <OriginFactionTags><li>EarlyIronContactModel</li></OriginFactionTags>
+        <PreferredCultureTags><li>EasternZhouCraftExchangeModel</li></PreferredCultureTags>
       </li>
     </modExtensions>
   </ResearchProjectDef>
@@ -220,6 +226,12 @@
       <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
         <IsHistoricalTechnology>true</IsHistoricalTechnology>
         <technology>HR_Tech_IronFarmTools</technology>
+        <SpreadStartYear>-600</SpreadStartYear>
+        <SpreadEndYear>-350</SpreadEndYear>
+        <HistoricalDescription>Scenario simulation window only; regional adoption of iron agricultural tools is not assigned a single invention date.</HistoricalDescription>
+        <HistoricalEvidenceLevel>Disputed</HistoricalEvidenceLevel>
+        <OriginFactionTags><li>EarlyIronContactModel</li></OriginFactionTags>
+        <PreferredCultureTags><li>EasternZhouCraftExchangeModel</li></PreferredCultureTags>
       </li>
     </modExtensions>
   </ResearchProjectDef>

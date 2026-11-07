@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <LetterDef>
+    <defName>HR_HistoricalTechnologyLetter</defName>
+    <letterClass>HistoricalRimWorld.Technology.ChoiceLetter_HistoricalTechnology</letterClass>
+    <color>(175, 176, 185)</color>
+  </LetterDef>
+</Defs>

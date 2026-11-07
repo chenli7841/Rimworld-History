@@ -22,6 +22,7 @@ namespace HistoricalRimWorld
         public bool EnableFogDebugVisualization = false;
         public bool ShowFutureHistoricalTechnologies = false;
         public float HistoricalTimelineZoom = 1f;
+        public bool UseKnowledgePropagationForTechnologyNotifications = false;
 
         public override void ExposeData()
         {
@@ -40,6 +41,7 @@ namespace HistoricalRimWorld
             Scribe_Values.Look(ref EnableFogDebugVisualization, "EnableFogDebugVisualization", false);
             Scribe_Values.Look(ref ShowFutureHistoricalTechnologies, "ShowFutureHistoricalTechnologies", false);
             Scribe_Values.Look(ref HistoricalTimelineZoom, "HistoricalTimelineZoom", 1f);
+            Scribe_Values.Look(ref UseKnowledgePropagationForTechnologyNotifications, "UseKnowledgePropagationForTechnologyNotifications", false);
             HistoricalTimelineZoom = Mathf.Clamp(HistoricalTimelineZoom, 0.5f, 2f);
             base.ExposeData();
         }
@@ -69,6 +71,7 @@ namespace HistoricalRimWorld
             listing.CheckboxLabeled(Translator.Translate("HR_Fog_Debug"), ref EnableFogDebugVisualization);
             listing.GapLine();
             listing.CheckboxLabeled(Translator.Translate("HR_Timeline_ShowFuture"), ref ShowFutureHistoricalTechnologies);
+            listing.CheckboxLabeled(Translator.Translate("HR_Tech_KnowledgePropagationMode"), ref UseKnowledgePropagationForTechnologyNotifications);
             listing.Label(string.Format(Translator.Translate("HR_Timeline_ZoomSetting"), HistoricalTimelineZoom.ToString("0.0")));
             float previousTimelineZoom = HistoricalTimelineZoom;
             HistoricalTimelineZoom = listing.Slider(HistoricalTimelineZoom, 0.5f, 2f);

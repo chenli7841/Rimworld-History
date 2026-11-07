@@ -5,4 +5,7 @@ namespace HistoricalRimWorld.Technology
     public enum HistoricalTechnologyAdoption { Unknown, Known, UnderStudy, Adopted }
     public enum HistoricalTechnologyAcquisitionSource { Research, Trade, ArtisanMigration, HistoricalEvent, CaptiveKnowledge, CulturalExchange, Development }
     public enum HistoricalContentPolicy { Allowed, Restricted, Forbidden }
+    public enum HistoricalWorldTechStatus { NotEmerged, Emerged, Spreading, Widespread }
+    public enum FactionTechKnowledgeLevel { Unknown, HeardOf, Acquired, Mastered }
+    public enum PlayerHistoricalTechAwareness { Unknown, Rumored, Confirmed }
 }

@@ -66,4 +66,24 @@
   <HR_Timeline_Status_InProgress>状态：正在研究</HR_Timeline_Status_InProgress>
   <HR_Timeline_Status_KnownButUnavailable>状态：已知或已有历史线索，但暂不可研究（可能缺少当地接触条件或前置技术）</HR_Timeline_Status_KnownButUnavailable>
   <HR_Timeline_Status_ResearchAvailable>状态：可开始研究</HR_Timeline_Status_ResearchAvailable>
+  <HR_Tech_KnowledgePropagationMode>知识传播模式（关闭时使用历史消息模式）</HR_Tech_KnowledgePropagationMode>
+  <HR_Tech_WorldStatus>世界状态：{0}</HR_Tech_WorldStatus>
+  <HR_Tech_WorldStatus_NotEmerged>尚未出现</HR_Tech_WorldStatus_NotEmerged>
+  <HR_Tech_WorldStatus_Emerged>已出现</HR_Tech_WorldStatus_Emerged>
+  <HR_Tech_WorldStatus_Spreading>传播中</HR_Tech_WorldStatus_Spreading>
+  <HR_Tech_WorldStatus_Widespread>广泛掌握</HR_Tech_WorldStatus_Widespread>
+  <HR_Tech_PlayerAwareness>玩家认知：{0}</HR_Tech_PlayerAwareness>
+  <HR_Tech_Awareness_Unknown>未知</HR_Tech_Awareness_Unknown>
+  <HR_Tech_Awareness_Rumored>传闻</HR_Tech_Awareness_Rumored>
+  <HR_Tech_Awareness_Confirmed>已确认</HR_Tech_Awareness_Confirmed>
+  <HR_Tech_KnownSources>已知来源：{0}</HR_Tech_KnownSources>
+  <HR_Tech_Letter_View>查看历史科技</HR_Tech_Letter_View>
+  <HR_Tech_EmergenceLetterTitle>历史科技：{0}已出现</HR_Tech_EmergenceLetterTitle>
+  <HR_Tech_EmergenceLetterText>历史记录显示，{0}已在世界某些地区出现。当前世界状态：{1}。此消息不会完成研究或授予研究资格。</HR_Tech_EmergenceLetterText>
+  <HR_Tech_SourceLetterTitle>历史科技情报：{0}</HR_Tech_SourceLetterTitle>
+  <HR_Tech_SourceLetterText>可靠消息称，{1}已掌握{0}。</HR_Tech_SourceLetterText>
+  <HR_Tech_RumorLetterTitle>科技传闻：{0}</HR_Tech_RumorLetterTitle>
+  <HR_Tech_RumorLetterText>传闻称，{1}可能已接触{0}。这条消息尚未得到独立证实。</HR_Tech_RumorLetterText>
+  <HR_Tech_EmergenceChronicleTitle>科技出现：{0}</HR_Tech_EmergenceChronicleTitle>
+  <HR_Tech_EmergenceChronicleText>历史科技{0}进入传播阶段。游戏中的年代窗口是情景模拟，不代表精确发明日期。</HR_Tech_EmergenceChronicleText>
 </LanguageData>

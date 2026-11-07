@@ -18,6 +18,7 @@ namespace HistoricalRimWorld.Patches.Technology
         private static int cachedYear = int.MinValue;
         private static bool cachedShowFuture;
         private static List<ResearchProjectDef> cachedProjects = new List<ResearchProjectDef>();
+        private static string pendingFocusProject;
 
         public static bool IsHistoricalTab(MainTabWindow_Research window) => window?.CurTab?.defName == TabDefName;
         public static HistoricalTechnologyCategoryGroup SelectedCategory => selectedCategory;
@@ -36,8 +37,7 @@ namespace HistoricalRimWorld.Patches.Technology
             cachedProjects = HistoricalTechnologyTimelineLayout.HistoricalProjects
                 .Where(project => selectedCategory == HistoricalTechnologyCategoryGroup.All
                     || HistoricalTechnologyTimelineLayout.GetCategoryGroup(project) == selectedCategory)
-                .Where(project => showFuture || currentYear == int.MinValue
-                    || HistoricalTechnologyTimelineLayout.IsHistoricallyAvailable(project, currentYear))
+                .Where(project => IsVisible(project, currentYear, showFuture))
                 .OrderBy(project => HistoricalTechnologyTimelineLayout.TryGetPosition(project, out HistoricalTechnologyNodePosition position)
                     ? position.X : float.MaxValue)
                 .ThenBy(project => project.LabelCap.ToString())
@@ -52,6 +52,30 @@ namespace HistoricalRimWorld.Patches.Technology
         }
 
         public static void Invalidate() => cachedYear = int.MinValue;
+
+        private static bool IsVisible(ResearchProjectDef project, int currentYear, bool showFuture)
+        {
+            if (!HistoricalScenarioManager.IsScenarioActive || !HistoricalTechnologyManager.IsActive)
+                return showFuture || currentYear == int.MinValue
+                    || HistoricalTechnologyTimelineLayout.IsHistoricallyAvailable(project, currentYear);
+
+            PlayerHistoricalTechAwareness awareness = HistoricalTechnologyManager.ComponentAwareness(project);
+            bool known = awareness != PlayerHistoricalTechAwareness.Unknown;
+            if (showFuture && !HistoricalTechnologyManager.HasTechnologyEmerged(project)) return true;
+            return HistoricalTechnologyManager.HasTechnologyEmerged(project) && known;
+        }
+
+        public static void FocusProject(string defName) => pendingFocusProject = defName;
+
+        public static bool TryConsumeFocus(out ResearchProjectDef project)
+        {
+            project = null;
+            if (string.IsNullOrWhiteSpace(pendingFocusProject)) return false;
+            string name = pendingFocusProject;
+            pendingFocusProject = null;
+            project = DefDatabase<ResearchProjectDef>.GetNamedSilentFail(name);
+            return project != null;
+        }
     }
 
     [HarmonyPatch(typeof(MainTabWindow_Research), "get_VisibleResearchProjects")]
@@ -125,6 +149,13 @@ namespace HistoricalRimWorld.Patches.Technology
         private static void Postfix(MainTabWindow_Research __instance, Rect __0, ref Vector2 ___leftScrollPosition)
         {
             if (!HistoricalResearchTimelineUIState.IsHistoricalTab(__instance)) return;
+            if (HistoricalResearchTimelineUIState.TryConsumeFocus(out ResearchProjectDef focus)
+                && HistoricalTechnologyTimelineLayout.TryGetPosition(focus, out HistoricalTechnologyNodePosition position))
+            {
+                ___leftScrollPosition = new Vector2(
+                    Mathf.Max(0f, position.X * 190f - __0.width * 0.5f),
+                    Mathf.Max(0f, position.Y * 100f - __0.height * 0.5f));
+            }
             DrawCategoryFilters(__0);
             DrawTimeline(__instance, __0, ___leftScrollPosition);
         }
@@ -250,6 +281,21 @@ namespace HistoricalRimWorld.Patches.Technology
             if (!string.IsNullOrWhiteSpace(state)) historicalDetails += "\n\n" + state;
             if (!string.IsNullOrWhiteSpace(historicalDetails))
                 __result = string.IsNullOrWhiteSpace(__result) ? historicalDetails : __result + "\n\n" + historicalDetails;
+
+            HistoricalWorldTechStatus worldStatus = HistoricalTechnologyManager.GetWorldStatus(__instance);
+            PlayerHistoricalTechAwareness awareness = HistoricalTechnologyManager.ComponentAwareness(__instance);
+            List<string> lines = new List<string>
+            {
+                string.Format(Translator.Translate("HR_Tech_WorldStatus"), Translator.Translate("HR_Tech_WorldStatus_" + worldStatus)),
+                string.Format(Translator.Translate("HR_Tech_PlayerAwareness"), Translator.Translate("HR_Tech_Awareness_" + awareness))
+            };
+            if (awareness != PlayerHistoricalTechAwareness.Unknown)
+            {
+                IReadOnlyList<Faction> sources = HistoricalTechnologyManager.GetKnownTechnologySources(__instance);
+                if (sources.Count > 0)
+                    lines.Add(string.Format(Translator.Translate("HR_Tech_KnownSources"), string.Join(", ", sources.Select(item => item.Name))));
+            }
+            __result += "\n\n" + string.Join("\n", lines);
         }
 
         private static string GetStatus(ResearchProjectDef project)

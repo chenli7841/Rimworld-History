@@ -18,9 +18,18 @@ namespace HistoricalRimWorld.Technology
         public string HistoricalDescription;
         public string HistoricalEvidence;
         public string HistoricalEvidenceLevel;
+        public float DiffusionDifficulty = 1f;
+        public float EmergenceChancePerYear = 0.12f;
+        public float DiffusionChancePerInterval = 0.12f;
+        public float WidespreadThreshold = 0.7f;
         public bool RequiresBlueprint = true;
         public bool RequiresPractice;
+        public bool AllowTradeDiffusion = true;
+        public bool AllowNeighborDiffusion = true;
+        public bool IsRestrictedMilitaryTechnology;
+        public bool NotifyPlayerOnEmergence = true;
         public List<string> OriginFactionTags;
+        public List<string> PreferredCultureTags;
         public List<string> PracticeRequirementIds;
         public List<string> TechnologyBonusIds;
     }

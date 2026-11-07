@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Initial differences below are scenario balance assumptions, not claims about which historical polity invented a technology. -->
+  <HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+    <defName>HR_TechProfile_EasternZhou_CourtCraft</defName><scenario>HR_Scenario_EasternZhou_770BCE</scenario><historicalState>HR_State_EasternZhou</historicalState>
+    <profileTags><li>CourtCraftModel</li><li>EarlyIronContactModel</li></profileTags><cultureTags><li>EasternZhouCraftExchangeModel</li></cultureTags><diffusionSusceptibility>0.95</diffusionSusceptibility>
+    <initialMasteredTechnologies><li>HR_Tech_BasicFarming</li><li>HR_Tech_AnimalHusbandry</li><li>HR_Tech_SeedSelection</li><li>HR_Tech_GrainStorage</li><li>HR_Tech_Pottery</li><li>HR_Tech_KilnFiring</li><li>HR_Tech_PlantFibres</li><li>HR_Tech_Weaving</li><li>HR_Tech_TimberFraming</li><li>HR_Tech_RammedEarth</li><li>HR_Tech_BowMaking</li><li>HR_Tech_Writing</li><li>HR_Tech_WaterManagement</li><li>HR_Tech_Commerce</li></initialMasteredTechnologies>
+    <sourceNotes>Scenario-level court and craft abstraction for gameplay; not a factual claim that the Zhou court originated these techniques.</sourceNotes>
+  </HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+  <HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+    <defName>HR_TechProfile_Zheng_CentralPlains</defName><scenario>HR_Scenario_EasternZhou_770BCE</scenario><historicalState>HR_State_Zheng</historicalState>
+    <profileTags><li>CentralPlainsCraftModel</li><li>EarlyIronContactModel</li></profileTags><cultureTags><li>EasternZhouCraftExchangeModel</li></cultureTags><diffusionSusceptibility>1.15</diffusionSusceptibility>
+    <initialMasteredTechnologies><li>HR_Tech_BasicFarming</li><li>HR_Tech_AnimalHusbandry</li><li>HR_Tech_SeedSelection</li><li>HR_Tech_GrainStorage</li><li>HR_Tech_Irrigation</li><li>HR_Tech_CopperMining</li><li>HR_Tech_CopperSmelting</li><li>HR_Tech_BronzeAlloy</li><li>HR_Tech_BronzeCasting</li><li>HR_Tech_Pottery</li><li>HR_Tech_KilnFiring</li><li>HR_Tech_PlantFibres</li><li>HR_Tech_Weaving</li><li>HR_Tech_TimberFraming</li><li>HR_Tech_RammedEarth</li><li>HR_Tech_BowMaking</li><li>HR_Tech_Writing</li><li>HR_Tech_WaterManagement</li><li>HR_Tech_Commerce</li></initialMasteredTechnologies>
+    <sourceNotes>Scenario-level regional variation for play; no precise regional technology monopoly is asserted.</sourceNotes>
+  </HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+  <HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+    <defName>HR_TechProfile_Jin_NorthernNetwork</defName><scenario>HR_Scenario_EasternZhou_770BCE</scenario><historicalState>HR_State_Jin</historicalState>
+    <profileTags><li>NorthernCraftModel</li><li>EarlyIronContactModel</li></profileTags><cultureTags><li>EasternZhouCraftExchangeModel</li></cultureTags><diffusionSusceptibility>0.9</diffusionSusceptibility>
+    <initialMasteredTechnologies><li>HR_Tech_BasicFarming</li><li>HR_Tech_AnimalHusbandry</li><li>HR_Tech_SeedSelection</li><li>HR_Tech_GrainStorage</li><li>HR_Tech_CopperMining</li><li>HR_Tech_CopperSmelting</li><li>HR_Tech_BronzeAlloy</li><li>HR_Tech_BronzeCasting</li><li>HR_Tech_BronzeTools</li><li>HR_Tech_Pottery</li><li>HR_Tech_KilnFiring</li><li>HR_Tech_PlantFibres</li><li>HR_Tech_Weaving</li><li>HR_Tech_TimberFraming</li><li>HR_Tech_RammedEarth</li><li>HR_Tech_BowMaking</li><li>HR_Tech_Writing</li><li>HR_Tech_WaterManagement</li></initialMasteredTechnologies>
+    <sourceNotes>Scenario-level regional variation for play; no precise regional technology monopoly is asserted.</sourceNotes>
+  </HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+  <HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+    <defName>HR_TechProfile_Qin_WesternNetwork</defName><scenario>HR_Scenario_EasternZhou_770BCE</scenario><historicalState>HR_State_Qin</historicalState>
+    <profileTags><li>WesternCraftModel</li><li>EarlyIronContactModel</li></profileTags><cultureTags><li>EasternZhouCraftExchangeModel</li><li>QinRegionalContactModel</li></cultureTags><diffusionSusceptibility>0.85</diffusionSusceptibility>
+    <initialMasteredTechnologies><li>HR_Tech_BasicFarming</li><li>HR_Tech_AnimalHusbandry</li><li>HR_Tech_SeedSelection</li><li>HR_Tech_GrainStorage</li><li>HR_Tech_CopperMining</li><li>HR_Tech_CopperSmelting</li><li>HR_Tech_BronzeAlloy</li><li>HR_Tech_BronzeCasting</li><li>HR_Tech_Pottery</li><li>HR_Tech_KilnFiring</li><li>HR_Tech_PlantFibres</li><li>HR_Tech_Weaving</li><li>HR_Tech_TimberFraming</li><li>HR_Tech_RammedEarth</li><li>HR_Tech_BowMaking</li><li>HR_Tech_WaterManagement</li></initialMasteredTechnologies>
+    <sourceNotes>Scenario-level western contact and craft abstraction for gameplay; not a factual claim that Qin originated ironworking.</sourceNotes>
+  </HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+  <HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+    <defName>HR_TechProfile_Qi_CoastalExchange</defName><scenario>HR_Scenario_EasternZhou_770BCE</scenario><historicalState>HR_State_Qi</historicalState>
+    <profileTags><li>ExchangeNetworkModel</li></profileTags><cultureTags><li>EasternZhouCraftExchangeModel</li></cultureTags><diffusionSusceptibility>1.2</diffusionSusceptibility>
+    <initialMasteredTechnologies><li>HR_Tech_BasicFarming</li><li>HR_Tech_AnimalHusbandry</li><li>HR_Tech_SeedSelection</li><li>HR_Tech_GrainStorage</li><li>HR_Tech_CopperMining</li><li>HR_Tech_CopperSmelting</li><li>HR_Tech_BronzeAlloy</li><li>HR_Tech_BronzeCasting</li><li>HR_Tech_BronzeTools</li><li>HR_Tech_Pottery</li><li>HR_Tech_KilnFiring</li><li>HR_Tech_PlantFibres</li><li>HR_Tech_Weaving</li><li>HR_Tech_TimberFraming</li><li>HR_Tech_RammedEarth</li><li>HR_Tech_BowMaking</li><li>HR_Tech_Writing</li><li>HR_Tech_WaterManagement</li><li>HR_Tech_Commerce</li></initialMasteredTechnologies>
+    <sourceNotes>Scenario-level exchange-network variation for gameplay; not a claim that this polity held a historical monopoly.</sourceNotes>
+  </HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+  <HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+    <defName>HR_TechProfile_Lu_RitualCraft</defName><scenario>HR_Scenario_EasternZhou_770BCE</scenario><historicalState>HR_State_Lu</historicalState>
+    <profileTags><li>RitualCraftModel</li></profileTags><cultureTags><li>EasternZhouCraftExchangeModel</li></cultureTags><diffusionSusceptibility>1.05</diffusionSusceptibility>
+    <initialMasteredTechnologies><li>HR_Tech_BasicFarming</li><li>HR_Tech_AnimalHusbandry</li><li>HR_Tech_SeedSelection</li><li>HR_Tech_GrainStorage</li><li>HR_Tech_Pottery</li><li>HR_Tech_KilnFiring</li><li>HR_Tech_PlantFibres</li><li>HR_Tech_Weaving</li><li>HR_Tech_TimberFraming</li><li>HR_Tech_RammedEarth</li><li>HR_Tech_BowMaking</li><li>HR_Tech_Writing</li><li>HR_Tech_WaterManagement</li><li>HR_Tech_Commerce</li></initialMasteredTechnologies>
+    <sourceNotes>Scenario-level variation for gameplay only; ceremonial production is not represented as a unique historical invention.</sourceNotes>
+  </HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+  <HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+    <defName>HR_TechProfile_Song_TradeNetwork</defName><scenario>HR_Scenario_EasternZhou_770BCE</scenario><historicalState>HR_State_Song</historicalState>
+    <profileTags><li>ExchangeNetworkModel</li></profileTags><cultureTags><li>EasternZhouCraftExchangeModel</li></cultureTags><diffusionSusceptibility>1.2</diffusionSusceptibility>
+    <initialMasteredTechnologies><li>HR_Tech_BasicFarming</li><li>HR_Tech_AnimalHusbandry</li><li>HR_Tech_SeedSelection</li><li>HR_Tech_GrainStorage</li><li>HR_Tech_CopperMining</li><li>HR_Tech_CopperSmelting</li><li>HR_Tech_BronzeAlloy</li><li>HR_Tech_BronzeCasting</li><li>HR_Tech_Pottery</li><li>HR_Tech_KilnFiring</li><li>HR_Tech_PlantFibres</li><li>HR_Tech_Weaving</li><li>HR_Tech_TimberFraming</li><li>HR_Tech_RammedEarth</li><li>HR_Tech_BowMaking</li><li>HR_Tech_Writing</li><li>HR_Tech_WaterManagement</li><li>HR_Tech_Commerce</li></initialMasteredTechnologies>
+    <sourceNotes>Scenario-level exchange-network variation for gameplay only; no historical monopoly is claimed.</sourceNotes>
+  </HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+  <HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+    <defName>HR_TechProfile_Wei_Agrarian</defName><scenario>HR_Scenario_EasternZhou_770BCE</scenario><historicalState>HR_State_Wei</historicalState>
+    <profileTags><li>CentralPlainsCraftModel</li></profileTags><cultureTags><li>EasternZhouCraftExchangeModel</li></cultureTags><diffusionSusceptibility>1.1</diffusionSusceptibility>
+    <initialMasteredTechnologies><li>HR_Tech_BasicFarming</li><li>HR_Tech_AnimalHusbandry</li><li>HR_Tech_SeedSelection</li><li>HR_Tech_GrainStorage</li><li>HR_Tech_Irrigation</li><li>HR_Tech_Pottery</li><li>HR_Tech_KilnFiring</li><li>HR_Tech_PlantFibres</li><li>HR_Tech_Weaving</li><li>HR_Tech_TimberFraming</li><li>HR_Tech_RammedEarth</li><li>HR_Tech_BowMaking</li><li>HR_Tech_WaterManagement</li></initialMasteredTechnologies>
+    <sourceNotes>Scenario-level agrarian variation for gameplay only; the lists are not archaeological assertions.</sourceNotes>
+  </HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+  <HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+    <defName>HR_TechProfile_Chu_SouthernCraft</defName><scenario>HR_Scenario_EasternZhou_770BCE</scenario><historicalState>HR_State_Chu</historicalState>
+    <profileTags><li>SouthernCraftModel</li><li>EarlyIronContactModel</li></profileTags><cultureTags><li>EasternZhouCraftExchangeModel</li></cultureTags><diffusionSusceptibility>1.1</diffusionSusceptibility>
+    <initialMasteredTechnologies><li>HR_Tech_BasicFarming</li><li>HR_Tech_AnimalHusbandry</li><li>HR_Tech_SeedSelection</li><li>HR_Tech_GrainStorage</li><li>HR_Tech_CopperMining</li><li>HR_Tech_CopperSmelting</li><li>HR_Tech_BronzeAlloy</li><li>HR_Tech_BronzeCasting</li><li>HR_Tech_BronzeTools</li><li>HR_Tech_Pottery</li><li>HR_Tech_KilnFiring</li><li>HR_Tech_PlantFibres</li><li>HR_Tech_Weaving</li><li>HR_Tech_TimberFraming</li><li>HR_Tech_RammedEarth</li><li>HR_Tech_BowMaking</li><li>HR_Tech_WaterManagement</li></initialMasteredTechnologies>
+    <sourceNotes>Scenario-level southern craft variation for gameplay only; this does not identify a historical inventor or exact region.</sourceNotes>
+  </HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+  <HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+    <defName>HR_TechProfile_NeutralSmallTribes</defName><scenario>HR_Scenario_EasternZhou_770BCE</scenario><factionDef>HR_Faction_NeutralSmallTribes</factionDef>
+    <profileTags><li>SmallCommunityModel</li></profileTags><cultureTags><li>EasternZhouCraftExchangeModel</li></cultureTags><diffusionSusceptibility>0.8</diffusionSusceptibility>
+    <initialMasteredTechnologies><li>HR_Tech_BasicFarming</li><li>HR_Tech_AnimalHusbandry</li><li>HR_Tech_SeedSelection</li><li>HR_Tech_GrainStorage</li><li>HR_Tech_Pottery</li><li>HR_Tech_PlantFibres</li><li>HR_Tech_BowMaking</li></initialMasteredTechnologies>
+    <sourceNotes>Generic gameplay profile for the neutral small-tribe faction; not a claim about a particular historical community.</sourceNotes>
+  </HistoricalRimWorld.Technology.HistoricalFactionTechnologyProfileDef>
+</Defs>

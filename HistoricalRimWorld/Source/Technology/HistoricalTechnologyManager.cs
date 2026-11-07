@@ -6,7 +6,9 @@ using HistoricalRimWorld.Chronicle;
 using HistoricalRimWorld.Politics;
 using HistoricalRimWorld.Production;
 using HistoricalRimWorld.Scenarios;
+using HistoricalRimWorld.Factions;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace HistoricalRimWorld.Technology
@@ -16,6 +18,7 @@ namespace HistoricalRimWorld.Technology
         public static bool IsActive => Component?.Initialized == true && HistoricalScenarioManager.IsScenarioActive;
         public static IEnumerable<HistoricalTechnologyDef> Technologies => DefDatabase<HistoricalTechnologyDef>.AllDefsListForReading;
         public static IEnumerable<HistoricalTechnologyState> PlayerTechnologies => GetCommunityState(GetPlayerCommunityId())?.Technologies ?? Enumerable.Empty<HistoricalTechnologyState>();
+        public static IEnumerable<HistoricalFactionTechnologyState> ComponentFactionStates => Component?.FactionStates ?? Enumerable.Empty<HistoricalFactionTechnologyState>();
         private static HistoricalTechnologyGameComponent Component => Current.Game?.GetComponent<HistoricalTechnologyGameComponent>();
 
         public static bool TryInitializeForScenario(HistoricalScenarioDef scenario, out string error)
@@ -26,7 +29,11 @@ namespace HistoricalRimWorld.Technology
             HistoricalTechnologyGameComponent component = Component;
             if (component == null) return Fail("HistoricalTechnologyGameComponent is unavailable.", out error);
             if (component.Initialized)
-                return component.ScenarioDefName == scenario.defName || Fail("Technology state belongs to another scenario.", out error);
+            {
+                if (component.ScenarioDefName != scenario.defName) return Fail("Technology state belongs to another scenario.", out error);
+                if (!EnsureFactionStates(component, scenario, out error)) return false;
+                return true;
+            }
 
             List<HistoricalTechnologySetupDef> setups = DefDatabase<HistoricalTechnologySetupDef>.AllDefsListForReading
                 .Where(item => item.scenario?.defName == scenario.defName).ToList();
@@ -51,7 +58,153 @@ namespace HistoricalRimWorld.Technology
             }
             if (!component.Initialize(scenario.defName, setup.communityId, initialStates))
                 return Fail("Could not initialize community technology records.", out error);
+            return EnsureFactionStates(component, scenario, out error);
+        }
+
+        public static bool RebuildMissingFactionStates(out string error)
+        {
+            HistoricalTechnologyGameComponent component = Component;
+            HistoricalScenarioDef scenario = HistoricalScenarioManager.CurrentScenario;
+            return component != null && component.Initialized && scenario != null
+                ? EnsureFactionStates(component, scenario, out error)
+                : Fail("An initialized historical scenario is required.", out error);
+        }
+
+        private static bool EnsureFactionStates(HistoricalTechnologyGameComponent component, HistoricalScenarioDef scenario, out string error)
+        {
+            error = null;
+            if (component == null || scenario == null || Find.FactionManager == null
+                || !HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate currentDate))
+                return Fail("Faction manager or historical date is unavailable for world technology initialization.", out error);
+            List<HistoricalFactionTechnologyProfileDef> profiles = DefDatabase<HistoricalFactionTechnologyProfileDef>.AllDefsListForReading
+                .Where(item => item?.scenario?.defName == scenario.defName).ToList();
+            if (profiles.Count == 0) return Fail("No HistoricalFactionTechnologyProfileDef is configured for " + scenario.defName + ".", out error);
+
+            List<Faction> factions = Find.FactionManager.AllFactionsListForReading
+                .Where(item => item != null && (item == Faction.OfPlayerSilentFail || HistoricalFactionManager.TryGetHistoricalState(item, out _)
+                    || profiles.Any(profile => profile.factionDef == item.def)))
+                .Distinct().ToList();
+            Faction player = Faction.OfPlayerSilentFail;
+            if (player != null && !factions.Contains(player)) factions.Add(player);
+            foreach (Faction faction in factions)
+            {
+                HistoricalStateDef historicalState = null;
+                HistoricalFactionManager.TryGetHistoricalState(faction, out historicalState);
+                HistoricalFactionTechnologyProfileDef profile = profiles.FirstOrDefault(item =>
+                    (historicalState != null && item.historicalState?.defName == historicalState.defName)
+                    || (item.factionDef != null && item.factionDef == faction.def));
+                string stableId = historicalState?.defName ?? faction.GetUniqueLoadID();
+                HistoricalFactionTechnologyState factionState = component.GetOrAddFactionState(stableId,
+                    historicalState?.defName, faction.def?.defName, faction == player);
+                if (factionState == null) continue;
+                if (profile != null) InitializeProfileRecords(factionState, profile, currentDate.AstronomicalYear);
+                if (faction == player) SynchronizePlayerRecords(component, factionState, currentDate.AstronomicalYear);
+            }
+
+            if (component.FactionStates.Count() == 0) return Fail("No faction technology states could be created.", out error);
+            component.InitializeScheduler(currentDate.AbsoluteDay);
+            Log.Message("[Historical RimWorld] Initialized faction technology profiles: "
+                + component.FactionStates.Count() + " factions; scenario=" + scenario.defName + ".");
             return true;
+        }
+
+        private static void InitializeProfileRecords(HistoricalFactionTechnologyState factionState,
+            HistoricalFactionTechnologyProfileDef profile, int year)
+        {
+            foreach (HistoricalTechnologyDef technology in profile.initialMasteredTechnologies ?? new List<HistoricalTechnologyDef>())
+                if (technology?.researchProject != null)
+                    factionState.GetOrAdd(technology.researchProject.defName).SetLevel(FactionTechKnowledgeLevel.Mastered, int.MinValue,
+                        "ScenarioProfile:" + profile.defName);
+            foreach (HistoricalTechnologyDef technology in profile.initialHeardOfTechnologies ?? new List<HistoricalTechnologyDef>())
+                if (technology?.researchProject != null)
+                    factionState.GetOrAdd(technology.researchProject.defName).SetLevel(FactionTechKnowledgeLevel.HeardOf, int.MinValue,
+                        "ScenarioProfile:" + profile.defName);
+        }
+
+        private static void SynchronizePlayerRecords(HistoricalTechnologyGameComponent component,
+            HistoricalFactionTechnologyState factionState, int year)
+        {
+            foreach (HistoricalTechnologyState state in PlayerTechnologies)
+            {
+                HistoricalTechnologyDef technology = DefDatabase<HistoricalTechnologyDef>.GetNamedSilentFail(state.TechnologyId);
+                ResearchProjectDef project = technology?.researchProject;
+                if (project == null) continue;
+                if (state.Adoption == HistoricalTechnologyAdoption.Adopted || project.IsFinished)
+                    factionState.GetOrAdd(project.defName).SetLevel(FactionTechKnowledgeLevel.Mastered, int.MinValue, "PlayerResearchState");
+                else if (state.Adoption == HistoricalTechnologyAdoption.Known || state.Adoption == HistoricalTechnologyAdoption.UnderStudy)
+                    factionState.GetOrAdd(project.defName).SetLevel(FactionTechKnowledgeLevel.HeardOf, int.MinValue, "PlayerScenarioKnowledge");
+
+                if (state.Adoption != HistoricalTechnologyAdoption.Unknown || project.IsFinished)
+                    component.GetOrAddAwareness(project.defName).Raise(PlayerHistoricalTechAwareness.Confirmed, year);
+            }
+        }
+
+        public static bool HasFactionMasteredTechnology(Faction faction, ResearchProjectDef research)
+        {
+            HistoricalFactionTechnologyState state = FindFactionState(faction);
+            return state?.Find(research?.defName)?.Level == FactionTechKnowledgeLevel.Mastered;
+        }
+
+        public static bool HasTechnologyEmerged(ResearchProjectDef research) => GetWorldStatus(research) != HistoricalWorldTechStatus.NotEmerged;
+
+        public static bool IsTechnologyKnownToPlayer(ResearchProjectDef research) =>
+            (Component?.FindAwareness(research?.defName)?.Awareness ?? PlayerHistoricalTechAwareness.Unknown) != PlayerHistoricalTechAwareness.Unknown;
+
+        public static PlayerHistoricalTechAwareness ComponentAwareness(ResearchProjectDef research) =>
+            Component?.FindAwareness(research?.defName)?.Awareness ?? PlayerHistoricalTechAwareness.Unknown;
+
+        public static PlayerHistoricalTechAwarenessState ComponentAwarenessRecord(ResearchProjectDef research) =>
+            Component?.FindAwareness(research?.defName);
+
+        public static IReadOnlyList<Faction> GetKnownTechnologySources(ResearchProjectDef research)
+        {
+            HistoricalTechnologyGameComponent component = Component;
+            HashSet<string> known = new HashSet<string>(component?.FindAwareness(research?.defName)?.KnownSourceFactionIds ?? new List<string>(), StringComparer.Ordinal);
+            return component == null ? (IReadOnlyList<Faction>)new List<Faction>()
+                : component.FactionStates.Where(state => state != null && known.Contains(state.StableFactionId))
+                    .Select(ResolveFaction).Where(faction => faction != null).ToList();
+        }
+
+        public static bool CanFactionSupplyTechnology(Faction faction, ResearchProjectDef research) =>
+            HasFactionMasteredTechnology(faction, research);
+
+        public static HistoricalWorldTechStatus GetWorldStatus(ResearchProjectDef research)
+        {
+            if (research == null) return HistoricalWorldTechStatus.NotEmerged;
+            HistoricalTechnologyGameComponent component = Component;
+            if (component == null) return HistoricalWorldTechStatus.NotEmerged;
+            // Retain extinct/deleted factions in the denominator and history; their records remain valid evidence.
+            List<HistoricalFactionTechnologyState> eligible = component.FactionStates
+                .Where(item => item != null && !item.IsPlayerFaction).ToList();
+            List<HistoricalFactionTechnologyState> mastered = eligible.Where(item =>
+                item.Find(research.defName)?.Level == FactionTechKnowledgeLevel.Mastered).ToList();
+            if (mastered.Count == 0) return HistoricalWorldTechStatus.NotEmerged;
+            if (mastered.Count == 1) return HistoricalWorldTechStatus.Emerged;
+            float threshold = HistoricalTechnologyTimelineLayout.GetExtension(research)?.WidespreadThreshold ?? 0.7f;
+            if (eligible.Count > 0 && mastered.Count / (float)eligible.Count >= Mathf.Clamp01(threshold))
+                return HistoricalWorldTechStatus.Widespread;
+            return HistoricalWorldTechStatus.Spreading;
+        }
+
+        internal static HistoricalFactionTechnologyState FindFactionState(Faction faction)
+        {
+            if (faction == null) return null;
+            HistoricalTechnologyGameComponent component = Component;
+            if (component == null) return null;
+            HistoricalStateDef historicalState;
+            string stableId = HistoricalFactionManager.TryGetHistoricalState(faction, out historicalState)
+                ? historicalState.defName : faction.GetUniqueLoadID();
+            return component.FindFactionState(stableId);
+        }
+
+        internal static Faction ResolveFaction(HistoricalFactionTechnologyState state)
+        {
+            if (state == null || Find.FactionManager == null) return null;
+            if (state.IsPlayerFaction) return Faction.OfPlayerSilentFail;
+            if (!string.IsNullOrWhiteSpace(state.HistoricalStateId)
+                && HistoricalFactionManager.TryGetFaction(state.HistoricalStateId, out Faction mapped)) return mapped;
+            return Find.FactionManager.AllFactionsListForReading.FirstOrDefault(item => item != null
+                && item.GetUniqueLoadID() == state.StableFactionId);
         }
 
         public static string GetPlayerCommunityId()
@@ -105,6 +258,11 @@ namespace HistoricalRimWorld.Technology
             state.AdoptionGameTick = Find.TickManager?.TicksGame ?? -1;
             HistoricalDate date;
             if (HistoricalCalendarManager.TryGetCurrentDate(out date)) state.AdoptionAstronomicalYear = date.AstronomicalYear;
+            int year = HistoricalCalendarManager.TryGetCurrentDate(out date) ? date.AstronomicalYear : int.MinValue;
+            HistoricalFactionTechnologyState factionState = FindFactionState(Faction.OfPlayerSilentFail);
+            factionState?.GetOrAdd(def.researchProject?.defName)?.SetLevel(FactionTechKnowledgeLevel.Mastered, year, "PlayerResearch");
+            Component?.GetOrAddAwareness(def.researchProject?.defName)?.Raise(PlayerHistoricalTechAwareness.Confirmed, year);
+            HistoricalRimWorld.Patches.Technology.HistoricalResearchTimelineUIState.Invalidate();
             HistoricalChronicleManager.TryAddLocalExperience("Technology:" + communityId + ":" + technologyId,
                 "HR_Tech_Chronicle_Title", "HR_Tech_Chronicle_Description", null, null,
                 def.evidenceLevel, def.sourceNotes, out _);
