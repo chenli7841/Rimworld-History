@@ -10,6 +10,8 @@ namespace HistoricalRimWorld.Technology
     public sealed class HistoricalTechExtension : DefModExtension
     {
         public bool IsHistoricalTechnology = true;
+        public HistoricalResearchMode ResearchMode = HistoricalResearchMode.Basic;
+        public HistoricalKnowledgeRequirement KnowledgeRequirement = HistoricalKnowledgeRequirement.None;
         public HistoricalTechnologyDef technology;
         public string HistoricalCategory;
         public int? EarliestEvidenceYear;

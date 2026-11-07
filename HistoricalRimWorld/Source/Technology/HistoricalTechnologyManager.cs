@@ -219,9 +219,10 @@ namespace HistoricalRimWorld.Technology
             HistoricalTechnologyDef def = DefDatabase<HistoricalTechnologyDef>.GetNamedSilentFail(technologyId);
             if (!IsActive || def == null || string.IsNullOrWhiteSpace(communityId)) return false;
             HistoricalTechnologyState state = GetOrCreateState(communityId, def);
-            if (state == null || state.Adoption == HistoricalTechnologyAdoption.Adopted
-                || state.Availability == HistoricalTechnologyAvailability.NotYetHistoricallyAvailable
-                || state.Availability != HistoricalTechnologyAvailability.LocallyAccessible) return false;
+            if (state == null || state.Adoption == HistoricalTechnologyAdoption.Adopted) return false;
+            if (def.researchProject != null && HistoricalBlueprintService.GetMode(def.researchProject) == HistoricalResearchMode.Basic)
+                return PrerequisitesAdopted(communityId, def);
+            if (state.Availability != HistoricalTechnologyAvailability.LocallyAccessible) return false;
             return PrerequisitesAdopted(communityId, def);
         }
 
@@ -249,8 +250,10 @@ namespace HistoricalRimWorld.Technology
         public static bool TryAdoptTechnology(string communityId, string technologyId, HistoricalTechnologyAcquisitionSource source, out string error)
         {
             if (!TryGetUsableState(communityId, technologyId, out HistoricalTechnologyDef def, out HistoricalTechnologyState state, out error)) return false;
-            if (!IsHistoricallyAvailable(def)) return Fail("Technology is not yet historically available.", out error);
+            bool basicResearch = def.researchProject != null && HistoricalBlueprintService.GetMode(def.researchProject) == HistoricalResearchMode.Basic;
+            if (!basicResearch && !IsHistoricallyAvailable(def)) return Fail("Technology is not yet historically available.", out error);
             if (state.Adoption == HistoricalTechnologyAdoption.Adopted) return Fail("Technology is already adopted.", out error);
+            if (basicResearch) state.Availability = HistoricalTechnologyAvailability.LocallyAccessible;
             if (state.Availability != HistoricalTechnologyAvailability.LocallyAccessible) return Fail("Technology is not locally accessible.", out error);
             if (!PrerequisitesAdopted(communityId, def)) return Fail("Technology prerequisites have not been adopted.", out error);
             state.Adoption = HistoricalTechnologyAdoption.Adopted;
@@ -289,12 +292,22 @@ namespace HistoricalRimWorld.Technology
         public static bool IsResearchAllowed(ResearchProjectDef project)
         {
             if (!IsActive || project == null) return true;
+            // Saves from before Phase 3 keep completed research permanently unlocked.
+            if (project.IsFinished) return true;
             HistoricalTechnologyDef tech = Technologies.FirstOrDefault(item => item.researchProject == project);
-            if (tech != null) return CanStudy(GetPlayerCommunityId(), tech.defName);
+            if (tech != null)
+            {
+                if (HistoricalBlueprintService.GetMode(project) == HistoricalResearchMode.Basic)
+                    return HistoricalBlueprintService.PrerequisitesComplete(project);
+                return HistoricalBlueprintService.CanStartHistoricalResearch(project, out _);
+            }
             HistoricalTechnologyRequirementExtension extension = project.GetModExtension<HistoricalTechnologyRequirementExtension>();
             if (extension != null) return IsRequirementMet(extension);
             return project.techLevel == TechLevel.Animal || project.techLevel == TechLevel.Neolithic;
         }
+
+        public static bool CanStartHistoricalResearch(ResearchProjectDef project, out string reason) =>
+            HistoricalBlueprintService.CanStartHistoricalResearch(project, out reason);
 
         public static bool IsBuildAllowed(BuildableDef buildable)
         {

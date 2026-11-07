@@ -7,16 +7,8 @@
     <description>Develop basic crop tending practices. Historical horizon: broad evidence places early cultivation roughly between 8000 and 5000 BCE; this is not a precise invention date.</description>
     <baseCost>400</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>5.00</researchViewX>
+    <researchViewX>3.50</researchViewX>
     <researchViewY>0.05</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_BasicFarming</technology>
-      </li>
-    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_AnimalHusbandry</defName>
@@ -24,16 +16,8 @@
     <description>Improve animal care and breeding practices. Historical horizon: evidence for early domestication spans roughly 9000 to 5000 BCE and varies by region.</description>
     <baseCost>400</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>5.00</researchViewX>
-    <researchViewY>1.00</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_AnimalHusbandry</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>3.50</researchViewX>
+    <researchViewY>0.95</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_SeedSelection</defName>
@@ -41,16 +25,8 @@
     <description>Select and preserve useful seed stock. No single reliable emergence year is assigned; practices developed gradually and varied by region.</description>
     <baseCost>300</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
-    <researchViewX>6.50</researchViewX>
+    <researchViewX>4.50</researchViewX>
     <researchViewY>0.05</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_SeedSelection</technology>
-      </li>
-    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_GrainStorage</defName>
@@ -58,16 +34,8 @@
     <description>Protect grain against damp and pests. No single reliable emergence year is assigned; storage practices developed gradually with agriculture.</description>
     <baseCost>300</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
-    <researchViewX>6.50</researchViewX>
-    <researchViewY>0.50</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_GrainStorage</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>0.50</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Irrigation</defName>
@@ -75,16 +43,8 @@
     <description>Plan simple channels and water control. Early irrigation has a broad possible horizon around 4000 BCE; dates differ by region and this is not an invention date.</description>
     <baseCost>500</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
-    <researchViewX>6.50</researchViewX>
-    <researchViewY>0.95</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_Irrigation</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>0.95</researchViewY>  
   </ResearchProjectDef>
     <ResearchProjectDef>
     <defName>HR_Research_WaterManagement</defName>
@@ -92,16 +52,8 @@
     <description>Coordinate channels, wells, and local drainage. No single reliable emergence year is assigned; water management developed gradually in many regions.</description>
     <baseCost>350</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Irrigation</li></prerequisites>
-    <researchViewX>8.00</researchViewX>
-    <researchViewY>0.85</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_WaterManagement</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>0.95</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_TimberFraming</defName>
@@ -109,16 +61,8 @@
     <description>Develop reliable timber joinery. No single reliable emergence year is assigned; wooden structures are poorly preserved and construction traditions varied.</description>
     <baseCost>300</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
-    <researchViewX>6.50</researchViewX>
-    <researchViewY>1.40</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_TimberFraming</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>1.40</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_RammedEarth</defName>
@@ -126,34 +70,17 @@
     <description>Develop compacted earth building methods. No single reliable emergence year is assigned; earthen construction has a long, regionally varied history.</description>
     <baseCost>300</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
-    <researchViewX>6.50</researchViewX>
-    <researchViewY>1.85</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_RammedEarth</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>1.85</researchViewY>  
   </ResearchProjectDef>
-
   <ResearchProjectDef>
     <defName>HR_Research_CopperMining</defName>
     <label>copper extraction</label>
     <description>Identify and work copper-bearing deposits. Copper extraction has a broad possible early horizon around 5000 BCE; evidence and dates vary by region.</description>
     <baseCost>500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>5.00</researchViewX>
+    <researchViewX>3.50</researchViewX>
     <researchViewY>2.30</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_CopperMining</technology>
-      </li>
-    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_CopperSmelting</defName>
@@ -161,16 +88,8 @@
     <description>Recover copper from ore using heat. No single reliable emergence year is assigned here; early evidence and chronology vary by region.</description>
     <baseCost>600</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_CopperMining</li></prerequisites>
-    <researchViewX>6.50</researchViewX>
-    <researchViewY>2.30</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_CopperSmelting</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>2.30</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_BronzeAlloy</defName>
@@ -178,16 +97,8 @@
     <description>Develop repeatable copper alloy batches. Broad archaeological horizons for early bronze metallurgy fall roughly between 2200 and 1700 BCE; regional dates vary.</description>
     <baseCost>700</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_CopperSmelting</li></prerequisites>
-    <researchViewX>8.00</researchViewX>
-    <researchViewY>2.30</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_BronzeAlloy</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>2.30</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_EarlyIronworking</defName>
@@ -242,16 +153,8 @@
     <description>Develop controlled mould casting. Broad archaeological evidence places early bronze casting roughly between 2000 and 1700 BCE; regional dates vary.</description>
     <baseCost>700</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BronzeAlloy</li></prerequisites>
-    <researchViewX>9.50</researchViewX>
-    <researchViewY>2.30</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_BronzeCasting</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>2.30</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_BronzeTools</defName>
@@ -259,16 +162,8 @@
     <description>Develop practical bronze implements. No single reliable emergence year is assigned; tool forms and adoption dates varied by region.</description>
     <baseCost>500</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BronzeCasting</li></prerequisites>
-    <researchViewX>15.00</researchViewX>
-    <researchViewY>3.50</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_BronzeTools</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>7.50</researchViewX>
+    <researchViewY>2.30</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Pottery</defName>
@@ -276,16 +171,8 @@
     <description>Shape and fire clay vessels. Pottery has a very broad prehistoric horizon, with evidence predating roughly 10000 BCE in some regions; local traditions arose at different times.</description>
     <baseCost>300</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>5.00</researchViewX>
-    <researchViewY>2.80</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_Pottery</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>3.50</researchViewX>
+    <researchViewY>2.80</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_KilnFiring</defName>
@@ -293,16 +180,8 @@
     <description>Improve control over enclosed clay firing. No single reliable emergence year is assigned; kiln forms and firing practices developed at different times by region.</description>
     <baseCost>250</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Pottery</li></prerequisites>
-    <researchViewX>6.50</researchViewX>
-    <researchViewY>2.80</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_KilnFiring</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>2.80</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Writing</defName>
@@ -310,16 +189,8 @@
     <description>Develop durable local records. No single reliable emergence year is assigned to record keeping; writing systems arose independently at different times.</description>
     <baseCost>350</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Pottery</li></prerequisites>
-    <researchViewX>6.50</researchViewX>
-    <researchViewY>3.25</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_Writing</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>3.25</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Commerce</defName>
@@ -327,16 +198,8 @@
     <description>Organize regional goods and craft knowledge exchange. No single reliable emergence year is assigned; exchange networks grew gradually and varied by region.</description>
     <baseCost>350</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Weaving</li><li>HR_Research_Pottery</li></prerequisites>
-    <researchViewX>6.50</researchViewX>
-    <researchViewY>3.70</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_Commerce</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>3.70</researchViewY>  
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -345,16 +208,8 @@
     <description>Prepare suitable fibres for cordage and cloth. No single reliable emergence year is assigned; perishable materials leave an incomplete archaeological record.</description>
     <baseCost>250</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>5.00</researchViewX>
-    <researchViewY>4.30</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_PlantFibres</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>3.50</researchViewX>
+    <researchViewY>4.30</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_BowMaking</defName>
@@ -362,16 +217,8 @@
     <description>Develop consistent simple bow construction. No single reliable emergence year is assigned; organic materials preserve poorly and early dates vary by region.</description>
     <baseCost>350</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>5.00</researchViewX>
-    <researchViewY>5.00</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_BowMaking</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>3.50</researchViewX>
+    <researchViewY>5.00</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Weaving</defName>
@@ -379,15 +226,7 @@
     <description>Develop a simple woven textile process. No single reliable emergence year is assigned; textile evidence is limited and regional practices differ.</description>
     <baseCost>400</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_PlantFibres</li></prerequisites>
-    <researchViewX>13.00</researchViewX>
-    <researchViewY>5.10</researchViewY>
-  
-    <tab>HR_HistoricalTechnologies</tab>
-    <modExtensions>
-      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
-        <IsHistoricalTechnology>true</IsHistoricalTechnology>
-        <technology>HR_Tech_Weaving</technology>
-      </li>
-    </modExtensions>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>4.30</researchViewY>  
   </ResearchProjectDef>
 </Defs>

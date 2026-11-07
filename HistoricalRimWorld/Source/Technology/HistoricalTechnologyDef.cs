@@ -18,6 +18,8 @@ namespace HistoricalRimWorld.Technology
         public HistoricalEvidenceLevel evidenceLevel = HistoricalEvidenceLevel.Probable;
         public string sourceNotes;
         public ResearchProjectDef researchProject;
+        public HistoricalResearchMode researchMode = HistoricalResearchMode.Basic;
+        public HistoricalKnowledgeRequirement knowledgeRequirement = HistoricalKnowledgeRequirement.None;
         public HistoricalContentPolicy contentPolicy = HistoricalContentPolicy.Restricted;
 
         public override IEnumerable<string> ConfigErrors()

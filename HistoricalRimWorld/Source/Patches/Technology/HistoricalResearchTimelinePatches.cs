@@ -275,27 +275,47 @@ namespace HistoricalRimWorld.Patches.Technology
     {
         private static void Postfix(ResearchProjectDef __instance, ref string __result)
         {
-            if (HistoricalTechnologyTimelineLayout.GetExtension(__instance) == null) return;
-            string historicalDetails = HistoricalTechnologyTimelineLayout.HistoricalDetails(__instance);
-            string state = GetStatus(__instance);
-            if (!string.IsNullOrWhiteSpace(state)) historicalDetails += "\n\n" + state;
-            if (!string.IsNullOrWhiteSpace(historicalDetails))
-                __result = string.IsNullOrWhiteSpace(__result) ? historicalDetails : __result + "\n\n" + historicalDetails;
+            HistoricalTechnologyDef technology = HistoricalTechnologyManager.Technologies.FirstOrDefault(item => item.researchProject == __instance);
+            HistoricalTechExtension extension = HistoricalTechnologyTimelineLayout.GetExtension(__instance);
+            if (technology == null && extension == null) return;
 
-            HistoricalWorldTechStatus worldStatus = HistoricalTechnologyManager.GetWorldStatus(__instance);
-            PlayerHistoricalTechAwareness awareness = HistoricalTechnologyManager.ComponentAwareness(__instance);
-            List<string> lines = new List<string>
+            List<string> lines = new List<string>();
+            if (extension != null)
             {
-                string.Format(Translator.Translate("HR_Tech_WorldStatus"), Translator.Translate("HR_Tech_WorldStatus_" + worldStatus)),
-                string.Format(Translator.Translate("HR_Tech_PlayerAwareness"), Translator.Translate("HR_Tech_Awareness_" + awareness))
-            };
-            if (awareness != PlayerHistoricalTechAwareness.Unknown)
-            {
-                IReadOnlyList<Faction> sources = HistoricalTechnologyManager.GetKnownTechnologySources(__instance);
-                if (sources.Count > 0)
-                    lines.Add(string.Format(Translator.Translate("HR_Tech_KnownSources"), string.Join(", ", sources.Select(item => item.Name))));
+                string historicalDetails = HistoricalTechnologyTimelineLayout.HistoricalDetails(__instance);
+                if (!string.IsNullOrWhiteSpace(historicalDetails)) lines.Add(historicalDetails);
+                HistoricalWorldTechStatus worldStatus = HistoricalTechnologyManager.GetWorldStatus(__instance);
+                PlayerHistoricalTechAwareness awareness = HistoricalTechnologyManager.ComponentAwareness(__instance);
+                lines.Add(string.Format(Translator.Translate("HR_Tech_WorldStatus"), Translator.Translate("HR_Tech_WorldStatus_" + worldStatus)));
+                lines.Add(string.Format(Translator.Translate("HR_Tech_PlayerAwareness"), Translator.Translate("HR_Tech_Awareness_" + awareness)));
+                if (awareness != PlayerHistoricalTechAwareness.Unknown)
+                {
+                    IReadOnlyList<Faction> sources = HistoricalTechnologyManager.GetKnownTechnologySources(__instance);
+                    if (sources.Count > 0)
+                        lines.Add(string.Format(Translator.Translate("HR_Tech_KnownSources"), string.Join(", ", sources.Select(item => item.Name))));
+                }
             }
-            __result += "\n\n" + string.Join("\n", lines);
+
+            if (technology != null)
+            {
+                HistoricalResearchMode mode = HistoricalBlueprintService.GetMode(__instance);
+                lines.Add(string.Format(Translator.Translate("HR_Blueprint_ResearchMode"),
+                    Translator.Translate("HR_Blueprint_ResearchMode_" + mode)));
+                if (mode == HistoricalResearchMode.Historical)
+                {
+                    HistoricalBlueprintStatus status = HistoricalBlueprintService.GetStatus(__instance);
+                    lines.Add("HR_Blueprint_Status".Translate("HR_Blueprint_Status_" + status));
+                    if (!HistoricalBlueprintService.CanStartHistoricalResearch(__instance, out string reason)) lines.Add(reason);
+                    IReadOnlyList<Faction> sources = HistoricalTechnologyManager.GetKnownTechnologySources(__instance);
+                    if (sources.Count > 0)
+                        lines.Add("HR_Blueprint_KnownSources".Translate(string.Join(", ", sources.Select(item => item.Name))));
+                    if (HistoricalBlueprintService.GetKnowledgeRequirement(__instance) == HistoricalKnowledgeRequirement.Blueprint
+                        && status == HistoricalBlueprintStatus.NotOwned)
+                        lines.Add("HR_Blueprint_TradeHint".Translate());
+                }
+                else lines.Add("HR_Blueprint_BasicResearch".Translate());
+            }
+            if (lines.Count > 0) __result = (string.IsNullOrWhiteSpace(__result) ? string.Empty : __result + "\n\n") + string.Join("\n", lines);
         }
 
         private static string GetStatus(ResearchProjectDef project)
@@ -309,7 +329,7 @@ namespace HistoricalRimWorld.Patches.Technology
                 return Translator.Translate("HR_Timeline_Status_Completed");
             if (Find.ResearchManager != null && Find.ResearchManager.IsCurrentProject(project))
                 return Translator.Translate("HR_Timeline_Status_InProgress");
-            if (!HistoricalTechnologyManager.CanStudy(HistoricalTechnologyManager.GetPlayerCommunityId(), technology.defName))
+            if (!HistoricalTechnologyManager.CanStartHistoricalResearch(project, out _))
                 return Translator.Translate("HR_Timeline_Status_KnownButUnavailable");
             return Translator.Translate("HR_Timeline_Status_ResearchAvailable");
         }

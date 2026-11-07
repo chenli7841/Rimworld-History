@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>HR_HistoricalTechnologyBlueprint</defName>
+    <label>ancient technology blueprint</label>
+    <description>A portable manuscript or model describing a historical craft process. It must be decoded at a research bench before it grants research authorization.</description>
+    <stackLimit>1</stackLimit>
+    <techLevel>Neolithic</techLevel>
+    <thingCategories><li>Manufactured</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Book/Schematic/Schematic</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(202,174,119)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="HistoricalRimWorld.Technology.CompProperties_HistoricalBlueprint" />
+    </comps>
+  </ThingDef>
+</Defs>

@@ -5,6 +5,7 @@ using HistoricalRimWorld.Production;
 using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.Technology;
 using RimWorld;
+using RimWorld.Planet;
 using Verse;
 
 namespace HistoricalRimWorld.Patches.Technology
@@ -85,7 +86,13 @@ namespace HistoricalRimWorld.Patches.Technology
         private static bool Prefix(ResearchProjectDef proj)
         {
             if (!HistoricalTechnologyManager.IsActive || proj == null) return true;
-            if (!HistoricalTechnologyManager.IsResearchAllowed(proj)) return false;
+            if (!HistoricalTechnologyManager.IsResearchAllowed(proj))
+            {
+                if (HistoricalTechnologyManager.IsTechnologyProject(proj)
+                    && !HistoricalTechnologyManager.CanStartHistoricalResearch(proj, out string reason))
+                    Messages.Message(reason, MessageTypeDefOf.RejectInput, false);
+                return false;
+            }
             if (HistoricalTechnologyManager.IsTechnologyProject(proj))
             {
                 HistoricalTechnologyDef tech = HistoricalTechnologyManager.Technologies.FirstOrDefault(item => item.researchProject == proj);
@@ -171,10 +178,35 @@ namespace HistoricalRimWorld.Patches.Technology
     [HarmonyPatch(typeof(ThingSetMaker_TraderStock), nameof(ThingSetMaker_TraderStock.Generate))]
     internal static class HistoricalTraderStockPatch
     {
-        private static void Postfix(List<Thing> outThings)
+        private static void Postfix(ThingSetMakerParams parms, List<Thing> outThings)
         {
             if (outThings != null && HistoricalTechnologyManager.IsActive)
+            {
                 outThings.RemoveAll(item => item == null || !HistoricalTechnologyManager.IsThingAllowed(item.def));
+                HistoricalBlueprintService.TryAppendTraderBlueprints(parms.makingFaction, outThings);
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(ThingWithComps), "get_LabelNoCount")]
+    internal static class HistoricalBlueprintLabelPatch
+    {
+        private static void Postfix(ThingWithComps __instance, ref string __result)
+        {
+            CompHistoricalBlueprint blueprint = __instance?.TryGetComp<CompHistoricalBlueprint>();
+            ResearchProjectDef research = blueprint?.Research;
+            if (research != null) __result = "HR_Blueprint_Label".Translate(research.LabelCap).ToString();
+        }
+    }
+
+    [HarmonyPatch(typeof(Settlement_TraderTracker), "RegenerateStock")]
+    internal static class HistoricalSettlementBlueprintStockPatch
+    {
+        private static void Postfix(Settlement_TraderTracker __instance)
+        {
+            if (!HistoricalTechnologyManager.IsActive || __instance?.settlement?.Faction == null) return;
+            HistoricalBlueprintService.TryAppendSettlementBlueprint(__instance.settlement.Faction,
+                __instance.StockListForReading);
         }
     }
 }

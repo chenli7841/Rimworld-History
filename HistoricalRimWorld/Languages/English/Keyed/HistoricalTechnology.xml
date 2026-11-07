@@ -84,6 +84,30 @@
   <HR_Tech_SourceLetterText>Reliable reports say that {1} has mastered {0}.</HR_Tech_SourceLetterText>
   <HR_Tech_RumorLetterTitle>Technology rumor: {0}</HR_Tech_RumorLetterTitle>
   <HR_Tech_RumorLetterText>Rumors say that {1} may have encountered {0}. This report has not been independently confirmed.</HR_Tech_RumorLetterText>
+  <HR_Blueprint_ResearchMode>Research class: {0}</HR_Blueprint_ResearchMode>
+  <HR_Blueprint_ResearchMode_Basic>Basic research</HR_Blueprint_ResearchMode_Basic>
+  <HR_Blueprint_ResearchMode_Historical>Historical research</HR_Blueprint_ResearchMode_Historical>
+  <HR_Blueprint_BasicResearch>Basic research needs no blueprint; satisfy its listed prerequisites to study it.</HR_Blueprint_BasicResearch>
+  <HR_Blueprint_Status>Technical documents: {0}</HR_Blueprint_Status>
+  <HR_Blueprint_Status_NotOwned>not owned; research authorization is locked</HR_Blueprint_Status_NotOwned>
+  <HR_Blueprint_Status_OwnedButNotDecoded>owned, waiting to be decoded at a research bench</HR_Blueprint_Status_OwnedButNotDecoded>
+  <HR_Blueprint_Status_Decoded>decoded; research authorization granted</HR_Blueprint_Status_Decoded>
+  <HR_Blueprint_KnownSources>Known technology sources: {0}</HR_Blueprint_KnownSources>
+  <HR_Blueprint_TradeHint>Trade with a faction that has mastered this technology to look for its technical documents.</HR_Blueprint_TradeHint>
+  <HR_Blueprint_ReasonPrerequisite>Required research projects are not complete.</HR_Blueprint_ReasonPrerequisite>
+  <HR_Blueprint_ReasonSpecial>This technology requires a special authorization source that is not implemented yet.</HR_Blueprint_ReasonSpecial>
+  <HR_Blueprint_ReasonNotEmerged>This technology has not emerged in the historical world.</HR_Blueprint_ReasonNotEmerged>
+  <HR_Blueprint_ReasonNoAuthorization>Decode a matching technical blueprint before starting this research.</HR_Blueprint_ReasonNoAuthorization>
+  <HR_Blueprint_ReasonDate>This technology is not yet available in the current historical date.</HR_Blueprint_ReasonDate>
+  <HR_Blueprint_ForResearch>For research: {0}</HR_Blueprint_ForResearch>
+  <HR_Blueprint_Label>Technical blueprint: {0}</HR_Blueprint_Label>
+  <HR_Blueprint_InvalidResearch>Linked research project is missing.</HR_Blueprint_InvalidResearch>
+  <HR_Blueprint_DecodingFailed>Blueprint decoding failed: {0}</HR_Blueprint_DecodingFailed>
+  <HR_Blueprint_DecodedMessage>Decoded the technical blueprint for {0}; research authorization is now permanent.</HR_Blueprint_DecodedMessage>
+  <HR_Blueprint_AcquiredChronicleTitle>Technical blueprint acquired</HR_Blueprint_AcquiredChronicleTitle>
+  <HR_Blueprint_AcquiredChronicleText>The player community obtained a historical technology blueprint. Its source and linked research are recorded with the entry.</HR_Blueprint_AcquiredChronicleText>
+  <HR_Blueprint_DecodedChronicleTitle>Technical blueprint decoded</HR_Blueprint_DecodedChronicleTitle>
+  <HR_Blueprint_DecodedChronicleText>Researchers decoded a historical technical blueprint and gained permanent authorization to study the linked project.</HR_Blueprint_DecodedChronicleText>
   <HR_Tech_EmergenceChronicleTitle>Technology emergence: {0}</HR_Tech_EmergenceChronicleTitle>
   <HR_Tech_EmergenceChronicleText>Historical technology {0} entered its spread phase. The in-game date window is a scenario simulation, not a precise invention date.</HR_Tech_EmergenceChronicleText>
 </LanguageData>

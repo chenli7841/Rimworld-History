@@ -16,6 +16,7 @@ namespace HistoricalRimWorld.Technology
         private List<HistoricalFactionTechnologyState> factionStates = new List<HistoricalFactionTechnologyState>();
         private List<PlayerHistoricalTechAwarenessState> playerAwareness = new List<PlayerHistoricalTechAwarenessState>();
         private List<HistoricalTechnologyScheduleState> scheduleStates = new List<HistoricalTechnologyScheduleState>();
+        private List<HistoricalResearchAuthorization> researchAuthorizations = new List<HistoricalResearchAuthorization>();
         private long lastProcessedAbsoluteDay = long.MinValue;
         private int dataVersion;
 
@@ -26,6 +27,7 @@ namespace HistoricalRimWorld.Technology
         public IEnumerable<PlayerHistoricalTechAwarenessState> PlayerAwareness => playerAwareness ?? Enumerable.Empty<PlayerHistoricalTechAwarenessState>();
         public IEnumerable<HistoricalTechnologyScheduleState> ScheduleStates => scheduleStates ?? Enumerable.Empty<HistoricalTechnologyScheduleState>();
         public long LastProcessedAbsoluteDay => lastProcessedAbsoluteDay;
+        public IEnumerable<HistoricalResearchAuthorization> ResearchAuthorizations => researchAuthorizations ?? Enumerable.Empty<HistoricalResearchAuthorization>();
 
         public HistoricalTechnologyGameComponent(Game game) { }
 
@@ -93,6 +95,32 @@ namespace HistoricalRimWorld.Technology
 
         internal void MarkDayProcessed(long absoluteDay) => lastProcessedAbsoluteDay = absoluteDay;
 
+        public HistoricalResearchAuthorization FindAuthorization(string researchDefName) =>
+            researchAuthorizations?.FirstOrDefault(item => item != null && item.ResearchDefName == researchDefName && item.IsAuthorized);
+
+        internal bool GrantAuthorization(string researchDefName, HistoricalResearchAuthorizationSource source, string sourceDetails)
+        {
+            if (string.IsNullOrWhiteSpace(researchDefName)) return false;
+            researchAuthorizations = researchAuthorizations ?? new List<HistoricalResearchAuthorization>();
+            HistoricalResearchAuthorization record = researchAuthorizations.FirstOrDefault(item => item != null && item.ResearchDefName == researchDefName);
+            if (record != null && record.IsAuthorized) return false;
+            if (record == null)
+            {
+                record = new HistoricalResearchAuthorization { ResearchDefName = researchDefName };
+                researchAuthorizations.Add(record);
+            }
+            record.Grant(source, sourceDetails);
+            return true;
+        }
+
+        internal bool RevokeAuthorization(string researchDefName)
+        {
+            HistoricalResearchAuthorization record = researchAuthorizations?.FirstOrDefault(item => item != null && item.ResearchDefName == researchDefName);
+            if (record == null || !record.IsAuthorized) return false;
+            record.IsAuthorized = false;
+            return true;
+        }
+
         internal void InitializeScheduler(long currentAbsoluteDay)
         {
             if (lastProcessedAbsoluteDay == long.MinValue) lastProcessedAbsoluteDay = currentAbsoluteDay;
@@ -110,6 +138,7 @@ namespace HistoricalRimWorld.Technology
             base.GameComponentTick();
             int tick = Verse.Find.TickManager?.TicksGame ?? -1;
             if (!initialized || tick < 0 || tick % 250 != 0 || !HistoricalScenarioManager.IsScenarioActive) return;
+            if (tick % 6000 == 0) HistoricalBlueprintService.ScanPlayerBlueprintAcquisitions();
             if (!HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate date) || date.AbsoluteDay <= lastProcessedAbsoluteDay) return;
             HistoricalTechnologyDiffusionService.ProcessDay(date);
             lastProcessedAbsoluteDay = date.AbsoluteDay;
@@ -125,6 +154,7 @@ namespace HistoricalRimWorld.Technology
             Scribe_Collections.Look(ref factionStates, "historicalTechnologyFactionStates", LookMode.Deep);
             Scribe_Collections.Look(ref playerAwareness, "historicalTechnologyPlayerAwareness", LookMode.Deep);
             Scribe_Collections.Look(ref scheduleStates, "historicalTechnologyScheduleStates", LookMode.Deep);
+            Scribe_Collections.Look(ref researchAuthorizations, "historicalResearchAuthorizations", LookMode.Deep);
             Scribe_Values.Look(ref lastProcessedAbsoluteDay, "historicalTechnologyLastProcessedAbsoluteDay", long.MinValue);
             Scribe_Values.Look(ref dataVersion, "historicalTechnologyDataVersion", 0);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
@@ -133,9 +163,11 @@ namespace HistoricalRimWorld.Technology
                 factionStates = factionStates ?? new List<HistoricalFactionTechnologyState>();
                 playerAwareness = playerAwareness ?? new List<PlayerHistoricalTechAwarenessState>();
                 scheduleStates = scheduleStates ?? new List<HistoricalTechnologyScheduleState>();
+                researchAuthorizations = researchAuthorizations ?? new List<HistoricalResearchAuthorization>();
                 factionStates.RemoveAll(item => item == null || string.IsNullOrWhiteSpace(item.StableFactionId));
                 playerAwareness.RemoveAll(item => item == null || string.IsNullOrWhiteSpace(item.ResearchDefName));
                 scheduleStates.RemoveAll(item => item == null || string.IsNullOrWhiteSpace(item.ResearchDefName));
+                researchAuthorizations.RemoveAll(item => item == null || string.IsNullOrWhiteSpace(item.ResearchDefName));
                 if (dataVersion < 1)
                 {
                     // Phase 1 saves had only player-community research records; Phase 2 initializes world records once.

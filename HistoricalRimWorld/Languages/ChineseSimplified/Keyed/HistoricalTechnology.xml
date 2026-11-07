@@ -84,6 +84,30 @@
   <HR_Tech_SourceLetterText>可靠消息称，{1}已掌握{0}。</HR_Tech_SourceLetterText>
   <HR_Tech_RumorLetterTitle>科技传闻：{0}</HR_Tech_RumorLetterTitle>
   <HR_Tech_RumorLetterText>传闻称，{1}可能已接触{0}。这条消息尚未得到独立证实。</HR_Tech_RumorLetterText>
+  <HR_Blueprint_ResearchMode>研究类别：{0}</HR_Blueprint_ResearchMode>
+  <HR_Blueprint_ResearchMode_Basic>基础研究</HR_Blueprint_ResearchMode_Basic>
+  <HR_Blueprint_ResearchMode_Historical>历史研究</HR_Blueprint_ResearchMode_Historical>
+  <HR_Blueprint_BasicResearch>基础研究无需蓝图；完成列出的前置研究后即可开始。</HR_Blueprint_BasicResearch>
+  <HR_Blueprint_Status>技术资料：{0}</HR_Blueprint_Status>
+  <HR_Blueprint_Status_NotOwned>尚未持有；研究资格未解锁</HR_Blueprint_Status_NotOwned>
+  <HR_Blueprint_Status_OwnedButNotDecoded>已持有，等待在研究台解析</HR_Blueprint_Status_OwnedButNotDecoded>
+  <HR_Blueprint_Status_Decoded>已解析；研究资格已授予</HR_Blueprint_Status_Decoded>
+  <HR_Blueprint_KnownSources>已知技术来源：{0}</HR_Blueprint_KnownSources>
+  <HR_Blueprint_TradeHint>可与已掌握此技术的派系贸易，寻找相关工艺资料。</HR_Blueprint_TradeHint>
+  <HR_Blueprint_ReasonPrerequisite>尚未完成所需的前置研究。</HR_Blueprint_ReasonPrerequisite>
+  <HR_Blueprint_ReasonSpecial>此技术需要尚未实现的特殊授权来源。</HR_Blueprint_ReasonSpecial>
+  <HR_Blueprint_ReasonNotEmerged>此技术尚未在历史世界中出现。</HR_Blueprint_ReasonNotEmerged>
+  <HR_Blueprint_ReasonNoAuthorization>开始此项研究前，先解析对应的技术蓝图。</HR_Blueprint_ReasonNoAuthorization>
+  <HR_Blueprint_ReasonDate>当前历史年代尚未允许研究此技术。</HR_Blueprint_ReasonDate>
+  <HR_Blueprint_ForResearch>对应研究：{0}</HR_Blueprint_ForResearch>
+  <HR_Blueprint_Label>技术蓝图：《{0}》</HR_Blueprint_Label>
+  <HR_Blueprint_InvalidResearch>关联的研究项目不存在。</HR_Blueprint_InvalidResearch>
+  <HR_Blueprint_DecodingFailed>蓝图解析失败：{0}</HR_Blueprint_DecodingFailed>
+  <HR_Blueprint_DecodedMessage>已完成{0}技术蓝图的解析；现在永久获得该研究资格。</HR_Blueprint_DecodedMessage>
+  <HR_Blueprint_AcquiredChronicleTitle>获得技术蓝图</HR_Blueprint_AcquiredChronicleTitle>
+  <HR_Blueprint_AcquiredChronicleText>玩家社区获得了一份历史技术蓝图；其来源和关联研究记录在本条目中。</HR_Blueprint_AcquiredChronicleText>
+  <HR_Blueprint_DecodedChronicleTitle>解析技术蓝图</HR_Blueprint_DecodedChronicleTitle>
+  <HR_Blueprint_DecodedChronicleText>研究人员完成历史技术蓝图的解析，永久获得关联研究项目的资格。</HR_Blueprint_DecodedChronicleText>
   <HR_Tech_EmergenceChronicleTitle>科技出现：{0}</HR_Tech_EmergenceChronicleTitle>
   <HR_Tech_EmergenceChronicleText>历史科技{0}进入传播阶段。游戏中的年代窗口是情景模拟，不代表精确发明日期。</HR_Tech_EmergenceChronicleText>
 </LanguageData>
