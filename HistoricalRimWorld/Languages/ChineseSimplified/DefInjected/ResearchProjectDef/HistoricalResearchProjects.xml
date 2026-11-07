@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <HR_Research_BasicFarming.description>发展基础作物栽培方法。历史年代：早期农业的考古证据覆盖约公元前8000年至前5000年的宽泛时期；这不是精确的发明年份。</HR_Research_BasicFarming.description>
-  <HR_Research_AnimalHusbandry.description>改进动物照料与繁育方法。历史年代：早期动物驯化证据大致跨越公元前9000年至前5000年，各地区年代不同。</HR_Research_AnimalHusbandry.description>
-  <HR_Research_SeedSelection.description>挑选并保存适用的种子。尚无可靠的单一年份；相关实践随农业逐渐发展，各地情况不同。</HR_Research_SeedSelection.description>
-  <HR_Research_GrainStorage.description>保护谷物，避免受潮和虫害。尚无可靠的单一年份；储粮实践随农业逐渐发展。</HR_Research_GrainStorage.description>
-  <HR_Research_Irrigation.description>规划简易渠道并控制水流。早期灌溉的可能年代约在公元前4000年前后；各地区证据不同，这不是精确的发明年份。</HR_Research_Irrigation.description>
-  <HR_Research_CopperMining.description>识别并开采含铜矿料。早期采铜的可能年代约在公元前5000年前后；证据和年代因地区而异。</HR_Research_CopperMining.description>
-  <HR_Research_CopperSmelting.description>利用加热从矿料中提取铜。此处不指定单一可靠年代；早期证据和年代因地区而异。</HR_Research_CopperSmelting.description>
-  <HR_Research_BronzeAlloy.description>发展可重复的铜合金配制方法。早期青铜冶金的考古年代大致在公元前2200年至前1700年之间，各地区年代不同。</HR_Research_BronzeAlloy.description>
-  <HR_Research_BronzeCasting.description>发展可控的模具铸造方法。早期青铜铸造的考古证据大致在公元前2000年至前1700年之间，各地区年代不同。</HR_Research_BronzeCasting.description>
-  <HR_Research_BronzeTools.description>制作实用的青铜工具。尚无可靠的单一年份；工具形制和普及时间因地区而异。</HR_Research_BronzeTools.description>
-  <HR_Research_EarlyIronworking.description>研究小规模块炼铁。各地区提出的早期年代范围约为公元前1200年至前500年，仍有争议；这不是精确的发明年份。</HR_Research_EarlyIronworking.description>
-  <HR_Research_Pottery.description>塑形并烧制陶器。陶器出现于非常宽泛的史前时期；部分地区的证据早于约公元前10000年，各地传统形成时间不同。</HR_Research_Pottery.description>
-  <HR_Research_Weaving.description>发展简易纺织方法。尚无可靠的单一年份；纺织品难以保存，考古证据有限，各地实践不同。</HR_Research_Weaving.description>
-  <HR_Research_IronFarmTools.description>将早期铁料用于农具。尚无可靠的单一年份；其普及取决于各地铁器生产和现存证据。</HR_Research_IronFarmTools.description>
-  <HR_Research_KilnFiring.description>改进封闭窑炉的烧制控制。尚无可靠的单一年份；窑炉形制和烧制技术在各地逐步发展。</HR_Research_KilnFiring.description>
-  <HR_Research_PlantFibres.description>准备适合制作绳索和布料的植物纤维。尚无可靠的单一年份；易腐材料难以留下完整的考古记录。</HR_Research_PlantFibres.description>
-  <HR_Research_TimberFraming.description>发展可靠的木构连接工艺。尚无可靠的单一年份；木建筑保存不易，各地营造传统不同。</HR_Research_TimberFraming.description>
-  <HR_Research_RammedEarth.description>发展夯土建筑方法。尚无可靠的单一年份；土筑技术历史悠久，并在各地分别发展。</HR_Research_RammedEarth.description>
-  <HR_Research_BowMaking.description>发展稳定的简易弓制作方法。尚无可靠的单一年份；有机材料保存不易，各地区早期年代仍有差异。</HR_Research_BowMaking.description>
-  <HR_Research_Writing.description>发展可长期保存的地方记录方式。尚无可靠的单一年份；文字系统在不同地区于不同时间独立出现。</HR_Research_Writing.description>
-  <HR_Research_WaterManagement.description>统筹渠道、水井与地方排水。尚无可靠的单一年份；水资源管理在许多地区逐步发展。</HR_Research_WaterManagement.description>
-  <HR_Research_Commerce.description>组织区域货物和工艺知识交流。尚无可靠的单一年份；交换网络逐渐扩展，各地情况不同。</HR_Research_Commerce.description>
+  <HR_Research_BasicFarming.label>基础农业</HR_Research_BasicFarming.label><HR_Research_BasicFarming.description>解锁手工制作台，可加工农业和手工业原料。历史年代：早期农业的证据约跨公元前8000至前5000年，并非精确发明年份。</HR_Research_BasicFarming.description>
+  <HR_Research_AnimalHusbandry.label>畜牧业</HR_Research_AnimalHusbandry.label><HR_Research_AnimalHusbandry.description>解锁可供动物分配和休息的草料动物床。早期驯化年代因地区而异，约跨公元前9000至前5000年。</HR_Research_AnimalHusbandry.description>
+  <HR_Research_SeedSelection.label>良种选育</HR_Research_SeedSelection.label><HR_Research_SeedSelection.description>解锁稻种和玉米种料精选配方，产物可储存或贸易；不包含种子遗传模拟。相关实践逐渐发展，没有可靠的单一年份。</HR_Research_SeedSelection.description>
+  <HR_Research_GrainStorage.label>粮食储藏</HR_Research_GrainStorage.label><HR_Research_GrainStorage.description>解锁粮食储架和谷物干燥打包配方。储粮实践随农业发展，没有可靠的单一年份。</HR_Research_GrainStorage.description>
+  <HR_Research_Irrigation.label>灌溉沟渠</HR_Research_Irrigation.label><HR_Research_Irrigation.description>解锁灌溉田土铺设；地面肥力为1.15，可提升作物生长产出。本简化版本不模拟沟渠水流。早期灌溉年代因地区而异。</HR_Research_Irrigation.description>
+  <HR_Research_CopperMining.label>铜矿开采</HR_Research_CopperMining.label><HR_Research_CopperMining.description>解锁原始冶炉与石料分选配方，可用普通石块获得少量铜矿料和锡矿料；这是抽象化来源，不会生成矿脉。早期采铜证据约见于公元前5000年前后。</HR_Research_CopperMining.description>
+  <HR_Research_CopperSmelting.label>铜冶炼</HR_Research_CopperSmelting.label><HR_Research_CopperSmelting.description>解锁在原始冶炉中将铜矿料和锡矿料冶炼成金属料。早期冶炼年代和证据因地区而异。</HR_Research_CopperSmelting.description>
+  <HR_Research_BronzeAlloy.label>青铜合金</HR_Research_BronzeAlloy.label><HR_Research_BronzeAlloy.description>解锁铜料与锡料配制青铜的配方。配方比例是简化玩法模型；早期青铜冶金年代因地区而异，约在公元前2200至前1700年。</HR_Research_BronzeAlloy.description>
+  <HR_Research_BronzeCasting.label>青铜铸造</HR_Research_BronzeCasting.label><HR_Research_BronzeCasting.description>解锁青铜家族礼器制作；这是可存放和登记的实物。早期铸造年代因地区而异，约在公元前2000至前1700年。</HR_Research_BronzeCasting.description>
+  <HR_Research_BronzeTools.label>青铜工具</HR_Research_BronzeTools.label><HR_Research_BronzeTools.description>解锁可装备并用于近战的青铜斧锛。工具类型和普及时间因地区而异。</HR_Research_BronzeTools.description>
+  <HR_Research_EarlyIronworking.label>早期铁冶炼</HR_Research_EarlyIronworking.label><HR_Research_EarlyIronworking.description>解锁石料分选铁矿料、块炼铁炉和块炼铁配方。早期铁器年代范围较宽且仍有争议，约公元前1200至前500年。</HR_Research_EarlyIronworking.description>
+  <HR_Research_Pottery.label>陶器制作</HR_Research_Pottery.label><HR_Research_Pottery.description>解锁手工制作台上的陶土制备和基础陶器烧制配方。部分地区的陶器证据早于公元前10000年，各地传统不同。</HR_Research_Pottery.description>
+  <HR_Research_Weaving.label>纺织技术</HR_Research_Weaving.label><HR_Research_Weaving.description>解锁手织机，将植物纤维织成布；布可用于制造和贸易。纺织技术没有可靠的单一年份。</HR_Research_Weaving.description>
+  <HR_Research_IronFarmTools.label>铁制农具</HR_Research_IronFarmTools.label><HR_Research_IronFarmTools.description>解锁可装备并用于近战的早期铁斧锛。铁器采用年代依地区和证据而异。</HR_Research_IronFarmTools.description>
+  <HR_Research_KilnFiring.label>陶窑烧制</HR_Research_KilnFiring.label><HR_Research_KilnFiring.description>解锁陶窑及高产陶器烧制配方。窑炉形制和烧制方法逐步发展，暂无可靠单一年份。</HR_Research_KilnFiring.description>
+  <HR_Research_PlantFibres.label>植物纤维加工</HR_Research_PlantFibres.label><HR_Research_PlantFibres.description>解锁将干草加工为植物纤维的配方；纤维可供手织机使用。易腐材料难以留下完整的考古记录。</HR_Research_PlantFibres.description>
+  <HR_Research_TimberFraming.label>木构建筑</HR_Research_TimberFraming.label><HR_Research_TimberFraming.description>解锁可阻挡通行并支撑屋顶的木构墙。木建筑保存不易，各地营造传统不同。</HR_Research_TimberFraming.description>
+  <HR_Research_RammedEarth.label>夯土建筑</HR_Research_RammedEarth.label><HR_Research_RammedEarth.description>解锁夯土墙；比木墙更耐火并可支撑屋顶。夯土营造传统在各地逐步发展。</HR_Research_RammedEarth.description>
+  <HR_Research_BowMaking.label>制弓技术</HR_Research_BowMaking.label><HR_Research_BowMaking.description>解锁可制作并装备的简易猎弓，可用于狩猎和防卫。有机材料难以保存，早期年代因地区而异。</HR_Research_BowMaking.description>
+  <HR_Research_Writing.label>文字记录</HR_Research_Writing.label><HR_Research_Writing.description>解锁刻制陶版记录的配方；陶版是可存放和贸易的实物，不替代游戏内编年史。文字系统在不同地区独立出现。</HR_Research_Writing.description>
+  <HR_Research_WaterManagement.label>水利管理</HR_Research_WaterManagement.label><HR_Research_WaterManagement.description>解锁肥力1.30的水利管理田土，可提升作物生长产出。本简化版本不模拟水井、排水网络或动态水流。</HR_Research_WaterManagement.description>
+  <HR_Research_Commerce.label>区域贸易</HR_Research_Commerce.label><HR_Research_Commerce.description>解锁区域贸易包配方，将陶器和纺织品打包成高价值商队货物；不会改变原版商队生成规则。</HR_Research_Commerce.description>
 </LanguageData>

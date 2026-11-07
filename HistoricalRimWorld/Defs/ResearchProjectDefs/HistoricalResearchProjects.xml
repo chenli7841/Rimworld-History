@@ -7,8 +7,8 @@
     <description>Develop basic crop tending practices. Historical horizon: broad evidence places early cultivation roughly between 8000 and 5000 BCE; this is not a precise invention date.</description>
     <baseCost>400</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>7.00</researchViewX>
-    <researchViewY>0.50</researchViewY>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>0.05</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_AnimalHusbandry</defName>
@@ -16,89 +16,127 @@
     <description>Improve animal care and breeding practices. Historical horizon: evidence for early domestication spans roughly 9000 to 5000 BCE and varies by region.</description>
     <baseCost>400</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>7.00</researchViewX>
-    <researchViewY>2.60</researchViewY>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_SeedSelection</defName>
     <label>seed selection</label>
     <description>Select and preserve useful seed stock. No single reliable emergence year is assigned; practices developed gradually and varied by region.</description>
     <baseCost>300</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>9.00</researchViewX>
-    <researchViewY>0.10</researchViewY>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>0.05</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_GrainStorage</defName>
     <label>grain storage</label>
     <description>Protect grain against damp and pests. No single reliable emergence year is assigned; storage practices developed gradually with agriculture.</description>
     <baseCost>300</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>9.00</researchViewX>
-    <researchViewY>0.95</researchViewY>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>0.50</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Irrigation</defName>
     <label>irrigation channels</label>
     <description>Plan simple channels and water control. Early irrigation has a broad possible horizon around 4000 BCE; dates differ by region and this is not an invention date.</description>
     <baseCost>500</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>9.00</researchViewX>
-    <researchViewY>1.80</researchViewY>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>0.95</researchViewY>
   </ResearchProjectDef>
+    <ResearchProjectDef>
+    <defName>HR_Research_WaterManagement</defName>
+    <label>water management</label>
+    <description>Coordinate channels, wells, and local drainage. No single reliable emergence year is assigned; water management developed gradually in many regions.</description>
+    <baseCost>350</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Irrigation</li></prerequisites>
+    <researchViewX>8.00</researchViewX>
+    <researchViewY>0.85</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>HR_Research_TimberFraming</defName>
+    <label>timber framing</label>
+    <description>Develop reliable timber joinery. No single reliable emergence year is assigned; wooden structures are poorly preserved and construction traditions varied.</description>
+    <baseCost>300</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>1.40</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>HR_Research_RammedEarth</defName>
+    <label>rammed earth construction</label>
+    <description>Develop compacted earth building methods. No single reliable emergence year is assigned; earthen construction has a long, regionally varied history.</description>
+    <baseCost>300</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>1.85</researchViewY>
+  </ResearchProjectDef>
+
   <ResearchProjectDef>
     <defName>HR_Research_CopperMining</defName>
     <label>copper extraction</label>
     <description>Identify and work copper-bearing deposits. Copper extraction has a broad possible early horizon around 5000 BCE; evidence and dates vary by region.</description>
     <baseCost>500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>7.00</researchViewX>
-    <researchViewY>3.50</researchViewY>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>2.30</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_CopperSmelting</defName>
     <label>copper smelting</label>
     <description>Recover copper from ore using heat. No single reliable emergence year is assigned here; early evidence and chronology vary by region.</description>
     <baseCost>600</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>9.00</researchViewX>
-    <researchViewY>3.50</researchViewY>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_CopperMining</li></prerequisites>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>2.30</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_BronzeAlloy</defName>
     <label>bronze alloying</label>
     <description>Develop repeatable copper alloy batches. Broad archaeological horizons for early bronze metallurgy fall roughly between 2200 and 1700 BCE; regional dates vary.</description>
     <baseCost>700</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>11.00</researchViewX>
-    <researchViewY>3.50</researchViewY>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>HR_Research_BronzeCasting</defName>
-    <label>bronze casting</label>
-    <description>Develop controlled mould casting. Broad archaeological evidence places early bronze casting roughly between 2000 and 1700 BCE; regional dates vary.</description>
-    <baseCost>700</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>13.00</researchViewX>
-    <researchViewY>3.50</researchViewY>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>HR_Research_BronzeTools</defName>
-    <label>bronze tools</label>
-    <description>Develop practical bronze implements. No single reliable emergence year is assigned; tool forms and adoption dates varied by region.</description>
-    <baseCost>500</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>15.00</researchViewX>
-    <researchViewY>3.50</researchViewY>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_CopperSmelting</li></prerequisites>
+    <researchViewX>8.00</researchViewX>
+    <researchViewY>2.30</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_EarlyIronworking</defName>
     <label>early ironworking</label>
     <description>Study small-scale bloomery iron working. Proposed early horizons range broadly from about 1200 to 500 BCE and remain disputed by region; this is not a precise invention date.</description>
     <baseCost>900</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>11.00</researchViewX>
-    <researchViewY>4.35</researchViewY>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_CopperSmelting</li></prerequisites>
+    <researchViewX>8.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>HR_Research_IronFarmTools</defName>
+    <label>iron farm tools</label>
+    <description>Adapt early iron stock to agricultural tools. No single reliable emergence year is assigned; adoption depended on regional ironworking and available evidence.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_EarlyIronworking</li></prerequisites>
+    <researchViewX>9.50</researchViewX>
+    <researchViewY>2.80</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>HR_Research_BronzeCasting</defName>
+    <label>bronze casting</label>
+    <description>Develop controlled mould casting. Broad archaeological evidence places early bronze casting roughly between 2000 and 1700 BCE; regional dates vary.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BronzeAlloy</li></prerequisites>
+    <researchViewX>9.50</researchViewX>
+    <researchViewY>2.30</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>HR_Research_BronzeTools</defName>
+    <label>bronze tools</label>
+    <description>Develop practical bronze implements. No single reliable emergence year is assigned; tool forms and adoption dates varied by region.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BronzeCasting</li></prerequisites>
+    <researchViewX>15.00</researchViewX>
+    <researchViewY>3.50</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Pottery</defName>
@@ -106,62 +144,45 @@
     <description>Shape and fire clay vessels. Pottery has a very broad prehistoric horizon, with evidence predating roughly 10000 BCE in some regions; local traditions arose at different times.</description>
     <baseCost>300</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>7.00</researchViewX>
-    <researchViewY>5.10</researchViewY>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>HR_Research_Weaving</defName>
-    <label>weaving</label>
-    <description>Develop a simple woven textile process. No single reliable emergence year is assigned; textile evidence is limited and regional practices differ.</description>
-    <baseCost>400</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>13.00</researchViewX>
-    <researchViewY>5.10</researchViewY>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>HR_Research_IronFarmTools</defName>
-    <label>iron farm tools</label>
-    <description>Adapt early iron stock to agricultural tools. No single reliable emergence year is assigned; adoption depended on regional ironworking and available evidence.</description>
-    <baseCost>500</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>13.00</researchViewX>
-    <researchViewY>4.35</researchViewY>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_KilnFiring</defName>
     <label>kiln firing</label>
     <description>Improve control over enclosed clay firing. No single reliable emergence year is assigned; kiln forms and firing practices developed at different times by region.</description>
     <baseCost>250</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>9.00</researchViewX>
-    <researchViewY>5.10</researchViewY>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Pottery</li></prerequisites>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>2.80</researchViewY>
   </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>HR_Research_Writing</defName>
+    <label>record keeping</label>
+    <description>Develop durable local records. No single reliable emergence year is assigned to record keeping; writing systems arose independently at different times.</description>
+    <baseCost>350</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Pottery</li></prerequisites>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>3.25</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>HR_Research_Commerce</defName>
+    <label>regional exchange</label>
+    <description>Organize regional goods and craft knowledge exchange. No single reliable emergence year is assigned; exchange networks grew gradually and varied by region.</description>
+    <baseCost>350</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Weaving</li><li>HR_Research_Pottery</li></prerequisites>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>3.70</researchViewY>
+  </ResearchProjectDef>
+
   <ResearchProjectDef>
     <defName>HR_Research_PlantFibres</defName>
     <label>plant fibre preparation</label>
     <description>Prepare suitable fibres for cordage and cloth. No single reliable emergence year is assigned; perishable materials leave an incomplete archaeological record.</description>
     <baseCost>250</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>11.00</researchViewX>
-    <researchViewY>5.10</researchViewY>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>HR_Research_TimberFraming</defName>
-    <label>timber framing</label>
-    <description>Develop reliable timber joinery. No single reliable emergence year is assigned; wooden structures are poorly preserved and construction traditions varied.</description>
-    <baseCost>300</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>9.00</researchViewX>
-    <researchViewY>2.60</researchViewY>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>HR_Research_RammedEarth</defName>
-    <label>rammed earth construction</label>
-    <description>Develop compacted earth building methods. No single reliable emergence year is assigned; earthen construction has a long, regionally varied history.</description>
-    <baseCost>300</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>11.00</researchViewX>
-    <researchViewY>2.60</researchViewY>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>4.30</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_BowMaking</defName>
@@ -169,34 +190,16 @@
     <description>Develop consistent simple bow construction. No single reliable emergence year is assigned; organic materials preserve poorly and early dates vary by region.</description>
     <baseCost>350</baseCost>
     <techLevel>Neolithic</techLevel>
-    <researchViewX>7.00</researchViewX>
-    <researchViewY>5.55</researchViewY>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>5.00</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
-    <defName>HR_Research_Writing</defName>
-    <label>record keeping</label>
-    <description>Develop durable local records. No single reliable emergence year is assigned to record keeping; writing systems arose independently at different times.</description>
-    <baseCost>350</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>9.00</researchViewX>
-    <researchViewY>5.55</researchViewY>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>HR_Research_WaterManagement</defName>
-    <label>water management</label>
-    <description>Coordinate channels, wells, and local drainage. No single reliable emergence year is assigned; water management developed gradually in many regions.</description>
-    <baseCost>350</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>11.00</researchViewX>
-    <researchViewY>1.80</researchViewY>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>HR_Research_Commerce</defName>
-    <label>regional exchange</label>
-    <description>Organize regional goods and craft knowledge exchange. No single reliable emergence year is assigned; exchange networks grew gradually and varied by region.</description>
-    <baseCost>350</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>11.00</researchViewX>
-    <researchViewY>5.55</researchViewY>
+    <defName>HR_Research_Weaving</defName>
+    <label>weaving</label>
+    <description>Develop a simple woven textile process. No single reliable emergence year is assigned; textile evidence is limited and regional practices differ.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_PlantFibres</li></prerequisites>
+    <researchViewX>13.00</researchViewX>
+    <researchViewY>5.10</researchViewY>
   </ResearchProjectDef>
 </Defs>

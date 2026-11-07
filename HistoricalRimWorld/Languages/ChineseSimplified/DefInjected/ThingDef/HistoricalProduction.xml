@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_CopperOre.label>铜矿料</HR_CopperOre.label><HR_CopperOre.description>未经处理的含铜物料；可在原始冶炉通过石块分选配方获得。</HR_CopperOre.description>
+  <HR_TinOre.label>锡矿料</HR_TinOre.label><HR_TinOre.description>未经处理的含锡物料；可在原始冶炉通过石块分选配方获得。</HR_TinOre.description>
+  <HR_Copper.label>铜料</HR_Copper.label><HR_Tin.label>锡料</HR_Tin.label><HR_Bronze.label>青铜料</HR_Bronze.label><HR_IronOre.label>铁矿料</HR_IronOre.label><HR_BloomIron.label>块炼铁料</HR_BloomIron.label>
+  <HR_HempFiber.label>植物纤维</HR_HempFiber.label><HR_HempFiber.description>由干草加工而成的纺织纤维。</HR_HempFiber.description><HR_HempCloth.label>植物纤维布</HR_HempCloth.label><HR_Clay.label>陶土</HR_Clay.label><HR_Pottery.label>陶器坯料</HR_Pottery.label>
+  <HR_BronzeAdze.label>青铜斧锛</HR_BronzeAdze.label><HR_BronzeAdze.description>可装备并用于近战的青铜刃工具。</HR_BronzeAdze.description><HR_IronAdze.label>早期铁斧锛</HR_IronAdze.label><HR_IronAdze.description>可装备并用于近战的早期铁刃工具。</HR_IronAdze.description>
+  <HR_SelectedSeeds.label>精选种料</HR_SelectedSeeds.label><HR_SelectedSeeds.description>经过挑选、可储存或贸易的种料；不模拟种子遗传。</HR_SelectedSeeds.description>
+  <HR_DriedGrain.label>打包谷物</HR_DriedGrain.label><HR_DriedGrain.description>加工后用于储存或贸易的原料谷物包。</HR_DriedGrain.description>
+  <HR_TradeBundle.label>区域贸易包</HR_TradeBundle.label><HR_TradeBundle.description>将本地陶器和纺织品打包成便于商队交易的货物。</HR_TradeBundle.description>
+  <HR_ClayTablet.label>刻字陶版</HR_ClayTablet.label><HR_ClayTablet.description>用于制作持久记录的烧制陶版。</HR_ClayTablet.description>
+  <HR_SimpleBow.label>简易猎弓</HR_SimpleBow.label><HR_SimpleBow.description>可用于狩猎和防卫的短弓。</HR_SimpleBow.description>
+  <HR_BronzeToolBelt.label>青铜工具带</HR_BronzeToolBelt.label><HR_BronzeToolBelt.description>装备后使佩戴者的通用工作速度提高8%。</HR_BronzeToolBelt.description><HR_IronToolBelt.label>铁制工具带</HR_IronToolBelt.label><HR_IronToolBelt.description>装备后使佩戴者的通用工作速度提高12%。</HR_IronToolBelt.description>
+  <HR_AnimalBed.label>草料动物床</HR_AnimalBed.label><HR_AnimalBed.description>供驯养动物分配和休息的床铺。</HR_AnimalBed.description>
+  <HR_GranaryShelf.label>粮食储架</HR_GranaryShelf.label><HR_GranaryShelf.description>可收纳物品并防止储存物品腐坏的架子。</HR_GranaryShelf.description>
+  <HR_TimberWall.label>木构墙</HR_TimberWall.label><HR_TimberWall.description>可阻挡通行并支撑屋顶的木制结构墙。</HR_TimberWall.description>
+  <HR_RammedEarthWall.label>夯土墙</HR_RammedEarthWall.label><HR_RammedEarthWall.description>由夯土工艺制成的耐火结构墙。</HR_RammedEarthWall.description>
+  <HR_BronzeFoundry.label>原始冶炉</HR_BronzeFoundry.label><HR_BronzeFoundry.description>用于分选矿料、冶炼和基础铸造的木炭炉。</HR_BronzeFoundry.description>
+  <HR_PotteryKiln.label>陶窑</HR_PotteryKiln.label><HR_PotteryKiln.description>用于烧制陶器的简易木柴窑。</HR_PotteryKiln.description>
+  <HR_WeavingLoom.label>手织机</HR_WeavingLoom.label><HR_WeavingLoom.description>将植物纤维编织成布的简易织机。</HR_WeavingLoom.description>
+  <HR_IronworkingForge.label>块炼铁炉</HR_IronworkingForge.label><HR_IronworkingForge.description>用于小规模块炼铁生产的木炭炉。</HR_IronworkingForge.description>
+  <HR_HandcraftTable.label>手工制作台</HR_HandcraftTable.label><HR_HandcraftTable.description>用于种料挑选、纤维加工、制陶、刻字和打包贸易货物的木台。</HR_HandcraftTable.description>
+</LanguageData>
+

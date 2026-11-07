@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Research_BasicFarming.description>Unlocks the handcraft table for processing agricultural and craft materials. Historical horizon: early farming evidence spans roughly 8000–5000 BCE; this is not a precise invention date.</HR_Research_BasicFarming.description>
+  <HR_Research_AnimalHusbandry.description>Unlocks assignable straw animal beds. Early domestication dates vary by region, broadly spanning 9000–5000 BCE.</HR_Research_AnimalHusbandry.description>
+  <HR_Research_SeedSelection.description>Unlocks rice and corn seed sorting recipes. The resulting stock can be stored or traded; no seed genetics simulation is included.</HR_Research_SeedSelection.description>
+  <HR_Research_GrainStorage.description>Unlocks a grain shelf and recipes that dry and bundle grain. Storage practices developed gradually with agriculture.</HR_Research_GrainStorage.description>
+  <HR_Research_Irrigation.description>Unlocks irrigated field terrain with 1.15 fertility for improved crop growth. This simplified feature does not simulate channel flow.</HR_Research_Irrigation.description>
+  <HR_Research_CopperMining.description>Unlocks the primitive foundry and stone-sorting recipes that yield small quantities of copper and tin ore. This is an abstracted source, not generated ore deposits.</HR_Research_CopperMining.description>
+  <HR_Research_CopperSmelting.description>Unlocks smelting recipes at the primitive foundry to recover copper and tin stock from ore. Early evidence and dates vary by region.</HR_Research_CopperSmelting.description>
+  <HR_Research_BronzeAlloy.description>Unlocks a recipe combining copper and tin into bronze. Proportions are a simplified gameplay model; early bronze horizons vary by region.</HR_Research_BronzeAlloy.description>
+  <HR_Research_BronzeCasting.description>Unlocks production of a bronze family vessel, a physical item that can be stored and entered in the relic archive. Early casting dates vary by region.</HR_Research_BronzeCasting.description>
+  <HR_Research_BronzeTools.description>Unlocks a bronze adze that can be equipped and used in melee combat.</HR_Research_BronzeTools.description>
+  <HR_Research_EarlyIronworking.description>Unlocks iron-bearing stone sorting, the bloomery forge, and bloomery iron smelting. Proposed early horizons remain regionally disputed.</HR_Research_EarlyIronworking.description>
+  <HR_Research_Pottery.description>Unlocks clay preparation and a basic pottery recipe at the handcraft table. Pottery evidence predates 10000 BCE in some regions.</HR_Research_Pottery.description>
+  <HR_Research_Weaving.description>Unlocks the hand loom and converts plant fibre into cloth for crafting and trade.</HR_Research_Weaving.description>
+  <HR_Research_IronFarmTools.description>Unlocks an early iron adze that can be equipped and used in melee combat.</HR_Research_IronFarmTools.description>
+  <HR_Research_KilnFiring.description>Unlocks the pottery kiln and a higher-yield controlled-firing recipe.</HR_Research_KilnFiring.description>
+  <HR_Research_PlantFibres.description>Unlocks a recipe that prepares plant fibre from hay for use at the hand loom.</HR_Research_PlantFibres.description>
+  <HR_Research_TimberFraming.description>Unlocks timber-frame walls that block movement and support roofs.</HR_Research_TimberFraming.description>
+  <HR_Research_RammedEarth.description>Unlocks rammed-earth walls that block movement, support roofs, and resist fire better than timber walls.</HR_Research_RammedEarth.description>
+  <HR_Research_BowMaking.description>Unlocks a craftable and equipable simple hunting bow for hunting and defense.</HR_Research_BowMaking.description>
+  <HR_Research_Writing.description>Unlocks production of physical inscribed clay tablets for storage and trade; this does not replace the in-game chronicle.</HR_Research_Writing.description>
+  <HR_Research_WaterManagement.description>Unlocks water-managed field terrain with 1.30 fertility for improved crop growth. Wells, drainage networks, and dynamic water flow are not simulated.</HR_Research_WaterManagement.description>
+  <HR_Research_Commerce.description>Unlocks a regional trade bundle recipe that packs pottery and cloth into a higher-value caravan good; vanilla trader generation is unchanged.</HR_Research_Commerce.description>
+</LanguageData>

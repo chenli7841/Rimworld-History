@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_ProspectCopper.label>分选含铜石料</HR_ProspectCopper.label><HR_ProspectCopper.description>从普通石块中分选出少量含铜物料。这是简化的生产途径，不会生成真实矿脉。</HR_ProspectCopper.description>
+  <HR_ProspectTin.label>分选含锡石料</HR_ProspectTin.label><HR_ProspectTin.description>通过抽象化的分选工艺，从普通石块中取得含锡物料。</HR_ProspectTin.description>
+  <HR_ProspectIron.label>分选含铁石料</HR_ProspectIron.label><HR_ProspectIron.description>从石块中取得少量含铁物料；这是玩法简化，不代表地图中已生成铁矿脉。</HR_ProspectIron.description>
+  <HR_MakeSeedStock.label>保存种料</HR_MakeSeedStock.label><HR_CraftBronzeToolBelt.label>制作青铜工具带</HR_CraftBronzeToolBelt.label><HR_CraftIronToolBelt.label>制作铁制工具带</HR_CraftIronToolBelt.label>
+  <HR_SelectSeedsRice.label>精选稻种</HR_SelectSeedsRice.label><HR_SelectSeedsCorn.label>精选玉米种料</HR_SelectSeedsCorn.label>
+  <HR_DryRice.label>打包稻谷</HR_DryRice.label><HR_DryCorn.label>打包玉米</HR_DryCorn.label>
+  <HR_PreparePlantFibres.label>加工植物纤维</HR_PreparePlantFibres.label><HR_PreparePlantFibres.description>将收获的干草加工成可用纤维；本阶段不新增专用大麻作物。</HR_PreparePlantFibres.description>
+  <HR_ExtractClay.label>制备陶土</HR_ExtractClay.label><HR_ExtractClay.description>通过石料加工副产物制备陶土，作为简化的制陶原料来源。</HR_ExtractClay.description>
+  <HR_FireFinePottery.label>烧制精制陶器</HR_FireFinePottery.label>
+
+  <HR_InscribeTablet.label>刻制陶版记录</HR_InscribeTablet.label>
+  <HR_MakeTradeBundle.label>打包区域贸易货物</HR_MakeTradeBundle.label><HR_MakeTradeBundle.description>把陶器和纺织品打包成价值更高、可用于商队交易的货物。</HR_MakeTradeBundle.description>
+  <HR_RefineCopper.label>冶炼铜料</HR_RefineCopper.label><HR_RefineTin.label>冶炼锡料</HR_RefineTin.label><HR_CastBronze.label>配制青铜</HR_CastBronze.label><HR_CraftBronzeAdze.label>制作青铜斧锛</HR_CraftBronzeAdze.label>
+  <HR_MakePottery.label>烧制陶器</HR_MakePottery.label><HR_WeaveHemp.label>编织植物纤维布</HR_WeaveHemp.label><HR_SmeltBloomIron.label>冶炼块炼铁</HR_SmeltBloomIron.label><HR_CraftIronAdze.label>制作早期铁斧锛</HR_CraftIronAdze.label><HR_CraftFamilyVessel.label>制作家族礼器</HR_CraftFamilyVessel.label>
+</LanguageData>
+
+
