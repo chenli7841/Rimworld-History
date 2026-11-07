@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Phase 5's first live example uses the existing bronze adze. No equipment Def is added or mutated. -->
+  <HistoricalRimWorld.Technology.HistoricalTechnologyBonusDef>
+    <defName>HR_Bonus_BronzeTools_MeleeDamage</defName>
+    <label>bronze implement melee damage</label>
+    <description>Player or faction pawns gain this bonus while wielding an equipped bronze melee implement.</description>
+    <bonusType>MeleeDamage</bonusType>
+    <bonusPercent>0.05</bonusPercent>
+    <targetTags>
+      <li>HR_BronzeMeleeWeapon</li>
+    </targetTags>
+    <allowedMaterials>
+      <li>HR_Bronze</li>
+    </allowedMaterials>
+    <requireEquipped>true</requireEquipped>
+  </HistoricalRimWorld.Technology.HistoricalTechnologyBonusDef>
+
+  <HistoricalRimWorld.Technology.HistoricalTechnologyBonusLimitsDef>
+    <defName>HR_TechnologyBonusLimits_Default</defName>
+    <meleeDamage>0.30</meleeDamage>
+    <rangedDamage>0.30</rangedDamage>
+    <meleeArmorPenetration>0.25</meleeArmorPenetration>
+    <rangedArmorPenetration>0.25</rangedArmorPenetration>
+    <armor>0.25</armor>
+    <rangedTiming>0.20</rangedTiming>
+    <insulation>0.25</insulation>
+  </HistoricalRimWorld.Technology.HistoricalTechnologyBonusLimitsDef>
+</Defs>

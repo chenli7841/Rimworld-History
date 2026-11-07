@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <HR_Tech_Title>历史科技</HR_Tech_Title>
+  <HR_TechBonus_ResearchLine>装备效果：{0}——{1} {2}（{3}）</HR_TechBonus_ResearchLine>
+  <HR_TechBonus_Active>对该派系已生效</HR_TechBonus_Active>
+  <HR_TechBonus_WhenMastered>该派系掌握此技术后生效</HR_TechBonus_WhenMastered>
+  <HR_TechBonus_Type_MeleeDamage>近战伤害</HR_TechBonus_Type_MeleeDamage>
+  <HR_TechBonus_Type_RangedDamage>远程伤害</HR_TechBonus_Type_RangedDamage>
+  <HR_TechBonus_Type_MeleeArmorPenetration>近战穿甲</HR_TechBonus_Type_MeleeArmorPenetration>
+  <HR_TechBonus_Type_RangedArmorPenetration>远程穿甲</HR_TechBonus_Type_RangedArmorPenetration>
+  <HR_TechBonus_Type_ArmorSharp>锐器护甲</HR_TechBonus_Type_ArmorSharp>
+  <HR_TechBonus_Type_ArmorBlunt>钝器护甲</HR_TechBonus_Type_ArmorBlunt>
+  <HR_TechBonus_Type_ArmorHeat>热能护甲</HR_TechBonus_Type_ArmorHeat>
+  <HR_TechBonus_Type_RangedCooldown>远程武器冷却</HR_TechBonus_Type_RangedCooldown>
+  <HR_TechBonus_Type_RangedWarmup>远程武器瞄准时间</HR_TechBonus_Type_RangedWarmup>
+  <HR_TechBonus_Type_InsulationCold>隔寒能力</HR_TechBonus_Type_InsulationCold>
+  <HR_TechBonus_Type_InsulationHeat>隔热能力</HR_TechBonus_Type_InsulationHeat>
+  <HR_TechBonus_EquipmentHeader>历史科技装备效果</HR_TechBonus_EquipmentHeader>
+  <HR_TechBonus_EquipmentUsage>效果取决于使用者所属派系，不会写入物品本身。</HR_TechBonus_EquipmentUsage>
   <HR_Tech_Inactive>请先初始化历史剧本以使用科技树。</HR_Tech_Inactive>
   <HR_Tech_Select>选择一项技术查看状态和研究选项。</HR_Tech_Select>
   <HR_Tech_Prerequisites>前置技术</HR_Tech_Prerequisites>

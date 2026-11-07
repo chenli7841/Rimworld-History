@@ -34,6 +34,7 @@ namespace HistoricalRimWorld.Technology
         public bool Initialize(string scenarioId, string playerCommunityId, IEnumerable<HistoricalTechnologyInitialState> initial)
         {
             if (initialized) return string.Equals(scenarioDefName, scenarioId, StringComparison.Ordinal);
+            HistoricalTechnologyBonusService.ClearCache();
             scenarioDefName = scenarioId;
             communities = communities ?? new List<HistoricalCommunityTechnologyState>();
             HistoricalCommunityTechnologyState community = new HistoricalCommunityTechnologyState();
@@ -159,6 +160,7 @@ namespace HistoricalRimWorld.Technology
             Scribe_Values.Look(ref dataVersion, "historicalTechnologyDataVersion", 0);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
+                HistoricalTechnologyBonusService.ClearCache();
                 communities = communities ?? new List<HistoricalCommunityTechnologyState>();
                 factionStates = factionStates ?? new List<HistoricalFactionTechnologyState>();
                 playerAwareness = playerAwareness ?? new List<PlayerHistoricalTechAwarenessState>();
