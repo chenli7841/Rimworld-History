@@ -315,6 +315,8 @@ namespace HistoricalRimWorld.Patches.Technology
                 }
                 else lines.Add("HR_Blueprint_BasicResearch".Translate());
             }
+            string practiceDetails = HistoricalPracticeService.GetProgressDescription(__instance);
+            if (!string.IsNullOrWhiteSpace(practiceDetails)) lines.Add(practiceDetails);
             if (lines.Count > 0) __result = (string.IsNullOrWhiteSpace(__result) ? string.Empty : __result + "\n\n") + string.Join("\n", lines);
         }
 

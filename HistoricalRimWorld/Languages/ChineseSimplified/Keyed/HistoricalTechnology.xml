@@ -110,4 +110,19 @@
   <HR_Blueprint_DecodedChronicleText>研究人员完成历史技术蓝图的解析，永久获得关联研究项目的资格。</HR_Blueprint_DecodedChronicleText>
   <HR_Tech_EmergenceChronicleTitle>科技出现：{0}</HR_Tech_EmergenceChronicleTitle>
   <HR_Tech_EmergenceChronicleText>历史科技{0}进入传播阶段。游戏中的年代窗口是情景模拟，不代表精确发明日期。</HR_Tech_EmergenceChronicleText>
+  <HR_Practice_Section>工艺实践</HR_Practice_Section>
+  <HR_Practice_TheoryProgress>理论研究：{0} / {1}</HR_Practice_TheoryProgress>
+  <HR_Practice_CountProgress>{0}：{1} / {2}</HR_Practice_CountProgress>
+  <HR_Practice_ExperienceProgress>{0}：{1} / {2} 工艺经验</HR_Practice_ExperienceProgress>
+  <HR_Practice_Status>状态：{0}</HR_Practice_Status>
+  <HR_Practice_Status_Completed>已完成</HR_Practice_Status_Completed>
+  <HR_Practice_Status_Awaiting>等待工艺突破</HR_Practice_Status_Awaiting>
+  <HR_Practice_Status_Ready>实践已满足，等待理论研究</HR_Practice_Status_Ready>
+  <HR_Practice_Status_Researching>理论研究与工艺实践可同时推进</HR_Practice_Status_Researching>
+  <HR_Practice_TheoryComplete>《{0}》的理论研究已完成。工匠仍可继续积累实践，同时可切换研究项目。</HR_Practice_TheoryComplete>
+  <HR_Practice_Breakthrough>历史科技突破：《{0}》</HR_Practice_Breakthrough>
+  <HR_Practice_Chronicle_TheoryTitle>完成理论研究</HR_Practice_Chronicle_TheoryTitle>
+  <HR_Practice_Chronicle_TheoryDescription>玩家社区完成了理论研究，仍需通过生产实践验证相关工艺。</HR_Practice_Chronicle_TheoryDescription>
+  <HR_Practice_Chronicle_BreakthroughTitle>历史科技突破</HR_Practice_Chronicle_BreakthroughTitle>
+  <HR_Practice_Chronicle_BreakthroughDescription>玩家社区在满足理论与工艺实践要求后，正式掌握了一项历史科技。</HR_Practice_Chronicle_BreakthroughDescription>
 </LanguageData>

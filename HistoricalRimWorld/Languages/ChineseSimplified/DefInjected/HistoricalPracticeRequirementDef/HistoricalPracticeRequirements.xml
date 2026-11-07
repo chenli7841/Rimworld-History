@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Practice_BronzeTools_Count.label>青铜工具制造</HR_Practice_BronzeTools_Count.label>
+  <HR_Practice_BronzeTools_Count.description>使用青铜材料制造青铜锛。</HR_Practice_BronzeTools_Count.description>
+  <HR_Practice_BronzeTools_Masterwork.label>大师级青铜工具</HR_Practice_BronzeTools_Masterwork.label>
+  <HR_Practice_BronzeTools_Masterwork.description>制造大师级品质的青铜锛。</HR_Practice_BronzeTools_Masterwork.description>
+  <HR_Practice_BronzeTools_Experience.label>青铜工艺经验</HR_Practice_BronzeTools_Experience.label>
+  <HR_Practice_BronzeTools_Experience.description>制造青铜锛以积累工艺经验。</HR_Practice_BronzeTools_Experience.description>
+</LanguageData>

@@ -110,4 +110,19 @@
   <HR_Blueprint_DecodedChronicleText>Researchers decoded a historical technical blueprint and gained permanent authorization to study the linked project.</HR_Blueprint_DecodedChronicleText>
   <HR_Tech_EmergenceChronicleTitle>Technology emergence: {0}</HR_Tech_EmergenceChronicleTitle>
   <HR_Tech_EmergenceChronicleText>Historical technology {0} entered its spread phase. The in-game date window is a scenario simulation, not a precise invention date.</HR_Tech_EmergenceChronicleText>
+  <HR_Practice_Section>Crafting practice</HR_Practice_Section>
+  <HR_Practice_TheoryProgress>Theoretical research: {0} / {1}</HR_Practice_TheoryProgress>
+  <HR_Practice_CountProgress>{0}: {1} / {2}</HR_Practice_CountProgress>
+  <HR_Practice_ExperienceProgress>{0}: {1} / {2} experience</HR_Practice_ExperienceProgress>
+  <HR_Practice_Status>Status: {0}</HR_Practice_Status>
+  <HR_Practice_Status_Completed>completed</HR_Practice_Status_Completed>
+  <HR_Practice_Status_Awaiting>awaiting a craft breakthrough</HR_Practice_Status_Awaiting>
+  <HR_Practice_Status_Ready>practice complete; awaiting theory</HR_Practice_Status_Ready>
+  <HR_Practice_Status_Researching>research and practice can progress in parallel</HR_Practice_Status_Researching>
+  <HR_Practice_TheoryComplete>Theory for {0} is complete. Crafting practice can continue while you research something else.</HR_Practice_TheoryComplete>
+  <HR_Practice_Breakthrough>Historical technology breakthrough: {0}</HR_Practice_Breakthrough>
+  <HR_Practice_Chronicle_TheoryTitle>Theoretical research completed</HR_Practice_Chronicle_TheoryTitle>
+  <HR_Practice_Chronicle_TheoryDescription>The player community completed the theoretical research and is still validating the craft through production.</HR_Practice_Chronicle_TheoryDescription>
+  <HR_Practice_Chronicle_BreakthroughTitle>Historical technology breakthrough</HR_Practice_Chronicle_BreakthroughTitle>
+  <HR_Practice_Chronicle_BreakthroughDescription>The player community formally mastered a historical technology after satisfying its theoretical and practical requirements.</HR_Practice_Chronicle_BreakthroughDescription>
 </LanguageData>

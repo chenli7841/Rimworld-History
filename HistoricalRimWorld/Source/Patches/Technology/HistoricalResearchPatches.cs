@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using HistoricalRimWorld.Production;
-using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.Technology;
+using HistoricalRimWorld.Scenarios;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -105,11 +105,47 @@ namespace HistoricalRimWorld.Patches.Technology
     [HarmonyPatch(typeof(ResearchManager), nameof(ResearchManager.AddProgress))]
     internal static class HistoricalResearchProgressPatch
     {
-        private static bool Prefix(ResearchProjectDef proj) => !HistoricalTechnologyManager.IsActive || HistoricalTechnologyManager.IsResearchAllowed(proj);
+        private static bool Prefix(ResearchProjectDef proj, ref float amount)
+        {
+            if (HistoricalTechnologyManager.IsActive && !HistoricalTechnologyManager.IsResearchAllowed(proj)) return false;
+            if (HistoricalTechnologyManager.IsActive && HistoricalPracticeService.HasPracticeRequirements(proj))
+                return !HistoricalPracticeService.LimitResearchProgress(proj, ref amount);
+            return true;
+        }
         private static void Postfix(ResearchProjectDef proj)
         {
             if (HistoricalTechnologyManager.IsActive && proj != null)
+            {
                 HistoricalTechnologyManager.RecordResearchProgress(proj, Find.ResearchManager.GetProgress(proj));
+                HistoricalPracticeService.OnResearchProgress(proj);
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(ResearchManager), nameof(ResearchManager.FinishProject))]
+    internal static class HistoricalPracticeFinishGatePatch
+    {
+        private static bool Prefix(ResearchProjectDef proj)
+        {
+            if (!HistoricalTechnologyManager.IsActive || !HistoricalPracticeService.HasPracticeRequirements(proj)) return true;
+            // Existing completed research is grandfathered; all new completion routes must pass practice.
+            if (proj?.IsFinished == true) return true;
+            return HistoricalPracticeService.CanComplete(proj);
+        }
+
+        private static void Postfix(ResearchProjectDef proj)
+        {
+            if (HistoricalTechnologyManager.IsActive && proj?.IsFinished == true)
+                HistoricalPracticeService.MarkFormalCompletion(proj);
+        }
+    }
+
+    [HarmonyPatch(typeof(GenRecipe), "PostProcessProduct")]
+    internal static class HistoricalCraftCompletedPatch
+    {
+        private static void Postfix(Thing __0, RecipeDef __1, Pawn __2)
+        {
+            HistoricalPracticeService.NotifyCraftCompleted(__2, __0, __1);
         }
     }
 

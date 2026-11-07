@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Practice_BronzeTools_Count.label>Bronze tool crafting</HR_Practice_BronzeTools_Count.label>
+  <HR_Practice_BronzeTools_Count.description>Craft bronze adzes from bronze material.</HR_Practice_BronzeTools_Count.description>
+  <HR_Practice_BronzeTools_Masterwork.label>Masterwork bronze tool</HR_Practice_BronzeTools_Masterwork.label>
+  <HR_Practice_BronzeTools_Masterwork.description>Craft masterwork-quality bronze adzes.</HR_Practice_BronzeTools_Masterwork.description>
+  <HR_Practice_BronzeTools_Experience.label>Bronze working experience</HR_Practice_BronzeTools_Experience.label>
+  <HR_Practice_BronzeTools_Experience.description>Gain craftsmanship experience while making bronze adzes.</HR_Practice_BronzeTools_Experience.description>
+</LanguageData>

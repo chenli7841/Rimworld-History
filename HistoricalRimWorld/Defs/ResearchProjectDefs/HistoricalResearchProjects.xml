@@ -164,6 +164,18 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BronzeCasting</li></prerequisites>
     <researchViewX>7.50</researchViewX>
     <researchViewY>2.30</researchViewY>  
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Technology.HistoricalTechExtension">
+        <IsHistoricalTechnology>true</IsHistoricalTechnology>
+        <technology>HR_Tech_BronzeTools</technology>
+        <RequiresPractice>true</RequiresPractice>
+        <PracticeRequirementIds>
+          <li>HR_Practice_BronzeTools_Count</li>
+          <li>HR_Practice_BronzeTools_Masterwork</li>
+          <li>HR_Practice_BronzeTools_Experience</li>
+        </PracticeRequirementIds>
+      </li>
+    </modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Pottery</defName>

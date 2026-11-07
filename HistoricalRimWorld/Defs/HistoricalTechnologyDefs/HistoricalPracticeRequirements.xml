@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Technology.HistoricalPracticeRequirementDef>
+    <defName>HR_Practice_BronzeTools_Count</defName>
+    <requirementType>CraftItemCount</requirementType>
+    <targetThingDefs><li>HR_BronzeAdze</li></targetThingDefs>
+    <allowedMaterials><li>HR_Bronze</li></allowedMaterials>
+    <requiredCount>30</requiredCount>
+  </HistoricalRimWorld.Technology.HistoricalPracticeRequirementDef>
+  <HistoricalRimWorld.Technology.HistoricalPracticeRequirementDef>
+    <defName>HR_Practice_BronzeTools_Masterwork</defName>
+    <requirementType>CraftItemQualityCount</requirementType>
+    <targetThingDefs><li>HR_BronzeAdze</li></targetThingDefs>
+    <allowedMaterials><li>HR_Bronze</li></allowedMaterials>
+    <hasMinimumQuality>true</hasMinimumQuality>
+    <minimumQuality>Masterwork</minimumQuality>
+    <requiredCount>3</requiredCount>
+  </HistoricalRimWorld.Technology.HistoricalPracticeRequirementDef>
+  <HistoricalRimWorld.Technology.HistoricalPracticeRequirementDef>
+    <defName>HR_Practice_BronzeTools_Experience</defName>
+    <requirementType>CraftsmanshipExperience</requirementType>
+    <targetThingDefs><li>HR_BronzeAdze</li></targetThingDefs>
+    <allowedMaterials><li>HR_Bronze</li></allowedMaterials>
+    <requiredExperience>100</requiredExperience>
+  </HistoricalRimWorld.Technology.HistoricalPracticeRequirementDef>
+  <HistoricalRimWorld.Technology.HistoricalCraftsmanshipExperienceDef>
+    <defName>HR_CraftsmanshipExperience_Default</defName>
+    <awful>0</awful>
+    <poor>0.5</poor>
+    <normal>1</normal>
+    <good>2</good>
+    <excellent>5</excellent>
+    <masterwork>15</masterwork>
+    <legendary>40</legendary>
+  </HistoricalRimWorld.Technology.HistoricalCraftsmanshipExperienceDef>
+</Defs>

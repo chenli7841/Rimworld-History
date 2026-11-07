@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HistoricalRimWorld.Calendar;
 using HistoricalRimWorld.Chronicle;
+using HistoricalRimWorld.Technology;
 using HistoricalRimWorld.Politics;
 using HistoricalRimWorld.Production;
 using HistoricalRimWorld.Scenarios;
@@ -322,7 +323,8 @@ namespace HistoricalRimWorld.Technology
         {
             if (!IsActive || recipe == null) return true;
             HistoricalTechnologyRequirementExtension extension = recipe.GetModExtension<HistoricalTechnologyRequirementExtension>();
-            if (extension != null) return IsRequirementMet(extension);
+            if (extension != null) return IsRequirementMet(extension)
+                || HistoricalPracticeService.IsLearningRecipeAllowed(recipe, extension);
             ThingDef productWithRequirement = recipe.products?.Select(item => item.thingDef).FirstOrDefault(item => item?.GetModExtension<HistoricalTechnologyRequirementExtension>() != null);
             if (productWithRequirement != null) return IsRequirementMet(productWithRequirement.GetModExtension<HistoricalTechnologyRequirementExtension>());
             if (recipe.products != null && recipe.products.Any(item => item.thingDef != null && !IsThingAllowed(item.thingDef))) return false;
