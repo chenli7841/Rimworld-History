@@ -16,7 +16,6 @@ namespace HistoricalRimWorld.Patches.World
             {
                 new Harmony(HarmonyId).PatchAll(Assembly.GetExecutingAssembly());
                 applied = true;
-                HistoricalRimWorld.Technology.HistoricalTechnologyBonusService.Initialize();
                 Log.Message("[Historical RimWorld] Centralized world and technology patches initialized.");
             }
             catch (System.Exception exception)

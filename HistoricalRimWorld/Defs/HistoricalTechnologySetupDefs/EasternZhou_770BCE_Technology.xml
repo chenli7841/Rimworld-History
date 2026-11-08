@@ -21,7 +21,6 @@
       <li><technology>HR_Tech_KilnFiring</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_PlantFibres</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_Weaving</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
-      <li><technology>HR_Tech_TimberFraming</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_RammedEarth</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_BowMaking</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_Writing</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>

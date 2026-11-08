@@ -45,6 +45,7 @@
     <expandingIcon>true</expandingIcon>
     <expandingIconTexture>World/HR/MountainPass</expandingIconTexture>
     <expandingIconPriority>80</expandingIconPriority>
+    <expandingIconDrawSize>0.7</expandingIconDrawSize>
     <canHaveMap>false</canHaveMap>
   </WorldObjectDef>
 </Defs>

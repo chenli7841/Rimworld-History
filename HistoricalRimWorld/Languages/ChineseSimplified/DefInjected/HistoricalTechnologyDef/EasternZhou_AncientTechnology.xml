@@ -37,8 +37,6 @@
   <HR_Tech_PlantFibres.description>处理植物纤维以制作绳索或织物。</HR_Tech_PlantFibres.description>
   <HR_Tech_Weaving.label>纺织</HR_Tech_Weaving.label>
   <HR_Tech_Weaving.description>将处理好的纤维交错编织成布料。</HR_Tech_Weaving.description>
-  <HR_Tech_TimberFraming.label>木构建筑</HR_Tech_TimberFraming.label>
-  <HR_Tech_TimberFraming.description>使用加工木料进行榫接与构架建造。</HR_Tech_TimberFraming.description>
   <HR_Tech_RammedEarth.label>夯土建筑</HR_Tech_RammedEarth.label>
   <HR_Tech_RammedEarth.description>使用简易模板夯筑土墙。</HR_Tech_RammedEarth.description>
   <HR_Tech_BowMaking.label>制弓技术</HR_Tech_BowMaking.label>

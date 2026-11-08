@@ -75,6 +75,7 @@
     <label>地方盗匪</label>
     <fixedName>地方盗匪</fixedName>
     <description>用于代表地方安全风险的游戏化敌对群体，不对应特定历史政权。</description>
+    <leaderTitle>匪首</leaderTitle>
     <permanentEnemy>true</permanentEnemy>
     <canMakeRandomly>false</canMakeRandomly>
     <displayInFactionSelection>false</displayInFactionSelection>

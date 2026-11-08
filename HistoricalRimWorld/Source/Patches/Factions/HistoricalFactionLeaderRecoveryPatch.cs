@@ -5,7 +5,7 @@ using Verse;
 
 namespace HistoricalRimWorld.Patches.Factions
 {
-    /// <summary>Repairs a missing generated leader for a bound Eastern Zhou faction in existing saves.</summary>
+    /// <summary>Repairs missing leaders for factions managed by the Eastern Zhou scenario.</summary>
     [HarmonyPatch(typeof(Faction), nameof(Faction.FactionTick))]
     internal static class HistoricalFactionLeaderRecoveryPatch
     {
@@ -14,10 +14,11 @@ namespace HistoricalRimWorld.Patches.Factions
         private static void Prefix(Faction __instance)
         {
             if (__instance?.leader != null) return;
+            if (__instance == Faction.OfPlayerSilentFail) return;
             HistoricalFactionWorldComponent component = Find.World?
                 .GetComponent<HistoricalFactionWorldComponent>();
             if (component?.ScenarioDefName != ScenarioDefName
-                || !HistoricalFactionManager.TryGetHistoricalState(__instance, out _))
+                || !HistoricalFactionManager.IsAllowedFaction(__instance, ScenarioDefName))
                 return;
 
             if (__instance.TryGenerateNewLeader())

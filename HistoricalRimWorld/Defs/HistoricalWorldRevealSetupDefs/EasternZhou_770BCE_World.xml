@@ -20,20 +20,20 @@
       </li>
       <li>
         <region>HR_Region_Guanzhong</region>
-        <access>Locked</access>
+        <access>Unexplored</access>
       </li>
       <li>
         <region>HR_Region_Hedong</region>
-        <access>Locked</access>
+        <access>Unexplored</access>
       </li>
-      <li><region>HR_Region_QiHeartland</region><access>Locked</access></li>
-      <li><region>HR_Region_LuHeartland</region><access>Locked</access></li>
-      <li><region>HR_Region_SongHeartland</region><access>Locked</access></li>
-      <li><region>HR_Region_WeiHeartland</region><access>Locked</access></li>
-      <li><region>HR_Region_ChuHeartland</region><access>Locked</access></li>
+      <li><region>HR_Region_QiHeartland</region><access>Unexplored</access></li>
+      <li><region>HR_Region_LuHeartland</region><access>Unexplored</access></li>
+      <li><region>HR_Region_SongHeartland</region><access>Unexplored</access></li>
+      <li><region>HR_Region_WeiHeartland</region><access>Unexplored</access></li>
+      <li><region>HR_Region_ChuHeartland</region><access>Unexplored</access></li>
       <li>
         <region>HR_Region_Bashu</region>
-        <access>Locked</access>
+        <access>Unexplored</access>
       </li>
     </regions>
     <sourceNotes>Uses the scenario-bounded China-region world grid and an editable prototype terrain XML. Terrain is not reconstructed from real elevation, climate, or hydrography data. Historical faction placements remain prototype placements.</sourceNotes>

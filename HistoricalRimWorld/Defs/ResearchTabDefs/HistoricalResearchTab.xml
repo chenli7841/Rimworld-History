@@ -2,9 +2,9 @@
 <Defs>
   <ResearchTabDef>
     <defName>HR_HistoricalTechnologies</defName>
-    <label>HR_HistoricalTechnologies</label>
-    <generalTitle>HR_HistoricalTechnologies.generalTitle</generalTitle>
-    <generalDescription>HR_HistoricalTechnologies.generalDescription</generalDescription>
+    <label>历史科技</label>
+    <generalTitle>历史科技</generalTitle>
+    <generalDescription>按历史年代查看技术的出现范围、前置关系与当前研究状态。年代范围表示现有证据或估计，并非精确的发明日期。</generalDescription>
     <visibleByDefault>true</visibleByDefault>
   </ResearchTabDef>
 </Defs>

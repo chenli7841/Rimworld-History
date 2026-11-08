@@ -49,8 +49,6 @@ namespace HistoricalRimWorld.Technology
                     schedule.LastDiffusionAbsoluteDay = updateDay;
                 }
             }
-            // Faction mastery may have changed during emergence or diffusion.
-            HistoricalTechnologyBonusService.ClearCache();
         }
 
         public static void ForceEmergence(ResearchProjectDef project)
@@ -62,7 +60,6 @@ namespace HistoricalRimWorld.Technology
             HistoricalFactionTechnologyState source = GetEligibleEmergenceSources(project, component).FirstOrDefault();
             if (source == null) return;
             Master(project, source, date.AstronomicalYear, "DeveloperForcedEmergence");
-            HistoricalTechnologyBonusService.ClearCache();
             NotifyEmergence(project, date, component, true);
             HistoricalResearchTimelineUIState.Invalidate();
         }
@@ -73,7 +70,6 @@ namespace HistoricalRimWorld.Technology
             HistoricalTechnologyGameComponent component = Current.Game?.GetComponent<HistoricalTechnologyGameComponent>();
             if (component == null || !HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate date)) return 0;
             int changed = Diffuse(project, date, component, 1, null, force: true);
-            if (changed > 0) HistoricalTechnologyBonusService.ClearCache();
             HistoricalResearchTimelineUIState.Invalidate();
             return changed;
         }

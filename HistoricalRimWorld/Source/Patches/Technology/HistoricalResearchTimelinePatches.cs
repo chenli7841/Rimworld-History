@@ -317,9 +317,6 @@ namespace HistoricalRimWorld.Patches.Technology
             }
             string practiceDetails = HistoricalPracticeService.GetProgressDescription(__instance);
             if (!string.IsNullOrWhiteSpace(practiceDetails)) lines.Add(practiceDetails);
-            foreach (HistoricalTechnologyBonusDef bonus in HistoricalTechnologyBonusService.BonusesForResearch(__instance))
-                lines.Add(HistoricalTechnologyBonusService.DescribeBonus(bonus,
-                    HistoricalTechnologyBonusService.PlayerHasBonusTechnology(__instance)));
             if (lines.Count > 0) __result = (string.IsNullOrWhiteSpace(__result) ? string.Empty : __result + "\n\n") + string.Join("\n", lines);
         }
 

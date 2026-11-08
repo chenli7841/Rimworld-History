@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <HR_Tech_Title>Historical technologies</HR_Tech_Title>
-  <HR_TechBonus_ResearchLine>Equipment effect: {0} — {1} {2} ({3})</HR_TechBonus_ResearchLine>
-  <HR_TechBonus_Active>active for this faction</HR_TechBonus_Active>
-  <HR_TechBonus_WhenMastered>active after this faction masters the technology</HR_TechBonus_WhenMastered>
-  <HR_TechBonus_Type_MeleeDamage>melee damage</HR_TechBonus_Type_MeleeDamage>
-  <HR_TechBonus_Type_RangedDamage>ranged damage</HR_TechBonus_Type_RangedDamage>
-  <HR_TechBonus_Type_MeleeArmorPenetration>melee armor penetration</HR_TechBonus_Type_MeleeArmorPenetration>
-  <HR_TechBonus_Type_RangedArmorPenetration>ranged armor penetration</HR_TechBonus_Type_RangedArmorPenetration>
-  <HR_TechBonus_Type_ArmorSharp>sharp armor</HR_TechBonus_Type_ArmorSharp>
-  <HR_TechBonus_Type_ArmorBlunt>blunt armor</HR_TechBonus_Type_ArmorBlunt>
-  <HR_TechBonus_Type_ArmorHeat>heat armor</HR_TechBonus_Type_ArmorHeat>
-  <HR_TechBonus_Type_RangedCooldown>ranged cooldown</HR_TechBonus_Type_RangedCooldown>
-  <HR_TechBonus_Type_RangedWarmup>ranged warmup</HR_TechBonus_Type_RangedWarmup>
-  <HR_TechBonus_Type_InsulationCold>cold insulation</HR_TechBonus_Type_InsulationCold>
-  <HR_TechBonus_Type_InsulationHeat>heat insulation</HR_TechBonus_Type_InsulationHeat>
-  <HR_TechBonus_EquipmentHeader>Historical technology effects</HR_TechBonus_EquipmentHeader>
-  <HR_TechBonus_EquipmentUsage>These effects depend on the user's faction and are not stored on this item.</HR_TechBonus_EquipmentUsage>
   <HR_Tech_Inactive>Initialize a historical scenario to use this technology tree.</HR_Tech_Inactive>
   <HR_Tech_Select>Select a technology to view its status and study options.</HR_Tech_Select>
   <HR_Tech_Prerequisites>Prerequisites</HR_Tech_Prerequisites>
@@ -49,7 +33,6 @@
   <HR_Tech_Chronicle_Title>Technology adopted</HR_Tech_Chronicle_Title>
   <HR_Tech_Chronicle_Description>A community adopted a historical technology.</HR_Tech_Chronicle_Description>
   <HR_HistoricalTechnologies.label>Historical technologies</HR_HistoricalTechnologies.label>
-  <HR_HistoricalTechnologies.generalTitle>Historical technology timeline</HR_HistoricalTechnologies.generalTitle>
   <HR_HistoricalTechnologies.generalDescription>View technology horizons, prerequisites, and research status by historical period. Date ranges describe evidence or estimates, not exact invention dates.</HR_HistoricalTechnologies.generalDescription>
   <HR_Timeline_ShowFuture>Preview technologies outside the current historical period</HR_Timeline_ShowFuture>
   <HR_Timeline_ZoomSetting>Timeline zoom: {0}</HR_Timeline_ZoomSetting>
