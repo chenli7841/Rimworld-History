@@ -14,6 +14,10 @@
       <li Class="StockGenerator_SingleDef"><thingDef>HR_Bronze</thingDef><countRange>0~30</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>HR_Clay</thingDef><countRange>0~50</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>HR_Pottery</thingDef><countRange>0~30</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Salt</thingDef><countRange>8~30</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_SaltedMeat</thingDef><countRange>0~20</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_SaltedFish</thingDef><countRange>0~12</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_PickledVegetables</thingDef><countRange>0~20</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>HR_HempFiber</thingDef><countRange>0~40</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>HR_HempCloth</thingDef><countRange>0~30</countRange></li>
       <li Class="StockGenerator_Category"><categoryDef>FoodRaw</categoryDef><thingDefCountRange>2~4</thingDefCountRange><totalPriceRange>80~300</totalPriceRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate><excludedCategories><li>EggsFertilized</li></excludedCategories></li>
@@ -25,6 +29,8 @@
       <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Tin</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_Bronze</thingDef></li>
       <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Clay</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_Pottery</thingDef></li>
       <li Class="StockGenerator_BuySingleDef"><thingDef>HR_HempFiber</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_HempCloth</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Salt</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_SaltedMeat</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_SaltedFish</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_PickledVegetables</thingDef></li>
     </stockGenerators>
   </TraderKindDef>
   <TraderKindDef>
@@ -35,10 +41,15 @@
       <li Class="StockGenerator_SingleDef"><thingDef>MedicineHerbal</thingDef><countRange>0~3</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>HR_Bronze</thingDef><countRange>0~8</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>HR_Pottery</thingDef><countRange>0~10</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Salt</thingDef><countRange>0~8</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_SaltedMeat</thingDef><countRange>0~8</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_PickledVegetables</thingDef><countRange>0~8</countRange></li>
       <li Class="StockGenerator_Category"><categoryDef>FoodRaw</categoryDef><thingDefCountRange>1~2</thingDefCountRange><totalPriceRange>20~100</totalPriceRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate><excludedCategories><li>EggsFertilized</li></excludedCategories></li>
       <li Class="StockGenerator_MarketValue"><tradeTag>BasicClothing</tradeTag><countRange>0~2</countRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate></li>
       <li Class="StockGenerator_BuySingleDef"><thingDef>Cloth</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>MedicineHerbal</thingDef></li>
       <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Bronze</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_Pottery</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Salt</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_SaltedMeat</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_PickledVegetables</thingDef></li>
     </stockGenerators>
   </TraderKindDef>
   <TraderKindDef>
@@ -52,12 +63,20 @@
       <li Class="StockGenerator_SingleDef"><thingDef>HR_Tin</thingDef><countRange>5~25</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>HR_Bronze</thingDef><countRange>10~40</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>HR_Pottery</thingDef><countRange>10~40</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_Salt</thingDef><countRange>10~40</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_SaltedMeat</thingDef><countRange>0~30</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_SaltedFish</thingDef><countRange>0~15</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>HR_PickledVegetables</thingDef><countRange>0~30</countRange></li>
       <li Class="StockGenerator_Category"><categoryDef>FoodRaw</categoryDef><thingDefCountRange>3~5</thingDefCountRange><totalPriceRange>200~500</totalPriceRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate><excludedCategories><li>EggsFertilized</li></excludedCategories></li>
       <li Class="StockGenerator_MarketValue"><tradeTag>BasicClothing</tradeTag><countRange>3~8</countRange><maxTechLevelGenerate>Neolithic</maxTechLevelGenerate></li>
       <li Class="StockGenerator_BuySingleDef"><thingDef>WoodLog</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>Cloth</thingDef></li>
       <li Class="StockGenerator_BuySingleDef"><thingDef>MedicineHerbal</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_Copper</thingDef></li>
       <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Tin</thingDef></li><li Class="StockGenerator_BuySingleDef"><thingDef>HR_Bronze</thingDef></li>
       <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Pottery</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_Salt</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_SaltedMeat</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_SaltedFish</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>HR_PickledVegetables</thingDef></li>
     </stockGenerators>
   </TraderKindDef>
 </Defs>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Pickling_NoRecipe>没有可用配方</HR_Pickling_NoRecipe>
+  <HR_Pickling_Recipe>配方：{0}</HR_Pickling_Recipe>
+  <HR_Pickling_Ingredients>食材：{0}/{1}；食盐：{2}/{3}</HR_Pickling_Ingredients>
+  <HR_Pickling_Progress>进度：{0}% | 温度：{1} °C | 效率：{2}%</HR_Pickling_Progress>
+  <HR_Pickling_Status_Spoiled>批次已变质，内容物已丢弃。</HR_Pickling_Status_Spoiled>
+  <HR_Pickling_Status_Completed>加工完成，等待取出。</HR_Pickling_Status_Completed>
+  <HR_Pickling_Status_ManualPause>已由玩家暂停。</HR_Pickling_Status_ManualPause>
+  <HR_Pickling_Status_Cold>已暂停：温度低于 0 °C。</HR_Pickling_Status_Cold>
+  <HR_Pickling_Status_Hot>已暂停：温度高于 30 °C。</HR_Pickling_Status_Hot>
+  <HR_Pickling_Status_Working>正在自动加工。</HR_Pickling_Status_Working>
+  <HR_Pickling_Status_Waiting>等待食材或食盐。</HR_Pickling_Status_Waiting>
+  <HR_Pickling_ChooseRecipe>选择食品配方</HR_Pickling_ChooseRecipe>
+  <HR_Pickling_ChooseRecipeDesc>选择此陶缸要保存的食品。</HR_Pickling_ChooseRecipeDesc>
+  <HR_Pickling_CannotChange>请先取出或取消当前批次。</HR_Pickling_CannotChange>
+  <HR_Pickling_Continue>继续腌制</HR_Pickling_Continue>
+  <HR_Pickling_Pause>暂停腌制</HR_Pickling_Pause>
+  <HR_Pickling_AutoRepeatOn>自动重复：开启</HR_Pickling_AutoRepeatOn>
+  <HR_Pickling_AutoRepeatOff>自动重复：关闭</HR_Pickling_AutoRepeatOff>
+  <HR_Pickling_Cancel>返还批次内容物</HR_Pickling_Cancel>
+  <HR_Pickling_LoadRejected>内容不符合所选配方，或陶缸剩余容量不足。</HR_Pickling_LoadRejected>
+  <HR_Pickling_NoMap>陶缸必须位于地图上才能返还内容物。</HR_Pickling_NoMap>
+  <HR_Pickling_ReturnBlocked>无法安全返还全部内容物；剩余物品仍留在陶缸中。</HR_Pickling_ReturnBlocked>
+  <HR_Pickling_BatchSpoiled>腌制批次已变质，食材和食盐已丢弃。</HR_Pickling_BatchSpoiled>
+</LanguageData>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Production.Salting.SaltingRecipeDef><defName>HR_SaltMeat</defName><label>salt meat</label><foodKind>Meat</foodKind><saltThing>HR_Salt</saltThing><outputThing>HR_SaltedMeat</outputThing><ingredientCount>20</ingredientCount><saltCount>4</saltCount><outputCount>14</outputCount><processingDays>3</processingDays></HistoricalRimWorld.Production.Salting.SaltingRecipeDef>
+  <HistoricalRimWorld.Production.Salting.SaltingRecipeDef><defName>HR_SaltFish</defName><label>salt fish</label><foodKind>Fish</foodKind><saltThing>HR_Salt</saltThing><outputThing>HR_SaltedFish</outputThing><ingredientCount>20</ingredientCount><saltCount>4</saltCount><outputCount>14</outputCount><processingDays>3</processingDays></HistoricalRimWorld.Production.Salting.SaltingRecipeDef>
+  <HistoricalRimWorld.Production.Salting.SaltingRecipeDef><defName>HR_PickleVegetables</defName><label>pickle vegetables</label><foodKind>Vegetables</foodKind><allowedIngredientDefs><li>RawPotatoes</li><li>RawAgave</li><li>RawBerries</li></allowedIngredientDefs><saltThing>HR_Salt</saltThing><outputThing>HR_PickledVegetables</outputThing><ingredientCount>20</ingredientCount><saltCount>2</saltCount><outputCount>16</outputCount><processingDays>4</processingDays></HistoricalRimWorld.Production.Salting.SaltingRecipeDef>
+</Defs>

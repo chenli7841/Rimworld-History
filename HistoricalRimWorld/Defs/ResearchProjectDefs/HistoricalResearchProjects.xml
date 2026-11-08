@@ -37,6 +37,25 @@
     <researchViewX>4.50</researchViewX>
     <researchViewY>0.50</researchViewY>  
   </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>HR_FoodDrying</defName>
+    <label>food drying</label>
+    <description>Establish controlled natural drying to preserve meat and selected vegetables. Drying is an ancient preservation practice, not a first invention date.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_GrainStorage</li></prerequisites>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>0.05</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>HR_SaltPreservation</defName>
+    <label>salt preservation</label>
+    <description>Establish a reliable local process for preserving selected meat, fish, and vegetables with salt. Salted foods keep the remaining freshness of their original ingredients; this represents local mastery, not the first invention of salting.</description>
+    <baseCost>550</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_GrainStorage</li></prerequisites>
+    <researchViewX>5.50</researchViewX>
+    <researchViewY>0.50</researchViewY>
+  </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Irrigation</defName>
     <label>irrigation channels</label>
@@ -231,14 +250,5 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_PlantFibres</li></prerequisites>
     <researchViewX>5.50</researchViewX>
     <researchViewY>4.30</researchViewY>  
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>HR_FoodDrying</defName>
-    <label>food drying</label>
-    <description>Establish controlled natural drying to preserve meat and selected vegetables. Drying is an ancient preservation practice, not a first invention date.</description>
-    <baseCost>400</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>3.50</researchViewX>
-    <researchViewY>5.75</researchViewY>
   </ResearchProjectDef>
 </Defs>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Salt.label>食盐</HR_Salt.label><HR_Salt.description>用于保存食物的食盐。本版本通过贸易供应，不包含制盐生产。</HR_Salt.description>
+  <HR_PicklingJar.label>腌制陶缸</HR_PicklingJar.label><HR_PicklingJar.description>以陶器制成、消耗食盐并自动加工一批食品的容器。</HR_PicklingJar.description>
+  <HR_SaltedMeat.label>腌肉</HR_SaltedMeat.label><HR_SaltedMeat.description>用食盐保存的普通动物肉。原料剩余的新鲜度会延续到成品。</HR_SaltedMeat.description>
+  <HR_SaltedFish.label>腌鱼</HR_SaltedFish.label><HR_SaltedFish.description>用食盐保存的鱼肉。</HR_SaltedFish.description>
+  <HR_PickledVegetables.label>腌菜</HR_PickledVegetables.label><HR_PickledVegetables.description>用食盐保存的指定蔬菜；不包括谷物和药草。</HR_PickledVegetables.description>
+</LanguageData>

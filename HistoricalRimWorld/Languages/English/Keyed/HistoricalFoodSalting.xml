@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Pickling_NoRecipe>No available recipe</HR_Pickling_NoRecipe>
+  <HR_Pickling_Recipe>Recipe: {0}</HR_Pickling_Recipe>
+  <HR_Pickling_Ingredients>Ingredients: {0}/{1}; salt: {2}/{3}</HR_Pickling_Ingredients>
+  <HR_Pickling_Progress>Progress: {0}% | Temperature: {1} °C | Rate: {2}%</HR_Pickling_Progress>
+  <HR_Pickling_Status_Spoiled>Batch spoiled; contents were discarded.</HR_Pickling_Status_Spoiled>
+  <HR_Pickling_Status_Completed>Completed; waiting to unload.</HR_Pickling_Status_Completed>
+  <HR_Pickling_Status_ManualPause>Paused by player.</HR_Pickling_Status_ManualPause>
+  <HR_Pickling_Status_Cold>Paused: below 0 °C.</HR_Pickling_Status_Cold>
+  <HR_Pickling_Status_Hot>Paused: above 30 °C.</HR_Pickling_Status_Hot>
+  <HR_Pickling_Status_Working>Processing automatically.</HR_Pickling_Status_Working>
+  <HR_Pickling_Status_Waiting>Waiting for ingredients or salt.</HR_Pickling_Status_Waiting>
+  <HR_Pickling_ChooseRecipe>Choose food recipe</HR_Pickling_ChooseRecipe>
+  <HR_Pickling_ChooseRecipeDesc>Choose the food this jar will preserve.</HR_Pickling_ChooseRecipeDesc>
+  <HR_Pickling_CannotChange>Unload or cancel the current batch first.</HR_Pickling_CannotChange>
+  <HR_Pickling_Continue>Continue pickling</HR_Pickling_Continue>
+  <HR_Pickling_Pause>Pause pickling</HR_Pickling_Pause>
+  <HR_Pickling_AutoRepeatOn>Auto repeat: on</HR_Pickling_AutoRepeatOn>
+  <HR_Pickling_AutoRepeatOff>Auto repeat: off</HR_Pickling_AutoRepeatOff>
+  <HR_Pickling_Cancel>Return batch contents</HR_Pickling_Cancel>
+  <HR_Pickling_LoadRejected>These contents do not match the selected recipe or the jar no longer has enough space.</HR_Pickling_LoadRejected>
+  <HR_Pickling_NoMap>The jar must be on a map to return its contents.</HR_Pickling_NoMap>
+  <HR_Pickling_ReturnBlocked>Could not safely return all contents; they remain in the jar.</HR_Pickling_ReturnBlocked>
+  <HR_Pickling_BatchSpoiled>The pickling batch spoiled. Its food and salt were discarded.</HR_Pickling_BatchSpoiled>
+</LanguageData>

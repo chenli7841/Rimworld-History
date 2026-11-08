@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Salt.label>salt</HR_Salt.label><HR_Salt.description>Edible salt used to preserve food. The current version supplies it through trade rather than production.</HR_Salt.description>
+  <HR_PicklingJar.label>pickling jar</HR_PicklingJar.label><HR_PicklingJar.description>A fired-pottery vessel that automatically preserves a batch with salt.</HR_PicklingJar.description>
+  <HR_SaltedMeat.label>salted meat</HR_SaltedMeat.label><HR_SaltedMeat.description>Ordinary animal meat preserved with salt. Its remaining freshness carries over from the raw ingredients.</HR_SaltedMeat.description>
+  <HR_SaltedFish.label>salted fish</HR_SaltedFish.label><HR_SaltedFish.description>Fish preserved with salt.</HR_SaltedFish.description>
+  <HR_PickledVegetables.label>pickled vegetables</HR_PickledVegetables.label><HR_PickledVegetables.description>Selected vegetables preserved with salt; grain crops and herbs are excluded.</HR_PickledVegetables.description>
+</LanguageData>

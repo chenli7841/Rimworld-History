@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>HR_Salt</defName><label>salt</label><description>Edible salt used as a food-preservation ingredient. This release models salt as a traded good; it does not add salt mining or production.</description>
+    <techLevel>Neolithic</techLevel><stackLimit>75</stackLimit><tradeability>Sellable</tradeability>
+    <graphicData><texPath>Things/Item/Resource/Steel</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(235,232,220)</color></graphicData>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <statBases><MarketValue>2</MarketValue><Mass>0.05</Mass><Flammability>0</Flammability></statBases>
+    <modExtensions><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><policy>Allowed</policy></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>HR_PicklingJar</defName><label>pickling jar</label><description>A fired-pottery vessel that holds food and salt while a batch pickles without fuel or electricity.</description>
+    <thingClass>Building</thingClass><category>Building</category><techLevel>Neolithic</techLevel>
+    <graphicData><texPath>Things/Building/Furniture/Shelf</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>(1,1)</drawSize><color>(172,115,77)</color></graphicData>
+    <statBases><MaxHitPoints>100</MaxHitPoints><WorkToBuild>500</WorkToBuild><Flammability>0</Flammability><Beauty>1</Beauty></statBases>
+    <costList><HR_Pottery>30</HR_Pottery></costList><size>(1,1)</size><altitudeLayer>Building</altitudeLayer><passability>Standable</passability><fillPercent>0.3</fillPercent>
+    <designationCategory>Production</designationCategory><uiOrder>2495</uiOrder><tickerType>Normal</tickerType><building><isEdifice>false</isEdifice></building>
+    <comps><li Class="HistoricalRimWorld.Production.Salting.CompProperties_PicklingJar">
+      <stackLimit>100</stackLimit><minCountToEmpty>1</minCountToEmpty><drawStackLabel>true</drawStackLabel><drawContainedThing>true</drawContainedThing><containedThingOffset>(0,0,0.2)</containedThingOffset>
+      <saltThing>HR_Salt</saltThing><updateInterval>250</updateInterval><freezingPointCelsius>0</freezingPointCelsius><coldTemperatureLimitCelsius>10</coldTemperatureLimitCelsius>
+      <normalTemperatureLimitCelsius>20</normalTemperatureLimitCelsius><hotTemperatureLimitCelsius>30</hotTemperatureLimitCelsius><coldEfficiency>0.8</coldEfficiency><normalEfficiency>1</normalEfficiency>
+      <maxStartRotProgressPct>0.9</maxStartRotProgressPct><warmMaxRotProgressPct>0.75</warmMaxRotProgressPct>
+      <recipes><li>HR_SaltMeat</li><li>HR_SaltFish</li><li>HR_PickleVegetables</li></recipes>
+    </li></comps>
+    <modExtensions><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><requiredTechnology>HR_Tech_SaltPreservation</requiredTechnology></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="HR_SaltedFoodBase" ParentName="OrganicProductBase">
+    <thingClass>ThingWithComps</thingClass><thingCategories><li>Foods</li></thingCategories>
+    <graphicData><texPath>Things/Item/Resource/Pemmican</texPath><graphicClass>Graphic_StackCount</graphicClass></graphicData>
+    <stackLimit>75</stackLimit><socialPropernessMatters>true</socialPropernessMatters><tradeability>Sellable</tradeability>
+    <statBases><MarketValue>1.5</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition><FoodPoisonChanceFixedHuman>0.025</FoodPoisonChanceFixedHuman></statBases>
+    <ingestible><foodType>Meat</foodType><preferability>RawBad</preferability><ingestEffect>EatMeat</ingestEffect><ingestSound>RawMeat_Eat</ingestSound></ingestible>
+    <comps><li Class="CompProperties_Rottable"><daysToRotStart>20</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps>
+  </ThingDef>
+  <ThingDef ParentName="HR_SaltedFoodBase"><defName>HR_SaltedMeat</defName><label>salted meat</label><description>Ordinary animal meat preserved with salt. Its remaining freshness carries over from the raw ingredients.</description></ThingDef>
+  <ThingDef ParentName="HR_SaltedFoodBase"><defName>HR_SaltedFish</defName><label>salted fish</label><description>Fish preserved with salt. This recipe appears only when an active content source provides fish meat.</description><graphicData><texPath>Things/Item/Resource/Pemmican</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(198,165,119)</color></graphicData><comps Inherit="False"><li Class="CompProperties_Rottable"><daysToRotStart>25</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps></ThingDef>
+  <ThingDef ParentName="HR_SaltedFoodBase"><defName>HR_PickledVegetables</defName><label>pickled vegetables</label><description>Selected vegetables preserved with salt. The recipe excludes grain crops and herbs.</description><graphicData><texPath>Things/Item/Resource/PlantFoodRaw/Potatoes</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(166,175,112)</color></graphicData><statBases><MarketValue>1.2</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition><FoodPoisonChanceFixedHuman>0.025</FoodPoisonChanceFixedHuman></statBases><ingestible><foodType>VegetableOrFruit</foodType><preferability>RawBad</preferability><ingestEffect>EatVegetarian</ingestEffect><ingestSound>RawVegetable_Eat</ingestSound></ingestible><comps Inherit="False"><li Class="CompProperties_Rottable"><daysToRotStart>40</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps></ThingDef>
+</Defs>
