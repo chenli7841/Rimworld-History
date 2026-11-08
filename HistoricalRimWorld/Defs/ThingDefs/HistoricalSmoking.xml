@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>HR_SmokingOven</defName>
+    <label>smoking oven</label>
+    <description>A simple wood-fired stone and earth oven for preserving meat with smoke.</description>
+    <thingClass>Building</thingClass><category>Building</category><techLevel>Neolithic</techLevel>
+    <graphicData><texPath>Things/Building/Production/TableSmithingFueled</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>(2,2)</drawSize><color>(145,104,75)</color></graphicData>
+    <statBases><MaxHitPoints>180</MaxHitPoints><WorkToBuild>600</WorkToBuild><Flammability>0.5</Flammability><Beauty>1</Beauty><Cleanliness>-1</Cleanliness></statBases>
+    <costList><WoodLog>60</WoodLog><BlocksSandstone>30</BlocksSandstone></costList>
+    <size>(2,2)</size><altitudeLayer>Building</altitudeLayer><passability>Standable</passability><fillPercent>0.55</fillPercent>
+    <designationCategory>Production</designationCategory><uiOrder>2498</uiOrder><tickerType>Normal</tickerType>
+    <building><isEdifice>true</isEdifice></building>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>6</fuelConsumptionRate><fuelCapacity>30</fuelCapacity><initialFuelPercent>0</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent><fuelFilter><thingDefs><li>WoodLog</li></thingDefs></fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed><initialAllowAutoRefuel>true</initialAllowAutoRefuel>
+        <showFuelGizmo>true</showFuelGizmo><targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+      </li>
+      <li Class="HistoricalRimWorld.Production.Smoking.CompProperties_SmokingOven">
+        <stackLimit>100</stackLimit><minCountToEmpty>1</minCountToEmpty><drawStackLabel>true</drawStackLabel><drawContainedThing>true</drawContainedThing><containedThingOffset>(0,0,0.2)</containedThingOffset>
+        <woodConsumptionPerDay>6</woodConsumptionPerDay><updateInterval>250</updateInterval><pauseDuringRainWhenUnroofed>true</pauseDuringRainWhenUnroofed>
+        <rainRateThreshold>0.01</rainRateThreshold><maxStartRotProgressPct>0.9</maxStartRotProgressPct><failRotProgressPct>1</failRotProgressPct>
+        <smokeFleckInterval>2500</smokeFleckInterval><smokeFleckScale>0.45</smokeFleckScale>
+        <recipes><li>HR_SmokeMeat</li><li>HR_SmokeFish</li></recipes>
+      </li>
+    </comps>
+    <modExtensions><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><requiredTechnology>HR_Tech_FoodSmoking</requiredTechnology></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="HR_SmokedFoodBase" ParentName="OrganicProductBase">
+    <thingClass>ThingWithComps</thingClass><thingCategories><li>Foods</li></thingCategories>
+    <graphicData><texPath>Things/Item/Resource/Pemmican</texPath><graphicClass>Graphic_StackCount</graphicClass></graphicData>
+    <stackLimit>75</stackLimit><socialPropernessMatters>true</socialPropernessMatters><tradeability>Sellable</tradeability>
+    <statBases><MarketValue>1.4</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition><FoodPoisonChanceFixedHuman>0.025</FoodPoisonChanceFixedHuman></statBases>
+    <ingestible><foodType>Meat</foodType><preferability>RawBad</preferability><ingestEffect>EatMeat</ingestEffect><ingestSound>RawMeat_Eat</ingestSound></ingestible>
+    <comps><li Class="CompProperties_Rottable"><daysToRotStart>25</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps>
+  </ThingDef>
+  <ThingDef ParentName="HR_SmokedFoodBase"><defName>HR_SmokedMeat</defName><label>smoked meat</label><description>Ordinary animal meat preserved by wood smoke. The remaining freshness of its raw ingredients carries through processing.</description></ThingDef>
+  <ThingDef ParentName="HR_SmokedFoodBase"><defName>HR_SmokedFish</defName><label>smoked fish</label><description>Fish preserved by wood smoke. The recipe is available only when an active content source provides compatible fish meat.</description><graphicData><texPath>Things/Item/Resource/Pemmican</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(196,160,116)</color></graphicData><comps Inherit="False"><li Class="CompProperties_Rottable"><daysToRotStart>25</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps></ThingDef>
+</Defs>

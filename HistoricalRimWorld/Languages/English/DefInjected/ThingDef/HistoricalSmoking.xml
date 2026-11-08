@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_SmokingOven.label>smoking oven</HR_SmokingOven.label>
+  <HR_SmokingOven.description>A simple wood-fired stone and earth oven for preserving meat with smoke.</HR_SmokingOven.description>
+  <HR_SmokedMeat.label>smoked meat</HR_SmokedMeat.label>
+  <HR_SmokedMeat.description>Ordinary animal meat preserved by wood smoke. The remaining freshness of its raw ingredients carries through processing.</HR_SmokedMeat.description>
+  <HR_SmokedFish.label>smoked fish</HR_SmokedFish.label>
+  <HR_SmokedFish.description>Fish preserved by wood smoke. The recipe is available only when an active content source provides compatible fish meat.</HR_SmokedFish.description>
+</LanguageData>

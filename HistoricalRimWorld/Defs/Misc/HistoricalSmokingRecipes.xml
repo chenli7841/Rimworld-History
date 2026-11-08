@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Production.Smoking.SmokingRecipeDef>
+    <defName>HR_SmokeMeat</defName><label>smoke meat</label><foodKind>Meat</foodKind><outputThing>HR_SmokedMeat</outputThing>
+    <inputCount>20</inputCount><minimumInputCount>5</minimumInputCount><outputCount>15</outputCount><processingDays>1.5</processingDays>
+  </HistoricalRimWorld.Production.Smoking.SmokingRecipeDef>
+  <HistoricalRimWorld.Production.Smoking.SmokingRecipeDef>
+    <defName>HR_SmokeFish</defName><label>smoke fish</label><foodKind>Fish</foodKind><outputThing>HR_SmokedFish</outputThing>
+    <inputCount>20</inputCount><minimumInputCount>5</minimumInputCount><outputCount>15</outputCount><processingDays>1</processingDays>
+  </HistoricalRimWorld.Production.Smoking.SmokingRecipeDef>
+</Defs>

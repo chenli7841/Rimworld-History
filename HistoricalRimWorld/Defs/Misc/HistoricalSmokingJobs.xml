@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef><defName>HR_LoadSmokingOven</defName><driverClass>HistoricalRimWorld.Production.Smoking.JobDriver_LoadSmokingOven</driverClass><reportString>loading a smoking oven.</reportString><casualInterruptible>true</casualInterruptible></JobDef>
+  <WorkGiverDef><defName>HR_LoadSmokingOven</defName><label>load smoking ovens</label><giverClass>HistoricalRimWorld.Production.Smoking.WorkGiver_LoadSmokingOven</giverClass><workType>Hauling</workType><verb>load</verb><priorityInType>80</priorityInType><gerund>loading smoking ovens</gerund></WorkGiverDef>
+</Defs>

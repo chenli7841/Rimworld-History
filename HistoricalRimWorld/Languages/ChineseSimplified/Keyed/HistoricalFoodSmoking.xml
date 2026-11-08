@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Smoking_NoRecipe>没有可用配方</HR_Smoking_NoRecipe>
+  <HR_Smoking_Recipe>配方：{0}</HR_Smoking_Recipe>
+  <HR_Smoking_Batch>原料：{0} ×{1}</HR_Smoking_Batch>
+  <HR_Smoking_Progress>进度：{0}%（预计剩余 {1:0.0} 天）</HR_Smoking_Progress>
+  <HR_Smoking_Fuel>木材燃料：{0}（按满负荷约可工作 {1} 天）</HR_Smoking_Fuel>
+  <HR_Smoking_Status_Empty>空闲，等待原料。</HR_Smoking_Status_Empty>
+  <HR_Smoking_Status_Working>正在烟熏。</HR_Smoking_Status_Working>
+  <HR_Smoking_Status_NoFuel>已暂停：木材燃料不足。</HR_Smoking_Status_NoFuel>
+  <HR_Smoking_Status_Paused>已暂停：{0}</HR_Smoking_Status_Paused>
+  <HR_Smoking_Status_Spoiled>批次失败：原料已经腐败。</HR_Smoking_Status_Spoiled>
+  <HR_Smoking_Status_Completed>批次完成，成品等待卸载。</HR_Smoking_Status_Completed>
+  <HR_Smoking_Status_ManualPause>已手动暂停。</HR_Smoking_Status_ManualPause>
+  <HR_Smoking_RainPause>未遮蔽的熏制炉受到雨雪影响</HR_Smoking_RainPause>
+  <HR_Smoking_NoMap>熏制炉当前不在地图上</HR_Smoking_NoMap>
+  <HR_Smoking_ChooseRecipe>选择烟熏配方</HR_Smoking_ChooseRecipe>
+  <HR_Smoking_ChooseRecipeDesc>选择要烟熏的食品。</HR_Smoking_ChooseRecipeDesc>
+  <HR_Smoking_CannotChange>批次加工期间不能更改配方。</HR_Smoking_CannotChange>
+  <HR_Smoking_Pause>暂停烟熏</HR_Smoking_Pause>
+  <HR_Smoking_Continue>继续烟熏</HR_Smoking_Continue>
+  <HR_Smoking_AutoRepeatOn>自动连续加工：开启</HR_Smoking_AutoRepeatOn>
+  <HR_Smoking_AutoRepeatOff>自动连续加工：关闭</HR_Smoking_AutoRepeatOff>
+  <HR_Smoking_Cancel>取消批次</HR_Smoking_Cancel>
+  <HR_Smoking_LoadRejected>这些原料不能装入熏制炉。</HR_Smoking_LoadRejected>
+  <HR_Smoking_ReturnBlocked>附近没有可安全退还批次物品的位置。</HR_Smoking_ReturnBlocked>
+  <HR_Smoking_BatchSpoiled>原料腐败，烟熏批次已失败。</HR_Smoking_BatchSpoiled>
+</LanguageData>

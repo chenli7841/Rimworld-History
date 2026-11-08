@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_SmokingOven.label>熏制炉</HR_SmokingOven.label>
+  <HR_SmokingOven.description>以木材为燃料的简易土石熏炉，用于烟熏保存肉类。</HR_SmokingOven.description>
+  <HR_SmokedMeat.label>熏肉</HR_SmokedMeat.label>
+  <HR_SmokedMeat.description>以木烟保存的普通动物肉。原料剩余的新鲜度会延续到成品。</HR_SmokedMeat.description>
+  <HR_SmokedFish.label>熏鱼</HR_SmokedFish.label>
+  <HR_SmokedFish.description>以木烟保存的鱼肉。只有启用的内容来源提供兼容鱼肉时，熏鱼配方才可用。</HR_SmokedFish.description>
+</LanguageData>

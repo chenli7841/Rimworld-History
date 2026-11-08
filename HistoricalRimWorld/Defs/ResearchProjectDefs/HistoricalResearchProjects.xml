@@ -66,6 +66,15 @@
     <researchViewY>0.95</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
+    <defName>HR_FoodSmoking</defName>
+    <label>food smoking</label>
+    <description>Establish a reliable wood-fired smoking process for preserving ordinary meat and, when available, fish. Smoking is an ancient practice; this represents local mastery, not its first invention.</description>
+    <baseCost>650</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_FoodDrying</li></prerequisites>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>0.05</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>HR_Research_Irrigation</defName>
     <label>irrigation channels</label>
     <description>Plan simple channels and water control. Early irrigation has a broad possible horizon around 4000 BCE; dates differ by region and this is not an invention date.</description>

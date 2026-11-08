@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Smoking_NoRecipe>no available recipe</HR_Smoking_NoRecipe>
+  <HR_Smoking_Recipe>Recipe: {0}</HR_Smoking_Recipe>
+  <HR_Smoking_Batch>Input: {0} x{1}</HR_Smoking_Batch>
+  <HR_Smoking_Progress>Progress: {0}% (about {1:0.0} days remaining)</HR_Smoking_Progress>
+  <HR_Smoking_Fuel>Wood fuel: {0} (about {1} days at full use)</HR_Smoking_Fuel>
+  <HR_Smoking_Status_Empty>Idle; waiting for ingredients.</HR_Smoking_Status_Empty>
+  <HR_Smoking_Status_Working>Smoking.</HR_Smoking_Status_Working>
+  <HR_Smoking_Status_NoFuel>Paused: out of wood fuel.</HR_Smoking_Status_NoFuel>
+  <HR_Smoking_Status_Paused>Paused: {0}</HR_Smoking_Status_Paused>
+  <HR_Smoking_Status_Spoiled>Batch failed: ingredients spoiled.</HR_Smoking_Status_Spoiled>
+  <HR_Smoking_Status_Completed>Batch complete; output is waiting to be unloaded.</HR_Smoking_Status_Completed>
+  <HR_Smoking_Status_ManualPause>Manually paused.</HR_Smoking_Status_ManualPause>
+  <HR_Smoking_RainPause>unroofed oven is exposed to rain or snow</HR_Smoking_RainPause>
+  <HR_Smoking_NoMap>oven is not on a map</HR_Smoking_NoMap>
+  <HR_Smoking_ChooseRecipe>Choose smoking recipe</HR_Smoking_ChooseRecipe>
+  <HR_Smoking_ChooseRecipeDesc>Select the food to smoke.</HR_Smoking_ChooseRecipeDesc>
+  <HR_Smoking_CannotChange>Recipe cannot be changed during a batch.</HR_Smoking_CannotChange>
+  <HR_Smoking_Pause>Pause smoking</HR_Smoking_Pause>
+  <HR_Smoking_Continue>Continue smoking</HR_Smoking_Continue>
+  <HR_Smoking_AutoRepeatOn>Automatic batches: on</HR_Smoking_AutoRepeatOn>
+  <HR_Smoking_AutoRepeatOff>Automatic batches: off</HR_Smoking_AutoRepeatOff>
+  <HR_Smoking_Cancel>Cancel batch</HR_Smoking_Cancel>
+  <HR_Smoking_LoadRejected>These ingredients cannot be loaded into this smoking oven.</HR_Smoking_LoadRejected>
+  <HR_Smoking_ReturnBlocked>There is no safe nearby space to return the batch.</HR_Smoking_ReturnBlocked>
+  <HR_Smoking_BatchSpoiled>The smoking batch failed because its ingredients spoiled.</HR_Smoking_BatchSpoiled>
+</LanguageData>
