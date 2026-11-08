@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Production.Fermentation.FermentationRecipeDef>
+    <defName>HR_FermentVegetables</defName><label>ferment vegetables</label><outputThing>HR_FermentedVegetables</outputThing>
+    <allowedIngredientDefs><li>RawPotatoes</li><li>RawAgave</li><li>RawBerries</li></allowedIngredientDefs>
+    <auxiliaryIngredientDef>HR_Salt</auxiliaryIngredientDef><inputCount>20</inputCount><auxiliaryCount>2</auxiliaryCount><outputCount>16</outputCount><processingDays>4</processingDays>
+    <minTemperature>5</minTemperature><slowTemperature>10</slowTemperature><normalTemperature>20</normalTemperature><warmTemperature>28</warmTemperature><maxTemperature>35</maxTemperature><enabledByDefault>true</enabledByDefault>
+  </HistoricalRimWorld.Production.Fermentation.FermentationRecipeDef>
+  <HistoricalRimWorld.Production.Fermentation.FermentationRecipeDef>
+    <defName>HR_FermentGrain</defName><label>ferment prepared grain</label><outputThing>HR_FermentedGrainFood</outputThing>
+    <allowedIngredientDefs><li>RawRice</li><li>RawCorn</li></allowedIngredientDefs>
+    <inputCount>20</inputCount><outputCount>16</outputCount><processingDays>3</processingDays>
+    <minTemperature>5</minTemperature><slowTemperature>10</slowTemperature><normalTemperature>20</normalTemperature><warmTemperature>28</warmTemperature><maxTemperature>35</maxTemperature><enabledByDefault>false</enabledByDefault>
+  </HistoricalRimWorld.Production.Fermentation.FermentationRecipeDef>
+</Defs>

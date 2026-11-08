@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Fermentation_NoRecipe>没有可用配方</HR_Fermentation_NoRecipe>
+  <HR_Fermentation_Recipe>配方：{0}</HR_Fermentation_Recipe>
+  <HR_Fermentation_Ingredients>原料：{0} {1}/{2}；辅料：{3} {4}/{5}</HR_Fermentation_Ingredients>
+  <HR_Fermentation_Output>成品：{0} ×{1}</HR_Fermentation_Output>
+  <HR_Fermentation_Temperature>温度：{0}°C；效率：{1}%</HR_Fermentation_Temperature>
+  <HR_Fermentation_Progress>进度：{0}%（预计剩余 {1:0.0} 天）</HR_Fermentation_Progress>
+  <HR_Fermentation_Status_Empty>空闲，等待原料。</HR_Fermentation_Status_Empty>
+  <HR_Fermentation_Status_Loading>等待装满本批次所需原料。</HR_Fermentation_Status_Loading>
+  <HR_Fermentation_Status_Working>正在发酵。</HR_Fermentation_Status_Working>
+  <HR_Fermentation_Status_Cold>已暂停：温度低于最低发酵温度。</HR_Fermentation_Status_Cold>
+  <HR_Fermentation_Status_Hot>已暂停：温度过高；失败风险 {0}%。</HR_Fermentation_Status_Hot>
+  <HR_Fermentation_Status_Failed>批次失败：{0}</HR_Fermentation_Status_Failed>
+  <HR_Fermentation_Status_Completed>批次完成，成品等待卸载。</HR_Fermentation_Status_Completed>
+  <HR_Fermentation_Status_ManualPause>已手动暂停。</HR_Fermentation_Status_ManualPause>
+  <HR_Fermentation_Failure_Spoiled>发酵完成前原料已经腐败</HR_Fermentation_Failure_Spoiled>
+  <HR_Fermentation_Failure_Overheated>持续高温导致发酵失败</HR_Fermentation_Failure_Overheated>
+  <HR_Fermentation_Failure_MissingRecipe>存档中的配方已不可用</HR_Fermentation_Failure_MissingRecipe>
+  <HR_Fermentation_Failure_Nutrition>该批次无法产出营养为正的安全食品</HR_Fermentation_Failure_Nutrition>
+  <HR_Fermentation_BatchFailed>发酵失败：{0}。</HR_Fermentation_BatchFailed>
+  <HR_Fermentation_ChooseRecipe>选择发酵配方</HR_Fermentation_ChooseRecipe>
+  <HR_Fermentation_ChooseRecipeDesc>选择要发酵的已配置食品。</HR_Fermentation_ChooseRecipeDesc>
+  <HR_Fermentation_CannotChange>批次加工期间不能更改配方。</HR_Fermentation_CannotChange>
+  <HR_Fermentation_Pause>暂停发酵</HR_Fermentation_Pause>
+  <HR_Fermentation_Continue>继续发酵</HR_Fermentation_Continue>
+  <HR_Fermentation_AutoRepeatOn>自动连续加工：开启</HR_Fermentation_AutoRepeatOn>
+  <HR_Fermentation_AutoRepeatOff>自动连续加工：关闭</HR_Fermentation_AutoRepeatOff>
+  <HR_Fermentation_Cancel>取消批次</HR_Fermentation_Cancel>
+  <HR_Fermentation_LoadRejected>这些物品不能装入发酵陶缸。</HR_Fermentation_LoadRejected>
+  <HR_Fermentation_ReturnBlocked>附近没有可安全退还批次物品的位置。</HR_Fermentation_ReturnBlocked>
+  <HR_Fermentation_NoMap>发酵陶缸当前不在地图上</HR_Fermentation_NoMap>
+</LanguageData>

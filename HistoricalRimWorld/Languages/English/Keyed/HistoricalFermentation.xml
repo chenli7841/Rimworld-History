@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Fermentation_NoRecipe>no available recipe</HR_Fermentation_NoRecipe>
+  <HR_Fermentation_Recipe>Recipe: {0}</HR_Fermentation_Recipe>
+  <HR_Fermentation_Ingredients>Input: {0} {1}/{2}; auxiliary: {3} {4}/{5}</HR_Fermentation_Ingredients>
+  <HR_Fermentation_Output>Output: {0} x{1}</HR_Fermentation_Output>
+  <HR_Fermentation_Temperature>Temperature: {0}°C; efficiency: {1}%</HR_Fermentation_Temperature>
+  <HR_Fermentation_Progress>Progress: {0}% (about {1:0.0} days remaining)</HR_Fermentation_Progress>
+  <HR_Fermentation_Status_Empty>Idle; waiting for ingredients.</HR_Fermentation_Status_Empty>
+  <HR_Fermentation_Status_Loading>Waiting for the full ingredient batch.</HR_Fermentation_Status_Loading>
+  <HR_Fermentation_Status_Working>Fermenting.</HR_Fermentation_Status_Working>
+  <HR_Fermentation_Status_Cold>Paused: below the minimum fermentation temperature.</HR_Fermentation_Status_Cold>
+  <HR_Fermentation_Status_Hot>Paused: excessive heat; failure risk {0}%.</HR_Fermentation_Status_Hot>
+  <HR_Fermentation_Status_Failed>Batch failed: {0}</HR_Fermentation_Status_Failed>
+  <HR_Fermentation_Status_Completed>Batch complete; output is waiting to be unloaded.</HR_Fermentation_Status_Completed>
+  <HR_Fermentation_Status_ManualPause>Manually paused.</HR_Fermentation_Status_ManualPause>
+  <HR_Fermentation_Failure_Spoiled>the ingredients spoiled before the fermentation finished</HR_Fermentation_Failure_Spoiled>
+  <HR_Fermentation_Failure_Overheated>prolonged excessive heat caused the fermentation to fail</HR_Fermentation_Failure_Overheated>
+  <HR_Fermentation_Failure_MissingRecipe>the saved recipe is no longer available</HR_Fermentation_Failure_MissingRecipe>
+  <HR_Fermentation_Failure_Nutrition>the batch cannot produce a safe positive-nutrition output</HR_Fermentation_Failure_Nutrition>
+  <HR_Fermentation_BatchFailed>Fermentation failed: {0}.</HR_Fermentation_BatchFailed>
+  <HR_Fermentation_ChooseRecipe>Choose fermentation recipe</HR_Fermentation_ChooseRecipe>
+  <HR_Fermentation_ChooseRecipeDesc>Select a configured food to ferment.</HR_Fermentation_ChooseRecipeDesc>
+  <HR_Fermentation_CannotChange>Recipe cannot be changed during a batch.</HR_Fermentation_CannotChange>
+  <HR_Fermentation_Pause>Pause fermentation</HR_Fermentation_Pause>
+  <HR_Fermentation_Continue>Continue fermentation</HR_Fermentation_Continue>
+  <HR_Fermentation_AutoRepeatOn>Automatic batches: on</HR_Fermentation_AutoRepeatOn>
+  <HR_Fermentation_AutoRepeatOff>Automatic batches: off</HR_Fermentation_AutoRepeatOff>
+  <HR_Fermentation_Cancel>Cancel batch</HR_Fermentation_Cancel>
+  <HR_Fermentation_LoadRejected>These ingredients cannot be loaded into this fermentation jar.</HR_Fermentation_LoadRejected>
+  <HR_Fermentation_ReturnBlocked>There is no safe nearby space to return the batch.</HR_Fermentation_ReturnBlocked>
+  <HR_Fermentation_NoMap>fermentation jar is not on a map</HR_Fermentation_NoMap>
+</LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_FermentationJar.label>fermentation jar</HR_FermentationJar.label>
+  <HR_FermentationJar.description>A lidded pottery vessel for fermenting selected vegetables and prepared grain foods.</HR_FermentationJar.description>
+  <HR_FermentedVegetables.label>fermented vegetables</HR_FermentedVegetables.label>
+  <HR_FermentedVegetables.description>Vegetables preserved through a controlled fermentation process. Distinct from vegetables merely salted for storage.</HR_FermentedVegetables.description>
+  <HR_FermentedGrainFood.label>fermented grain food</HR_FermentedGrainFood.label>
+  <HR_FermentedGrainFood.description>A configured experimental output. Its recipe is disabled by default until a suitable prepared-grain process is defined.</HR_FermentedGrainFood.description>
+</LanguageData>

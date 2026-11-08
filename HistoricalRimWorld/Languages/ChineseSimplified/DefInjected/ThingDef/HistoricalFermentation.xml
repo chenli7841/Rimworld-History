@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_FermentationJar.label>发酵陶缸</HR_FermentationJar.label>
+  <HR_FermentationJar.description>带盖陶制容器，用于发酵特定蔬菜及经过预处理的谷物食品。</HR_FermentationJar.description>
+  <HR_FermentedVegetables.label>发酵蔬菜</HR_FermentedVegetables.label>
+  <HR_FermentedVegetables.description>经受控发酵保存的蔬菜，与仅用食盐保存的盐渍蔬菜不同。</HR_FermentedVegetables.description>
+  <HR_FermentedGrainFood.label>发酵谷物食品</HR_FermentedGrainFood.label>
+  <HR_FermentedGrainFood.description>配置用的试验性成品；在定义合适的谷物预处理流程前，其配方默认关闭。</HR_FermentedGrainFood.description>
+</LanguageData>

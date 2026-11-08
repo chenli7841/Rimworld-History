@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>HR_FermentationJar</defName>
+    <label>fermentation jar</label>
+    <description>A lidded pottery vessel for fermenting selected vegetables and prepared grain foods.</description>
+    <thingClass>Building</thingClass><category>Building</category><techLevel>Neolithic</techLevel>
+    <graphicData><texPath>Things/Building/Misc/Urn</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(1,1)</drawSize><color>(170,119,81)</color></graphicData>
+    <statBases><MaxHitPoints>100</MaxHitPoints><WorkToBuild>350</WorkToBuild><Flammability>0</Flammability><Beauty>1</Beauty></statBases>
+    <costList><HR_Pottery>30</HR_Pottery></costList><size>(1,1)</size><altitudeLayer>Building</altitudeLayer><passability>Standable</passability><fillPercent>0.3</fillPercent>
+    <designationCategory>Production</designationCategory><uiOrder>2499</uiOrder><tickerType>Normal</tickerType><building><isEdifice>false</isEdifice></building>
+    <comps>
+      <li Class="HistoricalRimWorld.Production.Fermentation.CompProperties_FermentationJar">
+        <stackLimit>40</stackLimit><minCountToEmpty>1</minCountToEmpty><drawStackLabel>true</drawStackLabel><drawContainedThing>true</drawContainedThing><containedThingOffset>(0,0,0.25)</containedThingOffset>
+        <updateInterval>250</updateInterval><maxStartRotProgressPct>0.9</maxStartRotProgressPct><failRotProgressPct>1</failRotProgressPct>
+        <overheatFailureRiskPerDay>0.25</overheatFailureRiskPerDay><failureRiskThreshold>1</failureRiskThreshold>
+        <recipes><li>HR_FermentVegetables</li><li>HR_FermentGrain</li></recipes>
+      </li>
+    </comps>
+    <modExtensions><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><requiredTechnology>HR_Tech_FoodFermentation</requiredTechnology></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="HR_FermentedFoodBase" ParentName="OrganicProductBase">
+    <thingClass>ThingWithComps</thingClass><thingCategories><li>Foods</li></thingCategories>
+    <graphicData><texPath>Things/Item/Resource/PlantFoodRaw/Potatoes</texPath><graphicClass>Graphic_StackCount</graphicClass></graphicData>
+    <stackLimit>75</stackLimit><socialPropernessMatters>true</socialPropernessMatters><tradeability>Sellable</tradeability>
+    <statBases><MarketValue>2</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition><FoodPoisonChanceFixedHuman>0.025</FoodPoisonChanceFixedHuman></statBases>
+    <ingestible><foodType>VegetableOrFruit</foodType><preferability>RawBad</preferability><ingestEffect>EatVegetarian</ingestEffect><ingestSound>RawVegetable_Eat</ingestSound></ingestible>
+    <comps><li Class="CompProperties_Rottable"><daysToRotStart>40</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps>
+  </ThingDef>
+  <ThingDef ParentName="HR_FermentedFoodBase"><defName>HR_FermentedVegetables</defName><label>fermented vegetables</label><description>Vegetables preserved through a controlled fermentation process. Distinct from vegetables merely salted for storage.</description><modExtensions><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><requiredTechnology>HR_Tech_FoodFermentation</requiredTechnology></li></modExtensions></ThingDef>
+  <ThingDef ParentName="HR_FermentedFoodBase"><defName>HR_FermentedGrainFood</defName><label>fermented grain food</label><description>A configured experimental output. Its recipe is disabled by default until a suitable prepared-grain process is defined.</description><tradeability>None</tradeability><statBases><MarketValue>1.5</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition><FoodPoisonChanceFixedHuman>0.025</FoodPoisonChanceFixedHuman></statBases><comps Inherit="False"><li Class="CompProperties_Rottable"><daysToRotStart>8</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps><modExtensions><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><requiredTechnology>HR_Tech_FoodFermentation</requiredTechnology></li></modExtensions></ThingDef>
+</Defs>

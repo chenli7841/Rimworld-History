@@ -75,6 +75,15 @@
     <researchViewY>0.05</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
+    <defName>HR_FoodFermentation</defName>
+    <label>food fermentation</label>
+    <description>Establish controlled fermentation for selected vegetables. Fermentation is an ancient practice; this project represents a reliable local process, not its first invention.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>6.50</researchViewX>
+    <researchViewY>1.75</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>HR_Research_Irrigation</defName>
     <label>irrigation channels</label>
     <description>Plan simple channels and water control. Early irrigation has a broad possible horizon around 4000 BCE; dates differ by region and this is not an invention date.</description>

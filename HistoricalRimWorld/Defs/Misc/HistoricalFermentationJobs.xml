@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef><defName>HR_LoadFermentationJar</defName><driverClass>HistoricalRimWorld.Production.Fermentation.JobDriver_LoadFermentationJar</driverClass><reportString>loading a fermentation jar.</reportString><casualInterruptible>true</casualInterruptible></JobDef>
+  <WorkGiverDef><defName>HR_LoadFermentationJar</defName><label>load fermentation jars</label><giverClass>HistoricalRimWorld.Production.Fermentation.WorkGiver_LoadFermentationJar</giverClass><workType>Hauling</workType><verb>load</verb><priorityInType>80</priorityInType><gerund>loading fermentation jars</gerund></WorkGiverDef>
+</Defs>
