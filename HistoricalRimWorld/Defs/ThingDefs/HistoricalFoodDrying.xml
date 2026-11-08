@@ -77,6 +77,7 @@
       <li Class="CompProperties_Rottable"><daysToRotStart>30</daysToRotStart><rotDestroys>true</rotDestroys></li>
       <li Class="CompProperties_FoodPoisonable" />
     </comps>
+    <modExtensions><li Class="HistoricalRimWorld.Production.SealedStorage.SealedStorageFoodExtension"><eligibleForSealedStorage>true</eligibleForSealedStorage></li></modExtensions>
     <allowedArchonexusCount>200</allowedArchonexusCount>
   </ThingDef>
 

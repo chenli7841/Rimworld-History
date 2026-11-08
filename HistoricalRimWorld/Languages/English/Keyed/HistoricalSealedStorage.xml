@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_SealedStorage_Capacity>Storage slots: {0} / {1}</HR_SealedStorage_Capacity>
+  <HR_SealedStorage_RotRate>Eligible food rot rate here: {0}% of normal</HR_SealedStorage_RotRate>
+  <HR_SealedStorage_EligibleOnly>Only designated dry foods receive this storage bonus. This is not refrigeration.</HR_SealedStorage_EligibleOnly>
+</LanguageData>

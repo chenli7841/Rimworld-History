@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_SealedStorageJar.label>sealed storage jar</HR_SealedStorageJar.label><HR_SealedStorageJar.description>A sealed pottery store for grain, seeds, dry foods, salt, and selected preserved foods. It uses normal storage settings and does not refrigerate its contents.</HR_SealedStorageJar.description>
+  <HR_LargeSealedStorageJar.label>large sealed storage jar</HR_LargeSealedStorageJar.label><HR_LargeSealedStorageJar.description>A large sealed pottery store with eight stack slots. It does not refrigerate its contents.</HR_LargeSealedStorageJar.description>
+</LanguageData>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_SealedStorage_Capacity>储物堆叠位：{0} / {1}</HR_SealedStorage_Capacity>
+  <HR_SealedStorage_RotRate>符合条件的食品腐败速度：普通速度的 {0}%</HR_SealedStorage_RotRate>
+  <HR_SealedStorage_EligibleOnly>仅指定干制食品获得此储存加成；陶瓮不提供制冷。</HR_SealedStorage_EligibleOnly>
+</LanguageData>

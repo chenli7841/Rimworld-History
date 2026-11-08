@@ -57,13 +57,22 @@
     <researchViewY>0.50</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>
+    <defName>HR_SealedPotteryStorage</defName>
+    <label>sealed pottery storage</label>
+    <description>Develop reliable sealing and storage practices for pottery vessels. Pottery storage is ancient; this represents a dependable local method, not the invention of pottery vessels.</description>
+    <baseCost>450</baseCost>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>0.95</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>HR_Research_Irrigation</defName>
     <label>irrigation channels</label>
     <description>Plan simple channels and water control. Early irrigation has a broad possible horizon around 4000 BCE; dates differ by region and this is not an invention date.</description>
     <baseCost>500</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
     <researchViewX>4.50</researchViewX>
-    <researchViewY>0.95</researchViewY>  
+    <researchViewY>1.40</researchViewY>  
   </ResearchProjectDef>
     <ResearchProjectDef>
     <defName>HR_Research_WaterManagement</defName>
@@ -72,7 +81,7 @@
     <baseCost>350</baseCost>
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Irrigation</li></prerequisites>
     <researchViewX>5.50</researchViewX>
-    <researchViewY>0.95</researchViewY>  
+    <researchViewY>1.40</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_RammedEarth</defName>

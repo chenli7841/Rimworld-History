@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="StorageShelfBase">
+    <defName>HR_SealedStorageJar</defName>
+    <label>sealed storage jar</label>
+    <description>A sealed pottery store for grain, seeds, dry foods, salt, and selected preserved foods. It uses ordinary storage settings and does not refrigerate its contents.</description>
+    <techLevel>Neolithic</techLevel><researchPrerequisites Inherit="False" />
+    <graphicData>
+      <texPath>Things/Building/Misc/Urn</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(1.2,1.35)</drawSize><color>(176,120,81)</color>
+    </graphicData>
+    <costList><HR_Pottery>20</HR_Pottery></costList>
+    <size>(1,1)</size>
+    <statBases><MaxHitPoints>90</MaxHitPoints><Mass>7</Mass><WorkToBuild>250</WorkToBuild><Beauty>1</Beauty><Flammability>0</Flammability></statBases>
+    <designationCategory>Furniture</designationCategory><uiOrder>2052</uiOrder>
+    <building>
+      <storageGroupTag>HR_SealedJar</storageGroupTag><maxItemsInCell>4</maxItemsInCell><preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <fixedStorageSettings><filter Inherit="False"><thingDefs>
+        <li>RawRice</li><li>RawCorn</li><li>HR_DriedGrain</li><li>HR_SelectedSeeds</li>
+        <li>HR_DriedMeat</li><li>HR_DriedFish</li><li>HR_DriedVegetables</li><li>HR_Salt</li>
+        <li>HR_SaltedMeat</li><li>HR_SaltedFish</li><li>HR_PickledVegetables</li>
+      </thingDefs></filter></fixedStorageSettings>
+      <defaultStorageSettings><priority>Preferred</priority><filter Inherit="False"><thingDefs>
+        <li>RawRice</li><li>RawCorn</li><li>HR_DriedGrain</li><li>HR_SelectedSeeds</li>
+        <li>HR_DriedMeat</li><li>HR_DriedFish</li><li>HR_DriedVegetables</li><li>HR_Salt</li>
+        <li>HR_SaltedMeat</li><li>HR_SaltedFish</li><li>HR_PickledVegetables</li>
+      </thingDefs></filter></defaultStorageSettings>
+    </building>
+    <comps><li Class="HistoricalRimWorld.Production.SealedStorage.CompProperties_SealedStorage"><rotMultiplier>0.5</rotMultiplier><unroofedRotMultiplier>0.75</unroofedRotMultiplier></li></comps>
+    <modExtensions><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><requiredTechnology>HR_Tech_SealedPotteryStorage</requiredTechnology></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="StorageShelfBase">
+    <defName>HR_LargeSealedStorageJar</defName>
+    <label>large sealed storage jar</label>
+    <description>A large sealed pottery store with eight stack slots. It accepts only the configured grain, seed, dry-food, salt, and preserved-food list; it does not refrigerate its contents.</description>
+    <techLevel>Neolithic</techLevel><researchPrerequisites Inherit="False" />
+    <graphicData>
+      <texPath>Things/Building/Misc/Urn</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>(1.8,1.5)</drawSize><color>(163,103,70)</color>
+    </graphicData>
+    <costList><HR_Pottery>40</HR_Pottery></costList>
+    <size>(2,1)</size>
+    <statBases><MaxHitPoints>150</MaxHitPoints><Mass>14</Mass><WorkToBuild>450</WorkToBuild><Beauty>2</Beauty><Flammability>0</Flammability></statBases>
+    <designationCategory>Furniture</designationCategory><uiOrder>2053</uiOrder>
+    <building>
+      <storageGroupTag>HR_SealedJar</storageGroupTag><maxItemsInCell>4</maxItemsInCell><preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <fixedStorageSettings><filter Inherit="False"><thingDefs>
+        <li>RawRice</li><li>RawCorn</li><li>HR_DriedGrain</li><li>HR_SelectedSeeds</li>
+        <li>HR_DriedMeat</li><li>HR_DriedFish</li><li>HR_DriedVegetables</li><li>HR_Salt</li>
+        <li>HR_SaltedMeat</li><li>HR_SaltedFish</li><li>HR_PickledVegetables</li>
+      </thingDefs></filter></fixedStorageSettings>
+      <defaultStorageSettings><priority>Preferred</priority><filter Inherit="False"><thingDefs>
+        <li>RawRice</li><li>RawCorn</li><li>HR_DriedGrain</li><li>HR_SelectedSeeds</li>
+        <li>HR_DriedMeat</li><li>HR_DriedFish</li><li>HR_DriedVegetables</li><li>HR_Salt</li>
+        <li>HR_SaltedMeat</li><li>HR_SaltedFish</li><li>HR_PickledVegetables</li>
+      </thingDefs></filter></defaultStorageSettings>
+    </building>
+    <comps><li Class="HistoricalRimWorld.Production.SealedStorage.CompProperties_SealedStorage"><rotMultiplier>0.5</rotMultiplier><unroofedRotMultiplier>0.75</unroofedRotMultiplier></li></comps>
+    <modExtensions><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><requiredTechnology>HR_Tech_SealedPotteryStorage</requiredTechnology></li></modExtensions>
+  </ThingDef>
+</Defs>

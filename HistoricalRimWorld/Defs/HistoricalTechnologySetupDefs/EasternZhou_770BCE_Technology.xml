@@ -28,6 +28,7 @@
       <li><technology>HR_Tech_Commerce</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_FoodDrying</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_SaltPreservation</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_SealedPotteryStorage</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
     </technologies>
   </HistoricalRimWorld.Technology.HistoricalTechnologySetupDef>
 </Defs>
