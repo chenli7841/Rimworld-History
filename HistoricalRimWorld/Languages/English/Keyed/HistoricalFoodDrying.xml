@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Drying_ChooseFood>Choose food</HR_Drying_ChooseFood>
+  <HR_Drying_ChooseFood_Desc>Select the type of food this rack will accept when empty.</HR_Drying_ChooseFood_Desc>
+  <HR_Drying_CannotChangeDuringBatch>The recipe cannot be changed while a batch is in progress.</HR_Drying_CannotChangeDuringBatch>
+  <HR_Drying_Pause>Pause drying</HR_Drying_Pause><HR_Drying_Continue>Continue drying</HR_Drying_Continue>
+  <HR_Drying_Pause_Desc>Pause or resume drying. Pausing does not stop the ingredients from rotting.</HR_Drying_Pause_Desc>
+  <HR_Drying_AutoRepeatOn>Auto-repeat: on</HR_Drying_AutoRepeatOn><HR_Drying_AutoRepeatOff>Auto-repeat: off</HR_Drying_AutoRepeatOff>
+  <HR_Drying_AutoRepeat_Desc>When enabled, the rack accepts another batch after its current batch is collected.</HR_Drying_AutoRepeat_Desc>
+  <HR_Drying_CancelBatch>Return batch</HR_Drying_CancelBatch><HR_Drying_CancelBatch_Desc>Return the remaining raw ingredients near the rack.</HR_Drying_CancelBatch_Desc>
+  <HR_Drying_LoadRejected>The rack cannot accept this carried food.</HR_Drying_LoadRejected><HR_Drying_NoMap>The rack must be on a map to return its ingredients.</HR_Drying_NoMap>
+  <HR_Drying_ReturnBlocked>There is no safe nearby place to return the ingredients.</HR_Drying_ReturnBlocked><HR_Drying_NoRecipe>No valid drying recipe</HR_Drying_NoRecipe>
+  <HR_Drying_Status_Spoiled>The batch spoiled. Clear or return the spoiled contents.</HR_Drying_Status_Spoiled>
+  <HR_Drying_Status_Empty>Empty; selected food: {0}</HR_Drying_Status_Empty><HR_Drying_Status_Batch>Drying {0} × {1}</HR_Drying_Status_Batch>
+  <HR_Drying_Progress>Progress: {0}% — about {1} days remaining</HR_Drying_Progress><HR_Drying_Environment>Temperature: {0}°C; drying efficiency: {1}%</HR_Drying_Environment>
+  <HR_Drying_Status_ManualPause>Paused manually. Ingredients continue to rot.</HR_Drying_Status_ManualPause>
+  <HR_Drying_Status_Paused>Paused: {0}. Ingredients continue to rot.</HR_Drying_Status_Paused><HR_Drying_Status_Working>Drying</HR_Drying_Status_Working>
+  <HR_Drying_Status_Completed>Finished; waiting for a clear tile to unload.</HR_Drying_Status_Completed>
+  <HR_Drying_Pause_NoMap>no map</HR_Drying_Pause_NoMap><HR_Drying_Pause_TooCold>below 0°C</HR_Drying_Pause_TooCold>
+  <HR_Drying_Pause_Rain>outdoor rain</HR_Drying_Pause_Rain><HR_Drying_Pause_Snow>outdoor snow</HR_Drying_Pause_Snow>
+  <HR_Drying_Pause_Weather>unsuitable weather</HR_Drying_Pause_Weather><HR_Drying_RoofedWeather>roofed during precipitation</HR_Drying_RoofedWeather>
+  <HR_Drying_Night>nighttime</HR_Drying_Night><HR_Drying_BatchSpoiled>The contents spoiled before they could be dried.</HR_Drying_BatchSpoiled>
+</LanguageData>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Production.Drying.DryingRecipeDef>
+    <defName>HR_DryMeat</defName><label>dried meat</label><foodKind>Meat</foodKind><outputThing>HR_DriedMeat</outputThing>
+    <inputCount>20</inputCount><minimumInputCount>5</minimumInputCount><outputCount>12</outputCount><baseDryingDays>2</baseDryingDays>
+  </HistoricalRimWorld.Production.Drying.DryingRecipeDef>
+  <HistoricalRimWorld.Production.Drying.DryingRecipeDef>
+    <defName>HR_DryFish</defName><label>dried fish</label><foodKind>Fish</foodKind><outputThing>HR_DriedFish</outputThing>
+    <inputCount>20</inputCount><minimumInputCount>5</minimumInputCount><outputCount>12</outputCount><baseDryingDays>2</baseDryingDays>
+  </HistoricalRimWorld.Production.Drying.DryingRecipeDef>
+  <HistoricalRimWorld.Production.Drying.DryingRecipeDef>
+    <defName>HR_DryVegetables</defName><label>dried vegetables</label><foodKind>Vegetables</foodKind><outputThing>HR_DriedVegetables</outputThing>
+    <inputCount>20</inputCount><minimumInputCount>5</minimumInputCount><outputCount>12</outputCount><baseDryingDays>2</baseDryingDays>
+    <allowedIngredientDefs><li>RawPotatoes</li><li>RawAgave</li><li>RawBerries</li><li>RawFungus</li></allowedIngredientDefs>
+  </HistoricalRimWorld.Production.Drying.DryingRecipeDef>
+</Defs>

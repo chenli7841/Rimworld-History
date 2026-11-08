@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Drying_ChooseFood>选择食品</HR_Drying_ChooseFood><HR_Drying_ChooseFood_Desc>晾晒架空闲时，选择它接受加工的食品类型。</HR_Drying_ChooseFood_Desc>
+  <HR_Drying_CannotChangeDuringBatch>批次加工期间不能更改配方。</HR_Drying_CannotChangeDuringBatch>
+  <HR_Drying_Pause>暂停晾晒</HR_Drying_Pause><HR_Drying_Continue>继续晾晒</HR_Drying_Continue><HR_Drying_Pause_Desc>暂停或继续晾晒。暂停时原料仍会腐败。</HR_Drying_Pause_Desc>
+  <HR_Drying_AutoRepeatOn>自动重复：开启</HR_Drying_AutoRepeatOn><HR_Drying_AutoRepeatOff>自动重复：关闭</HR_Drying_AutoRepeatOff>
+  <HR_Drying_AutoRepeat_Desc>开启后，当前批次取走时晾晒架会继续接受下一批原料。</HR_Drying_AutoRepeat_Desc>
+  <HR_Drying_CancelBatch>退回本批原料</HR_Drying_CancelBatch><HR_Drying_CancelBatch_Desc>将剩余原料退回到晾晒架附近。</HR_Drying_CancelBatch_Desc>
+  <HR_Drying_LoadRejected>晾晒架无法接受当前搬运的食品。</HR_Drying_LoadRejected><HR_Drying_NoMap>晾晒架必须位于地图上才能退回原料。</HR_Drying_NoMap>
+  <HR_Drying_ReturnBlocked>晾晒架附近没有可安全放置原料的位置。</HR_Drying_ReturnBlocked><HR_Drying_NoRecipe>没有可用的晾晒配方</HR_Drying_NoRecipe>
+  <HR_Drying_Status_Spoiled>本批原料已变质。请清除或退回变质物。</HR_Drying_Status_Spoiled>
+  <HR_Drying_Status_Empty>空闲；当前选择：{0}</HR_Drying_Status_Empty><HR_Drying_Status_Batch>正在晾晒：{0} × {1}</HR_Drying_Status_Batch>
+  <HR_Drying_Progress>进度：{0}% — 预计剩余 {1} 天</HR_Drying_Progress><HR_Drying_Environment>温度：{0}°C；晾晒效率：{1}%</HR_Drying_Environment>
+  <HR_Drying_Status_ManualPause>已手动暂停。原料仍会腐败。</HR_Drying_Status_ManualPause><HR_Drying_Status_Paused>已暂停：{0}。原料仍会腐败。</HR_Drying_Status_Paused>
+  <HR_Drying_Status_Working>正在晾晒</HR_Drying_Status_Working><HR_Drying_Pause_NoMap>没有地图</HR_Drying_Pause_NoMap>
+  <HR_Drying_Status_Completed>加工完成；等待附近出现可用位置后卸下成品。</HR_Drying_Status_Completed>
+  <HR_Drying_Pause_TooCold>温度低于 0°C</HR_Drying_Pause_TooCold><HR_Drying_Pause_Rain>室外降雨</HR_Drying_Pause_Rain><HR_Drying_Pause_Snow>室外降雪</HR_Drying_Pause_Snow>
+  <HR_Drying_Pause_Weather>天气不适合晾晒</HR_Drying_Pause_Weather><HR_Drying_RoofedWeather>有屋顶且正在降水</HR_Drying_RoofedWeather><HR_Drying_Night>夜间</HR_Drying_Night>
+  <HR_Drying_BatchSpoiled>原料在干燥完成前已经变质。</HR_Drying_BatchSpoiled>
+</LanguageData>

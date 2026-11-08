@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_DryingRack.label>木制晾晒架</HR_DryingRack.label><HR_DryingRack.description>用于自然晾晒指定食品的简易木架。</HR_DryingRack.description>
+  <HR_DriedMeat.label>肉干</HR_DriedMeat.label><HR_DriedMeat.description>通过自然晾晒保存的肉类。比鲜肉耐储，但保留的营养少于原料。</HR_DriedMeat.description>
+  <HR_DriedFish.label>鱼干</HR_DriedFish.label><HR_DriedFish.description>通过自然晾晒保存的鱼类。只有启用的内容来源提供鱼类原料时，才可以生产。</HR_DriedFish.description>
+  <HR_DriedVegetables.label>干菜</HR_DriedVegetables.label><HR_DriedVegetables.description>通过自然晾晒保存的指定蔬菜，不包括谷物作物。</HR_DriedVegetables.description>
+</LanguageData>

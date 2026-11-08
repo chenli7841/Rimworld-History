@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>HR_DryingRack</defName>
+    <label>drying rack</label>
+    <description>A simple wooden rack for preserving selected foods by natural drying.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <techLevel>Neolithic</techLevel>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Shelf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,1)</drawSize>
+      <color>(151,111,68)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <costList><WoodLog>40</WoodLog></costList>
+    <size>(2,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0.35</fillPercent>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2490</uiOrder>
+    <tickerType>Normal</tickerType>
+    <building><isEdifice>false</isEdifice></building>
+    <comps>
+      <li Class="HistoricalRimWorld.Production.Drying.CompProperties_DryingRack">
+        <stackLimit>20</stackLimit>
+        <minCountToEmpty>1</minCountToEmpty>
+        <drawStackLabel>true</drawStackLabel>
+        <drawContainedThing>true</drawContainedThing>
+        <containedThingOffset>(0,0,0.35)</containedThingOffset>
+        <freezingPointCelsius>0</freezingPointCelsius>
+        <coldTemperatureLimitCelsius>10</coldTemperatureLimitCelsius>
+        <moderateTemperatureLimitCelsius>25</moderateTemperatureLimitCelsius>
+        <hotTemperatureLimitCelsius>35</hotTemperatureLimitCelsius>
+        <coldTemperatureEfficiency>0.4</coldTemperatureEfficiency>
+        <normalTemperatureEfficiency>1</normalTemperatureEfficiency>
+        <warmTemperatureEfficiency>1.2</warmTemperatureEfficiency>
+        <hotTemperatureEfficiency>0.8</hotTemperatureEfficiency>
+        <roofedEfficiency>0.7</roofedEfficiency>
+        <nighttimeEfficiency>0.4</nighttimeEfficiency>
+        <daylightStart>0.25</daylightStart><daylightEnd>0.75</daylightEnd>
+        <pauseDuringRain>true</pauseDuringRain><pauseDuringSnow>true</pauseDuringSnow>
+        <recipes>
+          <li>HR_DryMeat</li>
+          <li>HR_DryFish</li>
+          <li>HR_DryVegetables</li>
+        </recipes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension">
+        <requiredTechnology>HR_Tech_FoodDrying</requiredTechnology>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="HR_DriedFoodBase" ParentName="OrganicProductBase">
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories><li>Foods</li></thingCategories>
+    <graphicData><texPath>Things/Item/Resource/Pemmican</texPath><graphicClass>Graphic_StackCount</graphicClass></graphicData>
+    <stackLimit>75</stackLimit>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <MarketValue>1.0</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <ingestible><foodType>Meat</foodType><preferability>RawBad</preferability><ingestEffect>EatMeat</ingestEffect><ingestSound>RawMeat_Eat</ingestSound></ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable"><daysToRotStart>30</daysToRotStart><rotDestroys>true</rotDestroys></li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="HR_DriedFoodBase">
+    <defName>HR_DriedMeat</defName>
+    <label>dried meat</label>
+    <description>Meat preserved by natural drying. It lasts longer than fresh meat but retains less nutrition than the raw ingredients.</description>
+  </ThingDef>
+
+  <ThingDef ParentName="HR_DriedFoodBase">
+    <defName>HR_DriedFish</defName>
+    <label>dried fish</label>
+    <description>Fish preserved by natural drying. This food is available only when an active content source provides fish ingredients.</description>
+    <graphicData><texPath>Things/Item/Resource/Pemmican</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(203,174,129)</color></graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="HR_DriedFoodBase">
+    <defName>HR_DriedVegetables</defName>
+    <label>dried vegetables</label>
+    <description>Selected vegetables preserved by natural drying. Grain crops are excluded.</description>
+    <graphicData><texPath>Things/Item/Resource/PlantFoodRaw/Potatoes</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(174,145,78)</color></graphicData>
+    <statBases><MarketValue>0.8</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition><FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman></statBases>
+    <ingestible><foodType>VegetableOrFruit</foodType><preferability>RawBad</preferability><ingestEffect>EatVegetarian</ingestEffect><ingestSound>RawVegetable_Eat</ingestSound></ingestible>
+    <comps Inherit="False"><li Class="CompProperties_Rottable"><daysToRotStart>40</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps>
+  </ThingDef>
+</Defs>

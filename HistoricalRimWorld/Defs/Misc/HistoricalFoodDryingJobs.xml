@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>HR_LoadDryingRack</defName>
+    <driverClass>HistoricalRimWorld.Production.Drying.JobDriver_LoadDryingRack</driverClass>
+    <reportString>loading a drying rack.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+  </JobDef>
+  <WorkGiverDef>
+    <defName>HR_LoadDryingRack</defName>
+    <label>load drying racks</label>
+    <giverClass>HistoricalRimWorld.Production.Drying.WorkGiver_LoadDryingRack</giverClass>
+    <workType>Hauling</workType>
+    <verb>load</verb>
+    <priorityInType>80</priorityInType>
+    <gerund>loading drying racks</gerund>
+  </WorkGiverDef>
+</Defs>

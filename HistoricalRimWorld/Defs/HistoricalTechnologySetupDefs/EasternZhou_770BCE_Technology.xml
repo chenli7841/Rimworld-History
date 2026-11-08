@@ -26,6 +26,7 @@
       <li><technology>HR_Tech_Writing</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_WaterManagement</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_Commerce</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_FoodDrying</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
     </technologies>
   </HistoricalRimWorld.Technology.HistoricalTechnologySetupDef>
 </Defs>

@@ -56,15 +56,6 @@
     <researchViewY>0.95</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
-    <defName>HR_Research_TimberFraming</defName>
-    <label>timber framing</label>
-    <description>Develop reliable timber joinery. No single reliable emergence year is assigned; wooden structures are poorly preserved and construction traditions varied.</description>
-    <baseCost>300</baseCost>
-    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
-    <researchViewX>4.50</researchViewX>
-    <researchViewY>1.40</researchViewY>  
-  </ResearchProjectDef>
-  <ResearchProjectDef>
     <defName>HR_Research_RammedEarth</defName>
     <label>rammed earth construction</label>
     <description>Develop compacted earth building methods. No single reliable emergence year is assigned; earthen construction has a long, regionally varied history.</description>
@@ -240,5 +231,14 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_PlantFibres</li></prerequisites>
     <researchViewX>5.50</researchViewX>
     <researchViewY>4.30</researchViewY>  
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>HR_FoodDrying</defName>
+    <label>food drying</label>
+    <description>Establish controlled natural drying to preserve meat and selected vegetables. Drying is an ancient preservation practice, not a first invention date.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>3.50</researchViewX>
+    <researchViewY>5.75</researchViewY>
   </ResearchProjectDef>
 </Defs>

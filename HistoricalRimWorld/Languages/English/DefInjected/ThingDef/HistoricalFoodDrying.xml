@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_DryingRack.label>wooden drying rack</HR_DryingRack.label><HR_DryingRack.description>A simple wooden rack for preserving selected foods by natural drying.</HR_DryingRack.description>
+  <HR_DriedMeat.label>dried meat</HR_DriedMeat.label><HR_DriedMeat.description>Meat preserved by natural drying. It lasts longer than fresh meat but retains less nutrition than the raw ingredients.</HR_DriedMeat.description>
+  <HR_DriedFish.label>dried fish</HR_DriedFish.label><HR_DriedFish.description>Fish preserved by natural drying. This food is available only when an active content source provides fish ingredients.</HR_DriedFish.description>
+  <HR_DriedVegetables.label>dried vegetables</HR_DriedVegetables.label><HR_DriedVegetables.description>Selected vegetables preserved by natural drying. Grain crops are excluded.</HR_DriedVegetables.description>
+</LanguageData>
