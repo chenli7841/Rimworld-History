@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraitDef>
+    <defName>HR_KeenEyes</defName>
+    <commonality>0.08</commonality>
+    <degreeDatas>
+      <li>
+        <label>keen eyes</label>
+        <description>This person has exceptionally sharp eyesight and can notice distant movement more easily than most. Their keen vision extends their scouting range and allows them to shoot bows at targets farther away.</description>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

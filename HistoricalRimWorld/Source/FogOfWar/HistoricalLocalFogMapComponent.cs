@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using HistoricalRimWorld.Characters;
 using HistoricalRimWorld.Scenarios;
 using RimWorld;
 using UnityEngine;
@@ -179,7 +180,8 @@ namespace HistoricalRimWorld.FogOfWar
                         effectiveBaseRadius,
                         dayMultiplier,
                         cachedWeatherMultiplier,
-                        HistoricalVisibilityRadiusUtility.GetEffectiveSkill(pawn));
+                        HistoricalVisibilityRadiusUtility.GetEffectiveSkill(pawn),
+                        HistoricalKeenEyesUtility.GetVisionBonus(pawn));
                     RevealVisibleRadius(pawn.Position, radius, settings?.EnableLineOfSightBlocking == true);
                 }
             }
@@ -363,6 +365,7 @@ namespace HistoricalRimWorld.FogOfWar
                     hash = hash * 31 + Mathf.RoundToInt((pawn.health?.capacities?.GetLevel(PawnCapacityDefOf.Sight) ?? 1f) * 100f);
                     hash = hash * 31 + HistoricalVisibilityRadiusUtility.CalculateSkillBonus(
                         HistoricalVisibilityRadiusUtility.GetEffectiveSkill(pawn));
+                    hash = hash * 31 + (HistoricalKeenEyesUtility.HasTrait(pawn) ? 1 : 0);
                 }
                 return hash;
             }

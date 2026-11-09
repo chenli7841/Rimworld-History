@@ -24,13 +24,15 @@ namespace HistoricalRimWorld.FogOfWar
 
     public static class HistoricalVisibilityRadiusUtility
     {
-        public static int CalculateRadius(float baseRadius, float dayMultiplier, float weatherMultiplier, int effectiveSkill)
+        public static int CalculateRadius(float baseRadius, float dayMultiplier, float weatherMultiplier,
+            int effectiveSkill, int traitBonus = 0)
         {
             int skillBonus = CalculateSkillBonus(effectiveSkill);
             int environmentalRadius = Mathf.RoundToInt(
                 Mathf.Max(0f, baseRadius) * Mathf.Max(0f, dayMultiplier) * Mathf.Max(0f, weatherMultiplier));
 
-            return Mathf.Max(HistoricalVisibilitySettings.MinimumRadius, environmentalRadius + skillBonus);
+            return Mathf.Max(HistoricalVisibilitySettings.MinimumRadius,
+                environmentalRadius + skillBonus + Mathf.Max(0, traitBonus));
         }
 
         public static int CalculateSkillBonus(int skill)

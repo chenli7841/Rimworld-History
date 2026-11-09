@@ -93,6 +93,7 @@ namespace HistoricalRimWorld.Patches.Characters
 
             RemoveTrait(pawn, "HR_EasySleeper");
             RemoveTrait(pawn, "HR_Frugal");
+            RemoveTrait(pawn, "HR_KeenEyes");
         }
 
         private static void RemoveTrait(Pawn pawn, string defName)

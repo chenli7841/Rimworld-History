@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Bow_Short"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="HistoricalRimWorld.Combat.HR_BowWeaponExtension" />
+      </modExtensions>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Bow_Recurve"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="HistoricalRimWorld.Combat.HR_BowWeaponExtension" />
+      </modExtensions>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Bow_Great"]</xpath>
+    <value>
+      <modExtensions>
+        <li Class="HistoricalRimWorld.Combat.HR_BowWeaponExtension" />
+      </modExtensions>
+    </value>
+  </Operation>
+</Patch>
