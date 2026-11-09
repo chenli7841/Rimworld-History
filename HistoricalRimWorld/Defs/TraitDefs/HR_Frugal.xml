@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraitDef>
+    <defName>HR_Frugal</defName>
+    <commonality>0.5</commonality>
+    <degreeDatas>
+      <li>
+        <label>frugal</label>
+        <description>This person is accustomed to a modest way of life and places little value on luxurious housing or fine clothing. A humble room and poorly made garments cause much less dissatisfaction.</description>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Greedy</li>
+    </conflictingTraits>
+  </TraitDef>
+</Defs>

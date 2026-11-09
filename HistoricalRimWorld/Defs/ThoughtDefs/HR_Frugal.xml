@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>HR_LowQualityApparel</defName>
+    <workerClass>HistoricalRimWorld.Characters.ThoughtWorker_LowQualityApparel</workerClass>
+    <stages>
+      <li>
+        <label>awful-quality apparel</label>
+        <description>I am wearing clothing of awful quality.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+      <li>
+        <label>poor-quality apparel</label>
+        <description>I am wearing clothing of poor quality.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li>
+        <label>awful-quality apparel (frugal)</label>
+        <description>This clothing is poorly made, but I do not expect much.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li>
+        <label>poor-quality apparel (frugal)</label>
+        <description>This clothing is rough, but good enough for me.</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_LowQualityApparel.stages.0.label>awful-quality apparel</HR_LowQualityApparel.stages.0.label>
+  <HR_LowQualityApparel.stages.0.description>I am wearing clothing of awful quality.</HR_LowQualityApparel.stages.0.description>
+  <HR_LowQualityApparel.stages.1.label>poor-quality apparel</HR_LowQualityApparel.stages.1.label>
+  <HR_LowQualityApparel.stages.1.description>I am wearing clothing of poor quality.</HR_LowQualityApparel.stages.1.description>
+  <HR_LowQualityApparel.stages.2.label>awful-quality apparel (frugal)</HR_LowQualityApparel.stages.2.label>
+  <HR_LowQualityApparel.stages.2.description>This clothing is poorly made, but I do not expect much.</HR_LowQualityApparel.stages.2.description>
+  <HR_LowQualityApparel.stages.3.label>poor-quality apparel (frugal)</HR_LowQualityApparel.stages.3.label>
+  <HR_LowQualityApparel.stages.3.description>This clothing is rough, but good enough for me.</HR_LowQualityApparel.stages.3.description>
+</LanguageData>

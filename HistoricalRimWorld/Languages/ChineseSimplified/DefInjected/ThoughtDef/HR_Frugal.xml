@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_LowQualityApparel.stages.0.label>粗劣衣物</HR_LowQualityApparel.stages.0.label>
+  <HR_LowQualityApparel.stages.0.description>我穿着品质极差的衣物。</HR_LowQualityApparel.stages.0.description>
+  <HR_LowQualityApparel.stages.1.label>较差衣物</HR_LowQualityApparel.stages.1.label>
+  <HR_LowQualityApparel.stages.1.description>我穿着品质较差的衣物。</HR_LowQualityApparel.stages.1.description>
+  <HR_LowQualityApparel.stages.2.label>粗劣衣物（节俭）</HR_LowQualityApparel.stages.2.label>
+  <HR_LowQualityApparel.stages.2.description>衣物做工粗劣，不过我并不讲究。</HR_LowQualityApparel.stages.2.description>
+  <HR_LowQualityApparel.stages.3.label>较差衣物（节俭）</HR_LowQualityApparel.stages.3.label>
+  <HR_LowQualityApparel.stages.3.description>衣物做工一般，但对我来说足够了。</HR_LowQualityApparel.stages.3.description>
+</LanguageData>

@@ -89,11 +89,37 @@ namespace HistoricalRimWorld.Patches.Characters
 
         private static void Postfix(Pawn pawn)
         {
-            if (HistoricalEasySleeperUtility.IsHistoricalScenarioSelected()
-                || !HistoricalEasySleeperUtility.HasEasySleeper(pawn)) return;
+            if (HistoricalEasySleeperUtility.IsHistoricalScenarioSelected()) return;
 
-            Trait trait = pawn.story.traits.allTraits.Find(item => item?.def?.defName == "HR_EasySleeper");
+            RemoveTrait(pawn, "HR_EasySleeper");
+            RemoveTrait(pawn, "HR_Frugal");
+        }
+
+        private static void RemoveTrait(Pawn pawn, string defName)
+        {
+            if (pawn?.story?.traits == null) return;
+            Trait trait = pawn.story.traits.allTraits.Find(item => item?.def?.defName == defName);
             if (trait != null) pawn.story.traits.RemoveTrait(trait);
+        }
+    }
+
+    /// <summary>Halves only negative mood effects caused by modest housing conditions.</summary>
+    [HarmonyPatch(typeof(Thought), nameof(Thought.MoodOffset))]
+    internal static class HistoricalFrugalHousingMoodPatch
+    {
+        private static void Postfix(Thought __instance, ref float __result)
+        {
+            __result = HistoricalFrugalUtility.AdjustHousingMood(__instance, __result);
+        }
+    }
+
+    /// <summary>Thought_Memory overrides Thought.MoodOffset, so patch that override as well.</summary>
+    [HarmonyPatch(typeof(Thought_Memory), nameof(Thought.MoodOffset))]
+    internal static class HistoricalFrugalHousingMemoryMoodPatch
+    {
+        private static void Postfix(Thought_Memory __instance, ref float __result)
+        {
+            __result = HistoricalFrugalUtility.AdjustHousingMood(__instance, __result);
         }
     }
 }
