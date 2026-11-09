@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraitDef>
+    <defName>HR_ReverenceForNature</defName>
+    <commonality>0.08</commonality>
+    <degreeDatas>
+      <li>
+        <label>reverence for nature</label>
+        <description>This person holds a deep respect for the natural world. Living among flourishing forests and abundant wildlife brings them a sense of peace and fulfillment.</description>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>HR_NatureReverenceMood</defName>
+    <workerClass>HistoricalRimWorld.Characters.ThoughtWorker_NatureReverenceMood</workerClass>
+    <stages>
+      <li><label>at one with nature</label><description>The surrounding landscape brings a quiet sense of comfort.</description><baseMoodEffect>1</baseMoodEffect></li>
+      <li><label>at one with nature</label><description>The surrounding landscape brings a quiet sense of comfort.</description><baseMoodEffect>2</baseMoodEffect></li>
+      <li><label>flourishing greenery</label><description>Thriving trees and wildlife make this a pleasing place to live.</description><baseMoodEffect>3</baseMoodEffect></li>
+      <li><label>flourishing greenery</label><description>Thriving trees and wildlife make this a pleasing place to live.</description><baseMoodEffect>4</baseMoodEffect></li>
+      <li><label>vibrant woodland</label><description>The rich life of the woods is deeply reassuring.</description><baseMoodEffect>5</baseMoodEffect></li>
+      <li><label>vibrant woodland</label><description>The rich life of the woods is deeply reassuring.</description><baseMoodEffect>6</baseMoodEffect></li>
+      <li><label>harmony with nature</label><description>This flourishing ecosystem brings a profound sense of harmony.</description><baseMoodEffect>7</baseMoodEffect></li>
+      <li><label>harmony with nature</label><description>This flourishing ecosystem brings a profound sense of harmony.</description><baseMoodEffect>8</baseMoodEffect></li>
+      <li><label>reverence for all life</label><description>The abundance of the natural world fills this person with awe.</description><baseMoodEffect>9</baseMoodEffect></li>
+    </stages>
+  </ThoughtDef>
+</Defs>

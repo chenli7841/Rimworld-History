@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Bear_Grizzly"]</xpath>
+    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Bear_Polar"]</xpath>
+    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Cougar"]</xpath>
+    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Lynx"]</xpath>
+    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Wolf_Timber"]</xpath>
+    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Wolf_Arctic"]</xpath>
+    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Warg"]</xpath>
+    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+  </Operation>
+</Patch>
