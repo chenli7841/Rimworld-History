@@ -57,15 +57,8 @@ namespace HistoricalRimWorld.Forest
 
         public bool CanGrowAncientTree(IntVec3 cell)
         {
-            if (!IsAncientForestSoil(cell) || !cell.InBounds(map) || !cell.Standable(map)
-                || cell.GetEdifice(map) != null || cell.GetPlant(map) != null)
-                return false;
-
-            TerrainDef terrain = map.terrainGrid.TerrainAt(cell);
-            if (terrain == null || terrain.IsWater || terrain.fertility <= 0f) return false;
-            if (terrain.tags != null && terrain.tags.Contains("Floor")) return false;
-            TerrainAffordanceDef growSoil = DefDatabase<TerrainAffordanceDef>.GetNamedSilentFail("GrowSoil");
-            return growSoil != null && terrain.affordances != null && terrain.affordances.Contains(growSoil);
+            // Historical active soil is a high-quality habitat, not a hard boundary.
+            return AncientForestReproductionUtility.CanSpawnAncientTree(cell, map, null);
         }
 
         internal void RegisterDebugTree(Thing tree)

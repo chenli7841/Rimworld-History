@@ -91,7 +91,7 @@ namespace HistoricalRimWorld.Forest
                 soil.AddAncientForestSoil(candidate.Cell);
             }
 
-            ThingDef treeDef = ChooseSpecies(map, random);
+            ThingDef treeDef = ChooseSpeciesForMap(map, random);
             int spawnedTrees = 0;
             if (treeDef != null)
             {
@@ -146,7 +146,7 @@ namespace HistoricalRimWorld.Forest
             return Math.Abs(z - targetZ) <= corridorWidth && x >= minX && x <= maxX;
         }
 
-        private static ThingDef ChooseSpecies(Map map, Random random)
+        internal static ThingDef ChooseSpeciesForMap(Map map, Random random)
         {
             string biome = map.Biome?.defName ?? string.Empty;
             HashSet<string> regions = new HashSet<string>(StringComparer.Ordinal);
