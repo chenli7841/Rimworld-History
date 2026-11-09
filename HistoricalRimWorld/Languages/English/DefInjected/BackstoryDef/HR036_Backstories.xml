@@ -1,0 +1,903 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <HR_C_001_FarmerSChild>
+    <title>farmer’s child</title>
+    <titleShort>farmer’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned farming and identifying useful plants and developed a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_C_001_FarmerSChild>
+  <HR_C_002_FieldShepherd>
+    <title>field shepherd</title>
+    <titleShort>field shepherd</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned livestock care and animal behavior and developed a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_C_002_FieldShepherd>
+  <HR_C_003_HerbalistSApprentice>
+    <title>herbalist’s apprentice</title>
+    <titleShort>herbalist’s apprentice</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned farming and identifying useful plants and developed a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_C_003_HerbalistSApprentice>
+  <HR_C_004_RiversideFishingChild>
+    <title>riverside fishing child</title>
+    <titleShort>riverside fishing child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned livestock care and animal behavior and developed a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_C_004_RiversideFishingChild>
+  <HR_C_005_HunterSChild>
+    <title>hunter’s child</title>
+    <titleShort>hunter’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned archery and hunting and developed a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_C_005_HunterSChild>
+  <HR_C_006_SilkwormKeeperSChild>
+    <title>silkworm keeper’s child</title>
+    <titleShort>silkworm keeper’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned livestock care and animal behavior and developed a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_C_006_SilkwormKeeperSChild>
+  <HR_C_007_YoungWeaver>
+    <title>young weaver</title>
+    <titleShort>young weaver</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned handmaking tools and workshop processes and developed a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_C_007_YoungWeaver>
+  <HR_C_008_FirewoodGatherer>
+    <title>firewood gatherer</title>
+    <titleShort>firewood gatherer</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned farming and identifying useful plants and developed a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_C_008_FirewoodGatherer>
+  <HR_C_009_OrchardChild>
+    <title>orchard child</title>
+    <titleShort>orchard child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned farming and identifying useful plants and developed a habit of finishing the last tasks. The experience taught them to work with others.</description>
+  </HR_C_009_OrchardChild>
+  <HR_C_010_CanalWorkerSChild>
+    <title>canal worker’s child</title>
+    <titleShort>canal worker’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned building and repair and developed a habit of finding uses for worn tools. It gave them practice adapting to change.</description>
+  </HR_C_010_CanalWorkerSChild>
+  <HR_C_011_GranaryKeeperSChild>
+    <title>granary keeper’s child</title>
+    <titleShort>granary keeper’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned farming and identifying useful plants and developed a habit of observing before acting. Those skills remained useful in later life.</description>
+  </HR_C_011_GranaryKeeperSChild>
+  <HR_C_012_MountainVillageOrphan>
+    <title>mountain village orphan</title>
+    <titleShort>mountain village orphan</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 田野与乡村, 帮家人照看生计. With guidance from older relatives, [PAWN_pronoun] learned farming and identifying useful plants and developed a habit of keeping tools and supplies in order. It also made them familiar with village life.</description>
+  </HR_C_012_MountainVillageOrphan>
+  <HR_C_013_PotterSApprentice>
+    <title>potter’s apprentice</title>
+    <titleShort>potter’s apprentice</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned handmaking tools and workshop processes and developed a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_C_013_PotterSApprentice>
+  <HR_C_014_CarpenterSApprentice>
+    <title>carpenter’s apprentice</title>
+    <titleShort>carpenter’s apprentice</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned building and repair and developed a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_C_014_CarpenterSApprentice>
+  <HR_C_015_BronzeWorkshopChild>
+    <title>bronze workshop child</title>
+    <titleShort>bronze workshop child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned handmaking tools and workshop processes and developed a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_C_015_BronzeWorkshopChild>
+  <HR_C_016_StoneMasonSChild>
+    <title>stone mason’s child</title>
+    <titleShort>stone mason’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned building and repair and developed a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_C_016_StoneMasonSChild>
+  <HR_C_017_BambooWeaver>
+    <title>bamboo weaver</title>
+    <titleShort>bamboo weaver</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned handmaking tools and workshop processes and developed a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_C_017_BambooWeaver>
+  <HR_C_018_LacquerWorkshopChild>
+    <title>lacquer workshop child</title>
+    <titleShort>lacquer workshop child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned ritual music and ornament and developed a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_C_018_LacquerWorkshopChild>
+  <HR_C_019_LeatherworkerSChild>
+    <title>leatherworker’s child</title>
+    <titleShort>leatherworker’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned handmaking tools and workshop processes and developed a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_C_019_LeatherworkerSChild>
+  <HR_C_020_WheelwrightSApprentice>
+    <title>wheelwright’s apprentice</title>
+    <titleShort>wheelwright’s apprentice</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned handmaking tools and workshop processes and developed a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_C_020_WheelwrightSApprentice>
+  <HR_C_021_BowyerSChild>
+    <title>bowyer’s child</title>
+    <titleShort>bowyer’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned handmaking tools and workshop processes and developed a habit of finishing the last tasks. The experience taught them to work with others.</description>
+  </HR_C_021_BowyerSChild>
+  <HR_C_022_JadeWorkerSApprentice>
+    <title>jade worker’s apprentice</title>
+    <titleShort>jade worker’s apprentice</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned ritual music and ornament and developed a habit of finding uses for worn tools. It gave them practice adapting to change.</description>
+  </HR_C_022_JadeWorkerSApprentice>
+  <HR_C_023_CordMaker>
+    <title>cord maker</title>
+    <titleShort>cord maker</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned handmaking tools and workshop processes and developed a habit of observing before acting. Those skills remained useful in later life.</description>
+  </HR_C_023_CordMaker>
+  <HR_C_024_WallBuildingLaborer>
+    <title>wall-building laborer</title>
+    <titleShort>wall-building laborer</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 作坊与匠户, 从旁学习日用工艺. With guidance from older relatives, [PAWN_pronoun] learned building and repair and developed a habit of keeping tools and supplies in order. It also made them familiar with village life.</description>
+  </HR_C_024_WallBuildingLaborer>
+  <HR_C_025_MerchantSChild>
+    <title>merchant’s child</title>
+    <titleShort>merchant’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 市集与道路, 随亲族接触货物旅人. With guidance from older relatives, [PAWN_pronoun] learned custom, trade, and negotiation and developed a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_C_025_MerchantSChild>
+  <HR_C_026_MarketAttendant>
+    <title>market attendant</title>
+    <titleShort>market attendant</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 市集与道路, 随亲族接触货物旅人. With guidance from older relatives, [PAWN_pronoun] learned custom, trade, and negotiation and developed a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_C_026_MarketAttendant>
+  <HR_C_027_FerryFamilyChild>
+    <title>ferry family child</title>
+    <titleShort>ferry family child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 市集与道路, 随亲族接触货物旅人. With guidance from older relatives, [PAWN_pronoun] learned livestock care and animal behavior and developed a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_C_027_FerryFamilyChild>
+  <HR_C_028_WaystationChild>
+    <title>waystation child</title>
+    <titleShort>waystation child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 市集与道路, 随亲族接触货物旅人. With guidance from older relatives, [PAWN_pronoun] learned livestock care and animal behavior and developed a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_C_028_WaystationChild>
+  <HR_C_029_SaltMerchantSChild>
+    <title>salt merchant’s child</title>
+    <titleShort>salt merchant’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 市集与道路, 随亲族接触货物旅人. With guidance from older relatives, [PAWN_pronoun] learned custom, trade, and negotiation and developed a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_C_029_SaltMerchantSChild>
+  <HR_C_030_PackTrainRunner>
+    <title>pack-train runner</title>
+    <titleShort>pack-train runner</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 市集与道路, 随亲族接触货物旅人. With guidance from older relatives, [PAWN_pronoun] learned custom, trade, and negotiation and developed a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_C_030_PackTrainRunner>
+  <HR_C_031_InnHelper>
+    <title>inn helper</title>
+    <titleShort>inn helper</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 市集与道路, 随亲族接触货物旅人. With guidance from older relatives, [PAWN_pronoun] learned food preparation and storage and developed a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_C_031_InnHelper>
+  <HR_C_032_BoatmanSChild>
+    <title>boatman’s child</title>
+    <titleShort>boatman’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 市集与道路, 随亲族接触货物旅人. With guidance from older relatives, [PAWN_pronoun] learned handmaking tools and workshop processes and developed a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_C_032_BoatmanSChild>
+  <HR_C_033_NobleCadet>
+    <title>noble cadet</title>
+    <titleShort>noble cadet</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 宗族与早期教育, 跟随长辈学习礼仪技艺. With guidance from older relatives, [PAWN_pronoun] learned custom, trade, and negotiation and developed a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_C_033_NobleCadet>
+  <HR_C_034_PrincipalLineageHeir>
+    <title>principal lineage heir</title>
+    <titleShort>principal lineage heir</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 宗族与早期教育, 跟随长辈学习礼仪技艺. With guidance from older relatives, [PAWN_pronoun] learned custom, trade, and negotiation and developed a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_C_034_PrincipalLineageHeir>
+  <HR_C_035_VillageSchoolPupil>
+    <title>village school pupil</title>
+    <titleShort>village school pupil</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 宗族与早期教育, 跟随长辈学习礼仪技艺. With guidance from older relatives, [PAWN_pronoun] learned counting, record keeping, and study and developed a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_C_035_VillageSchoolPupil>
+  <HR_C_036_ArchivistSChild>
+    <title>archivist’s child</title>
+    <titleShort>archivist’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 宗族与早期教育, 跟随长辈学习礼仪技艺. With guidance from older relatives, [PAWN_pronoun] learned counting, record keeping, and study and developed a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_C_036_ArchivistSChild>
+  <HR_C_037_RitualAndMusicPupil>
+    <title>ritual and music pupil</title>
+    <titleShort>ritual and music pupil</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 宗族与早期教育, 跟随长辈学习礼仪技艺. With guidance from older relatives, [PAWN_pronoun] learned ritual music and ornament and developed a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_C_037_RitualAndMusicPupil>
+  <HR_C_038_YoungArcher>
+    <title>young archer</title>
+    <titleShort>young archer</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 宗族与早期教育, 跟随长辈学习礼仪技艺. With guidance from older relatives, [PAWN_pronoun] learned archery and hunting and developed a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_C_038_YoungArcher>
+  <HR_C_039_YoungCharioteer>
+    <title>young charioteer</title>
+    <titleShort>young charioteer</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 宗族与早期教育, 跟随长辈学习礼仪技艺. With guidance from older relatives, [PAWN_pronoun] learned livestock care and animal behavior and developed a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_C_039_YoungCharioteer>
+  <HR_C_040_NobleAttendant>
+    <title>noble attendant</title>
+    <titleShort>noble attendant</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 宗族与早期教育, 跟随长辈学习礼仪技艺. With guidance from older relatives, [PAWN_pronoun] learned custom, trade, and negotiation and developed a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_C_040_NobleAttendant>
+  <HR_C_041_TextCopyist>
+    <title>text copyist</title>
+    <titleShort>text copyist</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 宗族与早期教育, 跟随长辈学习礼仪技艺. With guidance from older relatives, [PAWN_pronoun] learned counting, record keeping, and study and developed a habit of finishing the last tasks. The experience taught them to work with others.</description>
+  </HR_C_041_TextCopyist>
+  <HR_C_042_RitualPupil>
+    <title>ritual pupil</title>
+    <titleShort>ritual pupil</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 宗族与早期教育, 跟随长辈学习礼仪技艺. With guidance from older relatives, [PAWN_pronoun] learned custom, trade, and negotiation and developed a habit of finding uses for worn tools. It gave them practice adapting to change.</description>
+  </HR_C_042_RitualPupil>
+  <HR_C_043_WarOrphan>
+    <title>war orphan</title>
+    <titleShort>war orphan</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 战乱与迁徙, 协助家人寻找生计. With guidance from older relatives, [PAWN_pronoun] learned staff fighting and close combat and developed a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_C_043_WarOrphan>
+  <HR_C_044_DisplacedOrphan>
+    <title>displaced orphan</title>
+    <titleShort>displaced orphan</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 战乱与迁徙, 协助家人寻找生计. With guidance from older relatives, [PAWN_pronoun] learned farming and identifying useful plants and developed a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_C_044_DisplacedOrphan>
+  <HR_C_045_BorderHerder>
+    <title>border herder</title>
+    <titleShort>border herder</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 战乱与迁徙, 协助家人寻找生计. With guidance from older relatives, [PAWN_pronoun] learned livestock care and animal behavior and developed a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_C_045_BorderHerder>
+  <HR_C_046_GarrisonSoldierSChild>
+    <title>garrison soldier’s child</title>
+    <titleShort>garrison soldier’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 战乱与迁徙, 协助家人寻找生计. With guidance from older relatives, [PAWN_pronoun] learned archery and hunting and developed a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_C_046_GarrisonSoldierSChild>
+  <HR_C_047_FleeingLaborer>
+    <title>fleeing laborer</title>
+    <titleShort>fleeing laborer</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 战乱与迁徙, 协助家人寻找生计. With guidance from older relatives, [PAWN_pronoun] learned building and repair and developed a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_C_047_FleeingLaborer>
+  <HR_C_048_WartimeBeggar>
+    <title>wartime beggar</title>
+    <titleShort>wartime beggar</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 战乱与迁徙, 协助家人寻找生计. With guidance from older relatives, [PAWN_pronoun] learned custom, trade, and negotiation and developed a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_C_048_WartimeBeggar>
+  <HR_C_049_HillFortYouth>
+    <title>hill-fort youth</title>
+    <titleShort>hill-fort youth</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 战乱与迁徙, 协助家人寻找生计. With guidance from older relatives, [PAWN_pronoun] learned archery and hunting and developed a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_C_049_HillFortYouth>
+  <HR_C_050_RefugeeCampChild>
+    <title>refugee camp child</title>
+    <titleShort>refugee camp child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 战乱与迁徙, 协助家人寻找生计. With guidance from older relatives, [PAWN_pronoun] learned herb gathering and care for the ill and developed a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_C_050_RefugeeCampChild>
+  <HR_C_051_CaptiveServantChild>
+    <title>captive servant child</title>
+    <titleShort>captive servant child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 战乱与迁徙, 协助家人寻找生计. With guidance from older relatives, [PAWN_pronoun] learned handmaking tools and workshop processes and developed a habit of finishing the last tasks. The experience taught them to work with others.</description>
+  </HR_C_051_CaptiveServantChild>
+  <HR_C_052_DispossessedYouth>
+    <title>dispossessed youth</title>
+    <titleShort>dispossessed youth</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 战乱与迁徙, 协助家人寻找生计. With guidance from older relatives, [PAWN_pronoun] learned farming and identifying useful plants and developed a habit of finding uses for worn tools. It gave them practice adapting to change.</description>
+  </HR_C_052_DispossessedYouth>
+  <HR_C_053_ShamanSApprentice>
+    <title>shaman’s apprentice</title>
+    <titleShort>shaman’s apprentice</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 乡里与仪式生活, 跟随师长参与日常事务. With guidance from older relatives, [PAWN_pronoun] learned custom, trade, and negotiation and developed a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_C_053_ShamanSApprentice>
+  <HR_C_054_HealerSPupil>
+    <title>healer’s pupil</title>
+    <titleShort>healer’s pupil</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 乡里与仪式生活, 跟随师长参与日常事务. With guidance from older relatives, [PAWN_pronoun] learned herb gathering and care for the ill and developed a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_C_054_HealerSPupil>
+  <HR_C_055_DivinerSChild>
+    <title>diviner’s child</title>
+    <titleShort>diviner’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 乡里与仪式生活, 跟随师长参与日常事务. With guidance from older relatives, [PAWN_pronoun] learned counting, record keeping, and study and developed a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_C_055_DivinerSChild>
+  <HR_C_056_GraveKeeperSChild>
+    <title>grave keeper’s child</title>
+    <titleShort>grave keeper’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 乡里与仪式生活, 跟随师长参与日常事务. With guidance from older relatives, [PAWN_pronoun] learned building and repair and developed a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_C_056_GraveKeeperSChild>
+  <HR_C_057_MusicianSChild>
+    <title>musician’s child</title>
+    <titleShort>musician’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 乡里与仪式生活, 跟随师长参与日常事务. With guidance from older relatives, [PAWN_pronoun] learned ritual music and ornament and developed a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_C_057_MusicianSChild>
+  <HR_C_058_BlindMusicianSApprentice>
+    <title>blind musician’s apprentice</title>
+    <titleShort>blind musician’s apprentice</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 乡里与仪式生活, 跟随师长参与日常事务. With guidance from older relatives, [PAWN_pronoun] learned ritual music and ornament and developed a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_C_058_BlindMusicianSApprentice>
+  <HR_C_059_MountainRecluseSChild>
+    <title>mountain recluse’s child</title>
+    <titleShort>mountain recluse’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 乡里与仪式生活, 跟随师长参与日常事务. With guidance from older relatives, [PAWN_pronoun] learned farming and identifying useful plants and developed a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_C_059_MountainRecluseSChild>
+  <HR_C_060_ItinerantHealerSChild>
+    <title>itinerant healer’s child</title>
+    <titleShort>itinerant healer’s child</titleShort>
+    <description>[PAWN_nameDef] spent childhood around 乡里与仪式生活, 跟随师长参与日常事务. With guidance from older relatives, [PAWN_pronoun] learned herb gathering and care for the ill and developed a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_C_060_ItinerantHealerSChild>
+  <HR_A_001_Smallholder>
+    <title>smallholder</title>
+    <titleShort>smallholder</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in farming and identifying useful plants, along with a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_A_001_Smallholder>
+  <HR_A_002_TenantFarmer>
+    <title>tenant farmer</title>
+    <titleShort>tenant farmer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in farming and identifying useful plants, along with a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_A_002_TenantFarmer>
+  <HR_A_003_FieldSteward>
+    <title>field steward</title>
+    <titleShort>field steward</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in farming and identifying useful plants, along with a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_A_003_FieldSteward>
+  <HR_A_004_CanalBuilder>
+    <title>canal builder</title>
+    <titleShort>canal builder</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in building and repair, along with a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_A_004_CanalBuilder>
+  <HR_A_005_WaterworksArtisan>
+    <title>waterworks artisan</title>
+    <titleShort>waterworks artisan</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in building and repair, along with a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_A_005_WaterworksArtisan>
+  <HR_A_006_OrchardKeeper>
+    <title>orchard keeper</title>
+    <titleShort>orchard keeper</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in farming and identifying useful plants, along with a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_A_006_OrchardKeeper>
+  <HR_A_007_HerbGatherer>
+    <title>herb gatherer</title>
+    <titleShort>herb gatherer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in farming and identifying useful plants, along with a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_A_007_HerbGatherer>
+  <HR_A_008_Woodcutter>
+    <title>woodcutter</title>
+    <titleShort>woodcutter</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in farming and identifying useful plants, along with a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_A_008_Woodcutter>
+  <HR_A_009_VillageHunter>
+    <title>village hunter</title>
+    <titleShort>village hunter</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in archery and hunting, along with a habit of finishing the last tasks. The experience taught them to work with others.</description>
+  </HR_A_009_VillageHunter>
+  <HR_A_010_Fisher>
+    <title>fisher</title>
+    <titleShort>fisher</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in livestock care and animal behavior, along with a habit of finding uses for worn tools. It gave them practice adapting to change.</description>
+  </HR_A_010_Fisher>
+  <HR_A_011_Shepherd>
+    <title>shepherd</title>
+    <titleShort>shepherd</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in livestock care and animal behavior, along with a habit of observing before acting. Those skills remained useful in later life.</description>
+  </HR_A_011_Shepherd>
+  <HR_A_012_CattleKeeper>
+    <title>cattle keeper</title>
+    <titleShort>cattle keeper</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in livestock care and animal behavior, along with a habit of keeping tools and supplies in order. It also made them familiar with village life.</description>
+  </HR_A_012_CattleKeeper>
+  <HR_A_013_HorseBreeder>
+    <title>horse breeder</title>
+    <titleShort>horse breeder</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in livestock care and animal behavior, along with a habit of remembering routes and landmarks. The experience taught them to work with others.</description>
+  </HR_A_013_HorseBreeder>
+  <HR_A_014_SilkwormRaiser>
+    <title>silkworm raiser</title>
+    <titleShort>silkworm raiser</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in livestock care and animal behavior, along with a habit of trying unfamiliar tasks repeatedly. It gave them practice adapting to change.</description>
+  </HR_A_014_SilkwormRaiser>
+  <HR_A_015_VillageWeaver>
+    <title>village weaver</title>
+    <titleShort>village weaver</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of checking materials carefully. Those skills remained useful in later life.</description>
+  </HR_A_015_VillageWeaver>
+  <HR_A_016_GrainProcessor>
+    <title>grain processor</title>
+    <titleShort>grain processor</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in food preparation and storage, along with a habit of looking out for companions. It also made them familiar with village life.</description>
+  </HR_A_016_GrainProcessor>
+  <HR_A_017_GranaryKeeper>
+    <title>granary keeper</title>
+    <titleShort>granary keeper</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of watching weather and seasons. The experience taught them to work with others.</description>
+  </HR_A_017_GranaryKeeper>
+  <HR_A_018_VillageElder>
+    <title>village elder</title>
+    <titleShort>village elder</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of speaking carefully and observing local courtesies. It gave them practice adapting to change.</description>
+  </HR_A_018_VillageElder>
+  <HR_A_019_LocalMediator>
+    <title>local mediator</title>
+    <titleShort>local mediator</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of finishing the last tasks. Those skills remained useful in later life.</description>
+  </HR_A_019_LocalMediator>
+  <HR_A_020_FamineRefugeeFarmer>
+    <title>famine refugee farmer</title>
+    <titleShort>famine refugee farmer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 村社田地, 经营耕作、畜养或储粮. Practice built [PAWN_possessive] skill in farming and identifying useful plants, along with a habit of finding uses for worn tools. It also made them familiar with village life.</description>
+  </HR_A_020_FamineRefugeeFarmer>
+  <HR_A_021_Potter>
+    <title>potter</title>
+    <titleShort>potter</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_A_021_Potter>
+  <HR_A_022_KilnWorker>
+    <title>kiln worker</title>
+    <titleShort>kiln worker</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_A_022_KilnWorker>
+  <HR_A_023_Woodworker>
+    <title>woodworker</title>
+    <titleShort>woodworker</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in building and repair, along with a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_A_023_Woodworker>
+  <HR_A_024_HouseBuilder>
+    <title>house builder</title>
+    <titleShort>house builder</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in building and repair, along with a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_A_024_HouseBuilder>
+  <HR_A_025_BronzeCaster>
+    <title>bronze caster</title>
+    <titleShort>bronze caster</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_A_025_BronzeCaster>
+  <HR_A_026_WeaponsCaster>
+    <title>weapons caster</title>
+    <titleShort>weapons caster</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_A_026_WeaponsCaster>
+  <HR_A_027_FarmToolMaker>
+    <title>farm-tool maker</title>
+    <titleShort>farm-tool maker</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_A_027_FarmToolMaker>
+  <HR_A_028_StoneMason>
+    <title>stone mason</title>
+    <titleShort>stone mason</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in building and repair, along with a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_A_028_StoneMason>
+  <HR_A_029_JadeArtisan>
+    <title>jade artisan</title>
+    <titleShort>jade artisan</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in ritual music and ornament, along with a habit of finishing the last tasks. The experience taught them to work with others.</description>
+  </HR_A_029_JadeArtisan>
+  <HR_A_030_LacquerArtisan>
+    <title>lacquer artisan</title>
+    <titleShort>lacquer artisan</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in ritual music and ornament, along with a habit of finding uses for worn tools. It gave them practice adapting to change.</description>
+  </HR_A_030_LacquerArtisan>
+  <HR_A_031_Leatherworker>
+    <title>leatherworker</title>
+    <titleShort>leatherworker</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of observing before acting. Those skills remained useful in later life.</description>
+  </HR_A_031_Leatherworker>
+  <HR_A_032_BambooArtisan>
+    <title>bamboo artisan</title>
+    <titleShort>bamboo artisan</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of keeping tools and supplies in order. It also made them familiar with village life.</description>
+  </HR_A_032_BambooArtisan>
+  <HR_A_033_Wheelwright>
+    <title>wheelwright</title>
+    <titleShort>wheelwright</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of remembering routes and landmarks. The experience taught them to work with others.</description>
+  </HR_A_033_Wheelwright>
+  <HR_A_034_ChariotMaker>
+    <title>chariot maker</title>
+    <titleShort>chariot maker</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of trying unfamiliar tasks repeatedly. It gave them practice adapting to change.</description>
+  </HR_A_034_ChariotMaker>
+  <HR_A_035_Bowyer>
+    <title>bowyer</title>
+    <titleShort>bowyer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of checking materials carefully. Those skills remained useful in later life.</description>
+  </HR_A_035_Bowyer>
+  <HR_A_036_ArrowMaker>
+    <title>arrow maker</title>
+    <titleShort>arrow maker</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of looking out for companions. It also made them familiar with village life.</description>
+  </HR_A_036_ArrowMaker>
+  <HR_A_037_FortificationBuilder>
+    <title>fortification builder</title>
+    <titleShort>fortification builder</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in building and repair, along with a habit of watching weather and seasons. The experience taught them to work with others.</description>
+  </HR_A_037_FortificationBuilder>
+  <HR_A_038_BridgeBuilder>
+    <title>bridge builder</title>
+    <titleShort>bridge builder</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in building and repair, along with a habit of speaking carefully and observing local courtesies. It gave them practice adapting to change.</description>
+  </HR_A_038_BridgeBuilder>
+  <HR_A_039_QuarryWorker>
+    <title>quarry worker</title>
+    <titleShort>quarry worker</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in quarrying and recognizing ore, along with a habit of finishing the last tasks. Those skills remained useful in later life.</description>
+  </HR_A_039_QuarryWorker>
+  <HR_A_040_Ironworker>
+    <title>ironworker</title>
+    <titleShort>ironworker</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 手工作坊, 参与选料、制作或营造. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of finding uses for worn tools. It also made them familiar with village life.</description>
+  </HR_A_040_Ironworker>
+  <HR_A_041_ItinerantTrader>
+    <title>itinerant trader</title>
+    <titleShort>itinerant trader</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_A_041_ItinerantTrader>
+  <HR_A_042_SaltMerchant>
+    <title>salt merchant</title>
+    <titleShort>salt merchant</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_A_042_SaltMerchant>
+  <HR_A_043_GrainMerchant>
+    <title>grain merchant</title>
+    <titleShort>grain merchant</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_A_043_GrainMerchant>
+  <HR_A_044_LivestockTrader>
+    <title>livestock trader</title>
+    <titleShort>livestock trader</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_A_044_LivestockTrader>
+  <HR_A_045_ClothMerchant>
+    <title>cloth merchant</title>
+    <titleShort>cloth merchant</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_A_045_ClothMerchant>
+  <HR_A_046_PotteryTrader>
+    <title>pottery trader</title>
+    <titleShort>pottery trader</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_A_046_PotteryTrader>
+  <HR_A_047_HorseTrader>
+    <title>horse trader</title>
+    <titleShort>horse trader</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_A_047_HorseTrader>
+  <HR_A_048_LongDistanceMerchant>
+    <title>long-distance merchant</title>
+    <titleShort>long-distance merchant</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_A_048_LongDistanceMerchant>
+  <HR_A_049_MarketBroker>
+    <title>market broker</title>
+    <titleShort>market broker</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of finishing the last tasks. The experience taught them to work with others.</description>
+  </HR_A_049_MarketBroker>
+  <HR_A_050_Innkeeper>
+    <title>innkeeper</title>
+    <titleShort>innkeeper</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of finding uses for worn tools. It gave them practice adapting to change.</description>
+  </HR_A_050_Innkeeper>
+  <HR_A_051_BoatTrader>
+    <title>boat trader</title>
+    <titleShort>boat trader</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of observing before acting. Those skills remained useful in later life.</description>
+  </HR_A_051_BoatTrader>
+  <HR_A_052_FerryKeeper>
+    <title>ferry keeper</title>
+    <titleShort>ferry keeper</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of keeping tools and supplies in order. It also made them familiar with village life.</description>
+  </HR_A_052_FerryKeeper>
+  <HR_A_053_CartDriver>
+    <title>cart driver</title>
+    <titleShort>cart driver</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in livestock care and animal behavior, along with a habit of remembering routes and landmarks. The experience taught them to work with others.</description>
+  </HR_A_053_CartDriver>
+  <HR_A_054_CaravanGuard>
+    <title>caravan guard</title>
+    <titleShort>caravan guard</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in archery and hunting, along with a habit of trying unfamiliar tasks repeatedly. It gave them practice adapting to change.</description>
+  </HR_A_054_CaravanGuard>
+  <HR_A_055_StreetPeddler>
+    <title>street peddler</title>
+    <titleShort>street peddler</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 市肆商道, 经手交易、接待或运送货物. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of checking materials carefully. Those skills remained useful in later life.</description>
+  </HR_A_055_StreetPeddler>
+  <HR_A_056_MilitiaMember>
+    <title>militia member</title>
+    <titleShort>militia member</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in staff fighting and close combat, along with a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_A_056_MilitiaMember>
+  <HR_A_057_BorderSoldier>
+    <title>border soldier</title>
+    <titleShort>border soldier</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in archery and hunting, along with a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_A_057_BorderSoldier>
+  <HR_A_058_Charioteer>
+    <title>charioteer</title>
+    <titleShort>charioteer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in livestock care and animal behavior, along with a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_A_058_Charioteer>
+  <HR_A_059_ChariotWarrior>
+    <title>chariot warrior</title>
+    <titleShort>chariot warrior</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in archery and hunting, along with a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_A_059_ChariotWarrior>
+  <HR_A_060_Spearman>
+    <title>spearman</title>
+    <titleShort>spearman</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in staff fighting and close combat, along with a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_A_060_Spearman>
+  <HR_A_061_Archer>
+    <title>archer</title>
+    <titleShort>archer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in archery and hunting, along with a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_A_061_Archer>
+  <HR_A_062_GateGuard>
+    <title>gate guard</title>
+    <titleShort>gate guard</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in staff fighting and close combat, along with a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_A_062_GateGuard>
+  <HR_A_063_BorderPatrol>
+    <title>border patrol</title>
+    <titleShort>border patrol</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in archery and hunting, along with a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_A_063_BorderPatrol>
+  <HR_A_064_Scout>
+    <title>scout</title>
+    <titleShort>scout</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in archery and hunting, along with a habit of finishing the last tasks. The experience taught them to work with others.</description>
+  </HR_A_064_Scout>
+  <HR_A_065_NobleWarrior>
+    <title>noble warrior</title>
+    <titleShort>noble warrior</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in staff fighting and close combat, along with a habit of finding uses for worn tools. It gave them practice adapting to change.</description>
+  </HR_A_065_NobleWarrior>
+  <HR_A_066_ArmyMedic>
+    <title>army medic</title>
+    <titleShort>army medic</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in herb gathering and care for the ill, along with a habit of observing before acting. Those skills remained useful in later life.</description>
+  </HR_A_066_ArmyMedic>
+  <HR_A_067_ArmsArtisan>
+    <title>arms artisan</title>
+    <titleShort>arms artisan</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of keeping tools and supplies in order. It also made them familiar with village life.</description>
+  </HR_A_067_ArmsArtisan>
+  <HR_A_068_Quartermaster>
+    <title>quartermaster</title>
+    <titleShort>quartermaster</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of remembering routes and landmarks. The experience taught them to work with others.</description>
+  </HR_A_068_Quartermaster>
+  <HR_A_069_CampCook>
+    <title>camp cook</title>
+    <titleShort>camp cook</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in food preparation and storage, along with a habit of trying unfamiliar tasks repeatedly. It gave them practice adapting to change.</description>
+  </HR_A_069_CampCook>
+  <HR_A_070_BattlefieldScavenger>
+    <title>battlefield scavenger</title>
+    <titleShort>battlefield scavenger</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in staff fighting and close combat, along with a habit of checking materials carefully. Those skills remained useful in later life.</description>
+  </HR_A_070_BattlefieldScavenger>
+  <HR_A_071_Veteran>
+    <title>veteran</title>
+    <titleShort>veteran</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in staff fighting and close combat, along with a habit of looking out for companions. It also made them familiar with village life.</description>
+  </HR_A_071_Veteran>
+  <HR_A_072_Deserter>
+    <title>deserter</title>
+    <titleShort>deserter</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in staff fighting and close combat, along with a habit of watching weather and seasons. The experience taught them to work with others.</description>
+  </HR_A_072_Deserter>
+  <HR_A_073_DefenseCommander>
+    <title>defense commander</title>
+    <titleShort>defense commander</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in staff fighting and close combat, along with a habit of speaking carefully and observing local courtesies. It gave them practice adapting to change.</description>
+  </HR_A_073_DefenseCommander>
+  <HR_A_074_CavalryRider>
+    <title>cavalry rider</title>
+    <titleShort>cavalry rider</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in livestock care and animal behavior, along with a habit of finishing the last tasks. Those skills remained useful in later life.</description>
+  </HR_A_074_CavalryRider>
+  <HR_A_075_Crossbowman>
+    <title>crossbowman</title>
+    <titleShort>crossbowman</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡邑军伍, 承担训练、巡守或军需事务. Practice built [PAWN_possessive] skill in archery and hunting, along with a habit of finding uses for worn tools. It also made them familiar with village life.</description>
+  </HR_A_075_Crossbowman>
+  <HR_A_076_LineageRetainer>
+    <title>lineage retainer</title>
+    <titleShort>lineage retainer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_A_076_LineageRetainer>
+  <HR_A_077_NobleClient>
+    <title>noble client</title>
+    <titleShort>noble client</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_A_077_NobleClient>
+  <HR_A_078_PrincelyEnvoy>
+    <title>princely envoy</title>
+    <titleShort>princely envoy</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_A_078_PrincelyEnvoy>
+  <HR_A_079_CourtClerk>
+    <title>court clerk</title>
+    <titleShort>court clerk</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_A_079_CourtClerk>
+  <HR_A_080_ArchiveKeeper>
+    <title>archive keeper</title>
+    <titleShort>archive keeper</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_A_080_ArchiveKeeper>
+  <HR_A_081_RitualOfficer>
+    <title>ritual officer</title>
+    <titleShort>ritual officer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_A_081_RitualOfficer>
+  <HR_A_082_CourtMusician>
+    <title>court musician</title>
+    <titleShort>court musician</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in ritual music and ornament, along with a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_A_082_CourtMusician>
+  <HR_A_083_VillageTutor>
+    <title>village tutor</title>
+    <titleShort>village tutor</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_A_083_VillageTutor>
+  <HR_A_084_TravelingScholar>
+    <title>traveling scholar</title>
+    <titleShort>traveling scholar</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of finishing the last tasks. The experience taught them to work with others.</description>
+  </HR_A_084_TravelingScholar>
+  <HR_A_085_PersuasiveEnvoy>
+    <title>persuasive envoy</title>
+    <titleShort>persuasive envoy</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of finding uses for worn tools. It gave them practice adapting to change.</description>
+  </HR_A_085_PersuasiveEnvoy>
+  <HR_A_086_NobleCadet>
+    <title>noble cadet</title>
+    <titleShort>noble cadet</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of observing before acting. Those skills remained useful in later life.</description>
+  </HR_A_086_NobleCadet>
+  <HR_A_087_DisgracedNoble>
+    <title>disgraced noble</title>
+    <titleShort>disgraced noble</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of keeping tools and supplies in order. It also made them familiar with village life.</description>
+  </HR_A_087_DisgracedNoble>
+  <HR_A_088_LineageElder>
+    <title>lineage elder</title>
+    <titleShort>lineage elder</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of remembering routes and landmarks. The experience taught them to work with others.</description>
+  </HR_A_088_LineageElder>
+  <HR_A_089_TownClerk>
+    <title>town clerk</title>
+    <titleShort>town clerk</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of trying unfamiliar tasks repeatedly. It gave them practice adapting to change.</description>
+  </HR_A_089_TownClerk>
+  <HR_A_090_LevyRegistrar>
+    <title>levy registrar</title>
+    <titleShort>levy registrar</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of checking materials carefully. Those skills remained useful in later life.</description>
+  </HR_A_090_LevyRegistrar>
+  <HR_A_091_GranaryOfficer>
+    <title>granary officer</title>
+    <titleShort>granary officer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of looking out for companions. It also made them familiar with village life.</description>
+  </HR_A_091_GranaryOfficer>
+  <HR_A_092_LegalClerk>
+    <title>legal clerk</title>
+    <titleShort>legal clerk</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of watching weather and seasons. The experience taught them to work with others.</description>
+  </HR_A_092_LegalClerk>
+  <HR_A_093_ReformOfficial>
+    <title>reform official</title>
+    <titleShort>reform official</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of speaking carefully and observing local courtesies. It gave them practice adapting to change.</description>
+  </HR_A_093_ReformOfficial>
+  <HR_A_094_CommanderyClerk>
+    <title>commandery clerk</title>
+    <titleShort>commandery clerk</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of finishing the last tasks. Those skills remained useful in later life.</description>
+  </HR_A_094_CommanderyClerk>
+  <HR_A_095_DiplomaticStrategist>
+    <title>diplomatic strategist</title>
+    <titleShort>diplomatic strategist</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 宗族与乡邑政务, 处理礼仪、文书或交涉事务. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of finding uses for worn tools. It also made them familiar with village life.</description>
+  </HR_A_095_DiplomaticStrategist>
+  <HR_A_096_VillageHealer>
+    <title>village healer</title>
+    <titleShort>village healer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in herb gathering and care for the ill, along with a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_A_096_VillageHealer>
+  <HR_A_097_ItinerantHealer>
+    <title>itinerant healer</title>
+    <titleShort>itinerant healer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in herb gathering and care for the ill, along with a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_A_097_ItinerantHealer>
+  <HR_A_098_Herbalist>
+    <title>herbalist</title>
+    <titleShort>herbalist</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in farming and identifying useful plants, along with a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_A_098_Herbalist>
+  <HR_A_099_Caregiver>
+    <title>caregiver</title>
+    <titleShort>caregiver</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in herb gathering and care for the ill, along with a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_A_099_Caregiver>
+  <HR_A_100_Midwife>
+    <title>midwife</title>
+    <titleShort>midwife</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in herb gathering and care for the ill, along with a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_A_100_Midwife>
+  <HR_A_101_RitualSpecialist>
+    <title>ritual specialist</title>
+    <titleShort>ritual specialist</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_A_101_RitualSpecialist>
+  <HR_A_102_Diviner>
+    <title>diviner</title>
+    <titleShort>diviner</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_A_102_Diviner>
+  <HR_A_103_RitualLeader>
+    <title>ritual leader</title>
+    <titleShort>ritual leader</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_A_103_RitualLeader>
+  <HR_A_104_RitualVesselArtisan>
+    <title>ritual vessel artisan</title>
+    <titleShort>ritual vessel artisan</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in ritual music and ornament, along with a habit of finishing the last tasks. The experience taught them to work with others.</description>
+  </HR_A_104_RitualVesselArtisan>
+  <HR_A_105_Musician>
+    <title>musician</title>
+    <titleShort>musician</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in ritual music and ornament, along with a habit of finding uses for worn tools. It gave them practice adapting to change.</description>
+  </HR_A_105_Musician>
+  <HR_A_106_ZitherPlayer>
+    <title>zither player</title>
+    <titleShort>zither player</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in ritual music and ornament, along with a habit of observing before acting. Those skills remained useful in later life.</description>
+  </HR_A_106_ZitherPlayer>
+  <HR_A_107_Drummer>
+    <title>drummer</title>
+    <titleShort>drummer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in ritual music and ornament, along with a habit of keeping tools and supplies in order. It also made them familiar with village life.</description>
+  </HR_A_107_Drummer>
+  <HR_A_108_PoetAndSinger>
+    <title>poet and singer</title>
+    <titleShort>poet and singer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in ritual music and ornament, along with a habit of remembering routes and landmarks. The experience taught them to work with others.</description>
+  </HR_A_108_PoetAndSinger>
+  <HR_A_109_RitualInstructor>
+    <title>ritual instructor</title>
+    <titleShort>ritual instructor</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in custom, trade, and negotiation, along with a habit of trying unfamiliar tasks repeatedly. It gave them practice adapting to change.</description>
+  </HR_A_109_RitualInstructor>
+  <HR_A_110_ReclusiveScholar>
+    <title>reclusive scholar</title>
+    <titleShort>reclusive scholar</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 乡里医药与艺事, 为邻里照护或传授技艺. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of checking materials carefully. Those skills remained useful in later life.</description>
+  </HR_A_110_ReclusiveScholar>
+  <HR_A_111_DisplacedFarmer>
+    <title>displaced farmer</title>
+    <titleShort>displaced farmer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 流亡与山野道路, 在动荡中谋生并照应同伴. Practice built [PAWN_possessive] skill in farming and identifying useful plants, along with a habit of observing before acting. The experience taught them to work with others.</description>
+  </HR_A_111_DisplacedFarmer>
+  <HR_A_112_FleeingLaborer>
+    <title>fleeing laborer</title>
+    <titleShort>fleeing laborer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 流亡与山野道路, 在动荡中谋生并照应同伴. Practice built [PAWN_possessive] skill in building and repair, along with a habit of keeping tools and supplies in order. It gave them practice adapting to change.</description>
+  </HR_A_112_FleeingLaborer>
+  <HR_A_113_WarRefugee>
+    <title>war refugee</title>
+    <titleShort>war refugee</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 流亡与山野道路, 在动荡中谋生并照应同伴. Practice built [PAWN_possessive] skill in farming and identifying useful plants, along with a habit of remembering routes and landmarks. Those skills remained useful in later life.</description>
+  </HR_A_113_WarRefugee>
+  <HR_A_114_MountainHermit>
+    <title>mountain hermit</title>
+    <titleShort>mountain hermit</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 流亡与山野道路, 在动荡中谋生并照应同伴. Practice built [PAWN_possessive] skill in farming and identifying useful plants, along with a habit of trying unfamiliar tasks repeatedly. It also made them familiar with village life.</description>
+  </HR_A_114_MountainHermit>
+  <HR_A_115_HillFortLeader>
+    <title>hill-fort leader</title>
+    <titleShort>hill-fort leader</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 流亡与山野道路, 在动荡中谋生并照应同伴. Practice built [PAWN_possessive] skill in staff fighting and close combat, along with a habit of checking materials carefully. The experience taught them to work with others.</description>
+  </HR_A_115_HillFortLeader>
+  <HR_A_116_HillFortHunter>
+    <title>hill-fort hunter</title>
+    <titleShort>hill-fort hunter</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 流亡与山野道路, 在动荡中谋生并照应同伴. Practice built [PAWN_possessive] skill in archery and hunting, along with a habit of looking out for companions. It gave them practice adapting to change.</description>
+  </HR_A_116_HillFortHunter>
+  <HR_A_117_DisplacedArtisan>
+    <title>displaced artisan</title>
+    <titleShort>displaced artisan</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 流亡与山野道路, 在动荡中谋生并照应同伴. Practice built [PAWN_possessive] skill in handmaking tools and workshop processes, along with a habit of watching weather and seasons. Those skills remained useful in later life.</description>
+  </HR_A_117_DisplacedArtisan>
+  <HR_A_118_DispossessedScholar>
+    <title>dispossessed scholar</title>
+    <titleShort>dispossessed scholar</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 流亡与山野道路, 在动荡中谋生并照应同伴. Practice built [PAWN_possessive] skill in counting, record keeping, and study, along with a habit of speaking carefully and observing local courtesies. It also made them familiar with village life.</description>
+  </HR_A_118_DispossessedScholar>
+  <HR_A_119_CaptiveLaborer>
+    <title>captive laborer</title>
+    <titleShort>captive laborer</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 流亡与山野道路, 在动荡中谋生并照应同伴. Practice built [PAWN_possessive] skill in building and repair, along with a habit of finishing the last tasks. The experience taught them to work with others.</description>
+  </HR_A_119_CaptiveLaborer>
+  <HR_A_120_WanderingWarrior>
+    <title>wandering warrior</title>
+    <titleShort>wandering warrior</titleShort>
+    <description>Before joining the colony, [PAWN_nameDef] worked around 流亡与山野道路, 在动荡中谋生并照应同伴. Practice built [PAWN_possessive] skill in staff fighting and close combat, along with a habit of finding uses for worn tools. It gave them practice adapting to change.</description>
+  </HR_A_120_WanderingWarrior>
+</LanguageData>

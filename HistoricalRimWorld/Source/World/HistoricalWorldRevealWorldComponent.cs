@@ -195,7 +195,9 @@ namespace HistoricalRimWorld.World
         public override void WorldComponentOnGUI()
         {
             base.WorldComponentOnGUI();
-            if (!initialized || Find.World != world) return;
+            // Keep the map briefing available during world setup, but remove this
+            // large overlay once a colony is actually running.
+            if (!initialized || Find.World != world || Current.ProgramState == ProgramState.Playing) return;
             HistoricalWorldMapUI.Draw(this);
         }
 
