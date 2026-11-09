@@ -61,8 +61,8 @@
     <label>sealed pottery storage</label>
     <description>Develop reliable sealing and storage practices for pottery vessels. Pottery storage is ancient; this represents a dependable local method, not the invention of pottery vessels.</description>
     <baseCost>450</baseCost>
-    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
-    <researchViewX>4.50</researchViewX>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_GrainStorage</li></prerequisites>
+    <researchViewX>5.50</researchViewX>
     <researchViewY>0.95</researchViewY>
   </ResearchProjectDef>
   <ResearchProjectDef>

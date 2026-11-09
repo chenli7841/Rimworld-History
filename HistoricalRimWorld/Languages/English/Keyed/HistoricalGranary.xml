@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Granary_Capacity>Grain storage slots: {0} / {1} stacks</HR_Granary_Capacity>
+  <HR_Granary_StoredGrain>Stored grain:</HR_Granary_StoredGrain>
+  <HR_Granary_Empty>No eligible grain stored</HR_Granary_Empty>
+  <HR_Granary_AnnualLoss>Estimated annual storage loss: {0}%</HR_Granary_AnnualLoss>
+</LanguageData>

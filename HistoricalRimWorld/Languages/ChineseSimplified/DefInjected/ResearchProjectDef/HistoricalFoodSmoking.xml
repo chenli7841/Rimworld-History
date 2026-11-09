@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <HR_FoodSmoking.label>烟熏加工</HR_FoodSmoking.label>
-  <HR_FoodSmoking.description>掌握以木材燃烧进行烟熏、保存普通肉类，并在具备鱼类原料时加工鱼肉。烟熏是古老工艺；本研究代表本地掌握稳定方法，并非认定其发明年代。</HR_FoodSmoking.description>
+  <HR_FoodSmoking.description>利用木材燃烧产生的热量与烟雾，将新鲜肉类和鱼类加工成更耐储存的熏制食品。\n\n研究完成后，可建造古代熏制炉，生产熏肉与熏鱼。烟熏加工不需要食盐，也不依赖晴朗天气，但需要持续消耗木材燃料。\n\n适合木材资源丰富的村社，能够在阴雨季节和寒冷冬季加工猎获的肉类，为粮食储备、长途旅行和商队贸易提供可靠的食品来源。</HR_FoodSmoking.description>
 </LanguageData>

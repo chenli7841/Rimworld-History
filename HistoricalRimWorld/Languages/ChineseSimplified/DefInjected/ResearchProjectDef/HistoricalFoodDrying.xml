@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <HR_FoodDrying.label>食品干燥</HR_FoodDrying.label>
-  <HR_FoodDrying.description>建立稳定的自然晾晒加工方法，以保存肉类和指定蔬菜。这是殖民地掌握的基础工艺，并非历史上首次发明食品干燥。</HR_FoodDrying.description>
+  <HR_FoodDrying.description>利用阳光、空气流通与自然蒸发，去除食材中的部分水分，抑制微生物繁殖，减缓食物腐败，使其能够保存更长时间。\n\n研究完成后，可建造晾晒架，加工多种新鲜食材，包括：肉类、鱼类、蔬菜、水果、食用菌。\n\n不同食材的干燥时间、成品数量和保存期限有所区别。食品干燥无需食盐或燃料，但受到天气、温度和湿度的影响，晴朗、温暖且干燥的环境最有利于加工。\n\n干制品适合作为长期储粮，用于远行探险。</HR_FoodDrying.description>
 </LanguageData>

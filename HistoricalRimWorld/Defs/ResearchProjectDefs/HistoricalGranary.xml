@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>HR_ImprovedGranaries</defName>
+    <label>improved granaries</label>
+    <description>Improve grain storage through raised floors, enclosed walls, and better storage management, reducing long-term losses from damp and pests.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <prerequisites>
+      <li>HR_SealedPotteryStorage</li>
+    </prerequisites>
+    <researchViewX>7.5</researchViewX>
+    <researchViewY>1.15</researchViewY>
+  </ResearchProjectDef>
+</Defs>

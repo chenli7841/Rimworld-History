@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Whitelist is explicit: vanilla rice/corn and the mod's prepared grain bundle only. -->
+  <HistoricalRimWorld.Production.Granary.GranarySettingsDef>
+    <defName>HR_GranarySettings</defName>
+    <eligibleGrains>
+      <li>RawRice</li>
+      <li>RawCorn</li>
+      <li>HR_DriedGrain</li>
+    </eligibleGrains>
+    <outdoorAnnualLossRate>0.12</outdoorAnnualLossRate>
+    <indoorAnnualLossRate>0.06</indoorAnnualLossRate>
+    <sealedJarAnnualLossRate>0.02</sealedJarAnnualLossRate>
+    <granaryAnnualLossRate>0.015</granaryAnnualLossRate>
+  </HistoricalRimWorld.Production.Granary.GranarySettingsDef>
+
+  <ThingDef ParentName="StorageShelfBase">
+    <defName>HR_RaisedGranary</defName>
+    <label>raised granary</label>
+    <description>A raised, enclosed community store for bulk grain. Its ordinary storage filters and hauling integration let cooks and caravans use its contents.</description>
+    <techLevel>Neolithic</techLevel>
+    <researchPrerequisites Inherit="False">
+      <li>HR_ImprovedGranaries</li>
+    </researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Shelf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.2,3.2)</drawSize>
+      <color>(0.62,0.43,0.25)</color>
+    </graphicData>
+    <costList>
+      <WoodLog>180</WoodLog>
+      <BlocksSandstone>60</BlocksSandstone>
+    </costList>
+    <size>(3,3)</size>
+    <statBases>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Mass>90</Mass>
+      <WorkToBuild>1800</WorkToBuild>
+      <Beauty>2</Beauty>
+      <Flammability>0.8</Flammability>
+    </statBases>
+    <designationCategory>Furniture</designationCategory>
+    <uiOrder>2054</uiOrder>
+    <building>
+      <maxItemsInCell>3</maxItemsInCell>
+      <fixedStorageSettings>
+        <filter Inherit="False">
+          <thingDefs>
+            <li>RawRice</li>
+            <li>RawCorn</li>
+            <li>HR_DriedGrain</li>
+          </thingDefs>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Preferred</priority>
+        <filter Inherit="False">
+          <thingDefs>
+            <li>RawRice</li>
+            <li>RawCorn</li>
+            <li>HR_DriedGrain</li>
+          </thingDefs>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <comps>
+      <li Class="HistoricalRimWorld.Production.Granary.CompProperties_Granary" />
+    </comps>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension">
+        <requiredTechnology>HR_Tech_ImprovedGranaries</requiredTechnology>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

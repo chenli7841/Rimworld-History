@@ -29,6 +29,7 @@
       <li><technology>HR_Tech_FoodDrying</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_SaltPreservation</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_SealedPotteryStorage</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
+      <li><technology>HR_Tech_ImprovedGranaries</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_FoodSmoking</technology><availability>LocallyAccessible</availability><adoption>Unknown</adoption></li>
       <li><technology>HR_Tech_FoodFermentation</technology><availability>LocallyAccessible</availability><adoption>Unknown</adoption></li>
     </technologies>

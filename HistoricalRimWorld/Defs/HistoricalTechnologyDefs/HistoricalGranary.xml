@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Technology.HistoricalTechnologyDef>
+    <defName>HR_Tech_ImprovedGranaries</defName>
+    <label>improved granaries</label>
+    <description>Raised, enclosed community grain storage with reduced long-term loss.</description>
+    <category>Agriculture</category>
+    <prerequisites>
+      <li>HR_Tech_SealedPotteryStorage</li>
+    </prerequisites>
+    <researchProject>HR_ImprovedGranaries</researchProject>
+    <researchMode>Basic</researchMode>
+    <knowledgeRequirement>None</knowledgeRequirement>
+  </HistoricalRimWorld.Technology.HistoricalTechnologyDef>
+</Defs>

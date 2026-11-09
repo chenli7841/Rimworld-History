@@ -299,8 +299,6 @@ namespace HistoricalRimWorld.Patches.Technology
             if (technology != null)
             {
                 HistoricalResearchMode mode = HistoricalBlueprintService.GetMode(__instance);
-                lines.Add(string.Format(Translator.Translate("HR_Blueprint_ResearchMode"),
-                    Translator.Translate("HR_Blueprint_ResearchMode_" + mode)));
                 if (mode == HistoricalResearchMode.Historical)
                 {
                     HistoricalBlueprintStatus status = HistoricalBlueprintService.GetStatus(__instance);
@@ -313,7 +311,6 @@ namespace HistoricalRimWorld.Patches.Technology
                         && status == HistoricalBlueprintStatus.NotOwned)
                         lines.Add("HR_Blueprint_TradeHint".Translate());
                 }
-                else lines.Add("HR_Blueprint_BasicResearch".Translate());
             }
             string practiceDetails = HistoricalPracticeService.GetProgressDescription(__instance);
             if (!string.IsNullOrWhiteSpace(practiceDetails)) lines.Add(practiceDetails);

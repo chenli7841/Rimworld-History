@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Granary_Capacity>储粮位置：{0} / {1} 堆</HR_Granary_Capacity>
+  <HR_Granary_StoredGrain>储存谷物：</HR_Granary_StoredGrain>
+  <HR_Granary_Empty>暂无符合条件的谷物</HR_Granary_Empty>
+  <HR_Granary_AnnualLoss>预计年损耗率：{0}%</HR_Granary_AnnualLoss>
+</LanguageData>
