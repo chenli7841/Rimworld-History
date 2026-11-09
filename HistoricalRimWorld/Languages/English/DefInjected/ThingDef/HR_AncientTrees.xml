@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_AncientOak.label>Ancient Oak</HR_AncientOak.label>
+  <HR_AncientOak.description>A venerable oak with a broad crown and heavy trunk. Its in-game name describes an ecological type, not a verified age of exactly one thousand years.</HR_AncientOak.description>
+  <HR_AncientPine.label>Scaled Ancient Pine</HR_AncientPine.label>
+  <HR_AncientPine.description>A tall, densely crowned ancient pine. Its in-game name describes an ecological type rather than a specific historical specimen.</HR_AncientPine.description>
+  <HR_AncientCamphor.label>Ancient Camphor</HR_AncientCamphor.label>
+  <HR_AncientCamphor.description>A large camphor tree adapted to warm and humid environments.</HR_AncientCamphor.description>
+  <HR_AncientBanyan.label>Ancient Banyan</HR_AncientBanyan.label>
+  <HR_AncientBanyan.description>A broad-crowned banyan adapted to the warmer southern regions.</HR_AncientBanyan.description>
+</LanguageData>

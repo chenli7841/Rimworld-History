@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="DeciduousTreeBase">
+    <defName>HR_AncientOak</defName>
+    <label>HR_AncientOak_Label</label>
+    <description>HR_AncientOak_Description</description>
+    <graphicData>
+      <texPath>Things/Plant/HR/AncientOak</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData><volume>(0.45, 0.55, 0.18)</volume><offset>(0,0,-0.38)</offset></shadowData>
+    </graphicData>
+    <statBases><Beauty>3</Beauty><BeautyOutdoors>3</BeautyOutdoors><MaxHitPoints>420</MaxHitPoints><Flammability>0.65</Flammability><Mass>190</Mass></statBases>
+    <plant>
+      <growDays>60</growDays><fertilityMin>0.25</fertilityMin><harvestWork>1600</harvestWork><harvestYield>58</harvestYield>
+      <harvestedThingDef>WoodLog</harvestedThingDef><visualSizeRange>2.5~3.3</visualSizeRange><wildClusterRadius>-1</wildClusterRadius><wildClusterWeight>0</wildClusterWeight><wildOrder>3</wildOrder>
+      <interferesWithRoof>true</interferesWithRoof><sowTags />
+    </plant>
+    <modExtensions><li Class="HistoricalRimWorld.Forest.HR_AncientTreeExtension"><forestSpeciesId>Oak</forestSpeciesId><erosionResistance>1</erosionResistance></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>HR_AncientPine</defName>
+    <label>HR_AncientPine_Label</label>
+    <description>HR_AncientPine_Description</description>
+    <graphicData>
+      <texPath>Things/Plant/HR/AncientPine</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData><volume>(0.38, 0.48, 0.18)</volume><offset>(0,0,-0.40)</offset></shadowData>
+    </graphicData>
+    <statBases><Beauty>3</Beauty><BeautyOutdoors>3</BeautyOutdoors><MaxHitPoints>380</MaxHitPoints><Flammability>0.72</Flammability><Mass>165</Mass></statBases>
+    <plant>
+      <growDays>52</growDays><fertilityMin>0.18</fertilityMin><harvestWork>1450</harvestWork><harvestYield>50</harvestYield>
+      <harvestedThingDef>WoodLog</harvestedThingDef><visualSizeRange>2.4~3.1</visualSizeRange><wildClusterRadius>-1</wildClusterRadius><wildClusterWeight>0</wildClusterWeight><wildOrder>3</wildOrder>
+      <interferesWithRoof>true</interferesWithRoof><sowTags />
+    </plant>
+    <modExtensions><li Class="HistoricalRimWorld.Forest.HR_AncientTreeExtension"><forestSpeciesId>Pine</forestSpeciesId><erosionResistance>1</erosionResistance></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="DeciduousTreeBase">
+    <defName>HR_AncientCamphor</defName>
+    <label>HR_AncientCamphor_Label</label>
+    <description>HR_AncientCamphor_Description</description>
+    <graphicData>
+      <texPath>Things/Plant/HR/AncientCamphor</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData><volume>(0.5, 0.58, 0.2)</volume><offset>(0,0,-0.36)</offset></shadowData>
+    </graphicData>
+    <statBases><Beauty>3</Beauty><BeautyOutdoors>3</BeautyOutdoors><MaxHitPoints>400</MaxHitPoints><Flammability>0.7</Flammability><Mass>180</Mass></statBases>
+    <plant>
+      <growDays>64</growDays><fertilityMin>0.3</fertilityMin><harvestWork>1700</harvestWork><harvestYield>55</harvestYield>
+      <harvestedThingDef>WoodLog</harvestedThingDef><visualSizeRange>2.8~3.6</visualSizeRange><wildClusterRadius>-1</wildClusterRadius><wildClusterWeight>0</wildClusterWeight><wildOrder>3</wildOrder>
+      <interferesWithRoof>true</interferesWithRoof><sowTags />
+    </plant>
+    <modExtensions><li Class="HistoricalRimWorld.Forest.HR_AncientTreeExtension"><forestSpeciesId>Camphor</forestSpeciesId><erosionResistance>1</erosionResistance></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="DeciduousTreeBase">
+    <defName>HR_AncientBanyan</defName>
+    <label>HR_AncientBanyan_Label</label>
+    <description>HR_AncientBanyan_Description</description>
+    <graphicData>
+      <texPath>Things/Plant/HR/AncientBanyan</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData><volume>(0.55, 0.6, 0.22)</volume><offset>(0,0,-0.34)</offset></shadowData>
+    </graphicData>
+    <statBases><Beauty>4</Beauty><BeautyOutdoors>4</BeautyOutdoors><MaxHitPoints>440</MaxHitPoints><Flammability>0.75</Flammability><Mass>200</Mass></statBases>
+    <plant>
+      <growDays>72</growDays><fertilityMin>0.38</fertilityMin><harvestWork>1900</harvestWork><harvestYield>62</harvestYield>
+      <harvestedThingDef>WoodLog</harvestedThingDef><visualSizeRange>3.0~3.8</visualSizeRange><wildClusterRadius>-1</wildClusterRadius><wildClusterWeight>0</wildClusterWeight><wildOrder>3</wildOrder>
+      <interferesWithRoof>true</interferesWithRoof><sowTags />
+    </plant>
+    <modExtensions><li Class="HistoricalRimWorld.Forest.HR_AncientTreeExtension"><forestSpeciesId>Banyan</forestSpeciesId><erosionResistance>1</erosionResistance></li></modExtensions>
+  </ThingDef>
+</Defs>

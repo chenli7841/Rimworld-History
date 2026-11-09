@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_AncientOak.label>千年古栎</HR_AncientOak.label>
+  <HR_AncientOak.description>树冠宽展、树干粗壮的古老栎树。游戏名称表现其生态类型，并不宣称树龄恰为千年。</HR_AncientOak.description>
+  <HR_AncientPine.label>苍鳞巨松</HR_AncientPine.label>
+  <HR_AncientPine.description>枝干高耸、树冠浓密的古老松树。游戏名称表现其生态类型，并不宣称树龄或外观对应某一具体历史个体。</HR_AncientPine.description>
+  <HR_AncientCamphor.label>巨樟</HR_AncientCamphor.label>
+  <HR_AncientCamphor.description>适应温暖湿润环境、树冠宽阔的樟树类巨木。</HR_AncientCamphor.description>
+  <HR_AncientBanyan.label>盘根古榕</HR_AncientBanyan.label>
+  <HR_AncientBanyan.description>适应更温暖南方环境、冠幅广阔并具有盘根形态的榕树类巨木。</HR_AncientBanyan.description>
+</LanguageData>
