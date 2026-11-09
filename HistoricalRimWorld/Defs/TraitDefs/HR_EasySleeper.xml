@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraitDef>
+    <defName>HR_EasySleeper</defName>
+    <commonality>0.5</commonality>
+    <degreeDatas>
+      <li>
+        <label>easy sleeper</label>
+        <description>This person can rest comfortably without a bed and suffers no mood penalty for sleeping on the ground. Even while awake, periods of genuine idleness gradually restore rest.</description>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>
