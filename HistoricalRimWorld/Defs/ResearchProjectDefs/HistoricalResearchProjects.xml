@@ -111,29 +111,11 @@
     <researchViewY>1.85</researchViewY>  
   </ResearchProjectDef>
   <ResearchProjectDef>
-    <defName>HR_Research_CopperMining</defName>
-    <label>copper extraction</label>
-    <description>Identify and work copper-bearing deposits. Copper extraction has a broad possible early horizon around 5000 BCE; evidence and dates vary by region.</description>
-    <baseCost>500</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <researchViewX>3.50</researchViewX>
-    <researchViewY>2.30</researchViewY>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>HR_Research_CopperSmelting</defName>
-    <label>copper smelting</label>
-    <description>Recover copper from ore using heat. No single reliable emergence year is assigned here; early evidence and chronology vary by region.</description>
-    <baseCost>600</baseCost>
-    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_CopperMining</li></prerequisites>
-    <researchViewX>4.50</researchViewX>
-    <researchViewY>2.30</researchViewY>  
-  </ResearchProjectDef>
-  <ResearchProjectDef>
     <defName>HR_Research_BronzeAlloy</defName>
     <label>bronze alloying</label>
     <description>Develop repeatable copper alloy batches. Broad archaeological horizons for early bronze metallurgy fall roughly between 2200 and 1700 BCE; regional dates vary.</description>
     <baseCost>700</baseCost>
-    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_CopperSmelting</li></prerequisites>
+    <techLevel>Neolithic</techLevel>
     <researchViewX>5.50</researchViewX>
     <researchViewY>2.30</researchViewY>  
   </ResearchProjectDef>
@@ -142,7 +124,7 @@
     <label>early ironworking</label>
     <description>Study small-scale bloomery iron working. Proposed early horizons range broadly from about 1200 to 500 BCE and remain disputed by region; this is not a precise invention date.</description>
     <baseCost>900</baseCost>
-    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_CopperSmelting</li></prerequisites>
+    <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BronzeAlloy</li></prerequisites>
     <researchViewX>8.00</researchViewX>
     <researchViewY>2.80</researchViewY>
   

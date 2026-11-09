@@ -6,7 +6,7 @@
     <slot>Childhood</slot>
     <title>农家子弟</title>
     <titleShort>农家子弟</titleShort>
-    <description>[PAWN_nameDef]自幼随家人耕作粟田，春播秋收，除草储粮。田间的辛劳使其熟悉节令，也学会修补简单农具。</description>
+    <baseDesc>[PAWN_nameDef]自幼随家人耕作粟田，春播秋收，除草储粮。田间的辛劳使其熟悉节令，也学会修补简单农具。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -32,7 +32,7 @@
     <slot>Childhood</slot>
     <title>田间牧童</title>
     <titleShort>田间牧童</titleShort>
-    <description>[PAWN_nameDef]年少时负责在村外放牧牛羊，辨认牲畜的习性，寻找水草，并在日落前把走散的牲口赶回圈中。</description>
+    <baseDesc>[PAWN_nameDef]年少时负责在村外放牧牛羊，辨认牲畜的习性，寻找水草，并在日落前把走散的牲口赶回圈中。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -58,7 +58,7 @@
     <slot>Childhood</slot>
     <title>山野采药童</title>
     <titleShort>山野采药童</titleShort>
-    <description>[PAWN_nameDef]随长辈走遍山坡溪谷，识别可食与可药的草木，学习晾晒药材及照料伤病之人。</description>
+    <baseDesc>[PAWN_nameDef]随长辈走遍山坡溪谷，识别可食与可药的草木，学习晾晒药材及照料伤病之人。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -85,7 +85,7 @@
     <slot>Childhood</slot>
     <title>河畔渔童</title>
     <titleShort>河畔渔童</titleShort>
-    <description>[PAWN_nameDef]生长于河岸人家，幼时便学会编修鱼篓、布置渔网，熟悉水流涨落与鱼群出没的时节。</description>
+    <baseDesc>[PAWN_nameDef]生长于河岸人家，幼时便学会编修鱼篓、布置渔网，熟悉水流涨落与鱼群出没的时节。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -111,7 +111,7 @@
     <slot>Childhood</slot>
     <title>猎户之子</title>
     <titleShort>猎户之子</titleShort>
-    <description>[PAWN_nameDef]跟随家中猎人追踪兽迹、设下陷阱并练习弓箭。漫长的山林行走磨练了眼力与耐心。</description>
+    <baseDesc>[PAWN_nameDef]跟随家中猎人追踪兽迹、设下陷阱并练习弓箭。漫长的山林行走磨练了眼力与耐心。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -137,7 +137,7 @@
     <slot>Childhood</slot>
     <title>养蚕人家</title>
     <titleShort>养蚕人家</titleShort>
-    <description>[PAWN_nameDef]在养蚕人家长大，采摘桑叶、清理蚕箔、照料蚕茧，逐渐掌握纺织原料得来不易的道理。</description>
+    <baseDesc>[PAWN_nameDef]在养蚕人家长大，采摘桑叶、清理蚕箔、照料蚕茧，逐渐掌握纺织原料得来不易的道理。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -163,7 +163,7 @@
     <slot>Childhood</slot>
     <title>织布童工</title>
     <titleShort>织布童工</titleShort>
-    <description>[PAWN_nameDef]自幼在织机旁帮忙整理麻线与丝缕，学习纺纱、穿经和辨别布料纹理，双手因此十分灵巧。</description>
+    <baseDesc>[PAWN_nameDef]自幼在织机旁帮忙整理麻线与丝缕，学习纺纱、穿经和辨别布料纹理，双手因此十分灵巧。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -189,7 +189,7 @@
     <slot>Childhood</slot>
     <title>柴薪采集童</title>
     <titleShort>柴薪采集童</titleShort>
-    <description>[PAWN_nameDef]每日背篓进山拾柴，分辨干湿枝木，寻找安全山路，也帮家里修整柴棚与篱笆。</description>
+    <baseDesc>[PAWN_nameDef]每日背篓进山拾柴，分辨干湿枝木，寻找安全山路，也帮家里修整柴棚与篱笆。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -216,7 +216,7 @@
     <slot>Childhood</slot>
     <title>果园童子</title>
     <titleShort>果园童子</titleShort>
-    <description>[PAWN_nameDef]在果木间度过童年，照看幼树、采摘果实、挑拣坏果，懂得季节变化对收成的影响。</description>
+    <baseDesc>[PAWN_nameDef]在果木间度过童年，照看幼树、采摘果实、挑拣坏果，懂得季节变化对收成的影响。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -242,7 +242,7 @@
     <slot>Childhood</slot>
     <title>灌渠人家</title>
     <titleShort>灌渠人家</titleShort>
-    <description>[PAWN_nameDef]常随家人清理沟渠、搬石筑埂，观察水势如何灌入田地，早早懂得修渠与耕种须相互配合。</description>
+    <baseDesc>[PAWN_nameDef]常随家人清理沟渠、搬石筑埂，观察水势如何灌入田地，早早懂得修渠与耕种须相互配合。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -268,7 +268,7 @@
     <slot>Childhood</slot>
     <title>粮仓守童</title>
     <titleShort>粮仓守童</titleShort>
-    <description>[PAWN_nameDef]帮长辈搬运谷袋、清扫仓地、检查鼠患，并学习记录入仓出仓的粮数，做事格外细致。</description>
+    <baseDesc>[PAWN_nameDef]帮长辈搬运谷袋、清扫仓地、检查鼠患，并学习记录入仓出仓的粮数，做事格外细致。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -295,7 +295,7 @@
     <slot>Childhood</slot>
     <title>山村孤童</title>
     <titleShort>山村孤童</titleShort>
-    <description>[PAWN_nameDef]幼时失去亲人，在山村邻里的接济中长大，靠采集野菜、照看牲畜和偶尔狩猎维持生活。</description>
+    <baseDesc>[PAWN_nameDef]幼时失去亲人，在山村邻里的接济中长大，靠采集野菜、照看牲畜和偶尔狩猎维持生活。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -322,7 +322,7 @@
     <slot>Childhood</slot>
     <title>陶工学徒</title>
     <titleShort>陶工学徒</titleShort>
-    <description>[PAWN_nameDef]在陶窑旁打杂，从淘泥、揉坯到晾干陶器逐步学起，常因烧成失败而重新摸索火候。</description>
+    <baseDesc>[PAWN_nameDef]在陶窑旁打杂，从淘泥、揉坯到晾干陶器逐步学起，常因烧成失败而重新摸索火候。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -348,7 +348,7 @@
     <slot>Childhood</slot>
     <title>木匠学徒</title>
     <titleShort>木匠学徒</titleShort>
-    <description>[PAWN_nameDef]跟随木匠量木、锯料、削榫，学习修建房舍和制作农具，对木材纹理与接合方式颇为熟悉。</description>
+    <baseDesc>[PAWN_nameDef]跟随木匠量木、锯料、削榫，学习修建房舍和制作农具，对木材纹理与接合方式颇为熟悉。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -374,7 +374,7 @@
     <slot>Childhood</slot>
     <title>青铜工坊童</title>
     <titleShort>青铜工坊童</titleShort>
-    <description>[PAWN_nameDef]在铸铜作坊长大，帮忙备炭、制范和打磨器物，见惯了熔炉火光与复杂的纹饰。</description>
+    <baseDesc>[PAWN_nameDef]在铸铜作坊长大，帮忙备炭、制范和打磨器物，见惯了熔炉火光与复杂的纹饰。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -400,7 +400,7 @@
     <slot>Childhood</slot>
     <title>石匠子弟</title>
     <titleShort>石匠子弟</titleShort>
-    <description>[PAWN_nameDef]从小在采石场和工地间奔走，搬运石料、辨认石质，学会用简单工具修整石块。</description>
+    <baseDesc>[PAWN_nameDef]从小在采石场和工地间奔走，搬运石料、辨认石质，学会用简单工具修整石块。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -426,7 +426,7 @@
     <slot>Childhood</slot>
     <title>竹器编织童</title>
     <titleShort>竹器编织童</titleShort>
-    <description>[PAWN_nameDef]幼时学习剖竹、削篾、编筐，能把柔韧的竹条编成篮篓与日常器具。</description>
+    <baseDesc>[PAWN_nameDef]幼时学习剖竹、削篾、编筐，能把柔韧的竹条编成篮篓与日常器具。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -452,7 +452,7 @@
     <slot>Childhood</slot>
     <title>漆器作坊童</title>
     <titleShort>漆器作坊童</titleShort>
-    <description>[PAWN_nameDef]在漆器作坊协助打磨木胎、调配颜料、描绘纹样，懂得一件精美器物需要多道工序。</description>
+    <baseDesc>[PAWN_nameDef]在漆器作坊协助打磨木胎、调配颜料、描绘纹样，懂得一件精美器物需要多道工序。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -478,7 +478,7 @@
     <slot>Childhood</slot>
     <title>制革人家</title>
     <titleShort>制革人家</titleShort>
-    <description>[PAWN_nameDef]帮家人清理兽皮、晾晒皮革、裁剪皮料，熟悉牲畜皮毛的差异与制作皮具的辛苦。</description>
+    <baseDesc>[PAWN_nameDef]帮家人清理兽皮、晾晒皮革、裁剪皮料，熟悉牲畜皮毛的差异与制作皮具的辛苦。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -504,7 +504,7 @@
     <slot>Childhood</slot>
     <title>车轮匠学徒</title>
     <titleShort>车轮匠学徒</titleShort>
-    <description>[PAWN_nameDef]随师傅制作车辐、车毂与轮圈，学习校正木料和检查车轮是否牢固。</description>
+    <baseDesc>[PAWN_nameDef]随师傅制作车辐、车毂与轮圈，学习校正木料和检查车轮是否牢固。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -530,7 +530,7 @@
     <slot>Childhood</slot>
     <title>弓匠子弟</title>
     <titleShort>弓匠子弟</titleShort>
-    <description>[PAWN_nameDef]在制弓人家长大，帮忙挑选木材、整理弓弦，常以练射检验弓具的好坏。</description>
+    <baseDesc>[PAWN_nameDef]在制弓人家长大，帮忙挑选木材、整理弓弦，常以练射检验弓具的好坏。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -556,7 +556,7 @@
     <slot>Childhood</slot>
     <title>玉工学徒</title>
     <titleShort>玉工学徒</titleShort>
-    <description>[PAWN_nameDef]从磨石、取形和抛光做起，学习顺着玉料纹理雕琢，深知精细工艺急不得。</description>
+    <baseDesc>[PAWN_nameDef]从磨石、取形和抛光做起，学习顺着玉料纹理雕琢，深知精细工艺急不得。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -582,7 +582,7 @@
     <slot>Childhood</slot>
     <title>绳索编制童</title>
     <titleShort>绳索编制童</titleShort>
-    <description>[PAWN_nameDef]自幼搓麻捻绳，为车马、舟船与房屋备制绳索，懂得不同用途需要不同的结法。</description>
+    <baseDesc>[PAWN_nameDef]自幼搓麻捻绳，为车马、舟船与房屋备制绳索，懂得不同用途需要不同的结法。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -608,7 +608,7 @@
     <slot>Childhood</slot>
     <title>筑墙役童</title>
     <titleShort>筑墙役童</titleShort>
-    <description>[PAWN_nameDef]随家人在筑墙工地劳作，挑土、运石、夯实墙基，熟悉集体营造时的分工与号令。</description>
+    <baseDesc>[PAWN_nameDef]随家人在筑墙工地劳作，挑土、运石、夯实墙基，熟悉集体营造时的分工与号令。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -635,7 +635,7 @@
     <slot>Childhood</slot>
     <title>商旅之子</title>
     <titleShort>商旅之子</titleShort>
-    <description>[PAWN_nameDef]幼时随亲族往返市邑，见识各地货物与习俗，逐渐学会估价、记账和与陌生人交谈。</description>
+    <baseDesc>[PAWN_nameDef]幼时随亲族往返市邑，见识各地货物与习俗，逐渐学会估价、记账和与陌生人交谈。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -661,7 +661,7 @@
     <slot>Childhood</slot>
     <title>市集童仆</title>
     <titleShort>市集童仆</titleShort>
-    <description>[PAWN_nameDef]在热闹市集帮忙搬货、摆摊和收拾器具，练就辨认顾客与应对讨价还价的本领。</description>
+    <baseDesc>[PAWN_nameDef]在热闹市集帮忙搬货、摆摊和收拾器具，练就辨认顾客与应对讨价还价的本领。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -687,7 +687,7 @@
     <slot>Childhood</slot>
     <title>渡口人家</title>
     <titleShort>渡口人家</titleShort>
-    <description>[PAWN_nameDef]生于渡口附近，帮家人牵引牲口、装卸货物、修补渡具，熟悉旅客往来的繁忙景象。</description>
+    <baseDesc>[PAWN_nameDef]生于渡口附近，帮家人牵引牲口、装卸货物、修补渡具，熟悉旅客往来的繁忙景象。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -714,7 +714,7 @@
     <slot>Childhood</slot>
     <title>车马驿童</title>
     <titleShort>车马驿童</titleShort>
-    <description>[PAWN_nameDef]在道路旁的传舍长大，负责喂马、换草料、迎送旅人，懂得照料疲惫牲畜的办法。</description>
+    <baseDesc>[PAWN_nameDef]在道路旁的传舍长大，负责喂马、换草料、迎送旅人，懂得照料疲惫牲畜的办法。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -740,7 +740,7 @@
     <slot>Childhood</slot>
     <title>盐商子弟</title>
     <titleShort>盐商子弟</titleShort>
-    <description>[PAWN_nameDef]随家人经营食盐买卖，见过盐包装车、过渡与入市，也明白盐价受道路和产地影响。</description>
+    <baseDesc>[PAWN_nameDef]随家人经营食盐买卖，见过盐包装车、过渡与入市，也明白盐价受道路和产地影响。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -766,7 +766,7 @@
     <slot>Childhood</slot>
     <title>行脚货童</title>
     <titleShort>行脚货童</titleShort>
-    <description>[PAWN_nameDef]跟随货队穿行乡间道路，照看驮畜、辨认路标，遇到险路时也学会持弓警戒。</description>
+    <baseDesc>[PAWN_nameDef]跟随货队穿行乡间道路，照看驮畜、辨认路标，遇到险路时也学会持弓警戒。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -793,7 +793,7 @@
     <slot>Childhood</slot>
     <title>客舍帮工</title>
     <titleShort>客舍帮工</titleShort>
-    <description>[PAWN_nameDef]在旅舍灶间帮忙烧水煮食、铺设寝具、招呼过客，熟悉旅人的不同口音与习惯。</description>
+    <baseDesc>[PAWN_nameDef]在旅舍灶间帮忙烧水煮食、铺设寝具、招呼过客，熟悉旅人的不同口音与习惯。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -819,7 +819,7 @@
     <slot>Childhood</slot>
     <title>舟人之子</title>
     <titleShort>舟人之子</titleShort>
-    <description>[PAWN_nameDef]自幼在舟船上生活，学习补缝、缚缆与装载货物，懂得顺水行舟也须防范暗礁急流。</description>
+    <baseDesc>[PAWN_nameDef]自幼在舟船上生活，学习补缝、缚缆与装载货物，懂得顺水行舟也须防范暗礁急流。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -846,7 +846,7 @@
     <slot>Childhood</slot>
     <title>贵族庶子</title>
     <titleShort>贵族庶子</titleShort>
-    <description>[PAWN_nameDef]生于贵族宗族，却并非主要继承人，自幼接受射艺与礼仪训练，也见识了宗族内部的尊卑秩序。</description>
+    <baseDesc>[PAWN_nameDef]生于贵族宗族，却并非主要继承人，自幼接受射艺与礼仪训练，也见识了宗族内部的尊卑秩序。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -873,7 +873,7 @@
     <slot>Childhood</slot>
     <title>宗族嫡子</title>
     <titleShort>宗族嫡子</titleShort>
-    <description>[PAWN_nameDef]作为宗族寄予厚望的后嗣，自幼学习祭礼、待客和族中事务，常被要求谨慎言行。</description>
+    <baseDesc>[PAWN_nameDef]作为宗族寄予厚望的后嗣，自幼学习祭礼、待客和族中事务，常被要求谨慎言行。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -899,7 +899,7 @@
     <slot>Childhood</slot>
     <title>乡学童子</title>
     <titleShort>乡学童子</titleShort>
-    <description>[PAWN_nameDef]有机会随师长识字习礼，学习数目、简册和古人言行，对文字与议论渐生兴趣。</description>
+    <baseDesc>[PAWN_nameDef]有机会随师长识字习礼，学习数目、简册和古人言行，对文字与议论渐生兴趣。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -926,7 +926,7 @@
     <slot>Childhood</slot>
     <title>史官家童</title>
     <titleShort>史官家童</titleShort>
-    <description>[PAWN_nameDef]在掌管文书的家族中成长，常见长辈整理简牍、记载时日，逐渐学会书写与核对记录。</description>
+    <baseDesc>[PAWN_nameDef]在掌管文书的家族中成长，常见长辈整理简牍、记载时日，逐渐学会书写与核对记录。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -952,7 +952,7 @@
     <slot>Childhood</slot>
     <title>礼乐学童</title>
     <titleShort>礼乐学童</titleShort>
-    <description>[PAWN_nameDef]从小练习歌舞、节拍与行礼次序，懂得乐声和仪容在宗族祭典中的分量。</description>
+    <baseDesc>[PAWN_nameDef]从小练习歌舞、节拍与行礼次序，懂得乐声和仪容在宗族祭典中的分量。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -978,7 +978,7 @@
     <slot>Childhood</slot>
     <title>习射少年</title>
     <titleShort>习射少年</titleShort>
-    <description>[PAWN_nameDef]少年时反复练习张弓、瞄准和步伐，常与同伴较量射艺，也学习近身护卫的本领。</description>
+    <baseDesc>[PAWN_nameDef]少年时反复练习张弓、瞄准和步伐，常与同伴较量射艺，也学习近身护卫的本领。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1004,7 +1004,7 @@
     <slot>Childhood</slot>
     <title>习御少年</title>
     <titleShort>习御少年</titleShort>
-    <description>[PAWN_nameDef]跟随车御学习驭马与控缰，熟悉车马器具，懂得战车行进时须与乘员相互配合。</description>
+    <baseDesc>[PAWN_nameDef]跟随车御学习驭马与控缰，熟悉车马器具，懂得战车行进时须与乘员相互配合。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1031,7 +1031,7 @@
     <slot>Childhood</slot>
     <title>贵族侍童</title>
     <titleShort>贵族侍童</titleShort>
-    <description>[PAWN_nameDef]年少时侍奉贵族家室，负责传话、陈设器物与迎送宾客，熟悉繁复的礼数。</description>
+    <baseDesc>[PAWN_nameDef]年少时侍奉贵族家室，负责传话、陈设器物与迎送宾客，熟悉繁复的礼数。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1057,7 +1057,7 @@
     <slot>Childhood</slot>
     <title>典籍抄录童</title>
     <titleShort>典籍抄录童</titleShort>
-    <description>[PAWN_nameDef]在师长指导下练习刻写或誊录简牍，学习辨认字形、排列篇章，养成反复校对的习惯。</description>
+    <baseDesc>[PAWN_nameDef]在师长指导下练习刻写或誊录简牍，学习辨认字形、排列篇章，养成反复校对的习惯。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1084,7 +1084,7 @@
     <slot>Childhood</slot>
     <title>祭祀学童</title>
     <titleShort>祭祀学童</titleShort>
-    <description>[PAWN_nameDef]随长辈准备祭品、整理礼器、学习祝辞，渐渐熟悉宗族祭典的次序与禁忌。</description>
+    <baseDesc>[PAWN_nameDef]随长辈准备祭品、整理礼器、学习祝辞，渐渐熟悉宗族祭典的次序与禁忌。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1111,7 +1111,7 @@
     <slot>Childhood</slot>
     <title>战乱遗孤</title>
     <titleShort>战乱遗孤</titleShort>
-    <description>[PAWN_nameDef]童年遭逢兵祸，亲人离散，只得在逃难路上采集食物、照顾伤者，并学会保护自己。</description>
+    <baseDesc>[PAWN_nameDef]童年遭逢兵祸，亲人离散，只得在逃难路上采集食物、照顾伤者，并学会保护自己。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1138,7 +1138,7 @@
     <slot>Childhood</slot>
     <title>流亡孤儿</title>
     <titleShort>流亡孤儿</titleShort>
-    <description>[PAWN_nameDef]幼时无家可归，辗转乡邑与荒野，靠零工和野菜度日，面对争抢也不得不奋力自卫。</description>
+    <baseDesc>[PAWN_nameDef]幼时无家可归，辗转乡邑与荒野，靠零工和野菜度日，面对争抢也不得不奋力自卫。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1164,7 +1164,7 @@
     <slot>Childhood</slot>
     <title>边境牧童</title>
     <titleShort>边境牧童</titleShort>
-    <description>[PAWN_nameDef]在边地放牧，常须提防野兽与盗匪，因此熟悉牲畜习性，也练出一手弓箭本领。</description>
+    <baseDesc>[PAWN_nameDef]在边地放牧，常须提防野兽与盗匪，因此熟悉牲畜习性，也练出一手弓箭本领。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1190,7 +1190,7 @@
     <slot>Childhood</slot>
     <title>戍卒之子</title>
     <titleShort>戍卒之子</titleShort>
-    <description>[PAWN_nameDef]在边塞营地附近长大，耳濡目染兵卒操练，学会使用简单兵器和辨认巡防号令。</description>
+    <baseDesc>[PAWN_nameDef]在边塞营地附近长大，耳濡目染兵卒操练，学会使用简单兵器和辨认巡防号令。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1216,7 +1216,7 @@
     <slot>Childhood</slot>
     <title>逃亡役童</title>
     <titleShort>逃亡役童</titleShort>
-    <description>[PAWN_nameDef]幼时随家人逃离繁重徭役，途中修搭草棚、开垦荒地，逐渐掌握自力谋生的本事。</description>
+    <baseDesc>[PAWN_nameDef]幼时随家人逃离繁重徭役，途中修搭草棚、开垦荒地，逐渐掌握自力谋生的本事。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1242,7 +1242,7 @@
     <slot>Childhood</slot>
     <title>乱世乞童</title>
     <titleShort>乱世乞童</titleShort>
-    <description>[PAWN_nameDef]在饥荒与战事间乞食求生，学会察言观色、躲避欺凌，也会采集野物填饱肚子。</description>
+    <baseDesc>[PAWN_nameDef]在饥荒与战事间乞食求生，学会察言观色、躲避欺凌，也会采集野物填饱肚子。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1269,7 +1269,7 @@
     <slot>Childhood</slot>
     <title>山寨少年</title>
     <titleShort>山寨少年</titleShort>
-    <description>[PAWN_nameDef]在山间聚落长大，跟随大人巡路、练弓、守望，熟悉险要山道与简陋防御工事。</description>
+    <baseDesc>[PAWN_nameDef]在山间聚落长大，跟随大人巡路、练弓、守望，熟悉险要山道与简陋防御工事。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1296,7 +1296,7 @@
     <slot>Childhood</slot>
     <title>流民营童</title>
     <titleShort>流民营童</titleShort>
-    <description>[PAWN_nameDef]童年生活在流民聚集的临时营地，帮忙搭棚、分粮和照看病弱者，见惯了迁徙的不安。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在流民聚集的临时营地，帮忙搭棚、分粮和照看病弱者，见惯了迁徙的不安。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1323,7 +1323,7 @@
     <slot>Childhood</slot>
     <title>被俘童仆</title>
     <titleShort>被俘童仆</titleShort>
-    <description>[PAWN_nameDef]幼年被迫离乡，在他人家中承担洒扫、耕作和杂务，学会谨慎应对陌生环境。</description>
+    <baseDesc>[PAWN_nameDef]幼年被迫离乡，在他人家中承担洒扫、耕作和杂务，学会谨慎应对陌生环境。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1350,7 +1350,7 @@
     <slot>Childhood</slot>
     <title>失乡少年</title>
     <titleShort>失乡少年</titleShort>
-    <description>[PAWN_nameDef]家园毁于战火后随乡亲迁徙，靠耕作与狩猎求生，也逐渐学会向陌生村社寻求帮助。</description>
+    <baseDesc>[PAWN_nameDef]家园毁于战火后随乡亲迁徙，靠耕作与狩猎求生，也逐渐学会向陌生村社寻求帮助。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1377,7 +1377,7 @@
     <slot>Childhood</slot>
     <title>巫祝弟子</title>
     <titleShort>巫祝弟子</titleShort>
-    <description>[PAWN_nameDef]自幼跟随巫祝准备祭仪、背诵祝辞、观察卜兆，对乡里信仰与人情颇为熟悉。</description>
+    <baseDesc>[PAWN_nameDef]自幼跟随巫祝准备祭仪、背诵祝辞、观察卜兆，对乡里信仰与人情颇为熟悉。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1403,7 +1403,7 @@
     <slot>Childhood</slot>
     <title>医者学童</title>
     <titleShort>医者学童</titleShort>
-    <description>[PAWN_nameDef]跟随医者辨认草药、研磨药材、清洗伤口，逐渐学会照顾发热与受伤的人。</description>
+    <baseDesc>[PAWN_nameDef]跟随医者辨认草药、研磨药材、清洗伤口，逐渐学会照顾发热与受伤的人。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1429,7 +1429,7 @@
     <slot>Childhood</slot>
     <title>卜者家童</title>
     <titleShort>卜者家童</titleShort>
-    <description>[PAWN_nameDef]在卜者家中长大，协助整理卜具、记载问卜之事，熟悉祭仪与文字记录。</description>
+    <baseDesc>[PAWN_nameDef]在卜者家中长大，协助整理卜具、记载问卜之事，熟悉祭仪与文字记录。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1455,7 +1455,7 @@
     <slot>Childhood</slot>
     <title>守墓人家</title>
     <titleShort>守墓人家</titleShort>
-    <description>[PAWN_nameDef]幼时随家人看护墓地、修整封土、清扫祭所，了解丧葬礼俗与石木营造。</description>
+    <baseDesc>[PAWN_nameDef]幼时随家人看护墓地、修整封土、清扫祭所，了解丧葬礼俗与石木营造。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1482,7 +1482,7 @@
     <slot>Childhood</slot>
     <title>乐工子弟</title>
     <titleShort>乐工子弟</titleShort>
-    <description>[PAWN_nameDef]从小在钟鼓琴瑟声中成长，学习节奏、曲调与合奏，常在祭典或宴飨时帮忙。</description>
+    <baseDesc>[PAWN_nameDef]从小在钟鼓琴瑟声中成长，学习节奏、曲调与合奏，常在祭典或宴飨时帮忙。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1508,7 +1508,7 @@
     <slot>Childhood</slot>
     <title>盲乐师学徒</title>
     <titleShort>盲乐师学徒</titleShort>
-    <description>[PAWN_nameDef]师从一位失明乐师，依靠听觉记忆曲调和节拍，学会以细微声响辨别演奏的差错。</description>
+    <baseDesc>[PAWN_nameDef]师从一位失明乐师，依靠听觉记忆曲调和节拍，学会以细微声响辨别演奏的差错。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1534,7 +1534,7 @@
     <slot>Childhood</slot>
     <title>山林隐居童</title>
     <titleShort>山林隐居童</titleShort>
-    <description>[PAWN_nameDef]随家人避居山林，靠种植、采药与读书度日，对山野物候和简朴生活颇为熟悉。</description>
+    <baseDesc>[PAWN_nameDef]随家人避居山林，靠种植、采药与读书度日，对山野物候和简朴生活颇为熟悉。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1561,7 +1561,7 @@
     <slot>Childhood</slot>
     <title>游方医童</title>
     <titleShort>游方医童</titleShort>
-    <description>[PAWN_nameDef]跟随行医长辈走村串邑，帮忙采药、煎汤和照看病人，也学会与各地乡民交往。</description>
+    <baseDesc>[PAWN_nameDef]跟随行医长辈走村串邑，帮忙采药、煎汤和照看病人，也学会与各地乡民交往。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1588,7 +1588,7 @@
     <slot>Adulthood</slot>
     <title>自耕农</title>
     <titleShort>自耕农</titleShort>
-    <description>[PAWN_nameDef]以耕作自家田地维持生计，熟悉播种、除草、收割与修整田埂，年景好坏直接牵动一家口粮。</description>
+    <baseDesc>[PAWN_nameDef]以耕作自家田地维持生计，熟悉播种、除草、收割与修整田埂，年景好坏直接牵动一家口粮。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1614,7 +1614,7 @@
     <slot>Adulthood</slot>
     <title>佃耕者</title>
     <titleShort>佃耕者</titleShort>
-    <description>[PAWN_nameDef]长期耕作由他人支配的田地，除种粮外还须承担约定的收获分配与劳役，深知土地得来不易。</description>
+    <baseDesc>[PAWN_nameDef]长期耕作由他人支配的田地，除种粮外还须承担约定的收获分配与劳役，深知土地得来不易。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1640,7 +1640,7 @@
     <slot>Adulthood</slot>
     <title>农田管事</title>
     <titleShort>农田管事</titleShort>
-    <description>[PAWN_nameDef]曾组织乡人播种、分配农具并监督收割，既懂农时，也善于协调不同人家的劳作。</description>
+    <baseDesc>[PAWN_nameDef]曾组织乡人播种、分配农具并监督收割，既懂农时，也善于协调不同人家的劳作。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1667,7 +1667,7 @@
     <slot>Adulthood</slot>
     <title>灌渠修筑者</title>
     <titleShort>灌渠修筑者</titleShort>
-    <description>[PAWN_nameDef]参与开挖沟渠和修筑田埂，凭地势引水入田，常在汛期抢修被冲坏的水道。</description>
+    <baseDesc>[PAWN_nameDef]参与开挖沟渠和修筑田埂，凭地势引水入田，常在汛期抢修被冲坏的水道。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1693,7 +1693,7 @@
     <slot>Adulthood</slot>
     <title>水利工匠</title>
     <titleShort>水利工匠</titleShort>
-    <description>[PAWN_nameDef]擅长勘察水势、砌筑堤岸与整治沟渠，能判断土石是否稳固，也懂得安排施工次序。</description>
+    <baseDesc>[PAWN_nameDef]擅长勘察水势、砌筑堤岸与整治沟渠，能判断土石是否稳固，也懂得安排施工次序。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1720,7 +1720,7 @@
     <slot>Adulthood</slot>
     <title>果园经营者</title>
     <titleShort>果园经营者</titleShort>
-    <description>[PAWN_nameDef]照管果树多年，熟悉修枝、采摘与储藏，能够从叶色和天气判断果木的长势。</description>
+    <baseDesc>[PAWN_nameDef]照管果树多年，熟悉修枝、采摘与储藏，能够从叶色和天气判断果木的长势。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1746,7 +1746,7 @@
     <slot>Adulthood</slot>
     <title>采药人</title>
     <titleShort>采药人</titleShort>
-    <description>[PAWN_nameDef]常年出入山野采集草木药材，熟悉不同植物的生长地点，也能为常见伤病提供照料。</description>
+    <baseDesc>[PAWN_nameDef]常年出入山野采集草木药材，熟悉不同植物的生长地点，也能为常见伤病提供照料。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1772,7 +1772,7 @@
     <slot>Adulthood</slot>
     <title>山林樵夫</title>
     <titleShort>山林樵夫</titleShort>
-    <description>[PAWN_nameDef]靠伐木与拾柴为生，懂得挑选木料、避开危险山坡，并会修补简陋木棚与工具。</description>
+    <baseDesc>[PAWN_nameDef]靠伐木与拾柴为生，懂得挑选木料、避开危险山坡，并会修补简陋木棚与工具。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1798,7 +1798,7 @@
     <slot>Adulthood</slot>
     <title>乡村猎户</title>
     <titleShort>乡村猎户</titleShort>
-    <description>[PAWN_nameDef]凭弓箭、陷阱与兽迹谋生，熟悉林中动物的行踪，猎获的肉与皮毛常拿到市集交换。</description>
+    <baseDesc>[PAWN_nameDef]凭弓箭、陷阱与兽迹谋生，熟悉林中动物的行踪，猎获的肉与皮毛常拿到市集交换。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1824,7 +1824,7 @@
     <slot>Adulthood</slot>
     <title>河湖渔夫</title>
     <titleShort>河湖渔夫</titleShort>
-    <description>[PAWN_nameDef]在河湖间捕鱼多年，善于修网、制篓、辨认水势，并懂得处理刚捕上的鱼获。</description>
+    <baseDesc>[PAWN_nameDef]在河湖间捕鱼多年，善于修网、制篓、辨认水势，并懂得处理刚捕上的鱼获。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1851,7 +1851,7 @@
     <slot>Adulthood</slot>
     <title>牧羊人</title>
     <titleShort>牧羊人</titleShort>
-    <description>[PAWN_nameDef]带领羊群逐草而行，懂得辨认病弱牲畜、防范野兽，并在寒暑变化中寻找合适牧地。</description>
+    <baseDesc>[PAWN_nameDef]带领羊群逐草而行，懂得辨认病弱牲畜、防范野兽，并在寒暑变化中寻找合适牧地。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1877,7 +1877,7 @@
     <slot>Adulthood</slot>
     <title>养牛人</title>
     <titleShort>养牛人</titleShort>
-    <description>[PAWN_nameDef]专门照看耕牛，熟悉饲喂、牵引和简单伤病处理，农忙时还协助修整牛舍与栏栅。</description>
+    <baseDesc>[PAWN_nameDef]专门照看耕牛，熟悉饲喂、牵引和简单伤病处理，农忙时还协助修整牛舍与栏栅。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1903,7 +1903,7 @@
     <slot>Adulthood</slot>
     <title>马匹饲养者</title>
     <titleShort>马匹饲养者</titleShort>
-    <description>[PAWN_nameDef]多年照料车马，懂得配草料、清理蹄部、观察伤病，能让躁动的马匹逐渐安静下来。</description>
+    <baseDesc>[PAWN_nameDef]多年照料车马，懂得配草料、清理蹄部、观察伤病，能让躁动的马匹逐渐安静下来。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1929,7 +1929,7 @@
     <slot>Adulthood</slot>
     <title>养蚕人</title>
     <titleShort>养蚕人</titleShort>
-    <description>[PAWN_nameDef]经营蚕桑生计，按时采桑、清理蚕室、收取蚕茧，深知温湿变化对蚕群的影响。</description>
+    <baseDesc>[PAWN_nameDef]经营蚕桑生计，按时采桑、清理蚕室、收取蚕茧，深知温湿变化对蚕群的影响。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1955,7 +1955,7 @@
     <slot>Adulthood</slot>
     <title>织布农妇</title>
     <titleShort>织布农妇</titleShort>
-    <description>[PAWN_nameDef]长期纺线织布，熟悉麻丝处理、经纬配色和织机修整，制成的布匹既供家用也可交易。</description>
+    <baseDesc>[PAWN_nameDef]长期纺线织布，熟悉麻丝处理、经纬配色和织机修整，制成的布匹既供家用也可交易。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -1981,7 +1981,7 @@
     <slot>Adulthood</slot>
     <title>谷物加工者</title>
     <titleShort>谷物加工者</titleShort>
-    <description>[PAWN_nameDef]负责舂米、磨谷、筛糠与备制粮食，熟悉谷物干湿和虫蛀迹象，能尽量减少损耗。</description>
+    <baseDesc>[PAWN_nameDef]负责舂米、磨谷、筛糠与备制粮食，熟悉谷物干湿和虫蛀迹象，能尽量减少损耗。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2007,7 +2007,7 @@
     <slot>Adulthood</slot>
     <title>粮仓看守</title>
     <titleShort>粮仓看守</titleShort>
-    <description>[PAWN_nameDef]曾管理仓廪中的谷物，负责清点数量、通风防潮与驱鼠，稍有疏忽便可能损失一季收成。</description>
+    <baseDesc>[PAWN_nameDef]曾管理仓廪中的谷物，负责清点数量、通风防潮与驱鼠，稍有疏忽便可能损失一季收成。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2034,7 +2034,7 @@
     <slot>Adulthood</slot>
     <title>村社长者</title>
     <titleShort>村社长者</titleShort>
-    <description>[PAWN_nameDef]在村社中颇有威望，常协调农事、分派公共劳作，并为邻里争执出面说和。</description>
+    <baseDesc>[PAWN_nameDef]在村社中颇有威望，常协调农事、分派公共劳作，并为邻里争执出面说和。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2061,7 +2061,7 @@
     <slot>Adulthood</slot>
     <title>乡里调解者</title>
     <titleShort>乡里调解者</titleShort>
-    <description>[PAWN_nameDef]善于听取两家争执的缘由，援引乡俗与旧例劝解冲突，力求让邻里重新相处。</description>
+    <baseDesc>[PAWN_nameDef]善于听取两家争执的缘由，援引乡俗与旧例劝解冲突，力求让邻里重新相处。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2087,7 +2087,7 @@
     <slot>Adulthood</slot>
     <title>逃荒农民</title>
     <titleShort>逃荒农民</titleShort>
-    <description>[PAWN_nameDef]曾因歉收离开故土，沿途替人耕地、搭棚换粮，在艰难迁徙中学会节省每一份口粮。</description>
+    <baseDesc>[PAWN_nameDef]曾因歉收离开故土，沿途替人耕地、搭棚换粮，在艰难迁徙中学会节省每一份口粮。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2114,7 +2114,7 @@
     <slot>Adulthood</slot>
     <title>陶器匠人</title>
     <titleShort>陶器匠人</titleShort>
-    <description>[PAWN_nameDef]以制作陶罐、陶瓮和炊具为业，熟悉选泥、制坯、烧窑与修整器形，作品供乡里日常使用。</description>
+    <baseDesc>[PAWN_nameDef]以制作陶罐、陶瓮和炊具为业，熟悉选泥、制坯、烧窑与修整器形，作品供乡里日常使用。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2140,7 +2140,7 @@
     <slot>Adulthood</slot>
     <title>陶窑工匠</title>
     <titleShort>陶窑工匠</titleShort>
-    <description>[PAWN_nameDef]长期守着陶窑，负责堆柴、控火、封窑与开窑，能凭火色和经验判断烧成的时机。</description>
+    <baseDesc>[PAWN_nameDef]长期守着陶窑，负责堆柴、控火、封窑与开窑，能凭火色和经验判断烧成的时机。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2166,7 +2166,7 @@
     <slot>Adulthood</slot>
     <title>木作匠人</title>
     <titleShort>木作匠人</titleShort>
-    <description>[PAWN_nameDef]擅长削木制器、修理车具与农具，懂得选材、开榫和加固接缝，常受乡人委托修补器物。</description>
+    <baseDesc>[PAWN_nameDef]擅长削木制器、修理车具与农具，懂得选材、开榫和加固接缝，常受乡人委托修补器物。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2192,7 +2192,7 @@
     <slot>Adulthood</slot>
     <title>房屋营造匠</title>
     <titleShort>房屋营造匠</titleShort>
-    <description>[PAWN_nameDef]参与修建夯土房舍与木构屋架，熟悉立柱、架梁、铺盖屋顶以及工地上的分工协作。</description>
+    <baseDesc>[PAWN_nameDef]参与修建夯土房舍与木构屋架，熟悉立柱、架梁、铺盖屋顶以及工地上的分工协作。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2218,7 +2218,7 @@
     <slot>Adulthood</slot>
     <title>青铜铸工</title>
     <titleShort>青铜铸工</titleShort>
-    <description>[PAWN_nameDef]在铸铜作坊制作礼器、兵器和工具，熟悉制范、合金配料、浇铸及打磨，深知炉火的危险。</description>
+    <baseDesc>[PAWN_nameDef]在铸铜作坊制作礼器、兵器和工具，熟悉制范、合金配料、浇铸及打磨，深知炉火的危险。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2244,7 +2244,7 @@
     <slot>Adulthood</slot>
     <title>兵器铸造者</title>
     <titleShort>兵器铸造者</titleShort>
-    <description>[PAWN_nameDef]专为武士与军队制作戈矛、剑具等兵器，既要掌握铸造工艺，也须理解兵刃在战场上的用途。</description>
+    <baseDesc>[PAWN_nameDef]专为武士与军队制作戈矛、剑具等兵器，既要掌握铸造工艺，也须理解兵刃在战场上的用途。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2271,7 +2271,7 @@
     <slot>Adulthood</slot>
     <title>农具匠人</title>
     <titleShort>农具匠人</titleShort>
-    <description>[PAWN_nameDef]制作并修理锄、镰与其他田间器具，常向农人询问使用中的损坏之处，再调整形制。</description>
+    <baseDesc>[PAWN_nameDef]制作并修理锄、镰与其他田间器具，常向农人询问使用中的损坏之处，再调整形制。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2297,7 +2297,7 @@
     <slot>Adulthood</slot>
     <title>石匠</title>
     <titleShort>石匠</titleShort>
-    <description>[PAWN_nameDef]多年采石凿石，能顺石纹开料、修整台阶与墙基，知道怎样避免石块在施工中崩裂。</description>
+    <baseDesc>[PAWN_nameDef]多年采石凿石，能顺石纹开料、修整台阶与墙基，知道怎样避免石块在施工中崩裂。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2323,7 +2323,7 @@
     <slot>Adulthood</slot>
     <title>玉器工匠</title>
     <titleShort>玉器工匠</titleShort>
-    <description>[PAWN_nameDef]擅长切磨玉石、钻孔和雕饰纹样，常为贵族制作佩玉与礼器，工作需要极大的耐心。</description>
+    <baseDesc>[PAWN_nameDef]擅长切磨玉石、钻孔和雕饰纹样，常为贵族制作佩玉与礼器，工作需要极大的耐心。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2349,7 +2349,7 @@
     <slot>Adulthood</slot>
     <title>漆器匠人</title>
     <titleShort>漆器匠人</titleShort>
-    <description>[PAWN_nameDef]制作涂漆木器，熟悉木胎处理、反复髹涂与彩绘纹饰，能在器物表面留下细腻光泽。</description>
+    <baseDesc>[PAWN_nameDef]制作涂漆木器，熟悉木胎处理、反复髹涂与彩绘纹饰，能在器物表面留下细腻光泽。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2375,7 +2375,7 @@
     <slot>Adulthood</slot>
     <title>皮革匠人</title>
     <titleShort>皮革匠人</titleShort>
-    <description>[PAWN_nameDef]处理兽皮并制作皮囊、革带与护具，懂得鞣制、裁剪和缝合，也能辨别皮料是否耐用。</description>
+    <baseDesc>[PAWN_nameDef]处理兽皮并制作皮囊、革带与护具，懂得鞣制、裁剪和缝合，也能辨别皮料是否耐用。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2401,7 +2401,7 @@
     <slot>Adulthood</slot>
     <title>竹器匠人</title>
     <titleShort>竹器匠人</titleShort>
-    <description>[PAWN_nameDef]以竹木编制篮筐、席具和容器，善于挑选竹篾、编排纹路，制作轻便而结实的日用品。</description>
+    <baseDesc>[PAWN_nameDef]以竹木编制篮筐、席具和容器，善于挑选竹篾、编排纹路，制作轻便而结实的日用品。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2427,7 +2427,7 @@
     <slot>Adulthood</slot>
     <title>车轮匠</title>
     <titleShort>车轮匠</titleShort>
-    <description>[PAWN_nameDef]专门制作和修理车轮，熟悉轮毂、车辐与轮圈的配合，知道车轮稍有偏差便会影响行路。</description>
+    <baseDesc>[PAWN_nameDef]专门制作和修理车轮，熟悉轮毂、车辐与轮圈的配合，知道车轮稍有偏差便会影响行路。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2453,7 +2453,7 @@
     <slot>Adulthood</slot>
     <title>造车匠</title>
     <titleShort>造车匠</titleShort>
-    <description>[PAWN_nameDef]参与制造牛车和战车，统筹车架、车轮与牵引器具的制作，懂得木作与驭畜的配合。</description>
+    <baseDesc>[PAWN_nameDef]参与制造牛车和战车，统筹车架、车轮与牵引器具的制作，懂得木作与驭畜的配合。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2480,7 +2480,7 @@
     <slot>Adulthood</slot>
     <title>制弓匠</title>
     <titleShort>制弓匠</titleShort>
-    <description>[PAWN_nameDef]以制弓为生，熟悉选材、定形、张弦与试射，常根据使用者的力量调整弓具。</description>
+    <baseDesc>[PAWN_nameDef]以制弓为生，熟悉选材、定形、张弦与试射，常根据使用者的力量调整弓具。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2506,7 +2506,7 @@
     <slot>Adulthood</slot>
     <title>制箭匠</title>
     <titleShort>制箭匠</titleShort>
-    <description>[PAWN_nameDef]制作箭杆、箭镞与尾羽，重视箭矢的笔直和轻重均衡，能迅速辨出射偏的原因。</description>
+    <baseDesc>[PAWN_nameDef]制作箭杆、箭镞与尾羽，重视箭矢的笔直和轻重均衡，能迅速辨出射偏的原因。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2532,7 +2532,7 @@
     <slot>Adulthood</slot>
     <title>筑城工匠</title>
     <titleShort>筑城工匠</titleShort>
-    <description>[PAWN_nameDef]曾参与修筑城墙与城门，熟悉夯土、运石和加固墙基，知道坚固防线来自繁重的劳作。</description>
+    <baseDesc>[PAWN_nameDef]曾参与修筑城墙与城门，熟悉夯土、运石和加固墙基，知道坚固防线来自繁重的劳作。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2558,7 +2558,7 @@
     <slot>Adulthood</slot>
     <title>修桥工匠</title>
     <titleShort>修桥工匠</titleShort>
-    <description>[PAWN_nameDef]擅长架设木桥、修筑桥台与稳固河岸，能根据水位和河床选择合适的建桥位置。</description>
+    <baseDesc>[PAWN_nameDef]擅长架设木桥、修筑桥台与稳固河岸，能根据水位和河床选择合适的建桥位置。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2585,7 +2585,7 @@
     <slot>Adulthood</slot>
     <title>采石工</title>
     <titleShort>采石工</titleShort>
-    <description>[PAWN_nameDef]在山间采石场劳作多年，熟悉石脉、凿具和搬运方法，也懂得支护危险的采掘地点。</description>
+    <baseDesc>[PAWN_nameDef]在山间采石场劳作多年，熟悉石脉、凿具和搬运方法，也懂得支护危险的采掘地点。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2611,7 +2611,7 @@
     <slot>Adulthood</slot>
     <title>冶铁匠人</title>
     <titleShort>冶铁匠人</titleShort>
-    <description>[PAWN_nameDef]在铁器作坊中冶炼与锻打金属，熟悉炉温、锤炼和淬火，制作的工具逐渐受到农人与工匠青睐。</description>
+    <baseDesc>[PAWN_nameDef]在铁器作坊中冶炼与锻打金属，熟悉炉温、锤炼和淬火，制作的工具逐渐受到农人与工匠青睐。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2638,7 +2638,7 @@
     <slot>Adulthood</slot>
     <title>行商</title>
     <titleShort>行商</titleShort>
-    <description>[PAWN_nameDef]带着货物往来村邑和诸侯边境，熟悉道路、物价与交易习惯，善于寻找有利的交换机会。</description>
+    <baseDesc>[PAWN_nameDef]带着货物往来村邑和诸侯边境，熟悉道路、物价与交易习惯，善于寻找有利的交换机会。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2664,7 +2664,7 @@
     <slot>Adulthood</slot>
     <title>盐商</title>
     <titleShort>盐商</titleShort>
-    <description>[PAWN_nameDef]经营食盐的运输与贩卖，熟悉盐产地、关津和各地价格，知道一条道路受阻便可能改变行情。</description>
+    <baseDesc>[PAWN_nameDef]经营食盐的运输与贩卖，熟悉盐产地、关津和各地价格，知道一条道路受阻便可能改变行情。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2690,7 +2690,7 @@
     <slot>Adulthood</slot>
     <title>粮食商人</title>
     <titleShort>粮食商人</titleShort>
-    <description>[PAWN_nameDef]收购并转运谷物，懂得辨别粮质、估算仓储损耗，也常留意歉收和丰收对市价的影响。</description>
+    <baseDesc>[PAWN_nameDef]收购并转运谷物，懂得辨别粮质、估算仓储损耗，也常留意歉收和丰收对市价的影响。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2717,7 +2717,7 @@
     <slot>Adulthood</slot>
     <title>牲畜商人</title>
     <titleShort>牲畜商人</titleShort>
-    <description>[PAWN_nameDef]往来乡市买卖牛羊马匹，能够辨别牲畜年龄、体力与病症，并善于与牧人议价。</description>
+    <baseDesc>[PAWN_nameDef]往来乡市买卖牛羊马匹，能够辨别牲畜年龄、体力与病症，并善于与牧人议价。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2743,7 +2743,7 @@
     <slot>Adulthood</slot>
     <title>布匹商人</title>
     <titleShort>布匹商人</titleShort>
-    <description>[PAWN_nameDef]贩运麻布与丝织品，熟悉织物质地、染色与尺寸，常为不同买主寻找合适的布料。</description>
+    <baseDesc>[PAWN_nameDef]贩运麻布与丝织品，熟悉织物质地、染色与尺寸，常为不同买主寻找合适的布料。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2769,7 +2769,7 @@
     <slot>Adulthood</slot>
     <title>陶器商人</title>
     <titleShort>陶器商人</titleShort>
-    <description>[PAWN_nameDef]将陶罐、陶盆与储粮器运往各地，懂得辨别烧制好坏，也熟悉易碎货物的装载方法。</description>
+    <baseDesc>[PAWN_nameDef]将陶罐、陶盆与储粮器运往各地，懂得辨别烧制好坏，也熟悉易碎货物的装载方法。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2795,7 +2795,7 @@
     <slot>Adulthood</slot>
     <title>车马商人</title>
     <titleShort>车马商人</titleShort>
-    <description>[PAWN_nameDef]专门经营车马交易，熟悉马匹性情、车辆损耗和道路条件，能向买主说明器具的长短。</description>
+    <baseDesc>[PAWN_nameDef]专门经营车马交易，熟悉马匹性情、车辆损耗和道路条件，能向买主说明器具的长短。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2821,7 +2821,7 @@
     <slot>Adulthood</slot>
     <title>长途商旅</title>
     <titleShort>长途商旅</titleShort>
-    <description>[PAWN_nameDef]随商队穿越山道与关津，既懂交易也能照看驮畜，遇上盗匪时须与同伴共同警戒。</description>
+    <baseDesc>[PAWN_nameDef]随商队穿越山道与关津，既懂交易也能照看驮畜，遇上盗匪时须与同伴共同警戒。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2848,7 +2848,7 @@
     <slot>Adulthood</slot>
     <title>市集经纪</title>
     <titleShort>市集经纪</titleShort>
-    <description>[PAWN_nameDef]长期居间撮合货物交易，熟悉市价和买卖双方的心思，凭口才与信誉获得报酬。</description>
+    <baseDesc>[PAWN_nameDef]长期居间撮合货物交易，熟悉市价和买卖双方的心思，凭口才与信誉获得报酬。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2874,7 +2874,7 @@
     <slot>Adulthood</slot>
     <title>客舍经营者</title>
     <titleShort>客舍经营者</titleShort>
-    <description>[PAWN_nameDef]经营供旅人歇脚的客舍，安排食宿、照看牲口，并在各地商旅的闲谈中得知不少消息。</description>
+    <baseDesc>[PAWN_nameDef]经营供旅人歇脚的客舍，安排食宿、照看牲口，并在各地商旅的闲谈中得知不少消息。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2900,7 +2900,7 @@
     <slot>Adulthood</slot>
     <title>舟船商人</title>
     <titleShort>舟船商人</titleShort>
-    <description>[PAWN_nameDef]借河道运输粮食和器物，熟悉水路、船只载重与沿岸市集，也懂得应付风浪和浅滩。</description>
+    <baseDesc>[PAWN_nameDef]借河道运输粮食和器物，熟悉水路、船只载重与沿岸市集，也懂得应付风浪和浅滩。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2927,7 +2927,7 @@
     <slot>Adulthood</slot>
     <title>渡口经营者</title>
     <titleShort>渡口经营者</titleShort>
-    <description>[PAWN_nameDef]管理河边渡船与装卸事务，按水势安排过河次序，还要照顾旅客携带的牲口和货物。</description>
+    <baseDesc>[PAWN_nameDef]管理河边渡船与装卸事务，按水势安排过河次序，还要照顾旅客携带的牲口和货物。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2954,7 +2954,7 @@
     <slot>Adulthood</slot>
     <title>货车御者</title>
     <titleShort>货车御者</titleShort>
-    <description>[PAWN_nameDef]驾车为商旅运输货物，熟悉驭马、装载和平衡车身，能够在崎岖道路上保护货物。</description>
+    <baseDesc>[PAWN_nameDef]驾车为商旅运输货物，熟悉驭马、装载和平衡车身，能够在崎岖道路上保护货物。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -2980,7 +2980,7 @@
     <slot>Adulthood</slot>
     <title>商队护卫</title>
     <titleShort>商队护卫</titleShort>
-    <description>[PAWN_nameDef]受雇护送商旅穿越险路，熟悉持弓警戒与近身格斗，也知道何时应避免无谓冲突。</description>
+    <baseDesc>[PAWN_nameDef]受雇护送商旅穿越险路，熟悉持弓警戒与近身格斗，也知道何时应避免无谓冲突。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3007,7 +3007,7 @@
     <slot>Adulthood</slot>
     <title>走方货郎</title>
     <titleShort>走方货郎</titleShort>
-    <description>[PAWN_nameDef]挑着小件货物走村串户，靠熟络的口才招徕买主，也熟悉乡间道路和可供歇脚的地方。</description>
+    <baseDesc>[PAWN_nameDef]挑着小件货物走村串户，靠熟络的口才招徕买主，也熟悉乡间道路和可供歇脚的地方。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3034,7 +3034,7 @@
     <slot>Adulthood</slot>
     <title>乡勇</title>
     <titleShort>乡勇</titleShort>
-    <description>[PAWN_nameDef]曾随乡人组织守卫村社，操练戈矛与弓箭，在盗匪来袭时负责守住田舍和道路。</description>
+    <baseDesc>[PAWN_nameDef]曾随乡人组织守卫村社，操练戈矛与弓箭，在盗匪来袭时负责守住田舍和道路。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3060,7 +3060,7 @@
     <slot>Adulthood</slot>
     <title>戍边士卒</title>
     <titleShort>戍边士卒</titleShort>
-    <description>[PAWN_nameDef]长期驻守边境营垒，熟悉巡哨、射箭与持兵作战，深知夜间警戒和军纪的重要。</description>
+    <baseDesc>[PAWN_nameDef]长期驻守边境营垒，熟悉巡哨、射箭与持兵作战，深知夜间警戒和军纪的重要。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3086,7 +3086,7 @@
     <slot>Adulthood</slot>
     <title>战车御者</title>
     <titleShort>战车御者</titleShort>
-    <description>[PAWN_nameDef]曾驾驭战车驰骋阵前，须控制奔马、避开障碍，并与车上甲士保持默契，稍有失误便可能全车覆亡。</description>
+    <baseDesc>[PAWN_nameDef]曾驾驭战车驰骋阵前，须控制奔马、避开障碍，并与车上甲士保持默契，稍有失误便可能全车覆亡。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3113,7 +3113,7 @@
     <slot>Adulthood</slot>
     <title>战车甲士</title>
     <titleShort>战车甲士</titleShort>
-    <description>[PAWN_nameDef]作为战车上的武士参战，练习弓射与戈矛，熟悉车阵进退和贵族战争中的号令。</description>
+    <baseDesc>[PAWN_nameDef]作为战车上的武士参战，练习弓射与戈矛，熟悉车阵进退和贵族战争中的号令。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3139,7 +3139,7 @@
     <slot>Adulthood</slot>
     <title>持戈步卒</title>
     <titleShort>持戈步卒</titleShort>
-    <description>[PAWN_nameDef]曾手持戈矛列阵作战，习惯在密集队伍中听令前进，也见识过近身交锋的凶险。</description>
+    <baseDesc>[PAWN_nameDef]曾手持戈矛列阵作战，习惯在密集队伍中听令前进，也见识过近身交锋的凶险。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3165,7 +3165,7 @@
     <slot>Adulthood</slot>
     <title>弓箭手</title>
     <titleShort>弓箭手</titleShort>
-    <description>[PAWN_nameDef]以弓箭参加战斗，反复练习测距、瞄准与齐射，也须在敌人逼近时保护自己。</description>
+    <baseDesc>[PAWN_nameDef]以弓箭参加战斗，反复练习测距、瞄准与齐射，也须在敌人逼近时保护自己。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3191,7 +3191,7 @@
     <slot>Adulthood</slot>
     <title>城门守卒</title>
     <titleShort>城门守卒</titleShort>
-    <description>[PAWN_nameDef]负责看守城门、盘问往来行人并维持秩序，遇到警报时便与同袍守住要道。</description>
+    <baseDesc>[PAWN_nameDef]负责看守城门、盘问往来行人并维持秩序，遇到警报时便与同袍守住要道。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3218,7 +3218,7 @@
     <slot>Adulthood</slot>
     <title>边境巡卒</title>
     <titleShort>边境巡卒</titleShort>
-    <description>[PAWN_nameDef]沿边地道路和山口巡查，熟悉骑乘、弓射与观察足迹，常在荒野中寻找可疑动静。</description>
+    <baseDesc>[PAWN_nameDef]沿边地道路和山口巡查，熟悉骑乘、弓射与观察足迹，常在荒野中寻找可疑动静。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3245,7 +3245,7 @@
     <slot>Adulthood</slot>
     <title>斥候</title>
     <titleShort>斥候</titleShort>
-    <description>[PAWN_nameDef]曾为军队探察前路，识别敌军踪迹、河流渡口与隐蔽小径，必须在不惊动对方的情况下返回报信。</description>
+    <baseDesc>[PAWN_nameDef]曾为军队探察前路，识别敌军踪迹、河流渡口与隐蔽小径，必须在不惊动对方的情况下返回报信。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3272,7 +3272,7 @@
     <slot>Adulthood</slot>
     <title>贵族武士</title>
     <titleShort>贵族武士</titleShort>
-    <description>[PAWN_nameDef]出身武士阶层，接受射御与近战训练，曾随宗主出征，也熟悉宴飨和盟会中的礼节。</description>
+    <baseDesc>[PAWN_nameDef]出身武士阶层，接受射御与近战训练，曾随宗主出征，也熟悉宴飨和盟会中的礼节。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3299,7 +3299,7 @@
     <slot>Adulthood</slot>
     <title>军中医者</title>
     <titleShort>军中医者</titleShort>
-    <description>[PAWN_nameDef]随军照料伤兵，负责清洗伤口、包扎止血与调配草药，常在战斗结束后彻夜忙碌。</description>
+    <baseDesc>[PAWN_nameDef]随军照料伤兵，负责清洗伤口、包扎止血与调配草药，常在战斗结束后彻夜忙碌。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3325,7 +3325,7 @@
     <slot>Adulthood</slot>
     <title>军械工匠</title>
     <titleShort>军械工匠</titleShort>
-    <description>[PAWN_nameDef]在军营修补戈矛、弓弦和护具，懂得武器如何损坏，也能根据士卒的使用情况改进器具。</description>
+    <baseDesc>[PAWN_nameDef]在军营修补戈矛、弓弦和护具，懂得武器如何损坏，也能根据士卒的使用情况改进器具。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3352,7 +3352,7 @@
     <slot>Adulthood</slot>
     <title>军粮管事</title>
     <titleShort>军粮管事</titleShort>
-    <description>[PAWN_nameDef]负责军中粮食清点、分配和运输，必须计算口粮并防止霉损，否则士卒未战便可能挨饿。</description>
+    <baseDesc>[PAWN_nameDef]负责军中粮食清点、分配和运输，必须计算口粮并防止霉损，否则士卒未战便可能挨饿。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3379,7 +3379,7 @@
     <slot>Adulthood</slot>
     <title>军营炊事者</title>
     <titleShort>军营炊事者</titleShort>
-    <description>[PAWN_nameDef]在军营为众人煮食，熟悉大锅烹饪、粮食分配和简易伤病照料，常在行军途中临时搭灶。</description>
+    <baseDesc>[PAWN_nameDef]在军营为众人煮食，熟悉大锅烹饪、粮食分配和简易伤病照料，常在行军途中临时搭灶。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3405,7 +3405,7 @@
     <slot>Adulthood</slot>
     <title>战场拾遗者</title>
     <titleShort>战场拾遗者</titleShort>
-    <description>[PAWN_nameDef]曾在战后收拾遗落兵器和器具，寻找尚能救治的伤者，也学会在危险废墟中保护自己。</description>
+    <baseDesc>[PAWN_nameDef]曾在战后收拾遗落兵器和器具，寻找尚能救治的伤者，也学会在危险废墟中保护自己。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3432,7 +3432,7 @@
     <slot>Adulthood</slot>
     <title>退伍老兵</title>
     <titleShort>退伍老兵</titleShort>
-    <description>[PAWN_nameDef]历经多次征战后离开军伍，熟悉刀戈弓矢与阵列号令，身上仍留着战场生活的痕迹。</description>
+    <baseDesc>[PAWN_nameDef]历经多次征战后离开军伍，熟悉刀戈弓矢与阵列号令，身上仍留着战场生活的痕迹。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3458,7 +3458,7 @@
     <slot>Adulthood</slot>
     <title>逃亡士卒</title>
     <titleShort>逃亡士卒</titleShort>
-    <description>[PAWN_nameDef]曾从军中逃离，靠避开巡查和在乡野谋生保全性命，虽不愿再战，却仍保有用兵本领。</description>
+    <baseDesc>[PAWN_nameDef]曾从军中逃离，靠避开巡查和在乡野谋生保全性命，虽不愿再战，却仍保有用兵本领。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3485,7 +3485,7 @@
     <slot>Adulthood</slot>
     <title>城防指挥者</title>
     <titleShort>城防指挥者</titleShort>
-    <description>[PAWN_nameDef]曾负责城邑防守，安排守门、巡哨与弓手位置，懂得在敌军逼近时维持士卒秩序。</description>
+    <baseDesc>[PAWN_nameDef]曾负责城邑防守，安排守门、巡哨与弓手位置，懂得在敌军逼近时维持士卒秩序。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3512,7 +3512,7 @@
     <slot>Adulthood</slot>
     <title>骑兵</title>
     <titleShort>骑兵</titleShort>
-    <description>[PAWN_nameDef]曾骑马参与侦察与战斗，熟悉控马、持兵和迅速转向，在开阔地形上行动尤其灵活。</description>
+    <baseDesc>[PAWN_nameDef]曾骑马参与侦察与战斗，熟悉控马、持兵和迅速转向，在开阔地形上行动尤其灵活。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3540,7 +3540,7 @@
     <slot>Adulthood</slot>
     <title>弩手</title>
     <titleShort>弩手</titleShort>
-    <description>[PAWN_nameDef]受训使用弩具，熟悉上弦、瞄准与保养弩机，明白准确射击依赖器械与耐心。</description>
+    <baseDesc>[PAWN_nameDef]受训使用弩具，熟悉上弦、瞄准与保养弩机，明白准确射击依赖器械与耐心。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3566,7 +3566,7 @@
     <slot>Adulthood</slot>
     <title>宗族家臣</title>
     <titleShort>宗族家臣</titleShort>
-    <description>[PAWN_nameDef]多年侍奉贵族宗族，负责传达命令、协调家务与接待宾客，熟悉宗主和族人之间的关系。</description>
+    <baseDesc>[PAWN_nameDef]多年侍奉贵族宗族，负责传达命令、协调家务与接待宾客，熟悉宗主和族人之间的关系。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3592,7 +3592,7 @@
     <slot>Adulthood</slot>
     <title>贵族门客</title>
     <titleShort>贵族门客</titleShort>
-    <description>[PAWN_nameDef]依附贵族门下，以谋划、交涉或武艺求取任用，须在复杂的人情关系中证明自己的价值。</description>
+    <baseDesc>[PAWN_nameDef]依附贵族门下，以谋划、交涉或武艺求取任用，须在复杂的人情关系中证明自己的价值。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3619,7 +3619,7 @@
     <slot>Adulthood</slot>
     <title>诸侯使者</title>
     <titleShort>诸侯使者</titleShort>
-    <description>[PAWN_nameDef]曾奉命出使邻国，传递国书、商议盟约，熟悉不同朝廷的礼仪，也懂得谨慎措辞。</description>
+    <baseDesc>[PAWN_nameDef]曾奉命出使邻国，传递国书、商议盟约，熟悉不同朝廷的礼仪，也懂得谨慎措辞。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3645,7 +3645,7 @@
     <slot>Adulthood</slot>
     <title>史官属吏</title>
     <titleShort>史官属吏</titleShort>
-    <description>[PAWN_nameDef]在官署协助记录政事、编排简册与核对年月，深知一字之误也可能影响后人的判断。</description>
+    <baseDesc>[PAWN_nameDef]在官署协助记录政事、编排简册与核对年月，深知一字之误也可能影响后人的判断。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3671,7 +3671,7 @@
     <slot>Adulthood</slot>
     <title>典籍管理者</title>
     <titleShort>典籍管理者</titleShort>
-    <description>[PAWN_nameDef]负责保管和整理竹简文书，熟悉篇章分类、简牍修补与抄录，珍惜难得的文字材料。</description>
+    <baseDesc>[PAWN_nameDef]负责保管和整理竹简文书，熟悉篇章分类、简牍修补与抄录，珍惜难得的文字材料。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3697,7 +3697,7 @@
     <slot>Adulthood</slot>
     <title>礼官</title>
     <titleShort>礼官</titleShort>
-    <description>[PAWN_nameDef]曾主持或协助朝聘、祭祀与宴飨礼仪，熟悉仪节次序，善于提醒参与者遵守规矩。</description>
+    <baseDesc>[PAWN_nameDef]曾主持或协助朝聘、祭祀与宴飨礼仪，熟悉仪节次序，善于提醒参与者遵守规矩。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3723,7 +3723,7 @@
     <slot>Adulthood</slot>
     <title>乐官</title>
     <titleShort>乐官</titleShort>
-    <description>[PAWN_nameDef]在贵族宫廷管理礼乐演奏，熟悉钟鼓与歌舞的配合，能够训练乐工并安排仪式曲目。</description>
+    <baseDesc>[PAWN_nameDef]在贵族宫廷管理礼乐演奏，熟悉钟鼓与歌舞的配合，能够训练乐工并安排仪式曲目。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3749,7 +3749,7 @@
     <slot>Adulthood</slot>
     <title>乡学教师</title>
     <titleShort>乡学教师</titleShort>
-    <description>[PAWN_nameDef]向乡里子弟传授识字、礼仪与古人故事，善于因材施教，也常为邻人解答文书疑难。</description>
+    <baseDesc>[PAWN_nameDef]向乡里子弟传授识字、礼仪与古人故事，善于因材施教，也常为邻人解答文书疑难。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3776,7 +3776,7 @@
     <slot>Adulthood</slot>
     <title>游历士人</title>
     <titleShort>游历士人</titleShort>
-    <description>[PAWN_nameDef]携带所学游走列国，拜访师友与贵族，希望以学识获得任用，见识过不同地方的风俗政令。</description>
+    <baseDesc>[PAWN_nameDef]携带所学游走列国，拜访师友与贵族，希望以学识获得任用，见识过不同地方的风俗政令。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3803,7 +3803,7 @@
     <slot>Adulthood</slot>
     <title>游历说客</title>
     <titleShort>游历说客</titleShort>
-    <description>[PAWN_nameDef]曾向诸侯与权臣陈说利害，凭辞令争取支持，熟悉盟约、利益和人心之间的微妙关系。</description>
+    <baseDesc>[PAWN_nameDef]曾向诸侯与权臣陈说利害，凭辞令争取支持，熟悉盟约、利益和人心之间的微妙关系。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3831,7 +3831,7 @@
     <slot>Adulthood</slot>
     <title>贵族庶子</title>
     <titleShort>贵族庶子</titleShort>
-    <description>[PAWN_nameDef]虽出身贵族，却难以继承宗族主要权位，曾凭礼仪、射艺与人脉在诸侯间寻找出路。</description>
+    <baseDesc>[PAWN_nameDef]虽出身贵族，却难以继承宗族主要权位，曾凭礼仪、射艺与人脉在诸侯间寻找出路。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3858,7 +3858,7 @@
     <slot>Adulthood</slot>
     <title>失势贵族</title>
     <titleShort>失势贵族</titleShort>
-    <description>[PAWN_nameDef]原本享有宗族庇护，后来因政争失去地位，被迫离开旧居，仍保留昔日学识与交游经验。</description>
+    <baseDesc>[PAWN_nameDef]原本享有宗族庇护，后来因政争失去地位，被迫离开旧居，仍保留昔日学识与交游经验。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3885,7 +3885,7 @@
     <slot>Adulthood</slot>
     <title>宗族长者</title>
     <titleShort>宗族长者</titleShort>
-    <description>[PAWN_nameDef]长期主持宗族议事与祭礼，协调婚丧、田产和族人纠纷，在乡里拥有一定声望。</description>
+    <baseDesc>[PAWN_nameDef]长期主持宗族议事与祭礼，协调婚丧、田产和族人纠纷，在乡里拥有一定声望。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3911,7 +3911,7 @@
     <slot>Adulthood</slot>
     <title>乡邑属吏</title>
     <titleShort>乡邑属吏</titleShort>
-    <description>[PAWN_nameDef]在地方官署办理文书与日常事务，熟悉征发、登记和传达政令，也常接触乡民诉求。</description>
+    <baseDesc>[PAWN_nameDef]在地方官署办理文书与日常事务，熟悉征发、登记和传达政令，也常接触乡民诉求。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3937,7 +3937,7 @@
     <slot>Adulthood</slot>
     <title>赋役登记吏</title>
     <titleShort>赋役登记吏</titleShort>
-    <description>[PAWN_nameDef]负责登记户口、田亩与劳役，须仔细核对简册中的数字，并向乡里解释征发安排。</description>
+    <baseDesc>[PAWN_nameDef]负责登记户口、田亩与劳役，须仔细核对简册中的数字，并向乡里解释征发安排。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3963,7 +3963,7 @@
     <slot>Adulthood</slot>
     <title>仓廪官吏</title>
     <titleShort>仓廪官吏</titleShort>
-    <description>[PAWN_nameDef]监督官仓收粮、出粮和账目，熟悉仓储损耗与粮食计量，稍有差错便可能招致责罚。</description>
+    <baseDesc>[PAWN_nameDef]监督官仓收粮、出粮和账目，熟悉仓储损耗与粮食计量，稍有差错便可能招致责罚。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -3990,7 +3990,7 @@
     <slot>Adulthood</slot>
     <title>法令文吏</title>
     <titleShort>法令文吏</titleShort>
-    <description>[PAWN_nameDef]曾在官署抄录法令、整理诉讼文书，熟悉条文与办事程序，善于从记录中发现矛盾。</description>
+    <baseDesc>[PAWN_nameDef]曾在官署抄录法令、整理诉讼文书，熟悉条文与办事程序，善于从记录中发现矛盾。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4016,7 +4016,7 @@
     <slot>Adulthood</slot>
     <title>变法官吏</title>
     <titleShort>变法官吏</titleShort>
-    <description>[PAWN_nameDef]参与推行新的田制、军功或行政措施，既要核算政令成效，也须面对地方豪族的阻力。</description>
+    <baseDesc>[PAWN_nameDef]参与推行新的田制、军功或行政措施，既要核算政令成效，也须面对地方豪族的阻力。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4043,7 +4043,7 @@
     <slot>Adulthood</slot>
     <title>郡县属吏</title>
     <titleShort>郡县属吏</titleShort>
-    <description>[PAWN_nameDef]在郡县官署办理户籍、赋税和公文，熟悉层级行政与文书传递，习惯按法令行事。</description>
+    <baseDesc>[PAWN_nameDef]在郡县官署办理户籍、赋税和公文，熟悉层级行政与文书传递，习惯按法令行事。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4070,7 +4070,7 @@
     <slot>Adulthood</slot>
     <title>纵横策士</title>
     <titleShort>纵横策士</titleShort>
-    <description>[PAWN_nameDef]游说各国君臣，分析强弱形势与合纵连横之策，常凭一席言辞争取改变诸侯的决定。</description>
+    <baseDesc>[PAWN_nameDef]游说各国君臣，分析强弱形势与合纵连横之策，常凭一席言辞争取改变诸侯的决定。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4097,7 +4097,7 @@
     <slot>Adulthood</slot>
     <title>乡里医者</title>
     <titleShort>乡里医者</titleShort>
-    <description>[PAWN_nameDef]为乡人诊视常见病痛，采集草药、处理外伤并照看病患，医术来自多年经验与师承。</description>
+    <baseDesc>[PAWN_nameDef]为乡人诊视常见病痛，采集草药、处理外伤并照看病患，医术来自多年经验与师承。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4123,7 +4123,7 @@
     <slot>Adulthood</slot>
     <title>游方医者</title>
     <titleShort>游方医者</titleShort>
-    <description>[PAWN_nameDef]背着药囊往来村邑，为旅人与乡民治伤看病，熟悉各地草药，也懂得安抚焦虑的病家。</description>
+    <baseDesc>[PAWN_nameDef]背着药囊往来村邑，为旅人与乡民治伤看病，熟悉各地草药，也懂得安抚焦虑的病家。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4150,7 +4150,7 @@
     <slot>Adulthood</slot>
     <title>草药采集者</title>
     <titleShort>草药采集者</titleShort>
-    <description>[PAWN_nameDef]常年采集根茎、叶片与树皮，熟悉药草生长的山谷和季节，并懂得晾晒与保存。</description>
+    <baseDesc>[PAWN_nameDef]常年采集根茎、叶片与树皮，熟悉药草生长的山谷和季节，并懂得晾晒与保存。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4176,7 +4176,7 @@
     <slot>Adulthood</slot>
     <title>伤病护理者</title>
     <titleShort>伤病护理者</titleShort>
-    <description>[PAWN_nameDef]长期照料伤者与病人，负责换药、喂食和清洁居所，知道耐心陪护有时与药物一样重要。</description>
+    <baseDesc>[PAWN_nameDef]长期照料伤者与病人，负责换药、喂食和清洁居所，知道耐心陪护有时与药物一样重要。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4202,7 +4202,7 @@
     <slot>Adulthood</slot>
     <title>接生妇</title>
     <titleShort>接生妇</titleShort>
-    <description>[PAWN_nameDef]曾帮助许多妇人分娩，熟悉接生、照料产妇与新生儿，也懂得在危急时寻求更多援手。</description>
+    <baseDesc>[PAWN_nameDef]曾帮助许多妇人分娩，熟悉接生、照料产妇与新生儿，也懂得在危急时寻求更多援手。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4228,7 +4228,7 @@
     <slot>Adulthood</slot>
     <title>巫祝</title>
     <titleShort>巫祝</titleShort>
-    <description>[PAWN_nameDef]在乡邑主持祈禳与祭仪，熟悉祝辞、礼器和地方信仰，常为忧惧的乡人提供慰藉。</description>
+    <baseDesc>[PAWN_nameDef]在乡邑主持祈禳与祭仪，熟悉祝辞、礼器和地方信仰，常为忧惧的乡人提供慰藉。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4254,7 +4254,7 @@
     <slot>Adulthood</slot>
     <title>卜者</title>
     <titleShort>卜者</titleShort>
-    <description>[PAWN_nameDef]以占卜为业，熟悉卜具、问辞和兆象解释，常受人请求为出行、婚丧与祭事占问。</description>
+    <baseDesc>[PAWN_nameDef]以占卜为业，熟悉卜具、问辞和兆象解释，常受人请求为出行、婚丧与祭事占问。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4280,7 +4280,7 @@
     <slot>Adulthood</slot>
     <title>祭祀主持者</title>
     <titleShort>祭祀主持者</titleShort>
-    <description>[PAWN_nameDef]负责安排祭品、礼器与祭礼次序，熟悉宗族传统，能在庄重场合协调众人行动。</description>
+    <baseDesc>[PAWN_nameDef]负责安排祭品、礼器与祭礼次序，熟悉宗族传统，能在庄重场合协调众人行动。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4307,7 +4307,7 @@
     <slot>Adulthood</slot>
     <title>祭器工匠</title>
     <titleShort>祭器工匠</titleShort>
-    <description>[PAWN_nameDef]专门制作祭祀所需器物，熟悉纹饰、形制与材料，既重视工艺也须遵循礼仪要求。</description>
+    <baseDesc>[PAWN_nameDef]专门制作祭祀所需器物，熟悉纹饰、形制与材料，既重视工艺也须遵循礼仪要求。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4333,7 +4333,7 @@
     <slot>Adulthood</slot>
     <title>乐师</title>
     <titleShort>乐师</titleShort>
-    <description>[PAWN_nameDef]以演奏和教授乐曲为生，熟悉不同乐器的音色与节拍，常为祭礼、宴会或乡里庆典奏乐。</description>
+    <baseDesc>[PAWN_nameDef]以演奏和教授乐曲为生，熟悉不同乐器的音色与节拍，常为祭礼、宴会或乡里庆典奏乐。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4359,7 +4359,7 @@
     <slot>Adulthood</slot>
     <title>琴瑟乐工</title>
     <titleShort>琴瑟乐工</titleShort>
-    <description>[PAWN_nameDef]擅长弹奏琴瑟，熟悉调弦、指法和合奏，能够凭听觉察觉乐音中细微的不协调。</description>
+    <baseDesc>[PAWN_nameDef]擅长弹奏琴瑟，熟悉调弦、指法和合奏，能够凭听觉察觉乐音中细微的不协调。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4385,7 +4385,7 @@
     <slot>Adulthood</slot>
     <title>鼓乐艺人</title>
     <titleShort>鼓乐艺人</titleShort>
-    <description>[PAWN_nameDef]在仪式与集会中击鼓奏乐，善于把握节拍、带动合奏，也懂得鼓具的保养修理。</description>
+    <baseDesc>[PAWN_nameDef]在仪式与集会中击鼓奏乐，善于把握节拍、带动合奏，也懂得鼓具的保养修理。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4411,7 +4411,7 @@
     <slot>Adulthood</slot>
     <title>诗歌传唱者</title>
     <titleShort>诗歌传唱者</titleShort>
-    <description>[PAWN_nameDef]行走乡邑传唱诗歌与旧事，凭记忆保存曲调和词句，常以歌声讲述远方的消息。</description>
+    <baseDesc>[PAWN_nameDef]行走乡邑传唱诗歌与旧事，凭记忆保存曲调和词句，常以歌声讲述远方的消息。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4437,7 +4437,7 @@
     <slot>Adulthood</slot>
     <title>礼仪教师</title>
     <titleShort>礼仪教师</titleShort>
-    <description>[PAWN_nameDef]教授子弟行礼、言谈与祭仪次序，熟悉各类场合的规矩，重视言行所体现的身份与敬意。</description>
+    <baseDesc>[PAWN_nameDef]教授子弟行礼、言谈与祭仪次序，熟悉各类场合的规矩，重视言行所体现的身份与敬意。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4463,7 +4463,7 @@
     <slot>Adulthood</slot>
     <title>隐居学者</title>
     <titleShort>隐居学者</titleShort>
-    <description>[PAWN_nameDef]远离诸侯争竞，在僻静处读简论学、耕作自给，偶尔接待前来请教的游士。</description>
+    <baseDesc>[PAWN_nameDef]远离诸侯争竞，在僻静处读简论学、耕作自给，偶尔接待前来请教的游士。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4489,7 +4489,7 @@
     <slot>Adulthood</slot>
     <title>流亡农民</title>
     <titleShort>流亡农民</titleShort>
-    <description>[PAWN_nameDef]因战乱失去田地，带着家人辗转迁徙，在陌生土地上重新开荒、筑屋，盼望安定收成。</description>
+    <baseDesc>[PAWN_nameDef]因战乱失去田地，带着家人辗转迁徙，在陌生土地上重新开荒、筑屋，盼望安定收成。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4515,7 +4515,7 @@
     <slot>Adulthood</slot>
     <title>逃亡役夫</title>
     <titleShort>逃亡役夫</titleShort>
-    <description>[PAWN_nameDef]曾承担沉重劳役，后来冒险逃离，凭筑墙、搬运与耕作的本领在别处谋求生路。</description>
+    <baseDesc>[PAWN_nameDef]曾承担沉重劳役，后来冒险逃离，凭筑墙、搬运与耕作的本领在别处谋求生路。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4541,7 +4541,7 @@
     <slot>Adulthood</slot>
     <title>战乱难民</title>
     <titleShort>战乱难民</titleShort>
-    <description>[PAWN_nameDef]经历家园焚毁和漫长逃难，靠采集、搭棚与照顾伤病者度日，始终警惕再次袭来的兵祸。</description>
+    <baseDesc>[PAWN_nameDef]经历家园焚毁和漫长逃难，靠采集、搭棚与照顾伤病者度日，始终警惕再次袭来的兵祸。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4568,7 +4568,7 @@
     <slot>Adulthood</slot>
     <title>山林隐士</title>
     <titleShort>山林隐士</titleShort>
-    <description>[PAWN_nameDef]避居山中，以种植、采药与读书维持生活，熟悉林间道路，也习惯远离市邑喧嚣。</description>
+    <baseDesc>[PAWN_nameDef]避居山中，以种植、采药与读书维持生活，熟悉林间道路，也习惯远离市邑喧嚣。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4595,7 +4595,7 @@
     <slot>Adulthood</slot>
     <title>山寨首领</title>
     <titleShort>山寨首领</titleShort>
-    <description>[PAWN_nameDef]曾带领山间聚落防御外敌，分派守望与粮食，既要以武力服众，也须调解内部争执。</description>
+    <baseDesc>[PAWN_nameDef]曾带领山间聚落防御外敌，分派守望与粮食，既要以武力服众，也须调解内部争执。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4621,7 +4621,7 @@
     <slot>Adulthood</slot>
     <title>山寨猎手</title>
     <titleShort>山寨猎手</titleShort>
-    <description>[PAWN_nameDef]以狩猎供养山寨，熟悉弓箭、陷阱与兽径，也常在山口巡查陌生人的踪迹。</description>
+    <baseDesc>[PAWN_nameDef]以狩猎供养山寨，熟悉弓箭、陷阱与兽径，也常在山口巡查陌生人的踪迹。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4647,7 +4647,7 @@
     <slot>Adulthood</slot>
     <title>逃亡工匠</title>
     <titleShort>逃亡工匠</titleShort>
-    <description>[PAWN_nameDef]因兵祸或役使离开原来的作坊，携带少量工具流落他乡，靠修屋制器换取食宿。</description>
+    <baseDesc>[PAWN_nameDef]因兵祸或役使离开原来的作坊，携带少量工具流落他乡，靠修屋制器换取食宿。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4673,7 +4673,7 @@
     <slot>Adulthood</slot>
     <title>失乡士人</title>
     <titleShort>失乡士人</titleShort>
-    <description>[PAWN_nameDef]因政争或战乱失去故乡，携带简册与旧日学识辗转列国，试图寻找愿意接纳自己的主人。</description>
+    <baseDesc>[PAWN_nameDef]因政争或战乱失去故乡，携带简册与旧日学识辗转列国，试图寻找愿意接纳自己的主人。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4699,7 +4699,7 @@
     <slot>Adulthood</slot>
     <title>受俘役者</title>
     <titleShort>受俘役者</titleShort>
-    <description>[PAWN_nameDef]曾被迫承担耕作、筑造与杂务，在艰苦劳役中练就多种手艺，也始终盼望重获自由。</description>
+    <baseDesc>[PAWN_nameDef]曾被迫承担耕作、筑造与杂务，在艰苦劳役中练就多种手艺，也始终盼望重获自由。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>
@@ -4726,7 +4726,7 @@
     <slot>Adulthood</slot>
     <title>四方游侠</title>
     <titleShort>四方游侠</titleShort>
-    <description>[PAWN_nameDef]携兵器游历诸国，以护送、助人或受雇比武谋生，重视个人信义，也熟悉旅途中的险恶。</description>
+    <baseDesc>[PAWN_nameDef]携兵器游历诸国，以护送、助人或受雇比武谋生，重视个人信义，也熟悉旅途中的险恶。</baseDesc>
     <workDisables>None</workDisables>
     <requiredWorkTags>None</requiredWorkTags>
     <shuffleable>False</shuffleable>

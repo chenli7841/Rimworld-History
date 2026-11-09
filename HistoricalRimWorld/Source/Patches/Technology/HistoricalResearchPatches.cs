@@ -181,8 +181,14 @@ namespace HistoricalRimWorld.Patches.Technology
     {
         private static bool Prefix(Designator_Build __instance, ref AcceptanceReport __result)
         {
+            ThingDef thing = __instance.PlacingDef as ThingDef;
+            string type = "null";
+            if (thing != null)
+            {
+                type = thing.techLevel.ToString();
+            }
             if (!HistoricalTechnologyManager.IsActive || HistoricalTechnologyManager.IsBuildAllowed(__instance.PlacingDef)) return true;
-            __result = "This building requires an adopted historical technology.";
+            __result = "This building requires an adopted historical technology. " + type;
             return false;
         }
     }

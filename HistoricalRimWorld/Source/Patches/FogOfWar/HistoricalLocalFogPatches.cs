@@ -15,6 +15,15 @@ namespace HistoricalRimWorld.Patches.FogOfWar
         private static bool Prefix(Pawn __instance) => !HistoricalLocalFogOfWarManager.ShouldHide(__instance);
     }
 
+    [HarmonyPatch(typeof(Pawn), nameof(Pawn.DynamicDrawPhaseAt), new[] { typeof(DrawPhase), typeof(UnityEngine.Vector3), typeof(bool) })]
+    internal static class HistoricalFogPawnDynamicDrawPatch
+    {
+        // RimWorld 1.6's DynamicDrawManager renders map pawns through this phase
+        // entry point. Suppress the complete draw phase for unseen pawns so an
+        // animal cannot move visibly beneath the explored-memory fog overlay.
+        private static bool Prefix(Pawn __instance) => !HistoricalLocalFogOfWarManager.ShouldHide(__instance);
+    }
+
     [HarmonyPatch(typeof(Pawn), nameof(Pawn.DrawGUIOverlay))]
     internal static class HistoricalFogPawnGuiOverlayPatch
     {

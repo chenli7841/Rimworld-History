@@ -315,8 +315,7 @@ namespace HistoricalRimWorld.Technology
             if (!IsActive || buildable == null) return true;
             HistoricalTechnologyRequirementExtension extension = buildable.GetModExtension<HistoricalTechnologyRequirementExtension>();
             if (extension != null) return IsRequirementMet(extension);
-            ThingDef thing = buildable as ThingDef;
-            return thing == null || thing.techLevel == TechLevel.Undefined || thing.techLevel == TechLevel.Animal || thing.techLevel == TechLevel.Neolithic;
+            return true;
         }
 
         public static bool IsRecipeAllowed(RecipeDef recipe)

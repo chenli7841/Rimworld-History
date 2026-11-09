@@ -5,8 +5,6 @@
   <HR_Research_SeedSelection.label>良种选育</HR_Research_SeedSelection.label><HR_Research_SeedSelection.description>解锁稻种和玉米种料精选配方，产物可储存或贸易；不包含种子遗传模拟。相关实践逐渐发展，没有可靠的单一年份。</HR_Research_SeedSelection.description>
   <HR_Research_GrainStorage.label>粮食储藏</HR_Research_GrainStorage.label><HR_Research_GrainStorage.description>解锁粮食储架和谷物干燥打包配方。储粮实践随农业发展，没有可靠的单一年份。</HR_Research_GrainStorage.description>
   <HR_Research_Irrigation.label>灌溉沟渠</HR_Research_Irrigation.label><HR_Research_Irrigation.description>解锁灌溉田土铺设；地面肥力为1.15，可提升作物生长产出。本简化版本不模拟沟渠水流。早期灌溉年代因地区而异。</HR_Research_Irrigation.description>
-  <HR_Research_CopperMining.label>铜矿开采</HR_Research_CopperMining.label><HR_Research_CopperMining.description>解锁原始冶炉与石料分选配方，可用普通石块获得少量铜矿料和锡矿料；这是抽象化来源，不会生成矿脉。早期采铜证据约见于公元前5000年前后。</HR_Research_CopperMining.description>
-  <HR_Research_CopperSmelting.label>铜冶炼</HR_Research_CopperSmelting.label><HR_Research_CopperSmelting.description>解锁在原始冶炉中将铜矿料和锡矿料冶炼成金属料。早期冶炼年代和证据因地区而异。</HR_Research_CopperSmelting.description>
   <HR_Research_BronzeAlloy.label>青铜合金</HR_Research_BronzeAlloy.label><HR_Research_BronzeAlloy.description>解锁铜料与锡料配制青铜的配方。配方比例是简化玩法模型；早期青铜冶金年代因地区而异，约在公元前2200至前1700年。</HR_Research_BronzeAlloy.description>
   <HR_Research_BronzeCasting.label>青铜铸造</HR_Research_BronzeCasting.label><HR_Research_BronzeCasting.description>解锁青铜家族礼器制作；这是可存放和登记的实物。早期铸造年代因地区而异，约在公元前2000至前1700年。</HR_Research_BronzeCasting.description>
   <HR_Research_BronzeTools.label>青铜工具</HR_Research_BronzeTools.label><HR_Research_BronzeTools.description>解锁可装备并用于近战的青铜斧锛。工具类型和普及时间因地区而异。</HR_Research_BronzeTools.description>

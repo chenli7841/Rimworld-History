@@ -12,10 +12,6 @@
   <HR_Tech_GrainStorage.description>干燥并保护收获的粮食。</HR_Tech_GrainStorage.description>
   <HR_Tech_Irrigation.label>灌溉沟渠</HR_Tech_Irrigation.label>
   <HR_Tech_Irrigation.description>为农田开渠并调控水流。</HR_Tech_Irrigation.description>
-  <HR_Tech_CopperMining.label>铜矿开采</HR_Tech_CopperMining.label>
-  <HR_Tech_CopperMining.description>寻找并开采自然铜和含铜矿石。</HR_Tech_CopperMining.description>
-  <HR_Tech_CopperSmelting.label>铜冶炼</HR_Tech_CopperSmelting.label>
-  <HR_Tech_CopperSmelting.description>加热含铜矿石以提取金属。</HR_Tech_CopperSmelting.description>
   <HR_Tech_BronzeAlloy.label>青铜合金</HR_Tech_BronzeAlloy.label>
   <HR_Tech_BronzeAlloy.description>将铜与含锡材料结合；游戏配方简化表现其中一种工艺路径。</HR_Tech_BronzeAlloy.description>
   <HR_Tech_BronzeAlloy.sourceNotes>前2200至前1700年为宽泛年代范围；不同地区的证据与年代存在差异。</HR_Tech_BronzeAlloy.sourceNotes>

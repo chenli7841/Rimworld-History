@@ -64,7 +64,9 @@ namespace HistoricalRimWorld.FogOfWar
                 HistoricalRimWorldSettings pawnSettings = HistoricalLocalFogSettings.Current;
                 if (pawn.RaceProps.Humanlike)
                     return pawnSettings?.HideUnseenHostilePawns == true && pawn.Faction != null && Faction.OfPlayer.HostileTo(pawn.Faction);
-                return pawn.RaceProps.Animal && pawn.Faction == null && pawnSettings?.HideUnseenWildAnimals == true;
+                // Explored-but-unseen cells are a terrain/map memory view. Never draw
+                // current positions of non-player animals through that remembered fog.
+                return pawn.RaceProps.Animal && pawn.Faction != Faction.OfPlayer;
             }
 
             if (CanPlayerSee(thing)) return false;

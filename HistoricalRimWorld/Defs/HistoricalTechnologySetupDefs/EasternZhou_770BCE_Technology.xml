@@ -10,8 +10,6 @@
       <li><technology>HR_Tech_SeedSelection</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_GrainStorage</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_Irrigation</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
-      <li><technology>HR_Tech_CopperMining</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
-      <li><technology>HR_Tech_CopperSmelting</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_BronzeAlloy</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_BronzeCasting</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>
       <li><technology>HR_Tech_BronzeTools</technology><availability>LocallyAccessible</availability><adoption>Known</adoption></li>

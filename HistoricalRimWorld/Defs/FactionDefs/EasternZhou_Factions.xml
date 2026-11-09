@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <FactionDef ParentName="TribeBase" Name="HR_EasternZhouFactionBase" Abstract="True">
+    <basicMemberKind>HR_PawnKind_Farmer</basicMemberKind>
+    <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+    <fixedLeaderKinds>
+      <li>HR_PawnKind_NobleRetainer</li>
+    </fixedLeaderKinds>
     <pawnSingular>retainer</pawnSingular>
     <pawnsPlural>people</pawnsPlural>
     <categoryTag>Tribal</categoryTag>
@@ -17,6 +22,15 @@
     <canSiege>false</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <canRequestOrbitalTrader>false</canRequestOrbitalTrader>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginChristian</li>
+    </disallowedMemes>
+    <structureMemeWeights Inherit="False">
+      <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">4</Structure_Animist>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+    </structureMemeWeights>
     <caravanTraderKinds Inherit="False"><li>HR_Caravan_EasternZhou_BulkGoods</li></caravanTraderKinds>
     <visitorTraderKinds Inherit="False"><li>HR_Visitor_EasternZhou_BulkGoods</li></visitorTraderKinds>
     <baseTraderKinds Inherit="False"><li>HR_Base_EasternZhou_BulkGoods</li></baseTraderKinds>
@@ -78,6 +92,15 @@
     <leaderTitle>匪首</leaderTitle>
     <permanentEnemy>true</permanentEnemy>
     <canMakeRandomly>false</canMakeRandomly>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginChristian</li>
+    </disallowedMemes>
+    <structureMemeWeights Inherit="False">
+      <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">4</Structure_Animist>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+    </structureMemeWeights>
     <displayInFactionSelection>false</displayInFactionSelection>
     <requiredCountAtGameStart>0</requiredCountAtGameStart>
     <maxCountAtGameStart>1</maxCountAtGameStart>
@@ -101,6 +124,11 @@
   <!-- Supplemental neutral faction for small, locally organized tribal communities. -->
   <FactionDef ParentName="TribeBase">
     <defName>HR_Faction_NeutralSmallTribes</defName>
+    <basicMemberKind>HR_PawnKind_Farmer</basicMemberKind>
+    <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+    <fixedLeaderKinds>
+      <li>HR_PawnKind_NobleRetainer</li>
+    </fixedLeaderKinds>
     <label>中立小部落</label>
     <fixedName>中立小部落</fixedName>
     <description>代表东周初年分散的中立地方小型部落，不对应单一的历史国家。</description>
@@ -114,6 +142,15 @@
     <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
     <displayInFactionSelection>true</displayInFactionSelection>
     <canMakeRandomly>false</canMakeRandomly>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginChristian</li>
+    </disallowedMemes>
+    <structureMemeWeights Inherit="False">
+      <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">4</Structure_Animist>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+    </structureMemeWeights>
     <naturalEnemy>false</naturalEnemy>
     <permanentEnemy>false</permanentEnemy>
     <settlementGenerationWeight>1</settlementGenerationWeight>

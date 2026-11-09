@@ -98,7 +98,7 @@
     <defName>HR_DriedVegetables</defName>
     <label>dried vegetables</label>
     <description>Selected vegetables preserved by natural drying. Grain crops are excluded.</description>
-    <graphicData><texPath>Things/Item/Resource/PlantFoodRaw/Potatoes</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(174,145,78)</color></graphicData>
+    <graphicData><texPath>Things/Item/Resource/Pemmican</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(174,145,78)</color></graphicData>
     <statBases><MarketValue>0.8</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition><FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman></statBases>
     <ingestible><foodType>VegetableOrFruit</foodType><preferability>RawBad</preferability><ingestEffect>EatVegetarian</ingestEffect><ingestSound>RawVegetable_Eat</ingestSound></ingestible>
     <comps Inherit="False"><li Class="CompProperties_Rottable"><daysToRotStart>40</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps>

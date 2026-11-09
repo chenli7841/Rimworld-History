@@ -5,8 +5,6 @@
   <HR_Research_SeedSelection.description>Unlocks rice and corn seed sorting recipes. The resulting stock can be stored or traded; no seed genetics simulation is included.</HR_Research_SeedSelection.description>
   <HR_Research_GrainStorage.description>Unlocks a grain shelf and recipes that dry and bundle grain. Storage practices developed gradually with agriculture.</HR_Research_GrainStorage.description>
   <HR_Research_Irrigation.description>Unlocks irrigated field terrain with 1.15 fertility for improved crop growth. This simplified feature does not simulate channel flow.</HR_Research_Irrigation.description>
-  <HR_Research_CopperMining.description>Unlocks the primitive foundry and stone-sorting recipes that yield small quantities of copper and tin ore. This is an abstracted source, not generated ore deposits.</HR_Research_CopperMining.description>
-  <HR_Research_CopperSmelting.description>Unlocks smelting recipes at the primitive foundry to recover copper and tin stock from ore. Early evidence and dates vary by region.</HR_Research_CopperSmelting.description>
   <HR_Research_BronzeAlloy.description>Unlocks a recipe combining copper and tin into bronze. Proportions are a simplified gameplay model; early bronze horizons vary by region.</HR_Research_BronzeAlloy.description>
   <HR_Research_BronzeCasting.description>Unlocks production of a bronze family vessel, a physical item that can be stored and entered in the relic archive. Early casting dates vary by region.</HR_Research_BronzeCasting.description>
   <HR_Research_BronzeTools.description>Unlocks a bronze adze that can be equipped and used in melee combat.</HR_Research_BronzeTools.description>

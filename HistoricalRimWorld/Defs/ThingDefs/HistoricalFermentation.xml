@@ -22,7 +22,7 @@
 
   <ThingDef Abstract="True" Name="HR_FermentedFoodBase" ParentName="OrganicProductBase">
     <thingClass>ThingWithComps</thingClass><thingCategories><li>Foods</li></thingCategories>
-    <graphicData><texPath>Things/Item/Resource/PlantFoodRaw/Potatoes</texPath><graphicClass>Graphic_StackCount</graphicClass></graphicData>
+    <graphicData><texPath>Things/Item/Resource/Pemmican</texPath><graphicClass>Graphic_StackCount</graphicClass></graphicData>
     <stackLimit>75</stackLimit><socialPropernessMatters>true</socialPropernessMatters><tradeability>Sellable</tradeability>
     <statBases><MarketValue>2</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition><FoodPoisonChanceFixedHuman>0.025</FoodPoisonChanceFixedHuman></statBases>
     <ingestible><foodType>VegetableOrFruit</foodType><preferability>RawBad</preferability><ingestEffect>EatVegetarian</ingestEffect><ingestSound>RawVegetable_Eat</ingestSound></ingestible>

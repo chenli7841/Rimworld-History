@@ -3,901 +3,901 @@
   <HR_C_001_FarmerSChild>
     <title>农家子弟</title>
     <titleShort>农家子弟</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_001_FarmerSChild>
   <HR_C_002_FieldShepherd>
     <title>田间牧童</title>
     <titleShort>田间牧童</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会畜养与观察动物，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会畜养与观察动物，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_002_FieldShepherd>
   <HR_C_003_HerbalistSApprentice>
     <title>山野采药童</title>
     <titleShort>山野采药童</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_003_HerbalistSApprentice>
   <HR_C_004_RiversideFishingChild>
     <title>河畔渔童</title>
     <titleShort>河畔渔童</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会畜养与观察动物，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会畜养与观察动物，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_004_RiversideFishingChild>
   <HR_C_005_HunterSChild>
     <title>猎户之子</title>
     <titleShort>猎户之子</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会弓术与狩猎，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会弓术与狩猎，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_005_HunterSChild>
   <HR_C_006_SilkwormKeeperSChild>
     <title>养蚕人家</title>
     <titleShort>养蚕人家</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会畜养与观察动物，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会畜养与观察动物，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_006_SilkwormKeeperSChild>
   <HR_C_007_YoungWeaver>
     <title>织布童工</title>
     <titleShort>织布童工</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会手工制作与整理工序，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会手工制作与整理工序，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_007_YoungWeaver>
   <HR_C_008_FirewoodGatherer>
     <title>柴薪采集童</title>
     <titleShort>柴薪采集童</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_008_FirewoodGatherer>
   <HR_C_009_OrchardChild>
     <title>果园童子</title>
     <titleShort>果园童子</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_009_OrchardChild>
   <HR_C_010_CanalWorkerSChild>
     <title>灌渠人家</title>
     <titleShort>灌渠人家</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会营造与修缮，并养成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会营造与修缮，并养成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_010_CanalWorkerSChild>
   <HR_C_011_GranaryKeeperSChild>
     <title>粮仓守童</title>
     <titleShort>粮仓守童</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成做事先观察再动手的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成做事先观察再动手的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_011_GranaryKeeperSChild>
   <HR_C_012_MountainVillageOrphan>
     <title>山村孤童</title>
     <titleShort>山村孤童</titleShort>
-    <description>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在田野与乡村，帮家人照看生计。受长辈指点，逐渐学会耕作与辨认草木，并养成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_012_MountainVillageOrphan>
   <HR_C_013_PotterSApprentice>
     <title>陶工学徒</title>
     <titleShort>陶工学徒</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_013_PotterSApprentice>
   <HR_C_014_CarpenterSApprentice>
     <title>木匠学徒</title>
     <titleShort>木匠学徒</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会营造与修缮，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会营造与修缮，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_014_CarpenterSApprentice>
   <HR_C_015_BronzeWorkshopChild>
     <title>青铜工坊童</title>
     <titleShort>青铜工坊童</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_015_BronzeWorkshopChild>
   <HR_C_016_StoneMasonSChild>
     <title>石匠子弟</title>
     <titleShort>石匠子弟</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会营造与修缮，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会营造与修缮，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_016_StoneMasonSChild>
   <HR_C_017_BambooWeaver>
     <title>竹器编织童</title>
     <titleShort>竹器编织童</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_017_BambooWeaver>
   <HR_C_018_LacquerWorkshopChild>
     <title>漆器作坊童</title>
     <titleShort>漆器作坊童</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会礼乐与纹饰表达，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会礼乐与纹饰表达，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_018_LacquerWorkshopChild>
   <HR_C_019_LeatherworkerSChild>
     <title>制革人家</title>
     <titleShort>制革人家</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_019_LeatherworkerSChild>
   <HR_C_020_WheelwrightSApprentice>
     <title>车轮匠学徒</title>
     <titleShort>车轮匠学徒</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_020_WheelwrightSApprentice>
   <HR_C_021_BowyerSChild>
     <title>弓匠子弟</title>
     <titleShort>弓匠子弟</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_021_BowyerSChild>
   <HR_C_022_JadeWorkerSApprentice>
     <title>玉工学徒</title>
     <titleShort>玉工学徒</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会礼乐与纹饰表达，并养成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会礼乐与纹饰表达，并养成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_022_JadeWorkerSApprentice>
   <HR_C_023_CordMaker>
     <title>绳索编制童</title>
     <titleShort>绳索编制童</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成做事先观察再动手的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会手工制作与整理工序，并养成做事先观察再动手的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_023_CordMaker>
   <HR_C_024_WallBuildingLaborer>
     <title>筑墙役童</title>
     <titleShort>筑墙役童</titleShort>
-    <description>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会营造与修缮，并养成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在作坊与匠户，从旁学习日用工艺。受长辈指点，逐渐学会营造与修缮，并养成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_024_WallBuildingLaborer>
   <HR_C_025_MerchantSChild>
     <title>商旅之子</title>
     <titleShort>商旅之子</titleShort>
-    <description>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会礼仪、交易与协商，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会礼仪、交易与协商，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_025_MerchantSChild>
   <HR_C_026_MarketAttendant>
     <title>市集童仆</title>
     <titleShort>市集童仆</titleShort>
-    <description>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会礼仪、交易与协商，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会礼仪、交易与协商，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_026_MarketAttendant>
   <HR_C_027_FerryFamilyChild>
     <title>渡口人家</title>
     <titleShort>渡口人家</titleShort>
-    <description>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会畜养与观察动物，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会畜养与观察动物，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_027_FerryFamilyChild>
   <HR_C_028_WaystationChild>
     <title>车马驿童</title>
     <titleShort>车马驿童</titleShort>
-    <description>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会畜养与观察动物，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会畜养与观察动物，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_028_WaystationChild>
   <HR_C_029_SaltMerchantSChild>
     <title>盐商子弟</title>
     <titleShort>盐商子弟</titleShort>
-    <description>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会礼仪、交易与协商，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会礼仪、交易与协商，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_029_SaltMerchantSChild>
   <HR_C_030_PackTrainRunner>
     <title>行脚货童</title>
     <titleShort>行脚货童</titleShort>
-    <description>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会礼仪、交易与协商，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会礼仪、交易与协商，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_030_PackTrainRunner>
   <HR_C_031_InnHelper>
     <title>客舍帮工</title>
     <titleShort>客舍帮工</titleShort>
-    <description>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会烹食与储粮，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会烹食与储粮，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_031_InnHelper>
   <HR_C_032_BoatmanSChild>
     <title>舟人之子</title>
     <titleShort>舟人之子</titleShort>
-    <description>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会手工制作与整理工序，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在市集与道路，随亲族接触货物旅人。受长辈指点，逐渐学会手工制作与整理工序，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_032_BoatmanSChild>
   <HR_C_033_NobleCadet>
     <title>贵族庶子</title>
     <titleShort>贵族庶子</titleShort>
-    <description>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会礼仪、交易与协商，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会礼仪、交易与协商，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_033_NobleCadet>
   <HR_C_034_PrincipalLineageHeir>
     <title>宗族嫡子</title>
     <titleShort>宗族嫡子</titleShort>
-    <description>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会礼仪、交易与协商，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会礼仪、交易与协商，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_034_PrincipalLineageHeir>
   <HR_C_035_VillageSchoolPupil>
     <title>乡学童子</title>
     <titleShort>乡学童子</titleShort>
-    <description>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会计数、记录与学习典章，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会计数、记录与学习典章，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_035_VillageSchoolPupil>
   <HR_C_036_ArchivistSChild>
     <title>史官家童</title>
     <titleShort>史官家童</titleShort>
-    <description>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会计数、记录与学习典章，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会计数、记录与学习典章，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_036_ArchivistSChild>
   <HR_C_037_RitualAndMusicPupil>
     <title>礼乐学童</title>
     <titleShort>礼乐学童</titleShort>
-    <description>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会礼乐与纹饰表达，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会礼乐与纹饰表达，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_037_RitualAndMusicPupil>
   <HR_C_038_YoungArcher>
     <title>习射少年</title>
     <titleShort>习射少年</titleShort>
-    <description>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会弓术与狩猎，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会弓术与狩猎，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_038_YoungArcher>
   <HR_C_039_YoungCharioteer>
     <title>习御少年</title>
     <titleShort>习御少年</titleShort>
-    <description>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会畜养与观察动物，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会畜养与观察动物，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_039_YoungCharioteer>
   <HR_C_040_NobleAttendant>
     <title>贵族侍童</title>
     <titleShort>贵族侍童</titleShort>
-    <description>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会礼仪、交易与协商，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会礼仪、交易与协商，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_040_NobleAttendant>
   <HR_C_041_TextCopyist>
     <title>典籍抄录童</title>
     <titleShort>典籍抄录童</titleShort>
-    <description>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会计数、记录与学习典章，并养成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会计数、记录与学习典章，并养成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_041_TextCopyist>
   <HR_C_042_RitualPupil>
     <title>祭祀学童</title>
     <titleShort>祭祀学童</titleShort>
-    <description>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会礼仪、交易与协商，并养成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在宗族与早期教育，跟随长辈学习礼仪技艺。受长辈指点，逐渐学会礼仪、交易与协商，并养成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_042_RitualPupil>
   <HR_C_043_WarOrphan>
     <title>战乱遗孤</title>
     <titleShort>战乱遗孤</titleShort>
-    <description>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会持戈与近身格斗，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会持戈与近身格斗，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_043_WarOrphan>
   <HR_C_044_DisplacedOrphan>
     <title>流亡孤儿</title>
     <titleShort>流亡孤儿</titleShort>
-    <description>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会耕作与辨认草木，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会耕作与辨认草木，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_044_DisplacedOrphan>
   <HR_C_045_BorderHerder>
     <title>边境牧童</title>
     <titleShort>边境牧童</titleShort>
-    <description>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会畜养与观察动物，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会畜养与观察动物，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_045_BorderHerder>
   <HR_C_046_GarrisonSoldierSChild>
     <title>戍卒之子</title>
     <titleShort>戍卒之子</titleShort>
-    <description>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会弓术与狩猎，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会弓术与狩猎，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_046_GarrisonSoldierSChild>
   <HR_C_047_FleeingLaborer>
     <title>逃亡役童</title>
     <titleShort>逃亡役童</titleShort>
-    <description>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会营造与修缮，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会营造与修缮，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_047_FleeingLaborer>
   <HR_C_048_WartimeBeggar>
     <title>乱世乞童</title>
     <titleShort>乱世乞童</titleShort>
-    <description>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会礼仪、交易与协商，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会礼仪、交易与协商，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_048_WartimeBeggar>
   <HR_C_049_HillFortYouth>
     <title>山寨少年</title>
     <titleShort>山寨少年</titleShort>
-    <description>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会弓术与狩猎，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会弓术与狩猎，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_049_HillFortYouth>
   <HR_C_050_RefugeeCampChild>
     <title>流民营童</title>
     <titleShort>流民营童</titleShort>
-    <description>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会采药与照料伤病，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会采药与照料伤病，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_050_RefugeeCampChild>
   <HR_C_051_CaptiveServantChild>
     <title>被俘童仆</title>
     <titleShort>被俘童仆</titleShort>
-    <description>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会手工制作与整理工序，并养成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会手工制作与整理工序，并养成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_051_CaptiveServantChild>
   <HR_C_052_DispossessedYouth>
     <title>失乡少年</title>
     <titleShort>失乡少年</titleShort>
-    <description>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会耕作与辨认草木，并养成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在战乱与迁徙，协助家人寻找生计。受长辈指点，逐渐学会耕作与辨认草木，并养成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_052_DispossessedYouth>
   <HR_C_053_ShamanSApprentice>
     <title>巫祝弟子</title>
     <titleShort>巫祝弟子</titleShort>
-    <description>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会礼仪、交易与协商，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会礼仪、交易与协商，并养成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_053_ShamanSApprentice>
   <HR_C_054_HealerSPupil>
     <title>医者学童</title>
     <titleShort>医者学童</titleShort>
-    <description>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会采药与照料伤病，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会采药与照料伤病，并养成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_054_HealerSPupil>
   <HR_C_055_DivinerSChild>
     <title>卜者家童</title>
     <titleShort>卜者家童</titleShort>
-    <description>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会计数、记录与学习典章，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会计数、记录与学习典章，并养成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_055_DivinerSChild>
   <HR_C_056_GraveKeeperSChild>
     <title>守墓人家</title>
     <titleShort>守墓人家</titleShort>
-    <description>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会营造与修缮，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会营造与修缮，并养成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_056_GraveKeeperSChild>
   <HR_C_057_MusicianSChild>
     <title>乐工子弟</title>
     <titleShort>乐工子弟</titleShort>
-    <description>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会礼乐与纹饰表达，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会礼乐与纹饰表达，并养成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_C_057_MusicianSChild>
   <HR_C_058_BlindMusicianSApprentice>
     <title>盲乐师学徒</title>
     <titleShort>盲乐师学徒</titleShort>
-    <description>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会礼乐与纹饰表达，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会礼乐与纹饰表达，并养成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_C_058_BlindMusicianSApprentice>
   <HR_C_059_MountainRecluseSChild>
     <title>山林隐居童</title>
     <titleShort>山林隐居童</titleShort>
-    <description>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会耕作与辨认草木，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会耕作与辨认草木，并养成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_C_059_MountainRecluseSChild>
   <HR_C_060_ItinerantHealerSChild>
     <title>游方医童</title>
     <titleShort>游方医童</titleShort>
-    <description>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会采药与照料伤病，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]童年生活在乡里与仪式生活，跟随师长参与日常事务。受长辈指点，逐渐学会采药与照料伤病，并养成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_C_060_ItinerantHealerSChild>
   <HR_A_001_Smallholder>
     <title>自耕农</title>
     <titleShort>自耕农</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_001_Smallholder>
   <HR_A_002_TenantFarmer>
     <title>佃耕者</title>
     <titleShort>佃耕者</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_002_TenantFarmer>
   <HR_A_003_FieldSteward>
     <title>农田管事</title>
     <titleShort>农田管事</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_003_FieldSteward>
   <HR_A_004_CanalBuilder>
     <title>灌渠修筑者</title>
     <titleShort>灌渠修筑者</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握营造与修缮，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握营造与修缮，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_004_CanalBuilder>
   <HR_A_005_WaterworksArtisan>
     <title>水利工匠</title>
     <titleShort>水利工匠</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握营造与修缮，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握营造与修缮，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_005_WaterworksArtisan>
   <HR_A_006_OrchardKeeper>
     <title>果园经营者</title>
     <titleShort>果园经营者</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_006_OrchardKeeper>
   <HR_A_007_HerbGatherer>
     <title>采药人</title>
     <titleShort>采药人</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_007_HerbGatherer>
   <HR_A_008_Woodcutter>
     <title>山林樵夫</title>
     <titleShort>山林樵夫</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_008_Woodcutter>
   <HR_A_009_VillageHunter>
     <title>乡村猎户</title>
     <titleShort>乡村猎户</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握弓术与狩猎，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握弓术与狩猎，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_009_VillageHunter>
   <HR_A_010_Fisher>
     <title>河湖渔夫</title>
     <titleShort>河湖渔夫</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握畜养与观察动物，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握畜养与观察动物，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_010_Fisher>
   <HR_A_011_Shepherd>
     <title>牧羊人</title>
     <titleShort>牧羊人</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握畜养与观察动物，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握畜养与观察动物，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_011_Shepherd>
   <HR_A_012_CattleKeeper>
     <title>养牛人</title>
     <titleShort>养牛人</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握畜养与观察动物，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握畜养与观察动物，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_012_CattleKeeper>
   <HR_A_013_HorseBreeder>
     <title>马匹饲养者</title>
     <titleShort>马匹饲养者</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握畜养与观察动物，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握畜养与观察动物，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_013_HorseBreeder>
   <HR_A_014_SilkwormRaiser>
     <title>养蚕人</title>
     <titleShort>养蚕人</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握畜养与观察动物，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握畜养与观察动物，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_014_SilkwormRaiser>
   <HR_A_015_VillageWeaver>
     <title>织布农妇</title>
     <titleShort>织布农妇</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握手工制作与整理工序，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握手工制作与整理工序，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_015_VillageWeaver>
   <HR_A_016_GrainProcessor>
     <title>谷物加工者</title>
     <titleShort>谷物加工者</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握烹食与储粮，也形成能在忙乱中照应同伴的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握烹食与储粮，也形成能在忙乱中照应同伴的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_016_GrainProcessor>
   <HR_A_017_GranaryKeeper>
     <title>粮仓看守</title>
     <titleShort>粮仓看守</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握计数、记录与学习典章，也形成对天气时令格外留心的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握计数、记录与学习典章，也形成对天气时令格外留心的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_017_GranaryKeeper>
   <HR_A_018_VillageElder>
     <title>村社长者</title>
     <titleShort>村社长者</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握礼仪、交易与协商，也形成言谈谨慎，待人有礼的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握礼仪、交易与协商，也形成言谈谨慎，待人有礼的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_018_VillageElder>
   <HR_A_019_LocalMediator>
     <title>乡里调解者</title>
     <titleShort>乡里调解者</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握礼仪、交易与协商，也形成常主动承担收尾工作的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握礼仪、交易与协商，也形成常主动承担收尾工作的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_019_LocalMediator>
   <HR_A_020_FamineRefugeeFarmer>
     <title>逃荒农民</title>
     <titleShort>逃荒农民</titleShort>
-    <description>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成善于从旧物中找办法的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在村社田地谋生，经营耕作、畜养或储粮。多年实践使其掌握耕作与辨认草木，也形成善于从旧物中找办法的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_020_FamineRefugeeFarmer>
   <HR_A_021_Potter>
     <title>陶器匠人</title>
     <titleShort>陶器匠人</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_021_Potter>
   <HR_A_022_KilnWorker>
     <title>陶窑工匠</title>
     <titleShort>陶窑工匠</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_022_KilnWorker>
   <HR_A_023_Woodworker>
     <title>木作匠人</title>
     <titleShort>木作匠人</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握营造与修缮，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握营造与修缮，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_023_Woodworker>
   <HR_A_024_HouseBuilder>
     <title>房屋营造匠</title>
     <titleShort>房屋营造匠</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握营造与修缮，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握营造与修缮，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_024_HouseBuilder>
   <HR_A_025_BronzeCaster>
     <title>青铜铸工</title>
     <titleShort>青铜铸工</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_025_BronzeCaster>
   <HR_A_026_WeaponsCaster>
     <title>兵器铸造者</title>
     <titleShort>兵器铸造者</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_026_WeaponsCaster>
   <HR_A_027_FarmToolMaker>
     <title>农具匠人</title>
     <titleShort>农具匠人</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_027_FarmToolMaker>
   <HR_A_028_StoneMason>
     <title>石匠</title>
     <titleShort>石匠</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握营造与修缮，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握营造与修缮，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_028_StoneMason>
   <HR_A_029_JadeArtisan>
     <title>玉器工匠</title>
     <titleShort>玉器工匠</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握礼乐与纹饰表达，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握礼乐与纹饰表达，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_029_JadeArtisan>
   <HR_A_030_LacquerArtisan>
     <title>漆器匠人</title>
     <titleShort>漆器匠人</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握礼乐与纹饰表达，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握礼乐与纹饰表达，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_030_LacquerArtisan>
   <HR_A_031_Leatherworker>
     <title>皮革匠人</title>
     <titleShort>皮革匠人</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_031_Leatherworker>
   <HR_A_032_BambooArtisan>
     <title>竹器匠人</title>
     <titleShort>竹器匠人</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_032_BambooArtisan>
   <HR_A_033_Wheelwright>
     <title>车轮匠</title>
     <titleShort>车轮匠</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_033_Wheelwright>
   <HR_A_034_ChariotMaker>
     <title>造车匠</title>
     <titleShort>造车匠</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_034_ChariotMaker>
   <HR_A_035_Bowyer>
     <title>制弓匠</title>
     <titleShort>制弓匠</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_035_Bowyer>
   <HR_A_036_ArrowMaker>
     <title>制箭匠</title>
     <titleShort>制箭匠</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成能在忙乱中照应同伴的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成能在忙乱中照应同伴的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_036_ArrowMaker>
   <HR_A_037_FortificationBuilder>
     <title>筑城工匠</title>
     <titleShort>筑城工匠</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握营造与修缮，也形成对天气时令格外留心的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握营造与修缮，也形成对天气时令格外留心的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_037_FortificationBuilder>
   <HR_A_038_BridgeBuilder>
     <title>修桥工匠</title>
     <titleShort>修桥工匠</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握营造与修缮，也形成言谈谨慎，待人有礼的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握营造与修缮，也形成言谈谨慎，待人有礼的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_038_BridgeBuilder>
   <HR_A_039_QuarryWorker>
     <title>采石工</title>
     <titleShort>采石工</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握采石与辨认矿料，也形成常主动承担收尾工作的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握采石与辨认矿料，也形成常主动承担收尾工作的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_039_QuarryWorker>
   <HR_A_040_Ironworker>
     <title>冶铁匠人</title>
     <titleShort>冶铁匠人</titleShort>
-    <description>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成善于从旧物中找办法的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在手工作坊谋生，参与选料、制作或营造。多年实践使其掌握手工制作与整理工序，也形成善于从旧物中找办法的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_040_Ironworker>
   <HR_A_041_ItinerantTrader>
     <title>行商</title>
     <titleShort>行商</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_041_ItinerantTrader>
   <HR_A_042_SaltMerchant>
     <title>盐商</title>
     <titleShort>盐商</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_042_SaltMerchant>
   <HR_A_043_GrainMerchant>
     <title>粮食商人</title>
     <titleShort>粮食商人</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_043_GrainMerchant>
   <HR_A_044_LivestockTrader>
     <title>牲畜商人</title>
     <titleShort>牲畜商人</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_044_LivestockTrader>
   <HR_A_045_ClothMerchant>
     <title>布匹商人</title>
     <titleShort>布匹商人</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_045_ClothMerchant>
   <HR_A_046_PotteryTrader>
     <title>陶器商人</title>
     <titleShort>陶器商人</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_046_PotteryTrader>
   <HR_A_047_HorseTrader>
     <title>车马商人</title>
     <titleShort>车马商人</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_047_HorseTrader>
   <HR_A_048_LongDistanceMerchant>
     <title>长途商旅</title>
     <titleShort>长途商旅</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_048_LongDistanceMerchant>
   <HR_A_049_MarketBroker>
     <title>市集经纪</title>
     <titleShort>市集经纪</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_049_MarketBroker>
   <HR_A_050_Innkeeper>
     <title>客舍经营者</title>
     <titleShort>客舍经营者</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_050_Innkeeper>
   <HR_A_051_BoatTrader>
     <title>舟船商人</title>
     <titleShort>舟船商人</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_051_BoatTrader>
   <HR_A_052_FerryKeeper>
     <title>渡口经营者</title>
     <titleShort>渡口经营者</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_052_FerryKeeper>
   <HR_A_053_CartDriver>
     <title>货车御者</title>
     <titleShort>货车御者</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握畜养与观察动物，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握畜养与观察动物，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_053_CartDriver>
   <HR_A_054_CaravanGuard>
     <title>商队护卫</title>
     <titleShort>商队护卫</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握弓术与狩猎，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握弓术与狩猎，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_054_CaravanGuard>
   <HR_A_055_StreetPeddler>
     <title>走方货郎</title>
     <titleShort>走方货郎</titleShort>
-    <description>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在市肆商道谋生，经手交易、接待或运送货物。多年实践使其掌握礼仪、交易与协商，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_055_StreetPeddler>
   <HR_A_056_MilitiaMember>
     <title>乡勇</title>
     <titleShort>乡勇</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_056_MilitiaMember>
   <HR_A_057_BorderSoldier>
     <title>戍边士卒</title>
     <titleShort>戍边士卒</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_057_BorderSoldier>
   <HR_A_058_Charioteer>
     <title>战车御者</title>
     <titleShort>战车御者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握畜养与观察动物，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握畜养与观察动物，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_058_Charioteer>
   <HR_A_059_ChariotWarrior>
     <title>战车甲士</title>
     <titleShort>战车甲士</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_059_ChariotWarrior>
   <HR_A_060_Spearman>
     <title>持戈步卒</title>
     <titleShort>持戈步卒</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_060_Spearman>
   <HR_A_061_Archer>
     <title>弓箭手</title>
     <titleShort>弓箭手</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_061_Archer>
   <HR_A_062_GateGuard>
     <title>城门守卒</title>
     <titleShort>城门守卒</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_062_GateGuard>
   <HR_A_063_BorderPatrol>
     <title>边境巡卒</title>
     <titleShort>边境巡卒</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_063_BorderPatrol>
   <HR_A_064_Scout>
     <title>斥候</title>
     <titleShort>斥候</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_064_Scout>
   <HR_A_065_NobleWarrior>
     <title>贵族武士</title>
     <titleShort>贵族武士</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_065_NobleWarrior>
   <HR_A_066_ArmyMedic>
     <title>军中医者</title>
     <titleShort>军中医者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握采药与照料伤病，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握采药与照料伤病，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_066_ArmyMedic>
   <HR_A_067_ArmsArtisan>
     <title>军械工匠</title>
     <titleShort>军械工匠</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握手工制作与整理工序，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握手工制作与整理工序，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_067_ArmsArtisan>
   <HR_A_068_Quartermaster>
     <title>军粮管事</title>
     <titleShort>军粮管事</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握计数、记录与学习典章，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握计数、记录与学习典章，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_068_Quartermaster>
   <HR_A_069_CampCook>
     <title>军营炊事者</title>
     <titleShort>军营炊事者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握烹食与储粮，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握烹食与储粮，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_069_CampCook>
   <HR_A_070_BattlefieldScavenger>
     <title>战场拾遗者</title>
     <titleShort>战场拾遗者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_070_BattlefieldScavenger>
   <HR_A_071_Veteran>
     <title>退伍老兵</title>
     <titleShort>退伍老兵</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成能在忙乱中照应同伴的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成能在忙乱中照应同伴的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_071_Veteran>
   <HR_A_072_Deserter>
     <title>逃亡士卒</title>
     <titleShort>逃亡士卒</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成对天气时令格外留心的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成对天气时令格外留心的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_072_Deserter>
   <HR_A_073_DefenseCommander>
     <title>城防指挥者</title>
     <titleShort>城防指挥者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成言谈谨慎，待人有礼的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握持戈与近身格斗，也形成言谈谨慎，待人有礼的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_073_DefenseCommander>
   <HR_A_074_CavalryRider>
     <title>骑兵</title>
     <titleShort>骑兵</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握畜养与观察动物，也形成常主动承担收尾工作的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握畜养与观察动物，也形成常主动承担收尾工作的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_074_CavalryRider>
   <HR_A_075_Crossbowman>
     <title>弩手</title>
     <titleShort>弩手</titleShort>
-    <description>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成善于从旧物中找办法的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡邑军伍谋生，承担训练、巡守或军需事务。多年实践使其掌握弓术与狩猎，也形成善于从旧物中找办法的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_075_Crossbowman>
   <HR_A_076_LineageRetainer>
     <title>宗族家臣</title>
     <titleShort>宗族家臣</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_076_LineageRetainer>
   <HR_A_077_NobleClient>
     <title>贵族门客</title>
     <titleShort>贵族门客</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_077_NobleClient>
   <HR_A_078_PrincelyEnvoy>
     <title>诸侯使者</title>
     <titleShort>诸侯使者</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_078_PrincelyEnvoy>
   <HR_A_079_CourtClerk>
     <title>史官属吏</title>
     <titleShort>史官属吏</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_079_CourtClerk>
   <HR_A_080_ArchiveKeeper>
     <title>典籍管理者</title>
     <titleShort>典籍管理者</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_080_ArchiveKeeper>
   <HR_A_081_RitualOfficer>
     <title>礼官</title>
     <titleShort>礼官</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_081_RitualOfficer>
   <HR_A_082_CourtMusician>
     <title>乐官</title>
     <titleShort>乐官</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼乐与纹饰表达，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼乐与纹饰表达，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_082_CourtMusician>
   <HR_A_083_VillageTutor>
     <title>乡学教师</title>
     <titleShort>乡学教师</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_083_VillageTutor>
   <HR_A_084_TravelingScholar>
     <title>游历士人</title>
     <titleShort>游历士人</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_084_TravelingScholar>
   <HR_A_085_PersuasiveEnvoy>
     <title>游历说客</title>
     <titleShort>游历说客</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_085_PersuasiveEnvoy>
   <HR_A_086_NobleCadet>
     <title>贵族庶子</title>
     <titleShort>贵族庶子</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_086_NobleCadet>
   <HR_A_087_DisgracedNoble>
     <title>失势贵族</title>
     <titleShort>失势贵族</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_087_DisgracedNoble>
   <HR_A_088_LineageElder>
     <title>宗族长者</title>
     <titleShort>宗族长者</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_088_LineageElder>
   <HR_A_089_TownClerk>
     <title>乡邑属吏</title>
     <titleShort>乡邑属吏</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_089_TownClerk>
   <HR_A_090_LevyRegistrar>
     <title>赋役登记吏</title>
     <titleShort>赋役登记吏</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_090_LevyRegistrar>
   <HR_A_091_GranaryOfficer>
     <title>仓廪官吏</title>
     <titleShort>仓廪官吏</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成能在忙乱中照应同伴的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成能在忙乱中照应同伴的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_091_GranaryOfficer>
   <HR_A_092_LegalClerk>
     <title>法令文吏</title>
     <titleShort>法令文吏</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成对天气时令格外留心的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成对天气时令格外留心的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_092_LegalClerk>
   <HR_A_093_ReformOfficial>
     <title>变法官吏</title>
     <titleShort>变法官吏</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成言谈谨慎，待人有礼的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成言谈谨慎，待人有礼的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_093_ReformOfficial>
   <HR_A_094_CommanderyClerk>
     <title>郡县属吏</title>
     <titleShort>郡县属吏</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成常主动承担收尾工作的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握计数、记录与学习典章，也形成常主动承担收尾工作的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_094_CommanderyClerk>
   <HR_A_095_DiplomaticStrategist>
     <title>纵横策士</title>
     <titleShort>纵横策士</titleShort>
-    <description>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成善于从旧物中找办法的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在宗族与乡邑政务谋生，处理礼仪、文书或交涉事务。多年实践使其掌握礼仪、交易与协商，也形成善于从旧物中找办法的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_095_DiplomaticStrategist>
   <HR_A_096_VillageHealer>
     <title>乡里医者</title>
     <titleShort>乡里医者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握采药与照料伤病，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握采药与照料伤病，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_096_VillageHealer>
   <HR_A_097_ItinerantHealer>
     <title>游方医者</title>
     <titleShort>游方医者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握采药与照料伤病，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握采药与照料伤病，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_097_ItinerantHealer>
   <HR_A_098_Herbalist>
     <title>草药采集者</title>
     <titleShort>草药采集者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握耕作与辨认草木，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握耕作与辨认草木，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_098_Herbalist>
   <HR_A_099_Caregiver>
     <title>伤病护理者</title>
     <titleShort>伤病护理者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握采药与照料伤病，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握采药与照料伤病，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_099_Caregiver>
   <HR_A_100_Midwife>
     <title>接生妇</title>
     <titleShort>接生妇</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握采药与照料伤病，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握采药与照料伤病，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_100_Midwife>
   <HR_A_101_RitualSpecialist>
     <title>巫祝</title>
     <titleShort>巫祝</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼仪、交易与协商，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼仪、交易与协商，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_101_RitualSpecialist>
   <HR_A_102_Diviner>
     <title>卜者</title>
     <titleShort>卜者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握计数、记录与学习典章，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握计数、记录与学习典章，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_102_Diviner>
   <HR_A_103_RitualLeader>
     <title>祭祀主持者</title>
     <titleShort>祭祀主持者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼仪、交易与协商，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼仪、交易与协商，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_103_RitualLeader>
   <HR_A_104_RitualVesselArtisan>
     <title>祭器工匠</title>
     <titleShort>祭器工匠</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼乐与纹饰表达，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼乐与纹饰表达，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_104_RitualVesselArtisan>
   <HR_A_105_Musician>
     <title>乐师</title>
     <titleShort>乐师</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼乐与纹饰表达，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼乐与纹饰表达，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_105_Musician>
   <HR_A_106_ZitherPlayer>
     <title>琴瑟乐工</title>
     <titleShort>琴瑟乐工</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼乐与纹饰表达，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼乐与纹饰表达，也形成做事先观察再动手的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_106_ZitherPlayer>
   <HR_A_107_Drummer>
     <title>鼓乐艺人</title>
     <titleShort>鼓乐艺人</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼乐与纹饰表达，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼乐与纹饰表达，也形成常把工具收拾整齐的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_107_Drummer>
   <HR_A_108_PoetAndSinger>
     <title>诗歌传唱者</title>
     <titleShort>诗歌传唱者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼乐与纹饰表达，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼乐与纹饰表达，也形成善于记住道路地名的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_108_PoetAndSinger>
   <HR_A_109_RitualInstructor>
     <title>礼仪教师</title>
     <titleShort>礼仪教师</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼仪、交易与协商，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握礼仪、交易与协商，也形成遇难题会反复尝试的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_109_RitualInstructor>
   <HR_A_110_ReclusiveScholar>
     <title>隐居学者</title>
     <titleShort>隐居学者</titleShort>
-    <description>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握计数、记录与学习典章，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在乡里医药与艺事谋生，为邻里照护或传授技艺。多年实践使其掌握计数、记录与学习典章，也形成习惯核对材料成品的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_110_ReclusiveScholar>
   <HR_A_111_DisplacedFarmer>
     <title>流亡农民</title>
     <titleShort>流亡农民</titleShort>
-    <description>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握耕作与辨认草木，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握耕作与辨认草木，也形成做事先观察再动手的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_111_DisplacedFarmer>
   <HR_A_112_FleeingLaborer>
     <title>逃亡役夫</title>
     <titleShort>逃亡役夫</titleShort>
-    <description>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握营造与修缮，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握营造与修缮，也形成常把工具收拾整齐的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_112_FleeingLaborer>
   <HR_A_113_WarRefugee>
     <title>战乱难民</title>
     <titleShort>战乱难民</titleShort>
-    <description>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握耕作与辨认草木，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握耕作与辨认草木，也形成善于记住道路地名的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_113_WarRefugee>
   <HR_A_114_MountainHermit>
     <title>山林隐士</title>
     <titleShort>山林隐士</titleShort>
-    <description>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握耕作与辨认草木，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握耕作与辨认草木，也形成遇难题会反复尝试的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_114_MountainHermit>
   <HR_A_115_HillFortLeader>
     <title>山寨首领</title>
     <titleShort>山寨首领</titleShort>
-    <description>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握持戈与近身格斗，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握持戈与近身格斗，也形成习惯核对材料成品的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_115_HillFortLeader>
   <HR_A_116_HillFortHunter>
     <title>山寨猎手</title>
     <titleShort>山寨猎手</titleShort>
-    <description>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握弓术与狩猎，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握弓术与狩猎，也形成能在忙乱中照应同伴的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_116_HillFortHunter>
   <HR_A_117_DisplacedArtisan>
     <title>逃亡工匠</title>
     <titleShort>逃亡工匠</titleShort>
-    <description>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握手工制作与整理工序，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</description>
+    <baseDesc>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握手工制作与整理工序，也形成对天气时令格外留心的习惯。这些本领后来仍派得上用场。</baseDesc>
   </HR_A_117_DisplacedArtisan>
   <HR_A_118_DispossessedScholar>
     <title>失乡士人</title>
     <titleShort>失乡士人</titleShort>
-    <description>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握计数、记录与学习典章，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</description>
+    <baseDesc>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握计数、记录与学习典章，也形成言谈谨慎，待人有礼的习惯。也使其更熟悉乡里的生活。</baseDesc>
   </HR_A_118_DispossessedScholar>
   <HR_A_119_CaptiveLaborer>
     <title>受俘役者</title>
     <titleShort>受俘役者</titleShort>
-    <description>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握营造与修缮，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</description>
+    <baseDesc>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握营造与修缮，也形成常主动承担收尾工作的习惯。这段经历让其早早懂得合作。</baseDesc>
   </HR_A_119_CaptiveLaborer>
   <HR_A_120_WanderingWarrior>
     <title>四方游侠</title>
     <titleShort>四方游侠</titleShort>
-    <description>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握持戈与近身格斗，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</description>
+    <baseDesc>[PAWN_nameDef]成年后在流亡与山野道路谋生，在动荡中谋生并照应同伴。多年实践使其掌握持戈与近身格斗，也形成善于从旧物中找办法的习惯。由此积累了应对变化的经验。</baseDesc>
   </HR_A_120_WanderingWarrior>
 </LanguageData>

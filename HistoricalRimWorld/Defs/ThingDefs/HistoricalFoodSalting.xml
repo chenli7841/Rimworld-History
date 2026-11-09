@@ -2,7 +2,7 @@
 <Defs>
   <ThingDef ParentName="ResourceBase">
     <defName>HR_Salt</defName><label>salt</label><description>Edible salt used as a food-preservation ingredient. This release models salt as a traded good; it does not add salt mining or production.</description>
-    <techLevel>Neolithic</techLevel><stackLimit>75</stackLimit><tradeability>Sellable</tradeability>
+    <techLevel>Neolithic</techLevel><stackLimit>75</stackLimit><tradeability>All</tradeability>
     <graphicData><texPath>Things/Item/Resource/Steel</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(235,232,220)</color></graphicData>
     <thingCategories><li>ResourcesRaw</li></thingCategories>
     <statBases><MarketValue>2</MarketValue><Mass>0.05</Mass><Flammability>0</Flammability></statBases>
@@ -29,12 +29,12 @@
   <ThingDef Abstract="True" Name="HR_SaltedFoodBase" ParentName="OrganicProductBase">
     <thingClass>ThingWithComps</thingClass><thingCategories><li>Foods</li></thingCategories>
     <graphicData><texPath>Things/Item/Resource/Pemmican</texPath><graphicClass>Graphic_StackCount</graphicClass></graphicData>
-    <stackLimit>75</stackLimit><socialPropernessMatters>true</socialPropernessMatters><tradeability>Sellable</tradeability>
+    <stackLimit>75</stackLimit><socialPropernessMatters>true</socialPropernessMatters><tradeability>All</tradeability>
     <statBases><MarketValue>1.5</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition><FoodPoisonChanceFixedHuman>0.025</FoodPoisonChanceFixedHuman></statBases>
     <ingestible><foodType>Meat</foodType><preferability>RawBad</preferability><ingestEffect>EatMeat</ingestEffect><ingestSound>RawMeat_Eat</ingestSound></ingestible>
     <comps><li Class="CompProperties_Rottable"><daysToRotStart>20</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps>
   </ThingDef>
   <ThingDef ParentName="HR_SaltedFoodBase"><defName>HR_SaltedMeat</defName><label>salted meat</label><description>Ordinary animal meat preserved with salt. Its remaining freshness carries over from the raw ingredients.</description></ThingDef>
   <ThingDef ParentName="HR_SaltedFoodBase"><defName>HR_SaltedFish</defName><label>salted fish</label><description>Fish preserved with salt. This recipe appears only when an active content source provides fish meat.</description><graphicData><texPath>Things/Item/Resource/Pemmican</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(198,165,119)</color></graphicData><comps Inherit="False"><li Class="CompProperties_Rottable"><daysToRotStart>25</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps></ThingDef>
-  <ThingDef ParentName="HR_SaltedFoodBase"><defName>HR_PickledVegetables</defName><label>pickled vegetables</label><description>Selected vegetables preserved with salt. The recipe excludes grain crops and herbs.</description><graphicData><texPath>Things/Item/Resource/PlantFoodRaw/Potatoes</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(166,175,112)</color></graphicData><statBases><MarketValue>1.2</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition><FoodPoisonChanceFixedHuman>0.025</FoodPoisonChanceFixedHuman></statBases><ingestible><foodType>VegetableOrFruit</foodType><preferability>RawBad</preferability><ingestEffect>EatVegetarian</ingestEffect><ingestSound>RawVegetable_Eat</ingestSound></ingestible><comps Inherit="False"><li Class="CompProperties_Rottable"><daysToRotStart>40</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps></ThingDef>
+  <ThingDef ParentName="HR_SaltedFoodBase"><defName>HR_PickledVegetables</defName><label>pickled vegetables</label><description>Selected vegetables preserved with salt. The recipe excludes grain crops and herbs.</description><graphicData><texPath>Things/Item/Resource/Pemmican</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(166,175,112)</color></graphicData><statBases><MarketValue>1.2</MarketValue><Mass>0.015</Mass><Nutrition>0.05</Nutrition><FoodPoisonChanceFixedHuman>0.025</FoodPoisonChanceFixedHuman></statBases><ingestible><foodType>VegetableOrFruit</foodType><preferability>RawBad</preferability><ingestEffect>EatVegetarian</ingestEffect><ingestSound>RawVegetable_Eat</ingestSound></ingestible><comps Inherit="False"><li Class="CompProperties_Rottable"><daysToRotStart>40</daysToRotStart><rotDestroys>true</rotDestroys></li><li Class="CompProperties_FoodPoisonable" /></comps></ThingDef>
 </Defs>

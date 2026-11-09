@@ -15,6 +15,7 @@ namespace HistoricalRimWorld
         public bool EnableLineOfSightBlocking = true;
         public bool TamedAnimalsProvideVision = false;
         public bool HideUnseenHostilePawns = true;
+        // Retained for loading older settings; unseen non-player animals are now always hidden behind fog.
         public bool HideUnseenWildAnimals = true;
         public float UnexploredFogOpacity = 1f;
         public float ExploredFogOpacity = 0.65f;
@@ -62,7 +63,6 @@ namespace HistoricalRimWorld
             listing.CheckboxLabeled(Translator.Translate("HR_Fog_LOS"), ref EnableLineOfSightBlocking);
             listing.CheckboxLabeled(Translator.Translate("HR_Fog_TamedAnimals"), ref TamedAnimalsProvideVision);
             listing.CheckboxLabeled(Translator.Translate("HR_Fog_HideHostiles"), ref HideUnseenHostilePawns);
-            listing.CheckboxLabeled(Translator.Translate("HR_Fog_HideAnimals"), ref HideUnseenWildAnimals);
             listing.Label(Translator.Translate("HR_Fog_UnexploredOpacity") + ": " + UnexploredFogOpacity.ToString("0.00"));
             UnexploredFogOpacity = listing.Slider(UnexploredFogOpacity, 0f, 1f);
             listing.Label(Translator.Translate("HR_Fog_ExploredOpacity") + ": " + ExploredFogOpacity.ToString("0.00"));
