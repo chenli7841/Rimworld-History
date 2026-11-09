@@ -14,7 +14,6 @@ namespace HistoricalRimWorld.FogOfWar
         private const int RefreshIntervalTicks = 10;
         private const int PeriodicRefreshTicks = 250;
         private const int MapSectionSize = 17;
-        private const float DaylightRefreshStep = 0.1f;
         private bool[] exploredCells;
         private bool[] revealedRoomCells;
         private bool[] visibleCells;
@@ -32,7 +31,10 @@ namespace HistoricalRimWorld.FogOfWar
         private int lastUpdateTick = -1;
         private int lastFullRefreshTick = -1;
         private int lastVisionSignature;
-        private float lastDaylight = -1f;
+        private bool environmentCacheInitialized;
+        private bool cachedIsDay;
+        private string cachedWeatherDefName;
+        private float cachedWeatherMultiplier = HistoricalVisibilitySettings.ClearWeatherMultiplier;
         private int activeVisionSourceCount;
         private long lastRefreshMilliseconds;
         private int refreshCount;
@@ -141,9 +143,7 @@ namespace HistoricalRimWorld.FogOfWar
             if (pawns != null)
             {
                 HistoricalRimWorldSettings settings = HistoricalLocalFogSettings.Current;
-                float daylight = settings?.EnableDayNightVision == true
-                    ? QuantizeDaylight(map.skyManager?.CurSkyGlow ?? 1f)
-                    : 1f;
+                UpdateEnvironmentCache();
                 float dayRadius = Mathf.Clamp(settings?.DayVisionRadius ?? 12f, 0f, 30f);
                 float nightRadius = Mathf.Clamp(settings?.NightVisionRadius ?? 4f, 0f, 30f);
                 for (int i = 0; i < pawns.Count; i++)
@@ -158,19 +158,29 @@ namespace HistoricalRimWorld.FogOfWar
                     float consciousness = pawn.health?.capacities?.GetLevel(PawnCapacityDefOf.Consciousness) ?? 1f;
                     if (sight <= 0f || consciousness <= 0.1f) continue;
 
-                    float radius = settings?.EnableDayNightVision == true
-                        ? Mathf.Lerp(nightRadius, dayRadius, daylight)
-                        : dayRadius;
+                    bool dayNightEnabled = settings?.EnableDayNightVision == true;
+                    bool isDay = dayNightEnabled && cachedIsDay;
+                    float baseRadius = dayNightEnabled ? (isDay ? dayRadius : nightRadius) : dayRadius;
                     if (pawn.Downed)
                     {
                         float downedDayRadius = Mathf.Min(2f, dayRadius);
                         float downedNightRadius = Mathf.Min(1f, nightRadius);
-                        radius = settings?.EnableDayNightVision == true
-                            ? Mathf.Lerp(downedNightRadius, downedDayRadius, daylight)
-                            : downedDayRadius;
+                        baseRadius = dayNightEnabled ? (isDay ? downedDayRadius : downedNightRadius) : downedDayRadius;
                     }
-                    radius = Mathf.Clamp(radius * sight, 0f, 30f);
-                    if (radius > 0f && sight > 0f) RevealVisibleRadius(pawn.Position, radius, settings?.EnableLineOfSightBlocking == true);
+                    if (sight <= 0f) continue;
+
+                    // Preserve the pre-existing health-capacity penalty as part of R0,
+                    // then apply the requested integer radius formula.
+                    float effectiveBaseRadius = baseRadius * sight;
+                    float dayMultiplier = isDay
+                        ? HistoricalVisibilitySettings.DayMultiplier
+                        : HistoricalVisibilitySettings.NightMultiplier;
+                    int radius = HistoricalVisibilityRadiusUtility.CalculateRadius(
+                        effectiveBaseRadius,
+                        dayMultiplier,
+                        cachedWeatherMultiplier,
+                        HistoricalVisibilityRadiusUtility.GetEffectiveSkill(pawn));
+                    RevealVisibleRadius(pawn.Position, radius, settings?.EnableLineOfSightBlocking == true);
                 }
             }
 
@@ -211,15 +221,13 @@ namespace HistoricalRimWorld.FogOfWar
             if (!enabled)
                 return;
 
-            float daylight = HistoricalLocalFogSettings.Current?.EnableDayNightVision == true
-                ? QuantizeDaylight(map.skyManager?.CurSkyGlow ?? 1f) : 1f;
-            int signature = GetVisionSignature(daylight);
-            if (signature != lastVisionSignature || Mathf.Abs(daylight - lastDaylight) >= DaylightRefreshStep
+            bool environmentChanged = UpdateEnvironmentCache();
+            int signature = GetVisionSignature(cachedIsDay, cachedWeatherDefName);
+            if (environmentChanged || signature != lastVisionSignature
                 || tick - lastFullRefreshTick >= PeriodicRefreshTicks)
                 dirty = true;
             if (dirty) RefreshVisibility();
             lastVisionSignature = signature;
-            lastDaylight = daylight;
         }
 
         public override void MapComponentOnGUI()
@@ -296,14 +304,13 @@ namespace HistoricalRimWorld.FogOfWar
             if (index >= 0) nextVisibleCells[index] = true;
         }
 
-        private void RevealVisibleRadius(IntVec3 origin, float radius, bool checkLineOfSight)
+        private void RevealVisibleRadius(IntVec3 origin, int radius, bool checkLineOfSight)
         {
-            int integerRadius = Mathf.CeilToInt(radius);
-            float radiusSquared = radius * radius;
-            int minX = Math.Max(0, origin.x - integerRadius);
-            int maxX = Math.Min(map.Size.x - 1, origin.x + integerRadius);
-            int minZ = Math.Max(0, origin.z - integerRadius);
-            int maxZ = Math.Min(map.Size.z - 1, origin.z + integerRadius);
+            int radiusSquared = radius * radius;
+            int minX = Math.Max(0, origin.x - radius);
+            int maxX = Math.Min(map.Size.x - 1, origin.x + radius);
+            int minZ = Math.Max(0, origin.z - radius);
+            int maxZ = Math.Min(map.Size.z - 1, origin.z + radius);
             for (int z = minZ; z <= maxZ; z++)
             for (int x = minX; x <= maxX; x++)
             {
@@ -316,12 +323,33 @@ namespace HistoricalRimWorld.FogOfWar
             }
         }
 
-        private int GetVisionSignature(float daylight)
+        private bool UpdateEnvironmentCache()
+        {
+            bool dayNightEnabled = HistoricalLocalFogSettings.Current?.EnableDayNightVision == true;
+            // CurSkyGlow is map-local and already drives the existing fog day/night system.
+            // A threshold gives the requested discrete day/night transition without per-tick radius drift.
+            bool isDay = dayNightEnabled && (map.skyManager?.CurSkyGlow ?? 1f) >= 0.5f;
+            WeatherDef weather = map.weatherManager?.curWeather;
+            string weatherDefName = weather?.defName ?? string.Empty;
+            float weatherMultiplier = HistoricalVisibilityRadiusUtility.GetWeatherMultiplier(weather);
+
+            bool changed = !environmentCacheInitialized || isDay != cachedIsDay
+                || weatherDefName != cachedWeatherDefName
+                || !Mathf.Approximately(weatherMultiplier, cachedWeatherMultiplier);
+            environmentCacheInitialized = true;
+            cachedIsDay = isDay;
+            cachedWeatherDefName = weatherDefName;
+            cachedWeatherMultiplier = weatherMultiplier;
+            return changed;
+        }
+
+        private int GetVisionSignature(bool isDay, string weatherDefName)
         {
             unchecked
             {
                 int hash = 17;
-                hash = hash * 31 + Mathf.RoundToInt(daylight * 20f);
+                hash = hash * 31 + (isDay ? 1 : 0);
+                hash = hash * 31 + (weatherDefName?.GetHashCode() ?? 0);
                 System.Collections.Generic.IReadOnlyList<Pawn> pawns = map.mapPawns?.AllPawnsSpawned;
                 if (pawns == null) return hash;
                 for (int i = 0; i < pawns.Count; i++)
@@ -333,15 +361,11 @@ namespace HistoricalRimWorld.FogOfWar
                     hash = hash * 31 + (pawn.Downed ? 1 : 0);
                     hash = hash * 31 + (pawn.Dead ? 1 : 0);
                     hash = hash * 31 + Mathf.RoundToInt((pawn.health?.capacities?.GetLevel(PawnCapacityDefOf.Sight) ?? 1f) * 100f);
+                    hash = hash * 31 + HistoricalVisibilityRadiusUtility.CalculateSkillBonus(
+                        HistoricalVisibilityRadiusUtility.GetEffectiveSkill(pawn));
                 }
                 return hash;
             }
-        }
-
-        private static float QuantizeDaylight(float daylight)
-        {
-            float clamped = Mathf.Clamp01(daylight);
-            return Mathf.Round(clamped / DaylightRefreshStep) * DaylightRefreshStep;
         }
 
         private int IndexOf(IntVec3 cell)
