@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorkGiverDef>
+    <defName>HR_RepairForestFloor</defName>
+    <giverClass>HistoricalRimWorld.Forest.WorkGiver_RepairForestFloor</giverClass>
+    <workType>Construction</workType>
+    <priorityInType>20</priorityInType>
+    <scanCells>true</scanCells>
+    <scanThings>false</scanThings>
+    <directOrderable>false</directOrderable>
+  </WorkGiverDef>
+</Defs>
