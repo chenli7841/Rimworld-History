@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef><defName>HR_CutAncientTree</defName><driverClass>HistoricalRimWorld.Forest.JobDriver_CutAncientTree</driverClass><reportString>cutting the ancient tree at TargetA.</reportString><allowOpportunisticPrefix>true</allowOpportunisticPrefix></JobDef>
+</Defs>

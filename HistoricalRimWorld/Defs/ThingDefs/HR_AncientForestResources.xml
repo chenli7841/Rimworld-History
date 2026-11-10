@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase"><defName>HR_TreeResin</defName><label>HR_TreeResin_Label</label><description>HR_TreeResin_Description</description><graphicData><texPath>Things/Item/Resource/HR/TreeResin</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(168,112,55)</color></graphicData><thingCategories><li>ResourcesRaw</li></thingCategories><stackLimit>75</stackLimit><statBases><MarketValue>4</MarketValue><Mass>0.05</Mass></statBases></ThingDef>
+  <ThingDef ParentName="ResourceBase"><defName>HR_DenseHeartwood</defName><label>HR_DenseHeartwood_Label</label><description>HR_DenseHeartwood_Description</description><graphicData><texPath>Things/Item/Resource/HR/DenseHeartwood</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(115,72,42)</color></graphicData><thingCategories><li>ResourcesRaw</li></thingCategories><stackLimit>75</stackLimit><statBases><MarketValue>8</MarketValue><Mass>0.15</Mass></statBases></ThingDef>
+  <ThingDef ParentName="ResourceBase"><defName>HR_RareWoodBurl</defName><label>HR_RareWoodBurl_Label</label><description>HR_RareWoodBurl_Description</description><graphicData><texPath>Things/Item/Resource/HR/RareWoodBurl</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(143,93,58)</color></graphicData><thingCategories><li>ResourcesRaw</li></thingCategories><stackLimit>25</stackLimit><statBases><MarketValue>30</MarketValue><Mass>0.4</Mass></statBases></ThingDef>
+  <ThingDef ParentName="ResourceBase"><defName>HR_MedicinalFungi</defName><label>HR_MedicinalFungi_Label</label><description>HR_MedicinalFungi_Description</description><graphicData><texPath>Things/Item/Resource/HR/MedicinalFungi</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(125,154,96)</color></graphicData><thingCategories><li>ResourcesRaw</li></thingCategories><stackLimit>50</stackLimit><statBases><MarketValue>12</MarketValue><Mass>0.05</Mass></statBases></ThingDef>
+  <ThingDef ParentName="ResourceBase"><defName>HR_FragrantWood</defName><label>HR_FragrantWood_Label</label><description>HR_FragrantWood_Description</description><graphicData><texPath>Things/Item/Resource/HR/FragrantWood</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(166,126,68)</color></graphicData><thingCategories><li>ResourcesRaw</li></thingCategories><stackLimit>75</stackLimit><statBases><MarketValue>10</MarketValue><Mass>0.1</Mass></statBases></ThingDef>
+  <ThingDef ParentName="ResourceBase"><defName>HR_ToughBastFiber</defName><label>HR_ToughBastFiber_Label</label><description>HR_ToughBastFiber_Description</description><graphicData><texPath>Things/Item/Resource/HR/ToughBastFiber</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(137,122,82)</color></graphicData><thingCategories><li>ResourcesRaw</li></thingCategories><stackLimit>75</stackLimit><statBases><MarketValue>5</MarketValue><Mass>0.05</Mass></statBases></ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>HR_BronzeAxe</defName><label>HR_BronzeAxe_Label</label><description>HR_BronzeAxe_Description</description><techLevel>Neolithic</techLevel>
+    <graphicData><texPath>Things/Item/Equipment/WeaponMelee/HR/BronzeAxe</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <weaponTags><li>NeolithicMeleeDecent</li><li>MedievalMeleeBasic</li></weaponTags><weaponClasses><li>Neolithic</li></weaponClasses>
+    <costList><HR_Bronze>2</HR_Bronze><WoodLog>10</WoodLog></costList>
+    <statBases><WorkToMake>4500</WorkToMake><Mass>1.6</Mass><MarketValue>45</MarketValue><MaxHitPoints>200</MaxHitPoints><MeleeWeapon_DamageAmount>12</MeleeWeapon_DamageAmount></statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <tools><li><label>handle</label><capacities><li>Blunt</li></capacities><power>9</power><cooldownTime>2</cooldownTime></li><li><label>bronze axe head</label><capacities><li>Cut</li></capacities><power>16</power><cooldownTime>2</cooldownTime></li></tools>
+    <comps><li Class="HistoricalRimWorld.Forest.CompProperties_AncientWoodcuttingTool" /></comps>
+    <modExtensions><li Class="HistoricalRimWorld.Forest.HR_WoodcuttingToolExtension"><toolTier>Bronze</toolTier><ancientTreeCutSpeedFactor>1.0</ancientTreeCutSpeedFactor><workPerHitPoint>500</workPerHitPoint></li><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><requiredTechnology>HR_Tech_BronzeTools</requiredTechnology></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>HR_IronAxe</defName><label>HR_IronAxe_Label</label><description>HR_IronAxe_Description</description><techLevel>Neolithic</techLevel>
+    <graphicData><texPath>Things/Item/Equipment/WeaponMelee/HR/IronAxe</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <weaponTags><li>NeolithicMeleeDecent</li><li>MedievalMeleeBasic</li></weaponTags><weaponClasses><li>Neolithic</li></weaponClasses>
+    <costList><HR_BloomIron>2</HR_BloomIron><WoodLog>10</WoodLog></costList>
+    <statBases><WorkToMake>6500</WorkToMake><Mass>1.7</Mass><MarketValue>75</MarketValue><MaxHitPoints>200</MaxHitPoints><MeleeWeapon_DamageAmount>14</MeleeWeapon_DamageAmount></statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <tools><li><label>handle</label><capacities><li>Blunt</li></capacities><power>9</power><cooldownTime>2</cooldownTime></li><li><label>iron axe head</label><capacities><li>Cut</li></capacities><power>18</power><cooldownTime>2</cooldownTime></li></tools>
+    <comps><li Class="HistoricalRimWorld.Forest.CompProperties_AncientWoodcuttingTool" /></comps>
+    <modExtensions><li Class="HistoricalRimWorld.Forest.HR_WoodcuttingToolExtension"><toolTier>Iron</toolTier><ancientTreeCutSpeedFactor>1.5</ancientTreeCutSpeedFactor><workPerHitPoint>1000</workPerHitPoint></li><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><requiredTechnology>HR_Tech_IronFarmTools</requiredTechnology></li></modExtensions>
+  </ThingDef>
+</Defs>

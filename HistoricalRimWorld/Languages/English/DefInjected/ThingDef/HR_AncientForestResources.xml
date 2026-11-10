@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_BronzeAxe.label>Bronze axe</HR_BronzeAxe.label><HR_BronzeAxe.description>A wooden-handled tool with a bronze head. When equipped, it can cut ancient trees.</HR_BronzeAxe.description>
+  <HR_IronAxe.label>Iron axe</HR_IronAxe.label><HR_IronAxe.description>A wooden-handled early iron tool. It cuts ancient trees more efficiently than a bronze axe.</HR_IronAxe.description>
+  <HR_TreeResin.label>Natural tree resin</HR_TreeResin.label><HR_TreeResin.description>Natural resin collected from ancient conifers, suitable for adhesive, water-resistant treatments, and craft materials.</HR_TreeResin.description>
+  <HR_DenseHeartwood.label>Dense heartwood</HR_DenseHeartwood.label><HR_DenseHeartwood.description>Hard, close-grained heartwood for fine woodworking and durable objects.</HR_DenseHeartwood.description>
+  <HR_RareWoodBurl.label>Rare wood burl</HR_RareWoodBurl.label><HR_RareWoodBurl.description>A dense growth on a tree trunk, useful for carving, decoration, and trade.</HR_RareWoodBurl.description>
+  <HR_MedicinalFungi.label>Forest medicinal fungi</HR_MedicinalFungi.label><HR_MedicinalFungi.description>Medicinal fungal raw material gathered from ancient-tree habitats. It does not directly treat serious disease while unprocessed.</HR_MedicinalFungi.description>
+  <HR_FragrantWood.label>Fragrant wood</HR_FragrantWood.label><HR_FragrantWood.description>Wood with a persistent scent, useful for crafts and trade.</HR_FragrantWood.description>
+  <HR_ToughBastFiber.label>Tough bast fiber</HR_ToughBastFiber.label><HR_ToughBastFiber.description>Strong plant fiber taken from bark for cordage and weaving materials.</HR_ToughBastFiber.description>
+</LanguageData>

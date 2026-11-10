@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>HR_CraftBronzeAxe</defName><label>HR_CraftBronzeAxe_Label</label><description>HR_CraftBronzeAxe_Description</description><jobString>Making a bronze axe.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat><workSkill>Crafting</workSkill><skillRequirements><Crafting>4</Crafting></skillRequirements><workAmount>4500</workAmount>
+    <ingredients><li><filter><thingDefs><li>HR_Bronze</li></thingDefs></filter><count>2</count></li><li><filter><thingDefs><li>WoodLog</li></thingDefs></filter><count>10</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>HR_Bronze</li><li>WoodLog</li></thingDefs></fixedIngredientFilter><products><HR_BronzeAxe>1</HR_BronzeAxe></products>
+    <modExtensions><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><requiredTechnology>HR_Tech_BronzeTools</requiredTechnology></li></modExtensions>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>HR_CraftIronAxe</defName><label>HR_CraftIronAxe_Label</label><description>HR_CraftIronAxe_Description</description><jobString>Making an early iron axe.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat><workSkill>Crafting</workSkill><skillRequirements><Crafting>5</Crafting></skillRequirements><workAmount>6500</workAmount>
+    <ingredients><li><filter><thingDefs><li>HR_BloomIron</li></thingDefs></filter><count>2</count></li><li><filter><thingDefs><li>WoodLog</li></thingDefs></filter><count>10</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>HR_BloomIron</li><li>WoodLog</li></thingDefs></fixedIngredientFilter><products><HR_IronAxe>1</HR_IronAxe></products>
+    <modExtensions><li Class="HistoricalRimWorld.Production.HistoricalTechnologyRequirementExtension"><requiredTechnology>HR_Tech_IronFarmTools</requiredTechnology></li></modExtensions>
+  </RecipeDef>
+</Defs>

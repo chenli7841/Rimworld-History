@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_CraftBronzeAxe.label>Craft bronze axe</HR_CraftBronzeAxe.label><HR_CraftBronzeAxe.description>Craft a bronze woodcutting axe from bronze and wood.</HR_CraftBronzeAxe.description><HR_CraftBronzeAxe.jobString>Making a bronze axe.</HR_CraftBronzeAxe.jobString>
+  <HR_CraftIronAxe.label>Craft iron axe</HR_CraftIronAxe.label><HR_CraftIronAxe.description>Craft an early iron woodcutting axe from bloomery iron and wood.</HR_CraftIronAxe.description><HR_CraftIronAxe.jobString>Making an iron axe.</HR_CraftIronAxe.jobString>
+</LanguageData>

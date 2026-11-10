@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_CraftBronzeAxe.label>制作青铜斧</HR_CraftBronzeAxe.label><HR_CraftBronzeAxe.description>用青铜和木材制作一把青铜伐木斧。</HR_CraftBronzeAxe.description><HR_CraftBronzeAxe.jobString>正在制作青铜斧。</HR_CraftBronzeAxe.jobString>
+  <HR_CraftIronAxe.label>制作铁斧</HR_CraftIronAxe.label><HR_CraftIronAxe.description>用早期铁料和木材制作一把铁伐木斧。</HR_CraftIronAxe.description><HR_CraftIronAxe.jobString>正在制作铁斧。</HR_CraftIronAxe.jobString>
+</LanguageData>

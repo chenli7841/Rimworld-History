@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_BronzeAxe.label>青铜斧</HR_BronzeAxe.label><HR_BronzeAxe.description>以青铜斧刃和木柄制成的伐木工具。装备后可砍伐原始巨木。</HR_BronzeAxe.description>
+  <HR_IronAxe.label>铁斧</HR_IronAxe.label><HR_IronAxe.description>以早期铁斧刃和木柄制成的工具。砍伐原始巨木时比青铜斧更高效。</HR_IronAxe.description>
+  <HR_TreeResin.label>天然树脂</HR_TreeResin.label><HR_TreeResin.description>从古老针叶巨木中采得的天然树脂，可作为黏合、防水和手工业原料。</HR_TreeResin.description>
+  <HR_DenseHeartwood.label>致密心材</HR_DenseHeartwood.label><HR_DenseHeartwood.description>质地紧密的树木心材，适合精细木工和耐用器物制作。</HR_DenseHeartwood.description>
+  <HR_RareWoodBurl.label>珍稀树瘤</HR_RareWoodBurl.label><HR_RareWoodBurl.description>树干上形成的坚实瘤木，可用于雕刻、装饰和贸易。</HR_RareWoodBurl.description>
+  <HR_MedicinalFungi.label>林木药菌</HR_MedicinalFungi.label><HR_MedicinalFungi.description>生长于古树环境中的药用菌类原料。未经加工时不具备直接治疗严重疾病的效果。</HR_MedicinalFungi.description>
+  <HR_FragrantWood.label>芳香木</HR_FragrantWood.label><HR_FragrantWood.description>带有持久香气的木料，可供工艺制作和贸易使用。</HR_FragrantWood.description>
+  <HR_ToughBastFiber.label>韧性树皮纤维</HR_ToughBastFiber.label><HR_ToughBastFiber.description>从树皮中取得的强韧植物纤维，可作为绳索和编织工艺原料。</HR_ToughBastFiber.description>
+</LanguageData>
