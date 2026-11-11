@@ -12,7 +12,7 @@
     <category>Political</category>
     <scope>World</scope>
     <priority>100</priority>
-    <activationMode>InitialBackground</activationMode>
+    <activationMode>Scheduled</activationMode>
     <visibility>Public</visibility>
     <notificationPolicy>ChronicleOnly</notificationPolicy>
     <evidenceLevel>Probable</evidenceLevel>
@@ -35,7 +35,7 @@
     <regionId>HR_Region_Luoyi</regionId>
     <polityId>HR_State_EasternZhou</polityId>
     <priority>100</priority>
-    <activationMode>InitialBackground</activationMode>
+    <activationMode>Scheduled</activationMode>
     <visibility>Public</visibility>
     <notificationPolicy>ChronicleOnly</notificationPolicy>
     <evidenceLevel>Probable</evidenceLevel>
@@ -51,7 +51,7 @@
     <scenario>HR_Scenario_EasternZhou_770BCE</scenario>
     <historicalDate><AstronomicalYear>-769</AstronomicalYear><Precision>Year</Precision></historicalDate>
     <category>Political</category><scope>World</scope><regionId>HR_Region_Guanzhong</regionId><polityId>HR_State_Qin</polityId>
-    <activationMode>InitialBackground</activationMode><visibility>Public</visibility><notificationPolicy>ChronicleOnly</notificationPolicy>
+    <activationMode>Scheduled</activationMode><visibility>Public</visibility><notificationPolicy>ChronicleOnly</notificationPolicy>
     <evidenceLevel>Probable</evidenceLevel><provenance>HistoricalReconstruction</provenance><chronologyTradition>TraditionalReceivedChronology</chronologyTradition>
     <sourceNotes>HR_Event_QinXiangRecognition_770BCE_SourceNotes</sourceNotes>
   </HistoricalRimWorld.Events.HistoricalEventDef>

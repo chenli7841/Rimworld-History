@@ -22,6 +22,6 @@ Chronicle records are AttestedHistory, LocalExperience, or InferredLegacy and re
 
 ## Included event data
 
-- The 771 BCE Western Zhou crisis and 770 BCE Zhou eastward migration are InitialBackground chronicle records, not replayed state changes. Their source notes cite Sima Qian's *Shiji*, “Zhou Benji” (卷四《周本纪》), which records King You's death and King Ping's move east to Luoyi. The year precision follows conventional chronology.
+- The 771 BCE Western Zhou crisis and 770 BCE Zhou eastward migration are Scheduled chronicle-only events in the 772 BCE playable start, not replayed world-state changes. Their source notes cite Sima Qian's *Shiji*, “Zhou Benji” (卷四《周本纪》), which records King You's death and King Ping's move east to Luoyi. The year precision follows conventional chronology.
 - No post-770 BCE political event is included because this stage did not establish a sufficiently sourced date and outcome for one.
 - `HR_Event_DebugUnlockHedong` is DevelopmentOnly and Speculative. It exists only to exercise the HR-005 region-unlock API in developer mode.

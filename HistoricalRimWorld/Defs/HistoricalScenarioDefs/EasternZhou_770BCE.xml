@@ -4,7 +4,7 @@
     <defName>HR_Scenario_EasternZhou_770BCE</defName>
     <label>HR_Scenario_EasternZhou_770BCE_Label</label>
     <description>HR_Scenario_EasternZhou_770BCE_Description</description>
-    <startAstronomicalYear>-769</startAstronomicalYear>
+    <startAstronomicalYear>-771</startAstronomicalYear>
     <startMonth>1</startMonth>
     <startDay>1</startDay>
     <historicalPeriod>HR_Period_EasternZhouEarly</historicalPeriod>

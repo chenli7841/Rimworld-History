@@ -1,6 +1,6 @@
 # Historical RimWorld
 
-An independent RimWorld 1.6 mod with an opt-in historical calendar, scenario data, political state, world reveal foundations, and a data-driven historical event and chronicle engine. Biotech is required; Royalty, Ideology, Anomaly, and Odyssey are not required. Historical dates use a 12-month, 5-day-per-month calendar and are derived from RimWorld's game ticks without changing vanilla time or pawn ages. Political entities are separate from vanilla Factions; the current data demonstrates the 770 BCE Eastern Zhou scenario.
+An independent RimWorld 1.6 mod with an opt-in historical calendar, scenario data, political state, world reveal foundations, and a data-driven historical event and chronicle engine. Biotech is required; Royalty, Ideology, Anomaly, and Odyssey are not required. Historical dates use a 12-month, 5-day-per-month calendar and are derived from RimWorld's game ticks without changing vanilla time or pawn ages. Political entities are separate from vanilla Factions; the current playable chapter opens in 772 BCE, before the traditional 771–770 BCE Zhou crisis and eastward move.
 
 ## Build
 
@@ -25,11 +25,11 @@ The project reads `Assembly-CSharp.dll` and the required Unity modules from `Rim
 
 ## In game
 
-Enable the mod, start a new game, and choose **Eastern Zhou: The Royal Court Moves East** from the vanilla scenario menu. It starts at 770 BCE (astronomical year -769), generates five vanilla colonists, supplies a small configured starter stock, and initializes the existing `HR_Scenario_EasternZhou_770BCE` systems after map generation. The **Eastern Zhou** main tab shows the chapter overview and, after 740 BCE, allows optional completion and HR-010 archive export. The developer-only Historical Calendar scenario picker remains available for other historical scenarios. Chinese and English UI text is included.
+Enable the mod, start a new game, and choose **Eastern Zhou: The Royal Court Moves East** from the vanilla scenario menu. It starts at 772 BCE (astronomical year -771), generates five vanilla colonists, supplies a small configured starter stock, and initializes the existing `HR_Scenario_EasternZhou_770BCE` systems after map generation. The 771 BCE crisis and 770 BCE eastward move are scheduled on their traditional years. The **Eastern Zhou** main tab shows the chapter overview and, after 740 BCE, allows optional completion and HR-010 archive export. The developer-only Historical Calendar scenario picker remains available for other historical scenarios. Chinese and English UI text is included.
 
 Historical politics initializes alongside an explicitly selected scenario and persists in the save. The calendar tab shows regions, polities, domains, communities, and political changes. Developer controls are available only in developer mode.
 
-Scenario initialization also records the 771/770 BCE Eastern Zhou background entries and schedules a disputed year-only 743 BCE Zheng succession entry in the saved **Historical Chronicle**. Use the Historical Chronicle main tab to browse visible records, filter by record type/category/region/polity, and page through results. Scheduled events are ordered by date, then ascending priority (smaller first), then DefName. See [Events and Chronicle](Docs/EventsAndChronicle.md) for execution and failure behavior.
+The saved **Historical Chronicle** receives the 771 BCE crisis and 770 BCE eastward move when their scheduled years arrive, as well as a disputed year-only 743 BCE Zheng succession entry. Use the Historical Chronicle main tab to browse visible records, filter by record type/category/region/polity, and page through results. Scheduled events are ordered by date, then ascending priority (smaller first), then DefName. See [Events and Chronicle](Docs/EventsAndChronicle.md) for execution and failure behavior.
 
 The HR-007 foundation adds the **Historical Genealogy** main tab for saved person/family records, immediate relations, historical vs biological age, and lifespan deadlines. Pawn registration and lifecycle capture run only in an initialized historical scenario. See [Characters and Genealogy](Docs/CharactersAndGenealogy.md) for Scribe storage, public RimWorld 1.6 APIs, natural-death handling, and polling limitations.
 

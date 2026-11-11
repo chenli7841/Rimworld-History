@@ -90,6 +90,14 @@
         <worldObjectDef>HR_MapMarker_MountainPeak</worldObjectDef>
       </li>
       <li>
+        <locationId>lishan</locationId>
+        <label>骊山</label>
+        <description>传说中的烽火戏诸侯</description>
+        <longitude>109.23933</longitude>
+        <latitude>34.30720</latitude>
+        <worldObjectDef>HR_MapMarker_MountainPeak</worldObjectDef>
+      </li>
+      <li>
         <locationId>zhiguanxing</locationId>
         <label>轵关陉</label>
         <description>太行第一陉</description>
@@ -119,6 +127,14 @@
         <description>太行第四陉</description>
         <longitude>113.67405</longitude>
         <latitude>36.60140</latitude>
+        <worldObjectDef>HR_MapMarker_MountainPass</worldObjectDef>
+      </li>
+      <li>
+        <locationId>hanguguan</locationId>
+        <label>函谷关</label>
+        <description>太行第四陉</description>
+        <longitude>110.95123</longitude>
+        <latitude>34.60408</latitude>
         <worldObjectDef>HR_MapMarker_MountainPass</worldObjectDef>
       </li>
       <li>

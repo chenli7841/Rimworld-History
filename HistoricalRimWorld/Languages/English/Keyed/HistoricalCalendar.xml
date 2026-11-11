@@ -19,7 +19,7 @@
   <HR_Calendar_MainTabDescription>View and enable the historical calendar for this save.</HR_Calendar_MainTabDescription>
   <HR_Calendar_Title>Historical RimWorld</HR_Calendar_Title>
   <HR_Calendar_Inactive>The historical calendar is not enabled for this save.</HR_Calendar_Inactive>
-  <HR_Calendar_InactiveHelp>Enable it only for a historical playthrough. This save will start at 770 BCE, Month 1, Day 1.</HR_Calendar_InactiveHelp>
+  <HR_Calendar_InactiveHelp>Enable it only for a historical playthrough. This save will start at 772 BCE, Month 1, Day 1.</HR_Calendar_InactiveHelp>
   <HR_Calendar_EnableButton>Enable historical calendar for this save</HR_Calendar_EnableButton>
   <HR_Calendar_CurrentDate>Current historical date</HR_Calendar_CurrentDate>
   <HR_Calendar_Rules>Historical calendar: 12 months per year, 5 days per month.</HR_Calendar_Rules>
