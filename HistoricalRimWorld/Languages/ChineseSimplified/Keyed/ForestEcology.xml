@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Forest_MainTabLabel>森林生态</HR_Forest_MainTabLabel>
+  <HR_Forest_MainTabDescription>查看已探索森林区域及其生态统计。</HR_Forest_MainTabDescription>
+  <HR_Forest_Title>森林生态区域</HR_Forest_Title>
+  <HR_Forest_Inactive>仅在 Historical RimWorld 历史剧本中启用。</HR_Forest_Inactive>
+  <HR_Forest_NotReady>森林生态区域正在建立索引，请稍后查看。</HR_Forest_NotReady>
+  <HR_Forest_ToggleAll>切换显示所有已探索的森林范围</HR_Forest_ToggleAll>
+  <HR_Forest_ClearHighlight>关闭森林范围高亮</HR_Forest_ClearHighlight>
+  <HR_Forest_KnownSummary>已发现森林区域：{0}</HR_Forest_KnownSummary>
+  <HR_Forest_RegionButton>森林 #{0}（已探索 {1} 格）</HR_Forest_RegionButton>
+  <HR_Forest_ExploredOnly>高亮仅覆盖已探索格。</HR_Forest_ExploredOnly>
+  <HR_Forest_PartialStats>此区域尚未完全探索；完整面积与生态统计暂不显示。已探索格：{0}</HR_Forest_PartialStats>
+  <HR_Forest_SizeArea>规模：{0}；面积：{1} 格</HR_Forest_SizeArea>
+  <HR_Forest_Trees>树木：{0}；原始巨木：{1}；成熟巨木：{2}</HR_Forest_Trees>
+  <HR_Forest_Density>树木密度：{0:F1}%；成熟巨木比例：{1:F1}%</HR_Forest_Density>
+  <HR_Forest_Integrity>生态完整度：{0:F0}/100；状态：{1}</HR_Forest_Integrity>
+  <HR_Forest_Habitat>潜在栖息容量：{0:F2}；评分：{1:F0}/100；等级：{2}/4（不生成动物）</HR_Forest_Habitat>
+  <HR_Forest_Trend>近期趋势：{0}</HR_Forest_Trend>
+  <HR_Forest_Size_Scattered>零散林木</HR_Forest_Size_Scattered>
+  <HR_Forest_Size_Small>小型森林</HR_Forest_Size_Small>
+  <HR_Forest_Size_Medium>中型森林</HR_Forest_Size_Medium>
+  <HR_Forest_Size_Large>大型森林</HR_Forest_Size_Large>
+  <HR_Forest_Size_Vast>广袤原始森林</HR_Forest_Size_Vast>
+  <HR_Forest_Status_Sparse>稀疏林地</HR_Forest_Status_Sparse>
+  <HR_Forest_Status_Stable>稳定森林</HR_Forest_Status_Stable>
+  <HR_Forest_Status_Thriving>繁盛森林</HR_Forest_Status_Thriving>
+  <HR_Forest_Status_Degraded>退化森林</HR_Forest_Status_Degraded>
+  <HR_Forest_Status_Recovering>恢复中的森林</HR_Forest_Status_Recovering>
+  <HR_Forest_Trend_Unknown>未知</HR_Forest_Trend_Unknown>
+  <HR_Forest_Trend_Growing>正在扩张</HR_Forest_Trend_Growing>
+  <HR_Forest_Trend_Stable>基本稳定</HR_Forest_Trend_Stable>
+  <HR_Forest_Trend_Declining>正在退化</HR_Forest_Trend_Declining>
+  <HR_Forest_Trend_Recovering>正在恢复</HR_Forest_Trend_Recovering>
+</LanguageData>

@@ -32,6 +32,7 @@ namespace HistoricalRimWorld.Patches.Forest
         private static void Postfix(Building __instance, Map map)
         {
             map?.GetComponent<MapComponent_ForestSoilErosion>()?.NotifyBuildingSpawned(__instance);
+            map?.GetComponent<MapComponent_ForestEcology>()?.MarkRegionDirty(__instance.Position);
         }
     }
 
@@ -42,6 +43,29 @@ namespace HistoricalRimWorld.Patches.Forest
         private static void Prefix(Building __instance)
         {
             __instance?.Map?.GetComponent<MapComponent_ForestSoilErosion>()?.NotifyBuildingDespawned(__instance);
+            __instance?.Map?.GetComponent<MapComponent_ForestEcology>()?.MarkRegionDirty(__instance.Position);
+        }
+    }
+
+    [HarmonyPatch(typeof(Thing), nameof(Thing.SpawnSetup), new[] { typeof(Map), typeof(bool) })]
+    internal static class Thing_SpawnSetup_ForestEcologyPatch
+    {
+        [HarmonyPostfix]
+        private static void Postfix(Thing __instance, Map map)
+        {
+            if (__instance is Plant)
+                map?.GetComponent<MapComponent_ForestEcology>()?.MarkRegionDirty(__instance.Position);
+        }
+    }
+
+    [HarmonyPatch(typeof(Thing), nameof(Thing.DeSpawn), new[] { typeof(DestroyMode) })]
+    internal static class Thing_DeSpawn_ForestEcologyPatch
+    {
+        [HarmonyPrefix]
+        private static void Prefix(Thing __instance)
+        {
+            if (__instance is Plant)
+                __instance?.Map?.GetComponent<MapComponent_ForestEcology>()?.MarkRegionDirty(__instance.Position);
         }
     }
 }

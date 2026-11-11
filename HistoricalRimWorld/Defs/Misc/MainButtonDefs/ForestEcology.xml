@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MainButtonDef>
+    <defName>HR_MainButton_ForestEcology</defName>
+    <label>HR_Forest_MainTabLabel</label>
+    <description>HR_Forest_MainTabDescription</description>
+    <tabWindowClass>HistoricalRimWorld.UI.MainTabWindow_ForestEcology</tabWindowClass>
+    <order>103</order>
+    <iconPath>UI/Buttons/MainButtons/History</iconPath>
+    <validWithoutMap>false</validWithoutMap>
+    <buttonVisible>true</buttonVisible>
+  </MainButtonDef>
+</Defs>

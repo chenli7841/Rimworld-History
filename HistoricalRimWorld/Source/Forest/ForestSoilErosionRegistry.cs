@@ -21,7 +21,10 @@ namespace HistoricalRimWorld.Forest
         public static void NotifyTerrainChanged(TerrainGrid grid, IntVec3 cell)
         {
             if (grid != null && MapsByGrid.TryGetValue(grid, out Map map))
+            {
                 map.GetComponent<MapComponent_ForestSoilErosion>()?.NotifyTerrainChanged(cell);
+                map.GetComponent<MapComponent_ForestEcology>()?.MarkRegionDirty(cell);
+            }
         }
     }
 }

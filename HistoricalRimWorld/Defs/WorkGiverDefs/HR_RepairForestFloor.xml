@@ -2,9 +2,12 @@
 <Defs>
   <WorkGiverDef>
     <defName>HR_RepairForestFloor</defName>
+    <label>repair forest floors</label>
     <giverClass>HistoricalRimWorld.Forest.WorkGiver_RepairForestFloor</giverClass>
     <workType>Construction</workType>
+    <verb>repair</verb>
     <priorityInType>20</priorityInType>
+    <gerund>repairing forest floors</gerund>
     <scanCells>true</scanCells>
     <scanThings>false</scanThings>
     <directOrderable>false</directOrderable>
