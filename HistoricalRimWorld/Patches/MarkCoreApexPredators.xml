@@ -2,7 +2,7 @@
 <Patch>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="Bear_Grizzly"]</xpath>
-    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /><li Class="HistoricalRimWorld.Forest.HR_ForestWildlifeSpeciesExtension"><minimumForestArea>1000</minimumForestArea><minimumTreeDensity>0.30</minimumTreeDensity><minimumIntegrity>60</minimumIntegrity><baseCapacity>1.5</baseCapacity><maximumPopulation>2</maximumPopulation><activityRadius>35</activityRadius><isPredator>true</isPredator><canHuntLivestock>true</canHuntLivestock><baseLivestockHuntChance>0.015</baseLivestockHuntChance><preferredBiomeKeywords><li>TemperateForest</li><li>BorealForest</li></preferredBiomeKeywords></li></modExtensions></value>
   </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="Bear_Polar"]</xpath>
@@ -14,18 +14,22 @@
   </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="Lynx"]</xpath>
-    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /><li Class="HistoricalRimWorld.Forest.HR_ForestWildlifeSpeciesExtension"><minimumForestArea>400</minimumForestArea><minimumTreeDensity>0.18</minimumTreeDensity><minimumIntegrity>35</minimumIntegrity><baseCapacity>1.5</baseCapacity><maximumPopulation>2</maximumPopulation><activityRadius>35</activityRadius><isPredator>true</isPredator><preferredBiomeKeywords><li>TemperateForest</li><li>BorealForest</li></preferredBiomeKeywords></li></modExtensions></value>
   </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="Wolf_Timber"]</xpath>
-    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /><li Class="HistoricalRimWorld.Forest.HR_ForestWildlifeSpeciesExtension"><minimumForestArea>400</minimumForestArea><minimumTreeDensity>0.16</minimumTreeDensity><minimumIntegrity>30</minimumIntegrity><baseCapacity>3</baseCapacity><maximumPopulation>7</maximumPopulation><activityRadius>45</activityRadius><isPredator>true</isPredator><canHuntLivestock>true</canHuntLivestock><baseLivestockHuntChance>0.05</baseLivestockHuntChance><preferredBiomeKeywords><li>TemperateForest</li><li>BorealForest</li></preferredBiomeKeywords></li></modExtensions></value>
   </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="Wolf_Arctic"]</xpath>
-    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+    <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /><li Class="HistoricalRimWorld.Forest.HR_ForestWildlifeSpeciesExtension"><minimumForestArea>400</minimumForestArea><minimumTreeDensity>0.16</minimumTreeDensity><minimumIntegrity>30</minimumIntegrity><baseCapacity>3</baseCapacity><maximumPopulation>6</maximumPopulation><activityRadius>45</activityRadius><isPredator>true</isPredator><canHuntLivestock>true</canHuntLivestock><baseLivestockHuntChance>0.04</baseLivestockHuntChance><preferredBiomeKeywords><li>BorealForest</li><li>Tundra</li><li>ColdBog</li></preferredBiomeKeywords></li></modExtensions></value>
   </Operation>
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="Warg"]</xpath>
     <value><modExtensions><li Class="HistoricalRimWorld.Characters.HistoricalNatureApexPredatorExtension" /></modExtensions></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="WildBoar"]</xpath>
+    <value><modExtensions><li Class="HistoricalRimWorld.Forest.HR_ForestWildlifeSpeciesExtension"><minimumForestArea>100</minimumForestArea><minimumTreeDensity>0.10</minimumTreeDensity><minimumIntegrity>20</minimumIntegrity><baseCapacity>6</baseCapacity><maximumPopulation>10</maximumPopulation><activityRadius>30</activityRadius><preferredBiomeKeywords><li>TemperateForest</li><li>BorealForest</li><li>TropicalRainforest</li><li>Swamp</li></preferredBiomeKeywords></li></modExtensions></value>
   </Operation>
 </Patch>

@@ -32,4 +32,5 @@
   <HR_Forest_Trend_Stable>Stable</HR_Forest_Trend_Stable>
   <HR_Forest_Trend_Declining>Declining</HR_Forest_Trend_Declining>
   <HR_Forest_Trend_Recovering>Recovering</HR_Forest_Trend_Recovering>
+  <HR_Wildlife_PopulationLine>Wildlife: {0}; current {1}, habitat target {2}</HR_Wildlife_PopulationLine>
 </LanguageData>

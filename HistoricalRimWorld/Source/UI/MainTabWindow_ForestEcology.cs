@@ -26,6 +26,7 @@ namespace HistoricalRimWorld.UI
             }
 
             MapComponent_ForestEcology ecology = Find.CurrentMap.GetComponent<MapComponent_ForestEcology>();
+            MapComponent_ForestWildlife wildlife = Find.CurrentMap.GetComponent<MapComponent_ForestWildlife>();
             if (ecology == null)
             {
                 listing.Label(Translator.Translate("HR_Forest_NotReady"));
@@ -77,6 +78,18 @@ namespace HistoricalRimWorld.UI
                     StatusLabel(region.Status)));
                 rows.Label(string.Format(Translator.Translate("HR_Forest_Habitat"), region.HabitatCapacity,
                     region.HabitatCapacityScore, region.HabitatCapacityTier));
+                if (wildlife != null)
+                {
+                    foreach (ForestWildlifePopulation population in wildlife.Populations
+                        .Where(item => item.ForestRegionId == region.RegionId && item.CurrentCount > 0)
+                        .OrderBy(item => item.SpeciesDefName))
+                    {
+                        ThingDef species = DefDatabase<ThingDef>.GetNamedSilentFail(population.SpeciesDefName);
+                        rows.Label(string.Format(Translator.Translate("HR_Wildlife_PopulationLine"),
+                            species?.LabelCap.ToString() ?? population.SpeciesDefName,
+                            population.CurrentCount, population.TargetCount));
+                    }
+                }
                 rows.Label(string.Format(Translator.Translate("HR_Forest_Trend"), TrendLabel(region.Trend)));
                 rows.GapLine();
             }

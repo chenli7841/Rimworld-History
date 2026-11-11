@@ -49,5 +49,42 @@ namespace HistoricalRimWorld.Forest
         {
             Find.CurrentMap?.GetComponent<MapComponent_ForestEcology>()?.ToggleAllKnownRegionHighlight();
         }
+
+        [DebugAction("Historical RimWorld", "HR Wildlife: Rebuild populations", allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void RebuildWildlife()
+        {
+            MapComponent_ForestWildlife wildlife = Find.CurrentMap?.GetComponent<MapComponent_ForestWildlife>();
+            if (wildlife == null)
+            {
+                Log.Warning("[Historical RimWorld][HR-047] No wildlife component on the current map.");
+                return;
+            }
+            wildlife.RequestRefresh();
+            Log.Message("[Historical RimWorld][HR-047] Requested a wildlife population refresh.");
+        }
+
+        [DebugAction("Historical RimWorld", "HR Wildlife: Print population stats", allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void PrintWildlifeStats()
+        {
+            MapComponent_ForestWildlife wildlife = Find.CurrentMap?.GetComponent<MapComponent_ForestWildlife>();
+            if (wildlife == null)
+            {
+                Log.Warning("[Historical RimWorld][HR-047] No wildlife component on the current map.");
+                return;
+            }
+            Log.Message("[Historical RimWorld][HR-047] configured wild animals=" + wildlife.WildConfiguredAnimalCount
+                + "; tracked populations=" + wildlife.Populations.Count
+                + "; under migration pressure=" + wildlife.MigratingPopulationCount);
+            foreach (ForestWildlifePopulation population in wildlife.Populations)
+            {
+                ThingDef species = DefDatabase<ThingDef>.GetNamedSilentFail(population.SpeciesDefName);
+                Log.Message("[Historical RimWorld][HR-047] " + (species?.LabelCap.ToString() ?? population.SpeciesDefName)
+                    + "; region=" + population.ForestRegionId + "; current=" + population.CurrentCount
+                    + "; target=" + population.TargetCount + "; food availability=" + population.FoodAvailability.ToString("F2")
+                    + "; habitat suitability=" + population.HabitatSuitability.ToString("F2")
+                    + "; disturbance=" + population.DisturbanceLevel.ToString("F2")
+                    + "; migration pressure=" + population.MigrationPressure);
+            }
+        }
     }
 }

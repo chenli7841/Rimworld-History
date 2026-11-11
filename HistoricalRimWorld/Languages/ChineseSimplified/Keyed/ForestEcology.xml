@@ -32,4 +32,5 @@
   <HR_Forest_Trend_Stable>基本稳定</HR_Forest_Trend_Stable>
   <HR_Forest_Trend_Declining>正在退化</HR_Forest_Trend_Declining>
   <HR_Forest_Trend_Recovering>正在恢复</HR_Forest_Trend_Recovering>
+  <HR_Wildlife_PopulationLine>野生动物：{0}；实存 {1}，栖息目标 {2}</HR_Wildlife_PopulationLine>
 </LanguageData>
