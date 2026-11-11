@@ -97,7 +97,7 @@ namespace HistoricalRimWorld.Forest
             allWildAnimals.Clear();
             wildConfiguredAnimals.Clear();
             forestRegions.Clear();
-            if (forest != null) forestRegions.AddRange(forest.GetAllRegions());
+            if (forest != null) forestRegions.AddRange(forest.GetAllRegions().Where(region => region != null));
 
             temporaryPawns.Clear();
             if (PawnsFinder.Temporary != null)
@@ -114,7 +114,7 @@ namespace HistoricalRimWorld.Forest
                     allWildAnimals.Add(animal);
                     ForestEcologyRegion region = FindAssociatedRegion(animal, forest);
                     if (region != null) regionByAnimal[animal] = region.RegionId;
-                    if (animal.def.GetModExtension<HR_ForestWildlifeSpeciesExtension>() != null)
+                    if (animal.def?.GetModExtension<HR_ForestWildlifeSpeciesExtension>() != null)
                         wildConfiguredAnimals.Add(animal);
                 }
             }
@@ -196,16 +196,20 @@ namespace HistoricalRimWorld.Forest
 
         private ForestEcologyRegion FindAssociatedRegion(Pawn animal, MapComponent_ForestEcology forest)
         {
-            if (forest == null || forestRegions.Count == 0) return null;
+            if (animal == null || animal.Destroyed || !animal.Spawned || map == null
+                || !animal.Position.InBounds(map) || forest == null || forestRegions.Count == 0) return null;
             ForestEcologyRegion direct = forest.GetRegionAt(animal.Position);
             if (direct != null) return direct;
 
-            HR_ForestWildlifeSpeciesExtension settings = animal.def.GetModExtension<HR_ForestWildlifeSpeciesExtension>();
-            int maxDistanceSquared = Math.Max(settings.activityRadius, 10) * Math.Max(settings.activityRadius, 10);
+            HR_ForestWildlifeSpeciesExtension settings = animal.def?.GetModExtension<HR_ForestWildlifeSpeciesExtension>();
+            // Unconfigured native wildlife is also mapped as prey for habitat food pressure.
+            int radius = Math.Max(settings?.activityRadius ?? 35, 10);
+            int maxDistanceSquared = radius * radius;
             ForestEcologyRegion nearest = null;
             int nearestDistance = int.MaxValue;
             foreach (ForestEcologyRegion region in forestRegions)
             {
+                if (region == null) continue;
                 int distance = animal.Position.DistanceToSquared(region.Center);
                 if (distance > maxDistanceSquared || distance >= nearestDistance) continue;
                 nearest = region;
@@ -352,8 +356,8 @@ namespace HistoricalRimWorld.Forest
 
         private static bool IsWildAnimal(Pawn pawn)
         {
-            return pawn != null && !pawn.Dead && !pawn.Destroyed && pawn.Spawned && pawn.IsAnimal
-                && pawn.Faction == null && !pawn.InContainerEnclosed;
+            return pawn != null && !pawn.Dead && !pawn.Destroyed && pawn.Spawned
+                && pawn.def?.race?.Animal == true && pawn.Faction == null && !pawn.InContainerEnclosed;
         }
 
         private static string PopulationKey(int regionId, string speciesDefName) => regionId + ":" + speciesDefName;

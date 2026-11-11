@@ -1,3 +1,4 @@
+using HistoricalRimWorld.Factions;
 using HistoricalRimWorld.Scenarios;
 using RimWorld;
 using Verse;
@@ -15,9 +16,13 @@ namespace HistoricalRimWorld.Forest
             return AncientForestGrowthSettings.NormalToNormalMultiplier;
         }
 
-        public static bool CanSpawnAncientTree(IntVec3 cell, Map map, ThingDef treeDef)
+        public static bool CanSpawnAncientTree(IntVec3 cell, Map map, ThingDef treeDef,
+            bool allowSelectedScenarioBeforeGameInitialization = false)
         {
-            if (!HistoricalScenarioManager.IsScenarioActive || map == null || !cell.InBounds(map)
+            bool scenarioActive = HistoricalScenarioManager.IsScenarioActive;
+            bool selectedHistoricalScenario = allowSelectedScenarioBeforeGameInitialization
+                && HistoricalFactionGenerationContext.TryGetSelectedSetup(out _);
+            if ((!scenarioActive && !selectedHistoricalScenario) || map == null || !cell.InBounds(map)
                 || !cell.Standable(map) || cell.GetEdifice(map) != null || cell.GetPlant(map) != null)
                 return false;
 

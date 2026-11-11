@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HistoricalRimWorld.Factions;
 using HistoricalRimWorld.Geography;
 using HistoricalRimWorld.Scenarios;
 using RimWorld;
@@ -12,6 +13,8 @@ namespace HistoricalRimWorld.Forest
     public sealed class GenStep_AncientForest : GenStep
     {
         public float targetForestCoverage = 0.30f;
+        public int edgeForestMinimumWidth = 18;
+        public int edgeBoundaryVariation = 10;
         public int edgeForestPreferredWidth = 35;
         public int edgeForestMaxWidth = 70;
         public float ancientTreeDensity = 0.08f;
@@ -23,13 +26,20 @@ namespace HistoricalRimWorld.Forest
 
         public override void Generate(Map map, GenStepParams parms)
         {
-            if (!HistoricalScenarioManager.IsScenarioActive || map == null) return;
+            // Player maps are generated before the scenario GameComponent is initialized.
+            // At this point the selected scenario is held by the world-generation context.
+            if (map == null) return;
             GenerateForMap(map, false);
         }
 
         public void GenerateForMap(Map map, bool debugGenerated)
         {
-            if (!HistoricalScenarioManager.IsScenarioActive || map == null) return;
+            if (map == null) return;
+
+            bool scenarioSelectedForNewGame = HistoricalFactionGenerationContext.TryGetSelectedSetup(out _);
+            bool activeHistoricalSave = HistoricalScenarioManager.IsScenarioActive;
+            if (debugGenerated ? !activeHistoricalSave : !scenarioSelectedForNewGame && !activeHistoricalSave) return;
+
             MapComponent_AncientForestSoil soil = map.GetComponent<MapComponent_AncientForestSoil>();
             TerrainDef soilDef = DefDatabase<TerrainDef>.GetNamedSilentFail(forestSoilDefName);
             if (soil == null || soilDef == null)
@@ -53,6 +63,8 @@ namespace HistoricalRimWorld.Forest
             float[,] noise = MakeNoise(Math.Max(5, width / 18), Math.Max(5, height / 18), random);
             IntVec3 start = MapGenerator.PlayerStartSpotValid ? MapGenerator.PlayerStartSpot : new IntVec3(width / 2, 0, height / 2);
             int edgeMax = Math.Max(1, edgeForestMaxWidth);
+            int edgeMinimum = Math.Max(1, Math.Min(edgeForestMinimumWidth, edgeMax));
+            int boundaryVariation = Math.Max(0, Math.Min(edgeMax, edgeBoundaryVariation));
             int edgePreferred = Math.Max(1, Math.Min(edgeForestPreferredWidth, edgeMax));
             int centerRadius = Math.Max(0, centralClearRadius);
             int corridorWidth = Math.Max(0, clearCorridorWidth);
@@ -79,11 +91,32 @@ namespace HistoricalRimWorld.Forest
             }
 
             GetClimateFactors(map, out float forestCoverageFactor, out float treeDensityFactor);
-            int desired = Math.Min(edgeCandidates.Count,
-                Math.Max(0, (int)Math.Round(Math.Max(0f, Math.Min(0.8f, targetForestCoverage * forestCoverageFactor)) * eligible.Count)));
-            edgeCandidates.Sort((a, b) => b.Score(edgePreferred, edgeMax).CompareTo(a.Score(edgePreferred, edgeMax)));
+            // Keep a continuous perimeter belt, except for the deliberately cleared exit.
+            // Additional coverage expands inward from that belt instead of creating isolated patches.
+            int minimumBeltCells = edgeCandidates.Count(candidate => candidate.EdgeDistance < edgeMinimum);
+            int targetCells = (int)Math.Round(Math.Max(0f,
+                Math.Min(0.8f, targetForestCoverage * forestCoverageFactor)) * eligible.Count);
+            int desired = Math.Min(edgeCandidates.Count, Math.Max(minimumBeltCells, targetCells));
+            List<CellCandidate> minimumBelt = edgeCandidates
+                .Where(candidate => candidate.EdgeDistance < edgeMinimum)
+                .ToList();
+            List<CellCandidate> expansion = edgeCandidates
+                .Where(candidate => candidate.EdgeDistance >= edgeMinimum)
+                .ToList();
+            expansion.Sort((a, b) =>
+            {
+                // Smooth map-scale noise makes the inner edge ebb and flow without
+                // breaking the continuous minimum belt along the map perimeter.
+                double aDepth = a.EdgeDistance - (a.Noise - 0.5d) * boundaryVariation;
+                double bDepth = b.EdgeDistance - (b.Noise - 0.5d) * boundaryVariation;
+                int depthOrder = aDepth.CompareTo(bDepth);
+                return depthOrder != 0 ? depthOrder
+                    : b.Score(edgePreferred, edgeMax).CompareTo(a.Score(edgePreferred, edgeMax));
+            });
 
-            List<CellCandidate> selected = edgeCandidates.Take(desired).ToList();
+            List<CellCandidate> selected = new List<CellCandidate>(desired);
+            selected.AddRange(minimumBelt);
+            selected.AddRange(expansion.Take(Math.Max(0, desired - minimumBelt.Count)));
             for (int i = 0; i < selected.Count; i++)
             {
                 CellCandidate candidate = selected[i];
@@ -98,7 +131,8 @@ namespace HistoricalRimWorld.Forest
                 foreach (CellCandidate candidate in selected)
                 {
                     if (random.NextDouble() >= Math.Max(0f, Math.Min(0.5f, ancientTreeDensity * treeDensityFactor))
-                        || !soil.CanGrowAncientTree(candidate.Cell)) continue;
+                        || !AncientForestReproductionUtility.CanSpawnAncientTree(candidate.Cell, map, treeDef,
+                            allowSelectedScenarioBeforeGameInitialization: true)) continue;
                     Thing tree = ThingMaker.MakeThing(treeDef);
                     Plant plant = GenSpawn.Spawn(tree, candidate.Cell, map) as Plant;
                     if (plant == null) continue;

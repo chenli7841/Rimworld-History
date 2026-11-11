@@ -4,12 +4,14 @@
     <defName>HR_AncientForest</defName>
     <order>1000</order>
     <genStep Class="HistoricalRimWorld.Forest.GenStep_AncientForest">
-      <targetForestCoverage>0.30</targetForestCoverage>
+      <targetForestCoverage>0.40</targetForestCoverage>
+      <edgeForestMinimumWidth>18</edgeForestMinimumWidth>
+      <edgeBoundaryVariation>10</edgeBoundaryVariation>
       <edgeForestPreferredWidth>35</edgeForestPreferredWidth>
       <edgeForestMaxWidth>70</edgeForestMaxWidth>
       <ancientTreeDensity>0.08</ancientTreeDensity>
       <centralClearRadius>34</centralClearRadius>
-      <clearCorridorWidth>12</clearCorridorWidth>
+      <clearCorridorWidth>1</clearCorridorWidth>
       <forestSoilDefName>HR_AncientLivingForestSoil</forestSoilDefName>
     </genStep>
   </GenStepDef>
