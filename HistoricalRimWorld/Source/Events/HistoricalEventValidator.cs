@@ -19,6 +19,77 @@ namespace HistoricalRimWorld.Events
             {
                 if (item.activationMode != HistoricalEventActivationMode.LocalTemplate) yield return "historicalDate is required.";
             }
+            if (item.stages != null && item.stages.Count > 0)
+            {
+                if (string.IsNullOrWhiteSpace(item.eventId)) yield return "Timeline events require a stable eventId.";
+                else if (DefDatabase<HistoricalEventDef>.AllDefsListForReading.Any(other => other != item && other.eventId == item.eventId))
+                    yield return "eventId must be globally unique.";
+                if (string.IsNullOrWhiteSpace(item.historicalInterpretationId)) yield return "Timeline events require historicalInterpretationId.";
+                if (item.announcementDate == null) yield return "Timeline events require announcementDate.";
+                else
+                {
+                    string announcementError = null;
+                    try { item.announcementDate.Validate(); }
+                    catch (Exception exception) { announcementError = exception.Message; }
+                    if (announcementError != null) yield return "announcementDate is invalid: " + announcementError;
+                }
+                HistoricalDate? previous = null;
+                HistoricalDate? firstStageDate = null;
+                HashSet<string> stageIds = new HashSet<string>(StringComparer.Ordinal);
+                foreach (HistoricalEventStageEntry stage in item.stages)
+                {
+                    if (stage == null) { yield return "stages contains a null entry."; continue; }
+                    if (string.IsNullOrWhiteSpace(stage.stageId) || !stageIds.Add(stage.stageId)) yield return "Stage IDs must be non-empty and unique.";
+                    if (string.IsNullOrWhiteSpace(stage.displayLabelKey)) yield return "Stage " + stage.stageId + " requires a displayLabelKey.";
+                    if (stage.scheduledDate == null) { yield return "Stage " + stage.stageId + " requires scheduledDate."; continue; }
+                    string stageDateError = null;
+                    HistoricalDate? stageDate = null;
+                    try
+                    {
+                        stage.scheduledDate.Validate();
+                        stageDate = HistoricalEventDateResolver.ResolveScheduledDate(stage.scheduledDate);
+                    }
+                    catch (Exception exception) { stageDateError = exception.Message; }
+                    if (stageDateError != null) yield return "Stage " + stage.stageId + " has an invalid date: " + stageDateError;
+                    else if (stageDate.HasValue)
+                    {
+                        if (!firstStageDate.HasValue) firstStageDate = stageDate;
+                        if (previous.HasValue && stageDate.Value <= previous.Value) yield return "Stage dates must be strictly increasing.";
+                        previous = stageDate;
+                    }
+                    if (stage.showNotification && string.IsNullOrWhiteSpace(stage.notificationDescriptionKey))
+                        yield return "Notifying stage " + stage.stageId + " requires notificationDescriptionKey.";
+                    if (!item.progressWithoutPlayer && stage.canProgressOffMap) yield return "canProgressOffMap requires progressWithoutPlayer.";
+                }
+                if (item.announcementDate != null && firstStageDate.HasValue)
+                {
+                    string announcementOrderError = null;
+                    try
+                    {
+                        if (HistoricalEventDateResolver.ResolveScheduledDate(item.announcementDate) > firstStageDate.Value)
+                            announcementOrderError = "announcementDate must not be later than the first stage.";
+                    }
+                    catch (Exception exception) { announcementOrderError = "announcementDate is invalid: " + exception.Message; }
+                    if (announcementOrderError != null) yield return announcementOrderError;
+                }
+                HashSet<string> outcomeIds = new HashSet<string>(StringComparer.Ordinal);
+                if (DefDatabase<HistoricalEventDef>.AllDefsListForReading.Where(other => other != item)
+                    .SelectMany(other => other.outcomes ?? new List<HistoricalEventOutcomeEntry>())
+                    .Any(otherOutcome => otherOutcome != null && (item.outcomes ?? new List<HistoricalEventOutcomeEntry>())
+                        .Any(outcome => outcome != null && outcome.outcomeId == otherOutcome.outcomeId)))
+                    yield return "Outcome IDs must be globally unique.";
+                foreach (HistoricalEventOutcomeEntry outcome in item.outcomes ?? new List<HistoricalEventOutcomeEntry>())
+                {
+                    if (outcome == null) { yield return "outcomes contains a null entry."; continue; }
+                    if (string.IsNullOrWhiteSpace(outcome.outcomeId) || !outcomeIds.Add(outcome.outcomeId)) yield return "Outcome IDs must be non-empty and unique.";
+                    if (!stageIds.Contains(outcome.stageId)) yield return "Outcome " + outcome.outcomeId + " references a missing stage.";
+                    if (string.IsNullOrWhiteSpace(outcome.titleKey) || string.IsNullOrWhiteSpace(outcome.descriptionKey)) yield return "Outcome " + outcome.outcomeId + " requires localized title and description keys.";
+                }
+                if (item.mandatoryHistoricalOutcome && !(item.outcomes ?? new List<HistoricalEventOutcomeEntry>()).Any(outcome => outcome != null && outcome.mandatory))
+                    yield return "mandatoryHistoricalOutcome requires at least one mandatory outcome.";
+                if (item.stages.Any(stage => stage != null && stage.requiresScene && !stage.canProgressOffMap))
+                    yield return "A scene-gated timeline cannot pause when the player is off-map.";
+            }
             else
             {
                 string dateError = null;
@@ -93,7 +164,7 @@ namespace HistoricalRimWorld.Events
                         yield return "prerequisiteEventIds contains an empty event ID.";
                         continue;
                     }
-                    HistoricalEventDef prerequisite = DefDatabase<HistoricalEventDef>.GetNamedSilentFail(prerequisiteId);
+                    HistoricalEventDef prerequisite = FindEventDef(prerequisiteId);
                     if (prerequisite == null) yield return "Missing prerequisite event " + prerequisiteId + ".";
                     else if (prerequisite.scenario == null || prerequisite.scenario.defName != item.scenario.defName)
                         yield return "Prerequisite " + prerequisiteId + " belongs to another scenario.";
@@ -103,7 +174,7 @@ namespace HistoricalRimWorld.Events
             {
                 foreach (Condition_EventExecuted condition in item.conditions.OfType<Condition_EventExecuted>())
                 {
-                    HistoricalEventDef prerequisite = DefDatabase<HistoricalEventDef>.GetNamedSilentFail(condition.eventId);
+                    HistoricalEventDef prerequisite = FindEventDef(condition.eventId);
                     if (prerequisite != null && (prerequisite.scenario == null || prerequisite.scenario.defName != item.scenario.defName))
                         yield return "EventExecuted condition " + condition.eventId + " belongs to another scenario.";
                 }
@@ -115,6 +186,11 @@ namespace HistoricalRimWorld.Events
             if (scenario == null) yield break;
             List<HistoricalEventDef> events = DefDatabase<HistoricalEventDef>.AllDefsListForReading
                 .Where(item => item.scenario != null && item.scenario.defName == scenario.defName).ToList();
+            foreach (var duplicate in events.Where(item => !string.IsNullOrWhiteSpace(item.eventId))
+                .GroupBy(item => item.eventId, StringComparer.Ordinal).Where(group => group.Count() > 1))
+                yield return "Duplicate eventId mapping: " + duplicate.Key + ".";
+            foreach (HistoricalEventDef item in events.Where(item => !string.IsNullOrWhiteSpace(item.eventId) && item.eventId != item.defName))
+                if (events.Any(other => other.defName == item.eventId)) yield return "eventId " + item.eventId + " conflicts with another DefName.";
             Dictionary<string, HistoricalEventDef> byId = events.ToDictionary(item => item.defName, StringComparer.Ordinal);
             Dictionary<string, int> marks = new Dictionary<string, int>(StringComparer.Ordinal);
 
@@ -160,5 +236,9 @@ namespace HistoricalRimWorld.Events
                 }
             }
         }
+
+        internal static HistoricalEventDef FindEventDef(string id) =>
+            DefDatabase<HistoricalEventDef>.GetNamedSilentFail(id)
+            ?? DefDatabase<HistoricalEventDef>.AllDefsListForReading.FirstOrDefault(def => def.eventId == id);
     }
 }

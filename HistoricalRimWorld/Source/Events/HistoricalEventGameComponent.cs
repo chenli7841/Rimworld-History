@@ -12,7 +12,7 @@ namespace HistoricalRimWorld.Events
     {
         public HistoricalEventGameComponent(Game game) { }
 
-        private const int CurrentDataVersion = 3;
+        private const int CurrentDataVersion = 4;
         private string scenarioDefName;
         private int dataVersion;
         private bool initialized;
@@ -40,7 +40,35 @@ namespace HistoricalRimWorld.Events
         public IEnumerable<HistoricalLocalEventRuntimeRecord> LocalEventRecords => localEventRecords ?? Enumerable.Empty<HistoricalLocalEventRuntimeRecord>();
         public IEnumerable<HistoricalStorylineRuntimeState> StorylineStates => storylineStates ?? Enumerable.Empty<HistoricalStorylineRuntimeState>();
 
-        public HistoricalEventRuntimeState FindState(string id) => eventStates?.FirstOrDefault(item => item != null && item.EventId == id);
+        public HistoricalEventRuntimeState FindState(string id)
+        {
+            if (string.IsNullOrWhiteSpace(id)) return null;
+            HistoricalEventRuntimeState direct = eventStates?.FirstOrDefault(item => item != null && item.EventId == id);
+            if (direct != null) return direct;
+            HistoricalEventDef mapped = DefDatabase<HistoricalEventDef>.AllDefsListForReading
+                .FirstOrDefault(def => def.scenario?.defName == scenarioDefName && def.eventId == id);
+            return mapped == null ? null : eventStates?.FirstOrDefault(item => item != null && item.EventId == mapped.defName);
+        }
+
+        public bool HasEventStarted(string id) => FindState(id)?.TimelineStatus == HistoricalEventRuntimeStatus.Active
+            || FindState(id)?.TimelineStatus == HistoricalEventRuntimeStatus.Completed;
+        public bool HasEventCompleted(string id) => FindState(id)?.TimelineStatus == HistoricalEventRuntimeStatus.Completed;
+        public bool HasReachedStage(string id, string stageId) => FindState(id)?.HasReachedStage(stageId) == true;
+        public HistoricalEventRuntimeState GetEvent(string id) => FindState(id);
+        public bool HasOutcomeCommitted(string eventId, string outcomeId) =>
+            FindState(eventId)?.CommittedOutcomeIds.Contains(outcomeId, StringComparer.Ordinal) == true;
+        public bool CommitOnce(string eventId, string outcomeId)
+        {
+            HistoricalEventRuntimeState state = FindState(eventId);
+            HistoricalEventDef def = HistoricalEventValidator.FindEventDef(eventId);
+            HistoricalEventOutcomeEntry outcome = def?.outcomes?.FirstOrDefault(item => item != null && item.outcomeId == outcomeId);
+            return state != null && outcome != null && state.HasReachedStage(outcome.stageId)
+                && state.TryCommitOutcome(outcomeId);
+        }
+        public bool TryMarkOutcomeApplied(string eventId, string outcomeId, string consumerId) =>
+            FindState(eventId)?.TryMarkOutcomeApplied(outcomeId, consumerId) == true;
+        public bool HasOutcomeBeenApplied(string eventId, string outcomeId, string consumerId) =>
+            FindState(eventId)?.HasOutcomeBeenApplied(outcomeId, consumerId) == true;
 
         internal bool ApplyInitializationPlan(HistoricalEventInitializationPlan plan, out string error)
         {
@@ -139,6 +167,9 @@ namespace HistoricalRimWorld.Events
 
         internal void RemovePendingId(string id) => pendingEventIds?.Remove(id);
 
+        internal void CompleteTimelineState(HistoricalEventRuntimeState state, HistoricalDate date) =>
+            CompleteState(state, HistoricalEventExecutionStatus.Executed, HistoricalEventFailureKind.None, null, date);
+
         public override void GameComponentTick()
         {
             base.GameComponentTick();
@@ -206,8 +237,20 @@ namespace HistoricalRimWorld.Events
                 {
                     foreach (HistoricalEventRuntimeState state in eventStates.Where(item => item != null))
                     {
-                        if (DefDatabase<HistoricalEventDef>.GetNamedSilentFail(state.EventId) == null)
+                        HistoricalEventDef savedDef = DefDatabase<HistoricalEventDef>.GetNamedSilentFail(state.EventId);
+                        if (savedDef == null)
                             Log.Warning("[Historical RimWorld] Saved event state references missing Def " + state.EventId + "; the saved outcome was preserved.");
+                        else if (state.CurrentStageId != null && savedDef.stages != null
+                            && !savedDef.stages.Any(stage => stage?.stageId == state.CurrentStageId))
+                            Log.Warning("[Historical RimWorld] Saved event " + state.EventId + " references missing stage "
+                                + state.CurrentStageId + "; saved stage history and outcomes were preserved.");
+                        else if (savedDef.stages != null && savedDef.stages.Count > 0 && state.PrepareTimelineCatchUp())
+                        {
+                            if (pendingEventIds == null) pendingEventIds = new List<string>();
+                            if (!pendingEventIds.Contains(state.EventId)) pendingEventIds.Add(state.EventId);
+                            Log.Warning("[Historical RimWorld] Migrated legacy event state " + state.EventId
+                                + " to staged timeline catch-up; no old notifications will be replayed.");
+                        }
                     }
                 }
             }

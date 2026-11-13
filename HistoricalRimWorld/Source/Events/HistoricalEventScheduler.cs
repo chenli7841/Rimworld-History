@@ -47,6 +47,7 @@ namespace HistoricalRimWorld.Events
         public void ProcessDueEvents(HistoricalDate currentDate)
         {
             if (scenario == null || !HistoricalCalendarManager.IsActive) return;
+            ProcessTimelineEvents(currentDate);
             List<HistoricalEventDef> due = new List<HistoricalEventDef>();
             foreach (string id in component.PendingEventIds.ToList())
             {
@@ -67,7 +68,7 @@ namespace HistoricalRimWorld.Events
                 }
 
                 HistoricalDate scheduled = HistoricalEventDateResolver.ResolveScheduledDate(item.historicalDate);
-                if (scheduled <= currentDate) due.Add(item);
+                if ((item.stages == null || item.stages.Count == 0) && scheduled <= currentDate) due.Add(item);
             }
 
             List<HistoricalEventDef> orderedDue = due
@@ -98,6 +99,30 @@ namespace HistoricalRimWorld.Events
             } while (progress);
 
             ProcessLocalEvents(currentDate);
+        }
+
+        private void ProcessTimelineEvents(HistoricalDate currentDate)
+        {
+            foreach (HistoricalEventDef item in eventById.Values.Where(def => def.stages != null && def.stages.Count > 0)
+                .OrderBy(def => def.priority).ThenBy(def => def.defName, StringComparer.Ordinal))
+            {
+                HistoricalEventRuntimeState state = component.FindState(item.defName);
+                if (state == null || state.Status != HistoricalEventExecutionStatus.Pending
+                    || state.TimelineStatus == HistoricalEventRuntimeStatus.Completed
+                    || state.TimelineStatus == HistoricalEventRuntimeStatus.Error
+                    || state.TimelineStatus == HistoricalEventRuntimeStatus.Disabled
+                    || !PrerequisitesReady(item)) continue;
+                try
+                {
+                    HistoricalEventStateMachine.AdvanceDueStages(item, state, currentDate,
+                        component.CompleteTimelineState);
+                }
+                catch (Exception exception)
+                {
+                    state.SetTimelineStatus(HistoricalEventRuntimeStatus.Error);
+                    Log.Error("[Historical RimWorld] Timeline event " + item.defName + " failed safely: " + exception);
+                }
+            }
         }
 
         private void ProcessLocalEvents(HistoricalDate currentDate)
@@ -659,7 +684,7 @@ namespace HistoricalRimWorld.Events
                 if (prerequisite.Status == HistoricalEventExecutionStatus.Failed || prerequisite.Status == HistoricalEventExecutionStatus.Skipped)
                 {
                     if (prerequisite.Status == HistoricalEventExecutionStatus.Skipped
-                        && DefDatabase<HistoricalEventDef>.GetNamedSilentFail(prerequisiteId)?.activationMode == HistoricalEventActivationMode.InitialBackground) continue;
+                        && HistoricalEventValidator.FindEventDef(prerequisiteId)?.activationMode == HistoricalEventActivationMode.InitialBackground) continue;
                     Fail(state, HistoricalEventFailureKind.MissingDefinition,
                         "Prerequisite " + prerequisiteId + " did not execute successfully (" + prerequisite.Status + ").", currentDate);
                     return;
@@ -784,7 +809,7 @@ namespace HistoricalRimWorld.Events
                 if (state == null) return false;
                 if (state.Status == HistoricalEventExecutionStatus.Executed) continue;
                 if (state.Status == HistoricalEventExecutionStatus.Skipped
-                    && DefDatabase<HistoricalEventDef>.GetNamedSilentFail(id)?.activationMode == HistoricalEventActivationMode.InitialBackground) continue;
+                    && HistoricalEventValidator.FindEventDef(id)?.activationMode == HistoricalEventActivationMode.InitialBackground) continue;
                 return false;
             }
             return true;

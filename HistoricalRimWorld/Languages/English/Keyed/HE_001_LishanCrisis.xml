@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HE_001_LishanCrisis_Label>The Lishan Crisis</HE_001_LishanCrisis_Label>
+  <HE_001_LishanCrisis_Description>Traditional chronology places the Western Zhou royal crisis in 771 BCE. This event advances on the game calendar; its month and day values are scheduling dates, not claims of precise historical dating. Accounts of the military process and succession differ.</HE_001_LishanCrisis_Description>
+  <HE_001_LishanCrisis_SourceNotes>Traditional chronology follows the Shiji, “Zhou Benji,” alongside scholarship on early Zhou history. Received accounts, the Tsinghua bamboo manuscript Xinian, and modern reconstructions differ on succession, relocation, and event sequence. The default uses 771 BCE and does not treat the beacon-fire story or Bao Si's responsibility as established fact.</HE_001_LishanCrisis_SourceNotes>
+  <HE_001_Stage_Forewarning>Lishan crisis forewarning</HE_001_Stage_Forewarning>
+  <HE_001_Notice_Forewarning>Estimated year: 771 BCE. Main area: Lishan and the Zhou royal domain. Political tensions within the Zhou court and pressure on its borders are rising. A crisis that may change the political order is approaching; accounts of its details differ.</HE_001_Notice_Forewarning>
+  <HE_001_Stage_PoliticalCrisis>Royal political crisis</HE_001_Stage_PoliticalCrisis>
+  <HE_001_Chronicle_PoliticalCrisis>The political situation of the Zhou court continues to deteriorate. This is a game-timeline summary, not a claim about a precise month, day, or single uncontested cause.</HE_001_Chronicle_PoliticalCrisis>
+  <HE_001_Stage_MilitaryCrisis>Military crisis</HE_001_Stage_MilitaryCrisis>
+  <HE_001_Notice_MilitaryCrisis>The military crisis in the western royal domain described by the received chronology has begun. It advances even when the player is elsewhere and does not spawn or replay a battle.</HE_001_Notice_MilitaryCrisis>
+  <HE_001_Stage_RoyalDefeat>Royal defeat</HE_001_Stage_RoyalDefeat>
+  <HE_001_Chronicle_RoyalDefeat>The royal side suffers a defeat during the crisis. This records a broad historical stage without simulating armies or combat.</HE_001_Chronicle_RoyalDefeat>
+  <HE_001_Stage_KingYouDeath>Death of King You</HE_001_Stage_KingYouDeath>
+  <HE_001_Outcome_YouWangDead>Death of King You recorded</HE_001_Outcome_YouWangDead>
+  <HE_001_Outcome_YouWangDead_Description>Traditional chronology records King You's death during the Lishan-related crisis at the end of Western Zhou. This stage records the historical outcome only; it creates or kills no Pawn. The displayed month is a game scheduling value, not a historically attested month or day.</HE_001_Outcome_YouWangDead_Description>
+  <HE_001_Stage_Aftermath>Aftermath of the royal crisis</HE_001_Stage_Aftermath>
+  <HE_001_Notice_Aftermath>The old Western Zhou royal order suffers a collapse, while succession and politics remain complex. Sources do not give a wholly uniform account of this period.</HE_001_Notice_Aftermath>
+  <HE_001_Outcome_WesternZhouCollapse>Western Zhou royal order collapsed</HE_001_Outcome_WesternZhouCollapse>
+  <HE_001_Outcome_WesternZhouCollapse_Description>The broad historical outcome of the collapse of the old Western Zhou political order has been recorded for later systems to query. The displayed month is a game scheduling value, not a historically attested month or day.</HE_001_Outcome_WesternZhouCollapse_Description>
+  <HE_001_Outcome_RoyalSuccessionCrisis>Royal succession crisis</HE_001_Outcome_RoyalSuccessionCrisis>
+  <HE_001_Outcome_RoyalSuccessionCrisis_Description>The Zhou royal succession and legitimacy question enters a new political phase; this result does not resolve every disputed account. The displayed month is a game scheduling value, not a historically attested month or day.</HE_001_Outcome_RoyalSuccessionCrisis_Description>
+  <HE_001_Stage_Completed>Lishan crisis timeline completed</HE_001_Stage_Completed>
+  <HE_001_Notice_Completed>The scheduled historical stages of the Lishan crisis are complete. Later events and world-state systems can query the recorded outcomes.</HE_001_Notice_Completed>
+  <HE_001_Outcome_EastwardTransitionUnlocked>Prerequisites for the eastern relocation are in place</HE_001_Outcome_EastwardTransitionUnlocked>
+  <HE_001_Outcome_EastwardTransitionUnlocked_Description>The Lishan crisis supplies historical prerequisites for a later Zhou eastern-relocation event; that relocation has not yet occurred in this event. The displayed month is a game scheduling value, not a historically attested month or day.</HE_001_Outcome_EastwardTransitionUnlocked_Description>
+</LanguageData>

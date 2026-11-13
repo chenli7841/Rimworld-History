@@ -37,10 +37,21 @@ namespace HistoricalRimWorld.Events
         public static bool WasExecuted(string eventId)
         {
             HistoricalEventRuntimeState state = GetComponent()?.FindState(eventId);
-            HistoricalEventDef item = DefDatabase<HistoricalEventDef>.GetNamedSilentFail(eventId);
+            HistoricalEventDef item = state == null ? null : DefDatabase<HistoricalEventDef>.GetNamedSilentFail(state.EventId);
             return state != null && (state.Status == HistoricalEventExecutionStatus.Executed
                 || (state.Status == HistoricalEventExecutionStatus.Skipped && item?.activationMode == HistoricalEventActivationMode.InitialBackground));
         }
+
+        public static bool HasEventStarted(string eventId) => GetComponent()?.HasEventStarted(eventId) == true;
+        public static bool HasEventCompleted(string eventId) => GetComponent()?.HasEventCompleted(eventId) == true;
+        public static bool HasReachedStage(string eventId, string stageId) => GetComponent()?.HasReachedStage(eventId, stageId) == true;
+        public static HistoricalEventRuntimeState GetEvent(string eventId) => GetComponent()?.GetEvent(eventId);
+        public static bool HasOutcomeCommitted(string eventId, string outcomeId) => GetComponent()?.HasOutcomeCommitted(eventId, outcomeId) == true;
+        public static bool CommitOnce(string eventId, string outcomeId) => GetComponent()?.CommitOnce(eventId, outcomeId) == true;
+        public static bool TryMarkOutcomeApplied(string eventId, string outcomeId, string consumerId) =>
+            GetComponent()?.TryMarkOutcomeApplied(eventId, outcomeId, consumerId) == true;
+        public static bool HasOutcomeBeenApplied(string eventId, string outcomeId, string consumerId) =>
+            GetComponent()?.HasOutcomeBeenApplied(eventId, outcomeId, consumerId) == true;
 
         public static bool IsEventKnownToCurrentScenario(string eventId) =>
             GetComponent()?.FindState(eventId) != null;
@@ -99,7 +110,7 @@ namespace HistoricalRimWorld.Events
                 {
                     state.Initialize(item.defName, HistoricalEventExecutionStatus.Skipped, "Local random incident scheduling is not part of HR-006.");
                 }
-                else if (scheduled < currentDate)
+                else if (scheduled < currentDate && (item.stages == null || item.stages.Count == 0))
                 {
                     state.Initialize(item.defName, HistoricalEventExecutionStatus.Skipped, "Scheduled date passed before the event engine initialized; event was not replayed.");
                     if (item.recordInChronicle) background.Add(item);

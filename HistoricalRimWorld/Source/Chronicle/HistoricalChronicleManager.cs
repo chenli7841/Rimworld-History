@@ -135,7 +135,8 @@ namespace HistoricalRimWorld.Chronicle
                 return Reject("Only a historical event that has already occurred can be revealed.", out error);
             if (!HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate today))
                 return Reject("The historical calendar is inactive.", out error);
-            HistoricalChronicleEntry entry = Entries.FirstOrDefault(item => item != null && item.SourceEventId == eventId);
+            string sourceId = HistoricalEventManager.GetEvent(eventId)?.EventId ?? eventId;
+            HistoricalChronicleEntry entry = Entries.FirstOrDefault(item => item != null && item.SourceEventId == sourceId);
             if (entry == null) return Reject("The historical event has no chronicle record.", out error);
             if (entry.VisibleToPlayer) return true;
             entry.SetVisible(true, new HistoricalDateReference(today.AstronomicalYear, today.Month, today.Day, HistoricalDatePrecision.Day));
