@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Fate_ZhouYouWang_Death_HE001.label>周幽王死于骊山之变</HR_Fate_ZhouYouWang_Death_HE001.label>
+  <HR_Fate_ZhouYouWang_Death_HE001.description>HE-001进入“周幽王之死”阶段时，执行一次真实的 Pawn 死亡。</HR_Fate_ZhouYouWang_Death_HE001.description>
+  <HR_Fate_BoPan_Death_HE001.label>伯盘的历史死亡</HR_Fate_BoPan_Death_HE001.label>
+  <HR_Fate_BoPan_Death_HE001.description>在 HE-001 王室死亡阶段记录并执行伯盘的传统叙事命运，不指定具体地点。</HR_Fate_BoPan_Death_HE001.description>
+  <HR_Fate_YiJiu_Survives_HE001.label>宜臼渡过骊山之变</HR_Fate_YiJiu_Survives_HE001.label>
+  <HR_Fate_YiJiu_Survives_HE001.description>HE-001完成时确认宜臼存活，后续命运由之后的历史事件管理。</HR_Fate_YiJiu_Survives_HE001.description>
+</LanguageData>

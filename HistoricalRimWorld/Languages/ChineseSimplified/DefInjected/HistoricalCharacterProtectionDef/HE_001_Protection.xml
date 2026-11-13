@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Protection_ZhouYouWang.label>周幽王的历史命运保护</HR_Protection_ZhouYouWang.label>
+  <HR_Protection_ZhouYouWang.description>周幽王在骊山之变预定死亡节点前受命运保护；军事危机期间锁定在历史场景。</HR_Protection_ZhouYouWang.description>
+  <HR_Protection_BoPan.label>伯盘的历史命运保护</HR_Protection_BoPan.label>
+  <HR_Protection_BoPan.description>伯盘在配置的历史死亡节点前受命运保护，不预设具体死亡地点。</HR_Protection_BoPan.description>
+  <HR_Protection_YiJiu.label>宜臼的历史身份保护</HR_Protection_YiJiu.label>
+  <HR_Protection_YiJiu.description>保护宜臼在骊山之变中的身份与存续，使其可供后续历史事件使用。</HR_Protection_YiJiu.description>
+  <HR_Protection_ShenHou.label>申侯的历史身份保护</HR_Protection_ShenHou.label>
+  <HR_Protection_ShenHou.description>保护申侯的历史身份，不为其虚构未确定的死亡命运。</HR_Protection_ShenHou.description>
+</LanguageData>

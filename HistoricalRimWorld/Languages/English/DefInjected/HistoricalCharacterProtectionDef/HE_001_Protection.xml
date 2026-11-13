@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Protection_ZhouYouWang.label>King You's historical fate protection</HR_Protection_ZhouYouWang.label>
+  <HR_Protection_ZhouYouWang.description>King You is fate-protected until his scheduled death in the Lishan crisis and scene-locked during the military crisis.</HR_Protection_ZhouYouWang.description>
+  <HR_Protection_BoPan.label>Bo Pan's historical fate protection</HR_Protection_BoPan.label>
+  <HR_Protection_BoPan.description>Bo Pan is fate-protected until his configured death stage; no death location is assumed.</HR_Protection_BoPan.description>
+  <HR_Protection_YiJiu.label>Yi Jiu's historical identity protection</HR_Protection_YiJiu.label>
+  <HR_Protection_YiJiu.description>Protects Yi Jiu's identity and survival through the Lishan crisis so later historical events can use him.</HR_Protection_YiJiu.description>
+  <HR_Protection_ShenHou.label>Marquis of Shen's historical identity protection</HR_Protection_ShenHou.label>
+  <HR_Protection_ShenHou.description>Preserves Marquis of Shen's identity without inventing an unattested death fate.</HR_Protection_ShenHou.description>
+</LanguageData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Fate_ZhouYouWang_Death_HE001.label>King You dies in the Lishan crisis</HR_Fate_ZhouYouWang_Death_HE001.label>
+  <HR_Fate_ZhouYouWang_Death_HE001.description>Commits one real Pawn death when HE-001 reaches its KingYouDeath stage.</HR_Fate_ZhouYouWang_Death_HE001.description>
+  <HR_Fate_BoPan_Death_HE001.label>Bo Pan's historical death</HR_Fate_BoPan_Death_HE001.label>
+  <HR_Fate_BoPan_Death_HE001.description>Applies Bo Pan's traditional narrative fate at the HE-001 royal death stage without assigning a location.</HR_Fate_BoPan_Death_HE001.description>
+  <HR_Fate_YiJiu_Survives_HE001.label>Yi Jiu survives the Lishan crisis</HR_Fate_YiJiu_Survives_HE001.label>
+  <HR_Fate_YiJiu_Survives_HE001.description>Confirms Yi Jiu's survival when HE-001 completes; later events manage his subsequent fate.</HR_Fate_YiJiu_Survives_HE001.description>
+</LanguageData>

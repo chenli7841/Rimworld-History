@@ -5,9 +5,10 @@ namespace HistoricalRimWorld.Characters
 {
     public sealed class HistoricalCharacterWorldComponent : GameComponent
     {
-        private const int DataVersion = 1;
+        private const int DataVersion = 2;
         private int dataVersion;
         private System.Collections.Generic.List<HistoricalCharacterState> characters = new System.Collections.Generic.List<HistoricalCharacterState>();
+        private readonly System.Collections.Generic.Dictionary<Pawn, string> pawnIdIndex = new System.Collections.Generic.Dictionary<Pawn, string>();
 
         public HistoricalCharacterWorldComponent(Game game) { }
 
@@ -37,7 +38,18 @@ namespace HistoricalRimWorld.Characters
         internal void BindPawn(HistoricalCharacterDef def, Pawn pawn)
         {
             HistoricalCharacterState state = GetOrRegister(def);
-            if (state != null && pawn != null) state.BindPawn(pawn);
+            if (state != null && pawn != null)
+            {
+                state.BindPawn(pawn);
+                pawnIdIndex[pawn] = state.HistoricalCharacterId;
+            }
+        }
+
+        public bool TryGetHistoricalCharacterId(Pawn pawn, out string historicalCharacterId)
+        {
+            if (pawn != null && pawnIdIndex.TryGetValue(pawn, out historicalCharacterId)) return true;
+            historicalCharacterId = null;
+            return !string.IsNullOrWhiteSpace(historicalCharacterId);
         }
 
         public override void ExposeData()
@@ -50,6 +62,9 @@ namespace HistoricalRimWorld.Characters
             {
                 characters = characters ?? new System.Collections.Generic.List<HistoricalCharacterState>();
                 characters.RemoveAll(item => item == null || string.IsNullOrWhiteSpace(item.HistoricalCharacterId));
+                pawnIdIndex.Clear();
+                foreach (HistoricalCharacterState state in characters)
+                    if (state.Pawn != null) pawnIdIndex[state.Pawn] = state.HistoricalCharacterId;
                 if (dataVersion != DataVersion) dataVersion = DataVersion;
             }
         }
@@ -62,6 +77,9 @@ namespace HistoricalRimWorld.Characters
         private string currentEventId;
         private Pawn pawn;
         private bool generationAttempted;
+        private bool historicallyDead;
+        private string deathEventId;
+        private string deathFateId;
 
         public string HistoricalCharacterId => historicalCharacterId;
         public string HistoricalFactionId => historicalFactionId;
@@ -69,6 +87,9 @@ namespace HistoricalRimWorld.Characters
         public Pawn Pawn => pawn;
         public string CurrentFactionId => pawn?.Faction?.def?.defName ?? historicalFactionId;
         public bool GenerationAttempted => generationAttempted;
+        public bool IsHistoricallyDead => historicallyDead;
+        public string DeathEventId => deathEventId;
+        public string DeathFateId => deathFateId;
         public bool IsGenerated => pawn != null;
         public bool IsOnLocalMap => pawn != null && pawn.Spawned;
         public bool IsDead => pawn != null && pawn.Dead;
@@ -81,6 +102,9 @@ namespace HistoricalRimWorld.Characters
             Scribe_Values.Look(ref currentEventId, "currentEventId");
             Scribe_Values.Look(ref generationAttempted, "generationAttempted", false);
             Scribe_References.Look(ref pawn, "pawn");
+            Scribe_Values.Look(ref historicallyDead, "historicallyDead", false);
+            Scribe_Values.Look(ref deathEventId, "deathEventId");
+            Scribe_Values.Look(ref deathFateId, "deathFateId");
         }
 
         internal void Initialize(HistoricalCharacterDef def)
@@ -92,5 +116,12 @@ namespace HistoricalRimWorld.Characters
         internal void BeginGeneration() => generationAttempted = true;
         internal void ResetGenerationAttemptForRecovery() { if (pawn == null) generationAttempted = false; }
         internal void BindPawn(Pawn value) { pawn = value; generationAttempted = true; }
+        internal void MarkHistoricallyDead(string eventId, string fateId)
+        {
+            historicallyDead = true;
+            deathEventId = eventId;
+            deathFateId = fateId;
+            generationAttempted = true;
+        }
     }
 }

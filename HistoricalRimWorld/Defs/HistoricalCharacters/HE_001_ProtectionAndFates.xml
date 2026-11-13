@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Characters.HistoricalCharacterProtectionDef>
+    <defName>HR_Protection_ZhouYouWang</defName>
+    <label>HR_Protection_ZhouYouWang</label>
+    <description>Fate protection for King You before the historical death recorded for HE-001.</description>
+    <historicalCharacterId>HR_Character_ZhouYouWang</historicalCharacterId>
+    <protectionLevel>FateProtected</protectionLevel>
+    <sceneLockEventId>HE_001_LishanCrisis</sceneLockEventId>
+    <sceneLockFromStageId>MilitaryCrisis</sceneLockFromStageId>
+    <sceneLockUntilStageId>KingYouDeath</sceneLockUntilStageId>
+  </HistoricalRimWorld.Characters.HistoricalCharacterProtectionDef>
+  <HistoricalRimWorld.Characters.HistoricalCharacterProtectionDef>
+    <defName>HR_Protection_BoPan</defName>
+    <label>HR_Protection_BoPan</label>
+    <description>Fate protection for Bo Pan before the configured historical death.</description>
+    <historicalCharacterId>HR_Character_BoPan</historicalCharacterId>
+    <protectionLevel>FateProtected</protectionLevel>
+  </HistoricalRimWorld.Characters.HistoricalCharacterProtectionDef>
+  <HistoricalRimWorld.Characters.HistoricalCharacterProtectionDef>
+    <defName>HR_Protection_YiJiu</defName>
+    <label>HR_Protection_YiJiu</label>
+    <description>Protects Yi Jiu's historical identity and survival through HE-001 for later events.</description>
+    <historicalCharacterId>HR_Character_YiJiu</historicalCharacterId>
+    <protectionLevel>InteractionProtected</protectionLevel>
+  </HistoricalRimWorld.Characters.HistoricalCharacterProtectionDef>
+  <HistoricalRimWorld.Characters.HistoricalCharacterProtectionDef>
+    <defName>HR_Protection_ShenHou</defName>
+    <label>HR_Protection_ShenHou</label>
+    <description>Prevents changing Marquis of Shen's identity without assigning an unsupported fate.</description>
+    <historicalCharacterId>HR_Character_ShenHou</historicalCharacterId>
+    <protectionLevel>InteractionProtected</protectionLevel>
+  </HistoricalRimWorld.Characters.HistoricalCharacterProtectionDef>
+
+  <HistoricalRimWorld.Characters.HistoricalFateDef>
+    <defName>HR_Fate_ZhouYouWang_Death_HE001</defName>
+    <label>HR_Fate_ZhouYouWang_Death_HE001</label>
+    <description>Execute King You's scheduled death when the existing HE-001 state machine reaches KingYouDeath.</description>
+    <historicalCharacterId>HR_Character_ZhouYouWang</historicalCharacterId>
+    <fateEventId>HE_001_LishanCrisis</fateEventId>
+    <fateStageId>KingYouDeath</fateStageId>
+    <fateType>ScheduledDeath</fateType>
+    <preventPrematureDeath>true</preventPrematureDeath>
+    <preventPlayerCapture>true</preventPlayerCapture>
+    <preventForcedRecruitment>true</preventForcedRecruitment>
+    <preventForcedRelocation>true</preventForcedRelocation>
+    <preserveHistoricalIdentity>true</preserveHistoricalIdentity>
+  </HistoricalRimWorld.Characters.HistoricalFateDef>
+  <HistoricalRimWorld.Characters.HistoricalFateDef>
+    <defName>HR_Fate_BoPan_Death_HE001</defName>
+    <label>HR_Fate_BoPan_Death_HE001</label>
+    <description>Commit Bo Pan's traditional historical death at the HE-001 royal death stage without fixing a death location.</description>
+    <historicalCharacterId>HR_Character_BoPan</historicalCharacterId>
+    <fateEventId>HE_001_LishanCrisis</fateEventId>
+    <fateStageId>KingYouDeath</fateStageId>
+    <fateType>ScheduledDeath</fateType>
+    <preventPrematureDeath>true</preventPrematureDeath>
+    <preventPlayerCapture>true</preventPlayerCapture>
+    <preventForcedRecruitment>true</preventForcedRecruitment>
+    <preventForcedRelocation>true</preventForcedRelocation>
+    <preserveHistoricalIdentity>true</preserveHistoricalIdentity>
+  </HistoricalRimWorld.Characters.HistoricalFateDef>
+  <HistoricalRimWorld.Characters.HistoricalFateDef>
+    <defName>HR_Fate_YiJiu_Survives_HE001</defName>
+    <label>HR_Fate_YiJiu_Survives_HE001</label>
+    <description>Keep Yi Jiu alive through the end of HE-001; his later historical fate belongs to a later event.</description>
+    <historicalCharacterId>HR_Character_YiJiu</historicalCharacterId>
+    <fateEventId>HE_001_LishanCrisis</fateEventId>
+    <fateStageId>Completed</fateStageId>
+    <fateType>ScheduledSurvival</fateType>
+    <preventPrematureDeath>true</preventPrematureDeath>
+    <preventPlayerCapture>true</preventPlayerCapture>
+    <preventForcedRecruitment>true</preventForcedRecruitment>
+    <preventForcedRelocation>true</preventForcedRelocation>
+    <preserveHistoricalIdentity>true</preserveHistoricalIdentity>
+  </HistoricalRimWorld.Characters.HistoricalFateDef>
+</Defs>

@@ -39,6 +39,7 @@ namespace HistoricalRimWorld.Characters
             if (registry == null) return null;
             HistoricalCharacterState state = registry.GetOrRegister(def);
             if (state == null) return null;
+            if (state.IsHistoricallyDead || HistoricalFateExecutor.HasExecutedScheduledDeath(def.historicalCharacterId)) return null;
             if (state.Pawn != null)
             {
                 if (state.Pawn.Spawned && state.Pawn.Map != map)
@@ -78,7 +79,7 @@ namespace HistoricalRimWorld.Characters
                     return null;
                 }
                 pawn.Name = new NameSingle(def.historicalName);
-                state.BindPawn(pawn);
+                registry.BindPawn(def, pawn);
                 GenSpawn.Spawn(pawn, cell, map, WipeMode.Vanish);
                 RegisterGenealogy(pawn);
                 Log.Message("[Historical RimWorld] Generated unique historical character " + def.historicalCharacterId
