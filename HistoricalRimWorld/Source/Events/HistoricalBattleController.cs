@@ -210,7 +210,8 @@ namespace HistoricalRimWorld.Events
         }
 
         private static IEnumerable<Pawn> Pawns(HistoricalArmyRuntime army, Map map) => army?.Members
-            .Select(item => item?.Pawn).Where(pawn => pawn != null && pawn.Spawned && pawn.Map == map && !pawn.Dead)
+            .Select(item => item?.Pawn).Where(pawn => pawn != null && pawn.Spawned && pawn.Map == map && !pawn.Dead
+                && pawn.Faction?.def?.defName == army.FactionId)
             ?? Enumerable.Empty<Pawn>();
 
         private static CellRect GetZone(Map map, string zoneId)

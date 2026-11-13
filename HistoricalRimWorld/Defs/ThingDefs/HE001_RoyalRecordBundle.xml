@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>HR_Thing_RoyalRecordBundle</defName>
+    <label>HE001_RoyalRecordBundle_Label</label>
+    <description>HE001_RoyalRecordBundle_Description</description>
+    <stackLimit>1</stackLimit>
+    <techLevel>Neolithic</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Resource/Steel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(165,142,106)</color>
+    </graphicData>
+    <thingCategories><li>Manufactured</li></thingCategories>
+    <statBases><MarketValue>4</MarketValue><Mass>0.25</Mass></statBases>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HE001_SideQuest_Witness_Name>Witness the Lishan Crisis</HE001_SideQuest_Witness_Name>
+  <HE001_SideQuest_Witness_Description>The Zhou royal forces and their opponents are fighting at Lishan. Reach the outer observation area and witness the battle from a safer distance.</HE001_SideQuest_Witness_Description>
+  <HE001_SideQuest_Witness_Objective>Send an awake colonist to the Lishan observation area, maintain unobstructed line of sight to actual battlefield Pawns, and observe for the required time.</HE001_SideQuest_Witness_Objective>
+  <HE001_SideQuest_Refugees_Name>Refugees of the War</HE001_SideQuest_Refugees_Name>
+  <HE001_SideQuest_Refugees_Description>Help actual civilian Pawns escape the battlefield, then decide whether to take them in.</HE001_SideQuest_Refugees_Description>
+  <HE001_SideQuest_Refugees_Objective>Escort the refugees to the map's escape area. Bring at least half to safety, then choose whether to take them in or let them leave.</HE001_SideQuest_Refugees_Objective>
+  <HE001_SideQuest_FieldMedical_Name>Field Medicine</HE001_SideQuest_FieldMedical_Name>
+  <HE001_SideQuest_FieldMedical_Description>Treat ordinary wounded soldiers with RimWorld's health system. Protected historical figures are excluded.</HE001_SideQuest_FieldMedical_Description>
+  <HE001_SideQuest_FieldMedical_Objective>Right-click a downed ordinary soldier and choose Tend; complete treatment on at least two soldiers.</HE001_SideQuest_FieldMedical_Objective>
+  <HE001_SideQuest_RoyalRecords_Name>Save the Royal Records</HE001_SideQuest_RoyalRecords_Name>
+  <HE001_SideQuest_RoyalRecords_Description>Recover and preserve a representative bundle of royal records. This gameplay item does not represent a known excavated document.</HE001_SideQuest_RoyalRecords_Description>
+  <HE001_SideQuest_RoyalRecords_Objective>Haul the actual records item into a building or a colonist's carried inventory.</HE001_SideQuest_RoyalRecords_Objective>
+  <HE001_BattleDangerWarning>Intense fighting is taking place near Lishan. Your people can continue, but they may be struck by stray attacks or encounter enemy forces.</HE001_BattleDangerWarning>
+  <HE001_AdoptRefugeesTitle>Settle the Rescued Refugees</HE001_AdoptRefugeesTitle>
+  <HE001_AdoptRefugeesPrompt>The refugees have reached safety. Would you like them to join your colony or leave on their own?</HE001_AdoptRefugeesPrompt>
+  <HE001_AdoptRefugees>Take them in</HE001_AdoptRefugees>
+  <HE001_ReleaseRefugees>Let them leave</HE001_ReleaseRefugees>
+  <HE001_TendWoundedSoldier>Tend wounded soldier: {0}</HE001_TendWoundedSoldier>
+  <HE001_RescueAndAdoptSoldier>Rescue and shelter wounded soldier: {0}</HE001_RescueAndAdoptSoldier>
+  <HE001_CoreConstructionRestricted>Building is restricted within the royal retreat route and historical core during the battle.</HE001_CoreConstructionRestricted>
+  <HE001_RoyalRecordBundle_Label>Royal record bundle</HE001_RoyalRecordBundle_Label>
+  <HE001_RoyalRecordBundle_Description>A gameplay item representing records that might be recovered during the crisis; it is not a specific archaeological find.</HE001_RoyalRecordBundle_Description>
+</LanguageData>

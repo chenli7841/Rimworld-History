@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HE001_SideQuest_Witness_Name>亲历骊山之变</HE001_SideQuest_Witness_Name>
+  <HE001_SideQuest_Witness_Description>周王室与敌对武装正在骊山交战。前往外围观察区，在安全距离内亲眼见证战斗。</HE001_SideQuest_Witness_Description>
+  <HE001_SideQuest_Witness_Objective>派遣清醒的殖民者到骊山外围观察区；保持视线无遮挡并实际看到战场 Pawn，累计观察达到目标时完成。</HE001_SideQuest_Witness_Objective>
+  <HE001_SideQuest_Refugees_Name>战乱中的流民</HE001_SideQuest_Refugees_Name>
+  <HE001_SideQuest_Refugees_Description>帮助真实的平民 Pawn 逃离战场，并决定是否收留获救者。</HE001_SideQuest_Refugees_Description>
+  <HE001_SideQuest_Refugees_Objective>陪同流民前往地图上的撤离区；至少护送一半流民到达，随后选择收留或让他们自行离开。</HE001_SideQuest_Refugees_Objective>
+  <HE001_SideQuest_FieldMedical_Name>战地救护</HE001_SideQuest_FieldMedical_Name>
+  <HE001_SideQuest_FieldMedical_Description>用原版医疗系统救治骊山战场上的普通受伤士兵。历史关键人物不属于救护目标。</HE001_SideQuest_FieldMedical_Description>
+  <HE001_SideQuest_FieldMedical_Objective>右键倒地的普通士兵并选择救治；实际完成至少两名士兵的治疗。</HE001_SideQuest_FieldMedical_Objective>
+  <HE001_SideQuest_RoyalRecords_Name>抢救王室文书</HE001_SideQuest_RoyalRecords_Name>
+  <HE001_SideQuest_RoyalRecords_Description>在战场混乱中找到并保存一件代表性王室文书。此游戏物品不对应已知出土文书。</HE001_SideQuest_RoyalRecords_Description>
+  <HE001_SideQuest_RoyalRecords_Objective>将真实的文书物品搬入建筑或殖民者携带容器中保存。</HE001_SideQuest_RoyalRecords_Objective>
+  <HE001_BattleDangerWarning>骊山附近正在发生激烈战斗。你的队伍可以继续前进，但可能受到流矢或敌军攻击。</HE001_BattleDangerWarning>
+  <HE001_AdoptRefugeesTitle>安置获救流民</HE001_AdoptRefugeesTitle>
+  <HE001_AdoptRefugeesPrompt>流民已到达安全地带。你想让他们加入殖民地，还是让他们自行离开？</HE001_AdoptRefugeesPrompt>
+  <HE001_AdoptRefugees>收留他们</HE001_AdoptRefugees>
+  <HE001_ReleaseRefugees>让他们自行离开</HE001_ReleaseRefugees>
+  <HE001_TendWoundedSoldier>救治受伤士兵：{0}</HE001_TendWoundedSoldier>
+  <HE001_RescueAndAdoptSoldier>救助并收留受伤士兵：{0}</HE001_RescueAndAdoptSoldier>
+  <HE001_CoreConstructionRestricted>战斗期间不能在王室撤退路线或历史核心场景中建造。</HE001_CoreConstructionRestricted>
+  <HE001_RoyalRecordBundle_Label>王室文书包</HE001_RoyalRecordBundle_Label>
+  <HE001_RoyalRecordBundle_Description>一件用于代表战乱中待抢救文书的游戏物品，不对应特定的考古发现。</HE001_RoyalRecordBundle_Description>
+</LanguageData>

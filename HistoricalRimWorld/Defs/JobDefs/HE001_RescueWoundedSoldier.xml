@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>HR_RescueWoundedSoldierToSafety</defName>
+    <driverClass>HistoricalRimWorld.Events.JobDriver_RescueWoundedSoldierToSafety</driverClass>
+    <reportString>carrying a wounded soldier to safety.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+  </JobDef>
+</Defs>
