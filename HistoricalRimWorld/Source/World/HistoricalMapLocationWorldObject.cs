@@ -5,8 +5,19 @@ using Verse;
 
 namespace HistoricalRimWorld.World
 {
+    public interface IHistoricalMapLocation
+    {
+        string HistoricalLandmarkDefName { get; }
+        void SetHistoricalLabel(string label);
+        void SetHistoricalDescription(string description);
+        void SetHistoricalLandmark(string landmarkDefName);
+        void SetHistoricalGeoCoordinates(double latitude, double longitude,
+            double projectedLatitude, double projectedLongitude, double scaleFactor);
+        void SetHistoricalFactionColor(Color color);
+    }
+
     /// <summary>Lightweight, saveable named world-map marker with its icon supplied by WorldObjectDef.</summary>
-    public sealed class HistoricalMapLocationWorldObject : WorldObject
+    public sealed class HistoricalMapLocationWorldObject : WorldObject, IHistoricalMapLocation
     {
         private string historicalLabel;
         private string historicalDescription;
@@ -18,9 +29,11 @@ namespace HistoricalRimWorld.World
         private bool hasHistoricalCoordinates;
         private Color historicalFactionColor = Color.white;
         private bool hasHistoricalFactionColor;
+        private string historicalLandmarkDefName;
 
         public string HistoricalLabel => historicalLabel;
         public string HistoricalDescription => historicalDescription;
+        public string HistoricalLandmarkDefName => historicalLandmarkDefName;
         public override string Label => string.IsNullOrWhiteSpace(historicalLabel) ? base.Label : historicalLabel;
         public override string LabelShort => Label;
         public override bool HasName => !string.IsNullOrWhiteSpace(historicalLabel) || base.HasName;
@@ -36,6 +49,11 @@ namespace HistoricalRimWorld.World
         public void SetHistoricalDescription(string description)
         {
             historicalDescription = description;
+        }
+
+        public void SetHistoricalLandmark(string landmarkDefName)
+        {
+            historicalLandmarkDefName = landmarkDefName;
         }
 
         public void SetHistoricalGeoCoordinates(double latitude, double longitude,
@@ -60,6 +78,7 @@ namespace HistoricalRimWorld.World
             base.ExposeData();
             Scribe_Values.Look(ref historicalLabel, "historicalLabel");
             Scribe_Values.Look(ref historicalDescription, "historicalDescription");
+            Scribe_Values.Look(ref historicalLandmarkDefName, "historicalLandmarkDefName");
             Scribe_Values.Look(ref historicalLatitude, "historicalLatitude");
             Scribe_Values.Look(ref historicalLongitude, "historicalLongitude");
             Scribe_Values.Look(ref gameLatitude, "gameLatitude");

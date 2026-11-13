@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Applied after the ancient forest generation step; only landmark tiles are affected. -->
+  <GenStepDef>
+    <defName>HR_HistoricalLandmarkMap</defName>
+    <order>1100</order>
+    <genStep Class="HistoricalRimWorld.WorldGeneration.GenStep_HistoricalLandmarkMap" />
+  </GenStepDef>
+</Defs>

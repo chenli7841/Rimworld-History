@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_Landmark_Lishan.label>Mount Li</HR_Landmark_Lishan.label>
+  <HR_Landmark_Lishan.description>Mountain landmark south of the Zhou royal domain. Its local battlefield layout is a gameplay reconstruction, not a confirmed location of King You's death.</HR_Landmark_Lishan.description>
+  <HR_Landmark_Haojing.label>Haojing</HR_Landmark_Haojing.label>
+  <HR_Landmark_Haojing.description>An important Western Zhou royal capital area. The scene districts are gameplay abstractions, not an archaeologically confirmed city plan.</HR_Landmark_Haojing.description>
+  <HR_Map_LishanBattlefield.label>Mount Li Foothill Battlefield Prototype</HR_Map_LishanBattlefield.label>
+  <HR_Map_HaojingCapital.label>Haojing Settlement Prototype</HR_Map_HaojingCapital.label>
+</LanguageData>

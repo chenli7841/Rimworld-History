@@ -29,11 +29,12 @@
     <locations>
       <li>
         <locationId>haojing</locationId>
+        <landmarkDefName>HR_Landmark_Haojing</landmarkDefName>
         <label>镐京（西安）</label>
         <description>所属派系：周王室（西周国都遗址）</description>
         <longitude>108.7600</longitude>
         <latitude>34.2200</latitude>
-        <worldObjectDef>HR_MapMarker_Town</worldObjectDef>
+        <worldObjectDef>HR_HistoricalLandmark_Haojing</worldObjectDef>
         <factionDef>HR_Faction_EasternZhou</factionDef>
       </li>
       <li>
@@ -91,11 +92,12 @@
       </li>
       <li>
         <locationId>lishan</locationId>
+        <landmarkDefName>HR_Landmark_Lishan</landmarkDefName>
         <label>骊山</label>
         <description>传说中的烽火戏诸侯</description>
         <longitude>109.23933</longitude>
         <latitude>34.30720</latitude>
-        <worldObjectDef>HR_MapMarker_MountainPeak</worldObjectDef>
+        <worldObjectDef>HR_HistoricalLandmark_Lishan</worldObjectDef>
       </li>
       <li>
         <locationId>zhiguanxing</locationId>

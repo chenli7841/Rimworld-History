@@ -68,7 +68,12 @@ namespace HistoricalRimWorld.WorldGeneration
                         || tile.PrimaryBiome.impassable || !tile.PrimaryBiome.canBuildBase)
                         continue;
                     PlanetTile planetTile = new PlanetTile(tileId, world.grid.Surface);
-                    if (world.worldObjects.AnyWorldObjectAt(planetTile)) continue;
+                    bool occupied = world.worldObjects.AllWorldObjects.Any(existing => existing != null
+                        && existing.Tile.tileId == tileId
+                        && (!(existing is IHistoricalMapLocation existingMarker)
+                            || string.IsNullOrWhiteSpace(existingMarker.HistoricalLandmarkDefName)));
+                    if (occupied && string.IsNullOrWhiteSpace(location.landmarkDefName)) continue;
+                    if (occupied && !string.IsNullOrWhiteSpace(location.landmarkDefName)) continue;
 
                     Vector2 center = world.grid.Surface.LongLatOf(tileId);
                     double distance = HistoricalCoverageCalculator.AngularDistance(
@@ -132,20 +137,21 @@ namespace HistoricalRimWorld.WorldGeneration
                 else
                 {
                     worldObject = WorldObjectMaker.MakeWorldObject(location.worldObjectDef);
-                    HistoricalMapLocationWorldObject marker = worldObject as HistoricalMapLocationWorldObject;
+                    IHistoricalMapLocation marker = worldObject as IHistoricalMapLocation;
                     if (marker == null)
                     {
                         error = "WorldObjectDef '" + location.worldObjectDef.defName
-                            + "' must create a HistoricalMapLocationWorldObject.";
+                            + "' must create an IHistoricalMapLocation world object.";
                         return false;
                     }
                     marker.SetHistoricalLabel(location.label);
                     marker.SetHistoricalDescription(location.description);
+                    marker.SetHistoricalLandmark(location.landmarkDefName);
                     marker.SetHistoricalGeoCoordinates(location.longitude, location.latitude,
                         gameCoordinate.Longitude, gameCoordinate.Latitude, transformer.ScaleFactor);
                     if (owner != null) marker.SetHistoricalFactionColor(owner.Color);
-                    marker.Tile = new PlanetTile(bestTile, world.grid.Surface);
-                    world.worldObjects.Add(marker);
+                    worldObject.Tile = new PlanetTile(bestTile, world.grid.Surface);
+                    world.worldObjects.Add(worldObject);
                 }
                 placedLocations.Add(Tuple.Create(location, bestTile));
                 Vector2 placedCenter = world.grid.Surface.LongLatOf(bestTile);

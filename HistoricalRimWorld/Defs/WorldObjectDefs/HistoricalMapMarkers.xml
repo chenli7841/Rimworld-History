@@ -48,4 +48,28 @@
     <expandingIconDrawSize>0.7</expandingIconDrawSize>
     <canHaveMap>false</canHaveMap>
   </WorldObjectDef>
+
+  <WorldObjectDef>
+    <defName>HR_HistoricalLandmark_Lishan</defName>
+    <label>HR_HistoricalLandmark_Lishan</label>
+    <description>Enterable historical battlefield map parent for the Mount Li landmark.</description>
+    <worldObjectClass>HistoricalRimWorld.World.HistoricalLandmarkMapParent</worldObjectClass>
+    <texture>World/HR/MountainPeak</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/HR/MountainPeak</expandingIconTexture>
+    <expandingIconPriority>80</expandingIconPriority>
+    <canHaveMap>true</canHaveMap>
+  </WorldObjectDef>
+
+  <WorldObjectDef>
+    <defName>HR_HistoricalLandmark_Haojing</defName>
+    <label>HR_HistoricalLandmark_Haojing</label>
+    <description>Enterable historical settlement map parent for the Haojing landmark.</description>
+    <worldObjectClass>HistoricalRimWorld.World.HistoricalLandmarkMapParent</worldObjectClass>
+    <texture>World/WorldObjects/DefaultSettlement</texture>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
+    <expandingIconPriority>80</expandingIconPriority>
+    <canHaveMap>true</canHaveMap>
+  </WorldObjectDef>
 </Defs>

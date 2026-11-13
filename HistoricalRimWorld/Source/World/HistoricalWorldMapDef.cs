@@ -69,6 +69,13 @@ namespace HistoricalRimWorld.World
                     yield return "Map location '" + location.locationId + "' latitude must be between -90 and 90 degrees.";
                 if (location.worldObjectDef == null && location.settlement == null)
                     yield return "Map location '" + location.locationId + "' requires a worldObjectDef or settlement Def.";
+                if (!string.IsNullOrWhiteSpace(location.landmarkDefName))
+                {
+                    HistoricalLandmarkDef landmark = DefDatabase<HistoricalLandmarkDef>.GetNamedSilentFail(location.landmarkDefName);
+                    if (landmark == null) yield return "Map location '" + location.locationId + "' references missing landmark Def '" + location.landmarkDefName + "'.";
+                    else if (landmark.mapLocationId != location.locationId)
+                        yield return "Map location '" + location.locationId + "' and landmark Def '" + landmark.defName + "' do not reference each other.";
+                }
                 if (location.settlement != null && location.factionDef == null)
                     yield return "Faction settlement location '" + location.locationId + "' requires a factionDef.";
                 if (location.settlement != null && location.settlement.initialState == null)
@@ -92,6 +99,7 @@ namespace HistoricalRimWorld.World
     public sealed class HistoricalWorldMapLocation
     {
         public string locationId;
+        public string landmarkDefName;
         public string label;
         public string description;
         public float longitude;
