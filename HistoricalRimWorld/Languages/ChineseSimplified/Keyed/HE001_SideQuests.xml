@@ -22,4 +22,17 @@
   <HE001_CoreConstructionRestricted>战斗期间不能在王室撤退路线或历史核心场景中建造。</HE001_CoreConstructionRestricted>
   <HE001_RoyalRecordBundle_Label>王室文书包</HE001_RoyalRecordBundle_Label>
   <HE001_RoyalRecordBundle_Description>一件用于代表战乱中待抢救文书的游戏物品，不对应特定的考古发现。</HE001_RoyalRecordBundle_Description>
+  <HE001_WitnessArchive_Title>骊山之变亲历记录</HE001_WitnessArchive_Title>
+  <HE001_WitnessArchive_Description>一名殖民者从骊山返回后，保存了自己亲眼观察到的事件记录。内容仅包括此见证者实际看到的阶段及已记录证据。</HE001_WitnessArchive_Description>
+  <HE001_RoyalDocumentArchive_Title>骊山抢救的王室文书</HE001_RoyalDocumentArchive_Title>
+  <HE001_RoyalDocumentArchive_Description>一件游戏化王室文书已被保存为同时代文书类证据，但不宣称它是真实考古发现。</HE001_RoyalDocumentArchive_Description>
+  <HE001_WitnessArchive_SourceNotes>见证者 Pawn #{0}；见证等级：{1}；观察阶段：{2}；证据 ID：{3}。</HE001_WitnessArchive_SourceNotes>
+  <HE001_WitnessGrade_PartialWitness>部分见证</HE001_WitnessGrade_PartialWitness>
+  <HE001_WitnessGrade_BattleWitness>战斗见证</HE001_WitnessGrade_BattleWitness>
+  <HE001_WitnessGrade_FullHistoricalWitness>完整历史见证</HE001_WitnessGrade_FullHistoricalWitness>
+  <HE001_WitnessStage_BattleEngagementObserved>双方交战</HE001_WitnessStage_BattleEngagementObserved>
+  <HE001_WitnessStage_RoyalRetreatObserved>王室撤退</HE001_WitnessStage_RoyalRetreatObserved>
+  <HE001_WitnessStage_HistoricalDeathSceneObserved>历史死亡场景阶段</HE001_WitnessStage_HistoricalDeathSceneObserved>
+  <HE001_WitnessStage_KingYouDeathSceneObserved>周幽王死亡场景</HE001_WitnessStage_KingYouDeathSceneObserved>
+  <HE001_RoyalDocumentArchive_SourceNotes>游戏化文书 Thing #{0}；证据 ID {1}。物品仍保留在游戏中。</HE001_RoyalDocumentArchive_SourceNotes>
 </LanguageData>

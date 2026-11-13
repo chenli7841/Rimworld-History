@@ -26,6 +26,7 @@ namespace HistoricalRimWorld.Events
         private int battleStartYear;
         private int battleStartMonth = -1;
         private int battleStartDay = -1;
+        private long battleEndAbsoluteDay = long.MinValue;
         private int phaseStartTick = -1;
         private int deathSceneStartTick = -1;
         private int lastOrdersTick = -1;
@@ -51,6 +52,7 @@ namespace HistoricalRimWorld.Events
         public int ActiveMapId => activeMapId;
         public int BattleStartTick => battleStartTick;
         public HistoricalDate BattleStartDate => new HistoricalDate(battleStartYear, battleStartMonth, battleStartDay);
+        public long BattleEndAbsoluteDay => battleEndAbsoluteDay;
         public int PhaseStartTick => phaseStartTick;
         public int DeathSceneStartTick => deathSceneStartTick;
         public int LastOrdersTick => lastOrdersTick;
@@ -72,6 +74,7 @@ namespace HistoricalRimWorld.Events
             Scribe_Values.Look(ref battleStartTick, "battleStartTick", -1); Scribe_Values.Look(ref phaseStartTick, "phaseStartTick", -1);
             Scribe_Values.Look(ref battleStartYear, "battleStartYear"); Scribe_Values.Look(ref battleStartMonth, "battleStartMonth", -1);
             Scribe_Values.Look(ref battleStartDay, "battleStartDay", -1);
+            Scribe_Values.Look(ref battleEndAbsoluteDay, "battleEndAbsoluteDay", long.MinValue);
             Scribe_Values.Look(ref deathSceneStartTick, "deathSceneStartTick", -1); Scribe_Values.Look(ref lastOrdersTick, "lastOrdersTick", -1);
             Scribe_Values.Look(ref lastMoraleTick, "lastMoraleTick", -1); Scribe_Values.Look(ref royalMorale, "royalMorale", 1f);
             Scribe_Values.Look(ref royalCasualtyCount, "royalCasualtyCount", 0); Scribe_Values.Look(ref opposingCasualtyCount, "opposingCasualtyCount", 0);
@@ -115,9 +118,11 @@ namespace HistoricalRimWorld.Events
         internal void MarkFateExecuted() => kingYouFateExecuted = true;
         internal void MarkOutcomeCommitted() => battleOutcomeCommitted = true;
         internal void ResolveOffMap(int tick)
-        { resolvedOffMap = true; battleCompleted = true; battleOutcomeCommitted = true; EnterPhase(HistoricalBattlePhase.Completed, tick); }
+        { resolvedOffMap = true; battleCompleted = true; battleOutcomeCommitted = true; MarkBattleEndDate(); EnterPhase(HistoricalBattlePhase.Completed, tick); }
         internal void Complete(int tick)
-        { battleCompleted = true; EnterPhase(HistoricalBattlePhase.Completed, tick); }
+        { battleCompleted = true; MarkBattleEndDate(); EnterPhase(HistoricalBattlePhase.Completed, tick); }
+        private void MarkBattleEndDate()
+        { if (HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate date)) battleEndAbsoluteDay = date.AbsoluteDay; }
         internal void MarkOrders(int tick) => lastOrdersTick = tick;
         internal void MarkMorale(int tick, float value, int royalDead, int oppositionDead)
         { lastMoraleTick = tick; royalMorale = value; royalCasualtyCount = royalDead; opposingCasualtyCount = oppositionDead; }

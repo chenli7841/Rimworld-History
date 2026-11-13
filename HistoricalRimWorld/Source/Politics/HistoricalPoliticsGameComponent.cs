@@ -19,6 +19,14 @@ namespace HistoricalRimWorld.Politics
         private List<HistoricalLocalCommunityState> communities = new List<HistoricalLocalCommunityState>();
         private List<HistoricalPoliticalChangeRecord> changes = new List<HistoricalPoliticalChangeRecord>();
         private List<HistoricalFactionMapping> factionMappings = new List<HistoricalFactionMapping>();
+        private string politicalPeriodId = "WesternZhouLate";
+        private string currentRulerCharacterId = "HR_Character_ZhouYouWang";
+        private string successionStatus = "RoyalAuthorityActive";
+        private string royalCapitalStatus = "HaojingRoyalAuthorityActive";
+        private bool eastwardTransitionUnlocked;
+        private bool eastwardMigrationCompleted;
+        private List<string> successionClaimantCharacterIds = new List<string>();
+        private List<string> appliedHistoricalOutcomeIds = new List<string>();
         private int nextChangeSequence = 1;
         private bool initialized;
 
@@ -32,6 +40,14 @@ namespace HistoricalRimWorld.Politics
         public IEnumerable<HistoricalLocalCommunityState> Communities => communities ?? Enumerable.Empty<HistoricalLocalCommunityState>();
         public IEnumerable<HistoricalPoliticalChangeRecord> Changes => changes ?? Enumerable.Empty<HistoricalPoliticalChangeRecord>();
         public IEnumerable<HistoricalFactionMapping> FactionMappings => factionMappings ?? Enumerable.Empty<HistoricalFactionMapping>();
+        public string PoliticalPeriodId => politicalPeriodId;
+        public string CurrentRulerCharacterId => currentRulerCharacterId;
+        public string SuccessionStatus => successionStatus;
+        public string RoyalCapitalStatus => royalCapitalStatus;
+        public bool EastwardTransitionUnlocked => eastwardTransitionUnlocked;
+        public bool EastwardMigrationCompleted => eastwardMigrationCompleted;
+        public IEnumerable<string> SuccessionClaimantCharacterIds => successionClaimantCharacterIds ?? Enumerable.Empty<string>();
+        public bool HasAppliedHistoricalOutcome(string id) => appliedHistoricalOutcomeIds?.Contains(id) == true;
 
         public HistoricalPolityState FindPolity(string id) =>
             polities?.FirstOrDefault(item => item != null && item.PolityId == id);
@@ -107,6 +123,35 @@ namespace HistoricalRimWorld.Politics
             factionMappings.Add(mapping);
         }
 
+        internal bool ApplyHe001Outcome(string outcomeId)
+        {
+            if (!initialized || string.IsNullOrWhiteSpace(outcomeId)) return false;
+            if (HasAppliedHistoricalOutcome(outcomeId)) return true;
+            switch (outcomeId)
+            {
+                case "HE001_YouWangDead":
+                    currentRulerCharacterId = null;
+                    successionStatus = "VacantUnderCrisis";
+                    break;
+                case "HE001_WesternZhouCollapse":
+                    politicalPeriodId = "WesternZhouCollapse";
+                    royalCapitalStatus = "HaojingRoyalAuthorityDisrupted";
+                    break;
+                case "HE001_RoyalSuccessionCrisis":
+                    successionStatus = "SuccessionCrisis";
+                    if (successionClaimantCharacterIds == null) successionClaimantCharacterIds = new List<string>();
+                    if (!successionClaimantCharacterIds.Contains("HR_Character_YiJiu")) successionClaimantCharacterIds.Add("HR_Character_YiJiu");
+                    break;
+                case "HE001_EastwardTransitionUnlocked":
+                    eastwardTransitionUnlocked = true;
+                    break;
+                default: return false;
+            }
+            if (appliedHistoricalOutcomeIds == null) appliedHistoricalOutcomeIds = new List<string>();
+            appliedHistoricalOutcomeIds.Add(outcomeId);
+            return true;
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();
@@ -120,6 +165,14 @@ namespace HistoricalRimWorld.Politics
             Scribe_Collections.Look(ref communities, "localCommunities", LookMode.Deep);
             Scribe_Collections.Look(ref changes, "politicalChanges", LookMode.Deep);
             Scribe_Collections.Look(ref factionMappings, "factionMappings", LookMode.Deep);
+            Scribe_Values.Look(ref politicalPeriodId, "politicalPeriodId", "WesternZhouLate");
+            Scribe_Values.Look(ref currentRulerCharacterId, "currentRulerCharacterId", "HR_Character_ZhouYouWang");
+            Scribe_Values.Look(ref successionStatus, "successionStatus", "RoyalAuthorityActive");
+            Scribe_Values.Look(ref royalCapitalStatus, "royalCapitalStatus", "HaojingRoyalAuthorityActive");
+            Scribe_Values.Look(ref eastwardTransitionUnlocked, "eastwardTransitionUnlocked", false);
+            Scribe_Values.Look(ref eastwardMigrationCompleted, "eastwardMigrationCompleted", false);
+            Scribe_Collections.Look(ref successionClaimantCharacterIds, "successionClaimantCharacterIds", LookMode.Value);
+            Scribe_Collections.Look(ref appliedHistoricalOutcomeIds, "appliedHistoricalOutcomeIds", LookMode.Value);
             Scribe_Values.Look(ref nextChangeSequence, "nextChangeSequence", 1);
             Scribe_Values.Look(ref initialized, "politicsInitialized", false);
 
@@ -132,6 +185,8 @@ namespace HistoricalRimWorld.Politics
                 communities = communities ?? new List<HistoricalLocalCommunityState>();
                 changes = changes ?? new List<HistoricalPoliticalChangeRecord>();
                 factionMappings = factionMappings ?? new List<HistoricalFactionMapping>();
+                successionClaimantCharacterIds = successionClaimantCharacterIds ?? new List<string>();
+                appliedHistoricalOutcomeIds = appliedHistoricalOutcomeIds ?? new List<string>();
                 nextChangeSequence = Math.Max(nextChangeSequence, changes.Count + 1);
 
                 if (initialized)

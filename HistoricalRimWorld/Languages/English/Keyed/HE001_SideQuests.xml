@@ -22,4 +22,17 @@
   <HE001_CoreConstructionRestricted>Building is restricted within the royal retreat route and historical core during the battle.</HE001_CoreConstructionRestricted>
   <HE001_RoyalRecordBundle_Label>Royal record bundle</HE001_RoyalRecordBundle_Label>
   <HE001_RoyalRecordBundle_Description>A gameplay item representing records that might be recovered during the crisis; it is not a specific archaeological find.</HE001_RoyalRecordBundle_Description>
+  <HE001_WitnessArchive_Title>Eyewitness account of the Lishan Crisis</HE001_WitnessArchive_Title>
+  <HE001_WitnessArchive_Description>A colonist returned from Lishan and preserved an account of what they personally observed. Details are limited to the stages and evidence recorded for this witness.</HE001_WitnessArchive_Description>
+  <HE001_RoyalDocumentArchive_Title>Royal records recovered at Lishan</HE001_RoyalDocumentArchive_Title>
+  <HE001_RoyalDocumentArchive_Description>A game-fictional royal document was secured as contemporary-document evidence. It is not presented as an authentic archaeological find.</HE001_RoyalDocumentArchive_Description>
+  <HE001_WitnessArchive_SourceNotes>Witness Pawn #{0}; witness grade: {1}; observed stages: {2}; evidence IDs: {3}.</HE001_WitnessArchive_SourceNotes>
+  <HE001_WitnessGrade_PartialWitness>partial witness</HE001_WitnessGrade_PartialWitness>
+  <HE001_WitnessGrade_BattleWitness>battle witness</HE001_WitnessGrade_BattleWitness>
+  <HE001_WitnessGrade_FullHistoricalWitness>full historical witness</HE001_WitnessGrade_FullHistoricalWitness>
+  <HE001_WitnessStage_BattleEngagementObserved>battle engagement</HE001_WitnessStage_BattleEngagementObserved>
+  <HE001_WitnessStage_RoyalRetreatObserved>royal retreat</HE001_WitnessStage_RoyalRetreatObserved>
+  <HE001_WitnessStage_HistoricalDeathSceneObserved>death-scene phase</HE001_WitnessStage_HistoricalDeathSceneObserved>
+  <HE001_WitnessStage_KingYouDeathSceneObserved>King You's death scene</HE001_WitnessStage_KingYouDeathSceneObserved>
+  <HE001_RoyalDocumentArchive_SourceNotes>Game-fictional document Thing #{0}; evidence ID {1}. The item remains in the game.</HE001_RoyalDocumentArchive_SourceNotes>
 </LanguageData>

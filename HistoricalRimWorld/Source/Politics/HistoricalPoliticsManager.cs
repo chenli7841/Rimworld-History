@@ -26,6 +26,23 @@ namespace HistoricalRimWorld.Politics
         public static IEnumerable<HistoricalPoliticalRelation> Relations => GetCurrentComponent()?.Relations ?? Enumerable.Empty<HistoricalPoliticalRelation>();
         public static IEnumerable<HistoricalLocalCommunityState> Communities => GetCurrentComponent()?.Communities ?? Enumerable.Empty<HistoricalLocalCommunityState>();
         public static IEnumerable<HistoricalPoliticalChangeRecord> Changes => GetCurrentComponent()?.Changes ?? Enumerable.Empty<HistoricalPoliticalChangeRecord>();
+        public static string PoliticalPeriodId => GetCurrentComponent()?.PoliticalPeriodId;
+        public static string CurrentRulerCharacterId => GetCurrentComponent()?.CurrentRulerCharacterId;
+        public static string SuccessionStatus => GetCurrentComponent()?.SuccessionStatus;
+        public static string RoyalCapitalStatus => GetCurrentComponent()?.RoyalCapitalStatus;
+        public static bool EastwardTransitionUnlocked => GetCurrentComponent()?.EastwardTransitionUnlocked == true;
+        public static bool EastwardMigrationCompleted => GetCurrentComponent()?.EastwardMigrationCompleted == true;
+        public static bool HasAppliedHistoricalOutcome(string id) => GetCurrentComponent()?.HasAppliedHistoricalOutcome(id) == true;
+
+        internal static bool TryApplyHistoricalOutcome(string outcomeId, out string error)
+        {
+            error = null;
+            HistoricalPoliticsGameComponent component = GetInitializedComponent();
+            if (component == null) return Reject("Historical political state is unavailable.", out error);
+            if (component.HasAppliedHistoricalOutcome(outcomeId)) return true;
+            if (!component.ApplyHe001Outcome(outcomeId)) return Reject("Unknown or unappliable HE-001 political outcome " + outcomeId + ".", out error);
+            return true;
+        }
 
         public static bool TryInitializeForScenario(HistoricalScenarioDef scenario, out string error)
         {

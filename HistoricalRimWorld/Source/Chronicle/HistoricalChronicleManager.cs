@@ -29,6 +29,27 @@ namespace HistoricalRimWorld.Chronicle
                 || Reject("Could not add local chronicle entry.", out error);
         }
 
+        public static bool TryAddWitnessArchive(string entryId, HistoricalDateReference eventDate,
+            string titleKey, string descriptionKey, string regionId, string polityId,
+            HistoricalEvidenceLevel evidence, string sourceNotes, out string error)
+        {
+            error = null;
+            if (eventDate == null) return Reject("A witness archive requires the event date.", out error);
+            try { eventDate.Validate(); }
+            catch (Exception exception) { return Reject("Invalid witness event date: " + exception.Message, out error); }
+            if (!HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate knownDate))
+                return Reject("The historical calendar is inactive.", out error);
+            if (!TryGetInitializedComponent(out HistoricalChronicleGameComponent component, out error)) return false;
+            HistoricalDateReference knownDateReference = new HistoricalDateReference(knownDate.AstronomicalYear,
+                knownDate.Month, knownDate.Day, HistoricalDatePrecision.Day);
+            HistoricalChronicleEntry entry = CreateEntry(entryId, "HE_001_LishanCrisis",
+                HistoricalChronicleEntryType.LocalExperience, eventDate, titleKey, descriptionKey,
+                regionId, polityId, evidence, sourceNotes, HistoricalEventCategory.Military,
+                HistoricalEventScope.LocalCommunity, true, HistoricalEventProvenance.HistoricalContextSimulation,
+                HistoricalChronologyTradition.TraditionalReceivedChronology, knownDateReference);
+            return component.AddEntry(entry) || Reject("Could not add witness archive to the chronicle.", out error);
+        }
+
         internal static bool TryAddInteractiveLocalEventEntry(HistoricalEventDef source, string entryId,
             string titleKey, string descriptionKey, out string error)
         {

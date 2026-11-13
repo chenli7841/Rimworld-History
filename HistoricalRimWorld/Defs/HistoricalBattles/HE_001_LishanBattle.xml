@@ -27,5 +27,9 @@
     <combatOrderIntervalTicks>180</combatOrderIntervalTicks>
     <moraleCheckIntervalTicks>250</moraleCheckIntervalTicks>
     <deathSceneBudgetTicks>1800</deathSceneBudgetTicks>
+    <freshRemainsDays>5</freshRemainsDays>
+    <weatheredRemainsDays>15</weatheredRemainsDays>
+    <overgrownRemainsDays>180</overgrownRemainsDays>
+    <ruinRemainsDays>360</ruinRemainsDays>
   </HistoricalRimWorld.Events.HistoricalBattleDef>
 </Defs>

@@ -44,6 +44,10 @@ namespace HistoricalRimWorld.Events
         public int combatOrderIntervalTicks = 180;
         public int moraleCheckIntervalTicks = 250;
         public int deathSceneBudgetTicks = 1800;
+        public int freshRemainsDays = 5;
+        public int weatheredRemainsDays = 15;
+        public int overgrownRemainsDays = 180;
+        public int ruinRemainsDays = 360;
 
         public override IEnumerable<string> ConfigErrors()
         {
@@ -54,6 +58,9 @@ namespace HistoricalRimWorld.Events
             if (DefDatabase<HistoricalArmyDef>.GetNamedSilentFail(opposingArmyId) == null) yield return "opposingArmyId must resolve to an existing HistoricalArmyDef.";
             if (string.IsNullOrWhiteSpace(landmarkId) || string.IsNullOrWhiteSpace(mapTemplateId)) yield return "landmarkId and mapTemplateId are required.";
             if (combatOrderIntervalTicks < 60 || moraleCheckIntervalTicks < 60 || deathSceneBudgetTicks < 60) yield return "Battle tick intervals and death scene budget must be at least 60 ticks.";
+            if (freshRemainsDays < 0 || weatheredRemainsDays < freshRemainsDays
+                || overgrownRemainsDays < weatheredRemainsDays || ruinRemainsDays < overgrownRemainsDays)
+                yield return "Battlefield aging durations must be non-negative and ordered.";
             if (!string.IsNullOrWhiteSpace(kingFateDefName) && DefDatabase<HistoricalFateDef>.GetNamedSilentFail(kingFateDefName) == null) yield return "kingFateDefName must resolve to an existing HistoricalFateDef.";
         }
     }

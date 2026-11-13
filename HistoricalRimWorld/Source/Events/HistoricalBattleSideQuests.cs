@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HistoricalRimWorld.Characters;
+using HistoricalRimWorld.Chronicle;
 using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.World;
 using HarmonyLib;
@@ -257,16 +258,30 @@ namespace HistoricalRimWorld.Events
             HistoricalBattleInstance battle = Current.Game?.GetComponent<HistoricalBattleGameComponent>()
                 ?.FindBattle(battleDef?.battleId);
             if (battle?.BattleStarted != true && battle?.RoyalRetreatStarted != true) return;
-            bool observing = map.mapPawns?.FreeColonists?.Any(pawn => pawn != null && pawn.Spawned
+            List<Pawn> observers = (map.mapPawns?.FreeColonists ?? Enumerable.Empty<Pawn>()).Where(pawn => pawn != null && pawn.Spawned
                 && !pawn.Dead && !pawn.Downed && pawn.Awake() && observer.Contains(pawn.Position)
                 && royal.Any(target => GenSight.LineOfSight(pawn.Position, target.Position, map))
-                && opposing.Any(target => GenSight.LineOfSight(pawn.Position, target.Position, map))) == true;
-            if (!observing) return;
+                && opposing.Any(target => GenSight.LineOfSight(pawn.Position, target.Position, map))).ToList();
+            if (observers.Count == 0) return;
             int accumulated = state.ObservationTicks + 250;
             HistoricalWitnessGrade grade = accumulated >= def.observationTicks ? HistoricalWitnessGrade.FullHistoricalWitness
                 : accumulated >= def.battleWitnessTicks ? HistoricalWitnessGrade.BattleWitness
                 : accumulated >= def.partialWitnessTicks ? HistoricalWitnessGrade.PartialWitness : HistoricalWitnessGrade.None;
             state.AddObservation(250, grade);
+            string observedStage = battle.Phase == HistoricalBattlePhase.RoyalRetreat ? "RoyalRetreatObserved"
+                : battle.Phase == HistoricalBattlePhase.DeathScene ? "HistoricalDeathSceneObserved"
+                : "BattleEngagementObserved";
+            foreach (Pawn witness in observers)
+            {
+                HistoricalWitnessArchiveService.RecordObservation(witness, observedStage);
+                if (battle.Phase == HistoricalBattlePhase.DeathScene)
+                {
+                    Pawn king = HistoricalCharacterRegistry.GetPawn("HR_Character_ZhouYouWang");
+                    if (king != null && king.Spawned && king.Map == map && !king.Dead
+                        && GenSight.LineOfSight(witness.Position, king.Position, map))
+                        HistoricalWitnessArchiveService.RecordObservation(witness, "KingYouDeathSceneObserved");
+                }
+            }
             if (grade == HistoricalWitnessGrade.FullHistoricalWitness) End(state, QuestEndOutcome.Success);
         }
 
@@ -414,6 +429,7 @@ namespace HistoricalRimWorld.Events
             HistoricalBattleSideQuestState state = Current.Game?.GetComponent<HistoricalBattleSideQuestGameComponent>()?.States
                 .FirstOrDefault(item => item?.Document == thing && item.Quest != null && !IsEnded(item.Quest));
             if (state == null || thing == null || thing.Destroyed || !IsDocumentStored(thing)) return false;
+            HistoricalWitnessArchiveService.RecordRecoveredRoyalDocument(thing);
             End(state, QuestEndOutcome.Success);
             return true;
         }
