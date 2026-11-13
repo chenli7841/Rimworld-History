@@ -49,7 +49,7 @@ namespace HistoricalRimWorld.Characters
         {
             if (pawn != null && pawnIdIndex.TryGetValue(pawn, out historicalCharacterId)) return true;
             historicalCharacterId = null;
-            return !string.IsNullOrWhiteSpace(historicalCharacterId);
+            return false;
         }
 
         public override void ExposeData()

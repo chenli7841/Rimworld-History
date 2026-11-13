@@ -86,11 +86,16 @@ namespace HistoricalRimWorld.Politics
                 || Find.TickManager == null || Find.TickManager.TicksGame % 250 != 0 || lastTick == Find.TickManager.TicksGame) return;
             lastTick = Find.TickManager.TicksGame;
 
+            ReconcileCommittedOutcomes();
+
+        }
+
+        internal static void ReconcileCommittedOutcomes()
+        {
             ApplyWhenCommitted("HE001_YouWangDead");
             ApplyWhenCommitted("HE001_WesternZhouCollapse");
             ApplyWhenCommitted("HE001_RoyalSuccessionCrisis");
             ApplyWhenCommitted("HE001_EastwardTransitionUnlocked");
-
         }
 
         private static void ApplyWhenCommitted(string outcomeId)

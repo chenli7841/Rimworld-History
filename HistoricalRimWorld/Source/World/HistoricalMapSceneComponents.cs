@@ -70,7 +70,9 @@ namespace HistoricalRimWorld.World
             base.MapComponentTick();
             if (!generationApplied || Find.TickManager == null) return;
             int tick = Find.TickManager.TicksGame;
-            if (tick % 250 == 0 && Find.CurrentMap == map) HistoricalArmyPresenceController.TryActivateForMap(map);
+            if (tick % 250 == 0 && Find.CurrentMap == map
+                && landmarkIds != null && landmarkIds.Contains("HR_Landmark_Lishan"))
+                HistoricalEventIntegrationCoordinator.OnHistoricalMapActivated("HR_Landmark_Lishan", map);
             if (tick % 2500 == 0 && tick != lastLayerRefreshTick) RefreshSceneLayers(false);
         }
 

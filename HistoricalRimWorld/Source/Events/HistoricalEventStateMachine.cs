@@ -37,7 +37,9 @@ namespace HistoricalRimWorld.Events
                 if (record == null) continue;
                 changed = true;
                 HistoricalEventObserverRegistry.NotifyStageEntered(def.eventId ?? def.defName, stage.stageId);
-                if (!ProcessStage(def, stage, record)) pendingWorkSucceeded = false;
+                bool stageProcessed = ProcessStage(def, stage, record);
+                HistoricalEventIntegrationCoordinator.OnHistoricalStageChanged(def.eventId ?? def.defName, stage.stageId);
+                if (!stageProcessed) pendingWorkSucceeded = false;
             }
 
             if (pendingWorkSucceeded && def.stages.All(stage => stage != null && state.HasReachedStage(stage.stageId)))

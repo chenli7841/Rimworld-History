@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using HistoricalRimWorld.Calendar;
 using HistoricalRimWorld.Events;
@@ -32,6 +33,8 @@ namespace HistoricalRimWorld.Characters
 
     internal static class HistoricalCharacterGenerator
     {
+        private static readonly HashSet<string> ReportedHeldCharacters = new HashSet<string>(StringComparer.Ordinal);
+
         internal static Pawn GetOrGenerate(HistoricalCharacterDef def, Map map, IntVec3 cell)
         {
             if (def == null || map == null || !def.generateOnBattlefield) return null;
@@ -46,6 +49,13 @@ namespace HistoricalRimWorld.Characters
                 {
                     Log.Warning("[Historical RimWorld] Historical character " + def.historicalCharacterId
                         + " is already present on another map; it was not duplicated.");
+                    return state.Pawn;
+                }
+                if (state.Pawn.ParentHolder != null)
+                {
+                    if (ReportedHeldCharacters.Add(def.historicalCharacterId))
+                        Log.Warning("[Historical RimWorld] Historical character " + def.historicalCharacterId
+                            + " is held by another game container; it was not moved or duplicated.");
                     return state.Pawn;
                 }
                 if (!state.Pawn.Spawned && !state.Pawn.Destroyed && !state.Pawn.Dead)

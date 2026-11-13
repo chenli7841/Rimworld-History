@@ -22,6 +22,7 @@ namespace HistoricalRimWorld.Events
         private long lastProcessedAbsoluteDay = long.MinValue;
         private HistoricalEventScheduler scheduler;
         private int lastCheckGameTick = -1;
+        private bool reconcileAfterLoadPending;
         private string initializationAttemptedForScenario;
         private string pendingLocalEventId;
         private string pendingStorylineId;
@@ -189,6 +190,12 @@ namespace HistoricalRimWorld.Events
                 return;
             }
 
+            if (reconcileAfterLoadPending)
+            {
+                reconcileAfterLoadPending = false;
+                HistoricalEventIntegrationCoordinator.ReconcileAfterLoad();
+            }
+
             if (!HistoricalCalendarManager.TryGetCurrentDate(out HistoricalDate currentDate)) return;
             if (currentDate.AbsoluteDay > lastProcessedAbsoluteDay)
             {
@@ -197,6 +204,8 @@ namespace HistoricalRimWorld.Events
                 scheduler?.ProcessDueEvents(currentDate);
                 lastProcessedAbsoluteDay = currentDate.AbsoluteDay;
                 HistoricalChronicleManager.RefreshRegionVisibility();
+                HistoricalEventIntegrationCoordinator.ReconcileEvent(scenarioDefName == "HR_Scenario_EasternZhou_770BCE"
+                    ? "HE_001_LishanCrisis" : null);
             }
         }
 
@@ -227,6 +236,7 @@ namespace HistoricalRimWorld.Events
                 scheduler = null;
                 lastCheckGameTick = -1;
                 initializationAttemptedForScenario = null;
+                reconcileAfterLoadPending = initialized;
                 if (initialized && dataVersion != CurrentDataVersion)
                 {
                     Log.Warning("[Historical RimWorld] Historical event save data version " + dataVersion

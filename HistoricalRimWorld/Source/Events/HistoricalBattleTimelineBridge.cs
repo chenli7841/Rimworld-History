@@ -25,9 +25,12 @@ namespace HistoricalRimWorld.Events
                 if (timeline == null) continue;
                 HistoricalBattleInstance instance = component.FindBattle(def.battleId);
                 if (instance != null) instance.TryRestoreMap();
+                bool deploymentReached = HistoricalEventManager.HasReachedStage(def.historicalEventId, def.deploymentStageId);
+                bool retreatReached = HistoricalEventManager.HasReachedStage(def.historicalEventId, def.retreatStageId);
+                bool deathReached = HistoricalEventManager.HasReachedStage(def.historicalEventId, def.deathStageId);
 
                 // If the player first arrives after the pivotal death stage, show no living replay army.
-                if (instance == null && HistoricalEventManager.HasReachedStage(def.historicalEventId, def.deathStageId))
+                if (instance == null && deathReached)
                 {
                     instance = component.GetOrCreate(def);
                     instance.ResolveOffMap(tick);
@@ -38,31 +41,10 @@ namespace HistoricalRimWorld.Events
                 if (instance == null)
                 {
                     Map activeMap = Find.CurrentMap;
-                    bool deploymentReached = HistoricalEventManager.HasReachedStage(def.historicalEventId, def.deploymentStageId);
-                    bool retreatReached = HistoricalEventManager.HasReachedStage(def.historicalEventId, def.retreatStageId);
-                    if ((!deploymentReached || timeline.TimelineStatus != HistoricalEventRuntimeStatus.Active)
-                        && !retreatReached)
-                    {
-                        if (HistoricalEventManager.HasReachedStage(def.historicalEventId, def.retreatStageId))
-                        {
-                            instance = component.GetOrCreate(def);
-                            instance.ResolveOffMap(tick);
-                            Log.Message("[Historical RimWorld] " + def.battleId + " was resolved off-map at the authoritative "
-                                + def.historicalEventId + "/" + def.retreatStageId + " stage; no individual battle casualties were fabricated.");
-                        }
-                        continue;
-                    }
+                    if ((!deploymentReached || timeline.TimelineStatus != HistoricalEventRuntimeStatus.Active) && !retreatReached) continue;
                     if (activeMap == null || !HistoricalEventLocationService.TryGetScene(activeMap, out HistoricalMapSceneComponent scene)
                         || scene.TemplateId != def.mapTemplateId)
-                    {
-                        if (retreatReached)
-                        {
-                            instance = component.GetOrCreate(def);
-                            instance.ResolveOffMap(tick);
-                            Log.Message("[Historical RimWorld] " + def.battleId + " resolved off-map because no battle scene was active; no individual casualties were fabricated.");
-                        }
                         continue;
-                    }
                     HistoricalArmyPresenceController.TryActivateForMap(activeMap);
                     instance = component.GetOrCreate(def);
                     instance.SetMap(activeMap);
@@ -71,9 +53,23 @@ namespace HistoricalRimWorld.Events
 
                 if (instance.BattleCompleted) continue;
                 Map map = instance.ActiveMap;
+                // A player can arrive after RoyalDefeat. Rebind to the current scene and show only the
+                // authoritative retreat tableau; do not complete the event or replay the engagement.
+                if ((map == null || map.Disposed) && !deathReached
+                    && (deploymentReached || retreatReached)
+                    && Find.CurrentMap != null
+                    && HistoricalEventLocationService.TryGetScene(Find.CurrentMap, out HistoricalMapSceneComponent currentScene)
+                    && currentScene.TemplateId == def.mapTemplateId)
+                {
+                    HistoricalArmyPresenceController.TryActivateForMap(Find.CurrentMap);
+                    instance.SetMap(Find.CurrentMap);
+                    map = Find.CurrentMap;
+                    instance.EnterPhase(retreatReached ? HistoricalBattlePhase.RoyalRetreat
+                        : instance.BattleStarted ? HistoricalBattlePhase.Engagement : HistoricalBattlePhase.Deployment, tick);
+                }
                 if (map != null && !map.Disposed && Find.CurrentMap != map)
                 {
-                    if (HistoricalEventManager.HasReachedStage(def.historicalEventId, def.retreatStageId))
+                    if (deathReached)
                     {
                         HistoricalBattleController.ResolveOffMap(def, instance, tick);
                         continue;
@@ -83,7 +79,7 @@ namespace HistoricalRimWorld.Events
                 }
                 if (map == null || map.Disposed)
                 {
-                    if (HistoricalEventManager.HasReachedStage(def.historicalEventId, def.retreatStageId))
+                    if (deathReached)
                         HistoricalBattleController.ResolveOffMap(def, instance, tick);
                     continue;
                 }

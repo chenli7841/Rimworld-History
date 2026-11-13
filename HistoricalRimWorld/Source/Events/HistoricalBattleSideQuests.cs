@@ -123,6 +123,13 @@ namespace HistoricalRimWorld.Events
         internal void Initialize(HistoricalEventQuestDef def, Quest nativeQuest) { defName = def?.defName; quest = nativeQuest; }
         internal void SetMap(Map value) { map = value; mapId = value?.uniqueID ?? -1; }
         internal void MarkObjectsCreated() => objectsCreated = true;
+        internal void AdoptExistingQuest(HistoricalEventQuestDef def, Quest nativeQuest)
+        {
+            Initialize(def, nativeQuest);
+            // The native Quest/Thing/Pawn objects are already owned by RimWorld. If the companion
+            // integration record was missing in an older or interrupted save, never fabricate them again.
+            objectsCreated = true;
+        }
         internal void MarkDangerWarning() => dangerWarningShown = true;
         internal void MarkAdoptionChoice(bool accepted) { adoptionChoiceMade = true; acceptedRefugees = accepted; }
         internal void SetAdoptionPromptOpen(bool value) => adoptionPromptOpen = value;
@@ -192,6 +199,17 @@ namespace HistoricalRimWorld.Events
             if (Verse.Find.QuestManager == null) return null;
             if (states == null) states = new List<HistoricalBattleSideQuestState>();
             if (Find(def.defName) != null) return Find(def.defName);
+            Quest existing = Verse.Find.QuestManager.QuestsListForReading.FirstOrDefault(quest => quest != null
+                && quest.tags != null && quest.tags.Contains(EventId) && quest.tags.Contains(def.defName));
+            if (existing != null)
+            {
+                HistoricalBattleSideQuestState recovered = new HistoricalBattleSideQuestState();
+                recovered.AdoptExistingQuest(def, existing);
+                states.Add(recovered);
+                Log.Warning("[Historical RimWorld] Reconnected saved native Quest " + def.defName
+                    + " to HE-001 without regenerating quest targets.");
+                return recovered;
+            }
             Quest quest = new Quest
             {
                 name = ("HE001_SideQuest_" + def.questType + "_Name").Translate(),
@@ -322,6 +340,9 @@ namespace HistoricalRimWorld.Events
             PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(def.refugeePawnKindDefName);
             if (faction == null || kind == null) return false;
             int count = Math.Max(1, Math.Min(8, def.refugeeCount));
+            // Commit the one-shot attempt before creating the first Pawn. Partial failures remain partial
+            // rather than creating a second refugee group on the next tick or after save recovery.
+            state.MarkObjectsCreated();
             for (int i = state.Pawns.Count(pawn => pawn != null); i < count; i++)
             {
                 IntVec3 spawn = FindSafeCell(map, spawnZone);

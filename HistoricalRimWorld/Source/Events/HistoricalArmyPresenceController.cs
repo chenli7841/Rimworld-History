@@ -178,7 +178,7 @@ namespace HistoricalRimWorld.Events
 
         private static void SpawnExistingIfSafe(Pawn pawn, Map map, CellRect zone, string id)
         {
-            if (pawn == null || pawn.Dead || pawn.Destroyed || pawn.Spawned) return;
+            if (pawn == null || pawn.Dead || pawn.Destroyed || pawn.Spawned || pawn.ParentHolder != null) return;
             IntVec3 cell = FindDeploymentCell(map, zone, StableHash(id), 0.5f);
             if (cell.IsValid) GenSpawn.Spawn(pawn, cell, map, WipeMode.Vanish);
         }
