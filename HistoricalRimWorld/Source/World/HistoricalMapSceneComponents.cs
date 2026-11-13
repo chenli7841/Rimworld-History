@@ -70,6 +70,7 @@ namespace HistoricalRimWorld.World
             base.MapComponentTick();
             if (!generationApplied || Find.TickManager == null) return;
             int tick = Find.TickManager.TicksGame;
+            if (tick % 2500 == 0) HistoricalArmyPresenceController.TryActivateForMap(map);
             if (tick % 2500 == 0 && tick != lastLayerRefreshTick) RefreshSceneLayers(false);
         }
 

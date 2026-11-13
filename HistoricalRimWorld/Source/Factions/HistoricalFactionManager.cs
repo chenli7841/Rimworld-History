@@ -45,6 +45,8 @@ namespace HistoricalRimWorld.Factions
             if (faction?.def == null) return false;
             if (faction == Faction.OfPlayerSilentFail) return true;
             if (faction.def.defName == "HR_Faction_LocalBandits") return true;
+            if (faction.def.defName == "HR_Faction_LishanOpposition"
+                && scenarioId == "HR_Scenario_EasternZhou_770BCE") return true;
             return GetScenarioFactionDefs(scenarioId).Contains(faction.def);
         }
 

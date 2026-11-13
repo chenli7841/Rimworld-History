@@ -148,6 +148,11 @@ namespace HistoricalRimWorld.Patches.WorldGeneration
                     selected.Add(supplementalFaction);
             FactionDef localBandits = DefDatabase<FactionDef>.GetNamedSilentFail("HR_Faction_LocalBandits");
             if (localBandits != null && !selected.Contains(localBandits)) selected.Add(localBandits);
+            if (setup.scenario.defName == "HR_Scenario_EasternZhou_770BCE")
+            {
+                FactionDef lishanOpposition = DefDatabase<FactionDef>.GetNamedSilentFail("HR_Faction_LishanOpposition");
+                if (lishanOpposition != null && !selected.Contains(lishanOpposition)) selected.Add(lishanOpposition);
+            }
             factions = selected;
         }
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HistoricalRimWorld.Characters.HistoricalCharacterDef>
+    <defName>HR_Character_ZhouYouWang</defName>
+    <label>King You of Zhou</label><description>The last king of Western Zhou; his exact birth year and age are unknown.</description>
+    <historicalCharacterId>HR_Character_ZhouYouWang</historicalCharacterId><historicalName>周幽王</historicalName>
+    <historicalFactionId>HR_Faction_EasternZhou</historicalFactionId><historicalRole>周王</historicalRole>
+    <historicalScenarioId>HR_Scenario_EasternZhou_770BCE</historicalScenarioId><relatedEventId>HE_001_LishanCrisis</relatedEventId>
+    <pawnKindDefName>HR_PawnKind_NobleRetainer</pawnKindDefName><minimumEstimatedAge>35</minimumEstimatedAge><maximumEstimatedAge>55</maximumEstimatedAge>
+    <generateOnBattlefield>true</generateOnBattlefield><preserveIdentityAcrossEvents>true</preserveIdentityAcrossEvents>
+    <aliases><li>周幽王</li><li>姬宫涅</li><li>宮湦</li></aliases>
+    <sourceNotes>出生年与确切年龄缺乏可靠依据；35至55岁仅为游戏化成年年龄范围，不是史实断言。</sourceNotes>
+  </HistoricalRimWorld.Characters.HistoricalCharacterDef>
+  <HistoricalRimWorld.Characters.HistoricalCharacterDef>
+    <defName>HR_Character_BoPan</defName>
+    <label>Bo Pan</label><description>Traditionally described as a son of King You; his birth year is unknown.</description>
+    <historicalCharacterId>HR_Character_BoPan</historicalCharacterId><historicalName>伯盘</historicalName>
+    <historicalFactionId>HR_Faction_EasternZhou</historicalFactionId><historicalRole>王子</historicalRole>
+    <historicalScenarioId>HR_Scenario_EasternZhou_770BCE</historicalScenarioId><relatedEventId>HE_001_LishanCrisis</relatedEventId>
+    <pawnKindDefName>HR_PawnKind_Farmer</pawnKindDefName><minimumEstimatedAge>12</minimumEstimatedAge><maximumEstimatedAge>16</maximumEstimatedAge>
+    <generateOnBattlefield>true</generateOnBattlefield><preserveIdentityAcrossEvents>true</preserveIdentityAcrossEvents>
+    <aliases><li>伯服</li></aliases>
+    <sourceNotes>传统叙事中的周幽王之子。具体出生年份和年龄不确定；此年龄范围为游戏化推定。</sourceNotes>
+  </HistoricalRimWorld.Characters.HistoricalCharacterDef>
+  <HistoricalRimWorld.Characters.HistoricalCharacterDef>
+    <defName>HR_Character_YiJiu</defName>
+    <label>Yi Jiu</label><description>Later King Ping of Zhou; his location during the Lishan crisis is disputed.</description>
+    <historicalCharacterId>HR_Character_YiJiu</historicalCharacterId><historicalName>宜臼</historicalName>
+    <historicalFactionId>HR_Faction_EasternZhou</historicalFactionId><historicalRole>周平王</historicalRole>
+    <historicalScenarioId>HR_Scenario_EasternZhou_770BCE</historicalScenarioId><relatedEventId>HE_001_LishanCrisis</relatedEventId>
+    <minimumEstimatedAge>20</minimumEstimatedAge><maximumEstimatedAge>40</maximumEstimatedAge>
+    <generateOnBattlefield>false</generateOnBattlefield><preserveIdentityAcrossEvents>true</preserveIdentityAcrossEvents>
+    <sourceNotes>后来的周平王；骊山之变时的位置与经历存在史料争议。本 Def 仅登记稳定身份，不生成战场 Pawn。</sourceNotes>
+  </HistoricalRimWorld.Characters.HistoricalCharacterDef>
+  <HistoricalRimWorld.Characters.HistoricalCharacterDef>
+    <defName>HR_Character_ShenHou</defName>
+    <label>Marquis of Shen</label><description>A political figure of Shen; this phase does not assume his battlefield presence.</description>
+    <historicalCharacterId>HR_Character_ShenHou</historicalCharacterId><historicalName>申侯</historicalName>
+    <historicalRole>申国政治人物</historicalRole>
+    <historicalScenarioId>HR_Scenario_EasternZhou_770BCE</historicalScenarioId><relatedEventId>HE_001_LishanCrisis</relatedEventId>
+    <minimumEstimatedAge>35</minimumEstimatedAge><maximumEstimatedAge>60</maximumEstimatedAge>
+    <generateOnBattlefield>false</generateOnBattlefield><preserveIdentityAcrossEvents>true</preserveIdentityAcrossEvents>
+    <sourceNotes>申侯的政治身份予以登记；本阶段不假定其亲自参加骊山战斗，也不生成战场 Pawn。</sourceNotes>
+  </HistoricalRimWorld.Characters.HistoricalCharacterDef>
+</Defs>

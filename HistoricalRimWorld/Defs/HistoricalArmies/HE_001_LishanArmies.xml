@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Configured troop totals are a game-scale reconstruction, not attested historical numbers. -->
+  <HistoricalRimWorld.Events.HistoricalArmyDef>
+    <defName>HR_Army_LishanRoyal</defName><label>Lishan royal force</label>
+    <armyId>HR_Army_LishanRoyal</armyId><historicalEventId>HE_001_LishanCrisis</historicalEventId>
+    <historicalScenarioId>HR_Scenario_EasternZhou_770BCE</historicalScenarioId><factionId>HR_Faction_EasternZhou</factionId>
+    <armyRole>王室军队及随从（游戏化编制）</armyRole><targetPawnCount>30</targetPawnCount>
+    <deploymentZoneId>RoyalArmyApproachZone</deploymentZoneId><persistentAcrossMapUnload>true</persistentAcrossMapUnload>
+    <unitGroups>
+      <li><groupId>RoyalGuard</groupId><unitRole>王室近卫</unitRole><pawnKindDefName>HR_PawnKind_Guard</pawnKindDefName><count>8</count><minimumAge>20</minimumAge><maximumAge>45</maximumAge><deploymentDepth>0.82</deploymentDepth></li>
+      <li><groupId>Spearmen</groupId><unitRole>矛兵</unitRole><pawnKindDefName>HR_PawnKind_Spearman</pawnKindDefName><count>12</count><minimumAge>18</minimumAge><maximumAge>45</maximumAge><deploymentDepth>0.72</deploymentDepth></li>
+      <li><groupId>Archers</groupId><unitRole>弓兵</unitRole><pawnKindDefName>HR_PawnKind_Archer</pawnKindDefName><count>6</count><minimumAge>18</minimumAge><maximumAge>45</maximumAge><deploymentDepth>0.22</deploymentDepth></li>
+      <li><groupId>Attendants</groupId><unitRole>王室随从</unitRole><pawnKindDefName>HR_PawnKind_NobleRetainer</pawnKindDefName><count>4</count><minimumAge>18</minimumAge><maximumAge>50</maximumAge><deploymentDepth>0.45</deploymentDepth></li>
+    </unitGroups>
+  </HistoricalRimWorld.Events.HistoricalArmyDef>
+  <HistoricalRimWorld.Events.HistoricalArmyDef>
+    <defName>HR_Army_LishanOpposition</defName><label>Lishan opposing force</label>
+    <armyId>HR_Army_LishanOpposition</armyId><historicalEventId>HE_001_LishanCrisis</historicalEventId>
+    <historicalScenarioId>HR_Scenario_EasternZhou_770BCE</historicalScenarioId><factionId>HR_Faction_LishanOpposition</factionId>
+    <armyRole>敌对武装（抽象复原）</armyRole><targetPawnCount>26</targetPawnCount>
+    <deploymentZoneId>OpposingArmyApproachZone</deploymentZoneId><persistentAcrossMapUnload>true</persistentAcrossMapUnload>
+    <unitGroups>
+      <li><groupId>Spearmen</groupId><unitRole>矛兵</unitRole><pawnKindDefName>HR_PawnKind_Spearman</pawnKindDefName><count>14</count><minimumAge>18</minimumAge><maximumAge>45</maximumAge><deploymentDepth>0.76</deploymentDepth></li>
+      <li><groupId>Infantry</groupId><unitRole>近战步兵</unitRole><pawnKindDefName>HR_PawnKind_Guard</pawnKindDefName><count>6</count><minimumAge>18</minimumAge><maximumAge>45</maximumAge><deploymentDepth>0.66</deploymentDepth></li>
+      <li><groupId>Archers</groupId><unitRole>弓兵</unitRole><pawnKindDefName>HR_PawnKind_Archer</pawnKindDefName><count>6</count><minimumAge>18</minimumAge><maximumAge>45</maximumAge><deploymentDepth>0.22</deploymentDepth></li>
+    </unitGroups>
+  </HistoricalRimWorld.Events.HistoricalArmyDef>
+</Defs>

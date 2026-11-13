@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- A game-scale coalition for this event; it is not a claim that one ethnicity or polity made up the force. -->
+  <FactionDef ParentName="HR_EasternZhouFactionBase">
+    <defName>HR_Faction_LishanOpposition</defName>
+    <label>骊山敌对武装</label>
+    <fixedName>骊山敌对武装</fixedName>
+    <description>为骊山之变场景使用的游戏化敌对武装集合，不代表单一民族或有史料证实的统一政权。</description>
+    <leaderTitle>首领</leaderTitle>
+    <permanentEnemy>true</permanentEnemy>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
+    <canMakeRandomly>false</canMakeRandomly>
+    <displayInFactionSelection>false</displayInFactionSelection>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+    <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+    <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+    <settlementGenerationWeight>0</settlementGenerationWeight>
+    <caravanTraderKinds Inherit="False" />
+    <visitorTraderKinds Inherit="False" />
+    <baseTraderKinds Inherit="False" />
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <HR_PawnKind_Guard>2</HR_PawnKind_Guard>
+          <HR_PawnKind_Spearman>5</HR_PawnKind_Spearman>
+          <HR_PawnKind_Archer>3</HR_PawnKind_Archer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <colorSpectrum><li>(0.48, 0.24, 0.20)</li><li>(0.48, 0.24, 0.20)</li></colorSpectrum>
+  </FactionDef>
+</Defs>
