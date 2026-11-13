@@ -21,7 +21,8 @@ namespace HistoricalRimWorld.Events
             base.GameComponentTick();
             if (Find.TickManager == null || Find.TickManager.TicksGame % 60 != 0) return;
             foreach (HistoricalFateDef fate in DefDatabase<HistoricalFateDef>.AllDefsListForReading
-                         .Where(item => item != null && HistoricalEventManager.HasReachedStage(item.fateEventId, item.fateStageId)))
+                         .Where(item => item != null && HistoricalEventManager.HasReachedStage(item.fateEventId, item.fateStageId)
+                             && !HistoricalBattleController.ShouldDeferScheduledDeath(item)))
                 ExecuteScheduledFate(fate);
         }
 

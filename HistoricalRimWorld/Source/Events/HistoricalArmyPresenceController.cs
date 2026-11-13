@@ -25,10 +25,13 @@ namespace HistoricalRimWorld.Events
                 || scene.TemplateId != LishanTemplateId) return;
 
             HistoricalEventRuntimeState eventState = HistoricalEventManager.GetEvent(CrisisEventId);
-            // Only the active MilitaryCrisis stage creates a battle tableau. In particular,
-            // an older save already at RoyalDefeat/KingYouDeath is never repopulated.
-            if (eventState == null || eventState.CurrentStageId != ActivationStageId
-                || eventState.TimelineStatus != HistoricalEventRuntimeStatus.Active) return;
+            // MilitaryCrisis starts the battle. Entering the map during RoyalDefeat creates only
+            // the current retreat tableau; after KingYouDeath the battle is never repopulated.
+            bool deploymentStage = eventState?.CurrentStageId == ActivationStageId
+                && eventState.TimelineStatus == HistoricalEventRuntimeStatus.Active;
+            bool retreatStage = eventState != null && HistoricalEventManager.HasReachedStage(CrisisEventId, "RoyalDefeat")
+                && !HistoricalEventManager.HasReachedStage(CrisisEventId, "KingYouDeath");
+            if (!deploymentStage && !retreatStage) return;
 
             HistoricalArmyGameComponent component = Current.Game?.GetComponent<HistoricalArmyGameComponent>();
             if (component == null) return;
@@ -170,7 +173,7 @@ namespace HistoricalRimWorld.Events
             }
 
             if (generatedAnyPawn)
-                Log.Message("[Historical RimWorld] Activated HE-001 battlefield presence on the existing Lishan map. Army member identities and Pawn references are persistent; no combat outcome was applied.");
+                Log.Message("[Historical RimWorld] Activated HE-001 battlefield presence on the existing Lishan map. Army member identities and Pawn references are persistent.");
         }
 
         private static void SpawnExistingIfSafe(Pawn pawn, Map map, CellRect zone, string id)

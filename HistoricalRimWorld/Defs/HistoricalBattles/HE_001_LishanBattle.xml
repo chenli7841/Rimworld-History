@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Game-scale battle presentation; historical event stages remain authoritative. -->
+  <HistoricalRimWorld.Events.HistoricalBattleDef>
+    <defName>HE001_LishanBattle</defName>
+    <label>HE001_LishanBattle_Label</label>
+    <description>HE001_LishanBattle_Description</description>
+    <battleId>HE001_LishanBattle</battleId>
+    <historicalEventId>HE_001_LishanCrisis</historicalEventId>
+    <landmarkId>HR_Landmark_Lishan</landmarkId>
+    <mapTemplateId>HR_Map_LishanBattlefield</mapTemplateId>
+    <royalArmyId>HR_Army_LishanRoyal</royalArmyId>
+    <opposingArmyId>HR_Army_LishanOpposition</opposingArmyId>
+    <deploymentStageId>MilitaryCrisis</deploymentStageId>
+    <retreatStageId>RoyalDefeat</retreatStageId>
+    <deathStageId>KingYouDeath</deathStageId>
+    <aftermathStageId>Aftermath</aftermathStageId>
+    <completionStageId>Completed</completionStageId>
+    <royalFactionId>HR_Faction_EasternZhou</royalFactionId>
+    <opposingFactionId>HR_Faction_LishanOpposition</opposingFactionId>
+    <kingCharacterId>HR_Character_ZhouYouWang</kingCharacterId>
+    <kingFateDefName>HR_Fate_ZhouYouWang_Death_HE001</kingFateDefName>
+    <royalRetreatZoneId>RoyalRetreatCorridor</royalRetreatZoneId>
+    <deathSceneZoneId>HistoricalDeathSceneZone</deathSceneZoneId>
+    <mandatoryRoyalDefeat>true</mandatoryRoyalDefeat>
+    <progressWithoutPlayer>true</progressWithoutPlayer>
+    <combatOrderIntervalTicks>180</combatOrderIntervalTicks>
+    <moraleCheckIntervalTicks>250</moraleCheckIntervalTicks>
+    <deathSceneBudgetTicks>1800</deathSceneBudgetTicks>
+  </HistoricalRimWorld.Events.HistoricalBattleDef>
+</Defs>
