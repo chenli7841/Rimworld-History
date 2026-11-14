@@ -23,9 +23,9 @@ namespace HistoricalRimWorld.Patches.Characters
     [HarmonyPatch(typeof(FloatMenuOptionProvider_DraftedAttack), "GetOptionsFor", new[] { typeof(Thing), typeof(FloatMenuContext) })]
     internal static class HistoricalDraftedAttackMenuProtectionPatch
     {
-        private static bool Prefix(Thing t, ref IEnumerable<FloatMenuOption> __result)
+        private static bool Prefix(Thing clickedThing, ref IEnumerable<FloatMenuOption> __result)
         {
-            if (!(t is Pawn target) || HistoricalCharacterProtectionService.CanPlayerTarget(target)) return true;
+            if (!(clickedThing is Pawn target) || HistoricalCharacterProtectionService.CanPlayerTarget(target)) return true;
             HistoricalCharacterProtectionService.ReportBlocked("player attack menu", target);
             __result = System.Array.Empty<FloatMenuOption>();
             return false;
@@ -218,7 +218,12 @@ namespace HistoricalRimWorld.Patches.Characters
     {
         private static bool Prefix(Thing __instance, Faction newFaction)
         {
-            if (!(__instance is Pawn pawn) || pawn.Dead || pawn.Faction == newFaction
+            // PawnGenerator calls SetFactionDirect before the Pawn is fully initialized and while
+            // world generation may run without Current.Game. Only inspect protection after the
+            // save-backed historical registry can identify this Pawn.
+            if (Current.Game == null || !(__instance is Pawn pawn)
+                || !HistoricalCharacterProtectionService.TryGetHistoricalCharacterId(pawn, out _)) return true;
+            if (pawn.Dead || pawn.Faction == newFaction
                 || HistoricalCharacterProtectionService.CanChangeFaction(pawn)) return true;
             HistoricalCharacterProtectionService.ReportBlocked("direct faction change", pawn);
             return false;

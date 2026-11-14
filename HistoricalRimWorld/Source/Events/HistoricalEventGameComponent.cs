@@ -4,6 +4,7 @@ using System.Linq;
 using HistoricalRimWorld.Calendar;
 using HistoricalRimWorld.Chronicle;
 using HistoricalRimWorld.Scenarios;
+using RimWorld;
 using Verse;
 
 namespace HistoricalRimWorld.Events
@@ -12,7 +13,7 @@ namespace HistoricalRimWorld.Events
     {
         public HistoricalEventGameComponent(Game game) { }
 
-        private const int CurrentDataVersion = 4;
+        private const int CurrentDataVersion = 5;
         private string scenarioDefName;
         private int dataVersion;
         private bool initialized;
@@ -29,6 +30,7 @@ namespace HistoricalRimWorld.Events
         private long nextLocalEventAbsoluteDay;
         private List<HistoricalLocalEventRuntimeRecord> localEventRecords = new List<HistoricalLocalEventRuntimeRecord>();
         private List<HistoricalStorylineRuntimeState> storylineStates = new List<HistoricalStorylineRuntimeState>();
+        private Quest lishanCrisisQuest;
 
         public bool Initialized => initialized;
         public string ScenarioDefName => scenarioDefName;
@@ -40,6 +42,8 @@ namespace HistoricalRimWorld.Events
         public long NextLocalEventAbsoluteDay => nextLocalEventAbsoluteDay;
         public IEnumerable<HistoricalLocalEventRuntimeRecord> LocalEventRecords => localEventRecords ?? Enumerable.Empty<HistoricalLocalEventRuntimeRecord>();
         public IEnumerable<HistoricalStorylineRuntimeState> StorylineStates => storylineStates ?? Enumerable.Empty<HistoricalStorylineRuntimeState>();
+        internal Quest LishanCrisisQuest => lishanCrisisQuest;
+        internal void SetLishanCrisisQuest(Quest quest) => lishanCrisisQuest = quest;
 
         public HistoricalEventRuntimeState FindState(string id)
         {
@@ -224,6 +228,7 @@ namespace HistoricalRimWorld.Events
             Scribe_Values.Look(ref nextLocalEventAbsoluteDay, "historicalNextLocalEventAbsoluteDay", 0L);
             Scribe_Collections.Look(ref localEventRecords, "historicalLocalEventRecords", LookMode.Deep);
             Scribe_Collections.Look(ref storylineStates, "historicalStorylineStates", LookMode.Deep);
+            Scribe_References.Look(ref lishanCrisisQuest, "historicalLishanCrisisQuest");
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 eventStates = eventStates ?? new List<HistoricalEventRuntimeState>();
@@ -231,6 +236,15 @@ namespace HistoricalRimWorld.Events
                 statusChanges = statusChanges ?? new List<HistoricalEventStatusChange>();
                 localEventRecords = localEventRecords ?? new List<HistoricalLocalEventRuntimeRecord>();
                 storylineStates = storylineStates ?? new List<HistoricalStorylineRuntimeState>();
+                if (lishanCrisisQuest == null)
+                    lishanCrisisQuest = Find.QuestManager?.QuestsListForReading?.FirstOrDefault(quest => quest?.tags != null
+                        && quest.tags.Contains("HR_Quest_HE001_HistoricalChronicle"));
+                HistoricalEventLongTermQuestBridge.EnsureQuestRoot(lishanCrisisQuest);
+                HistoricalEventLongTermQuestBridge.RefreshQuestText(lishanCrisisQuest,
+                    HistoricalEventValidator.FindEventDef("HE_001_LishanCrisis"), FindState("HE_001_LishanCrisis"));
+                foreach (Quest quest in Find.QuestManager?.QuestsListForReading ?? new List<Quest>())
+                    if (quest?.tags != null && quest.tags.Contains("HE_001_LishanCrisis"))
+                        HistoricalEventLongTermQuestBridge.EnsureQuestRoot(quest);
                 foreach (HistoricalLocalEventRuntimeRecord record in localEventRecords.Where(item => item != null))
                     record.triggerCount = Math.Max(record.triggerCount, record.appearances);
                 scheduler = null;

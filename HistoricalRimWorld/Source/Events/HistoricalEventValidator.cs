@@ -90,7 +90,7 @@ namespace HistoricalRimWorld.Events
                 if (item.stages.Any(stage => stage != null && stage.requiresScene && !stage.canProgressOffMap))
                     yield return "A scene-gated timeline cannot pause when the player is off-map.";
             }
-            else
+            else if (item.historicalDate != null)
             {
                 string dateError = null;
                 try { item.historicalDate.Validate(); }

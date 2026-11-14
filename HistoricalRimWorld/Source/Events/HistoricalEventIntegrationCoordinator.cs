@@ -59,6 +59,7 @@ namespace HistoricalRimWorld.Events
             // Political outcomes are derived only from the event component's committed outcome IDs.
             // The service itself checks fate ordering and its own save-backed applied IDs.
             HistoricalPoliticalOutcomeGameComponent.ReconcileCommittedOutcomes();
+            HistoricalEventLongTermQuestBridge.Reconcile(def, state);
         }
 
         public static void OnHistoricalStageChanged(string eventId, string stageId)

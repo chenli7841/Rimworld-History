@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Metadata root for manually managed historical Quests. This sequence is never run by QuestGen. -->
+  <QuestScriptDef>
+    <defName>HR_HistoricalChronicleQuestRoot</defName>
+    <defaultHidden>true</defaultHidden>
+    <root Class="QuestNode_Sequence">
+      <nodes />
+    </root>
+  </QuestScriptDef>
+</Defs>

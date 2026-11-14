@@ -40,7 +40,7 @@
         </scheduledDate>
         <displayLabelKey>HE_001_Stage_Forewarning</displayLabelKey>
         <notificationDescriptionKey>HE_001_Notice_Forewarning</notificationDescriptionKey>
-        <showNotification>true</showNotification>
+        <showNotification>false</showNotification>
         <recordInChronicle>false</recordInChronicle>
         <requiresScene>false</requiresScene>
         <canProgressOffMap>true</canProgressOffMap>

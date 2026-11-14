@@ -27,8 +27,9 @@ namespace HistoricalRimWorld.Scenarios.EasternZhou
                 return Fail("The active vanilla Scenario does not match this historical setup.", out error);
             ScenPart_ConfigPage_ConfigureStartingPawns[] pawnSetup = selectedScenario.AllParts
                 .OfType<ScenPart_ConfigPage_ConfigureStartingPawns>().ToArray();
-            if (pawnSetup.Length != 1 || pawnSetup[0].pawnCount != setup.startingPopulation)
-                return Fail("Vanilla starting-pawn count and historical setup population must match.", out error);
+            if (pawnSetup.Length != 1 || pawnSetup[0].pawnCount != setup.startingPopulation
+                || pawnSetup[0].pawnChoiceCount != setup.startingPopulation)
+                return Fail("Eastern Zhou must generate exactly the configured starting population, with no extra discard candidates.", out error);
             ScenPart_HistoricalStartingSupplies[] supplyParts = selectedScenario.AllParts
                 .OfType<ScenPart_HistoricalStartingSupplies>().ToArray();
             if (supplyParts.Length != 1 || supplyParts[0].supplies != setup.startingSupplies)

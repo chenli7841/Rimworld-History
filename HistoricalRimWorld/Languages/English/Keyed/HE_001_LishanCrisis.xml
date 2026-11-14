@@ -5,6 +5,11 @@
   <HE_001_LishanCrisis_SourceNotes>Traditional chronology follows the Shiji, “Zhou Benji,” alongside scholarship on early Zhou history. Received accounts, the Tsinghua bamboo manuscript Xinian, and modern reconstructions differ on succession, relocation, and event sequence. The default uses 771 BCE and does not treat the beacon-fire story or Bao Si's responsibility as established fact.</HE_001_LishanCrisis_SourceNotes>
   <HE_001_Stage_Forewarning>Lishan crisis forewarning</HE_001_Stage_Forewarning>
   <HE_001_Notice_Forewarning>Estimated year: 771 BCE. Main area: Lishan and the Zhou royal domain. Political tensions within the Zhou court and pressure on its borders are rising. A crisis that may change the political order is approaching; accounts of its details differ.</HE_001_Notice_Forewarning>
+  <HE001_LongTermQuest_Name>The Lishan Crisis: Royal Chronicle</HE001_LongTermQuest_Name>
+  <HE001_LongTermQuest_BCEYear>{0} BCE</HE001_LongTermQuest_BCEYear>
+  <HE001_LongTermQuest_CEYear>{0} CE</HE001_LongTermQuest_CEYear>
+  <HE001_LongTermQuest_UpdateFormat>{0} — {1}&#10;{2}</HE001_LongTermQuest_UpdateFormat>
+  <HE001_LongTermQuest_CurrentStatus>Current progress: {0} — {1}</HE001_LongTermQuest_CurrentStatus>
   <HE_001_Stage_PoliticalCrisis>Royal political crisis</HE_001_Stage_PoliticalCrisis>
   <HE_001_Chronicle_PoliticalCrisis>The political situation of the Zhou court continues to deteriorate. This is a game-timeline summary, not a claim about a precise month, day, or single uncontested cause.</HE_001_Chronicle_PoliticalCrisis>
   <HE_001_Stage_MilitaryCrisis>Military crisis</HE_001_Stage_MilitaryCrisis>

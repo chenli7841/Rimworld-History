@@ -5,6 +5,11 @@
   <HE_001_LishanCrisis_SourceNotes>传统纪年参考《史记·周本纪》及相关先秦史研究；传统叙述与清华简《系年》及现代重建在王位继承、东迁经过和事件顺序上存在争议。这里采用传统前771年作为默认方案，不把烽火戏诸侯或褒姒责任视为确定史实。</HE_001_LishanCrisis_SourceNotes>
   <HE_001_Stage_Forewarning>骊山之变预告</HE_001_Stage_Forewarning>
   <HE_001_Notice_Forewarning>预计年份：公元前771年。主要区域：骊山与周王畿。周王室内部的政治矛盾与边境局势日趋紧张，一场可能改变天下秩序的危机正在逼近。具体过程仍有不同历史叙述。</HE_001_Notice_Forewarning>
+  <HE001_LongTermQuest_Name>骊山之变：王室危机纪事</HE001_LongTermQuest_Name>
+  <HE001_LongTermQuest_BCEYear>公元前{0}年</HE001_LongTermQuest_BCEYear>
+  <HE001_LongTermQuest_CEYear>公元{0}年</HE001_LongTermQuest_CEYear>
+  <HE001_LongTermQuest_UpdateFormat>{0} — {1}&#10;{2}</HE001_LongTermQuest_UpdateFormat>
+  <HE001_LongTermQuest_CurrentStatus>当前进展：{0} — {1}</HE001_LongTermQuest_CurrentStatus>
   <HE_001_Stage_PoliticalCrisis>王室政治危机</HE_001_Stage_PoliticalCrisis>
   <HE_001_Chronicle_PoliticalCrisis>周王室政治局势持续恶化。此阶段是按传统年代组织的游戏化概述，不代表某一具体月日或单一确定的因果叙述。</HE_001_Chronicle_PoliticalCrisis>
   <HE_001_Stage_MilitaryCrisis>军事危机</HE_001_Stage_MilitaryCrisis>

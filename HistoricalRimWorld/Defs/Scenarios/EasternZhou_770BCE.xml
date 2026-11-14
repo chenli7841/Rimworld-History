@@ -11,7 +11,7 @@
         <li Class="RimWorld.ScenPart_ConfigPage_ConfigureStartingPawns">
           <def>ConfigPage_ConfigureStartingPawns</def>
           <pawnCount>5</pawnCount>
-          <pawnChoiceCount>8</pawnChoiceCount>
+          <pawnChoiceCount>5</pawnChoiceCount>
         </li>
         <li Class="RimWorld.ScenPart_PlayerPawnsArriveMethod">
           <def>PlayerPawnsArriveMethod</def>

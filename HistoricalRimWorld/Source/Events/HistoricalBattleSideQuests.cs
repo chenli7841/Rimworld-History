@@ -203,6 +203,7 @@ namespace HistoricalRimWorld.Events
                 && quest.tags != null && quest.tags.Contains(EventId) && quest.tags.Contains(def.defName));
             if (existing != null)
             {
+                HistoricalEventLongTermQuestBridge.EnsureQuestRoot(existing);
                 HistoricalBattleSideQuestState recovered = new HistoricalBattleSideQuestState();
                 recovered.AdoptExistingQuest(def, existing);
                 states.Add(recovered);
@@ -217,6 +218,7 @@ namespace HistoricalRimWorld.Events
                 initiallyAccepted = true,
                 tags = new List<string> { "HistoricalRimWorld", EventId, def.defName }
             };
+            HistoricalEventLongTermQuestBridge.EnsureQuestRoot(quest);
             QuestPart_DescriptionPart descriptionPart = quest.AddPart<QuestPart_DescriptionPart>();
             descriptionPart.descriptionPart = ("HE001_SideQuest_" + def.questType + "_Objective").Translate();
             Verse.Find.QuestManager?.Add(quest);

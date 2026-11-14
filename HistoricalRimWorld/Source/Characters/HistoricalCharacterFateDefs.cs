@@ -80,7 +80,7 @@ namespace HistoricalRimWorld.Characters
                 yield return "No HistoricalCharacterDef exists for historicalCharacterId " + historicalCharacterId + ".";
             if (!string.IsNullOrWhiteSpace(fateEventId))
             {
-                HistoricalEventDef eventDef = DefDatabase<HistoricalEventDef>.GetNamedSilentFail(fateEventId);
+                HistoricalEventDef eventDef = HistoricalEventValidator.FindEventDef(fateEventId);
                 if (eventDef == null) yield return "No HistoricalEventDef exists for fateEventId " + fateEventId + ".";
                 else if (!string.IsNullOrWhiteSpace(fateStageId)
                     && !(eventDef.stages ?? new List<HistoricalEventStageEntry>()).Exists(stage => stage != null && stage.stageId == fateStageId))

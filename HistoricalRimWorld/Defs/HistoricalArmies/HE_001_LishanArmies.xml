@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- Configured troop totals are a game-scale reconstruction, not attested historical numbers. -->
-  <HistoricalRimWorld.Events.HistoricalArmyDef>
+  <HistoricalRimWorld.Characters.HistoricalArmyDef>
     <defName>HR_Army_LishanRoyal</defName><label>Lishan royal force</label>
     <armyId>HR_Army_LishanRoyal</armyId><historicalEventId>HE_001_LishanCrisis</historicalEventId>
     <historicalScenarioId>HR_Scenario_EasternZhou_770BCE</historicalScenarioId><factionId>HR_Faction_EasternZhou</factionId>
@@ -13,8 +13,8 @@
       <li><groupId>Archers</groupId><unitRole>弓兵</unitRole><pawnKindDefName>HR_PawnKind_Archer</pawnKindDefName><count>6</count><minimumAge>18</minimumAge><maximumAge>45</maximumAge><deploymentDepth>0.22</deploymentDepth></li>
       <li><groupId>Attendants</groupId><unitRole>王室随从</unitRole><pawnKindDefName>HR_PawnKind_NobleRetainer</pawnKindDefName><count>4</count><minimumAge>18</minimumAge><maximumAge>50</maximumAge><deploymentDepth>0.45</deploymentDepth></li>
     </unitGroups>
-  </HistoricalRimWorld.Events.HistoricalArmyDef>
-  <HistoricalRimWorld.Events.HistoricalArmyDef>
+  </HistoricalRimWorld.Characters.HistoricalArmyDef>
+  <HistoricalRimWorld.Characters.HistoricalArmyDef>
     <defName>HR_Army_LishanOpposition</defName><label>Lishan opposing force</label>
     <armyId>HR_Army_LishanOpposition</armyId><historicalEventId>HE_001_LishanCrisis</historicalEventId>
     <historicalScenarioId>HR_Scenario_EasternZhou_770BCE</historicalScenarioId><factionId>HR_Faction_LishanOpposition</factionId>
@@ -25,5 +25,5 @@
       <li><groupId>Infantry</groupId><unitRole>近战步兵</unitRole><pawnKindDefName>HR_PawnKind_Guard</pawnKindDefName><count>6</count><minimumAge>18</minimumAge><maximumAge>45</maximumAge><deploymentDepth>0.66</deploymentDepth></li>
       <li><groupId>Archers</groupId><unitRole>弓兵</unitRole><pawnKindDefName>HR_PawnKind_Archer</pawnKindDefName><count>6</count><minimumAge>18</minimumAge><maximumAge>45</maximumAge><deploymentDepth>0.22</deploymentDepth></li>
     </unitGroups>
-  </HistoricalRimWorld.Events.HistoricalArmyDef>
+  </HistoricalRimWorld.Characters.HistoricalArmyDef>
 </Defs>
