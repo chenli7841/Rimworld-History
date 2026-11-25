@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_ResearchFacility_ArtisanWorkbench>工匠研习台</HR_ResearchFacility_ArtisanWorkbench>
+  <HR_ResearchFacility_WritingDesk>竹简书案</HR_ResearchFacility_WritingDesk>
+  <HR_Research_Category>研究类别：{0}</HR_Research_Category>
+  <HR_Research_Facilities>可用设施：{0}</HR_Research_Facilities>
+  <HR_Research_Skills>研究技能：{0}</HR_Research_Skills>
+  <HR_Research_Category_Agriculture>农业</HR_Research_Category_Agriculture>
+  <HR_Research_Category_AnimalHusbandry>畜牧</HR_Research_Category_AnimalHusbandry>
+  <HR_Research_Category_Construction>建筑</HR_Research_Category_Construction>
+  <HR_Research_Category_Crafting>工艺</HR_Research_Category_Crafting>
+  <HR_Research_Category_Metallurgy>冶金</HR_Research_Category_Metallurgy>
+  <HR_Research_Category_Medicine>医学</HR_Research_Category_Medicine>
+  <HR_Research_Category_Military>军事</HR_Research_Category_Military>
+  <HR_Research_Category_History>历史</HR_Research_Category_History>
+  <HR_Research_Category_Administration>制度与行政</HR_Research_Category_Administration>
+  <HR_Research_Category_General>通用</HR_Research_Category_General>
+</LanguageData>

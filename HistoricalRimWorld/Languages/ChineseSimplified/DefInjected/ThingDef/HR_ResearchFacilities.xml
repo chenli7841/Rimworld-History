@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_ArtisanResearchBench.label>工匠研习台</HR_ArtisanResearchBench.label>
+  <HR_ArtisanResearchBench.description>供工匠通过制作、观察、测量和反复实践积累技术经验的木制研习台。</HR_ArtisanResearchBench.description>
+  <HR_BambooWritingDesk.label>竹简书案</HR_BambooWritingDesk.label>
+  <HR_BambooWritingDesk.description>用于阅读、书写、比对记录和理论研究的低矮木案。</HR_BambooWritingDesk.description>
+  <HR_ScrollStorageRack.label>藏简架</HR_ScrollStorageRack.label>
+  <HR_ScrollStorageRack.description>用于存放竹简、木牍和书写材料的简易架子。</HR_ScrollStorageRack.description>
+</LanguageData>

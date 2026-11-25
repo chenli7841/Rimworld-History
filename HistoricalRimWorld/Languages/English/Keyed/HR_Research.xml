@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <HR_ResearchFacility_ArtisanWorkbench>Artisan learning bench</HR_ResearchFacility_ArtisanWorkbench>
+  <HR_ResearchFacility_WritingDesk>Bamboo writing desk</HR_ResearchFacility_WritingDesk>
+  <HR_Research_Category>Category: {0}</HR_Research_Category>
+  <HR_Research_Facilities>Facilities: {0}</HR_Research_Facilities>
+  <HR_Research_Skills>Research skills: {0}</HR_Research_Skills>
+  <HR_Research_Category_Agriculture>Agriculture</HR_Research_Category_Agriculture>
+  <HR_Research_Category_AnimalHusbandry>Animal husbandry</HR_Research_Category_AnimalHusbandry>
+  <HR_Research_Category_Construction>Construction</HR_Research_Category_Construction>
+  <HR_Research_Category_Crafting>Crafting</HR_Research_Category_Crafting>
+  <HR_Research_Category_Metallurgy>Metallurgy</HR_Research_Category_Metallurgy>
+  <HR_Research_Category_Medicine>Medicine</HR_Research_Category_Medicine>
+  <HR_Research_Category_Military>Military</HR_Research_Category_Military>
+  <HR_Research_Category_History>History</HR_Research_Category_History>
+  <HR_Research_Category_Administration>Administration</HR_Research_Category_Administration>
+  <HR_Research_Category_General>General</HR_Research_Category_General>
+</LanguageData>

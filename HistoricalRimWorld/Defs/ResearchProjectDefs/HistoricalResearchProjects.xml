@@ -9,7 +9,7 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>3.50</researchViewX>
     <researchViewY>0.05</researchViewY>
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Agriculture</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Plants</skill><weight>0.7</weight></li><li><skill>Intellectual</skill><weight>0.3</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_AnimalHusbandry</defName>
     <label>animal husbandry</label>
@@ -18,7 +18,7 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>3.50</researchViewX>
     <researchViewY>0.95</researchViewY>
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>AnimalHusbandry</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Animals</skill><weight>0.7</weight></li><li><skill>Intellectual</skill><weight>0.3</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_SeedSelection</defName>
     <label>seed selection</label>
@@ -27,7 +27,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
     <researchViewX>4.50</researchViewX>
     <researchViewY>0.05</researchViewY>
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Agriculture</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Plants</skill><weight>0.7</weight></li><li><skill>Intellectual</skill><weight>0.3</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_GrainStorage</defName>
     <label>grain storage</label>
@@ -36,7 +36,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
     <researchViewX>4.50</researchViewX>
     <researchViewY>0.50</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Agriculture</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Plants</skill><weight>0.5</weight></li><li><skill>Intellectual</skill><weight>0.5</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   
   <ResearchProjectDef>
     <defName>HR_FoodDrying</defName>
@@ -46,7 +46,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_GrainStorage</li></prerequisites>
     <researchViewX>5.50</researchViewX>
     <researchViewY>0.05</researchViewY>
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Crafting</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.6</weight></li><li><skill>Intellectual</skill><weight>0.4</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_SaltPreservation</defName>
     <label>salt preservation</label>
@@ -55,7 +55,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_GrainStorage</li></prerequisites>
     <researchViewX>5.50</researchViewX>
     <researchViewY>0.50</researchViewY>
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Crafting</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.6</weight></li><li><skill>Intellectual</skill><weight>0.4</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_SealedPotteryStorage</defName>
     <label>sealed pottery storage</label>
@@ -64,7 +64,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_GrainStorage</li></prerequisites>
     <researchViewX>5.50</researchViewX>
     <researchViewY>0.95</researchViewY>
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Crafting</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.7</weight></li><li><skill>Intellectual</skill><weight>0.3</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_FoodSmoking</defName>
     <label>food smoking</label>
@@ -73,7 +73,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_FoodDrying</li></prerequisites>
     <researchViewX>6.50</researchViewX>
     <researchViewY>0.05</researchViewY>
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Crafting</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.7</weight></li><li><skill>Intellectual</skill><weight>0.3</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_FoodFermentation</defName>
     <label>food fermentation</label>
@@ -82,7 +82,7 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>6.50</researchViewX>
     <researchViewY>1.75</researchViewY>
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Crafting</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.6</weight></li><li><skill>Intellectual</skill><weight>0.4</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Irrigation</defName>
     <label>irrigation channels</label>
@@ -91,7 +91,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
     <researchViewX>4.50</researchViewX>
     <researchViewY>1.40</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Construction</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Construction</skill><weight>0.7</weight></li><li><skill>Intellectual</skill><weight>0.3</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
     <ResearchProjectDef>
     <defName>HR_Research_WaterManagement</defName>
     <label>water management</label>
@@ -100,7 +100,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Irrigation</li></prerequisites>
     <researchViewX>5.50</researchViewX>
     <researchViewY>1.40</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Construction</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Construction</skill><weight>0.5</weight></li><li><skill>Intellectual</skill><weight>0.5</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_RammedEarth</defName>
     <label>rammed earth construction</label>
@@ -109,7 +109,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BasicFarming</li></prerequisites>
     <researchViewX>4.50</researchViewX>
     <researchViewY>1.85</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Construction</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Construction</skill><weight>0.7</weight></li><li><skill>Intellectual</skill><weight>0.3</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_BronzeAlloy</defName>
     <label>bronze alloying</label>
@@ -118,7 +118,7 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>5.50</researchViewX>
     <researchViewY>2.30</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Metallurgy</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.8</weight></li><li><skill>Intellectual</skill><weight>0.2</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_EarlyIronworking</defName>
     <label>early ironworking</label>
@@ -140,7 +140,7 @@
         <OriginFactionTags><li>EarlyIronContactModel</li></OriginFactionTags>
         <PreferredCultureTags><li>EasternZhouCraftExchangeModel</li></PreferredCultureTags>
       </li>
-    </modExtensions>
+    <li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Metallurgy</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.8</weight></li><li><skill>Intellectual</skill><weight>0.2</weight></li></skillWeights></li></modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_IronFarmTools</defName>
@@ -163,7 +163,7 @@
         <OriginFactionTags><li>EarlyIronContactModel</li></OriginFactionTags>
         <PreferredCultureTags><li>EasternZhouCraftExchangeModel</li></PreferredCultureTags>
       </li>
-    </modExtensions>
+    <li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Crafting</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.8</weight></li><li><skill>Intellectual</skill><weight>0.2</weight></li></skillWeights></li></modExtensions>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -174,7 +174,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_BronzeAlloy</li></prerequisites>
     <researchViewX>6.50</researchViewX>
     <researchViewY>2.30</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Metallurgy</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.8</weight></li><li><skill>Intellectual</skill><weight>0.2</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_BronzeTools</defName>
     <label>bronze tools</label>
@@ -194,7 +194,7 @@
           <li>HR_Practice_BronzeTools_Experience</li>
         </PracticeRequirementIds>
       </li>
-    </modExtensions>
+    <li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Crafting</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.8</weight></li><li><skill>Intellectual</skill><weight>0.2</weight></li></skillWeights></li></modExtensions>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Pottery</defName>
@@ -204,7 +204,7 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>3.50</researchViewX>
     <researchViewY>2.80</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Crafting</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.7</weight></li><li><skill>Intellectual</skill><weight>0.3</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_KilnFiring</defName>
     <label>kiln firing</label>
@@ -213,7 +213,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Pottery</li></prerequisites>
     <researchViewX>4.50</researchViewX>
     <researchViewY>2.80</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Crafting</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.8</weight></li><li><skill>Intellectual</skill><weight>0.2</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Writing</defName>
     <label>record keeping</label>
@@ -222,7 +222,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Pottery</li></prerequisites>
     <researchViewX>4.50</researchViewX>
     <researchViewY>3.25</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Administration</category><allowedFacilities><li>ArtisanWorkbench</li><li>WritingDesk</li></allowedFacilities><skillWeights><li><skill>Intellectual</skill><weight>1</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Commerce</defName>
     <label>regional exchange</label>
@@ -231,7 +231,7 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_Weaving</li><li>HR_Research_Pottery</li></prerequisites>
     <researchViewX>4.50</researchViewX>
     <researchViewY>3.70</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Administration</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Social</skill><weight>0.5</weight></li><li><skill>Intellectual</skill><weight>0.5</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>HR_Research_PlantFibres</defName>
@@ -241,7 +241,7 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>3.50</researchViewX>
     <researchViewY>4.30</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Crafting</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.7</weight></li><li><skill>Intellectual</skill><weight>0.3</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_BowMaking</defName>
     <label>bow making</label>
@@ -250,7 +250,7 @@
     <techLevel>Neolithic</techLevel>
     <researchViewX>3.50</researchViewX>
     <researchViewY>5.00</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Military</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.6</weight></li><li><skill>Shooting</skill><weight>0.2</weight></li><li><skill>Intellectual</skill><weight>0.2</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
   <ResearchProjectDef>
     <defName>HR_Research_Weaving</defName>
     <label>weaving</label>
@@ -259,5 +259,5 @@
     <techLevel>Neolithic</techLevel><prerequisites><li>HR_Research_PlantFibres</li></prerequisites>
     <researchViewX>5.50</researchViewX>
     <researchViewY>4.30</researchViewY>  
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Crafting</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Crafting</skill><weight>0.7</weight></li><li><skill>Intellectual</skill><weight>0.3</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
 </Defs>

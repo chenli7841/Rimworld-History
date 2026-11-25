@@ -11,5 +11,5 @@
     </prerequisites>
     <researchViewX>7.5</researchViewX>
     <researchViewY>1.15</researchViewY>
-  </ResearchProjectDef>
+  <modExtensions><li Class="HistoricalRimWorld.Research.HR_ResearchProjectExtension"><category>Construction</category><allowedFacilities><li>ArtisanWorkbench</li></allowedFacilities><skillWeights><li><skill>Construction</skill><weight>0.7</weight></li><li><skill>Intellectual</skill><weight>0.3</weight></li></skillWeights></li></modExtensions></ResearchProjectDef>
 </Defs>

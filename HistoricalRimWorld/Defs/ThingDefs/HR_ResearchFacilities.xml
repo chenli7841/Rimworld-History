@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>HR_ArtisanResearchBench</defName>
+    <label>artisan learning bench</label>
+    <description>A modest timber bench for learning through craft, observation, measurement, and repeated practice.</description>
+    <thingClass>Building_ResearchBench</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/TableStonecutter</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2.5,1.5)</drawSize>
+    </graphicData>
+    <size>(2,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <costList><WoodLog>60</WoodLog></costList>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Cleanliness>-1</Cleanliness>
+      <ResearchSpeedFactor>1</ResearchSpeedFactor>
+    </statBases>
+    <constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2470</uiOrder>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <placeWorkers><li>PlaceWorker_PreventInteractionSpotOverlap</li></placeWorkers>
+    <building>
+      <workTableRoomRole>Laboratory</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+    <comps Inherit="False"><li Class="CompProperties_ReportWorkSpeed"><workSpeedStat>ResearchSpeedFactor</workSpeedStat></li></comps>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Research.HR_ResearchFacilityExtension">
+        <facilityType>ArtisanWorkbench</facilityType>
+        <researchSpeedMultiplier>1</researchSpeedMultiplier>
+        <historicalScenarioOnly>true</historicalScenarioOnly>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>HR_BambooWritingDesk</defName>
+    <label>bamboo writing desk</label>
+    <description>A low wooden desk for reading, writing, comparing records, and theoretical study.</description>
+    <thingClass>Building_ResearchBench</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Table1x2</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2.5,1.5)</drawSize>
+    </graphicData>
+    <size>(2,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <costList><WoodLog>50</WoodLog></costList>
+    <statBases>
+      <MaxHitPoints>110</MaxHitPoints>
+      <WorkToBuild>650</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Cleanliness>0</Cleanliness>
+      <ResearchSpeedFactor>1</ResearchSpeedFactor>
+    </statBases>
+    <constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+    <researchPrerequisites><li>HR_Research_Writing</li></researchPrerequisites>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2471</uiOrder>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <placeWorkers><li>PlaceWorker_PreventInteractionSpotOverlap</li></placeWorkers>
+    <building>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+    <comps Inherit="False"><li Class="CompProperties_ReportWorkSpeed"><workSpeedStat>ResearchSpeedFactor</workSpeedStat></li></comps>
+    <modExtensions>
+      <li Class="HistoricalRimWorld.Research.HR_ResearchFacilityExtension">
+        <facilityType>WritingDesk</facilityType>
+        <researchSpeedMultiplier>1</researchSpeedMultiplier>
+        <historicalScenarioOnly>true</historicalScenarioOnly>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="StorageShelfBase">
+    <defName>HR_ScrollStorageRack</defName>
+    <label>scroll storage rack</label>
+    <description>A simple rack for storing bamboo slips, wooden tablets, and writing materials.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Shelf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5,2.5)</drawSize>
+    </graphicData>
+    <size>(1,2)</size>
+    <costList><WoodLog>45</WoodLog></costList>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+      <Mass>8</Mass>
+      <Flammability>1</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+    <researchPrerequisites><li>HR_Research_Writing</li></researchPrerequisites>
+    <designationCategory>Furniture</designationCategory>
+    <uiOrder>2049</uiOrder>
+  </ThingDef>
+</Defs>

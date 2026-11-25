@@ -4,6 +4,7 @@ using HarmonyLib;
 using HistoricalRimWorld.Calendar;
 using HistoricalRimWorld.Scenarios;
 using HistoricalRimWorld.Technology;
+using HistoricalRimWorld.Research;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -277,7 +278,8 @@ namespace HistoricalRimWorld.Patches.Technology
         {
             HistoricalTechnologyDef technology = HistoricalTechnologyManager.Technologies.FirstOrDefault(item => item.researchProject == __instance);
             HistoricalTechExtension extension = HistoricalTechnologyTimelineLayout.GetExtension(__instance);
-            if (technology == null && extension == null) return;
+            HR_ResearchProjectExtension researchConfiguration = HR_ResearchUtility.GetExtension(__instance);
+            if (technology == null && extension == null && researchConfiguration == null) return;
 
             List<string> lines = new List<string>();
             if (extension != null)
@@ -310,6 +312,25 @@ namespace HistoricalRimWorld.Patches.Technology
                     if (HistoricalBlueprintService.GetKnowledgeRequirement(__instance) == HistoricalKnowledgeRequirement.Blueprint
                         && status == HistoricalBlueprintStatus.NotOwned)
                         lines.Add("HR_Blueprint_TradeHint".Translate());
+                }
+            }
+            if (researchConfiguration != null)
+            {
+                string category = "HR_Research_Category_" + researchConfiguration.category;
+                lines.Add(string.Format(Translator.Translate("HR_Research_Category"), Translator.Translate(category)));
+                if (researchConfiguration.allowedFacilities != null && researchConfiguration.allowedFacilities.Count > 0)
+                {
+                    string facilities = string.Join(", ", researchConfiguration.allowedFacilities
+                        .Select(item => Translator.Translate(HR_ResearchUtility.GetFacilityDisplay(item))));
+                    lines.Add(string.Format(Translator.Translate("HR_Research_Facilities"), facilities));
+                }
+                if (researchConfiguration.skillWeights != null && researchConfiguration.skillWeights.Count > 0)
+                {
+                    string skills = string.Join(", ", researchConfiguration.skillWeights
+                        .Where(item => item?.skill != null)
+                        .Select(item => item.skill.LabelCap + " " + (item.weight * 100f).ToString("0") + "%"));
+                    if (!string.IsNullOrWhiteSpace(skills))
+                        lines.Add(string.Format(Translator.Translate("HR_Research_Skills"), skills));
                 }
             }
             string practiceDetails = HistoricalPracticeService.GetProgressDescription(__instance);
